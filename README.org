@@ -59,6 +59,12 @@ aprendizado da disciplina.
   - Aulas
   - Exercícios
 
+** Conjunto de Atividades Teórico-Práticas (CATP)
+
+- [[./catp/index.org][Acesse as especificações e prazos de entrega]]
+  - Especificação de cada CATP
+  - Prazos de entrega
+
 ** Bibliografia
 ** Contato
 
