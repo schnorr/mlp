@@ -70,6 +70,12 @@ aprendizado da disciplina.
 Aguarde
 
 ** Bibliografia
+- [[http://loja.grupoa.com.br/livros/programacao/conceitos-de-linguagens-de-programacao/9788577807918][Robert W. Sebesta. Conceitos de Linguagens de Programação. Bookman. 5th edition, 2003]]
+- [[https://www.elsevier.com/books/programming-language-pragmatics/scott/978-0-12-374514-9][Michael L. Scott. Programming Language Pragmatics . Morgan Kaufmann, 3rd edition, 2009]]
+- [[http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471104264.html][Carlo Ghezzi and Mehdi Jazayeri. Programming language concepts. John Wiley & Sons, 2008]]
+- [[http://www.wiley.com/WileyCDA/WileyTitle/productCd-EHEP000973.html][David A Watt. Programming language design concepts . John Wiley & Sons, 2004]]
+- [[https://inf.ufes.br/~fvarejao/livroLP.html][Flávio Varejão. Linguagens de Programação, Conceitos e Técnicas . Campus, 2004.]]
+
 ** Contato
 
 Se você encontrar algum problema, e também no caso de dúvidas, entre em contato por e-mail:
