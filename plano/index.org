@@ -1,0 +1,205 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+STARTUP: overview indent
+
+* Plano da Disciplina de MLP
+
+A disciplina tem como objetivo estudar os princípios de projeto e as
+características dos principais modelos de linguagens de programação e
+sua adequação à solução de problemas.  Este documento descreve a
+metodologia, as experiências de aprendizagem, os critérios de
+avaliação, as atividades de recuperação, o cronograma e as referências
+bibliográficas (básicas e complementares) a serem utilizados nesta
+disciplina
+
+** Conteúdo Programático
+
+ O conteúdo programático desta disciplina pode ser encontrado no site
+ no portal da Universidade Federal do Rio Grande do Sul, na seção de
+ ``planos de disciplina''. Para a distribuição do conteúdo ao longo
+ da edição atual, consulte o cronograma da disciplina.
+
+** Metodologia
+
+A disciplina será desenvolvida através de aulas expositivas, com
+explicação dos conteúdos e discussão de exercícios, intercaladas com
+aulas práticas de programação em linguagens imperativas, lógicas e
+Funcionais. Além disso, serão realizados trabalhos em aula e
+extra-classe de caráter teórico e prático. Finalmente, trabalhos
+práticos de programação de maior porte serão definidos para a
+fixação e comparação dos paradigmas estudados.
+
+O material apresentado em sala de aula também será disponibilizado
+no ambiente Moodle do INF\footnote{\scriptsize
+  \url{http://moodle.inf.ufrgs.br}}. Tal ambiente pode ser acessado
+por todos os alunos matriculados na disciplina, bastando para tal
+utilizar o login/senha da rede do Instituto de Informática e fazer a
+inscrição na disciplina.
+
+Sugere-se ao aluno que utilize e verifique constantemente o material
+disponível no ambiente Moodle citado, antes e após as aulas. Nele
+serão disponibilizados exercícios e atividades extraclasse, notas,
+especificações de trabalho e demais materiais que sejam
+necessários. Toda comunicação oficial do professor com os alunos
+será feita APENAS por e-mail através do Moodle. Assim, não se
+esqueça de verificar se seu e-mail está atualizado no sistema da
+UFRGS.
+
+As 60 horas previstas para atividades teóricas e práticas indicadas
+neste Plano de Ensino incluem 30 encontros de 100 minutos de duração
+(2 períodos de 50 minutos por encontro, 2 encontros por semana,
+durante 15 semanas), num total de 3.000 minutos, e mais 10 horas
+(600 minutos) de atividades autônomas, realizadas sem contato direto
+com o professor, correspondentes a exercícios e trabalhos
+extraclasse, conforme Resolução 11/2013 do CEPE/UFRGS, Artigos 36
+a 38. O Professor poderá se valer de aulas presenciais ou à
+distância (utilização de recursos da EAD), assim como do apoio de
+Professores Assistentes (Alunos de Pós-Graduação) em Atividades
+Didáticas.
+
+** Carga Horária
+
+A carga horária desta disciplina é de 40 horas teóricas e 20 práticas.
+
+** Experiências de Aprendizagem
+
+Espera-se que os alunos tenham uma participação ativa nas aulas,
+realizando anotações, procurando compreender os conteúdos e
+discutí-los com o professor e colegas.
+
+Como atividades complementares serão disponibilizados exercícios
+(questionários e exercícios práticos), além de fóruns de
+discussão. A participação ativa nas atividades complementares também
+é importante para a formação do aluno e podem ser consideradas pelo
+professor durante a avaliação.
+
+Além da participação em aula e nas atividades complementares, as
+seguintes atividades deverão ser realizadas pelos alunos a fim de
+lhes proporcionar uma experiência de aprendizagem e avaliação
+adequada:
+
+- Provas escritas, na quantidade e proporção estipulados no
+  início de cada semestre, sendo tal informação também
+  disponibilizada no Moodle a cada semestre (totalizando 60\% da
+  média final do semestre);
+
+- Um trabalho prático (TP) envolvendo implementação e
+  análise fundamentada (maiores detalhes sobre o trabalho são
+  disponibilizados no Moodle), além de apresentação do resultado em
+  aula e elaboração de relatório (totalizando 25\% da média final do
+  semestre);
+
+- Um conjunto de atividades teórico-práticas (CATP), a ser
+  disponibilizado no Moodle em aulas específicas, a serem realizadas
+  em aula e/ou em horário extraclasse (totalizando 15\% da média
+  final do semestre).
+
+Estas atividades serão avaliadas conforme descrito na seção seguinte e
+realizadas conforme o cronograma divulgado.
+
+** Critérios de Avaliação
+
+São realizadas as seguintes atividades, com datas conforme o
+cronograma disponibilizado a cada semestre:
+
+- Um conjunto de provas (P), cuja quantidade e respectivos pesos são
+  estabelecidos e divulgados no início de cada semestre,
+  correspondendo, no total, a 60% da nota final do semestre;
+
+- Um trabalho prático (TP) envolvendo a implementação de um programa,
+  a apresentação do resultado em aula e a elaboração de um relatório,
+  conforme instruções disponibilizadas no Moodle, correspondendo, no
+  total, a 25% da nota final do semestre;
+
+- Um conjunto de atividades teórico-práticas (CATP), a ser
+  disponibilizado no Moodle em aulas específicas, a serem realizadas
+  em aula e/ou em horário extraclasse.), correspondendo a 15% da nota
+  final do semestre.
+
+A nota do trabalho prático só será contabilizada na média final se o
+aluno realizar todas as atividades relacionadas com ele
+(implementação, elaboração e entrega de relatório e apresentação).
+
+Provas, trabalhos e demais atividades serão avaliados com notas entre
+0.0 e 10.0. A média final (MF) será obtida por meio da seguinte
+fórmula:
+
+#+BEGIN_EXAMPLE
+MF = 0.60 \times PS + 0.25 \times TP + 0.15 \times CATP
+#+END_EXAMPLE
+
+A conversão da MF para conceitos é feita por meio da seguinte tabela:
+
+| Média Final      | Conceito     |
+|------------------+--------------|
+| 9.0 \ge \MF \leq 10.0 | A (aprovado) |
+| 7.5 \ge \MF < 9.0$ | B (aprovado) |
+| 6.0 \ge \MF < 7.5$ | C (aprovado) |
+| 0.0 \ge \MF < 6.0$ | Recuperação  |
+|------------------+--------------|
+
+Em recuperação, o conceito passa para C em caso de aprovação ou
+conceito D em caso de reprovação na recuperação.
+
+Faltas > 25% Conceito FF (reprovado)
+
+*Atenção:*
+- As notas das provas e trabalhos serão disponibilizadas em até 20 dias depois de sua realização;
+- Pedidos de revisão de notas só serão avaliados se o aluno tiver pelo menos 75% de presenças.
+- Somente serão calculadas as médias finais daqueles alunos que
+  tiverem, ao longo do semestre, obtido um índice de frequência às
+  aulas igual ou superior a 75% das aulas previstas. Aos que não
+  satisfizerem esse requisito, será atribuído o conceito FF (Falta de
+  Frequência).
+
+** Critérios de avaliação neste semestre
+
+O seguintes critérios de avaliação serão utilizados ao longo deste semestre:
+
+- Duas provas PA e PB correspondendo cada uma a 30% da nota final
+- Um trabalho prático TP correspondendo a 25% da nota final
+- Um conjunto de atividades teóricos-práticas (CATP) correspondendo a $15\%$ da nota final
+
+A média final MF, por sua vez, será calculada através da seguinte equação:
+
+#+BEGIN_EXAMPLE
+MF = (PA \times 0.30) + (PB \times 0.30) + (TP \times 0.25) + (CATP \times 0.15)
+#+END_EXAMPLE
+
+** Atividades de Recuperação
+
+Os alunos com nota final menor do que 6,0 podem realizar uma única
+prova de recuperação. Essa prova substitui a menor nota obtida nas
+provas (mesmo que o aluno obtenha um valor inferior na recuperação). A
+média é então recalculada levando-se em conta o novo valor obtido (e o
+peso da prova substituída), gerando o conceito final conforme a tabela
+apresentada anteriormente.  A prova de recuperação avalia o conteúdo
+de todas as unidades e sua data está prevista no cronograma
+disponibilizado pelo professor, no Moodle.  Não é previsto nenhum tipo
+de recuperação para o TP ou para o CATPs, exceto para os casos
+previstos na legislação (ver a seguir).  A recuperação das provas ou
+atividades individuais será realizada somente para os casos previstos
+na legislação: saúde, parto, serviço militar, convocação judicial,
+luto, etc., devidamente comprovados, através de processo aberto na
+Junta Médica da UFRGS ou no orgão competente, conforme o caso. Tendo o
+direito a recuperação, o professor estipulará a data, horário e local
+de sua realização.
+
+** Referências
+
+As referências básicas essenciais, básicas e complementares são as seguintes:
+
+*** Básica e Essencial
+
+- Robert W. Sebesta. Conceitos de Linguagens de Programação . Bookman,
+  5th edition, 2003
+- Michael L. Scott. Programming Language Pragmatics . Morgan Kaufmann, 3rd edition, 2009 (BE)
+
+*** Básica
+
+- Carlo Ghezzi and Mehdi Jazayeri. Programming language concepts . John Wiley & Sons, 2008 (B)
+- David A Watt. Programming language design concepts . John Wiley & Sons, 2004 (B)
+
+*** Complementar
+
+- Flávio Varejão. Linguagens de Programação, Conceitos e Técnicas . Campus, 2004 (C)
