@@ -1,0 +1,130 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Apresentação da Disciplina
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* O professor
+Prof. Lucas M. Schnorr
++ Prédio 43425, Sala 202
++ [[http://www.inf.ufrgs.br/~schnorr][http://www.inf.ufrgs.br/~schnorr]]
++ schnorr@inf.ufrgs.br
++ [[http://twitter.com/lucasschnorr/][@lucasschnorr]] =#MLP_UFRGS=
+
+\vfill
+
+Áreas de interesse para pesquisa
++ High Performance Computing (HPC)
++ Performance Analysis
++ Data Visualization
++ Reproducibility
+    
+* Motivação
+Por que estudar Modelos de Linguagem de Programação?
+\vfill
+Por várias razões
+- Aumentar a capacidade de expressar ideias
+- Maior embasamento para escolher uma linguagem
+- Incrementar habilidade para aprender novas linguagens
+- Melhor entendimento do significado da implementação
+- Melhor uso de linguagens já conhecidas
+- Avanço da computação
+* Objetivos
+Apresentar o *funcionamento* das principais linguagens
+- Questões de projeto
+- Características técnicas
+- Mecanismos principais
+- Pontos fortes e fracos
+Envolve
+- Conceitos, *Paradigmas de programação*
+
+\vfill
+- <2->Adquirir e usar corretamente a terminologia adequada
+- <2->Exercitar a *discussão e argumentação*
+- <2->Exercitar a programação em *paradigmas distintos*
+
+* Não são objetivos da disciplina
+- Apresentar todas as linguagens de programação
+- Aprofundar todos os aspectos de sintaxe
+- Apresentar ambientes de execução
+* Visão Geral
+[[./img/visao_geral_disciplina.png]]
+* Plano, cronograma, bibliografia, projeto
++ Súmula, conteúdo programático, bibliografia e cronograma
++ Procedimentos didáticos, laboratórios
++ Trabalhos, provas e avaliação
+
+\vfill
+
+#+BEGIN_CENTER
+``One /link/ [sic] to rule them all''
+
+https://github.com/schnorr/mlp/
+#+END_CENTER
+     
+* Bibliografia                                                     :noexport:
+- Conceitos de Linguagens de Programação. Quinta Edição. \linebreak
+  Robert. W. Sebesta.
+- Programming Language Pragmatics. \linebreak
+  Michael L. Scott.
+- <2->Programming Language concepts. \linebreak
+  Carlo Ghezzi and Mehdi Jazayeri.
+- <2->Programming language design concepts. \linebreak
+  David A. Watt.
+- <2-> Linguagens de Programação, Conceitos e Técnicas.
+  Flávio Farejão.
+* Funcionamento
+Em aula
+- A presença será aferida (75% de frequência evita FF)
+- Realizar exercícios propostos, discussões
+- Perguntar em caso de dúvida
+
+Em laboratório
+- Parte teórica, formato tutorial
+- Realização de CATPs
+
+Em campo
+- https://github.com/schnorr/mlp/
+- Material de apoio, livros
+- Lista de exercícios
+
+Em dúvidas
+- [[https://github.com/schnorr/mlp/issues][Abra uma Issue no Github]]
+- Envie um e-mail para o professor
+* Avaliação
+*Duas provas* (PA e PB), 30% de peso cada
++ Testará os aspectos teóricos da disciplina
+  - conceitos, aplicações; argumentação correta
+  - Uso correto da terminologia, escrita coerente
+  - Podem exigir extrapolações, correlações
++ Recuperação possível no final do semestre
+
+*Projeto* (T), 25% de peso
++ Duplas, avaliação com apresentação
++ Respeito da especificação
+- Reuso de bibliotecas, frameworks
+
+*Conjunto de Atividades Teórico-Práticas* (CATP), 15% de peso
+- Ao longo do semestre
+  - Em laboratório, extra-classe
+  - Alguns inspiram a prova
+- De 15 a 20 atividades
+
+\vfill
+
+_Nota final_ \linebreak
+PA \times .30 + PB \times .30 + T \times .25 + CATP \times .15 \rightarrow Conceito
+
+
+

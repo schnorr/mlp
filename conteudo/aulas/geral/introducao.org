@@ -1,0 +1,268 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Introdução Geral
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+*Programação*
+- Ato de dizer a um computador o que ele deve fazer
+
+- <2-> *Donald Knuth* \linebreak
+  ``É a arte de dizer a outro ser humano o \linebreak
+    que se quer que o computador execute''
+
+\vfill
+
+- <3->Programação é a expressão de ideias de forma que
+  - Possa ser executada por uma máquina
+    - Eficiência, portabilidade, custo
+  - compreendida por um outro ser humano
+       + Simplicidade, poder de expressão, generalidade, etc
+
+\vfill
+
+- <4->Resta a questão: *como programar?*
+
+* Linguagens de Programação
+Meio de comunicação *usuário/computador*
+- Notação para especificar ao computador o que fazer
+
+[[./img/pensamento_humano-computador.png]]
+
+Meio de comunicação *entre usuários*
++ <3->Um bom custo benefício entre
+  + Hardware: operação, requisitos e restrições
+  + Aplicação: como resolver um problema
+
+\vfill
+
++ <4->Linguagens em diferentes níveis de abstração
+  + Baixo nível (de máquina, usada pelo computador)
+  + Alto nível (próxima ao pensamento humano)
+* Níveis de Abstração em Linguagens
++ Linguagens de máquina
+  + Seqûencia de zeros e uns (0011010000011101)
+  + Notação binária
+
++ <2-> Linguagens Simbólicas
+  + Exemplo: Assembly
+  + Add 4(0), #1
+
++ <3-> *Linguagens orientadas ao usuário*
+  + Maioria das linguagens de programação
+    + C, Fortran, Pascal, Algol, Ada, Objective-C, C++
+
++ <4->Linguagens orientadas à aplicação (scripts)
+  + Excel, SQL, Matlab, R, ...
+
+* Enquete
++ Quais linguagens de programação você conhece?
+  + Primeira escolha (uso diário)
+  + Outras linguagens (conhece bem, mas sem uso diário)
+  \vfill
++ C, C++, Objective-C, Dart, Python, Go, PHP, Java, Lisp, Scheme, ML,
+  Fortan, Cobol, AWK, SED, Eiffel, Ruby, JavaScript, BASIC, Logo,
+  Modula-3, Ada, APL, Algol, PERL, C#, .NET, Assembly, Verilog,
+  SystemC, Caml, Ocaml, CLU, Haskell, Matlab, Maple, Oberon,
+  Occam, PL/I, Prolog, Simula, Smalltalk, SNOBOL, SR, TCL,
+  Delphi, Visual Basic, Visual C++, Clipper, FoxPro, SQL, Lua,
+  Pascal, Latex, R, ...
+  \vfill
++ http://goo.gl/forms/2Hr4SF9XqW
+
+* Genealogia das Principais Linguagens
+Veja em http://www.levenez.com/lang/
+
+#+ATTR_LATEX: :height 6cm
+[[./img/lang.pdf]]
+
+#+BEGIN_CENTER
+[[./img/lang.pdf][Faça zoom na figura]]
+#+END_CENTER
+
+* Discussão
+
+Por que existem várias linguagens?
+
+\vfill
+
++ <2->Várias explicações possíveis
+  + Necessidades diferentes (domínios de aplicação)
+  + Limitações de um hardware específico
+  + Fatores sócio-econômicos
+  + Evolução natural
+
+
+* O início, os primeiros programas
+Computadores imensos \linebreak
+\rightarrow Capacidade de cálculo de uma calculadora de mão \linebreak
+\rightarrow Baixa confiabilidade durante a execução (bugs)
+
+- <2-> *Qual valia mais?*
+  - O tempo do computador ou o tempo do programador
+
+\vfill
+
++ <3->Problemas
+  + Programação sujeita a *erros*
+  + *Longo* tempo de programação
+  + *Depuração* e *manutenção* de código
+
+* Surgimento das linguagens de montagem
++ Utilização de *mneumônicos*
+  #+BEGIN_SRC C
+  L0: MOV AX, i
+      CMP AX, 100
+      JMP L0
+  #+END_SRC
++ *Correspondência direta* com a linguagem de máquina
+  - Ver o programa =hexdump=
+
+\vfill
+
++ <2->Problemas
+  + Fortemente associada à um *hardware específico*
+  + Máquinas mais velozes \rightarrow tempo do programador encarece
+\vfill
++ <3-> Precisamos de uma linguagem de mais alto nível!
+  + *Independente* de máquina
+  + Computação científica (numérica)
+
+* As linguagens de alto nível
+- Fortran (meados de 1950)
+  - ALGOL, LISP, mais ou menos em paralelo
+
+\vfill
+
+- <2->Problema
+  - Programação em linguagem de alto nível
+  - Execução deve ser em linguagem de máquina
+
+\vfill
+
++ <3-> Solução através do desenvolvimento de *compiladores*
+  + Perda da correspondência direta com ling. de máquina
+  + Implementação do compilador afeta a linguagem compilada
+
+* Desenvolvimento da engenharia de software
++ Engenharia de Software (ES) - a partir da década de 70
+  + Abstração de dados: definição de tipos
+  + Abstração de controle: comandos, procedimentos
+
++ Orientação a Objeto, TADs, Herança, Encapsulamento, Exceções,
+  Prog. Concorrente, Classes, Objetos, Módulos
+
+\vfill
+
++ <2->Facilitar a manutenção e o desenvolvimento
+  + Utilizar especificações, interfaces pré-definidas
+  + Processos de desenvolvimento e de qualidade
+
+* Histórico -- Estruturação e modularização                        :noexport:
++ Década de 80
+  + Ênfase em mecanismos e abstrações
+  + Correção de programas: *verificação de tipos, exceções*
+  + Programação *concorrente*, distribuída e de tempo real
+  + Programação baseada em estruturas (TADs)
+  + Princípios de orientação a objetos (*herança*)
++ Exemplos
+  + Academia: Pascal/Modula
+  + Programação de tempo real: Ada83
+  + Orientada a objetos: Smalltalk
+
+* Histórico -- Estruturação e modularização                        :noexport:
++ Década de 90
+  + Estruturação de dados: *encapsulamento*
+  + Estruturação da lógica: classe
+  + Estruturação do programa: *classes e objetos*
+  + Programação para Internet: plataforma neutra
++ Exemplos
+  + Pascal e Delphi (programação visual)
+  + C++ e Objective-C
+  + Ada95
+  + Java
+
+
+* Domínios de Aplicação
++ *Pergunta* \linebreak
+  Uma LP é capaz de expressar qualquer programa?
+\vfill
++ <2-> Linguagens adequadas a classes de problemas \linebreak
+  \rightarrow simplifica a linguagem, otimiza sua implementação
+\vfill
++ <3-> Exemplos
+  + C: baixo nível, genérica, sistemas
+  + Java, Objective-C: orientação a objetos
+  + Fortran: cálculos, simulação científica de alto desempenho
+  + R: análise estatística, geração de gráficos, ciência de dados
+  + Outras linguagens de script: prototipação, flexibilidade
+
+* Domínios de Aplicação -- Considerações
++ *Resposta* \linebreak 
+  É possível escrever qualquer programa em qualquer LP
++ <2->Porém, *a facilidade* de codificação *é diferente*
++ <3->Como saber
+  + Qual a linguagem de programação usar?
+  + Precisamos desenvolver uma nova linguagem?
+  + Devemos adotar uma nova linguagem de programação?
+
+* Reflexão e discussão
++ Hipótese de Sapir-Whorf (área da linguística) \linebreak
+  `` *A estrutura da linguagem define os limites do pensamento.* ''
+  - ... /define/ ou /influencia/ ...
+\vfill
++ <2->Uma dada linguagem pode 
+  + Facilitar ou dificultar certos modos de pensar
+  + Dificuldades na capacidade de abstração
+  + Linguagem nos leva para uma classe de soluções
+
+\vfill
+
++ <3-> O mesmo acontece com linguagens de programação?
+
+* Sobre linguagens de programação
++ Principais diferenças e similaridades?
++ O que torna uma LP boa?
++ O que torna uma LP conhecida ou muito usada?
++ Boa e conhecida significam a mesma coisa?
++ O que torna uma LP mais adequada para uma aplicação?
+\vfill
++ <2-> *Modelos de Linguagem de Programação*
+
+* Principais Modelos (Paradigmas)
++ Modelos Imperativos
+  + Estruturado (Von Neumann)
+  + Orientado a objetos
++ Modelos Declarativos
+  + Funcional
+  + Lógico (restrições)
+
+[[./img/principais_modelos.png]]
+
+\vfill
+
++ <2-> Mas existem linguagens *multiparadigma*
+
+
+* Conclusão da Aula de Hoje
++ Motivação, relembrando (entre outros bons motivos)
+  + Melhor expressar ideias
+  + Melhorar o aprendizado de novas linguagens
++ Leituras Recomendadas
+  + Capítulo 1 do livro do Sebesta
+\vfill
++ Próxima aula \\
+  *Critérios* e *Características* de Linguagem de Programação \\
+  Compilação e Interpretação, Máquinas Virtuais

@@ -32,8 +32,8 @@
 #+NAME: listagem_de_encontros
 | Setor      | Descrição                                                                                                 |       Local | Projeto      |
 |------------+-----------------------------------------------------------------------------------------------------------+-------------+--------------|
-|            | Definições, requisitos e posicionamento da disciplina                                                     |             |              |
-| Introdução | Sintaxe e semântica. Processadores de linguagens. Compilação, interpretação. Máquinas virtuais.           |             |              |
+| Geral      | Definições, requisitos e posicionamento da disciplina                                                     |             |              |
+| Geral      | Sintaxe e semântica. Processadores de linguagens. Compilação, interpretação. Máquinas virtuais.           |             |              |
 | Funcional  | Modelo de Programação Funcional: características do modelo; semântica de programas.                       |             | Anúncio      |
 | Funcional  | ML: Introdução, tipos de dados primitivos e estruturados, funções.                                        |      67-104 |              |
 | Funcional  | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.                        |      67-104 |              |
