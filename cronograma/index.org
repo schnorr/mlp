@@ -1,0 +1,209 @@
+# -*- coding: utf-8 -*-"
+#+STARTUP: overview indent
+#+OPTIONS: html-link-use-abs-url:nil html-postamble:auto
+#+OPTIONS: html-preamble:t html-scripts:t html-style:t
+#+OPTIONS: html5-fancy:nil tex:t
+#+HTML_DOCTYPE: xhtml-strict
+#+HTML_CONTAINER: div
+#+DESCRIPTION:
+#+KEYWORDS:
+#+HTML_LINK_HOME:
+#+HTML_LINK_UP:
+#+HTML_MATHJAX:
+#+HTML_HEAD:
+#+HTML_HEAD_EXTRA:
+#+SUBTITLE:
+#+INFOJS_OPT:
+#+CREATOR: <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.2.2 (<a href="http://orgmode.org">Org</a> mode 9.0.1)
+#+LATEX_HEADER:
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+#+TAGS: noexport(n) deprecated(d)
+
+* Planejamento                                                     :noexport:
+** Modelo do cronograma em TEX                                       :ATTACH:
+:PROPERTIES:
+:Attachments: layout-cronograma.tex
+:ID:       8d06941c-8871-4365-980a-b54f54214592
+:END:
+
+** Aulas (em ORG)
+
+#+NAME: listagem_de_encontros
+| Setor      | Descrição                                                                                                 |  Local | Projeto      |
+|------------+-----------------------------------------------------------------------------------------------------------+--------+--------------|
+|            | Definições, requisitos e posicionamento da disciplina                                                     |        |              |
+| Introdução | Sintaxe e semântica. Processadores de linguagens. Compilação, interpretação. Máquinas virtuais.           |        |              |
+| Funcional  | Modelo de Programação Funcional: características do modelo; semântica de programas.                       |        | Anúncio      |
+| Funcional  | ML: Introdução, tipos de dados primitivos e estruturados, funções.                                        | 67-104 |              |
+| Funcional  | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.                        | 67-104 |              |
+| Funcional  | ML: Tipos definidos pelo usuário e tipos estruturados de dados, tipos polimórficos.                       | 67-104 |              |
+| Lógico     | Prolog: Modelo de programação em lógica; característica do modelo; fundamentos de lógica; semântica.      | 67-104 |              |
+| Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                                         | 67-104 |              |
+| Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                                | 67-104 |              |
+| Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                                    |        |              |
+| Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.               |        |              |
+| Imperativo | Tipos de Dados: sistemas de tipos, primitivos, estruturados e compostos, tipos de usuário; Introdução OO  |        |              |
+| Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos.              |        |              |
+|            | PA                                                                                                        |        |              |
+| Imperativo | Controle de Fluxo: Expressões e atribuição. Operadores. Comandos de controle: condicionais e iterativos.  |        |              |
+| Imperativo | Polimorfismo: sobrecarga de operadores e funções, coerção, polimorfismo paramétrico, estático e dinâmico. |        |              |
+| Imperativo | Subprogramas: Definição, invocação. Registros de ativação. Acesso a variáveis não locais.                 |        |              |
+| Imperativo | Subprogramas: Semântica de passagem de parâmetros. Modos de passagem de parâmetros, implementação.        |        |              |
+| OO         | Orientação a Objeto: classes, atributos e métodos; encapsulamento; proteção; construtores                 | 67-104 |              |
+| OO         | Orientação a Objeto: Herança, polimorfismo                                                                | 67-104 |              |
+| OO         | Orientação a Objeto: Polimorfismo paramétrico; coleções; reflexão                                         | 67-104 |              |
+| Extra      | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação                      |        |              |
+| Extra      | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                                  |        |              |
+| Extra      | Linguagens de script                                                                                      |        |              |
+| Extra      | Programação Concorrente/Distribuída: aspectos sintáticos e semânticos                                     |        |              |
+| Extra      | Laboratório sobre programação concorrente                                                                 | 67-104 |              |
+|            | PB                                                                                                        |        |              |
+|            | Sessão #1 de apresentação dos projetos                                                                    |        | Apresentação |
+|            | Sessão #2 de apresentação dos projetos                                                                    |        | Apresentação |
+|            | PR                                                                                                        |        |              |
+
+** Cronograma (para TEX)
+#+name: cronograma
+#+header: :var aulas=listagem_de_encontros
+#+begin_src R :results output :session :exports both
+suppressMessages(library(lubridate));
+suppressMessages(library(tidyverse));
+suppressMessages(library(xtable));
+
+aulas <- aulas %>% as.tibble();
+
+daysOff <- c(
+ymd("2017-9-7"),   # Independen
+ymd("2017-9-20"),  # Farroupilh
+ymd("2017-10-12"), # Religioso 
+ymd("2017-10-16"), # SEMAC     
+ymd("2017-10-17"), # SEMAC     
+ymd("2017-10-18"), # SEMAC     
+ymd("2017-10-19"), # SEMAC     
+ymd("2017-10-20"), # SEMAC     
+ymd("2017-10-21"), # Dia nao letive
+ymd("2017-10-26"), # LICIA
+ymd("2017-10-27"), # LICIA
+ymd("2017-10-28"), # Servidor  
+ymd("2017-11-2"),  # Mortos    
+ymd("2017-11-15"), # Republica 
+seq(ymd("2017-11-14"), ymd("2017-11-28"), by="days"), # EcoSud
+ymd("2017-12-23"), # Recesso   
+ymd("2017-12-24"), # Recesso   
+ymd("2017-12-25"), # Recesso   
+ymd("2017-12-26"), # Recesso   
+ymd("2017-12-27"), # Recesso   
+ymd("2017-12-28"), # Recesso   
+ymd("2017-12-29"), # Recesso   
+ymd("2017-12-30"), # Recesso   
+ymd("2017-12-31"), # Recesso   
+ymd("2018-1-1"),   # Recesso  
+ymd("2018-1-3"),   # Ajuste do Cronograma
+ymd("2018-1-6"),   # Vestibular
+ymd("2018-1-7"),   # Vestibular
+ymd("2018-1-8"),   # Vestibular
+ymd("2018-1-9"),   # Vestibular
+ymd("2018-1-10")   # Vestibular
+)
+
+dataDaRecuperação <- ymd("2018-01-22");
+
+dates <- tibble(Dia=seq(ymd("2017-08-28"), ymd("2018-01-27"), by="days")) %>%
+    # Define o dia da semana
+    mutate(DiaDaSemana = wday(Dia)) %>%
+    # Compiladores Segundas-Quartas
+    filter(DiaDaSemana %in% c(2, 4)) %>%
+    # Remove dias onde não haverá aula
+    filter(!(Dia %in% daysOff));
+
+aulas %>%
+    # Associa as datas
+    bind_cols(dates %>% slice(1:nrow(aulas))) %>%
+    # Altera a data da PR
+    mutate(Dia = case_when (grepl("PR", Descrição) ~ dataDaRecuperação,
+                            TRUE ~ Dia)) %>%
+    # Converte as datas para caracter
+    mutate(Encontro = as.character(Dia)) %>%
+    # Ordena as aulas
+    mutate(N = 1:nrow(.)) -> aulas;
+
+aulas %>%
+    select(N, Encontro, Local, Setor, Descrição, Projeto) %>%
+    as.data.frame() %>%
+    xtable(.) %>%
+    print (print.results=FALSE,
+           booktabs = TRUE,
+           include.rownames=FALSE) %>%
+    as.character -> cronograma;
+#+end_src
+
+#+RESULTS: cronograma
+
+** Cronograma (em PDF)
+#+name: modelo_cronograma
+#+header: :var dep0=cronograma
+#+begin_src R :results output :session :exports both
+cronograma.modelo.filename = "data/8d/06941c-8871-4365-980a-b54f54214592/layout-cronograma.tex"
+cronograma.modelo = readChar(cronograma.modelo.filename, file.info(cronograma.modelo.filename)$size);
+turma = "Única";
+semestre = "2017/2"
+cronograma.modelo <- gsub("TURMA", turma, cronograma.modelo);
+cronograma.modelo <- gsub("SEMESTRE", semestre, cronograma.modelo);
+cronograma.modelo <- gsub("TABELA", gsub("\\\\", "\\\\\\\\", cronograma), cronograma.modelo);
+write(cronograma.modelo, "cronograma.tex");
+#+end_src
+
+#+RESULTS: modelo_cronograma
+
+#+header: :var dep=modelo_cronograma
+#+begin_src shell :results output
+rubber --pdf cronograma.tex
+#+end_src
+
+#+RESULTS:
+
+* Cronograma
+
+O cronograma também está [[./cronograma.pdf][disponível em formato PDF]].
+
+#+header: :var dep=cronograma
+#+begin_src R :results value table :session :exports output :colnames yes
+aulas %>%
+    select(N, Encontro, Local, Setor, Descrição, Projeto) %>%
+    as.data.frame
+#+end_src
+
+#+RESULTS:
+|  N |   Encontro |  Local | Setor      | Descrição                                                                                                 | Projeto      |
+|----+------------+--------+------------+-----------------------------------------------------------------------------------------------------------+--------------|
+|  1 | 2017-08-28 |        |            | Definições, requisitos e posicionamento da disciplina                                                     |              |
+|  2 | 2017-08-30 |        | Introdução | Sintaxe e semântica. Processadores de linguagens. Compilação, interpretação. Máquinas virtuais.           |              |
+|  3 | 2017-09-04 |        | Funcional  | Modelo de Programação Funcional: características do modelo; semântica de programas.                       | Anúncio      |
+|  4 | 2017-09-06 | 67-104 | Funcional  | ML: Introdução, tipos de dados primitivos e estruturados, funções.                                        |              |
+|  5 | 2017-09-11 | 67-104 | Funcional  | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.                        |              |
+|  6 | 2017-09-13 | 67-104 | Funcional  | ML: Tipos definidos pelo usuário e tipos estruturados de dados, tipos polimórficos.                       |              |
+|  7 | 2017-09-18 | 67-104 | Lógico     | Prolog: Modelo de programação em lógica; característica do modelo; fundamentos de lógica; semântica.      |              |
+|  8 | 2017-09-25 | 67-104 | Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                                         |              |
+|  9 | 2017-09-27 | 67-104 | Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                                |              |
+| 10 | 2017-10-02 |        | Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                                    |              |
+| 11 | 2017-10-04 |        | Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.               |              |
+| 12 | 2017-10-09 |        | Imperativo | Tipos de Dados: sistemas de tipos, primitivos, estruturados e compostos, tipos de usuário; Introdução OO  |              |
+| 13 | 2017-10-11 |        | Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos.              |              |
+| 14 | 2017-10-23 |        |            | PA                                                                                                        |              |
+| 15 | 2017-10-25 |        | Imperativo | Controle de Fluxo: Expressões e atribuição. Operadores. Comandos de controle: condicionais e iterativos.  |              |
+| 16 | 2017-10-30 |        | Imperativo | Polimorfismo: sobrecarga de operadores e funções, coerção, polimorfismo paramétrico, estático e dinâmico. |              |
+| 17 | 2017-11-01 |        | Imperativo | Subprogramas: Definição, invocação. Registros de ativação. Acesso a variáveis não locais.                 |              |
+| 18 | 2017-11-06 |        | Imperativo | Subprogramas: Semântica de passagem de parâmetros. Modos de passagem de parâmetros, implementação.        |              |
+| 19 | 2017-11-08 | 67-104 | OO         | Orientação a Objeto: classes, atributos e métodos; encapsulamento; proteção; construtores                 |              |
+| 20 | 2017-11-13 | 67-104 | OO         | Orientação a Objeto: Herança, polimorfismo                                                                |              |
+| 21 | 2017-11-29 | 67-104 | OO         | Orientação a Objeto: Polimorfismo paramétrico; coleções; reflexão                                         |              |
+| 22 | 2017-12-04 |        | Extra      | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação                      |              |
+| 23 | 2017-12-06 |        | Extra      | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                                  |              |
+| 24 | 2017-12-11 |        | Extra      | Linguagens de script                                                                                      |              |
+| 25 | 2017-12-13 |        | Extra      | Programação Concorrente/Distribuída: aspectos sintáticos e semânticos                                     |              |
+| 26 | 2017-12-18 | 67-104 | Extra      | Laboratório sobre programação concorrente                                                                 |              |
+| 27 | 2017-12-20 |        |            | PB                                                                                                        |              |
+| 28 | 2018-01-15 |        |            | Sessão #1 de apresentação dos projetos                                                                    | Apresentação |
+| 29 | 2018-01-17 |        |            | Sessão #2 de apresentação dos projetos                                                                    | Apresentação |
+| 30 | 2018-01-22 |        |            | PR                                                                                                        |              |
