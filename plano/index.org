@@ -28,10 +28,10 @@ Funcionais. Além disso, serão realizados trabalhos em aula e
 extra-classe de caráter teórico e prático. Finalmente, trabalhos
 práticos de programação de maior porte serão definidos para a fixação
 e comparação dos paradigmas estudados.  O material apresentado em sala
-de aula será disponibilizado no ambiente escolhido pelo professor.
+de aula será disponibilizado no ambiente EAD escolhido pelo professor.
 
 Sugere-se ao aluno que utilize e verifique constantemente o material
-disponível no ambiente da disciplina, antes e após as aulas. Nele
+disponível no ambiente EAD da disciplina, antes e após as aulas. Nele
 serão disponibilizados exercícios e atividades extraclasse, notas,
 especificações de trabalho e demais materiais que sejam
 necessários. Toda comunicação oficial do professor com os alunos será
