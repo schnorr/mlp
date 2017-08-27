@@ -1,0 +1,38 @@
+* Conteúdo
+** Aulas
+
+A tabela abaixo traz uma lista dos assuntos abordados ao longo do
+semestre, por setor. Os tópicos, respeitando o plano de ensino da
+disciplina, podem variar em abrangência e profundidade.
+
+| Setor      | Descrição                                                                                                 |
+|------------+-----------------------------------------------------------------------------------------------------------|
+| Geral      | [[./aulas/geral/apresentacao.org][Apresentação da Disciplina]]                                                                                |
+| Geral      | [[./aulas/geral/introducao.org][Introdução Geral]]                                                                                          |
+| Geral      | Sintaxe e semântica. Processadores de linguagens. Compilação, interpretação. Máquinas virtuais.           |
+| Funcional  | Modelo de Programação Funcional: características do modelo; semântica de programas.                       |
+| Funcional  | ML: Introdução, tipos de dados primitivos e estruturados, funções.                                        |
+| Funcional  | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.                        |
+| Funcional  | ML: Tipos definidos pelo usuário e tipos estruturados de dados, tipos polimórficos.                       |
+| Lógico     | Prolog: Modelo de programação em lógica; característica do modelo; fundamentos de lógica; semântica.      |
+| Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                                         |
+| Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                                |
+| Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                                    |
+| Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.               |
+| Imperativo | Tipos de Dados: sistemas de tipos, primitivos, estruturados e compostos, tipos de usuário; Introdução OO  |
+| Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos.              |
+| Imperativo | Controle de Fluxo: Expressões e atribuição. Operadores. Comandos de controle: condicionais e iterativos.  |
+| Imperativo | Polimorfismo: sobrecarga de operadores e funções, coerção, polimorfismo paramétrico, estático e dinâmico. |
+| Imperativo | Subprogramas: Definição, invocação. Registros de ativação. Acesso a variáveis não locais.                 |
+| Imperativo | Subprogramas: Semântica de passagem de parâmetros. Modos de passagem de parâmetros, implementação.        |
+| OO         | Orientação a Objeto: classes, atributos e métodos; encapsulamento; proteção; construtores                 |
+| OO         | Orientação a Objeto: Herança, polimorfismo                                                                |
+| OO         | Orientação a Objeto: Polimorfismo paramétrico; coleções; reflexão                                         |
+| Extra      | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação                      |
+| Extra      | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                                  |
+| Extra      | Linguagens de script                                                                                      |
+| Extra      | Programação Concorrente/Distribuída: aspectos sintáticos e semânticos                                     |
+| Extra      | Laboratório sobre programação concorrente                                                                 |
+
+** Material de apoio
+** Exercícios
