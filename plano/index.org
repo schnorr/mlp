@@ -125,18 +125,18 @@ Provas, trabalhos e demais atividades serão avaliados com notas entre
 fórmula:
 
 #+BEGIN_EXAMPLE
-MF = 0.60 \times PS + 0.25 \times TP + 0.15 \times CATP
+MF = 0.60 * PS + 0.25 * TP + 0.15 * CATP
 #+END_EXAMPLE
 
 A conversão da MF para conceitos é feita por meio da seguinte tabela:
 
-| Média Final      | Conceito     |
-|------------------+--------------|
-| 9.0 \ge \MF \leq 10.0 | A (aprovado) |
-| 7.5 \ge \MF < 9.0$ | B (aprovado) |
-| 6.0 \ge \MF < 7.5$ | C (aprovado) |
-| 0.0 \ge \MF < 6.0$ | Recuperação  |
-|------------------+--------------|
+| Média Final       | Conceito     |
+|-------------------+--------------|
+| 9.0 >= MF <= 10.0 | A (aprovado) |
+| 7.5 >= MF < 9.0   | B (aprovado) |
+| 6.0 >= MF < 7.5   | C (aprovado) |
+| 0.0 >= MF < 6.0   | Recuperação  |
+|-------------------+--------------|
 
 Em recuperação, o conceito passa para C em caso de aprovação ou
 conceito D em caso de reprovação na recuperação.
@@ -163,7 +163,7 @@ O seguintes critérios de avaliação serão utilizados ao longo deste semestre:
 A média final MF, por sua vez, será calculada através da seguinte equação:
 
 #+BEGIN_EXAMPLE
-MF = (PA \times 0.30) + (PB \times 0.30) + (TP \times 0.25) + (CATP \times 0.15)
+MF = (PA * 0.30) + (PB * 0.30) + (TP * 0.25) + (CATP * 0.15)
 #+END_EXAMPLE
 
 ** Atividades de Recuperação
@@ -190,16 +190,14 @@ de sua realização.
 As referências básicas essenciais, básicas e complementares são as seguintes:
 
 *** Básica e Essencial
-
-- Robert W. Sebesta. Conceitos de Linguagens de Programação . Bookman,
-  5th edition, 2003
-- Michael L. Scott. Programming Language Pragmatics . Morgan Kaufmann, 3rd edition, 2009 (BE)
+- [[http://loja.grupoa.com.br/livros/programacao/conceitos-de-linguagens-de-programacao/9788577807918][Robert W. Sebesta. Conceitos de Linguagens de Programação. Bookman. 5th edition, 2003]]
+- [[https://www.elsevier.com/books/programming-language-pragmatics/scott/978-0-12-374514-9][Michael L. Scott. Programming Language Pragmatics . Morgan Kaufmann, 3rd edition, 2009]]
 
 *** Básica
 
-- Carlo Ghezzi and Mehdi Jazayeri. Programming language concepts . John Wiley & Sons, 2008 (B)
-- David A Watt. Programming language design concepts . John Wiley & Sons, 2004 (B)
+- [[http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471104264.html][Carlo Ghezzi and Mehdi Jazayeri. Programming language concepts. John Wiley & Sons, 2008]]
+- [[http://www.wiley.com/WileyCDA/WileyTitle/productCd-EHEP000973.html][David A Watt. Programming language design concepts . John Wiley & Sons, 2004]]
 
 *** Complementar
 
-- Flávio Varejão. Linguagens de Programação, Conceitos e Técnicas . Campus, 2004 (C)
+- [[https://inf.ufes.br/~fvarejao/livroLP.html][Flávio Varejão. Linguagens de Programação, Conceitos e Técnicas . Campus, 2004.]]
