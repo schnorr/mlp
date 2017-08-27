@@ -26,24 +26,17 @@ explicação dos conteúdos e discussão de exercícios, intercaladas com
 aulas práticas de programação em linguagens imperativas, lógicas e
 Funcionais. Além disso, serão realizados trabalhos em aula e
 extra-classe de caráter teórico e prático. Finalmente, trabalhos
-práticos de programação de maior porte serão definidos para a
-fixação e comparação dos paradigmas estudados.
-
-O material apresentado em sala de aula também será disponibilizado
-no ambiente Moodle do INF\footnote{\scriptsize
-  \url{http://moodle.inf.ufrgs.br}}. Tal ambiente pode ser acessado
-por todos os alunos matriculados na disciplina, bastando para tal
-utilizar o login/senha da rede do Instituto de Informática e fazer a
-inscrição na disciplina.
+práticos de programação de maior porte serão definidos para a fixação
+e comparação dos paradigmas estudados.  O material apresentado em sala
+de aula será disponibilizado no ambiente escolhido pelo professor.
 
 Sugere-se ao aluno que utilize e verifique constantemente o material
-disponível no ambiente Moodle citado, antes e após as aulas. Nele
+disponível no ambiente da disciplina, antes e após as aulas. Nele
 serão disponibilizados exercícios e atividades extraclasse, notas,
 especificações de trabalho e demais materiais que sejam
-necessários. Toda comunicação oficial do professor com os alunos
-será feita APENAS por e-mail através do Moodle. Assim, não se
-esqueça de verificar se seu e-mail está atualizado no sistema da
-UFRGS.
+necessários. Toda comunicação oficial do professor com os alunos será
+feita APENAS por e-mail. Assim, não se esqueça de verificar se seu
+e-mail está atualizado no sistema da UFRGS.
 
 As 60 horas previstas para atividades teóricas e práticas indicadas
 neste Plano de Ensino incluem 30 encontros de 100 minutos de duração
@@ -78,21 +71,21 @@ seguintes atividades deverão ser realizadas pelos alunos a fim de
 lhes proporcionar uma experiência de aprendizagem e avaliação
 adequada:
 
-- Provas escritas, na quantidade e proporção estipulados no
-  início de cada semestre, sendo tal informação também
-  disponibilizada no Moodle a cada semestre (totalizando 60\% da
-  média final do semestre);
+- Provas escritas, na quantidade e proporção estipulados no início de
+  cada semestre, sendo tal informação também disponibilizada no
+  ambiente EAD a cada semestre (totalizando 60% da média final do
+  semestre);
 
-- Um trabalho prático (TP) envolvendo implementação e
-  análise fundamentada (maiores detalhes sobre o trabalho são
-  disponibilizados no Moodle), além de apresentação do resultado em
-  aula e elaboração de relatório (totalizando 25\% da média final do
+- Um trabalho prático (TP) envolvendo implementação e análise
+  fundamentada (maiores detalhes sobre o trabalho são disponibilizados
+  no ambiente EAD), além de apresentação do resultado em aula e
+  elaboração de relatório (totalizando 25% da média final do
   semestre);
 
 - Um conjunto de atividades teórico-práticas (CATP), a ser
-  disponibilizado no Moodle em aulas específicas, a serem realizadas
-  em aula e/ou em horário extraclasse (totalizando 15\% da média
-  final do semestre).
+  disponibilizado no ambiente EAD em aulas específicas, a serem
+  realizadas em aula e/ou em horário extraclasse (totalizando 15% da
+  média final do semestre).
 
 Estas atividades serão avaliadas conforme descrito na seção seguinte e
 realizadas conforme o cronograma divulgado.
@@ -108,13 +101,13 @@ cronograma disponibilizado a cada semestre:
 
 - Um trabalho prático (TP) envolvendo a implementação de um programa,
   a apresentação do resultado em aula e a elaboração de um relatório,
-  conforme instruções disponibilizadas no Moodle, correspondendo, no
-  total, a 25% da nota final do semestre;
+  conforme instruções disponibilizadas no ambiente EAD,
+  correspondendo, no total, a 25% da nota final do semestre;
 
 - Um conjunto de atividades teórico-práticas (CATP), a ser
-  disponibilizado no Moodle em aulas específicas, a serem realizadas
-  em aula e/ou em horário extraclasse.), correspondendo a 15% da nota
-  final do semestre.
+  disponibilizado no ambiente EAD em aulas específicas, a serem
+  realizadas em aula e/ou em horário extraclasse.), correspondendo a
+  15% da nota final do semestre.
 
 A nota do trabalho prático só será contabilizada na média final se o
 aluno realizar todas as atividades relacionadas com ele
@@ -175,15 +168,15 @@ média é então recalculada levando-se em conta o novo valor obtido (e o
 peso da prova substituída), gerando o conceito final conforme a tabela
 apresentada anteriormente.  A prova de recuperação avalia o conteúdo
 de todas as unidades e sua data está prevista no cronograma
-disponibilizado pelo professor, no Moodle.  Não é previsto nenhum tipo
-de recuperação para o TP ou para o CATPs, exceto para os casos
-previstos na legislação (ver a seguir).  A recuperação das provas ou
-atividades individuais será realizada somente para os casos previstos
-na legislação: saúde, parto, serviço militar, convocação judicial,
-luto, etc., devidamente comprovados, através de processo aberto na
-Junta Médica da UFRGS ou no orgão competente, conforme o caso. Tendo o
-direito a recuperação, o professor estipulará a data, horário e local
-de sua realização.
+disponibilizado pelo professor, no ambiente EAD.  Não é previsto
+nenhum tipo de recuperação para o TP ou para o CATPs, exceto para os
+casos previstos na legislação (ver a seguir).  A recuperação das
+provas ou atividades individuais será realizada somente para os casos
+previstos na legislação: saúde, parto, serviço militar, convocação
+judicial, luto, etc., devidamente comprovados, através de processo
+aberto na Junta Médica da UFRGS ou no orgão competente, conforme o
+caso. Tendo o direito a recuperação, o professor estipulará a data,
+horário e local de sua realização.
 
 ** Referências
 
