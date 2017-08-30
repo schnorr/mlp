@@ -18,4 +18,3 @@ enviados.
 | CATP | Descrição                      | Entrega     |      Prazo |
 |------+--------------------------------+-------------+------------|
 | #01  | [[./01/formulario.pdf][Formulário de Avaliação de LPs]] | Papel/Email | 2017-08-30 |
-|      |                                |             |            |
