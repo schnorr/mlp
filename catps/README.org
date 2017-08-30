@@ -1,0 +1,21 @@
+* Conjunto de Atividades Teórico-Práticas (CATP)
+
+Todos os prazos são até as 23:59 da data informada.
+
+Existem duas formas de entrega, em papel e por e-mail. A forma de
+entrega específica de cada CATP está listada na tabela abaixo. Caso o
+campo esteja vazio, isso indica que a entrega é por e-mail. Quando a
+entrega é por papel, este deve ser entregue em mãos antes do prazo
+especificado. Quando a entrega é por e-mail, este deve ser enviado
+antes do prazo especificado com o título "CATP #NN", onde NN são os
+dois digítos que identificam o CATP. Somente serão válidos os
+relatórios textuais em arquivos do tipo TXT ou PDF. Código fonte em
+arquivos com codificação UTF8. E lembre-se: todos os CATP devem ter
+uma identificação clara dos participantes, em todos os arquivos
+enviados.
+
+
+| CATP | Descrição                      | Entrega     |      Prazo |
+|------+--------------------------------+-------------+------------|
+| #01  | [[./01/formulario.pdf][Formulário de Avaliação de LPs]] | Papel/Email | 2017-08-30 |
+|      |                                |             |            |

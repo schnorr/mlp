@@ -1,0 +1,123 @@
+\documentclass[11pt,portuguese]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{ctable}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{needspace}
+\usepackage[rubberchapters,clearempty,pagestyles]{titlesec}
+\usepackage[portuguese]{babel}
+\usepackage[margin=.5cm,landscape]{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage{titlesec}
+\usepackage{filecontents}
+\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{ltxtable}
+\usepackage{booktabs}
+\usepackage{color, colortbl}
+\usepackage{fancyheadings}
+\usepackage{graphics}
+\usepackage{setspace}
+\usepackage{tabularx}
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+\begin{document}
+\begin{doublespace}
+\noindent
+{\bf Formulário de Avaliação de Linguagens (CATP 01)} - INF01121 - Modelos de Linguagem de Programação (Prof. Lucas Mello Schnorr)
+
+\noindent
+Aluno(s): \hrulefill \\
+\noindent
+\begin{tabularx}{\textwidth}{|cX|cX}
+LP1: & \hrulefill & LP2: & \hrulefill \\
+\end{tabularx}
+\end{doublespace}
+
+\noindent
+\begin{tabularx}{\textwidth}{p{10.5cm}|c|c|X}
+Característica & {\bf LP1} & {\bf LP2} & Observações \\\hline
+\specialcell{{\bf Simplicidade}\\(poucos comandos, fáceis de entender)}   &&&\\\hline
+\specialcell{{\bf Ortogonalidade}\\(poucas primitivas, todas as combinações \\entre primitivas são legais e significativas)}   &&&\\\hline
+\specialcell{{\bf Estrutura de Controle}\\(variedade, adequabilidade)}   &&&\\\hline
+\specialcell{{\bf Tipos de Dados}\\(variedade, expressividade, semântica, \\mecanismos de reaproveitamento)}   &&&\\\hline
+\specialcell{{\bf Estruturas de Dados}\\(variedade, expressividade, semântica, \\mecanismos de reaproveitamento)}    &&&\\\hline
+\specialcell{{\bf Suporte a Abstração de Dados}\\(variedade de mecanismos de \\definição, manipulação e reaproveitamento de dados)}     &&&\\\hline
+\specialcell{{\bf Suporte a Abstração de Controle}\\(variedade de mecanismos de definição, \\manipulação e reaproveitamento de processos, subprogramas)}     &&&\\\hline
+\specialcell{{\bf Expressividade}\\(poder e conveniência de operadores)}    &&&\\\hline
+\specialcell{{\bf Checagem de Tipos}\\(analisar também tipagem estática ou dinâmica)}     &&&\\\hline
+\specialcell{{\bf Restrições de \emph{Aliasing}}}   &&&\\\hline
+\specialcell{Suporte ao {\bf Tratamento de Exceções}}      &&&\\\hline
+\specialcell{{\bf Portabilidade}}     &&&\\\hline
+{\bf Reusabilidade}    &&&\\\hline
+{\bf Tamanho de Código}     &&&\\\hline
+\end{tabularx}
+
+\noindent
+\begin{tabularx}{\textwidth}{X|X|X}
+\specialcell{A. Avalie a legibilidade (mais informativa \\
+e com carga semântica maior)? \\
+1 = menos legível; 3 - mais legível. \\
+\begin{tabularx}{\linewidth}{p{1cm}|X|X}
+\specialcell{\{ \\ ... \\
+\}}
+&
+\specialcell{
+begin \\
+... \\
+end 
+}
+&
+\specialcell{
+procedure Hello is \\
+begin \\
+ ... \\
+end Hello
+}
+\end{tabularx}
+}
+
+& 
+\specialcell{B. Ainda, em relação à legibilidade, circule \\
+a melhor opção? \\
+\ \\
+\begin{tabularx}{\linewidth}{X|X}
+a = a / b; & int a = a / b;
+\end{tabularx}
+}
+
+
+&
+
+\specialcell{C. Em relação à expressividade, circule \\
+a melhor opção? \\
+\ \\
+\begin{tabularx}{\linewidth}{X}
+\specialcell{for(int i=0; i<length(v); i++)\\\ \ \ print(v[i]);} \\\hline
+\specialcell{foreach i in v do \\\ \ \ print i;}
+\end{tabularx}
+}
+
+\\
+\end{tabularx}
+
+\end{document}
