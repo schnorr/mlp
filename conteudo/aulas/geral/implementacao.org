@@ -1,0 +1,132 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Implementação: Compilação e Interpretação
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Definição de Linguagem de Programação
+- Meio de comunicação *usuário/computador*
+  - Notação para especificar ao computador o que fazer
+
+[[./img/pensamento_humano-computador.png]]
+
+- <2-> Definição quanto a *sintaxe* \\
+  \rightarrow Uma notação para especificar ações a serem executadas
+- <2-> Quanto a *semântica* \\
+  \rightarrow Conjunto de conceitos para resolver problemas de programação
+
+* Máquinas reais
+- Executam um conjunto de instruções em linguagem de máquina
+- *Uma linguagem de programação de alto nível poderia ser diretamente executável nelas?*
+  - <2-> Complexidade e custo de implementação desta máquina?
+  - <2-> Flexibilidade reduzida
+\vfill
+- <3-> Exemplo clássico: *Java Processor* (picoJava / Sun Microsystems)
+  - Arquitetura de computador com instruções de linguagem de alto nível
+\vfill
+
+- <4-> Modelo atual possui diversas camadas
+  - Hardware
+  - Macro-instruções
+  - Sistema Operacional
+  - Linguagens de Alto Nível
+
+* Modelo de camadas
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 8cm
+[[./img/modelo_de_camadas.png]]
+#+END_CENTER
+
+* Implementação de Linguagens
+- Como se dá a execução de programas nesse contexto?
+  - A LP de alto nível é incompatível com as instruções executáveis
+- Como resolver esta incompatibilidade?
+    
+- <2-> *Tradutores de código* (ou processadores de linguagem)
+- <3-> Três abordagens
+  - Compilação
+  - Interpretação
+  - Abordagem Híbrida
+
+* Implementação de LP por Compilação
+- Noção de código executável permanente, diretamente executável na plataforma destino
+- Características
+  - Gera um código eficiente (em tempo e espaço)
+  - Maiores verificações do código fonte \rightarrow Confiabilidade
+- Processo em fases (análise e síntese)
+\vfill
+- Portabilidade através da compilação
+  - Mesmo código, diferentes plataformas
+
+* As fases da compilação
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 8cm
+[[./img/fases_compilacao.png]]
+#+END_CENTER
+
+* Dificuldades por compilação
+- Vinculação tardia de
+  - Nomes a objetos \rightarrow regras de escopo
+  - Tipos a objetos/nomes \rightarrow regras de tipo
+  - Programas a código
+    - Classes dinâmicas em Java
+    - Novas funções criadas durante a execução em Scheme
+
+* Implementação de LP por Interpretação
+- A linguagem é interpretada, linha por linha
+  - Capaz de ``executar'' código de alto nível
+  - Ausência de um processo de tradução (como na compilação)
+  - Ausência de código executável permanente
+- Vantagens
+  - Simplicidade
+  - Portabilidade através da interpretação
+  - Depuração
+  - Flexibilidade
+
+* Compilação /versus/ Interpretação
+- Compilação
+  - Geração de código executável
+  - Depende da plataforma de execução
+  - Tradução lenta /versus/ execução rápida
+  - Transformação mais apurada do código
+  - Código intermediário diferente do código fonte
+  - Menor flexibilidade, maior eficiência
+
+- Interpretação pura
+  - Não gera código executável
+  - Independente de plataforma
+  - Execução lenta
+  - Transformação puramente mecânica
+  - Oferece mais flexibilidade e melhor diagnóstico
+
+* Abordagem Híbrida
+- Compilação - Interpretação
+- Feita em duas etapas
+  - Código fonte é compilado \rightarrow código intermediário
+  - Execução do código intermediário por interpretação
+- Python e Perl
+- Versões iniciais de Java (geração de /bytecode/)
+
+* Projeto de Linguagens de Programação                             :noexport:
+- Questões de projeto
+  - Qual a finalidade da LP? Uso geral ou específico?
+  - Qual o domínio de aplicação?
+  - Qual a sua principal diferença em relação às existentes?
+- Questões de implementação
+  - Qual é seu paradigma principal?
+  - Quais são suas raízes? É nova ou estende uma existente?
+  - Como será feita a tradução da linguagem?
+  - A plataforma de execução é homogênea ou heterogênea?
