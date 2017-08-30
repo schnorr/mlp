@@ -1,0 +1,286 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Critérios e Características de LP
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Escolhendo uma Linguagem
+- Dada a especificação de um problema \\
+  *Qual linguagem escolher?*
+  - C, C++, Objective-C, Dart, Python, Go, PHP, Java, Lisp, Scheme, ML,
+    Fortan, Cobol, AWK, SED, Eiffel, Ruby, JavaScript, BASIC, Logo,
+    Modula-3, Ada, APL, Algol, PERL, C#, .NET, Assembly, Verilog,
+    SystemC, Caml, Ocaml, CLU, Haskell, Matlab, Maple, Oberon,
+    Occam, PL/I, Prolog, Simula, Smalltalk, SNOBOL, SR, TCL,
+    Delphi, Visual Basic, Visual C++, Clipper, FoxPro, SQL, Lua,
+    Pascal, Latex, R, ...
+
+- <2-> Baseada em argumentos técnicos
+  - Conjunto de *critérios* e *características*
+- <2-> Levar em conta o tempo do profissional
+  - Crise do software
+  - Tempo de programação é caro
+
+* Más Razões na escolha de uma LP
+- Fanatismo
+- Preconceito
+- Inércia
+- Medo da mudança
+- Modismo
+- Pressões comerciais
+- Conformismo
+
+* Aspectos técnicos e econômicos
+- Nível de abstração
+- Modelagem de dados e de processos
+- Portabilidade
+- Confiabilidade
+- Eficiência
+- Escalabilidade
+- Modularidade
+- Reusabilidade
+- Legibilidade
+- Redigibilidade
+- Disponibilidade de compiladores e ferramentas
+- Familiaridade (custo-benefício do aprendizado)
+
+* Critérios e Características principais
+- *Critérios* -- importância dentro de um contexto
+  - Legibilidade
+  - Redigibilidade
+  - Confiabilidade
+- <2->  *Características* -- diferenciam as linguagens
+  - Simplicidade
+  - Ortogonalidade
+  - Portabilidade
+  - Confiabilidade
+  - Expressividade
+  - Reusabilidade
+  - Estruturas de controle e Tipos de dados e estruturas
+  - (projeto de) Sintaxe
+  - (suporte a) Abstração
+
+* 
+\vfill
+\centering
+\LARGE Critérios
+\vfill
+* Legibilidade
+- Fácil de ler (e entender)
+  - Influencia na depuração e manutenção de programas
+- Vejamos alguns exemplos
+* Exemplos de *falta de legibilidade*
+- Falta de controle estruturado
+  #+BEGIN_SRC C
+  l0: x = a
+  l1: if x is 0
+         x = b
+         goto l0
+      else
+         x = c
+      goto l1
+  #+END_SRC
+- <2-> Uso de sobrecarga de operadores
+  #+BEGIN_SRC C
+  x = x - 1
+  #+END_SRC
+- <3-> Funções com efeitos colaterais
+  #+BEGIN_SRC C
+  f (&x){
+    if x > 2 x = 0
+  }
+  if (f(&x) == x)
+  #+END_SRC
+* Mais exemplos de *falta de legibilidade*
+- Marcadores genéricos
+  #+BEGIN_SRC C
+  while (x > 0){
+      if (x % 2 == 0){
+      for(y=1;x<10;x++){
+        ;;
+      }
+    }
+  }
+  #+END_SRC
+- <2-> Marcadores opcionais
+  #+BEGIN_SRC C
+  if (x > 1)
+    if (x == 2)
+    x = 3;
+  else x = 4;
+  #+END_SRC
+
+* Técnicas que melhoram a legibilidade
+- Abstração de dados e de processos
+- Modularização de programas
+- Comandos de controle estruturados
+- Tipos e estruturas de dados adequadas
+- Documentação de código
+- Convenções léxicas, de sintaxe e de semântica \\
+  (identificadores, palavras especiais e reservadas)
+
+* Redigibilidade
+- Facilidade de *escrever* código
+  - Influencia no desenvolvimento de programas
+\vfill
+- <2-> Normalmente, anda junto com Legibilidade \\
+  *Mas é sempre assim?*
+  - Fatores de legibilidade \rightarrow limitam capacidade de expressão
+
+* Confiabilidade
+- Facilidade de ter código confiável
+- Essencial em alguns domínios de aplicação
+  - Reator nuclear
+  - Missão espacial
+\vfill
+- <2-> Aumentam a confiabilidade
+  - <2->  *Tipagem forte*
+    - Evita coerção, assegurando uso compatível dos tipos
+    - Evita operações perigosas
+  - <3->  *Tratamento de exceções*
+    - O que fazer em caso de comportamento não usual
+    - Diagnóstico e o tratamento em tempo de execução
+  - <4->  *Redução do Aliasing* (uso de apelidos)
+    - Aliasing \linebreak Um ou mais nomes \rightarrow Mesmo endereço de memória
+    - Exemplo de aliasing: ponteiros
+
+* 
+\vfill
+\centering
+\LARGE Características
+\vfill
+* Simplicidade
+- A representação de cada conceito deve ser simples
+- Simplicidade Sintática
+  - Representação precisa, *sem ambiguidades*
+  - Formas alternativas de implementar uma operação \\
+    #+BEGIN_SRC Java
+    a++; a = a - 1; a += 1; ++a;       
+    #+END_SRC
+- <2-> Simplicidade Semântica
+  - Representação com significado *independente* de contexto
+  - Sobrecarga de operadores
+    \rightarrow redefinir a semântica
+    #+BEGIN_SRC Java
+    x = 1 - 2;
+    x = a - b;
+    #+END_SRC
+- <3-> Excesso de simplicidade
+  - Baixo nível
+  - Alto nível
+
+* Ortogonalidade
+- Definição \\ 
+  Possibilidade de *combinar entre si os componentes básicos* de uma linguagem de programação
+  - <2-> Comportamento previsível no uso dos conceitos
+  - <2-> Aumenta a regularidade, e a legibilidade \\
+         \rightarrow mas também a *complexidade*
+- <3-> Mais ortogonal \rightarrow Menos exceções
+- <4-> Exemplos
+  - Mesma operação aplicável em qualquer tipo de dado
+  - Combinando estruturas de dados
+- <5-> Contraexemplos (exceções a alguma regra de linguagem)
+  - Não permitir que um vetor seja utilizado como parâmetro
+  - Operador de soma não ser permitido para bytes em Java
+
+* Ortogonalidade /versus/ Complexidade
+- ALGOL68 -- bastante ortogonal
+  - Cada construção da linguagem tem um tipo
+  - Não existem restrições quanto a combinação de tipos
+  \rightarrow Complexidade desnecessária?
+\vfill
+- <2-> Preocupações
+  - Semântica de todas as possibilidades?
+  - Qual seu custo de implementação?
+  - Flexibilidade de uma linguagem \rightarrow Exceções
+
+* Estruturas de Controle de fluxo
+- Quanto mais variadas (e específicas), melhor
+- Exemplos
+  - if, then, else, switch() case
+  - do while, while, repeat, until
+  - for, foreach
+- <2-> Contraexemplo
+  - Instruções *goto*
+
+* Tipos e Estruturas
+- Variedade de tipos e estruturas de dados
+- Existência de recursos adequados para a sua definição
+- Exemplos
+  - Enumerações
+  - Tipos booleanos
+  - Registros
+  - Coleções genéricas
+- Classes (em Orientação a Objetos)
+
+* Portabilidade
+- Espaço: *Multiplataforma*
+  - Executar sem adaptações -- sem exigências especiais
+  - Aplicação compatível com \\
+    Linux, Unix, MacOS, Android, FirefoxOS, Windows
+- Tempo: *Longevidade*
+  - Ciclos de vida útil de software e hardware \rightarrow assíncronos
+  - Usar o mesmo software após uma mudança de hardware
+\vfill
+- Muitas vezes, portabilidade depende do *Compilador*
+
+* Reusabilidade
+- *Reutilização do código* em diversas aplicações \\
+  \rightarrow Não reimplementar tudo a cada programa
+- Aumenta a *produtividade*
+- <2-> Vários mecanismos
+  - Parametrização de subprogramas
+  - Componentes, Pacotes, Módulos
+  - Algoritmos genéricos (Objective-C, STL em C++)
+  - Bibliotecas, Frameworks
+- <3-> Exemplo
+  - libm (Funções matemáticas em C)
+  - *libc* (todas as chamadas de sistema em C)
+  - Framework Qt (todas as classes gráficas em C++)
+  - Java (pacotes)
+
+* Expressividade
+- Quão expressiva é uma linguagem?
+  - Poderosas construções da linguagem, operadores 
+- Realizar *bastante computação* com *pouco código*
+- <2-> Linguagens mais modernas
+  - Conjunto básico de representações de tipos e comandos
+  - *Expressividade com bibliotecas* componentes
+  - Exemplos: C++, Java, C#, Ruby
+
+* Custo
+- Treinamento, aprendizado
+- Desenvolvimento
+- Compilação, otimização
+- Execução
+- Depuração
+- Ambiente de desenvolvimento
+- Manutenção
+- Falta de confiabilidade
+
+* Critérios /versus/ Características
+|                             | Legível | Redigib. | Confiável |
+|-----------------------------+---------+----------+-----------|
+| Simplicidade                | x       | x        | x         |
+| Ortogonalidade              | x       | x        | x         |
+| Estruturas de Controle      | x       | x        | x         |
+| Tipos e Estruturas de Dados | x       | x        | x         |
+| Sintaxe                     | x       | x        | x         |
+| Suporte a Abstração         |         | x        | x         |
+| Expressividade              |         | x        | x         |
+| Checagem de tipos           |         |          | x         |
+| Restrições de /aliasing/      |         |          | x         |
+| Tratamento de Exceções      |         |          | x         |
+
+- <2-> Os dados da tabela são absolutos?
