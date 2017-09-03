@@ -1,0 +1,139 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Contextualização e Histórico, Origem dos Paradigmas
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Paradigmas e Modelos
+Imperativo
+- Estruturado: foco nas instruções, procedimentos
+- Orientado a Objetos: dados, métodos
+
+#+Latex: \vfill
+
+Declarativo
+- Funcional: funções
+- Lógico: axiomas, predicados lógicos
+
+#+Latex: \vfill\pause
+
+#+BEGIN_CENTER
+*O que nos levou a estes diferentes modelos/paradigmas?*
+#+END_CENTER
+
+* Fundamentos
+Trabalhos de matemáticos no início do século XX
+- Alan \alert{Turing}, Alonzo \alert{Church}, Stephen \alert{Kleene}, Emil \alert{Post}, etc
+
+#+Latex: \vfill
+
+Formalização da noção de algoritmo \rightarrow \alert{Método Efetivo}
+- Transforma a solução em uma série de passos
+
+#+Latex: \pause
+
+Várias proposições independentes, exemplos
+- Autômatos, Manipulação Simbólica
+- Definição de funções recursivas, Combinatória \\
+
+#+Latex: \vfill\pause
+
+#+BEGIN_CENTER
+*Um programa visto como uma prova construtiva*.
+
+Evitando: Infinito (\infty) e Terceiro Excluído (falso = !verdadeiro)
+#+END_CENTER
+
+* Detalhamento histórico
+1920
+- *Moses Schönfinkel* \rightarrow \alert{Teoria de Funções} \\
+  (combinadores -- função cujo argumento é outra função)
+
+#+Latex: \vfill
+
+A partir de 1930
+- *Alonzo Church* \rightarrow *Cálculo Lambda*
+- *Haskell Curry* \rightarrow Estendeu Schönfinkel, mostrando que a teoria de funções é equivalente ao cálculo lambda
+- *Kleene* \rightarrow Cálculo lambda é um *sistema de computação universal*
+#+Latex: \pause
+- *Turing* escreveu o artigo: ``On computable numbers with an application to the Entscheidungs-problem'' (1936, 36p.) \linebreak \rightarrow *Máquina Universal*
+
+* A origem dos diferentes modelos/paradigmas
+#+BEGIN_CENTER
+*O que nos levou a estes diferentes modelos/paradigmas?*
+#+END_CENTER
+
+#+Latex: \vfill
+
+Turing -- Máquina de Turing
+- Autômato Finito com acesso arbitrário a uma Fita Infinita
+- \alert{Modelo Imperativo} \\
+  \rightarrow computação via modificações de valores na fita
+
+#+Latex: \pause
+
+Church -- Cálculo Lambda ($\lambda$)
+- Expressões Parametrizadas \\
+  (cada parâmetro é uma ocorrência de $\lambda$)
+- \alert{Modelo Funcional} \\
+  \rightarrow comput. via substituição de parâmetros em expressões
+
+#+Latex: \pause
+
+Boole -- Axiomas Lógicos
+  - Procedimento que descobre a prova construtiva para cada conjunto particular de entradas
+  - \alert{Modelo Lógico}
+
+OO?
+
+* Exemplo: MDC entre dois números inteiros *a* e *b*
+Imperativo
+- Para computar o MDC de *a* e *b*, *teste* se *a* e *b* são iguais. Se sim,
+  imprima um deles e pare. Se não, *substitua* o maior pela diferença
+  entre eles e *repita* o procedimento
+#+Latex: \vfill\pause
+Funcional
+- O MDC de *a* e *b* será *a* quando eles forem iguais e será o MDC de *c* e *d*
+  quando forem diferentes, sendo *c* o menor valor entre *a* e *b*, e *d* a
+  diferença entre *a* e *b*. *Expanda e simplifique essa definição
+  recursivamente até terminar*.
+#+Latex: \vfill\pause
+Lógico
+- A proposição MDC(a,b,g) é verdadeira se *a = b = g*, *MIN(a,b,c)* é
+  verdadeira, *MENOS(a,b,d)* é verdadeira, e *MDC(c,d,g)* é verdadeira.
+  Para computar MDC(m,n), *procure por um valor de g* (e vários valores
+  de *c* e *d*) *para os quais essas regras permitam provar que MDC(m,n,g)
+  é verdadeiro*.
+* Exemplo: código simplificado
+- Imperativo (C++)
+  #+BEGIN_SRC C++
+while(a != 0){
+  tmp = a;
+  a = b % a;
+  b = tmp;
+} cout << a;
+#+END_SRC
+#+Latex: \vfill\pause
+- Funcional (ML)
+  #+BEGIN_SRC ML
+mdc a 0 = a
+mdc a b = mdc b (a `mod` b)
+#+END_SRC
+#+Latex: \vfill\pause
+- Lógico (Prolog)
+  #+BEGIN_SRC LOG
+mdc(A,A,A).
+mdc(A,B,R) :- A>B, A1 is A-B, mdc(A1,Y,R).
+mdc(A,B,R) :- B>A, B1 is B-A, mdc(A,B1,R).
+#+END_SRC
