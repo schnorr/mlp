@@ -34,11 +34,11 @@ Declarativo
 
 * Fundamentos
 Trabalhos de matemáticos no início do século XX
-- Alan \alert{Turing}, Alonzo \alert{Church}, Stephen \alert{Kleene}, Emil \alert{Post}, etc
+- Alan *Turing*, Alonzo *Church*, Stephen *Kleene*, Emil *Post*, etc
 
 #+Latex: \vfill
 
-Formalização da noção de algoritmo \rightarrow \alert{Método Efetivo}
+Formalização da noção de algoritmo \rightarrow *Método Efetivo*
 - Transforma a solução em uma série de passos
 
 #+Latex: \pause
@@ -57,7 +57,7 @@ Evitando: Infinito (\infty) e Terceiro Excluído (falso = !verdadeiro)
 
 * Detalhamento histórico
 1920
-- *Moses Schönfinkel* \rightarrow \alert{Teoria de Funções} \\
+- *Moses Schönfinkel* \rightarrow *Teoria de Funções* \\
   (combinadores -- função cujo argumento é outra função)
 
 #+Latex: \vfill
@@ -78,7 +78,7 @@ A partir de 1930
 
 Turing -- Máquina de Turing
 - Autômato Finito com acesso arbitrário a uma Fita Infinita
-- \alert{Modelo Imperativo} \\
+- *Modelo Imperativo* \\
   \rightarrow computação via modificações de valores na fita
 
 #+Latex: \pause
@@ -86,14 +86,14 @@ Turing -- Máquina de Turing
 Church -- Cálculo Lambda ($\lambda$)
 - Expressões Parametrizadas \\
   (cada parâmetro é uma ocorrência de $\lambda$)
-- \alert{Modelo Funcional} \\
+- *Modelo Funcional* \\
   \rightarrow comput. via substituição de parâmetros em expressões
 
 #+Latex: \pause
 
 Boole -- Axiomas Lógicos
   - Procedimento que descobre a prova construtiva para cada conjunto particular de entradas
-  - \alert{Modelo Lógico}
+  - *Modelo Lógico*
 
 OO?
 
