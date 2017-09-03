@@ -11,7 +11,7 @@ disciplina, podem variar em abrangência e profundidade.
 | Geral      | [[./aulas/geral/introducao.org][Introdução Geral]]                                                                                          |       |
 | Geral      | [[./aulas/geral/criterios.org][Critérios e Características de LP]]                                                                         | [[../catps/][#01]]   |
 | Geral      | [[./aulas/geral/implementacao.org][Implementação de LP: compilação e interpretação]]                                                           |       |
-| Funcional  | Contextualização e Histórico, Origem dos Paradigmas                                                       |       |
+| Funcional  | [[./aulas/funcional/contextualizacao.org][Contextualização e Histórico, Origem dos Paradigmas]]                                                       |       |
 | Funcional  | Programação Funcional                                                                                     |       |
 | Funcional  | Cálculo Lambda                                                                                            |       |
 | Funcional  | ML: Introdução, tipos de dados primitivos e estruturados, funções.                                        |       |
