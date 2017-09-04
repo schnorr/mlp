@@ -340,6 +340,58 @@ counter_two()
 : [1] 1
 
 * #3: Lista de funções
+#+BEGIN_CENTER
+Funções podem ser mantidas em listas.
+
+(chamá-las em um único comando com =lapply=)
+#+END_CENTER
+
+Vejamos uma lista com três formas de calcular a média de um vetor.
+
+#+begin_src R :results output :session :exports both
+compute_mean <- list(
+  base = function(x) mean(x),
+  sum = function(x) sum(x) / length(x),
+  manual = function(x) {
+    total <- 0
+    n <- length(x)
+    for (i in seq_along(x)) {
+      total <- total + x[i] / n
+    }
+    total
+  }
+)
+#+end_src
+
+* Chamando uma função em uma lista
+Obter uma referência a ela, e em seguida realizar a chamada.
+#+begin_src R :results output :session :exports code
+x <- runif(1e5)
+system.time(compute_mean$base(x))
+system.time(compute_mean[[2]](x))
+system.time(compute_mean[["manual"]](x))
+#+end_src
+
+#+Latex: \vfill\pause
+
+Chamar todas elas com a função =lapply=
+
+#+begin_src R :results output :session :exports code
+# Primeira forma
+lapply(compute_mean, function(f) f(x))
+# Segunda forma
+call_fun <- function(f, ...) f(...)
+lapply(compute_mean, call_fun, x)
+#+end_src
+
+Sendo assim, podemos
+
+#+begin_src R :results output :session :exports code
+lapply(compute_mean, function(f) system.time(f(x)))
+# E passar parâmetros com valores "fixos"
+lapply(funs, function(f) f(x, na.rm = TRUE))
+#+end_src
+
 * Referência
 [[http://adv-r.had.co.nz/][Advanced R by Hadley Wickham]]
 - Capítulo sobre /[[http://adv-r.had.co.nz/Functional-programming.html][Functional Programming]]/
