@@ -1,0 +1,309 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Programação Funcional
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Apresentação da programação funcional
+
+#+BEGIN_CENTER
+#+Latex: \Huge
+\rightarrow *FUNÇÕES* \leftarrow
+#+END_CENTER
+
+#+Latex: \vfill\pause
+
+São elementos de primeira ordem
+- Atribuí-las a variáveis
+- Guardá-las em listas
+- Passá-las como argumentos
+- Criá-las dentro de outra função
+- Retorná-las como resultado de uma outra função
+
+#+Latex: \vfill\pause
+
+Blocos básicos
+- Funções anônimas
+- /Closures/ (funções escritas por outras funções)
+- Listas de funções
+
+* Motivar a necessidade da abordagem funcional
+
+Arquivo que usa =-99= para representar valores ausentes.
+
+#+begin_src R :results output latex :session :exports both
+library(tidyverse)
+library(xtable);
+set.seed(42)
+df <- data.frame(
+    replicate(6, sample(c(1:10, -99), 6, rep = TRUE)))
+names(df) <- letters[1:6];
+xtable(df, size="\\small")
+#+end_src
+
+#+RESULTS:
+#+BEGIN_EXPORT latex
+% latex table generated in R 3.3.3 by xtable 1.8-2 package
+% Sun Sep  3 20:50:07 2017
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrr}
+  \hline
+ & a & b & c & d & e & f \\ 
+  \hline
+1 & -99.00 & 9.00 & -99.00 & 6.00 & 1.00 & 9.00 \\ 
+  2 & -99.00 & 2.00 & 3.00 & 7.00 & 6.00 & 9.00 \\ 
+  3 & 4.00 & 8.00 & 6.00 & 10.00 & 5.00 & 5.00 \\ 
+  4 & 10.00 & 8.00 & -99.00 & 2.00 & 10.00 & 8.00 \\ 
+  5 & 8.00 & 6.00 & -99.00 & -99.00 & 5.00 & 1.00 \\ 
+  6 & 6.00 & 8.00 & 2.00 & -99.00 & 10.00 & 10.00 \\ 
+   \hline
+\end{tabular}
+\end{table}
+#+END_EXPORT
+
+*Objetivo*: substituir =-99= por =NA=. Como fazer?
+
+* Soluções ingênuas
+
+#+BEGIN_CENTER
+Onde estão os erros semânticos?
+#+END_CENTER
+
+** #1                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_opt: t
+:END:
+#+begin_src R :results output latex :session :exports both
+df$a[df$a == -99] <- NA
+df$b[df$b == -99] <- NA
+df$c[df$c == -98] <- NA
+df$d[df$d == -99] <- NA
+df$e[df$e == -99] <- NA
+df$f[df$g == -99] <- NA
+#+end_src
+** #2                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_opt: t
+:END:
+#+begin_src R :results output :session :exports both
+fix_missing <- function(x) {
+  x[x == -99] <- NA
+  x
+}
+df$a <- fix_missing(df$a)
+df$b <- fix_missing(df$b)
+df$c <- fix_missing(df$c)
+df$d <- fix_missing(df$d)
+df$e <- fix_missing(df$e)
+df$f <- fix_missing(df$e)
+#+end_src
+* Uma solução mais sofisticada
+
+Utilizar duas funções
+- =fix_missing= sabe como substituir =-99= por =NA=
+- =lapply= sabe como aplicar algo para cada coluna do DF
+  - Recebe três argumentos: lista, função, argumentos para a função
+
+#+BEGIN_CENTER
+A Função =lapply= é um exemplo de *funcional*
+
+(uma função que recebe outra função)
+#+END_CENTER
+
+#+Latex: \pause
+
+#+begin_src R :results output :session :exports both
+fix_missing <- function(x) {
+  x[x == -99] <- NA
+  x
+}
+# Aplicando para todas as colunas
+df[] <- lapply(df, fix_missing)
+# Aplicando para somente as cinco primeiras colunas
+df[1:5] <- lapply(df[1:5], fix_missing)
+#+end_src
+
+#+Latex: \vfill\pause
+#+BEGIN_CENTER
+Ideia chave: *composição de funções*.
+#+END_CENTER
+* E se...
+#+BEGIN_CENTER
+... os valores ausentes são representados por vários valores.
+#+END_CENTER
+
+Solução ingênua: copiar/colar \rightarrow criador de problemas
+
+#+Latex: \vfill\pause
+
+#+BEGIN_CENTER
+Solução melhor:
+
+Utilizar uma função que cria outras funções (*closure*).
+#+END_CENTER
+
+#+begin_src R :results output :session :exports both
+missing_fixer <- function(na_value) {
+  function(x) {
+    x[x == na_value] <- NA
+    x
+  }
+}
+fix_missing_99 <- missing_fixer(-99)
+fix_missing_999 <- missing_fixer(-999)
+#+end_src
+* Funções anônimas
+
+Declarando
+
+#+begin_src R :results output :session :exports code
+function(x) x*x
+#+end_src
+
+#+Latex: \vfill
+
+Todas as funções tem =formals=, =body=, e um =environment=.
+
+#+begin_src R :results output :session :exports both
+formals( function(x) x*x )
+body( function(x) x*x )
+environment( function(x) x*x )
+#+end_src
+
+#+RESULTS:
+: $x
+: x * x
+: <environment: R_GlobalEnv>
+* Chamando funções anônimas
+É obrigatório o uso dos parênteses
+- Para chamar a função
+- Para passar argumentos
+
+#+Latex: \vfill\pause
+
+#+begin_src R :results output :session :exports both
+( function(x) x*x ) (2)
+# faz a mesma coisa que o seguinte
+f <- function(x) x*x
+f(2);
+#+end_src
+
+#+RESULTS:
+: [1] 4
+: [1] 4
+* /Closure/
+
+#+BEGIN_CENTER
+``An object is data with functions. A closure is \linebreak
+ a function with data.'' — [[https://twitter.com/johndcook][John D. Cook]]
+#+END_CENTER
+
+Funções anônimas
+- Definir pequenas funções que não merecem um nome
+- Criar /Closures/
+
+#+latex: \vfill\pause
+
+Elas levam consigo o _escopo/ambiente_ de onde foram definidas
+
+#+begin_src R :results output :session :exports code
+power <- function(exponent) {
+  function(x) {
+    x ^ exponent
+  }
+}
+square <- power(2)
+cube <- power(3)
+#+end_src
+
+* Investigando a implementação de /closures/
+
+#+begin_src R :results output :session :exports both
+square
+#+end_src
+
+#+RESULTS:
+: function(x) {
+:     x ^ exponent
+:   }
+: <environment: 0x55d41594eec8>
+
+#+begin_src R :results output :session :exports both
+cube
+#+end_src
+
+#+RESULTS:
+: function(x) {
+:     x ^ exponent
+:   }
+: <environment: 0x55d41594e178>
+
+#+BEGIN_CENTER
+O que mudou?
+#+END_CENTER
+
+* Verificando o _escopo/ambiente_ de /closures/
+
+#+begin_src R :results output :session :exports both
+as.list(environment(square))
+#+end_src
+
+#+RESULTS:
+: $exponent
+: [1] 2
+
+#+begin_src R :results output :session :exports both
+as.list(environment(cube))
+#+end_src
+
+#+RESULTS:
+: $exponent
+: [1] 3
+
+* Estado mutável
+
+Modificar valores no ambiente do pai; permite criar estados mutáveis.
+- Uma /closure/ leva consigo o _escopo/ambiente_ de onde foi definida.
+
+#+begin_src R :results output :session :exports both
+new_counter <- function() {
+  i <- 0
+  function() {
+    i <<- i + 1
+    i
+  }
+}
+counter_one <- new_counter()
+counter_two <- new_counter()
+counter_one()
+counter_one()
+counter_two()
+#+end_src
+
+#+RESULTS:
+: [1] 1
+: [1] 2
+: [1] 1
+
+* Emacs setup                                                      :noexport:
+# Local Variables:
+# eval:  (setq org-latex-listings 'minted)
+# eval:  (setq org-latex-minted-options
+# eval:     '(("frame" "lines") ("linenos=true")))
+# eval:    (setq org-latex-listings 'minted)
+# eval:    (setq org-latex-minted-options '(("style" "tango") ("numbers" "none") ("numbersep" "5pt")))
+# End:
