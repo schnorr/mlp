@@ -1,0 +1,202 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Cálculo Lambda
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução para o Cálculo Lambda ($\lambda$)
+Sistema formal proposto por Church e Kleene 
+- Base da programação funcional
+- Divide a *definição de uma função* do seu *nome* \\
+
+Visão Rápida
+- Sintaxe: ${\lambda}x{\cdot}x*x$
+- Aplicação a um valor: $(({\lambda}x{\cdot}x*x)2)$ \rightarrow $2*2$
+
+#+Latex: \vfill\pause
+
+#+BEGIN_CENTER
+*Cálculo Lambda Puro* (não-interpretado)
+#+END_CENTER
+
+- Qualquer identificador é uma expressão lambda
+- Se M e N são expressões lambda, a *aplicação* de M a N, representada por (M N), também é uma expressão lambda
+- Uma *abstração*, escrita como $({\lambda}x{\cdot}M)$, onde x é um identificador e M é uma expressão lambda, é também uma expressão lambda
+
+* Regras Gramaticais
+Sintaxe em Formato BNF para expressões Lambda
+#+BEGIN_EXPORT latex
+\begin{tabular}{rcl}
+ExpressãoLambda & $\rightarrow$ & variável {\bf |} (M N) {\bf |} (${\lambda}$ variável ${\cdot}$ M) \\
+              M & $\rightarrow$ & ExpressãoLambda \\
+              N & $\rightarrow$ & ExpressãoLambda \\
+\end{tabular}  
+#+END_EXPORT
+
+#+Latex: \vfill
+
+Exemplos
+- $x$
+- $({\lambda}x{\cdot}x)$
+- $(({\lambda}x{\cdot}x)({\lambda}y{\cdot}y))$
+- $(x{\lambda}x{\cdot}x*y)$
+
+* Variáveis ligadas são marcadores de lugar
+Considerando $({\lambda}x{\cdot}M)$, a variável *x* é ligada se ela está presente em *M*
+- $({\lambda}x{\cdot}x)$ e $({\lambda}x{\cdot}x*x)$, onde *x* é ligada
+
+#+Latex: \vfill\pause
+
+Se *x* não está presente em *M*, ela é uma *Variável Livre*
+- $({\lambda}x{\cdot}x*y*z)$, onde *y* e *z* são livres
+
+#+Latex: \vfill\pause
+
+Definindo formalmente
+- $livre(x) = x$
+- $livre(M N) = livre(M) \bigcup livre(N)$
+- $livre({\lambda}x{\cdot}M) = livre(M) - \{x\}$
+
+* Processo de substituição (aplicação)
+Considerando $({\lambda}x{\cdot}M)[x \leftarrow N]$
+*Substituir* *x* pela expressão *N* em *M*
+- Se as variáveis livres de *N* não são ligadas em *M*
+- Caso contrário \\
+  1. Assumir que uma variável *y* é livre em *N* e ligada em *M*
+  2. Substitua as ocorrências de *y* em *M* por uma nova variável
+  3. Repita até que a condição principal se aplique
+
+#+Latex: \vfill\pause
+
+Exemplos
+- $x[x \leftarrow y ] = y$
+- $(xx)[x \leftarrow y ] = (yy)$
+- $({\lambda}x{\cdot}(zx))[x \leftarrow y ] = (zy)$
+
+#+Latex: \vfill\pause
+
+Formalização da Substituição: *Regras de Redução*
+- Redução-$\beta$ (beta) e Redução-$\alpha$ (alfa)
+
+* Redução-$\beta$
+#+BEGIN_CENTER
+*Uma aplicação singular de função*.
+#+END_CENTER
+
+#+BEGIN_EXPORT latex
+{\large\centering
+$({\lambda}x.M)N \Rightarrow_{\beta [x \leftarrow N]} M$ \\
+}
+#+END_EXPORT
+
+#+BEGIN_CENTER
+As variáveis livres de *N* não podem estar ligadas em *M*
+#+END_CENTER
+
+#+latex: \vfill\pause
+- Exemplo de Redução-$\beta$
+  - $(({\lambda}x{\cdot}x*x)2) \Rightarrow_{\beta [x \leftarrow 2]} 2*2$
+- Exemplo onde _não podemos aplicar_ a Redução-$\beta$
+  - $(({\lambda}g.{\lambda}h.g\ h\ h)h)$
+
+#+latex: \vfill\pause
+#+BEGIN_CENTER
+A redução-$\alpha$ resolve esta limitação
+#+END_CENTER
+
+* Redução-$\alpha$
+#+BEGIN_CENTER
+*Renomear as variáveis ligadas de uma expressão*.
+#+END_CENTER
+
+#+BEGIN_EXPORT latex
+{\large\centering
+$({\lambda}x.M) \Rightarrow_{\alpha [x \leftarrow y]} {(\lambda}y.M)$ \\
+}
+#+END_EXPORT
+
+#+BEGIN_CENTER
+Renomeia *x* por *y* em *M*, se *y* não aparece em *M*
+#+END_CENTER
+
+#+latex: \vfill\pause
+
+- Aplicando Redução-$\alpha$ ao exemplo anterior
+  - $(({\lambda}g.\underline{{\lambda}h.g\ h\ h})h) \Rightarrow_{\alpha [h \leftarrow k]} (({\lambda}g.{\lambda}k.g\ k\ k)h)$
+
+#+latex: \pause
+- Terminando o exemplo com Redução-$\beta$
+  - $((\underline{{\lambda}g}.{\lambda}k.g\ k\ k)\underline{h})$
+  - $({\lambda}k.h\ k\ k)$
+  - $h$
+  
+* Cálculo Lambda em LPs
+- \alert{LISP/Scheme}\\
+  (testar com *sbcl*)
+  #+BEGIN_SRC sbcl
+  ((LAMBDA (L) (CAR (CDR L))) '(A B C))      
+  ((LAMBDA (x) (* x x)) 2)
+  #+END_SRC
+- \alert{Haskell} \\
+  (testar com *ghci*)
+  #+BEGIN_SRC ghci
+  (\l -> head (tail l)) [1, 2, 3]
+  (\x -> x*x)2
+  #+END_SRC
+- \alert{Python} (com recursos funcionais)\\
+  (testar com *python*)
+  #+BEGIN_SRC python
+  (lambda l: l[1:][0]) ([1, 2, 3])
+  (lambda x: x*x)(2)     
+  #+END_SRC
+
+* Cálculo Lambda -- Redução $\beta$ -- Exemplo                         :noexport:
+#+BEGIN_EXPORT latex
+%% \begin{tabular}{lll}
+%% $({\lambda}x.x*x*x)(3)$ & $\Rightarrow_{\alpha [x \leftarrow y]}$ & \\
+%% $({\lambda}y.y*y*y)(3)$ & $\Rightarrow_{\beta  [y \leftarrow 3]}$ & \\
+%% $({\lambda}3.3*3*3)$      &                             & \\
+%% \end{tabular}
+%% \vfill
+\begin{tabular}{ll}
+$(\underline{{\lambda}f}.{\lambda}g.{\lambda}h.fg(h\ h)) \underline{({\lambda}x.{\lambda}y.x)} h ({\lambda}x.x\ x)$  &   $\rightarrow_\beta$ \\
+$({\lambda}g.\underline{{\lambda}h}.({\lambda}x.{\lambda}y.x)g(\underline{h\ h})) h ({\lambda}x.x\ x)$               &   $\rightarrow_\alpha$ {\small (renomear {\bf h} por {\bf k})} \\
+$(\underline{{\lambda}g}.{\lambda}k.({\lambda}x.{\lambda}y.x)g(k\ k)) \underline{h} ({\lambda}x.x\ x)$               &  $\rightarrow_\beta$ \\
+$(\underline{{\lambda}k}.({\lambda}x.{\lambda}y.x)h(k\ k)) \underline{({\lambda}x.x\ x)}$                            &  $\rightarrow_\beta$ \\
+  $(\underline{{\lambda}x}.{\lambda}y.x)\underline{h}(({\lambda}x.x\ x)({\lambda}x.x\ x))$                              &  $\rightarrow_\beta$ \\
+$(\underline{{\lambda}y}.h)\underline{(({\lambda}x.x\ x)({\lambda}x.x\ x))}$                                          &  $\rightarrow_\beta$ \\
+$h$ & \\
+
+\end{tabular}
+#+END_EXPORT
+
+* Exercícios
+Realize reduções-$\beta$ ao máximo
+
+#+latex: \vfill
+
+#+BEGIN_EXPORT latex
+$(({\lambda}y{\cdot}(({\lambda}x{\cdot}xyz)a))b)$ \\
+$(({\lambda}x{\cdot}*\ x\ x)5)$ \\
+$(({\lambda}x{\cdot}x * x)5)$ \\
+$(({\lambda}y{\cdot}(({\lambda}x{\cdot}x+y+z)3))2)$ \\
+$(({\lambda}v{\cdot}({\lambda}w{\cdot}w))(({\lambda}x{\cdot}x)(y({\lambda}z{\cdot}z))))$ \\
+#+END_EXPORT
+  
+
+
+
+
+
+
