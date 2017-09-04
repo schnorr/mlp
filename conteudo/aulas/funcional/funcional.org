@@ -299,6 +299,10 @@ counter_two()
 : [1] 2
 : [1] 1
 
+* Referência
+[[http://adv-r.had.co.nz/][Advanced R by Hadley Wickham]]
+- Capítulo sobre /[[http://adv-r.had.co.nz/Functional-programming.html][Functional Programming]]/
+
 * Emacs setup                                                      :noexport:
 # Local Variables:
 # eval:  (setq org-latex-listings 'minted)
