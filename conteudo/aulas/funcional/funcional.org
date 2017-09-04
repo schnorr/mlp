@@ -55,8 +55,6 @@
 #+LATEX_HEADER: }
 #+LATEX_HEADER: \usepackage{minted}
 
-#+Latex: \maketitle
-
 * Apresentação da programação funcional
 
 #+BEGIN_CENTER
