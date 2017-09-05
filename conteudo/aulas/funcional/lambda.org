@@ -186,6 +186,12 @@ Realize reduções-$\beta$ ao máximo
 
 #+latex: \vfill
 
+- ((\y.((\x.xyz)a))b)
+- ((\x. * x x)5)
+- ((\x. x * x)5)
+- ((\y. ((\x. x + y + z)3))2)
+- ((\v. (\w.w))((\x.x)(y(\z.z))))
+
 #+BEGIN_EXPORT latex
 $(({\lambda}y{\cdot}(({\lambda}x{\cdot}xyz)a))b)$ \\
 $(({\lambda}x{\cdot}*\ x\ x)5)$ \\
