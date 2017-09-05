@@ -82,6 +82,7 @@ Blocos básicos
 
 Arquivo que usa =-99= para representar valores ausentes.
 
+#+name: lucas
 #+begin_src R :results output latex :session :exports both
 library(tidyverse)
 library(xtable);
@@ -92,10 +93,40 @@ names(df) <- letters[1:6];
 xtable(df, size="\\small")
 #+end_src
 
-#+RESULTS:
+#+RESULTS: lucas
 #+BEGIN_EXPORT latex
 % latex table generated in R 3.3.3 by xtable 1.8-2 package
-% Sun Sep  3 20:50:07 2017
+% Mon Sep  4 16:07:37 2017
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrr}
+  \hline
+ & a & b & c & d & e & f \\ 
+  \hline
+1 & -99.00 & 9.00 & -99.00 & 6.00 & 1.00 & 9.00 \\ 
+  2 & -99.00 & 2.00 & 3.00 & 7.00 & 6.00 & 9.00 \\ 
+  3 & 4.00 & 8.00 & 6.00 & 10.00 & 5.00 & 5.00 \\ 
+  4 & 10.00 & 8.00 & -99.00 & 2.00 & 10.00 & 8.00 \\ 
+  5 & 8.00 & 6.00 & -99.00 & -99.00 & 5.00 & 1.00 \\ 
+  6 & 6.00 & 8.00 & 2.00 & -99.00 & 10.00 & 10.00 \\ 
+   \hline
+\end{tabular}
+\end{table}
+#+END_EXPORT
+
+#+RESULTS:
+#+BEGIN_EXPORT latex
+Loading tidyverse: ggplot2
+Loading tidyverse: tibble
+Loading tidyverse: tidyr
+Loading tidyverse: readr
+Loading tidyverse: purrr
+Loading tidyverse: dplyr
+Conflicts with tidy packages ---------------------------------------------------
+filter(): dplyr, stats
+lag():    dplyr, stats
+% latex table generated in R 3.3.3 by xtable 1.8-2 package
+% Mon Sep  4 16:07:02 2017
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrr}
@@ -166,7 +197,7 @@ A Função =lapply= é um exemplo de *funcional*
 
 #+Latex: \pause
 
-#+begin_src R :results output :session :exports both
+#+begin_src R :results output :session :exports both :var dep0=lucas
 fix_missing <- function(x) {
   x[x == -99] <- NA
   x
@@ -175,7 +206,17 @@ fix_missing <- function(x) {
 df[] <- lapply(df, fix_missing)
 # Aplicando para somente as cinco primeiras colunas
 df[1:5] <- lapply(df[1:5], fix_missing)
+df;
 #+end_src
+
+#+RESULTS:
+:    a b  c  d  e  f
+: 1 NA 9 NA  6  1  9
+: 2 NA 2  3  7  6  9
+: 3  4 8  6 10  5  5
+: 4 10 8 NA  2 10  8
+: 5  8 6 NA NA  5  1
+: 6  6 8  2 NA 10 10
 
 #+Latex: \vfill\pause
 #+BEGIN_CENTER
@@ -363,14 +404,24 @@ compute_mean <- list(
 )
 #+end_src
 
+#+RESULTS:
+
 * Chamando uma função em uma lista
 Obter uma referência a ela, e em seguida realizar a chamada.
 #+begin_src R :results output :session :exports code
-x <- runif(1e5)
+x <- runif(1e7)
 system.time(compute_mean$base(x))
 system.time(compute_mean[[2]](x))
 system.time(compute_mean[["manual"]](x))
 #+end_src
+
+#+RESULTS:
+:    user  system elapsed 
+:   0.019   0.000   0.019
+:    user  system elapsed 
+:    0.01    0.00    0.01
+:    user  system elapsed 
+:   4.302   0.004   4.306
 
 #+Latex: \vfill\pause
 
@@ -389,8 +440,24 @@ Sendo assim, podemos
 #+begin_src R :results output :session :exports code
 lapply(compute_mean, function(f) system.time(f(x)))
 # E passar parâmetros com valores "fixos"
-lapply(funs, function(f) f(x, na.rm = TRUE))
+lapply(compute_mean, function(f) f(x))#, na.rm = TRUE))
 #+end_src
+
+#+RESULTS:
+#+begin_example
+$base
+   user  system elapsed 
+  0.018   0.001   0.019 
+
+$sum
+   user  system elapsed 
+  0.009   0.000   0.009 
+
+$manual
+   user  system elapsed 
+  4.314   0.003   4.320
+Error in FUN(X[[i]], ...) (from #1) : argument "f" is missing, with no default
+#+end_example
 
 * Referência
 [[http://adv-r.had.co.nz/][Advanced R by Hadley Wickham]]
