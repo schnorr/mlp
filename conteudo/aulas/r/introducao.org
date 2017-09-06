@@ -1,0 +1,245 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Uma introdução à Linguagem R
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Listas
+
+É um vetor genérico contendo objetos de mesmo tipo.
+
+#+begin_src R :results output :session :exports both
+n = c(2, 3, 5) 
+s = c("aa", "bb", "cc", "dd", "ee") 
+b = c(TRUE, FALSE, TRUE, FALSE, FALSE) 
+x = list(n, s, b, 3)
+x;
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[[1]]
+[1] 2 3 5
+
+[[2]]
+[1] "aa" "bb" "cc" "dd" "ee"
+
+[[3]]
+[1]  TRUE FALSE  TRUE FALSE FALSE
+
+[[4]]
+[1] 3
+#+end_example
+
+* Fatiamento de listas
+#+begin_src R :results output :session :exports both
+x[2]
+#+end_src
+
+#+RESULTS:
+: [[1]]
+: [1] "aa" "bb" "cc" "dd" "ee"
+
+#+begin_src R :results output :session :exports both
+x[c(2,4)]
+#+end_src
+
+#+RESULTS:
+: [[1]]
+: [1] "aa" "bb" "cc" "dd" "ee"
+: 
+: [[2]]
+: [1] 3
+
+* Referência a membros
+
+#+begin_src R :results output :session :exports both
+x[[2]]
+#+end_src
+
+#+RESULTS:
+: [1] "aa" "bb" "cc" "dd" "ee"
+
+#+begin_src R :results output :session :exports both
+x[[2]][1] = "ta";
+x[[2]];
+s;
+#+end_src
+
+#+RESULTS:
+: [1] "ta" "bb" "cc" "dd" "ee"
+: [1] "aa" "bb" "cc" "dd" "ee"
+
+* A função =unlist=
+
+Transforma a complexidade de uma lista em um vetor.
+
+#+begin_src R :results output :session :exports both
+unlist(x[[2]])
+unlist(x)
+#+end_src
+
+#+RESULTS:
+: [1] "ta" "bb" "cc" "dd" "ee"
+:  [1] "2"     "3"     "5"     "ta"    "bb"    "cc"    "dd"    "ee"    "TRUE" 
+: [10] "FALSE" "TRUE"  "FALSE" "FALSE" "3"
+
+Pode ser utilizada para imprimir na tela.
+
+* Listas nomeadas
+
+Membros de uma lista podem ser nomeados.
+
+#+begin_src R :results output :session :exports both
+v = list(bob=c(2, 3, 5), john=c("aa", "bb"))
+v;
+#+end_src
+
+#+RESULTS:
+: $bob
+: [1] 2 3 5
+: 
+: $john
+: [1] "aa" "bb"
+
+* Fatiamento de listas nomeadas
+
+#+begin_src R :results output :session :exports both
+v[["bob"]]
+v[c("john", "bob")] 
+#+end_src
+
+#+RESULTS:
+: [1] 2 3 5
+: $john
+: [1] "aa" "bb"
+: 
+: $bob
+: [1] 2 3 5
+
+* Fatiamento facilitado
+
+#+begin_src R :results output :session :exports both
+v$bob;
+#+end_src
+
+#+RESULTS:
+: [1] 2 3 5
+
+* Propriedades de listas
+Uma lista tem um tamanho
+
+#+begin_src R :results output :session :exports both
+l = list(1,2,3,4,5);
+length(l);
+#+end_src
+
+#+RESULTS:
+: [1] 5
+
+Tem uma cabeça e um rabo
+
+#+begin_src R :results output :session :exports both
+str(l)
+str(head(l, n = 1));
+str(tail(l, n = length(l)-1));
+#+end_src
+
+#+RESULTS:
+#+begin_example
+List of 5
+ $ : num 1
+ $ : num 2
+ $ : num 3
+ $ : num 4
+ $ : num 5
+List of 1
+ $ : num 1
+List of 4
+ $ : num 2
+ $ : num 3
+ $ : num 4
+ $ : num 5
+#+end_example
+
+* Funções
+
+Uma atribuição simples.
+
+#+begin_src R :results output :session :exports both
+# uma atribuição do valor 2 a f
+f <- 2;
+#+end_src
+
+#+latex: \vfill\pause
+
+Funções sem nomes são definidas assim.
+
+#+begin_src R :results output :session :exports both
+# f agora se tornará uma função
+f <- function (x) {
+    return(x);
+}
+
+f <- function (x) {
+    # o último comando da função se
+    # torna seu valor de retorno
+    x
+}
+#+end_src
+
+#+RESULTS:
+
+* Recursividade
+
+#+begin_src R :results output :session :exports both
+f <- function (x)
+{
+    f(x);
+}
+f(1)
+#+end_src
+
+#+RESULTS:
+: Error: evaluation nested too deeply: infinite recursion / options(expressions=)?
+
+Não esqueça do critério de parada.
+* Operações aritméticas
+
+[[https://stat.ethz.ch/R-manual/R-devel/library/base/html/Arithmetic.html][Arithmetic Operators in R]]
+
+#+begin_src R :results output :session :exports both
+x <- 3;
+y <- 4;
++ x
+- x
+x + y
+x - y
+x * y
+x / y
+x ^ y
+x %% y
+x %/% y
+#+end_src
+
+#+RESULTS:
+: [1] 3
+: [1] -3
+: [1] 7
+: [1] -1
+: [1] 12
+: [1] 0.75
+: [1] 81
+: [1] 3
+: [1] 0
