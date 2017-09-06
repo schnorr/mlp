@@ -44,12 +44,12 @@ x;
 
 * Fatiamento de listas
 #+begin_src R :results output :session :exports both
-x[2]
+x[1]
 #+end_src
 
 #+RESULTS:
 : [[1]]
-: [1] "aa" "bb" "cc" "dd" "ee"
+: [1] 2 3 5
 
 #+begin_src R :results output :session :exports both
 x[c(2,4)]
@@ -65,7 +65,7 @@ x[c(2,4)]
 * Referência a membros
 
 #+begin_src R :results output :session :exports both
-x[[2]]
+x[[1]]
 #+end_src
 
 #+RESULTS:
