@@ -15,6 +15,7 @@ uma identificação clara dos participantes, em todos os arquivos
 enviados.
 
 
-| CATP | Descrição                      | Entrega     |      Prazo |
-|------+--------------------------------+-------------+------------|
-| #01  | [[./01/formulario.pdf][Formulário de Avaliação de LPs]] | Papel/Email | 2017-08-30 |
+| CATP | Descrição                                   | Entrega     |      Prazo |
+|------+---------------------------------------------+-------------+------------|
+| #01  | [[./01/formulario.pdf][Formulário de Avaliação de LPs]]              | Papel/Email | 2017-08-30 |
+| #02  | [[./02/][Trabalhando com listas e recursividade em R]] | Email       | 2017-09-06 |
