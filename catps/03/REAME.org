@@ -48,7 +48,6 @@
    #+RESULTS:
    : [1] 2 4 6
 
-
 4. Elabore uma função cujo nome é =soma= que some os elementos de uma
    lista usando apenas recursão (sem laços iterativos).
 

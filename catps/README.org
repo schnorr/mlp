@@ -19,4 +19,4 @@ enviados.
 |------+---------------------------------+-------------+------------|
 | #01  | [[./01/formulario.pdf][Formulário de Avaliação de LPs]]  | Papel/Email | 2017-08-30 |
 | #02  | [[./02/][Listas e recursividade em R]]     | Email       | 2017-09-06 |
-| #03  | [[./03/][Recursividade e funcionais em R]] | Email       | 2017-09-12 |
+| #03  | [[./03/][Recursividade e funcionais em R]] | Email       | 2017-09-11 |
