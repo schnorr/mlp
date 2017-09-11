@@ -14,3 +14,78 @@
 #+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
 #+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
+
+* Recursividade
+
+Base da programação funcional
+- Como é implementado?
+
+* O que são funcionais?
+
+Todos as funções construídas na aula anterior
+
+#+latex: \vfill
+
+#+BEGIN_CENTER
+Definição
+
+Uma função que recebe outra função
+#+END_CENTER
+
+* O funcional =sapply= (Vetores)
+
+Permite aplicar uma função aos elementos de _um vetor_
+- Retorna um vetor
+
+#+begin_src R :results output :session :exports both
+sapply(1:3, function(x) x^2)
+#+end_src
+
+#+RESULTS:
+: [1] 1 4 9
+
+* O funcional =lapply= (Listas)
+
+Permite aplicar uma função para todos os elementos de _uma lista_
+- Retorna uma lista com os retornos (na ordem)
+
+#+begin_src R :results output :session :exports both
+lapply(1:3, function(x) x^2)
+#+end_src
+
+#+RESULTS:
+: [[1]]
+: [1] 1
+: 
+: [[2]]
+: [1] 4
+: 
+: [[3]]
+: [1] 9
+
+* O operador =...= (/ellipsis/)
+
+Utilizado quando não se sabe a =aridade= de uma função
+
+#+begin_src R :results output :session :exports both
+f <- function(x, ...)
+{
+  dots <- list(...)
+  if(length(dots) == 0) return(NULL) 
+  cat("The arguments in ... are\n")
+  print(unlist(dots))
+  f(...)
+}
+f(1,2,3,"a", list("monkey"))
+#+end_src
+
+#+RESULTS:
+: The arguments in ... are
+: [1] "2"      "3"      "a"      "monkey"
+: The arguments in ... are
+: [1] "3"      "a"      "monkey"
+: The arguments in ... are
+: [1] "a"      "monkey"
+: The arguments in ... are
+: [1] "monkey"
+: NULL
