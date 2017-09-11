@@ -13,10 +13,9 @@ disciplina, podem variar em abrangência e profundidade.
 | Geral      | [[./aulas/geral/implementacao.org][Implementação de LP: compilação e interpretação]]                                                           |       |
 | Funcional  | [[./aulas/funcional/contextualizacao.org][Contextualização e Histórico, Origem dos Paradigmas]]                                                       |       |
 | Funcional  | [[./aulas/funcional/funcional.org][Programação Funcional]]                                                                                     |       |
-| Funcional  | [[./aulas/funcional/lambda.org][Cálculo Lambda]]                                                                                       |       |
-| Funcional  | ML: Introdução, tipos de dados primitivos e estruturados, funções.                                        |       |
-| Funcional  | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.                        |       |
-| Funcional  | ML: Tipos definidos pelo usuário e tipos estruturados de dados, tipos polimórficos.                       |       |
+| Funcional  | [[./aulas/funcional/lambda.org][Cálculo Lambda]]                                                                                            |       |
+| Funcional  | R: Introdução, Listas e recursividade                                                                     | [[../catps/][#02]]   |
+| Funcional  | R: Funcionais                                                                                             | [[../catps/][#03]]   |
 | Lógico     | Prolog: Modelo de programação em lógica; característica do modelo; fundamentos de lógica; semântica.      |       |
 | Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                                         |       |
 | Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                                |       |
@@ -36,6 +35,14 @@ disciplina, podem variar em abrangência e profundidade.
 | Extra      | Linguagens de script                                                                                      |       |
 | Extra      | Programação Concorrente/Distribuída: aspectos sintáticos e semânticos                                     |       |
 | Extra      | Laboratório sobre programação concorrente                                                                 |       |
+
+*** Conteúdo de edições anteriores
+
+| Funcional | ML: Introdução, tipos de dados primitivos e estruturados, funções.                  |
+| Funcional | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.  |
+| Funcional | ML: Tipos definidos pelo usuário e tipos estruturados de dados, tipos polimórficos. |
+
+
 
 ** Material de apoio
 ** Exercícios
