@@ -14,8 +14,8 @@ disciplina, podem variar em abrangência e profundidade.
 | Funcional  | [[./aulas/funcional/contextualizacao.org][Contextualização e Histórico, Origem dos Paradigmas]]                                                       |       |
 | Funcional  | [[./aulas/funcional/funcional.org][Programação Funcional]]                                                                                     |       |
 | Funcional  | [[./aulas/funcional/lambda.org][Cálculo Lambda]]                                                                                            |       |
-| Funcional  | R: Introdução, Listas e recursividade                                                                     | [[../catps/][#02]]   |
-| Funcional  | R: Funcionais                                                                                             | [[../catps/][#03]]   |
+| Funcional  | [[./aulas/r/introducao.org][R: Introdução, Listas e recursividade]]                                                                     | [[../catps/][#02]]   |
+| Funcional  | [[./aulas/r/funcionais.org][R: Funcionais]]                                                                                             | [[../catps/][#03]]   |
 | Lógico     | Prolog: Modelo de programação em lógica; característica do modelo; fundamentos de lógica; semântica.      |       |
 | Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                                         |       |
 | Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                                |       |
