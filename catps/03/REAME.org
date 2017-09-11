@@ -69,7 +69,6 @@
    #+RESULTS:
    : [1] FALSE  TRUE FALSE
 
-
 6. Elabore uma função =norma= que receba uma lista, representando um
    vetor euclidiano, e calcule a norma quadrática de tal vetor,
    conforme a definição seguinte:
