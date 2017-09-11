@@ -1,0 +1,122 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #03
+
+1. Elaborar a função =construir=, que recebe uma lista de funções e um
+   argumento. Ela deve retornar uma lista correspondente a aplicação
+   de cada função da lista de entrada ao argumento. Veja
+
+   #+begin_src R :results output :session :exports both
+   f <- function (x) x*x
+   g <- function (x) x*x*x
+   h <- function (x) x*x*x*x
+   l <- c(f, g, h);
+   construir(l, 2);
+   #+end_src
+
+   #+RESULTS:
+   : [1]  4  8 16
+
+2. Transforme as funções do exercício anterior em funções que recebam
+   dois argumentos (e não uma lista com dois valores). Reimplemente
+   então a função construir, nomeando-a =construirdois= de forma a
+   aceitar uma lista de funções e demais argumentos, retornando uma
+   lista correspondente a aplicação de cada função da primeira lista
+   de entrada aos argumentos seguintes. Veja
+
+   #+begin_src R :results output :session :exports both
+   f <- function (x, y) x*y
+   g <- function (x, y) x*y*2
+   h <- function (x, y) x*y*3
+   l <- c(f, g, h);
+   construirdois(c(f,g,h), 2, 4)
+   #+end_src
+
+   #+RESULTS:
+   : [1]  8 16 24
+
+3. Elabore uma função =duplica= que receba uma lista e devolva uma lista
+   com os elementos duplicados (multiplicados por 2), usando =lapply= e
+   funções anônimas.
+
+   #+begin_src R :results output :session :exports both
+   duplica (c(1,2,3))
+   #+end_src
+
+   #+RESULTS:
+   : [1] 2 4 6
+
+
+4. Elabore uma função cujo nome é =soma= que some os elementos de uma
+   lista usando apenas recursão (sem laços iterativos).
+
+   #+begin_src R :results output :session :exports both
+   soma(c(1,2,3))
+   #+end_src
+
+   #+RESULTS:
+   : [1] 6
+
+5. Usando =lapply= e funções anônimas, elabore uma função =positivos= que
+   receba uma lista e devolva uma lista indicando se os elementos são
+   positivos (=TRUE=) ou negativos (=FALSE=).
+
+   #+begin_src R :results output :session :exports both
+   positivos(c(-1, 2, -4))
+   #+end_src
+
+   #+RESULTS:
+   : [1] FALSE  TRUE FALSE
+
+
+6. Elabore uma função =norma= que receba uma lista, representando um
+   vetor euclidiano, e calcule a norma quadrática de tal vetor,
+   conforme a definição seguinte:
+
+   #+BEGIN_EXAMPLE
+   ||V|| = \sqrt{x_1^2 + x_2^2 + ... + x_n^2}
+   #+END_EXAMPLE
+
+   ou seja, o somatório do quadrado dos números presentes em tal
+   lista. 
+
+   #+begin_src R :results output :session :exports both
+   norma(c(0.1, 0.2, 0.3, 0.4));
+   #+end_src
+
+   Deve retornar =0.547722557505=.
+
+7. Elabore uma função =produtoInterno= que receba duas listas, cada uma
+   representando um vetor Euclidiano diferente, e calcule o seu
+   produto interno, conforme a definição seguinte:
+
+   #+BEGIN_EXAMPLE
+   A.B = \sum_{i=1}^{n}{A_i * B_i}
+   #+END_EXAMPLE
+
+   Note que tal definição leva em conta que os valores do vetor estão
+   normalizados entre 0 e 1. Por exemplo: 
+
+   #+begin_src R :results output :session :exports both
+   produtoInterno(c(0.1, 0.4, 0.9), c(0.2, 0.4, 0.5))
+   #+end_src
+   
+   Deve retornar =0.63=.
+
+8. Elaborar uma função =similaridade= que receba duas listas de números,
+   cada uma representando um vetor de características textuais, e
+   calcule a sua similaridade utilizando a definição seguinte:
+
+   #+BEGIN_EXAMPLE
+   sim(A,B) = \frac{A.B}{||A||*||B||}
+   #+END_EXAMPLE
+
+   Utilize livremente as funções elaboradas nos exercícios
+   anteriores. Mais informações sobre a função de similaridade podem
+   ser encontradas aqui:
+
+   [[http://en.wikipedia.org/wiki/Cosine_similarity][Similaridade por Coseno]]
+
+
