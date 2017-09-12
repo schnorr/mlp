@@ -16,6 +16,15 @@ no corpo do e-mail quando o resultado do CATP é pequeno. E lembre-se:
 todos os CATP devem ter uma identificação clara dos participantes, em
 todos os arquivos enviados.
 
+Quando a entrega for por =Email (corpo)=, siga este método:
+- Escreva um e-mail para o professor @INF
+- O título do e-mail deve ser =CATP #DD=
+  - Onde =DD= são os dois dígitos que identificam o CATP
+- A solução deve estar no corpo do e-mail (e _não em anexo_)
+- No início do corpo do e-mail, a mensagem deve ter
+  - "# Aluno: ..." ou
+  - "# Aluna: ..."
+  - Após o dois pontos, coloque o *nome completo*
 
 | CATP | Descrição                       | Entrega       |      Prazo | Resultado |
 |------+---------------------------------+---------------+------------+-----------|
