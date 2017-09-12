@@ -17,7 +17,7 @@ todos os CATP devem ter uma identificação clara dos participantes, em
 todos os arquivos enviados.
 
 Quando a entrega for por =Email (corpo)=, siga este método:
-- Escreva um e-mail para o professor @INF
+- Escreva um e-mail (em texto puro, sem HTML) para o professor @INF
 - O título do e-mail deve ser =CATP #DD=
   - Onde =DD= são os dois dígitos que identificam o CATP
 - A solução deve estar no corpo do e-mail (e _não em anexo_)
