@@ -20,5 +20,6 @@ todos os arquivos enviados.
 | CATP | Descrição                       | Entrega       |      Prazo | Resultado |
 |------+---------------------------------+---------------+------------+-----------|
 | #01  | [[./01/formulario.pdf][Formulário de Avaliação de LPs]]  | Papel/Email   | 2017-08-30 |           |
-| #02  | [[./02/README.org][Listas e recursividade em R]]     | Email (corpo) | 2017-09-06 |           |
-| #03  | [[./03/README.org][Recursividade e funcionais em R]] | Email (corpo) | 2017-09-11 |           |
+| #02  | [[./02/README.org][Listas e recursividade em R]]     | Email (corpo) | 2017-09-06 | [[./eval/02/README.org][Relatório]] |
+| #03  | [[./03/README.org][Recursividade e funcionais em R]] | Email (corpo) | 2017-09-11 | [[./eval/03/README.org][Relatório]] |
+
