@@ -1,0 +1,75 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #04
+
+Este CATP serve como estudo de caso da linguagem R, para realizar
+manipulação de dados. Nele, utilizaremos um arquivo com 307200
+observações realizadas a partir de um programa que simula
+terremotos. O arquivo com as observações contém oito colunas:
+- =Iteration=: número da iteração
+- =Rank=: identificador do processo
+- =Time=: duração
+- =Operation=: operação realizada
+- =PAPI_BR_MSP=: quantidade de /branch misspredictions/
+- =PAPI_TOT_CYC=: quantidade de ciclos
+- =PAPI_TOT_INS=: quantidade de instruções
+- =PAPI_L2_ICM=: quantidade de misses de instrução em nível L2
+
+
+1. Realizar a cópia dos dados em tabela CSV compactada.
+
+   [[./ondes3d_1_ligurian_64_grisou-5.nancy.grid5000.fr_counter.csv.gz][Ondes3D Ligurian Simulation with PAPI Counters]]
+
+   Para carregar o arquivo, utilize obrigatoriamente a linha:
+
+   #+begin_src R :results output :session :exports both
+   library(readr);
+   df <- read_csv("ondes3d_1_ligurian_64_grisou-5.nancy.grid5000.fr_counter.csv.gz");
+   df
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   Parsed with column specification:
+   cols(
+     Iteration = col_integer(),
+     Rank = col_integer(),
+     Time = col_double(),
+     Operation = col_character(),
+     PAPI_BR_MSP = col_integer(),
+     PAPI_TOT_CYC = col_integer(),
+     PAPI_TOT_INS = col_integer(),
+     PAPI_L2_ICM = col_integer()
+   )
+   # A tibble: 307,200 x 8
+      Iteration  Rank       Time  Operation PAPI_BR_MSP PAPI_TOT_CYC PAPI_TOT_INS
+          <int> <int>      <dbl>      <chr>       <int>        <int>        <int>
+    1         1     0 0.01892877 SeisMoment         138     49129632     44953595
+    2         1     4 0.01892757 SeisMoment          88     49164604     44953591
+    3         1     3 0.01890731 SeisMoment          31     49125851     44953590
+    4         1     1 0.01891303 SeisMoment          26     49145151     44953590
+    5         1    20 0.01890111 SeisMoment          84     49098061     44953591
+    6         1    18 0.01890278 SeisMoment          40     49113589     44953590
+    7         1    19 0.01891470 SeisMoment          32     49137221     44953591
+    8         1    17 0.01892376 SeisMoment          27     49164537     44953591
+    9         1    16 0.01892209 SeisMoment          32     49159069     44953591
+   10         1    15 0.01896119 SeisMoment         768     49261678     45359487
+   # ... with 307,190 more rows, and 1 more variables: PAPI_L2_ICM <int>
+   #+end_example
+
+2. Contar quantas operações =Operation= são realizadas por iteração (=Iteration=).
+
+3. Como o exercício anterior, mas por iteração (=Iteration=) e processo (=Rank=).
+   
+4. Calcular o tempo médio da operação =Stress= para o processo =21= para cada iteração (=Iteration=)
+
+   - Utilize a função =mean= para calcular a média.
+
+** Exercícios opcionais
+
+1. Calcule o IPC (Instruções Por Ciclo = =PAPI_TOT_CYC/PAPI_TOT_INS=)
+   por iteração para cada operações e rank iteração.
+
+2. Liste as observações quando o IPC for menor que 50% do valor médio.
