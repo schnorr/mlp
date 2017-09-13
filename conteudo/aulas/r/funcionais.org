@@ -89,3 +89,30 @@ f(1,2,3,"a", list("monkey"))
 : The arguments in ... are
 : [1] "monkey"
 : NULL
+
+* ... (/ellipsis/) /versus/ lista: são diferentes.
+
+#+begin_src R :results output :session :exports both
+soma <- function(l) {
+    if (length(l) == 0) return(0);
+    h <- head(l, n = 1)[[1]];
+    t <- tail(l, n = length(l)-1);
+    return(h+soma(t));
+}
+soma(c(1, 2, 3, 4, 5));
+#+end_src
+
+#+latex:\pause
+
+O código abaixo, similar a estrutura do de cima, não funciona. Por quê?
+
+#+begin_src R :results output :session :exports both
+soma <- function(...) {
+    l <- list(...)
+    if(length(l) == 0) return(0)
+    h <- head(l, n = 1)[[1]];
+    t <- tail(l, n = length(l)-1);
+    return(h+soma(t));
+}
+soma(1, 2, 3, 4, 5);
+#+end_src
