@@ -116,3 +116,59 @@ soma <- function(...) {
 }
 soma(1, 2, 3, 4, 5);
 #+end_src
+
+* Compose (com o pacote =functional=)
+
+Permite compor funções.
+
+#+begin_src R :results output :session :exports both
+library(functional);
+cabeca <- function(lista) lista[[1]];
+resto <- function(lista) lista[2:length(lista)];
+l <- c(1,2,3,4);
+cabeca_do_resto <- Compose(resto, cabeca)
+cabeca_do_resto(l);
+#+end_src
+
+* Currying
+
+Moses Schönfinkel (matemático russo)
++ Também inventor da notação de lógica combinatória
++ Propôs um método de transformação de funções
+
+#+BEGIN_CENTER
+*Currying*
+
+Transforma uma função com múltiplos argumentos em uma cadeia de
+funções, cada uma com um único argumento
+#+END_CENTER
+
+#+Latex: \vfill\pause
+
+Normak, 2007, escreve:
+#+BEGIN_SRC text
+"... ela nos permite visualizar a função como se ela
+  pegasse no máximo um único parâmetro. Currying pode
+  ser visto como uma maneira de gerar funções
+  intermediárias que aceitam parâmetros adicionais
+  para completar um cálculo."
+#+END_SRC
+
+* Curry em R (com o pacote =functional=)
+
+#+begin_src R :results output :session :exports both
+library(functional)
+mult <- function(a, b)
+{
+    return(a*b);
+}
+dobra <- Curry(mult, a=2)
+tripla <- Curry(mult, a=3)
+
+dobra(10)
+tripla(10)
+#+end_src
+
+#+RESULTS:
+: [1] 20
+: [1] 30
