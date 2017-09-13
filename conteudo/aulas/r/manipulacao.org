@@ -1,0 +1,151 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Manipulação de Dados em R
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Especificação de um Problema
+
+#+BEGIN_CENTER
+Vários arquivos tabulares (CSV), um por aula, com a presença dos alunos.
+
+Quero contar quantas faltas cada aluno tem.
+#+END_CENTER
+
+#+Latex: \vfill
+
+Utilizaremos o universo =tidy=:
+#+begin_src R :results output :session :exports both
+install.packages("tidyverse");
+#+end_src
+
+* O operador Pipe =%>%=
+
+Permite encadear funções, ao invés de aninhá-las.
+
+#+begin_src R :results output :session :exports both
+library(magrittr)
+
+f <- function(p) { return(p+1); }
+g <- function(p) { return(p+2); }
+h <- function() { return(3); }
+
+f(g(h()));
+
+h() %>%
+    g() %>%
+    f();
+#+end_src
+
+#+RESULTS:
+: [1] 6
+: [1] 6
+
+
+* Ler um CSV com funções do pacote =readr=
+
+Um arquivo CSV é uma matriz, com colunas separadas por vírgula.
+
+#+latex: \scriptsize
+#+begin_src R :results output :session :exports both
+library(readr);
+read_csv
+#+end_src
+
+#+RESULTS:
+#+begin_example
+function (file, col_names = TRUE, col_types = NULL, locale = default_locale(), 
+    na = c("", "NA"), quoted_na = TRUE, comment = "", trim_ws = TRUE, 
+    skip = 0, n_max = Inf, guess_max = min(1000, n_max), progress = interactive()) 
+{
+    tokenizer <- tokenizer_csv(na = na, quoted_na = TRUE, comment = comment, 
+        trim_ws = trim_ws)
+    read_delimited(file, tokenizer, col_names = col_names, col_types = col_types, 
+        locale = locale, skip = skip, comment = comment, n_max = n_max, 
+        guess_max = guess_max, progress = progress)
+}
+<environment: namespace:readr>
+#+end_example
+
+* Exemplo de uso do =read_csv=
+
+#+begin_src R :results output :session :exports both
+df <- read_csv("/home/schnorr/ensino/chamada/mlp.dir/alunos_mlp_2017-2_2017-08-28_16:15:30.csv");
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Parsed with column specification:
+cols(
+  X1 = col_integer(),
+  N = col_integer(),
+  ID = col_integer(),
+  Name = col_character(),
+  Entry = col_character(),
+  Situation = col_character(),
+  Email = col_character(),
+  Course = col_character(),
+  Date = col_date(format = ""),
+  Present = col_logical()
+)
+Warning message:
+Missing column names filled in: 'X1' [1]
+#+end_example
+
+
+* Manipular dados com =dplyr=
+
+Verbos
+- =select()= colunas
+- criar colunas com =mutate()=
+- filtrar com =filter()=
+- fatiar linhas com =slice()=
+- reordenar com =arrange()=
+- criar grupos com =group_by()=
+
+#+begin_src R :results output :session :exports both
+df %>%
+    select(-ID, -Name, -Email, -Course)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+# A tibble: 40 x 6
+      X1     N  Entry   Situation       Date Present
+   <int> <int>  <chr>       <chr>     <date>   <lgl>
+ 1     1     1 2014/2 Matriculado 2017-08-28   FALSE
+ 2     2     2 2015/1 Matriculado 2017-08-28    TRUE
+ 3     3     3 2014/2 Matriculado 2017-08-28   FALSE
+ 4     4     4 2016/2 Matriculado 2017-08-28    TRUE
+ 5     5     5 2014/1 Matriculado 2017-08-28    TRUE
+ 6     6     6 2014/1 Matriculado 2017-08-28    TRUE
+ 7     7     7 2015/1 Matriculado 2017-08-28    TRUE
+ 8     8     8 2014/1 Matriculado 2017-08-28    TRUE
+ 9     9     9 2015/1 Matriculado 2017-08-28    TRUE
+10    10    10 2015/1 Matriculado 2017-08-28    TRUE
+# ... with 30 more rows
+#+end_example
+
+* Uma solução para o problema
+
+#+begin_src R :results output :session :exports both
+list.files("/home/schnorr/ensino/chamada/mlp.dir")
+#+end_src
+
+#+RESULTS:
+: [1] "alunos_mlp_2017-2_2017-08-28_16:15:30.csv"
+: [2] "alunos_mlp_2017-2_2017-08-30_22:35:30.csv"
+: [3] "alunos_mlp_2017-2_2017-09-04_15:45:09.csv"
+: [4] "alunos_mlp_2017-2_2017-09-06_16:33:19.csv"
+: [5] "alunos_mlp_2017-2_2017-09-11_15:34:23.csv"
