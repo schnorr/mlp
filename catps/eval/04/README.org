@@ -1,0 +1,38 @@
+* Avaliação CATP #04
+
+| ID     | Nota | Comentário                                                                                                                   |
+|--------+------+------------------------------------------------------------------------------------------------------------------------------|
+| ???575 |  0.9 | Dados não são carregados                                                                                                     |
+| ???160 |    1 |                                                                                                                              |
+| ???259 |    1 |                                                                                                                              |
+| ???410 |  0.9 | Falou agrupar por iteração no último exercício                                                                               |
+| ???288 |    1 |                                                                                                                              |
+| ???848 |    1 |                                                                                                                              |
+| ???106 |    1 |                                                                                                                              |
+| ???109 |    1 |                                                                                                                              |
+| ???680 |  0.9 | Não carrega todas as bibliotecas necessárias.                                                                                |
+| ???849 |    1 |                                                                                                                              |
+| ???434 |    1 |                                                                                                                              |
+| ???688 |    1 |                                                                                                                              |
+| ???292 |    1 |                                                                                                                              |
+| ???973 |    1 |                                                                                                                              |
+| ???787 |    1 |                                                                                                                              |
+| ???810 |    1 |                                                                                                                              |
+| ???341 |    1 |                                                                                                                              |
+| ???834 |    1 |                                                                                                                              |
+| ???653 |    1 |                                                                                                                              |
+| ???031 |    1 |                                                                                                                              |
+| ???658 |    1 |                                                                                                                              |
+| ???567 |    1 |                                                                                                                              |
+| ???172 |    1 |                                                                                                                              |
+| ???262 |    1 |                                                                                                                              |
+| ???289 |  0.9 | Funções definidas não são chamadas                                                                                           |
+| ???586 |    1 | Desnecessário chamar print                                                                                                   |
+| ???274 |    1 |                                                                                                                              |
+| ???249 |  0.9 | Para cada iteração                                                                                                           |
+| ???820 |    1 |                                                                                                                              |
+| ???591 |    1 |                                                                                                                              |
+| ???285 |  0.9 | Faltou um fecha parênteses e dar um nome para a coluna do último exercício                                                   |
+| ???950 |    1 |                                                                                                                              |
+| ???525 |  0.9 | Desnecessário carregar todas as vezes os dados; e faltou um fecha parênteses e dar um nome para a coluna do último exercício |
+| ???866 |    1 |                                                                                                                              |
