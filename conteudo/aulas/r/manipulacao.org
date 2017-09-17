@@ -140,12 +140,38 @@ df %>%
 * Uma solução para o problema
 
 #+begin_src R :results output :session :exports both
-list.files("/home/schnorr/ensino/chamada/mlp.dir")
+list.files
 #+end_src
 
 #+RESULTS:
-: [1] "alunos_mlp_2017-2_2017-08-28_16:15:30.csv"
-: [2] "alunos_mlp_2017-2_2017-08-30_22:35:30.csv"
-: [3] "alunos_mlp_2017-2_2017-09-04_15:45:09.csv"
-: [4] "alunos_mlp_2017-2_2017-09-06_16:33:19.csv"
-: [5] "alunos_mlp_2017-2_2017-09-11_15:34:23.csv"
+: function (path = ".", pattern = NULL, all.files = FALSE, full.names = FALSE, 
+:     recursive = FALSE, ignore.case = FALSE, include.dirs = FALSE, 
+:     no.. = FALSE) 
+: .Internal(list.files(path, pattern, all.files, full.names, recursive, 
+:     ignore.case, include.dirs, no..))
+: <bytecode: 0x56127afe2ba8>
+: <environment: namespace:base>
+
+#+begin_src R :results output :session :exports both
+library(readr);
+library(magrittr);
+library(dplyr);
+lista_de_arquivos <- list.files("/home/schnorr/ensino/chamada/mlp.dir", full.names=TRUE)
+#lista_de_arquivos;
+do.call("rbind", suppressMessages(lapply(lista_de_arquivos, function(filename) {
+    df <- read_csv(filename)
+    if ("Duration" %in% names(df)){
+        df %>% select(-Duration)
+    }else{
+        df;
+    }
+}))) -> df;
+
+df %>% group_by(Entry) %>% summarize(N = n()/6)
+
+df %>% group_by(Name) %>% summarize(Faltas = sum(ifelse(Present == FALSE, 1, 0)),
+                                      Freq = 1 - Faltas/n(),
+                                      FF = ifelse(Freq < 0.75, TRUE, FALSE)) %>%
+    filter(Faltas == 1) %>%
+    as.data.frame();
+#+end_src
