@@ -263,7 +263,7 @@ irmao(X,Y) :- mae(X,M),
 < > >= <=    relacional           
 :=           condicional          
 #+END_SRC
-* Exercícios #3 (Base de conhecimento)
+* Exercícios #3 (Base de conhecimento)                             :noexport:
 
 #+BEGIN_CENTER
 Adicione *regras* à base de conhecimento, no arquivo =exercicio.pl=, que
