@@ -147,6 +147,8 @@ picnic(Day) :- weather(Day,fair), !, weekend(Day).
 picnic(Day) :- holiday(Day,may1).
 #+END_EXAMPLE
 
+*** Exercício 6
+
 Mude novamente a definição de picnic como mostrado abaixo e refaça a
 consulta, e explique o que aconteceu.
 
@@ -154,6 +156,8 @@ consulta, e explique o que aconteceu.
 picnic(Day) :- weather(Day,fair), weekend(Day), !.
 picnic(Day) :- holiday(Day,may1).
 #+END_EXAMPLE
+
+*** Exercício 7
 
 Finalmente, mude a definição de picnic para o código abaixo e refaça a
 consulta.
@@ -163,7 +167,7 @@ picnic(Day) :- !, weather(Day,fair), weekend(Day).
 picnic(Day) :- holiday(Day,may1).
 #+END_EXAMPLE
 
-Salve a base de conhecimento atual para o arquivo =cut1.pl=.
+Explique o que aconteceu?
 
 ** Hipótese do Mundo Fechado
 
@@ -185,7 +189,7 @@ assumido para A. Então, se a avaliação de 'A' falha, o resultado da
 negação será verdadeiro, ou seja, a negação do inconclusivo é uma
 verdade. *Isto pode levar a erros no código muito facilmente.*
 
-*** Exercício 6
+*** Exercício 8
 
 Crie uma nova base de conhecimento com os seguintes fatos e regras.
 
@@ -215,5 +219,3 @@ cometa(halley).
 cometa(apollo13).
 orbita(halley,sol).
 #+END_EXAMPLE
-
-Salve a base de conhecimento atual para o arquivo =solar1.pl=.
