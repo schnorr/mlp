@@ -1,0 +1,392 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #05
+** Processo de Inferência
+*** Exercício 1
+
+Considerando a seguinte base de conhecimento no arquivo =gosta1.pl=
+
+#+BEGIN_EXAMPLE
+gosta(pedro,leitura).
+gosta(maria,leitura).
+gosta(paulo,leitura).
+gosta(pedro,cinema).
+gosta(paulo,cinema).
+gosta(vera,cinema).
+gosta(paulo,boliche).
+gosta(maria,boliche).
+gosta(vera,boliche).
+#+END_EXAMPLE
+
+Formule as seguintes consultas e observe o resultado (pressione
+``barra de espaço'' para mais respostas):
+
+#+BEGIN_EXAMPLE
+gosta(vera,X).   /* De que Vera gosta? */
+gosta(X,Y).      /* Quem gosta de que? */
+gosta(X,cinema). /* Quem gosta de cinema? */
+#+END_EXAMPLE
+
+Modifique a base de conhecimento, incluindo regras para a geração de
+conhecimento, como abaixo:
+
+#+BEGIN_EXAMPLE
+gosta(paulo,X) :- gosta(maria,X).   /* Paulo gosta de tudo que Maria gosta */
+gosta(pedro,X) :- gosta(X,boliche). /* pedro gosta de quem gosta de boliche*/
+#+END_EXAMPLE
+
+Recarregue a base de conhecimento modificada e realize a consulta
+abaixo e explique o que aconteceu:
+
+#+BEGIN_EXAMPLE
+gosta(pedro,X).
+#+END_EXAMPLE
+
+*** Exercício 2
+
+Inicialize uma nova base de conhecimento =gosta2.pl=, iniciando-a com o
+conhecimento final da base =gosta1.pl=. Acrescente as regras abaixo na
+base de conhecimento:
+
+#+BEGIN_EXAMPLE
+gosta(pedro,boliche).         /* Pedro gosta de boliche */
+gosta(pedro,X) :- gosta(X,X). /* Pedro gosta de qualquer um que goste de si mesmo */
+#+END_EXAMPLE
+
+Repita a consulta feita, explique o que aconteceu.
+
+#+BEGIN_EXAMPLE
+gosta(pedro,X).
+#+END_EXAMPLE
+ 
+Adicione a cláusula abaixo na base de conhecimento.
+
+#+BEGIN_EXAMPLE
+combina(X,Y,Z):- gosta(X,Z), gosta(Y,Z). /* Existe algo (Z) que X e Y gostam? */
+#+END_EXAMPLE
+
+Faça a consulta abaixo, explique o que aconteceu.
+
+#+BEGIN_EXAMPLE
+combina(X,Y,Z).
+#+END_EXAMPLE
+
+Na base de conhecimento, adicione uma nova condição
+
+#+BEGIN_EXAMPLE
+X\=Y
+#+END_EXAMPLE
+
+à cláusula =combina=, escrevendo-a desta forma:
+
+#+BEGIN_EXAMPLE
+combina(X,Y,Z):- gosta(X,Z), gosta(Y,Z), X\=Y. /* Existe algo (Z) que X e Y gostam? */
+#+END_EXAMPLE
+
+Realize a consulta abaixo, e explique a diferença de resultado obtido
+com as duas versões de =combina=.
+
+#+BEGIN_EXAMPLE
+combina(X,Y,Z).
+#+END_EXAMPLE
+
+** Formatando a saída
+
+Substitua a cláusula =combina(X,Y,Z)= pela seguinte definição, e
+adicione a cláusula =lista(X,Y,Z)= como abaixo.
+
+#+BEGIN_EXAMPLE
+combina(X,Y,Z):- gosta(X,Z), gosta(Y,Z), X\=Y, lista(X,Y,Z).
+lista(X,Y,Z):- write(X),  /* exibe resultado de uma consulta */
+               write(' e '),
+               write(Y),
+               write(' gostam de '),
+               write(Z),
+               nl. /* nl significa nova linha */
+#+END_EXAMPLE
+
+Recarregue a base de conhecimento e faça a consulta, explique o que
+aconteceu.
+
+#+BEGIN_CENTER
+combina(X,Y,Z).
+#+END_CENTER
+
+Inclua a regra abaixo na base de conhecimento.
+
+#+BEGIN_EXAMPLE
+lista_todos(X,Y) :- gosta(X,Y).
+#+END_EXAMPLE
+
+Faça a consulta abaixo, e explique o que aconteceu.
+
+#+BEGIN_EXAMPLE
+lista_todos(X,Y).
+#+END_EXAMPLE
+
+Compare o resultado anterior com a mesma consulta, mas troque a regra
+na base de conhecimento para, e explique o resultado.
+
+#+BEGIN_EXAMPLE
+lista_todos :- gosta(X,Y).
+#+END_EXAMPLE
+
+Altere =lista_todos= para o seguinte, e teste
+
+#+BEGIN_EXAMPLE
+lista_todos :- gosta(X,Y), write(X), write(' e '), write(Y), nl, fail.
+#+END_EXAMPLE
+
+Salve a base de conhecimento atual para o arquivo =gosta2.pl=.
+
+** Utilizando =fail=
+
+Interpretação do termo =fail=
+
+Crie uma nova base de conhecimento chamada =gosta3.pl= com o conteúdo de =gosta2.pl=.
+
+Substitua a definição da regra =lista_todos= para o seguinte:
+
+#+BEGIN_EXAMPLE
+lista_todos :- gosta(X,Y), /* exibe resultados de todas as consultas */
+		write(X),
+		write(' gosta de '),
+		write(Y), nl,
+		fail.
+#+END_EXAMPLE
+
+Faça a consulta
+
+#+BEGIN_EXAMPLE
+lista_todos.
+#+END_EXAMPLE
+
+Faça a consulta
+ \begin{lstlisting}[inputencoding=utf8]
+
+#+BEGIN_EXAMPLE
+trace.        /* Rastrea a busca do motor de inferencia */
+lista_todos.
+#+END_EXAMPLE
+
+Para desativar o =trace.=, execute =notrace.=
+
+Explique o que faz a diretiva =fail=.
+
+Salve a base de conhecimento atual para o arquivo =gosta3.pl=.
+
+** Restringindo Inferência
+
+A diretiva /cut/ (o ponto de exclamação em Prolog: =!=) permite
+restringir a pesquisa realizada pelo motor de inferência:
+
+- todas as variáveis que estão associadas a valores até este ponto não assumirão novos valores
+- nenhuma outra versão dos predicados chamados antes do /cut/ será considerada
+- nenhuma versão subsequente do predicado no cabeçalho da regra sendo considerada será considerado
+- o /cut/ sempre retorna verdadeiro
+
+Basicamente, quaisquer respostas adicionais a cláusula corrente virão
+da operação de retrocesso entre o /cut/ e o fim da regra corrente. Você
+pode usar o comando =trace.= para acompanhar também o efeito do termo
+/cut/.
+
+Uso e interpretação do termo =!=.
+
+Crie uma base de conhecimento com os seguintes fatos e coloque no arquivo =cut1.pl=.
+
+#+BEGIN_EXAMPLE
+holiday(friday,may1).
+weather(friday,fair).
+weather(saturday,fair).
+weather(sunday,fair).
+weekend(saturday).
+weekend(sunday).
+/*
+ Faremos piquenique em dias do fim de semana com tempo bom ou no dia primeiro de maio
+ Observe que duas clausulas que possuem o mesmo lado esquerdo sao
+ interpretadas como uma clausula com duas opcoes
+*/
+picnic(Day) :- weather(Day,fair), weekend(Day).
+picnic(Day) :- holiday(Day,may1).
+#+END_EXAMPLE
+
+Faça a seguinte consulta e verifique as três respostas resultantes
+
+#+BEGIN_EXAMPLE
+picnic(When).
+#+END_EXAMPLE
+
+Mude a definição de =picnic= para o código abaixo e refaça a consulta, e
+explique o que aconteceu.
+
+#+BEGIN_EXAMPLE
+picnic(Day) :- weather(Day,fair), !, weekend(Day).
+picnic(Day) :- holiday(Day,may1).
+#+END_EXAMPLE
+
+Mude novamente a definição de picnic como mostrado abaixo e refaça a
+consulta, e explique o que aconteceu.
+
+#+BEGIN_EXAMPLE
+picnic(Day) :- weather(Day,fair), weekend(Day), !.
+picnic(Day) :- holiday(Day,may1).
+#+END_EXAMPLE
+
+Finalmente, mude a definição de picnic para o código abaixo e refaça a
+consulta.
+
+#+BEGIN_EXAMPLE
+picnic(Day) :- !, weather(Day,fair), weekend(Day).
+picnic(Day) :- holiday(Day,may1).
+#+END_EXAMPLE
+
+Salve a base de conhecimento atual para o arquivo =cut1.pl=.
+
+** Aritmética
+
+Até agora, definimos nossos próprios fatos e regras de inferência a
+medida que estes foram necessários. A linguagem Prolog possui, porém,
+uma série de predicados já definidos e que podem ser usados. Os
+operadores aritméticos são um exemplo destes. Como esses predicados
+são parte inerente da linguagem, podemos usá-los no formato infixado,
+e não prefixado como os exemplos que definimos. Alguns predicados
+aritméticos predefinidos são:
+
+#+BEGIN_EXAMPLE
+< > >= =< =
+#+END_EXAMPLE
+
+Veja os exemplos abaixo com seu uso:
+
+#+BEGIN_EXAMPLE
+positivo(N) :- N>0.
+nao_zero(N) :- N<0 ; N>0.
+#+END_EXAMPLE
+
+Note que, em Prolog, = representa a relação de igualdade e não de
+atribuição. Prolog também possui operadores aritméticos, como
++ - * /, além de funções usuais como =sqrt=,
+=exp=, =cos=. Porém, essas funções e operadores funcionam de uma forma
+diferente, já que a linguagem não é imperativa.
+
+É importante notar que =2+3= em Prolog não é uma instrução de adição em
+si, apenas representa ``a adição de 2 e 3''. Logo, este termo é
+completamente diferente de =1+4=, ou =3+2=, ou =5*1=. Dessa forma, se temos
+a base de conhecimento abaixo:
+
+#+BEGIN_EXAMPLE
+primo(2).
+primo(3).
+primo(5).
+#+END_EXAMPLE
+
+As consultas =primo(1+1)= ou =primo(5*1)= irão falhar, porque os termos
+que elas contêm não podem ser unificados com nenhum termo descrito na
+base.
+
+O valor de uma expressão aritmética só é realmente calculado quando é
+dado um comando explícito para tal. A forma padrão de se fazer isso em
+Prolog consiste em usar o predicado de atribuição =is=.
+
+O predicado =N is E= será verdadeiro se =N= for uma variável não vinculada
+a nenhum valor e =E= for uma expressão aritmética. Após ser avaliada
+como verdadeira, =E= será calculada e seu resultado associado a =N=.
+
+Assim, no exemplo acima, a consulta =X is 1+1, primo(X).= resultaria em
+verdadeiro, pois o termo =1+1= é avaliado como =2= e associado a =X=.
+
+Vale a pena enfatizar este ponto: a variável usada antes do predicado
+=is= não pode ter vínculos a valores. Por outro lado, qualquer variável
+que ocorra na expressão aritmética deve ter um valor.
+
+** Exercitando Aritmética
+
+Faça as consultas abaixo e verifique o resultado, e explique o que
+aconteceu.
+
+#+BEGIN_EXAMPLE
+N is 1+1.
+N is X+1.
+I is I+1.
+I is 6, I is I+1.
+I is 6, J is I+1.
+N is 1+1, P is N*2, Q is P*Q.
+#+END_EXAMPLE
+
+Crie uma nova base de conhecimento com o conteúdo de =gosta2.pl=.
+
+Insira na base de conhecimento as novas cláusulas seguintes, com
+custos para cada passatempo.
+
+#+BEGIN_EXAMPLE
+/* definicao de precos */
+preco(cinema,11.0).
+preco(leitura,0).
+preco(boliche,15.0).
+/* Exemplo de regra: a pessoa X quer convidar a pessoa Y para sair 
+e fazer algo que ambos gostem. Quer-se saber quanto irao gastar... */
+gasto(X,Y,Z):- gosta(X,Z),gosta(Y,Z),X\=Y, / * acha algo que ambos gostem */
+preco(Z,P), T is P*2, write('Gasto para dois = '), write(T).
+#+END_EXAMPLE
+
+Defina regras para responder consultas do tipo:
+- Quanto custa para uma pessoa ir ao cinema?
+- A pessoa X quer convidar a pessoa Y para sair e fazer algo que ambos
+  gostem, mas que custe menos o valor V.
+
+Salve a base de conhecimento atual para o arquivo =gosta3.pl=.
+
+** Hipótese do Mundo Fechado
+
+Em Prolog, o resultado de uma consulta ou clausula é verdadeiro ou
+falho. Devemos lembrar que o resultado falho indica que ou a consulta
+é realmente falsa ou nada pode ser concluído.
+
+Como o resultado inconclusivo é inconveniente, Prolog na verdade
+considera que inconclusivo = falso. Para isso, o sistema assume que
+todas as informações relevantes para aquela consulta estão descritas
+na base de conhecimento e que a suposição de inconclusivo = falso
+realmente se aplica para aquela base.
+
+Programadores Prolog devem estar cientes desta suposição para que
+codifiquem realmente todo o conhecimento necessário a
+aplicação. Porém, há um agravante na linguagem que é a negação. Se A é
+uma asserção, not(A) é uma asserção que nega o valor verdadeiro
+assumido para A. Então, se a avaliação de 'A' falha, o resultado da
+negação será verdadeiro, ou seja, a negação do inconclusivo é uma
+verdade. *Isto pode levar a erros no código muito facilmente.*
+
+Um programa Prolog como um mundo fechado
+
+Crie uma nova base de conhecimento com os seguintes fatos e regras.
+
+#+BEGIN_EXAMPLE
+star(sirius). /* star(X) e verdade se X e uma estrela */
+star(sol).
+star(vega).
+orbita(mercurio,sol). /* orbita(X,Y) e verdade se X esta na orbita de Y */
+orbita(venus,sol).
+orbita(terra,sol).
+orbita(marte,sol).
+orbita(lua,terra).
+orbita(phobos,marte).
+orbita(deimos,marte).
+planeta(B) :- orbita(B,sol). /* planeta(B) e verdade se B e um planeta do sistema solar */
+
+satelite(B) :- orbita(B,P),planeta(P). /* satelite(B) e verdade se B e um satelite de um planeta do sistema solar */
+
+cometa(B) :- not(star(B)),not(planeta(B)),not(satelite(B)). /* Agora, o uso da negacao: cometa(B) e verdade se B nao e planeta, nem satelite, nem estrela */
+#+END_EXAMPLE
+
+Execute agora as consultas abaixo e veja o resultado, e explique o que
+aconteceu.
+
+#+BEGIN_EXAMPLE
+cometa(halley).
+cometa(apollo13).
+orbita(halley,sol).
+#+END_EXAMPLE
+
+Salve a base de conhecimento atual para o arquivo =solar1.pl=.
