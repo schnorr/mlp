@@ -1,0 +1,297 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Uma introdução à Linguagem Prolog
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* PROLOG \approx PROgrammation LOGique
++ Desenvolvida por Alain Colmerauer e Philippe Roussel \\
++ Concebida em 1970, primeiro sistema Prolog em 1972
++ \alert{Cálculo de Predicados} e \alert{Princípio de Resolução}
+  + Informar ao computador os fatos e as regras
+  + Usar o princípio da resolução para inferir verdades
+
+#+Latex:\pause
+
++ Diferentes dialetos e implementações
+  + BProlog, Ciao, ECLiPSe, GNU Prolog, Jekejeke Prolog, Logic
+    Programming Associates, Poplog Prolog, P#, Quintus, SICStus,
+    Strawberry, SWI-Prolog, tuProlog, XSB, YAP-Prolog
+  + Diferem-se na sintaxe e nas bibliotecas \\
+    \rightarrow Funcionamento se mantém semelhante
+
+#+Latex:\pause
+
++ *SWI-Prolog*
+  + Open Source (Kernel licenciado pela LGPL)\\
+    http://www.swi-prolog.org/
+  + Disponível para diferentes plataformas\\
+    No Debian/Ubuntu Linux, o binário se chama *swipl*
+* Olá Mundo em Lógica
+Em um terminal, executar o \texttt{swipl}
+#+begin_src PROLOG
+write('Ola Mundo').
+#+end_src
+
+#+latex:\vfill
+
+Ou:
+
+Coloque o conteúdo acima em =codigo.pl= e depois
+
+#+begin_src shell :results output
+cat codigo.pl | swipl
+#+end_src
+
+#+RESULTS:
+: Ola Mundo
+: true.
+: 
+: 
+
+* Arquitetura
+
+[[./arquitetura-logica.png]]
+
+#+Latex: \vfill\pause
+
+Consultas
+- Usuário
+- Banco de dados Inteligente (BDI) & Sistemas Especialistas
+* Fundamentos
+Modelo imperativo e funcional
++ Implementam um mapeamento da entrada para a saída
++ Em geral, um para um
+
+#+latex: \vfill\pause
+
+Modelo lógico
++ Implementa uma relação (que pode ser de vários tipos)
++ Um elemento se relaciona com outro
++ Relação é mais geral que o mapeamento (maior abstração)
+* Relação
+#+BEGIN_CENTER
+Sejam dois conjuntos de valores S e T
+#+END_CENTER
+
+[[./relacao-logica.png]]
+
++ Relação é estabelecida, resulta em verdadeiro ou falso
+
++ Não há distinção entre entrada e saída
+  + y não é gerado a partir de x
+  + uma entrada não é transformada em saída
+* Fatos
+Considerando a seguinte árvore genealógica
+
+[[./arvore-genealogica.png]]
+
+São fatos
++ Pessoas
++ Sexo das pessoas
++ Parentesco entre pais e filhos
+
+Fatos são informados com *Cláusulas Horn* incondicionais
+* Cláusulas Horn
++ Alfred Horn, propôs tais cláusulas em 1951
++ Um programa lógico é uma coleção de cláusulas Horn
+
+#+BEGIN_CENTER
+H \leftarrow B_1, B_2, B_3, ..., B_n
+
+Lê-se: H é verdade se B_1, ..., B_n forem verdades
+#+END_CENTER
+
+#+latex: \vfill\pause
+
+Tipos
++ *Fato* (cláusula incondicional) \\
+  =inteiro(3)= \leftarrow
++ *Consulta* (cláusula negativa) \\
+  \leftarrow =inteiro(3)=
++ *Regra* (cláusula positiva) \\
+  =inteiro(N)= \leftarrow =natural(N)=
++ *Regra* (cláusula condicional) \\
+  =natural(N)= \leftarrow =inteiro(N), positivo(N)=
+
+* Termo
+É o único tipo da linguagem
+- Representam qualquer coisa; natureza é indefinida
+
+#+BEGIN_EXAMPLE
+pessoa(joao).
+pessoa(jose).
+masculino(joao).
+masculino(jose).
+pai(joao,jose).
+#+END_EXAMPLE
+
+#+latex: \vfill
+
+Nota de sintaxe
++ Termos são todos em minúsculas e sem espaço
++ Variáveis tem a primeira letra em maiúscula
+* Termos simples e funcionais
+Termos simples
++ *Átomos*
+  + Constantes alfanuméricas: =leonardo=, ='Porto Alegre'=
+  + Constantes numéricas: =1=, =12.12=
++ *Variáveis*: =X=, =Cidades=, =_ruas=, =_123abc=
+
+#+latex: \vfill\pause
+
+Termos funcionais (cláusulas)
++ *Fatos/consultas*: =pessoa(pedro,22,masculino).=
++ *Regras*: \\
+  =capital\_pais(X,Y):-pais(X), cidade(Y), capital(X,Y).=
+* Exercício #1 (Base de conhecimento)
+
+#+BEGIN_CENTER
+Especifique, no arquivo =exercicio.pl=, os *fatos* que representem a
+árvore seguinte, considerando as pessoas e seus respectivos sexos
+#+END_CENTER
+
+[[./arvore-genealogica.png]]
+
+#+latex: \vfill
+
+#+BEGIN_EXAMPLE
+pessoa(maria).
+feminino(maria).
+#+END_EXAMPLE
+* Exercício #1 (Consultas)
+Lançar =swipl= e executar o comando
+#+begin_example
+[exercicio].
+#+end_example
+
+Realizar uma consulta simples
+#+BEGIN_SRC pl
+pessoa(leandro). %Leandro é uma pessoa?
+#+END_SRC
+
+Descobrir o conhecimento sobre o mundo (barra de espaço, enter)
+#+BEGIN_SRC pl
+pessoa(X).
+masculino(X).
+feminino(X).
+#+END_SRC
+
+#+latex: \vfill
+- Termos com letra maiúscula são variáveis
+- Uma consulta pode ter uma única resposta
+  - verdadeiro ou falso
+  - várias ou nenhuma
+* Hipótese do Mundo Fechado
++ Um programa lógico é considerado um ``mundo fechado''
++ Tudo que a máquina sabe deve ser definida nele
+#+latex: \vfill
++ O que não se sabe ser verdadeiro é considerado falso
++ O que não se pode provar é considerado falso \\
+  (mas não prova que não é verdade)
+* Consultas
+=Prolog= permite especificar e consultar
+- Dados *a* e *b*, determinar se =r(a,b).= é verdadeira
++ Dado *a*, encontrar todo X, tal que =r(a,X).= é verdadeira
++ Dado *b*, encontrar todo X, tal que =r(X,b).= é verdadeira
++ Encontrar todo X e Y, tal que =r(X,Y).= é verdadeira
+* Exercício #2 (Base de conhecimento)
+
+#+BEGIN_CENTER
+Adicione novos fatos à base de conhecimento, no arquivo =exercicio.pl=,
+que especifiquem relações entre pais e filhos
+#+END_CENTER
+
+[[./arvore-genealogica.png]]
+
+#+latex: \vfill
+
+#+BEGIN_SRC prolog
+pai(ana,joao).     
+mae(ana,maria).
+#+END_SRC
+* Exercício #2 (Consultas)
+Determinar se as relações são válidas
++ João é pai de José?
+
+#+Latex: \vfill
+
+Encontrar elementos que satisfaçam relações
++ Quem é o pai de José?
++ Quem são os avôs ou avós de Marcelo?
+
+#+Latex: \vfill
+
+Sabe se há um elemento que satisfaça uma relação
++ Existem pais?
++ Existem filhos?
++ Existem avôs e avós?
+* Regras
+Descritas por cláusulas Horn Condicionais
+
+#+Latex: \vfill
+
+#+BEGIN_SRC pl
+irmao(X,Y) :- pai(X,P),
+              pai(Y,P),
+              mae(X,M),
+              mae(Y,M),
+              X \= Y.
+#+END_SRC
+* Operadores
+#+BEGIN_SRC nada
+,            e                  
+;            ou                 
+=            unificação         
+\=           Negação da unificação
+==           teste de identidade
+\==          negação da identidade
+=:=         igualdade aritmética 
+< > >= <=    relacional           
+:=           condicional          
+#+END_SRC
+* Exercícios #3 (Base de conhecimento)
+
+#+BEGIN_CENTER
+Adicione *regras* à base de conhecimento, no arquivo =exercicio.pl=, que
+permitam a inferência dos seguintes termos:
+- tios e tias;
+- avôs e avós;
+- antepassados.
+#+END_CENTER
+
+[[./arvore-genealogica.png]]
+
+* Programação
+
+#+BEGIN_CENTER
+O que significa ``Eu programo em Prolog''? Alguém que sabe como
+especificar uma base de conhecimento com fatos e regras utilizando a
+sintaxe da linguagem Prolog
+#+END_CENTER
+
+#+latex: \vfill\pause
+
+#+BEGIN_SRC pl
+capital(‘Brasil’, ‘Brasilia’).
+capital(‘Franca’, ‘Paris’).
+capital(‘RS’, 'Porto Alegre').
+capital(‘SC', ‘Florianopolis’).
+estadode(‘Brasil’, ‘SC’).
+estadode(‘Brasil, ‘RS’).
+estadode(‘Franca’, ‘Bretanha').
+estadode(‘Franca’, ‘Normandia').
+capital_pais(X, Y) :- pais(X), cidade(Y), capital(X,Y).
+capital_estado(X,Y) :- estado(X), cidade(Y), capital(X,Y).
+#+END_SRC
