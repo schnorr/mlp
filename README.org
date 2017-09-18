@@ -70,6 +70,7 @@ aprendizado da disciplina.
 - Especificação e prazos do TF
   - [[./projeto/][Em HTML]]
   - [[./projeto/README.pdf][Em PDF]]
+- [[https://github.com/schnorr/mlpreport][Modelo Latex para o Relatório]]
 
 ** Bibliografia
 - [[http://loja.grupoa.com.br/livros/programacao/conceitos-de-linguagens-de-programacao/9788577807918][Robert W. Sebesta. Conceitos de Linguagens de Programação. Bookman. 5th edition, 2003]]
