@@ -19,14 +19,14 @@
 
 ** Geral
 
-| Item          | Descrição                                          |
-|---------------+----------------------------------------------------|
-| Grupos        | Três alunos                                        |
-| Linguagem     | Uma  dentre aquelas listadas                       |
-| Problema      | Um dentre aqueles sugeridos                        |
-| Implementação | Duas: OO e funcional                               |
-| Relatório     | Um com os requisitos obrigatórios (=latex= e =bibtex=) |
-| Submissão     | ZIP ou TAR.GZ, por e-mail, com [[https://filesender.rnp.br/][FileSender da RNP]]       |
+| Item          | Descrição                                                    |
+|---------------+--------------------------------------------------------------|
+| Grupos        | Três alunos                                                  |
+| Linguagem     | Uma  dentre aquelas listadas                                 |
+| Problema      | Um dentre aqueles sugeridos                                  |
+| Implementação | Duas: OO e funcional                                         |
+| Relatório     | Um com os requisitos obrigatórios (=latex= e =bibtex=) -- [[https://github.com/schnorr/mlpreport][Modelo]] |
+| Submissão     | ZIP ou TAR.GZ, por e-mail, com [[https://filesender.rnp.br/][FileSender da RNP]]             |
 
 ** Prazos
 
@@ -277,9 +277,10 @@ os motivos para ele não existir *e utilize um mecanismo alternativo*.
 
 O grupo deve apresentar um relatório técnico com os itens descritos
 abaixo. O relatório deve ser escrito utilizando a linguagem de
-marcação =LaTeX=. Um modelo de relatório nesta linguagem de typesetting
-encontra-se disponível. Segue a lista dos itens obrigatórios para o
-relatório:
+marcação =LaTeX=. O modelo do relatório pode ser obtido aqui:
+- https://github.com/schnorr/mlpreport
+
+Segue a lista dos itens obrigatórios para o relatório:
 
 1. Capa: com identificação do grupo, da linguagem e do problema escolhidos.
 2. Visão geral da Linguagem: Apresentação da linguagem escolhida,
