@@ -61,6 +61,8 @@ Repita a consulta feita, explique o que aconteceu.
 gosta(pedro,X).
 #+END_EXAMPLE
  
+*** Exercício 3
+
 Adicione a cláusula abaixo na base de conhecimento.
 
 #+BEGIN_EXAMPLE
@@ -72,6 +74,8 @@ Faça a consulta abaixo, explique o que aconteceu.
 #+BEGIN_EXAMPLE
 combina(X,Y,Z).
 #+END_EXAMPLE
+
+*** Exercício 4
 
 Na base de conhecimento, adicione uma nova condição
 
@@ -109,7 +113,7 @@ pode usar o comando =trace.= para acompanhar também o efeito do termo
 
 Uso e interpretação do termo =!=.
 
-*** Exercício 3
+*** Exercício 5
 
 Crie uma base de conhecimento com os seguintes fatos e coloque no arquivo =cut1.pl=.
 
@@ -181,7 +185,7 @@ assumido para A. Então, se a avaliação de 'A' falha, o resultado da
 negação será verdadeiro, ou seja, a negação do inconclusivo é uma
 verdade. *Isto pode levar a erros no código muito facilmente.*
 
-*** Exercício 4
+*** Exercício 6
 
 Crie uma nova base de conhecimento com os seguintes fatos e regras.
 
