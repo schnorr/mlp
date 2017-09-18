@@ -17,7 +17,8 @@ disciplina, podem variar em abrangência e profundidade.
 | Funcional  | [[./aulas/r/introducao.org][R: Introdução, Listas e recursividade]]                                                                     | [[../catps/][#02]]   |
 | Funcional  | [[./aulas/r/funcionais.org][R: Funcionais]]                                                                                             | [[../catps/][#03]]   |
 | Funcional  | [[./aulas/r/manipulacao.org][R: Manipulação de Dados]]                                                                                   | [[../catps/][#04]]   |
-| Lógico     | Prolog: Modelo de programação em lógica; característica do modelo; fundamentos de lógica; semântica.      |       |
+| Lógico     | [[./aulas/prolog/introducao.org][Prolog: Introdução]]                                                                                        |       |
+| Lógico     | [[./aulas/prolog/inferencia.org][Prolog: Processo de Inferência]]                                                                            |       |
 | Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                                         |       |
 | Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                                |       |
 | Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                                    |       |
