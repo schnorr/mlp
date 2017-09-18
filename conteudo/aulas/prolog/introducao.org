@@ -154,7 +154,7 @@ Termos simples
 Termos funcionais (cláusulas)
 + *Fatos/consultas*: =pessoa(pedro,22,masculino).=
 + *Regras*: \\
-  =capital\_pais(X,Y):-pais(X), cidade(Y), capital(X,Y).=
+  =capital_pais(X,Y):-pais(X), cidade(Y), capital(X,Y).=
 * Exercício #1 (Base de conhecimento)
 
 #+BEGIN_CENTER
@@ -245,7 +245,9 @@ Descritas por cláusulas Horn Condicionais
 #+BEGIN_SRC pl
 irmao(X,Y) :- pai(X,P),
               pai(Y,P),
-              mae(X,M),
+              X \= Y.
+
+irmao(X,Y) :- mae(X,M),
               mae(Y,M),
               X \= Y.
 #+END_SRC
