@@ -1,0 +1,111 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Processo de Inferência em Prolog
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Processo de Inferência
+Prolog transforma a requisição é um *objetivo*; para prová-lo
+
+#+BEGIN_CENTER
+O processo de inferência deve encontrar uma cadeia de regras e fatos
+na base de conhecimento que conecte o objetivo a um ou mais fatos
+#+END_CENTER
+
+#+latex: \vfill\pause
+
+Se =Q= é o objetivo, o sistema procura por =Q= como um fato
++ Se encontra \rightarrow retorna verdadeiro
++ Se não encontra \rightarrow procura por regras que levem =Q= até um fato
+
+#+Latex: \vfill\pause
+
+Mecanismos
++ Unificação: o objetivo e todos os sub-objetivos
++ Resolução descendente
+  + Busca exaustiva em profundidade (depht-first) com retrocesso
+  + Operador *!* serve para parar a busca
+
+* Unificação (símbolo =)
+
+#+BEGIN_CENTER
+Tem como objetivo combinar dois termos
+#+END_CENTER
+
+Ambos os termos são constantes e iguais
+
+#+begin_src PROLOG
+leandro = leandro.
+#+end_src
+
+Um dos termos é uma variável (instanciação)
+
+#+begin_src PROLOG
+Nome = leandro.
+#+end_src
+
+Ambos são cláusulas de um mesmo predicado (mesmo nome e aridade) e os
+argumentos se unificam
+
+#+begin_src PROLOG
+cidade(X) = cidade('Porto Alegre').
+#+end_src
+
+#+latex:\vfill\pause
+
+Testar no =swipl=:
+#+BEGIN_SRC pl
+choveu(ontem) = choveu(Quando).
+gosta(maria,pedro) = gosta(maria,Quem).
+relacao(joao,jose) = relacao(Pai,Filho)     
+#+END_SRC
+
+* Resolução
+*Retrocesso*
+
+#+BEGIN_CENTER
+Recuo que ocorre no processo de inferência quando uma subconsulta gera
+um erro lógico (=falso=); busca por uma combinação alternativa
+#+END_CENTER
+
+#+latex: \vfill
+
+*Reversibilidade*
++ Toda unificação é reversível
+* Exemplo
+#+BEGIN_SRC pl
+cidade(portoalegre).
+cidade(brasilia).
+pais(brasil).
+capital(brasil, brasilia).
+capital(rgs, portoalegre).
+capital_pais(X,Y) :- pais(X), cidade(Y), capital(X,Y).
+#+END_SRC
+
+#+BEGIN_CENTER
+Objetivo:
+
+=capital_pais(brasil,K).=
+#+END_CENTER
+
+#+Latex:\pause\vfill
+
+
+Testar com o operador *!* na última regra, assim
+#+BEGIN_SRC pl
+capital_pais(X,Y) :- pais(X),
+                     cidade(Y),
+                     !,
+                     capital(X,Y).
+#+END_SRC
