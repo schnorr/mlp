@@ -32,5 +32,5 @@ Quando a entrega for por =Email (corpo)=, siga este método:
 | #02  | [[./02/README.org][Listas e recursividade em R]]      | Email (corpo) | 2017-09-06 | [[./eval/02/README.org][Relatório]] |
 | #03  | [[./03/README.org][Recursividade e funcionais em R]]  | Email (corpo) | 2017-09-11 | [[./eval/03/README.org][Relatório]] |
 | #04  | [[./04/README.org][Manipulação de dados em R]]        | Email (corpo) | 2017-09-13 | [[./eval/04/README.org][Relatório]] |
-| #05  | [[./05/README.org][Processo de Inferência em Prolog]] | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]]    | 2017-09-18 |           |
+| #05  | [[./05/README.org][Processo de Inferência em Prolog]] | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]]    | 2017-09-19 |           |
 
