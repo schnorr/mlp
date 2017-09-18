@@ -282,7 +282,7 @@ marcação =LaTeX=. Um modelo de relatório nesta linguagem de typesetting
 encontra-se disponível. Segue a lista dos itens obrigatórios para o
 relatório:
 
-1. Capa: com identificação do grupo e da linguagem escolhida.
+1. Capa: com identificação do grupo, da linguagem e do problema escolhidos.
 2. Visão geral da Linguagem: Apresentação da linguagem escolhida,
    descrevendo suas características, fundamentos, funcionalidades,
    benefícios e principais aplicações (inclusive com discussão de sua
