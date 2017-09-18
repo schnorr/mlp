@@ -329,14 +329,29 @@ trabalho.
   bibliotecas, plug-ins e componentes necessários para o
   desenvolvimento e a execução de seu software.
 
-* Forma da Entrega
+* Etapas de Entrega
 
-A entrega do trabalho é realizada através de um arquivo compactado
-(ZIP ou TAR.GZ), contendo o relatório (em PDF) e os códigos-fontes
-desenvolvidos (não incluir os códigos binários). Todos deverão ser
-encaminhados até a data estipulada pelo professor por e-mail. Utilize
-o serviço [[http://filesender.rnp.br][FileSender da RNP]] para envio de arquivos grandes, mediante
-login utilizando o cartão do aluno da UFRGS.
+Todas as etapas de entrega deverão ser encaminhados até a data
+estipulada pelo professor por e-mail. As entregas devem ser realizadas
+através de um arquivo compactado (ZIP ou TAR.GZ), contendo o relatório
+(em PDF) e os códigos-fontes desenvolvidos (não incluir os códigos
+binários). Utilize o serviço [[http://filesender.rnp.br][FileSender da RNP]] para envio de arquivos
+grandes, mediante login utilizando o cartão do aluno da UFRGS.
+
+** Projeto Inicial
+
+O *projeto inicial*, uma etapa obrigatória, deve vir acompanhada apenas
+da capa, introdução e da apresentação da linguagem escolhida e do
+problema. Sugere-se que uma estrutura completa do relatório já esteja
+igualmente presente.
+
+** Entrega Parcial
+
+A *entrega parcial*, uma etapa obrigatória, deve vir acompanhada da
+implementação e relatório a respeito da solução utilizando um dos
+paradigmas (OO ou funcional), a critério do grupo. O professor
+utilizará esta oportunidade para formar um parecer rápido do relatório
+e da implementação; sugerindo ao grupo melhorias caso necessário.
 
 * Apresentação
 
