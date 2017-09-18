@@ -209,7 +209,6 @@ e pode ser utilizado como inspiração para o projeto.
 No caso, o grupo deve encaminhar sua ideia ao professor, descrita em
 detalhes, que avaliará sua viabilidade.
 
-
 * Recursos Necessários (critérios mínimos)
 
 O trabalho realizado *deve considerar os aspectos especificados nesta
