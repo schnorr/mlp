@@ -90,7 +90,6 @@ Todos os grupos devem ter _três_ participantes.
 | Batalha Barcal   |       3 | Java8     | BatalhaNaval |
 |------------------+---------+-----------+--------------|
 
-Restam 19 alunos sem grupo definido.
 
 ** Bibliografia
 - [[http://loja.grupoa.com.br/livros/programacao/conceitos-de-linguagens-de-programacao/9788577807918][Robert W. Sebesta. Conceitos de Linguagens de Programação. Bookman. 5th edition, 2003]]
