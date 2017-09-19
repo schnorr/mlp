@@ -85,7 +85,7 @@ Todos os grupos devem ter _três_ participantes.
 | GrupoHP          |       3 | C++17     | TowerDefense |
 | WubbaLubbaDubDub |       3 | Java8     | BatalhaNaval |
 | ClubedasWynx     |       3 |           | MarioBrosAI  |
-| Mean Girls       |       3 |           | BatalhaNaval |
+| Mean Girls       |       3 | C++17     | BatalhaNaval |
 | Caiu a barca     |       3 | F#        | BatalhaNaval |
 | Batalha Barcal   |       3 | Java8     | BatalhaNaval |
 |------------------+---------+-----------+--------------|
