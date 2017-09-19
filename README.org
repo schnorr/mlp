@@ -90,6 +90,13 @@ Todos os grupos devem ter _três_ participantes.
 | Batalha Barcal   |       3 | Java8     | BatalhaNaval |
 |------------------+---------+-----------+--------------|
 
+Grupos ainda indefinidos, com apenas dois membros.
+
+|----------------------+---------+-----------+--------------|
+| Nome do Grupo        | Membros | Linguagem | Problema     |
+|----------------------+---------+-----------+--------------|
+| Guerreiros de Anúbis |       2 | Groovy    | BatalhaNaval |
+|----------------------+---------+-----------+--------------|
 
 ** Bibliografia
 - [[http://loja.grupoa.com.br/livros/programacao/conceitos-de-linguagens-de-programacao/9788577807918][Robert W. Sebesta. Conceitos de Linguagens de Programação. Bookman. 5th edition, 2003]]
