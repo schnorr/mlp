@@ -88,6 +88,7 @@ Todos os grupos devem ter _três_ participantes.
 | Mean Girls       |       3 | C++17     | BatalhaNaval |
 | Caiu a barca     |       3 | F#        | BatalhaNaval |
 | Batalha Barcal   |       3 | Java8     | BatalhaNaval |
+| SchnorR doidão   |       3 | R         | Galáxias     |
 |------------------+---------+-----------+--------------|
 
 Grupos ainda indefinidos, com apenas dois membros.
