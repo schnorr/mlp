@@ -26,12 +26,13 @@ Quando a entrega for por =Email (corpo)=, siga este método:
   - "# Aluna: ..."
   - Após o dois pontos, coloque o *nome completo*
 
-| CATP | Descrição                        | Entrega       |      Prazo | Resultado |
-|------+----------------------------------+---------------+------------+-----------|
-| #01  | [[./01/formulario.pdf][Formulário de Avaliação de LPs]]   | Papel/Email   | 2017-08-30 | [[./eval/01/README.org][Relatório]] |
-| #02  | [[./02/README.org][Listas e recursividade em R]]      | Email (corpo) | 2017-09-06 | [[./eval/02/README.org][Relatório]] |
-| #03  | [[./03/README.org][Recursividade e funcionais em R]]  | Email (corpo) | 2017-09-11 | [[./eval/03/README.org][Relatório]] |
-| #04  | [[./04/README.org][Manipulação de dados em R]]        | Email (corpo) | 2017-09-13 | [[./eval/04/README.org][Relatório]] |
-| #05  | [[./05/README.org][Processo de Inferência em Prolog]] | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]]    | 2017-09-19 |           |
-| #06  | [[./06/README.org][Manipulação de listas em Prolog]]  | [[https://goo.gl/forms/SlzDngBjA3Fcqanl1][Formulário]]    | 2017-09-25 |           |
+| CATP | Descrição                            | Entrega       |      Prazo | Resultado |
+|------+--------------------------------------+---------------+------------+-----------|
+| #01  | [[./01/formulario.pdf][Formulário de Avaliação de LPs]]       | Papel/Email   | 2017-08-30 | [[./eval/01/README.org][Relatório]] |
+| #02  | [[./02/README.org][Listas e recursividade em R]]          | Email (corpo) | 2017-09-06 | [[./eval/02/README.org][Relatório]] |
+| #03  | [[./03/README.org][Recursividade e funcionais em R]]      | Email (corpo) | 2017-09-11 | [[./eval/03/README.org][Relatório]] |
+| #04  | [[./04/README.org][Manipulação de dados em R]]            | Email (corpo) | 2017-09-13 | [[./eval/04/README.org][Relatório]] |
+| #05  | [[./05/README.org][Processo de Inferência em Prolog]]     | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]]    | 2017-09-19 |           |
+| #06  | Implementação de Fibonacci em Prolog | [[https://goo.gl/forms/SlzDngBjA3Fcqanl1][Formulário]]    | 2017-09-25 |           |
+| #07  | [[./06/README.org][Manipulação de listas em Prolog]]      |               |            |           |
 
