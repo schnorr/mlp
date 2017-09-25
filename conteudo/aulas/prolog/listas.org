@@ -1,0 +1,137 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Manipulação de Listas
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+
+Compostas por constantes, variáveis, ou listas.
+
+Exemplos com unificação
+#+begin_src PROLOG
+Lista1 = [].
+Lista2 = [canario,bentevi,periquito].
+Lista3 = [[azul,vermelho],[amarelo,verde,azul]].
+#+end_src
+
+#+latex:\pause
+
+Elas podem ser lidas (=read=) e impressas (=write=)
+#+begin_src PROLOG
+Lista2 = [canario,bentevi,periquito],write(Lista2).
+read(Lista4), write(Lista4).
+#+end_src
+
+# #+latex: \pause
+
+# Cláusulas com listas: o argumento é uma lista
+# #+begin_src PROLOG
+# lista([10,20,30]).
+# #+end_src
+
+# Lista de Cláusulas: os argumentos são cláusulas
+# #+begin_src PROLOG
+# lista_clausulas([gosta(ana,pedro),gosta(pedro,ana)]).
+# #+end_src
+
+* Cabeça e Cauda da Lista
+Operador =|= delimita a cauda da lista
+
+#+begin_src PROLOG
+L = [a, b, c].
+L = [a | [b, c]].
+L = [a, b | [c]].
+L = [a, b, c | []].
+#+end_src
+
+#+latex: \vfill
+
+Separando listas
+#+begin_src PROLOG
+[H|T] = [1,2,3].
+[Parte1|Parte2] = [brasil,uruguai,argentina].
+#+end_src
+* Operações básicas sobre listas
+
+Algumas operações básicas devem ser definidas
++ \alert{Adicionar} e \alert{retirar} elementos de uma lista
++ Determinar se um elemento \alert{pertence} a uma lista
++ \alert{Somar} elementos de uma lista
+
+* Estudo de caso: membro
+
+Algoritmo para determinar se X pertence a uma lista L
+
+X é membro de L se:
++ X é cabeça de L ou
++ X é membro do corpo de L
+
+Prolog ([[./listas.pl]])
+#+begin_src PROLOG
+membro(Elemento, [Elemento|_]).
+membro(Elemento, [_|Cauda]) :- membro(Elemento, Cauda).
+#+end_src
+
+* Com o corte: =!=
+
+Predicado *membro* de lista
+- e supor que cada elemento na lista é único
+
+#+begin_src PROLOG
+membro(Elemento, [Elemento|_]).
+membro(Elemento, [_|Lista]) :- membro(Elemento, Lista).
+#+end_src
+
+Melhor definição para a primeira cláusula de membro
+#+begin_src PROLOG
+membro(Elemento, [Elemento|_]) :- !.
+#+end_src
+
+* Estudo de caso: concatenação
+
+Predicado para concatenar lista1 com lista2 e colocar em lista3 \\
+#+begin_src PROLOG
+concat (lista1, lista2, lista3)
+#+end_src
+  
+Definição na base de conhecimento
+
+#+begin_src PROLOG
+concat([], L2, L2) :- !.
+concat([X|L1], L2, [X|D]) :- concat(L1, L2, D).
+#+end_src
+
+Concatenando listas
+
+#+begin_src PROLOG
+concat([a,b,c], [d,e,f], L).
+#+end_src
+
+#+latex: \pause
+
+*Usando o Motor de Inferência*
++ Não há diferença entre entrada e saída
++ Comparativo com imperativo e funcional
+#+begin_src PROLOG
+concat(X, [d, e], [a, b, c, d, e]).
+concat([a, b, c], Y, [a, b, c, d, e]).
+#+end_src  
+
+* Estudo de caso: soma
+
+#+begin_src PROLOG :tangle teste.pl
+soma([], 0).
+soma([C|R], SOMA) :- soma(R, RESTO), SOMA is C + RESTO.
+#+end_src
