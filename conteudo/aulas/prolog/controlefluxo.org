@@ -1,0 +1,112 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Controle de Fluxo
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Controle de Fluxo
+Ambiente de programação lógica \alert{pura}
++ Ordem de resolução de cláusulas é indeterminada
++ As combinações poderiam ser testadas \alert{em paralelo}
+
+#+latex: \pause
+
+Em Prolog, a resolução é \alert{determinista}
++ De cima para baixo
++ Da esquerda para a direita
+
+#+latex: \pause
+Podemos afetar o desempenho do motor de inferência
++ Reordenar as cláusulas para otimizar um tipo de consulta
++ Colocar as cláusulas mais ``verdadeiras'' primeiro
+
+#+latex: \vfill\pause
+Laços infinitos podem ser evitados
+
+#+begin_src PROLOG
+ascendente(X, X).
+ascendente(X, Y) :- pai(X, Z), ascendente(Z, Y).
+#+end_src
+
+* Operador de Corte: =!=
+Motor de Inferência
++ Faz uma *busca exaustiva* para encontrar todas as verdades
++ Ao encontrar falso, faz um *retrocesso*, e continua
+
+#+latex: \vfill\pause
+
+#+begin_src PROLOG
+pais(brasil).
+cidade(brasilia).
+capital(brasil, brasilia).
+capital(brasil, brasilia).
+capital_pais(X,Y) :- pais(X), cidade(Y), capital(X,Y).
+#+end_src
+
+#+latex: \vfill
+
+_Pergunta_: =capital_pais(brasil,X).= nos traz o que? [[./corta_01.pl]]
+
+#+Latex: \vfill\pause
+
+Operador =!= retorna sempre verdadeiro, mas *desabilita retrocesso* anterior.
+
+Vejamos o caso do arquivo: [[./corta_02.pl]]
+
+* Operador de Corte: =!=
+
+Um exemplo geral
+#+begin_src PROLOG
+a, b, !, c, d
+#+end_src
+
+Se =a= e =b= são verdade, mas =c= não, tudo é falso, ou seja
+
+o corte pode ser utilizado para explicitar que
+
+não vale a pena reavaliar =a= e =b=
+
+* Controle de Fluxo
+Desvantagens do operador de corte?
+  + Influência do modelo imperativo
+  + Analogia ao uso de =goto=
+
+#+latex: \pause
+
+Prolog é impuro pois tem resolução determinista
++ Reordernar cláusulas
++ Utilizar o corte para controlar o processo de busca
+
+#+latex: \vfill\pause
+
+Principal razão: *Eficiência*
+
+* Operador \alert{fail} :noexport:
+Sempre retorna \texttt{falso}
+Se \texttt{capital\_pais} tem \texttt{fail} no último termo?
+  + <2->\texttt{capital\_pais} sempre será falso
+  + <2->Todas as cláusulas que o utilizam o verão como falso
+<3->\alert{Pra que serve então?}
+#+latex: \vfill
+<4->Podemos utilizar para construir a \alert{negação lógica}
+<4->Supondo que \texttt{pessoa(julia).} faz parte da minha base
+  + Podemos ver a negação disso com
+    #+begin_src PROLOG
+    pessoa(julia), !, fail.
+    #+end_src
+<5->Podemos obter uma cláusula de negação lógica genérica
+  #+begin_src PROLOG
+  negacao(Meta) :- Meta, !, fail.
+  #+end_src
+
