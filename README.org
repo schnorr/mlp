@@ -89,6 +89,7 @@ Todos os grupos devem ter _três_ participantes.
 | Batalha Barcal   |       3 | Java8     | BatalhaNaval |
 | SchnorR doidão   |       3 | R         | Galáxias     |
 | Fullbar          |       3 | C#        | TowerDefense |
+| Al2O3:Cr         |       3 | Ruby      | BatalhaNaval |
 |------------------+---------+-----------+--------------|
 
 Grupos ainda indefinidos, com apenas dois membros.
