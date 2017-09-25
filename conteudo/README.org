@@ -48,7 +48,5 @@ disciplina, podem variar em abrangência e profundidade.
 | Funcional | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.  |
 | Funcional | ML: Tipos definidos pelo usuário e tipos estruturados de dados, tipos polimórficos. |
 
-
-
 ** Material de apoio
 ** Exercícios
