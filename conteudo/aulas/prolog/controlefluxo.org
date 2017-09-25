@@ -32,12 +32,10 @@ Podemos afetar o desempenho do motor de inferência
 + Colocar as cláusulas mais ``verdadeiras'' primeiro
 
 #+latex: \vfill\pause
-Laços infinitos podem ser evitados
 
-#+begin_src PROLOG
-ascendente(X, X).
-ascendente(X, Y) :- pai(X, Z), ascendente(Z, Y).
-#+end_src
+#+BEGIN_CENTER
+Laços infinitos podem ser evitados
+#+END_CENTER
 
 * Operador de Corte: =!=
 Motor de Inferência
