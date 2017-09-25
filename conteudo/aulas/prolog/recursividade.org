@@ -1,0 +1,68 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Recursividade
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Recursividade
+
+Ter regras lógicas recursivas
+- A recursão deve vir por último
+
+#+begin_src PROLOG
+ascendente(X, X).
+ascendente(X, Y) :- pai(X, Z), ascendente(Z, Y).
+#+end_src
+
+Usamos a recursão quando
+ + Condição de parada
+ + Iteração sobre estrutura de dados
+ + Definição recursiva
+
+* Fatorial
+#+BEGIN_CENTER
+O *fatorial* de um número natural n é o produto de todos os inteiros
+positivos menores ou iguais a n. O fatorial de 0 é 1, por definição.
+#+END_CENTER
+
+Implementar =fatorial/2=
+
+#+begin_src PROLOG
+fatorial(0, X).
+fatorial(5, X).
+fatorial(200, X).
+fatorial(2000, X).
+fatorial(20000, X).
+#+end_src
+
+#+BEGIN_CENTER
+Qual a vantagem da abstração lógica?
+#+END_CENTER
+
+* Série de Fibonacci
+
+#+BEGIN_CENTER
+Os primeiros dois números da sequência são 0 e 1.  Números
+subsequentes são a soma dos dois números anteriores
+#+END_CENTER
+
+Implementar =fibonacci/2=
+
+#+begin_src PROLOG
+fibonacci(0, X).
+fibonacci(10, X).
+fibonacci(20, X).
+#+end_src
+
+Retornar o valor na posição 0, 10, e 20.
