@@ -94,11 +94,12 @@ Todos os grupos devem ter _três_ participantes.
 
 Grupos ainda indefinidos, com apenas dois membros.
 
-|----------------------+---------+-----------+--------------|
-| Nome do Grupo        | Membros | Linguagem | Problema     |
-|----------------------+---------+-----------+--------------|
-| Guerreiros de Anúbis |       2 | Groovy    | BatalhaNaval |
-|----------------------+---------+-----------+--------------|
+|---------------------------+---------+-----------+--------------|
+| Nome do Grupo             | Membros | Linguagem | Problema     |
+|---------------------------+---------+-----------+--------------|
+| Guerreiros de Anúbis      |       2 | Groovy    | BatalhaNaval |
+| Os Gatos de Schnorrdingër |       2 | Swift     | TowerDefense |
+|---------------------------+---------+-----------+--------------|
 
 ** Bibliografia
 - [[http://loja.grupoa.com.br/livros/programacao/conceitos-de-linguagens-de-programacao/9788577807918][Robert W. Sebesta. Conceitos de Linguagens de Programação. Bookman. 5th edition, 2003]]
