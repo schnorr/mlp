@@ -1,0 +1,56 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Metapredicados
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+
+* Metapredicados
+
+Equivalentes a funções de ordem maior em funcional
+- Recebem um objetivo como argumento
+
+#+BEGIN_CENTER
+=setof=, =bagof=, =findall=
+
+Sintaxe: =findall(+Template, :Goal, -Bag)=
+#+END_CENTER
+
+#+latex: \vfill
+
+Exemplo
+
+#+begin_src PROLOG
+antepassados(X, LISTA) :- setof(P, antepassado(X,P), LISTA).
+#+end_src
+
+* Exercício
+
+Carregar as bases de conhecimento: =genealogia3.pl=
+
+#+begin_src shell :results output
+[genealogia3].
+#+end_src
+
+Observe as regras de geração de listas
+- =antepassados= 
+- =gostos=
+
+Realizem consultas com elas.
+
+#+latex: \vfill
+
+Elabore regras para
+1. Lista de descendentes de uma pessoa
+2. Lista das pessoas que gostam de alguma coisa ou pessoa
