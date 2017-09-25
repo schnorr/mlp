@@ -22,7 +22,7 @@ disciplina, podem variar em abrangência e profundidade.
 | Lógico     | [[./aulas/prolog/controlefluxo.org][Prolog: Controle de Fluxo]]                                                                                 |       |
 | Lógico     | [[./aulas/prolog/recursividade.org][Prolog: Recursividade]]                                                                                     |       |
 | Lógico     | [[./aulas/prolog/metapredicados.org][Prolog: Metapredicados]]                                                                                    |       |
-| Lógico     | [[./aulas/prolog/listas.org][Prolog: Manipulação de Listas]]                                                                             |       |
+| Lógico     | [[./aulas/prolog/listas.org][Prolog: Manipulação de Listas]]                                                                             | [[../catps/][#06]]   |
 | Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                                         |       |
 | Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                                |       |
 | Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                                    |       |
