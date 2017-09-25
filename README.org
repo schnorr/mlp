@@ -72,7 +72,6 @@ aprendizado da disciplina.
   - [[./projeto/README.pdf][Em PDF]]
 - [[https://github.com/schnorr/mlpreport][Modelo Latex para o Relatório]]
 
-
 *** Definição de grupos
 
 Todos os grupos devem ter _três_ participantes.
@@ -89,7 +88,7 @@ Todos os grupos devem ter _três_ participantes.
 | Caiu a barca     |       3 | F#        | BatalhaNaval |
 | Batalha Barcal   |       3 | Java8     | BatalhaNaval |
 | SchnorR doidão   |       3 | R         | Galáxias     |
-| Fullbar          |       3 | C#        | BatalhaNaval |
+| Fullbar          |       3 | C#        | TowerDefense |
 |------------------+---------+-----------+--------------|
 
 Grupos ainda indefinidos, com apenas dois membros.
