@@ -99,6 +99,7 @@ Grupos ainda indefinidos, com apenas dois membros.
 |---------------------------+---------+-----------+--------------|
 | Guerreiros de Anúbis      |       2 | Groovy    | BatalhaNaval |
 | Os Gatos de Schnorrdingër |       2 | Swift     | TowerDefense |
+| Os Aforistas Desaforados  |       2 | OCAML     |              |
 |---------------------------+---------+-----------+--------------|
 
 ** Bibliografia
