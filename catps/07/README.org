@@ -2,7 +2,7 @@
 # -*- mode: org -*-
 #+startup: beamer overview indent
 
-* CATP #06
+* CATP #07
 
 Segue a especificação dos exercícios:
 
