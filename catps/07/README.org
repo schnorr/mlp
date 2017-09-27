@@ -15,8 +15,8 @@ Segue a especificação dos exercícios:
 | Exercício | Predicado      | Aridade |
 |-----------+----------------+---------|
 |         1 | =imprime=        |       1 |
-|         2 | =ultimo=         |       1 |
-|         3 | =inverte=        |       1 |
+|         2 | =ultimo=         |       2 |
+|         3 | =inverte=        |       2 |
 |         4 | =insere_ordenado= |       2 |
 |         5 | =remove_elemento= |       2 |
 |-----------+----------------+---------|
