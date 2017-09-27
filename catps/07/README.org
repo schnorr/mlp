@@ -17,8 +17,8 @@ Segue a especificação dos exercícios:
 |         1 | =imprime=        |       1 |
 |         2 | =ultimo=         |       2 |
 |         3 | =inverte=        |       2 |
-|         4 | =insere_ordenado= |       2 |
-|         5 | =remove_elemento= |       2 |
+|         4 | =insere_ordenado= |       3 |
+|         5 | =remove_elemento= |       3 |
 |-----------+----------------+---------|
 
 # Não pode dar =true= no final quando tudo funciona bem.
