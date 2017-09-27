@@ -21,7 +21,7 @@ Segue a especificação dos exercícios:
 |         5 | =remove_elemento= |       2 |
 |-----------+----------------+---------|
 
-Não pode dar =true= no final quando tudo funciona bem.
+# Não pode dar =true= no final quando tudo funciona bem.
 
 
 
