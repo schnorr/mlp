@@ -34,5 +34,5 @@ Quando a entrega for por =Email (corpo)=, siga este método:
 | #04  | [[./04/README.org][Manipulação de dados em R]]            | Email (corpo) | 2017-09-13 | [[./eval/04/README.org][Relatório]] |
 | #05  | [[./05/README.org][Processo de Inferência em Prolog]]     | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]]    | 2017-09-19 |           |
 | #06  | Implementação de Fibonacci em Prolog | [[https://goo.gl/forms/SlzDngBjA3Fcqanl1][Formulário]]    | 2017-09-25 |           |
-| #07  | [[./07/README.org][Manipulação de listas em Prolog]]      | [[https://goo.gl/forms/WK9Ug9D1dZWbfNJx2][Formulário]]    | 2017-09-27 |           |
+| #07  | [[./07/README.org][Manipulação de listas em Prolog]]      | [[https://goo.gl/forms/WK9Ug9D1dZWbfNJx2][Formulário]]    | 2017-10-02 |           |
 
