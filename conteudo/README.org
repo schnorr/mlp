@@ -23,8 +23,6 @@ disciplina, podem variar em abrangência e profundidade.
 | Lógico     | [[./aulas/prolog/recursividade.org][Prolog: Recursividade]]                                                                                     | [[../catps/][#06]]   |
 | Lógico     | [[./aulas/prolog/metapredicados.org][Prolog: Metapredicados]]                                                                                    |       |
 | Lógico     | [[./aulas/prolog/listas.org][Prolog: Manipulação de Listas]]                                                                             | [[../catps/][#07]]   |
-| Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                                         |       |
-| Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                                |       |
 | Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                                    |       |
 | Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.               |       |
 | Imperativo | Tipos de Dados: sistemas de tipos, primitivos, estruturados e compostos, tipos de usuário; Introdução OO  |       |
