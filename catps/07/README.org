@@ -9,6 +9,7 @@ Segue a especificação dos exercícios:
 1. Crie uma regra para imprimir na tela os elementos que fazem parte de uma lista.
 2. Crie uma regra para retornar o último elemento de uma lista.
 3. Crie uma regra que inverta os elementos de uma lista.
+   - Utilize o predicado =concat/3= após a recursão
 4. Crie uma regra que insira um elemento em uma lista ordenada.
 5. Crie uma regra que remova um elemento de uma lista.
 
