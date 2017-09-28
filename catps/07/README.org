@@ -13,14 +13,14 @@ Segue a especificação dos exercícios:
 4. Crie uma regra que insira um elemento em uma lista ordenada.
 5. Crie uma regra que remova um elemento de uma lista.
 
-| Exercício | Predicado      | Aridade |
-|-----------+----------------+---------|
-|         1 | =imprime=        |       1 |
-|         2 | =ultimo=         |       2 |
-|         3 | =inverte=        |       2 |
+| Exercício | Predicado       | Aridade |
+|-----------+-----------------+---------|
+|         1 | =imprime=         |       1 |
+|         2 | =ultimo=          |       2 |
+|         3 | =inverte=         |       2 |
 |         4 | =insere_ordenado= |       3 |
 |         5 | =remove_elemento= |       3 |
-|-----------+----------------+---------|
+|-----------+-----------------+---------|
 
 # Não pode dar =true= no final quando tudo funciona bem.
 
