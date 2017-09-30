@@ -5,44 +5,53 @@ A tabela abaixo traz uma lista dos assuntos abordados ao longo do
 semestre, por setor. Os tópicos, respeitando o plano de ensino da
 disciplina, podem variar em abrangência e profundidade.
 
-| Setor       | Descrição                                                                                                 | CATPs |
-|-------------+-----------------------------------------------------------------------------------------------------------+-------|
-| Geral       | [[./aulas/geral/apresentacao.org][Apresentação da Disciplina]]                                                                                |       |
-| Geral       | [[./aulas/geral/introducao.org][Introdução Geral]]                                                                                          |       |
-| Geral       | [[./aulas/geral/criterios.org][Critérios e Características de LP]]                                                                         | [[../catps/][#01]]   |
-| Geral       | [[./aulas/geral/implementacao.org][Implementação de LP: compilação e interpretação]]                                                           |       |
-| Funcional   | [[./aulas/funcional/contextualizacao.org][Contextualização e Histórico, Origem dos Paradigmas]]                                                       |       |
-| Funcional   | [[./aulas/funcional/funcional.org][Programação Funcional]]                                                                                     |       |
-| Funcional   | [[./aulas/funcional/lambda.org][Cálculo Lambda]]                                                                                            |       |
-| Funcional   | [[./aulas/r/introducao.org][R: Introdução, Listas e recursividade]]                                                                     | [[../catps/][#02]]   |
-| Funcional   | [[./aulas/r/funcionais.org][R: Funcionais]]                                                                                             | [[../catps/][#03]]   |
-| Funcional   | [[./aulas/r/manipulacao.org][R: Manipulação de Dados]]                                                                                   | [[../catps/][#04]]   |
-| Lógico      | [[./aulas/prolog/introducao.org][Prolog: Introdução]]                                                                                        |       |
-| Lógico      | [[./aulas/prolog/inferencia.org][Prolog: Processo de Inferência]]                                                                            | [[../catps/][#05]]   |
-| Lógico      | [[./aulas/prolog/controlefluxo.org][Prolog: Controle de Fluxo]]                                                                                 |       |
-| Lógico      | [[./aulas/prolog/recursividade.org][Prolog: Recursividade]]                                                                                     | [[../catps/][#06]]   |
-| Lógico      | [[./aulas/prolog/metapredicados.org][Prolog: Metapredicados]]                                                                                    |       |
-| Lógico      | [[./aulas/prolog/listas.org][Prolog: Manipulação de Listas]]                                                                             | [[../catps/][#07]]   |
-| Vinculações | [[./aulas/vinculos/introducao.org][Introdução]]                                                                                                |       |
-| Vinculações | [[./aulas/vinculo/nomes.org][Nomes]]                                                                                                     |       |
-| Vinculações | [[./aulas/vinculo/tipos.org][Tipos]]                                                                                                     |       |
-| Vinculações | [[./aulas/vinculo/estocagem.org][Estocagem]]                                                                                                 |       |
-| Vinculações | [[./aulas/vinculo/escopo.org][Escopo]]                                                                                                    |       |
-| Imperativo  | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.               |       |
-| Imperativo  | Tipos de Dados: sistemas de tipos, primitivos, estruturados e compostos, tipos de usuário; Introdução OO  |       |
-| Imperativo  | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos.              |       |
-| Imperativo  | Controle de Fluxo: Expressões e atribuição. Operadores. Comandos de controle: condicionais e iterativos.  |       |
-| Imperativo  | Polimorfismo: sobrecarga de operadores e funções, coerção, polimorfismo paramétrico, estático e dinâmico. |       |
-| Imperativo  | Subprogramas: Definição, invocação. Registros de ativação. Acesso a variáveis não locais.                 |       |
-| Imperativo  | Subprogramas: Semântica de passagem de parâmetros. Modos de passagem de parâmetros, implementação.        |       |
-| OO          | Orientação a Objeto: classes, atributos e métodos; encapsulamento; proteção; construtores                 |       |
-| OO          | Orientação a Objeto: Herança, polimorfismo                                                                |       |
-| OO          | Orientação a Objeto: Polimorfismo paramétrico; coleções; reflexão                                         |       |
-| Extra       | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação                      |       |
-| Extra       | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                                  |       |
-| Extra       | Linguagens de script                                                                                      |       |
-| Extra       | Programação Concorrente/Distribuída: aspectos sintáticos e semânticos                                     |       |
-| Extra       | Laboratório sobre programação concorrente                                                                 |       |
+*** Realizado
+
+ | Setor       | Descrição                                           | CATPs |
+ |-------------+-----------------------------------------------------+-------|
+ | Geral       | [[./aulas/geral/apresentacao.org][Apresentação da Disciplina]]                          |       |
+ | Geral       | [[./aulas/geral/introducao.org][Introdução Geral]]                                    |       |
+ | Geral       | [[./aulas/geral/criterios.org][Critérios e Características de LP]]                   | [[../catps/][#01]]   |
+ | Geral       | [[./aulas/geral/implementacao.org][Implementação de LP: compilação e interpretação]]     |       |
+ | Funcional   | [[./aulas/funcional/contextualizacao.org][Contextualização e Histórico, Origem dos Paradigmas]] |       |
+ | Funcional   | [[./aulas/funcional/funcional.org][Programação Funcional]]                               |       |
+ | Funcional   | [[./aulas/funcional/lambda.org][Cálculo Lambda]]                                      |       |
+ | Funcional   | [[./aulas/r/introducao.org][R: Introdução, Listas e recursividade]]               | [[../catps/][#02]]   |
+ | Funcional   | [[./aulas/r/funcionais.org][R: Funcionais]]                                       | [[../catps/][#03]]   |
+ | Funcional   | [[./aulas/r/manipulacao.org][R: Manipulação de Dados]]                             | [[../catps/][#04]]   |
+ | Lógico      | [[./aulas/prolog/introducao.org][Prolog: Introdução]]                                  |       |
+ | Lógico      | [[./aulas/prolog/inferencia.org][Prolog: Processo de Inferência]]                      | [[../catps/][#05]]   |
+ | Lógico      | [[./aulas/prolog/controlefluxo.org][Prolog: Controle de Fluxo]]                           |       |
+ | Lógico      | [[./aulas/prolog/recursividade.org][Prolog: Recursividade]]                               | [[../catps/][#06]]   |
+ | Lógico      | [[./aulas/prolog/metapredicados.org][Prolog: Metapredicados]]                              |       |
+ | Lógico      | [[./aulas/prolog/listas.org][Prolog: Manipulação de Listas]]                       | [[../catps/][#07]]   |
+ | Vinculações | [[./aulas/vinculos/introducao.org][Introdução]]                                          |       |
+ | Vinculações | [[./aulas/vinculo/nomes.org][Nomes]]                                               |       |
+ | Vinculações | [[./aulas/vinculo/tipos.org][Tipos]]                                               |       |
+ | Vinculações | [[./aulas/vinculo/estocagem.org][Estocagem]]                                           |       |
+ | Vinculações | [[./aulas/vinculo/escopo.org][Escopo]]                                              |       |
+ | Vinculações | Checagem de Tipo                                    |       |
+ | Vinculações | Espaço                                              |       |
+ | Vinculações | Declaração/Definição                                |       |
+ | Vinculações | Ponteiros                                           |       |
+ |-------------+-----------------------------------------------------+-------|
+
+*** Planejado
+
+ | Imperativo  | Tipos de Dados: sistemas de tipos, primitivos, estruturados e compostos, tipos de usuário; Introdução OO  |       |
+ | Imperativo  | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos.              |       |
+ | Imperativo  | Controle de Fluxo: Expressões e atribuição. Operadores. Comandos de controle: condicionais e iterativos.  |       |
+ | Imperativo  | Polimorfismo: sobrecarga de operadores e funções, coerção, polimorfismo paramétrico, estático e dinâmico. |       |
+ | Imperativo  | Subprogramas: Definição, invocação. Registros de ativação. Acesso a variáveis não locais.                 |       |
+ | Imperativo  | Subprogramas: Semântica de passagem de parâmetros. Modos de passagem de parâmetros, implementação.        |       |
+ | OO          | Orientação a Objeto: classes, atributos e métodos; encapsulamento; proteção; construtores                 |       |
+ | OO          | Orientação a Objeto: Herança, polimorfismo                                                                |       |
+ | OO          | Orientação a Objeto: Polimorfismo paramétrico; coleções; reflexão                                         |       |
+ | Extra       | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação                      |       |
+ | Extra       | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                                  |       |
+ | Extra       | Linguagens de script                                                                                      |       |
+ | Extra       | Programação Concorrente/Distribuída: aspectos sintáticos e semânticos                                     |       |
+ | Extra       | Laboratório sobre programação concorrente                                                                 |       |
 
 *** Conteúdo de edições anteriores
 
