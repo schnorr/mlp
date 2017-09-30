@@ -25,13 +25,11 @@ disciplina, podem variar em abrangência e profundidade.
  | Lógico      | [[./aulas/prolog/recursividade.org][Prolog: Recursividade]]                               | [[../catps/][#06]]   |
  | Lógico      | [[./aulas/prolog/metapredicados.org][Prolog: Metapredicados]]                              |       |
  | Lógico      | [[./aulas/prolog/listas.org][Prolog: Manipulação de Listas]]                       | [[../catps/][#07]]   |
- | Vinculações | [[./aulas/vinculos/introducao.org][Introdução]]                                          |       |
+ | Vinculações | [[./aulas/vinculos/introducao.org][Introdução e espaço de vinculações]]                  |       |
  | Vinculações | [[./aulas/vinculo/nomes.org][Nomes]]                                               |       |
  | Vinculações | [[./aulas/vinculo/tipos.org][Tipos]]                                               |       |
  | Vinculações | [[./aulas/vinculo/estocagem.org][Estocagem]]                                           |       |
  | Vinculações | [[./aulas/vinculo/escopo.org][Escopo]]                                              |       |
- | Vinculações | Checagem de Tipo                                    |       |
- | Vinculações | Espaço                                              |       |
  | Vinculações | Declaração/Definição                                |       |
  | Vinculações | Ponteiros                                           |       |
  |-------------+-----------------------------------------------------+-------|
