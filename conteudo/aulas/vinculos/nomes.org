@@ -1,0 +1,116 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Nomes
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Nomes
+Nomes são associados a várias entidades
++ Variáveis
++ Subprogramas
++ Parâmetros
++ Classes
++ Objetos
++ Rótulos
++ Exceções
++ Constantes
++ ...
+\pause Servem de *referência* às entidades de programação
++ Definem uma entidade e permitem sua utilização
+\pause Questões de Projeto
++ Os nomes são sensíveis a maiúsculas e minúsculas?
++ As palavras especiais são reservadas ou palavras-chaves?
+* Formas
+#+BEGIN_CENTER
+Uma cadeia de caracteres de identificação
+#+END_CENTER
+
+#+latex: \vfill
+Alguns exemplos
++ Fortran 95 aceitava nomes até 31 caracteres
++ C89 não tinha limites, mas usava somente os 31 primeiros
++ Java, C# e Ada sem limites
++ C++ sem limites, mas implementações os impõem
+    + Simplifica a etapa de compilação (tabela de símbolos)
+\pause *Definição* do que é um nome \alert{pode variar}
+#+latex: \vfill
+
+\pause Uma *definição comum* é descrita pela BNF seguinte
+  | letra_        | \rightarrow | [ A-Za-z_ ]               |
+  | digito        | \rightarrow | [ 0-9 ]                   |
+  | identificador | \rightarrow | letra_ (letra_ \vert digito)* |
+* Formas \small (sensíveis a maiúsculas e a minúsculas)
+Linguagens *sensíveis* -- /case-sensitive/
++ nome \neq NOME \neq Nome
++ Exemplos: C, C++, Java, Objective-C, Modula-2, ...
++ Exemplo
+    #+begin_src C
+    int Nome;
+    int nome;
+    int NOME;
+    #+end_src
+
+\pause Linguagens *não sensíveis* -- /case-insensitive/
++ nome = NOME = Nome
++ Exemplos: Pascal, Delphi, Basic, Ada, ...
+    #+begin_src C
+    int Nome;
+    int nome; /* erro: esta variável já está declarada */
+    #+end_src
+#+latex: \vfill
+\pause *Discussão:* legibilidade e redigibilidade?
+
+* Palavras Especiais
+São utilizadas para tornar programas mais legíveis
++ Nomeam ações (\texttt{for}, \texttt{while}, \texttt{then})
++ Separam entidades sintáticas (\texttt{def}, \texttt{;})
+#+latex: \vfill
+\pause Palavra *Chave* -- /keyword/
++ É especial somente em alguns contextos
++ Exemplo em Fortran
+    #+begin_src Fortran
+    Real Apple
+    Real = 3.4
+    #+end_src
++ \pause Caso extremo
+    #+begin_src Fortran
+    Real Integer
+    Integer Real
+    #+end_src
+\pause Palavra *Reservada* -- /reserved word/
++ Palavra não pode ser usada como nome
++ Problema potencial: ter muitas palavras reservadas
+    + \pause Cobol tem cerca de 300 palavras reservadas \\
+	 _LENGTH_, _BOTTOM_, _DESTINATION_, _COUNT_
+	 
+* Boas escolhas                                                    :noexport:
+Ter informação *semântica* a respeito entidade
+Evitar variações sutis: *Consistência* de estilo
+Muitas linguagens propõem *convenções*
++ Alguns grupos adotam convenções próprias \\
+    Exemplo: Kernel do Linux
+*Tamanho* do nome
++ Longos quando não são muito referenciados
++ Curtos para nomes temporários
+#+latex: \vfill
+\pause *Discussão:* Qual é o melhor?
+  #+begin_src C
+  lista_de_caracteres
+  listaDeCaracteres
+  listaCaracteres
+  lista
+  l
+  i
+  #+end_src
+
