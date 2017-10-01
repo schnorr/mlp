@@ -1,0 +1,120 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Vinculação de Tipo
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Vinculação de Tipo
+#+BEGIN_CENTER
+É o ato de *associar um tipo à uma variável*
+
+*Como* o tipo é especificado e *Quando* a vinculação ocorre
+#+END_CENTER
+
+Tipos
+- Estática
+- Dinâmica
+- por Inferência
+
+* Estática
+
+Declaração *explícita*
+    #+begin_src C
+    int contador;
+    PajeSimulator *simulator;
+    #+end_src
+\pause Declaração *implícita*
+    + Utiliza alguma convenção na especificação da linguagem
+    + Regra comum: _primeira aparição da variável define seu tipo_
+	 #+begin_src C
+      contador = 3;
+      simulator = [[PajeSimulator alloc] init];
+	 #+end_src
+#+latex: \vfill
+\pause Abordagem Implícita $\leadsto$ problemas de *confiabilidade* \\
+  \small Erros de programação indetectáveis pelo compilador
+\pause
+
+Solução: primeiro caractere do nome indica tipo
++ Perl: \texttt{\$contador}, \texttt{@contador}, \texttt{\%contador}
+* Dinâmica
+Não há uma declaração explícita do tipo da variável
+
+Nem pode ser determinado pela sua primeira ocorrência
+#+latex: \vfill\pause
+
++ A vinculação *ocorre a cada atribuição da variável*
+    #+begin_src Javascript
+    list = [1.2, 3.4];
+    list = 56;
+    #+end_src
+\pause Vantagens
++ Flexibilidade
++ Programação ``genérica''
+\pause Desvantages
++ Falta de confiabilidade -- como verificar tipos?
++ \pause Custo
+    + Checagem de tipos em tempo de execução
+    + Cada variável deve ter um descritor de tipo
+    + Estocagem deve poder mudar a cada atribuição
+\pause Normalmente encontrada em *linguagens interpretadas*
+* por Inferência
+É um tipo de vinculação de tipo implícita
++ Os tipos são determinados automaticamente
++ Normalmente para um tipo padrão (se nada é especificado)
+Exemplo
++ *ML*, Miranda, Haskell (Linguagens Funcionais)
+* Checagem de Tipos
+
+#+BEGIN_CENTER
+Assegura que operandos e operadores são compatíveis
+#+END_CENTER
+
+Tipos compatíveis
++ É um tipo legal para um determinado operador
++ Tipo que pode ser convertido automaticamente -- *coerção*\\
+    Exemplo: somar \texttt{int} e \texttt{float} em Java
+#+latex: \vfill
+
+#+BEGIN_CENTER
+Vinculação estática _implica em_ checagem estática
+
+Vinculação dinâmica _implica em_ checagem dinâmica
+#+END_CENTER
+
+#+latex: \vfill
+\pause Exemplos
++ Objective-C tem as duas abordagens \\
+    \small (programador pode desabilitar checagem estática)
++ JavaScript e PHP só permitem checagem de tipo dinâmica
+* Fortemente Tipada
+Todos os erros de tipo são detectados (ML)
+- ML
++ \pause Quase fortemente tipada: Ada, Java, C# \\
+    Desabilitar a checagem para algumas conversões de tipo
++ \pause Não são fortemente tipadas: C, C++ \\
+    Tipos \texttt{union} sem checagem de tipos
+    #+begin_src C
+    union {
+       int i;
+       double d;
+       _Bool b;
+    };
+    #+end_src
+#+latex: \vfill
+\pause *Coerção* na checagem de tipos
++ Diminue a confiabilidade
++ Bastante coerção: Fortran, C, C++
++ Pouca coerção: Ada
++ Intermediário: Java
