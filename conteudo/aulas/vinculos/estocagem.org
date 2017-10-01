@@ -1,0 +1,167 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Vinculação de Estocagem
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Memória, do binário até a execução (1)
+
+#+ATTR_LATEX: :width .7\linewidth
+[[./code-data-stack-heap-1.png]]
+
+* Memória, do binário até a execução (2)
+
+#+ATTR_LATEX: :width .7\linewidth
+[[./code-data-stack-heap-2.png]]
+
+* Memória, do binário até a execução (3)
+
+#+ATTR_LATEX: :width .7\linewidth
+[[./code-data-stack-heap-3.png]]
+
+* Memória, do binário até a execução (4)
+
+#+ATTR_LATEX: :width .7\linewidth
+[[./code-data-stack-heap-4.png]]
+
+* Memória, do binário até a execução (5)
+
+#+ATTR_LATEX: :width .7\linewidth
+[[./code-data-stack-heap-5.png]]
+
+* Memória, do binário até a execução (6)
+
+#+ATTR_LATEX: :width .7\linewidth
+[[./code-data-stack-heap-6.png]]
+
+* Memória, do binário até a execução (7)
+
+#+ATTR_LATEX: :width .7\linewidth
+[[./code-data-stack-heap-7.png]]
+
+* Memória, do binário até a execução (8)
+
+#+ATTR_LATEX: :width .7\linewidth
+[[./code-data-stack-heap-8.png]]
+* Pilha -- Registro de Ativação (frame)                            :noexport:
++ Vamos supor o seguinte trecho de código
+  #+begin_src C
+  int foo (int a1, int a2, int a3) {
+     int c;
+  }
+
+  int main (int argc, char **argv){
+     foo (1, 2, 3);
+  }
+  #+end_src
++ Como o Registro de Ativação é construído?
+* Vinculação de Estocagem
+#+BEGIN_CENTER
+Associando uma variável a um espaço de memória
+
+*Tempo de Vida* de uma variável (período do vínculo)
+#+END_CENTER
+
+#+latex: \vfill
+Tipos
++ Estática
++ Dinâmica
+  + Pilha (/stack/)
+  + Monte (/heap/)
+    + Explícitas
+    + Implícitas
+
+* Estática
+Vinculação é feita antes do tempo de execução
+
+Se mantém do início ao fim, e não muda
+#+latex: \vfill
+\pause Vantanges
++ Eficência
++ \pause Subprogramas sensíveis ao histórico
+    #+begin_src C
+    int conta ()
+    {
+       static int meu_contador = 0;
+       meu_contador += 1;
+       return meu_contador;
+    }
+    #+end_src
+\pause Desvantagens
++ Falta de flexibilidade (se houver somente estática) \\
+    Como implementar recursão?
+* Dinâmica na Pilha
+Vinculação é feita em tempo de execução na pilha
+
+\pause
+
+#+begin_src C
+int fib (n) {
+  int n1 = n - 1;
+  int n2 = n - 2;
+  switch (n){
+    case 0: return 1;
+    case 1: return 1;
+    default: return fib(n1) + fib(n2);
+  }
+}
+#+end_src
+
+\pause Cada instância de \texttt{fib} tem um *frame* na pilha
++ \texttt{n1} e \texttt{n2} são alocados nela
++ Vínculo existe durante a execução de \texttt{fib(n)} \\
+    Quando \texttt{fib} retorna, o frame é desalocado
+\pause Endereço relativo pode ser calculado estaticamente
+* Dinâmica no Monte
+Vinculação é feita em tempo de execução no monte
+
+#+latex: \vfill
+
+_Explícita_ (programador)
+#+begin_src C
+int *p = malloc (sizeof(int));
+*p = 3;
+free(p);
+#+end_src
+#+begin_src Objective-C
+PajeSimulator *simulator = [[PajeSimulator alloc] init];
+[simulator release];
+#+end_src
+#+begin_src C++
+QBoxLayout *topLayout = new QBoxLayout ();
+delete topLayout;
+#+end_src
+
+_Implícita_ (linguagem)
+#+begin_src Javascript
+highs = [20, 23, 18, 15, 30];
+#+end_src
+* Tempo de vida de uma variável
+** Texto                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
++ Estática
++ Dinâmica
+  + Pilha
+  + Monte
+    + Explícitas
+    + Implícitas
+** Figura                                                            :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+
+#+ATTR_LATEX: .3\linewidth
+[[./code-data-stack-heap-8.png]]

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300.03125"
+   height="303.90625"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="code-data-stack-heap.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3892"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-6"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3892-9"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="151.75002"
+     inkscape:cy="158.79547"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1130"
+     inkscape:window-height="1061"
+     inkscape:window-x="0"
+     inkscape:window-y="17"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-189.46875,-534.6875)">
+    <g
+       id="g4489"
+       transform="translate(7.4539838,164.33919)">
+      <rect
+         y="372.10101"
+         x="182.50484"
+         height="27.162777"
+         width="299.01984"
+         id="rect2987-4-6"
+         style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.9801417;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3757-9-6"
+         y="389.77029"
+         x="192.6062"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+         xml:space="preserve"><tspan
+           y="389.77029"
+           x="192.6062"
+           id="tspan3759-0-3"
+           sodipodi:role="line">Registro de Ativação (Frame)</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3757-9-6-6"
+         y="389.97256"
+         x="429.03888"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+         xml:space="preserve"><tspan
+           y="389.97256"
+           x="429.03888"
+           id="tspan3759-0-3-1"
+           sodipodi:role="line"
+           style="font-style:italic;-inkscape-font-specification:Verdana Italic">main()</tspan></text>
+    </g>
+    <g
+       id="g3806"
+       transform="translate(-0.03033447,1.4285699)">
+      <g
+         id="g3761">
+        <rect
+           style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:0.9801417;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           id="rect2987"
+           width="299.01987"
+           height="77.16275"
+           x="189.99779"
+           y="759.48535" />
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+           x="266.1752"
+           y="802.34943"
+           id="text3757"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3759"
+             x="266.1752"
+             y="802.34943">Segmento de Código</tspan></text>
+      </g>
+      <g
+         transform="translate(-361.96492,-138.01209)"
+         id="g3801">
+        <rect
+           style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:0.9801417;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           id="rect2987-4"
+           width="299.01984"
+           height="46.805637"
+           x="551.96271"
+           y="850.59875" />
+        <text
+           xml:space="preserve"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+           x="630.23877"
+           y="878.05267"
+           id="text3757-9"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3759-0"
+             x="630.23877"
+             y="878.05267">Segmento de Dados</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+       x="85.862968"
+       y="98.845284"
+       id="text3854"
+       sodipodi:linespacing="125%"
+       transform="translate(189.46875,534.6875)"><tspan
+         sodipodi:role="line"
+         id="tspan3856"
+         x="85.862968"
+         y="98.845284" /></text>
+    <g
+       id="g3059"
+       transform="translate(-123.23861,56.568538)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3858"
+         y="552.43085"
+         x="318.08536"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+         xml:space="preserve"><tspan
+           y="552.43085"
+           x="318.08536"
+           id="tspan3860"
+           sodipodi:role="line">Pilha</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3881-2"
+         d="m 334.82658,556.85295 0,25.63018"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
+    </g>
+    <g
+       id="g4489-1"
+       transform="translate(7.4539838,191.94685)">
+      <rect
+         y="372.10101"
+         x="182.50484"
+         height="27.162777"
+         width="299.01984"
+         id="rect2987-4-6-6"
+         style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.9801417;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3757-9-6-8"
+         y="389.77029"
+         x="192.6062"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+         xml:space="preserve"><tspan
+           y="389.77029"
+           x="192.6062"
+           id="tspan3759-0-3-7"
+           sodipodi:role="line">Registro de Ativação (Frame)</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3757-9-6-6-7"
+         y="389.97256"
+         x="429.03888"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+         xml:space="preserve"><tspan
+           y="389.97256"
+           x="429.03888"
+           id="tspan3759-0-3-1-0"
+           sodipodi:role="line"
+           style="font-style:italic;-inkscape-font-specification:Verdana Italic">sub1()</tspan></text>
+    </g>
+    <g
+       id="g4489-1-4"
+       transform="translate(-6.831737,252.54385)">
+      <rect
+         y="397.81531"
+         x="196.79056"
+         height="43.325222"
+         width="299.01984"
+         id="rect2987-4-6-6-3"
+         style="fill:#ffb2ff;fill-opacity:1;stroke:#000000;stroke-width:0.9801417;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.9205668, 3.9205668;stroke-dashoffset:0" />
+    </g>
+    <rect
+       style="fill:none;stroke:#000000;stroke-opacity:1"
+       id="rect2985"
+       width="299.02454"
+       height="302.88168"
+       x="189.96512"
+       y="535.19995" />
+    <g
+       id="g3064"
+       transform="translate(105.79257,-22.223355)">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3881"
+         d="m 354.29291,653.60966 0,-26.52303"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3858-3"
+         y="667.62628"
+         x="332.15814"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+         xml:space="preserve"><tspan
+           y="667.62628"
+           x="332.15814"
+           id="tspan3860-5"
+           sodipodi:role="line">Monte</tspan></text>
+    </g>
+    <g
+       id="g4489-1-4-0"
+       transform="translate(-6.831737,271.79116)">
+      <rect
+         y="397.81531"
+         x="196.79056"
+         height="43.325222"
+         width="299.01984"
+         id="rect2987-4-6-6-3-7"
+         style="fill:#ffb2ff;fill-opacity:1;stroke:#000000;stroke-width:0.9801417;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+  </g>
+</svg>

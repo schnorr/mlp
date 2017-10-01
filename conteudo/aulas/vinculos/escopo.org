@@ -1,0 +1,159 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Escopo Estático e Dinâmico
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Escopo
+#+BEGIN_CENTER
+A região de código onde a variável é *visível*
+
+Onde ela pode ser referenciada, utilizada
+#+END_CENTER
+
+\pause Correlaciona-se com conjunto de vinculações \equiv *Ambiente*
++ Várias variáveis com o mesmo nome, em ambientes diferentes
+
+\pause *Regras de escopo* de uma linguagem
++ Determinam qual vinculação de nome à variável utilizar
+#+latex: \vfill
+\pause Tipos
+- *Estático*: vínculos pela organização do programa \\
+  tempo de compilação
++ \pause *Dinâmico*: vínculos pela sequência de ativação \\
+  tempo de execução
+* Estático
+Determinado pelos *blocos* de um programa, podendo ser
++ Um *subprograma*
+    #+begin_src C
+    int funcao (void){
+       int events;
+    }
+    #+end_src
++ Um *trecho de código* delimitado por marcadores
+    #+begin_src C
+    {
+       int events;
+    }
+    #+end_src
++ Uma *classe* (em linguagens orientadas a objetos)
+    #+begin_src Objective-C
+    @interface PajeSimulator
+    {
+       int events;
+    }
+    @end
+    #+end_src
+Três tipos de blocos
++ Monolíticos, Não Aninhados, Aninhados
+
+* Bloco Monolítico (escopo único)
+
+#+BEGIN_CENTER
+Existe somente um bloco
+
+Visibilidade compreende todo o programa
+#+END_CENTER
+
+Vantagem
++ Fácil de implementar
+
+Desvantagens
++ Não aplicável em programas grandes
++ Dificulta o trabalho colaborativo
+Exemplos: Basic e Cobol (primeiras versões)
+
+* Blocos Não Aninhados
+
+#+BEGIN_CENTER
+Nomes locais /versus/ globais
+
+Visibilidade é local ao bloco
+#+END_CENTER
+
+Caso um vínculo não seja encontrado localmente
+- Vínculo se torna global
+Exemplo: Fortran
+
+* Blocos Aninhados
+
+#+BEGIN_CENTER
+Blocos podem ser aninhados dentro de outros
+
+Localização de vínculos recursiva, do mais local para o mais global
+#+END_CENTER
+Exemplo: Algol e Algol-likes (C, ...)
+
+#+latex: \vfill
+
+\pause Característica: variáveis podem se tornar inacessíveis
+  #+begin_src C
+  int main (int argc, char **argv){
+    int i, x = 10;
+    for (i = 0; i < 100; i++){
+       float x = 3.1415;
+       printf ("x = %f\n", x*x);
+    }
+  }
+  #+end_src
+* Dinâmico
+Vinculações determinadas pela sequência de chamadas
+
+\pause Depende do fluxo de controle
++ Procura localmente, então procura recursivamente nos
+    subprogramas chamadores, até encontrar
++ Se não encontrar, erro de execução
+\pause Exemplo
+  \small
+  #+begin_src C
+  void Big(){
+     int x;
+     void Sub1 (){
+        float x;
+     }
+     void Sub2 (){
+        x = 3;
+     }
+  }
+  #+end_src
+  
+\pause Linguagens: Logo, Emacs LISP -- Perl e Common Lisp
+* Exercício
+Indique o valor impresso considerando
++ Escopo estático
++ Escopo dinâmico
+
+[[./escopo-exercicio-codigo.c]]
+
+* Escopo /versus/ Tempo de Vida
+Tempo de Vida de uma variável
++ Período de vínculo com uma posição de memória
+Escopo de uma variável
++ A região de código onde a variável é visível
+
+#+latex: \vfill
+
+\pause Muitas vezes é a mesma coisa
+
+\pause Mas existe uma série de casos onde diferem
+
+  #+begin_src C
+int conta ()
+{
+   int meu_contador = 0;
+   meu_contador += 1;
+   return meu_contador;
+}
+#+end_src
+
