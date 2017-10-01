@@ -61,7 +61,8 @@ disciplina, podem variar em abrangência e profundidade.
 ** Exercícios
 ** Artigos para leitura
 
-- Gao, Z., Bird, C. and Barr, E.T., 2017, May. To type or not to type:
-  quantifying detectable bugs in JavaScript. In Proceedings of the
-  39th International Conference on Software Engineering
-  (pp. 758-769). IEEE Press.
+- Gao, Z., Bird, C. and Barr, E.T., 2017,
+  May. [[http://www0.cs.ucl.ac.uk/staff/Z.Gao/doc/paper/type_study.pdf][To
+  type or not to type: quantifying detectable bugs in JavaScript]]. In
+  Proceedings of the 39th International Conference on Software
+  Engineering (pp. 758-769). IEEE Press.
