@@ -1,0 +1,199 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Vinculações
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Variáveis
+Abstração para uma ou mais células de memória
++ Aumenta a *legibilidade* do código
++ *Evita* utilizar *endereçamento absoluto* dentro do programa
+\pause Uma variável é caracterizada por
++ Nome, Tipo, Tempo de vida, Escopo
++ Endereço (*l-value* para escrita), Valor (*r-value* para leitura)
+#+latex: \vfill
+\pause Vários conceitos relacionados a variáveis
++ *Vinculação* de tipo, de estocagem, ...
++ *Tempo de Vinculação*
++ *Regras de escopo*
++ Declarações
++ Checagem de tipos (tipagem forte)
++ Ambientes de referenciamento
+
+* Vinculação
+Definição de *Vinculação*
++ É uma associação entre entidades de programação
++ Entidade: um atributo, um operador, ...
+#+latex: \vfill
+\pause Que tipos de vinculação existem no seguinte código?
+  #+begin_src C
+  float j = 3.10;
+  j = j + 1.70;
+  #+end_src
+\pause Resposta
++ Do tipo da variável \texttt{j} para \texttt{float}
++ Do conjunto dos possíveis valores de \texttt{j} (ponto flutuantes)
++ Semântica do + depende dos tipos dos operandos
++ Representação interna das constantes \texttt{3.10} e \texttt{1.70}
++ Valor de \texttt{j} é associado a expressão
+* Vinculação -- Alguns Exemplos                                    :noexport:
+Nomes e elementos
+  #+begin_src C
+  var salario : Real; //nome e variável
+  funcao_x() { ... }  //nome e função
+  const PI = 3.1415;  //nome e constante
+  #+end_src
+Nomes e tipos
+  #+begin_src C
+  int numero; //nome e o tipo inteiro
+  #+end_src
+Variáveis e valores
+  #+begin_src C
+  numero = 10; //variável e valor
+  #+end_src
+* Tempo de Vinculação
+#+BEGIN_CENTER
+É o *momento* em que ocorre a vinculação
+#+END_CENTER
+#+latex: \vfill
+\pause Em tempo *de projeto* da linguagem de programação
++ Quais símbolos e nomes que poderão ser usados na linguagem
++ Estruturas de fluxo de controle, tipos primitivos, construtores de tipo
++ Operadores, exemplo
+    + $*$ vinculado à multiplicação 
+\pause Em tempo de *implementação* da linguagem
++ Intervalo de valores associado a um tipo
++ Precisão do ponto flutuante
++ Tratamento de exceções (divisão por zero, ...)
+\pause Em tempo de *programação*
++ Algoritmos, Estrutura de dados, nomes
+* Tempo de Vinculação
+Em tempo de *compilação* (/compile time/)
++ Associação de uma variável a um tipo de dados
+\pause Em tempo de *ligação* (/link time/)
++ Código objeto é relocável (endereços variáveis)
++ Módulos do programa são integrados para formar o executável
+    (vários arquivos objetos em um arquivo binário)
+\pause Em tempo de *carga* (/load time/)
++ Associação de endereços de memória às variáveis
++ Referências no código se tornam endereços absolutos
+\pause Em tempo de *execução* (/run time/)
++ Associação de um valor a uma variável
++ Associação de áreas de memória a variáveis locais
+* Tempo de Vinculação -- Discussão
+O que é melhor?
++ Vinculação precoce \\
+    (por exemplo, em tempo de compilação)
++ Vinculação tardia \\
+    (por exemplo, em tempo de execução)
+
+#+latex: \pause
+
+#+BEGIN_CENTER
+Existe uma *tensão* entre essas escolhas:
+
+Desempenho /versus/ Flexibilidade
+#+END_CENTER
+
+#+latex: \vfill
+\pause Diferença entre linguagens compiladas e interpretadas
++ Em compiladas, vinculações são feitas mais precocemente
++ Em interpretadas, somente em tempo de execução
+#+latex: \vfill
+\pause Dificuldade de compilação em algumas linguagens
++ Necessidade de alta flexibilidade
++ Exemplo: Smalltalk com checagem de tipos
+* Vinculação de Atributos para Variáveis
+Vinculação *estática*
+    + Ocorre *antes da execução* do programa
+    + Permanece inalterada ao longo da execução
+Vinculação *dinâmica*
+    + Ocorre *durante a execução* do programa
+    + É alterada ao longo da execução
+#+latex: \vfill
+* Espaço de Vinculações
+Definição \rightarrow Conjunto de vinculações visíveis
++ *Estrutura do programa* e *Regras da linguagem*
+Permitem uma única vinculação de atributo por espaço
+Exemplos
++ Programa
++ Subprogramas (funções, procedimentos)
++ Classes
++ Pacotes
++ Espaço de Nomes (/namespaces/)
+* Espaço de Vinculações (*Pacotes Java*)
+Coleção de classes e interfaces
+Oferece proteção de acesso e escopo
+Membros públicos são visíveis
+Pacotes podem ser específicos do usuário
+#+begin_src Java
+package mlp.aula11;
+#+end_src
+\pause Várias formas de usar membros públicos
++ Referência completa
+    #+begin_src Java
+    mlp.aula11.Circulo circulo = new mlp.aula11.Circulo();
+    #+end_src
++ Importando um único elemento
+    #+begin_src Java
+    import mlp.aula11.Circulo;
+    Circulo circulo = new Circulo();
+    #+end_src
++ Importando todo o pacote
+    #+begin_src Java
+    import mlp.aula11.*;
+    #+end_src
+\pause Mais geral: *Módulos* (em várias linguagens)
+* Espaço de Vinculações (*/Namespaces/ C++*)
+Cada /namespace/ define um escopo de nomes
+
+Pode ser anônimo ou identificado
+
+#+begin_src C++
+namespace {
+   int box;
+};
+#+end_src
+#+begin_src C++
+namespace primeiro {
+   int x = 5;
+   int y = 10;
+}
+#+end_src
+
+Ver exemplo =namespace.cc=
+
+#+BEGIN_SRC C :tangle namespace.cc :exports none
+#include <iostream>
+
+namespace primeiro{
+  int x = 5;
+  int y = 10;
+  const double PI = 3.14159;
+}
+namespace segundo{
+  double x = 3.14;
+  double y = 2.83;
+}
+
+int main () {
+  using namespace primeiro;
+  std::cout << x << std::endl;
+  std::cout << y << std::endl;
+  std::cout << segundo::x << std::endl;
+  std::cout << segundo::y << std::endl;
+  return 0;
+}
+#+END_SRC
+
