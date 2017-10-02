@@ -30,7 +30,7 @@ disciplina, podem variar em abrangência e profundidade.
  | Vinculações | [[./aulas/vinculos/tipos.org][Tipos]]                                               |       |
  | Vinculações | [[./aulas/vinculos/estocagem.org][Estocagem]]                                           |       |
  | Vinculações | [[./aulas/vinculos/escopo.org][Escopo]]                                              |       |
- | Vinculações | Declaração/Definição                                |       |
+ | Vinculações | [[./aulas/vinculos/declaracao.org][Declaração/Definição]]                                |       |
  | Vinculações | Ponteiros                                           |       |
  |-------------+-----------------------------------------------------+-------|
 
