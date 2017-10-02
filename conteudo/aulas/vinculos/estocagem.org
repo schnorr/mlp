@@ -83,12 +83,13 @@ Tipos
     + Implícitas
 
 * Estática
-Vinculação é feita antes do tempo de execução
+Vinculação é feita antes do tempo de execução (segmento de dados)
 
 Se mantém do início ao fim, e não muda
 #+latex: \vfill
 \pause Vantanges
-+ Eficência
++ Endereçamento direto, Alocação única
+
 + \pause Subprogramas sensíveis ao histórico
     #+begin_src C
     int conta ()
@@ -100,12 +101,63 @@ Se mantém do início ao fim, e não muda
     #+end_src
 \pause Desvantagens
 + Falta de flexibilidade (se houver somente estática) \\
-    Como implementar recursão?
++ Recursão é impossível
++ Compartilhamento
+* Estática (Exemplos)
+** Texto                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+
+Globais, Locais com =static=,
+
+atributos estáticos de classe
+
+#+latex: {\scriptsize
+#+BEGIN_SRC C :tangle exemplo1.c :exports none
+#include <stdio.h>
+int y;
+void foo ()
+{
+  static int x1;
+  int x2;
+  printf ("y = %d\n", y);
+}
+int main (int argc, char **argv)
+{
+  static int x1;
+  foo();
+  return 0;
+}
+#+END_SRC
+#+latex: }
+=gcc -c exemplo1.c=
+
+=nm exemplo1.o=
+
+Notem as duas variáveis =x1= em BSS
+
+Notem que =y= é um símbolo comum
+
+** Figura                                                            :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+
+#+ATTR_LATEX: :width \linewidth
+[[./code-data-stack-heap-8.png]]
+
 * Dinâmica na Pilha
+
+#+BEGIN_CENTER
 Vinculação é feita em tempo de execução na pilha
+
+(variáveis automáticas)
+#+END_CENTER
 
 \pause
 
+#+latex: {\tiny
 #+begin_src C
 int fib (n) {
   int n1 = n - 1;
@@ -117,14 +169,83 @@ int fib (n) {
   }
 }
 #+end_src
+#+latex: }
 
-\pause Cada instância de \texttt{fib} tem um *frame* na pilha
-+ \texttt{n1} e \texttt{n2} são alocados nela
-+ Vínculo existe durante a execução de \texttt{fib(n)} \\
-    Quando \texttt{fib} retorna, o frame é desalocado
-\pause Endereço relativo pode ser calculado estaticamente
+\pause Cada instância de =fib= tem um *frame* na pilha
++ =n1= e =n2= são alocados nela
++ Vínculo existe durante a execução de =fib(n)= \\
+  Quando retorna, o frame é desalocado, vínculo desfeito
+
+Vantagens
+- Flexibilidade (recursão já é possível)
+- Segurança
+
+Desvantagens
+- Endereçamento relativo, mas _calculado em tempo de compilação_.
+- Alocação a cada execução do bloco
+
+* Dinâmica na Pilha (Exemplos)
+** Texto                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+Parâmetros e Variáveis Locais (não =static=)
+
+#+latex: \vfill
+
+#+latex: {\scriptsize
+=gcc -g -O0 -rdynamic exemplo1.c=
+#+latex: }
+
+Observar registros de ativação
+
+#+latex: {\scriptsize
+=gdb ./a.out= # (info frame)
+#+latex: }
+
+#+latex: {\tiny
+#+BEGIN_SRC C :tangle exemplo2.c :exports none
+#include <execinfo.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+void print_trace (void) {
+  void *array[10];
+  size_t size;
+  char **strings;
+  size_t i;
+  size = backtrace (array, 10);
+  strings = backtrace_symbols (array, size);
+  printf ("%zd registros de ativacao.\n", size);
+  for (i = 0; i < size; i++)
+    printf ("%s\n", strings[i]);
+  free (strings);
+}
+
+void foo (void) {
+  print_trace ();
+}
+     
+int main (void) {
+  foo ();
+  return 0;
+}     
+#+END_SRC
+#+latex: }
+
+** Figura                                                            :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+
+#+ATTR_LATEX: :width \linewidth
+[[./code-data-stack-heap-8.png]]
+
 * Dinâmica no Monte
+
+#+BEGIN_CENTER
 Vinculação é feita em tempo de execução no monte
+#+END_CENTER
 
 #+latex: \vfill
 
@@ -147,6 +268,45 @@ _Implícita_ (linguagem)
 #+begin_src Javascript
 highs = [20, 23, 18, 15, 30];
 #+end_src
+* Dinâmica no Monte (Exemplos)
+** Texto                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+
+Referências e Ponteiros
+
+#+latex: {\scriptsize
+#+BEGIN_SRC C :tangle exemplo3.c :exports none
+#include <stdio.h>
+#include <stdlib.h>
+int main (int argc, char **argv)
+{
+  int *x = malloc(sizeof(int));
+  *x = 2;
+  free(x);
+  *x = 3;
+  return 0;
+}
+#+END_SRC
+$ =gcc -g -O0 -rdynamic exemplo3.c= \\
+$ =valgrind ./a.out=
+#+latex: }
+
+#+latex: \vspace{1cm}
+
+Quando _Implícitas_ (custo escondido)
+  + Vetores dinâmicos em Algol
+  + Linguagens de script interpretadas
+  + Linguagens Funcionais e Lógicas
+** Figura                                                            :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+
+#+ATTR_LATEX: :width \linewidth
+[[./code-data-stack-heap-8.png]]
+
 * Tempo de vida de uma variável
 ** Texto                                                             :BMCOL:
 :PROPERTIES:
@@ -165,3 +325,4 @@ highs = [20, 23, 18, 15, 30];
 
 #+ATTR_LATEX: .3\linewidth
 [[./code-data-stack-heap-8.png]]
+
