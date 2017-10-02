@@ -67,37 +67,36 @@ Segue a especificação dos exercícios:
    anterior.
 
 6. Uma pessoa desenvolveu o seguinte programa com o objetivo de
-  imprimir na tela o dia da semana por extenso. Para tanto, o programa
-  utiliza a função de sistema denominada \texttt{time()}, que retorna
-  quantos segundos se passaram entre a hora atual e 1 de janeiro de
-  1970. Tal resultado é analisado pela função \texttt{localtime()},
-  que analisa o resultado dado por \texttt{time()} e preenche uma
-  estrutura de dados (\texttt{tblock}) contendo informações sobre a
-  data e a hora local do sistema. Ao executar, a pessoa percebeu que o
-  comportamento do programa é errático, hora funcionando e hora não
-  funcionando, apresentando resultados estranhos. Analise o programa e
-  explique os motivos para tal comportamento ocorrer. Apresente
-  soluções.
+   imprimir na tela o dia da semana por extenso. Para tanto, o
+   programa utiliza a função de sistema denominada =time()=, que retorna
+   quantos segundos se passaram entre a hora atual e 01/01/1970.  Tal
+   resultado é analisado pela função =localtime()=, que analisa o
+   resultado dado por =time()= e preenche uma estrutura de dados
+   (=tblock=) contendo informações sobre a data e a hora local do
+   sistema. Ao executar, a pessoa percebeu que o comportamento do
+   programa é errático, hora funcionando e hora não funcionando,
+   apresentando resultados estranhos. Analise o programa e explique os
+   motivos para tal comportamento ocorrer. Apresente soluções.
 
-  #+BEGIN_SRC C
-  #include<stdio.h>
-  #include<conio.h>
-  #include<stdlib.h>
-  #include<string.h>
-  #include<time.h>
+   #+BEGIN_SRC C
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<time.h>
 
-  char* diaSemana(){
-    char diaExt[][4] = { "dom", "seg", "ter", "qua", "qui", "sex", "sab" } ;
-    time_t timer;
-    struct tm *tblock;
-    timer = time(NULL);
-    tblock = localtime(&timer);
-    return diaExt[tblock->tm_wday];
-  }
-  main(){
-    char* dia;
-    dia = diaSemana();
-    clrscr();
-    printf("%d %s\n", dia, dia);
-  }  
+char* diaSemana(){
+  char diaExt[][4] = { "dom", "seg", "ter", "qua", "qui", "sex", "sab" } ;
+  time_t timer;
+  struct tm *tblock;
+  timer = time(NULL);
+  tblock = localtime(&timer);
+  return diaExt[tblock->tm_wday];
+}
+main(){
+  char* dia;
+  dia = diaSemana();
+  clrscr();
+  printf("%d %s\n", dia, dia);
+}  
   #+END_SRC
