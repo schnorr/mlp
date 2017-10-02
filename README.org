@@ -76,30 +76,24 @@ aprendizado da disciplina.
 
 Todos os grupos devem ter _três_ participantes.
 
-|------------------+---------+-----------+--------------|
-| Nome do Grupo    | Membros | Linguagem | Problema     |
-|------------------+---------+-----------+--------------|
-| Confia na Call   |       3 | Python    | TowerDefense |
-| root             |       3 | Python    | BatalhaNaval |
-| GrupoHP          |       3 | C++17     | TowerDefense |
-| WubbaLubbaDubDub |       3 | Java8     | BatalhaNaval |
-| ClubedasWynx     |       3 | C#        | BatalhaNaval |
-| Mean Girls       |       3 | C++17     | BatalhaNaval |
-| Caiu a barca     |       3 | F#        | BatalhaNaval |
-| Batalha Barcal   |       3 | Java8     | BatalhaNaval |
-| SchnorR doidão   |       3 | R         | Galáxias     |
-| Fullbar          |       3 | C#        | TowerDefense |
-| Al2O3:Cr         |       3 | Ruby      | BatalhaNaval |
-|------------------+---------+-----------+--------------|
-
-Grupos ainda indefinidos, com apenas dois membros.
-
 |---------------------------+---------+-----------+--------------|
 | Nome do Grupo             | Membros | Linguagem | Problema     |
 |---------------------------+---------+-----------+--------------|
+| Confia na Call            |       3 | Python    | TowerDefense |
+| root                      |       3 | Python    | BatalhaNaval |
+| GrupoHP                   |       3 | C++17     | TowerDefense |
+| WubbaLubbaDubDub          |       3 | Java8     | BatalhaNaval |
+| ClubedasWynx              |       3 | C#        | BatalhaNaval |
+| Mean Girls                |       3 | C++17     | BatalhaNaval |
+| Caiu a barca              |       3 | F#        | BatalhaNaval |
+| Batalha Barcal            |       3 | Java8     | BatalhaNaval |
+| SchnorR doidão            |       3 | R         | Galáxias     |
+| Fullbar                   |       3 | C#        | TowerDefense |
+| Al2O3:Cr                  |       3 | Ruby      | BatalhaNaval |
+|---------------------------+---------+-----------+--------------|
 | Guerreiros de Anúbis      |       2 | Groovy    | BatalhaNaval |
 | Os Gatos de Schnorrdingër |       2 | Swift     | TowerDefense |
-| Os Aforistas Desaforados  |       2 | OCAML     |              |
+| Os Aforistas Desaforados  |       2 | OCAML     | Escopo       |
 |---------------------------+---------+-----------+--------------|
 
 ** Bibliografia
