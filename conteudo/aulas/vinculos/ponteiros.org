@@ -1,0 +1,196 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Ponteiros e Referências
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Ponteiros
+
+#+BEGIN_CENTER
+Gerenciamento de endereços de memória
+
+(são variáveis como quaisquer outras)
+#+END_CENTER
+
+
+#+BEGIN_CENTER
+Vinculações de estocagem dinâmicas
+#+END_CENTER
+
+#+latex: \pause\vfill
+
+#+latex: {\small
+
+[[https://books.google.com.br/books?id=D55aAAAAcAAJ&q=ins%C3%A9parable&redir_esc=y#v=snippet&q=ins%C3%A9parable&f=false][Coleção de decretos emitidos pela convenção national (França, 8 Maio 1793)]]
+
+#+latex: \bigskip
+
+Les Représentans du peuple se rendront à leur destination, investis de
+la plus haute confiance et de pouvoirs illimités. Ils vont déployer un
+grand caractère. *Ils doivent envisager qu’une grande responsabilité
+est la suite inséparable d’un grand pouvoir*. Ce sera à leur énergie,
+à leur courage, et sur-tout à leur prudence, qu’ils devront leur
+succès et leur gloire.
+
+#+latex: }
+
+* Problemas com Ponteiros
+
+Ponteiros pendentes ou suspensos
+
+Desalocação dupla
+
+Vazamento de memória
+
+Apelidamento (/aliasing/)
+
+* Pendentes/Suspensos
+
+Apontam para variáveis já desalocadas do monte
+
+Consequências
++ Endereço inválido
++ Endereço alocado para outra variável, de outro tipo
+
+Exemplo (C++)
+#+begin_src C++
+int *a = new int;
+int *b = a;
+delete a;
+*b = 2;
+#+end_src
+
+Exemplo (Objective-C)
+#+begin_src Objective-C
+PajeSimulator *simulador = [[PajeSimulator alloc] init];
+PajeSimulator *aux = simulador;
+[simulador release];
+[aux simula];
+#+end_src
+* Desalocação Múltipla
+
+Múltiplas desalocações do mesmo endereço de memória
+
+Corrompe as estruturas de dados que gerenciam o monte
+
+Exemplo (C++)
+#+begin_src C++
+int *a = new int;
+delete a;
+delete a;
+#+end_src
+
+Exemplo (Objective-C)
+#+begin_src Objective-C
+PajeSimulator *simulador = [[PajeSimulator alloc] init];
+PajeSimulator *aux = simulador;
+[simulador release];
+[aux release]; //ou [simulador release];
+#+end_src
+* Vazamento de Memória
+
+Endereços de memória se tornam inacessíveis
+
+Exemplo (C++)
+#+begin_src C++
+int *a = new int;
+int *a = NULL;
+#+end_src
+
+Exemplo (Objective-C)
+#+begin_src Objective-C
+PajeSimulator *simulador = [[PajeSimulator alloc] init];
+simulador = NULL;
+#+end_src
+
+* Apelidamento (/aliasing/)
+Dois ou mais ponteiros apontam para o mesmo endereço
+
+#+begin_src C++
+int *a = new int;
+int *b = a;
+#+end_src
+
+Consequências possíveis
++ Mudanças em um afetam o outro
++ Imprevisibilidade
+No entanto
++ Flexibilidade
+* Referências
+Java
++ Não são exatamente endereços de memória (virtual)
++ Funcionam como /handles/ ou índices
+    + Só apontam para objetos
+    + Todas as variáveis são referências (menos primitivas)
+#+latex: \vfill
+\pause C++
++ Parecidas com ponteiros, mas não podem ser alteradas
++ Devem ser inicializadas na declaração, não mudam mais
++ Podem apontar para qualquer coisa
++ Possuem *desreferenciamento implícito*
+#+latex: \vfill
+\pause Objective-C
++ Todas as variáveis são referências (menos primitivas)
++ Tipagem dinâmica
++ Variável ``genérica''
+    #+begin_src Objective-C
+    id simulador = [[PajeSimulator alloc] init];
+    simulador = [NSString stringWithCString: @"teste"];
+    #+end_src
+* Ponteiros /versus/ Referências
+Ponteiros
+#+begin_src C++
+void swap (int *x, int *y){
+  int temp = *x;
+  *x = *y;
+  *y = temp;
+}
+#+end_src
+
+Referências
+#+begin_src C++
+void swap (int &x, int &y){
+  int temp = x;
+  x = y;
+  y = temp;
+}
+#+end_src
+
+[[https://stackoverflow.com/questions/57483/what-are-the-differences-between-a-pointer-variable-and-a-reference-variable-in][Uma boa resposta Stackoverflow ilustrando as diferença, em C++.]]
+
+* Aritmética de Ponteiros
+
+Operações matemáticas com ponteiros
+
+Considera o *tamanho do tipo* nas operações
+
+#+latex: {\small
+#+BEGIN_SRC C :tangle ponteiro.c :exports none
+#include<stdio.h>
+#include<stdlib.h>
+int main ()
+{
+   int vetor[5];
+   int *p = vetor;
+   int i;
+   for (i = 0; i < 5; i++){
+     p++;
+   }
+   p--;
+   for (i = 4; i >= 0; i--){
+     p--;
+   }
+}
+#+END_SRC
+#+latex: }
