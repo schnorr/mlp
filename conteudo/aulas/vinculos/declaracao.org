@@ -1,0 +1,76 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Declaração e Definição
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Declarações e Definições
+Qual a diferença entre as duas?
+\pause Vejamos o \texttt{exemplo4.c}
+  #+BEGIN_SRC C :tangle exemplo4.c :exports none
+#include <stdio.h>
+
+int main (int argc, char **argv)
+{
+  foo();
+  return 0;
+}
+
+void foo ()
+{
+}
+
+
+  #+END_SRC
+\pause Declaração
++ Apresenta um nome e indica o escopo de uma entidade
++ Omite detalhes de implementação
+\pause Definição
++ Apresenta a implementação
+* Declarações \small Exemplos
+Constantes não definidas (Java)
+  #+begin_src Java
+  final int x;
+  #+end_src
+Variáveis externas (C)
+  #+begin_src C
+  extern int x;
+  #+end_src
+Referências (C++)
+  #+begin_src C++
+  int x = 1; int &y = x;
+  #+end_src
+Tipos definidos pelo usuário (C)
+  #+begin_src C
+  typedef struct data aniversario;
+  #+end_src
+Cabeçalhos de funções (C e Objective-C)
+  #+begin_src C
+  int incremento (int);
+  #+end_src
+  #+begin_src Objective-C
+  - (void) pajeStartTrace: (PajeEvent *) event;
+  #+end_src
+* Definições \small Exemplos
+Definições compostas recursivas
++ Utilizam as próprias vinculações que produzem
+Exemplos
++ Funções recursivas (como em R, ML e Prolog)
++ Tipos recursivos
+  #+begin_src C
+  struct lista {
+     int elemento;
+     struct lista *proximo;
+  };
+  #+end_src
