@@ -120,7 +120,7 @@ Vinculação *estática*
     + Permanece inalterada ao longo da execução
 Vinculação *dinâmica*
     + Ocorre *durante a execução* do programa
-    + É alterada ao longo da execução
+    + Pode ser alterada ao longo da execução
 #+latex: \vfill
 * Espaço de Vinculações
 Definição \rightarrow Conjunto de vinculações visíveis
