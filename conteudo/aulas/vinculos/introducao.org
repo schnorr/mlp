@@ -103,7 +103,9 @@ O que é melhor?
 #+BEGIN_CENTER
 Existe uma *tensão* entre essas escolhas:
 
-Desempenho /versus/ Flexibilidade
+Desempenho (e Segurança) /versus/ Flexibilidade
+
+[[http://ttendency.cs.ucl.ac.uk/projects/type_study/documents/type_study.pdf][/To Type or Not to Type/]]
 #+END_CENTER
 
 #+latex: \vfill
