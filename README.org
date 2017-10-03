@@ -72,9 +72,7 @@ aprendizado da disciplina.
   - [[./projeto/README.pdf][Em PDF]]
 - [[https://github.com/schnorr/mlpreport][Modelo Latex para o Relatório]]
 
-*** Definição de grupos
-
-Todos os grupos devem ter _três_ participantes.
+*** Definição final de grupos
 
 |---------------------------+---------+-----------+--------------|
 | Nome do Grupo             | Membros | Linguagem | Problema     |
