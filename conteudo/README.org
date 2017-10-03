@@ -66,3 +66,4 @@ disciplina, podem variar em abrangência e profundidade.
   type or not to type: quantifying detectable bugs in JavaScript]]. In
   Proceedings of the 39th International Conference on Software
   Engineering (pp. 758-769). IEEE Press.
+  - Ver sobre ferramentas do tipo [[https://en.wikipedia.org/wiki/Lint_(software)][lint]].
