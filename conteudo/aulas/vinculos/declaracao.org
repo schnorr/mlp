@@ -16,8 +16,7 @@
 #+LATEX_HEADER: \input{../org-babel.tex}
 
 * Declarações e Definições
-Qual a diferença entre as duas?
-\pause Vejamos o \texttt{exemplo4.c}
+Qual a diferença entre as duas? \pause
   #+BEGIN_SRC C :tangle exemplo4.c :exports none
 #include <stdio.h>
 
