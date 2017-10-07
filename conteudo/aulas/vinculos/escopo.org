@@ -151,7 +151,7 @@ Escopo de uma variável
   #+begin_src C
 int conta ()
 {
-   int meu_contador = 0;
+   static  int meu_contador = 0;
    meu_contador += 1;
    return meu_contador;
 }
