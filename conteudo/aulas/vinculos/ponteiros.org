@@ -175,7 +175,7 @@ Operações matemáticas com ponteiros
 
 Considera o *tamanho do tipo* nas operações
 
-#+latex: {\small
+
 #+BEGIN_SRC C :tangle ponteiro.c :exports none
 #include<stdio.h>
 #include<stdlib.h>
@@ -186,11 +186,16 @@ int main ()
    int i;
    for (i = 0; i < 5; i++){
      p++;
+     printf("%p\n", p);
    }
+   printf("Terminei o primeiro for\n");
    p--;
    for (i = 4; i >= 0; i--){
      p--;
+     printf("%p\n", p);
    }
 }
 #+END_SRC
-#+latex: }
+
+#+RESULTS:
+
