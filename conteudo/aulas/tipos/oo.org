@@ -1,0 +1,197 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Introdução à OO
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+
+* Sumário de tipos
+Tipos compostos podem não ser suficientes
++ \pause A linguagem permite operações sobre eles?
++ \pause A linguagem faz validação e testes sobre eles?
++ \pause Podem representar qualquer elemento do mundo real?
+#+latex: \vfill
+\pause  Alternativa
++ Encapsulamento de dados e suas operações
++ \pause Permite definir *Tipos Abstratos de Dados*
++ \pause Paradigma Orientado a Objetos
+* Tipos Abstratos de Dados
+Compreendem
++ Tipo de dado
++ Conjunto de operações sobre o tipo
+#+latex: \vfill
+Escondem os mecanismos internos
+Definidos pelo usuário
+Elementos de primeira ordem
+#+latex: \vfill
+Exemplo?
++ \pause Classe
+* Classe
+Define como um objeto vai parecer e se comportar
+*Estado* é representado por atributos (variáveis)
+*Operações* são representadas por métodos (funções)
+#+latex: \vfill
+Parecido com uma \texttt{struct} em C
++ Mas com os *benefícios da orientação a objeto*
+  #+begin_src C
+  struct pessoa {
+    char nome[100];
+    int idade;
+    float peso;
+    void setPeso (struct pessoa *p, float npeso);
+    void setIdade (struct pessoa *p, int nidade);
+    float getPeso (struct pessoa *p);
+    int getIdade (struct pessoa *p);
+  };
+  #+end_src
+* Objeto
+Instância de uma classe
+Uma cópia construída a partir da classe
+* Exemplo de classe em C++
+\small
+#+begin_src C++
+class Pessoa {
+   std::string nome;
+   int idade;
+   float peso;
+
+   Pessoa ();
+   ~Pessoa ();
+
+   std::string getNome ();
+   int getIdade ();
+   float getPeso ();
+
+   void setNome (std::string nnome);
+   void setIdade (int nidade);
+   void setPeso (float npeso);
+};
+#+end_src
+* Exemplo de classe em Objective-C
+\small
+#+begin_src Objective-C
+@interface Pessoa : NSObject
+{
+   NSString *nome;
+   int idade;
+   float peso;
+}
+- (id) init;
+- (void) dealloc;
+
+- (NSString*) getNome;
+- (int) getIdade;
+- (float) getPeso;
+
+- (void) setNome: (NSString*) nnome;
+- (void) setIdade: (int) nidade;
+- (void) setPeso: (float) npeso;
+@end
+#+end_src
+* Encapsulamento
+Interface visível e consistente
+Detalhes de implementação escondidos
+#+latex: \vfill
+\pause Contraponto com tipos primitivos
+* Especificadores de acesso
+Controle de acesso aos atributos
+Níveis de visibilidade
++ Públicos -- por todo mundo
++ Protegidos -- na classe e subclasses
++ Privados -- na classe
+* Especificadores de acesso -- Exemplo 1
+Utilizando \texttt{struct} em C++
+  \small
+  #+begin_src C++
+  struct Pessoa {
+     std::string nome;
+     int idade;
+     float peso;
+     Pessoa();
+  };
+  #+end_src
+* Especificadores de acesso -- Exemplo 2
+Utilizando \texttt{class} em C++
+  \small
+  #+begin_src C++
+  class Pessoa {
+    public:
+     std::string nome;
+    protected:
+     int idade;
+    private:
+     float peso;
+    public:
+     Pessoa();
+     ~Pessoa();
+  };
+  #+end_src
+* Especificadores de acesso -- Exemplo 3
+Objective-C
+  \small
+  #+begin_src Objective-C
+  @interface Pessoa : NSObject
+  {
+     @public
+     NSString *nome;
+
+     @private
+     int idade;
+     float peso;
+
+     @protected
+     NSString *sobrenome;
+  }
+  - (id) init;
+  - (void) dealloc;
+  ...
+  @end
+  #+end_src
+* Métodos Especiais
+*Construtor*
++ Faz a inicialização da instância da classe
+\pause Java, C++
++ Sempre tem o mesmo nome da classe
++ Sempre é chamado quando um objeto é instanciado
+\pause Objective-C
++ Existem diferentes formas de funcionamento
+#+latex: \vfill
+\pause *Destrutor*
++ Chamado quando o objeto é destruído (liberado)
+\pause C++
++ Nome da classe antecedido por ~
+\pause Objective-C
++ Método \texttt{dealoc} é chamado pelo ambiente de execução 
+* Herança
+Definir uma classe a partir de outra (classe pai)
+A classe filha herda todos os atributos e métodos do pai
+#+latex: \vfill
+Exemplo em Objective-C
+  \small
+  #+begin_src Objective-C
+  @interface VeiculoTerrestre : Veiculo
+  {
+     float velocidadeMaxima;
+     ...
+  }
+  ...
+  @end
+  #+end_src
+Exemplo em Smalltalk
+  #+begin_src Smalltal
+  Veiculo subclass: #VeiculoTerrestre
+       instanceVariableNames: 'velocidadeMaxima ' 
+       category: 'OnSmalltalk'
+  #+end_src
+
