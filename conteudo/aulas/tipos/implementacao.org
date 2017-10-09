@@ -1,0 +1,272 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Implementação de Tipos
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Implementação de Tipos
+Tipos Primitivos
++ Geralmente suportados pelo hardware
++ Operações e valores possíveis predefinidos
++ Elementos de primeira ordem
+    + Inteiro
+    + Ponto Flutuante
+    + Caractere
+    + ...
+\pause Tipos definidos pelo usuário
++ Manipular estruturas não suportadas pela linguagem
++ Tornar o programa mais legível
++ Mais propenso a detecção de erros
++ \pause Projeto da linguagem deve prever ``construtores de tipo''
+    + Restrição
+    + Enumeração
+    + Composição (Tipos Estruturados)
+* Tipo Inteiro
+Java
+  #+begin_src Java
+  byte, short, int, long
+  #+end_src
+C, C++, Objective-C
+  #+begin_src C
+  int, long, long long
+  unsigned int, unsigned long, unsigned long long
+  #+end_src
+Ada
+  #+begin_src Ada
+  Integer, Long_Integer, Long_Long_Integer
+  Modular Types (mod) : Last + 1 == 0 == First
+  #+end_src
+O caso do tipo \texttt{long} do Python
+  #+begin_src Python
+  243487532863295237631293218657236152427355863621263L
+  #+end_src
+#+latex: \vfill
+\pause Tamanho ocupado por um inteiro? \\
+  Vejamos os códigos em Ada e C: \texttt{size.adb} e \texttt{size.c}
+
+\pause Como implementar o sinal (negativo ou não)?
++ Complemento para dois
+
+* Tipo Ponto Flutuante
+Aproximação para números reais
+
+Representação binária de tamanho finito
+  #+begin_src C
+  float = 4 bytes, double = 8 bytes /* em C */
+  #+end_src
+Representação mais encontrada: mantissa e expoente
+
+Quantos bits para mantissa e expoente?
++ \pause IEEE Floting-Point Standard 754
+    + float: 1 bit + 8 bits + 23 bits
+    + double: 1 bit + 11 bits + 52 bits
+#+latex: \vfill
+\pause Cálculo/Análise numérica
++ Aplicações de simulação física
++ Precisa de mais precisão ainda
+
+* Tipo Caractere
+Quanto espaço ocupa cada caractere?
+
+Qual a codificação utilizada?
++ ASCII (no máximo 128 caracteres)
++ ISO 8859-1 (no máximo 256 caracteres)
++ Unicode \rightarrow UTF-8
+#+latex: \vfill
+
+Maioria das linguagens tem um tipo caractere
+  #+begin_src C
+  char c;
+  sizeof(char) = 1 byte
+  #+end_src
+
+* Tipo Cadeia de Caracteres
+Como definir o tamanho de uma cadeia?
+
+\pause Abordagem *estática*, tamanho não muda
++ Python, Java (class String), C++, Ruby, C#
+
+\pause Abordagem *dinâmica limitada*
++ C
+    #+begin_src C
+    char str[10];
+    #+end_src
+
+\pause Abordagem *dinâmica*
++ JavaScript, Perl
+
+\pause Ada95 suporta os três tipos
+  #+begin_src Ada
+  Standard.String
+  Ada.Strings.Bounded.Bounded_String
+  Ada.Strings.Unbounded.Unbounded_String
+  #+end_src
+#+latex: \vfill
+
+\pause Como implementar essas diferentes abordagens?
++ Estática e Dinâmica Limitada são simples (uma alocação)
++ Dinâmica (Listas encadeadas, Vetor de ponteiros, Células adjacentes de memória)
+
+* Tipos de usuário por restrição
+Subsequência de um tipo existente
+
+Exemplos em Pascal
+  #+begin_src PASCAL
+  type maiusculas = 'A'..'Z';
+  type dias = 1..31;
+  #+end_src
+Ada
+  #+begin_src ADA
+  type Dias is (Seg, Ter, Qua, Qui, Sex, Sab, Dom);
+  subtype DiasUteis is Dias range Seg..Sex;
+  subtype Indice is Integer range 1..100;
+  #+end_src
+* Tipos de usuário por enumeração 1
+Valores desejados são explicitados
+
+Exemplos em C/C++/Objective-C
++ Associação implícita
+    #+begin_src C
+    enum Cores {Vermelho, Verde, Azul};
+    #+end_src
++ \pause Associação explícita
+    #+begin_src C
+    enum Romanos {I=1, V=5, X=10, L=50,
+                  C=100, D=500, M=1000};
+    enum Cartas {dois=2, tres, quatro, cinco, seis,
+                 sete, oito, nove, dez, valete,
+                 dama, reis, as};
+    #+end_src
+#+latex: \vfill
+\pause Implementação com inteiros em C/C++/Objective-C
+
+\pause Problemas
+  #+begin_src C
+  Cores minhaCor = Azul;
+  minhaCor++; /* qual cor agora? */
+  minhaCor = 4; /* C++ dá erro */
+  #+end_src
+* Tipos de usuário por enumeração 2
+Ada permite literais sobrecarregados
+  #+begin_src Ada
+  type Primary_Color is (Red, Green, Blue);
+  type Traffic_Light is (Red, Yellow, Green);
+  #+end_src
+
+\pause Java 5.0 (suporte a partir de 2004)
++ Tipos por enumeração são subclasses de \texttt{enum}
+    #+begin_src Java
+    public Enum Dia { Seg, Ter, Qua, Qui, Sex, Sab, Dom };
+    #+end_src
++ \pause Campos são instâncias
+
+\pause C#
+
++ Nunca são transformados para inteiros
++ Restrições que permitem boa detecção de erros
+#+latex: \vfill
+\pause Nenhuma das linguagens de script recentes suporta
++ Python, PHP, JavaScript, Perl, Ruby
+* Tipos de usuários por composição
+Restrição e enumeração nem sempre são suficientes
+
+Tipos Compostos
++ Define um novo tipo de dado dito *estruturado*
++ Utiliza tipos primitivos
++ Pode ser *homogêneo* ou *heterogêneo*
+
+#+latex: \vfill
+
+Homogêneo -- todos os membros do mesmo tipo
+
+Heterogêneo -- membros de tipos diferentes
+
+#+latex: \vfill
+\pause Métodos de composição
++ Produto cartesiano
++ Mapeamento finito
++ Sequência
++ União
++ Conjunto potência
+* Método de Composição /versus/ Tipos
+| Método             | Formato     | Tipo Resultante             |
+|--------------------+-------------+-----------------------------|
+| Produto cartesiano | Heterogêneo | registro, estrutura, classe |
+| Mapeamento finito  | Homogêneo   | arranjo, mapa, vetor        |
+| Sequência          |             | cadeia, arquivo             |
+| União discriminada | Heterogêneo | variant, registro, união    |
+| Conjunto potência  |             | conjunto                    |
+* Estruturas -- \texttt{struct}
+
+Permite fazer uma união de diferentes tipos
++ Cada componente é chamado de campo
+
+#+Latex: {\scriptsize
+  #+begin_src C
+  struct element {
+    char name[2];
+    int atomic_number;
+    double atomic_weight;
+    _Booleano metallic;
+  };
+  #+end_src
+#+latex: }
+\pause Pode-se aninhar definições
+
+#+Latex: {\scriptsize
+  #+begin_src C
+  struct {
+     char name[30];
+     struct {
+        char name[2];
+        int atomic_number;
+        double atomic_weight;
+        _Booleano metallic;
+     } element_yielded;
+  };
+  #+end_src
+#+latex: }
+#+latex: \vfill
+
+\pause Qual é o tamanho em memória da primeira estrutura?
++ Vamos ver codigo \texttt{struct.c}
+* Estruturas -- \texttt{union}
+
+Permite economizar ocupação em memória
+  #+begin_src C
+  union {
+     int i;
+     double d;
+     _Booleano b;
+  };
+  #+end_src
+\pause Duas utilizações possíveis
+
++ Programas de sistema (mesma região de memória deve ser tratada
+    diferentemente em momentos distintos)
+
++ \pause Representar campos alternativos em uma estrutura
+    \scriptsize
+    #+begin_src C
+    struct {
+       char *lexema;
+       int tipo_token;
+       union {
+          char *identificador;
+          double flutuante;
+          int inteiro;
+          char *cadeia_literal;
+       };
+    };
+    #+end_src
