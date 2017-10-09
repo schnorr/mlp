@@ -32,6 +32,10 @@ disciplina, podem variar em abrangência e profundidade.
  | Vinculações | [[./aulas/vinculos/escopo.org][Escopo]]                                              | [[../catps/][#08]]   |
  | Vinculações | [[./aulas/vinculos/declaracao.org][Declaração/Definição]]                                |       |
  | Vinculações | [[./aulas/vinculos/ponteiros.org][Ponteiros]]                                           |       |
+ | Tipos       | [[./aulas/tipos/introducao.org][Introdução]]                                          |       |
+ | Tipos       | [[./aulas/tipos/sistema.org][Sistema de Tipos]]                                    |       |
+ | Tipos       | [[./aulas/tipos/implementacao.org][Implementação]]                                       |       |
+ | Tipos       | [[./aulas/tipos/oo.org][Orientação a Objetos]]                                |       |
  |-------------+-----------------------------------------------------+-------|
 
 *** Planejado
