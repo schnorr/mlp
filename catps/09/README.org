@@ -73,7 +73,7 @@
      foo2(str, x, y);
    }
    foo2(char *str, int y, int x) {
-     print str;
+     print str; // Esta é a linha 8
    }
    main(){
      int p = 2;
@@ -100,7 +100,7 @@
    void diaSemanaExtenso(){
      char diasExt[][4] = { "dom", "seg", "ter", "qua",
        "qui", "sex", "sab" } ;
-     strcpy(diaExt, diasExt[diaSemana()]);
+     strcpy(diaExt, diasExt[diaSemana()]); // Esta é a linha 12
    }
    int main(){
      diaSemanaExtenso();
