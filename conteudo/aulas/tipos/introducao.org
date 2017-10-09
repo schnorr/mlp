@@ -78,6 +78,7 @@ Utilização mais simples, clara $\leadsto$ menos erros
 + Definir métodos de manipulação de dados
 * Vantagens (e desvantagens) de se ter tipos
 Facilita o entendimento de um algoritmo
+
 \pause  Possibilita detectar vários erros
   #+begin_src C
   1 + "Aurora"
