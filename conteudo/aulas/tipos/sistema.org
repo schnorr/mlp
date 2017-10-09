@@ -1,0 +1,97 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Sistema de Tipos
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Sistema de Tipos
+Hardware
++ Inexistência de semântica de tipos para memória
++ Linguagens Assembly refletem esta escolha
+
+\pause Linguagens de alto nível quase sempre associam tipos
++ Informação de contexto de variáveis
++ Checagem de erros
+#+latex: \vfill
+\pause *Sistema de Tipos*
++ Mecanismo para definir tipos e associar às construções
+    + Tipo de uma variável
+    + Tipo de uma função
+    + Tipo de um literal
++ \pause Conjunto de regras sobre os tipos da linguagem
+    + Equivalência
+    + Compatibilidade
+    + Inferência
+#+latex: \vfill
+\pause Discussão: Um sistema de tipos é essencial no projeto?
+  \small \url{www.dlugosz.com/Perl6/web/typesystem-summary.html}
+* Domínio de valores
+A um determinado tipo, temos os valores possíveis
+
+\pause Domínio
++ Representa um conjunto (infinito e contínuo) de valores \\
+    Exemplos: números inteiros, reais, complexos
+#+latex: \vfill
+\pause Problema: computador tem elementos discretos
++ Várias formas de discretizar um domínio contínuo
++ Alternativas
+    + Padronizar a representação
+    + Usar descritores de dados
++ Representação finita
+* Tipos de Dados -- Definição
+Possuem representação finita
+
+\pause Dependem da forma de implementação
++ Caracteres: ASCII, UTF8, ISO-8859?
++ Inteiros: quantos bytes?
++ Reais: quantos bytes para mantissa e expoente?
+
+\pause Associados a um conjunto de operações válidas
+* Tipos de Dados /versus/ Domínio de valores
+Problema de contínuo /versus/ discreto
+
+Adotar domínios simplificados
+
+#+latex: \vfill
+
+\pause Tipos Primitivos
+  #+begin_src C
+  float /* domínio discretizado dos reais */
+  int /* domínio dos inteiros */
+  #+end_src
+
+\pause Tipos Definidos pelo usuário
++ Enumeração -- novo domínio, valores específicos
+    #+begin_src C
+    enum Estacao { Primavera, Verao, Outono, Inverno };
+    #+end_src
++ \pause Restrição -- especificam um subdomínio
+    #+begin_src Python
+    mandato = 2000..2005
+    #+end_src
+* Como descrever um tipo?
+
+Definir seu *nome* -- \texttt{bool}
+
+Definir seu *domínio de valores* -- lógicos
+
+Definir *operações válidas*
++ Aritméticas -- não há para bool
++ Conjuntos -- negação, conjunção, disjunção
++ Relacionais -- igualdade, ordem
+
+Definir *forma de representação* -- \texttt{true}, \texttt{false}
+
+Definir *espaço* ocupado -- 1 bit ou 1 byte?
+
