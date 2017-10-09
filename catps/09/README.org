@@ -1,0 +1,149 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #09 (Vinculações e Tipos de Dados)
+
+1. Levando em conta o trecho de código seguinte, em linguagem C,
+   indique o conteúdo do monte, da pilha de ativação e do segmento de
+   dados deste programa quando a execução atingir a
+   linha 12. Restrinja sua resposta às variáveis.
+
+   #+BEGIN_SRC C
+   int diaSemana(){
+     time_t timer;
+     struct tm *tblock;
+     timer = time(NULL);
+     tblock = localtime(&timer);
+     return tblock->tm_wday;
+   }
+   char* diaSemanaExtenso(){
+     char diaExt[][4] = { "dom", "seg", "ter", "qua",
+       "qui", "sex", "sab" } ;
+     char* tmp = (char*)malloc(4);
+     strcpy(tmp, diaExt[diaSemana()]); // Esta é a linha 12
+     return tmp;
+   }
+   int main(){
+     char* dia = diaSemanaExtenso();
+     printf("Encereco: %d | valor: %s\n", dia, dia);
+     free(dia);
+     return 0;
+   }   
+   #+END_SRC
+
+2. Levando em conta o trecho de código seguinte, também em linguagem
+   C, indique o conteúdo do monte, da pilha de ativação e do segmento
+   de dados deste programa quando a execução atingir a linha 11.
+   Restrinja sua resposta às variáveis.
+
+   #+BEGIN_SRC C
+   int diaSemana(){
+     time_t timer;
+     struct tm *tblock;
+     timer = time(NULL);
+     tblock = localtime(&timer);
+     return tblock->tm_wday;
+   }
+   void diaSemanaExtenso(char* dia){
+     char diaExt[][4] = { "dom", "seg", "ter", "qua",
+       "qui", "sex", "sab" } ;
+     strcpy(dia, diaExt[diaSemana()]); // Está é a linha 11
+     return diaExt;
+   }
+   int main(){
+     char dia[4];
+     diaSemanaExtenso(dia);
+     printf("Encereco: %d | valor: %s\n", dia, dia);
+     return 0;
+   }   
+   #+end_src
+
+3. Levando em conta o pseudocódigo seguinte, descreva o conteúdo da
+   pilha de ativação quando a execução do programa atingir a
+   linha 8. Sua resposta deve conter as funções empilhadas, seus
+   argumentos (e valores) e as variáveis locais (e valores). Indique o
+   tamanho das variáveis para mostrar a ocupação da pilha.
+
+   #+BEGIN_SRC C
+   int q = 0;
+   foo1(char *str, int z, int w) {
+     int x = z;
+     float y = w;
+     foo2(str, x, y);
+   }
+   foo2(char *str, int y, int x) {
+     print str;
+   }
+   main(){
+     int p = 2;
+     foo1("OK", p, q);
+   }   
+   #+end_src
+
+4. Levando em conta o trecho de código seguinte, em linguagem C,
+   indique o conteúdo do monte, da pilha de ativação e do segmento de
+   dados deste programa quando a execução atingir a linha 12.  Sua
+   resposta deve conter as funções empilhadas, seus argumentos (e
+   valores) e as variáveis locais (e valores). Indique o tamanho das
+   variáveis para mostrar a ocupação da pilha.
+
+   #+BEGIN_SRC C
+   char diaExt[4];
+   int diaSemana(){
+     time_t timer;
+     struct tm *tblock;
+     timer = time(NULL);
+     tblock = localtime(&timer);
+     return tblock->tm_wday;
+   }
+   void diaSemanaExtenso(){
+     char diasExt[][4] = { "dom", "seg", "ter", "qua",
+       "qui", "sex", "sab" } ;
+     strcpy(diaExt, diasExt[diaSemana()]);
+   }
+   int main(){
+     diaSemanaExtenso();
+     printf("Encereco: %d | valor: %s\n", dia, dia);
+     return 0;
+   }
+   #+END_SRC
+
+5. O que é um Sistema de Tipos? Ele é essencial no projeto de uma LP?
+
+6. O tipo =long= do Python tem uma particularidade. Qual é?  Qual a
+   relação desta particularidade com a linguagem de programação
+   Prolog?
+
+7. A construção =union= não é mais tão utilizada. Por quê?
+
+8. Indique o espaço ocupado em memória (em bytes):
+
+   #+BEGIN_SRC C
+   union {
+     int c;
+     double d;
+     char str[100];
+   };   
+   #+END_SRC
+
+9. Qual o tamanho em bytes das seguintes estruturas?
+
+   #+BEGIN_SRC C
+   struct element {
+     char name[5];
+     char sobre[3];
+     int atomic_number;
+     double atomic_weight;
+     char c;
+   };
+
+   struct chave {
+     char name[9];
+     struct {
+       char c;
+       char k;
+     } element_yielded;
+     int x;
+   };   
+   #+END_SRC
