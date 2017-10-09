@@ -1,0 +1,110 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Tipos
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Contextualização
+Principais questões no projeto de uma linguagem
+#+latex: \vfill
+\pause *Tipos de dados*
++ Sistemas de tipo
++ Checagem de tipo
++ Equivalência, Compatibilidade, Inferência de tipos
+\pause Controle de Fluxo
++ Avaliação de expressões (aritméticas, atribuição)
++ Fluxo estruturado e não-estruturado
+#+latex: \vfill
+\pause Abstração de controle -- subprogramas
++ Registros de ativação
++ Modos de passagem de parâmetros
+\pause Abstração de dados -- orientação a objeto
++ Encapsulamento e herança
++ Composição e polimorfismo
+#+latex: \vfill
+\pause Concorrência
+
+* Arquitetura de von Neumann
+Processamento de dados
++ Manipulação em dados
++ Mudanças de estado
+\pause Computador IAS (1952)
++ Um dos primeiros a misturar código e dados em memória
++ Ausência de clock para regular o tempo das instruções
++ Tempo da adição: 62 ${\mu}s$ -- multiplicação: 713 ${\mu}s$
+
+#+ATTR_LATEX: :width .5\linewidth
+[[./img/von-neumann.png]]
+
+* Importância das variáveis
+Reservar, acessar e manipular regiões de memória
+
+Utilização mais simples, clara $\leadsto$ menos erros
+#+latex: \vfill
+\pause Problemas
++ Dados são diferentes
+    #+begin_src C
+    1
+    1.0
+    "Aurora"
+    #+end_src
++ Tamanho dos dados são diferentes
++ Operações válidas e inválidas
+    #+begin_src C
+    1 + 1 = 2
+    1 + "Aurora" = ?
+    #+end_src
+\pause Solução: *Tipos de dados* de variáveis
+* Importância dos tipos de dados
+*Determinam a classe de valores* que podem ser
++ Armazenados em uma variável em memória
++ Passados como parâmetro
++ Resultantes de uma expressão
+#+latex: \vfill
+\pause *Informação de tipo é usada* para
++ Prevenir ou detectar construções incorretas
++ Determinar métodos de representação de dados
++ Definir métodos de manipulação de dados
+* Vantagens (e desvantagens) de se ter tipos
+Facilita o entendimento de um algoritmo
+\pause  Possibilita detectar vários erros
+  #+begin_src C
+  1 + "Aurora"
+  a_number + a_string
+  strcat (a_number, a_string)
+  #+end_src
+\pause  Por exemplo, o compilador pode
++ Determinar o espaço necessário para variáveis
++ Como proceder para a implementação das operações
+#+latex: \vfill
+\pause  Existe alguma desvantagem?
++ \pause Considerando que é mais fácil escrever código correto do que
+    provar que escrevemos um código correto
++ \pause Escolha entre tipagem estática /versus/ dinâmica
+* Correlação com o projeto de linguagens?
+*Tipos são importantes*
+#+latex: \vfill
+\pause Fortran
++ Tipos simples (inteiros, reais)
++ Tipos estruturados (arranjos)
+\pause Cobol
++ Registros
+\pause Lisp
++ Listas
+\pause Algol68
++ Tipos definidos pelo usuário
+\pause Simula67, Smalltalk
++ Tipos abstratos de dados, classes
+#+latex: \vfill
+\pause Qual o próximo?
