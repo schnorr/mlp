@@ -40,7 +40,6 @@ disciplina, podem variar em abrangência e profundidade.
 
 *** Planejado
 
- | Imperativo  | Tipos de Dados: sistemas de tipos, primitivos, estruturados e compostos, tipos de usuário; Introdução OO  |       |
  | Imperativo  | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos.              |       |
  | Imperativo  | Controle de Fluxo: Expressões e atribuição. Operadores. Comandos de controle: condicionais e iterativos.  |       |
  | Imperativo  | Polimorfismo: sobrecarga de operadores e funções, coerção, polimorfismo paramétrico, estático e dinâmico. |       |
