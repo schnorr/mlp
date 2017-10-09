@@ -32,14 +32,18 @@ Compreendem
 + Conjunto de operações sobre o tipo
 #+latex: \vfill
 Escondem os mecanismos internos
+
 Definidos pelo usuário
+
 Elementos de primeira ordem
 #+latex: \vfill
 Exemplo?
 + \pause Classe
 * Classe
 Define como um objeto vai parecer e se comportar
+
 *Estado* é representado por atributos (variáveis)
+
 *Operações* são representadas por métodos (funções)
 #+latex: \vfill
 Parecido com uma \texttt{struct} em C
@@ -57,6 +61,7 @@ Parecido com uma \texttt{struct} em C
   #+end_src
 * Objeto
 Instância de uma classe
+
 Uma cópia construída a partir da classe
 * Exemplo de classe em C++
 \small
@@ -101,11 +106,14 @@ class Pessoa {
 #+end_src
 * Encapsulamento
 Interface visível e consistente
+
 Detalhes de implementação escondidos
 #+latex: \vfill
+
 \pause Contraponto com tipos primitivos
 * Especificadores de acesso
 Controle de acesso aos atributos
+
 Níveis de visibilidade
 + Públicos -- por todo mundo
 + Protegidos -- na classe e subclasses
@@ -175,7 +183,9 @@ Objective-C
 + Método \texttt{dealoc} é chamado pelo ambiente de execução 
 * Herança
 Definir uma classe a partir de outra (classe pai)
+
 A classe filha herda todos os atributos e métodos do pai
+
 #+latex: \vfill
 Exemplo em Objective-C
   \small
