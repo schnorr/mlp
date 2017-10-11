@@ -7,3 +7,5 @@ membro(Elemento, [_|Cauda]) :- membro(Elemento, Cauda).
 soma([], 0).
 soma([C|R], SOMA) :- soma(R, RESTO), SOMA is C + RESTO.
 
+inverte([],[]) :- !.
+inverte([X|T], L) :- inverte(T,Z), concat(Z, [X], L).
