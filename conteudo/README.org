@@ -36,7 +36,7 @@ disciplina, podem variar em abrangência e profundidade.
  | Vinculações | [[./aulas/vinculos/ponteiros.org][Ponteiros]]                                           |       |
  |-------------+-----------------------------------------------------+-------|
  | Tipos       | [[./aulas/tipos/introducao.org][Introdução]]                                          |       |
- | Tipos       | [[./aulas/tipos/sistema.org][Sistema de Tipos]]                                    |       |
+ | Tipos       | [[./aulas/tipos/sistema.org][Sistema de Tipos]]                                    | [[../catps/][#09]]   |
  | Tipos       | [[./aulas/tipos/implementacao.org][Implementação]]                                       |       |
  | Tipos       | [[./aulas/tipos/oo.org][Orientação a Objetos]]                                |       |
  |-------------+-----------------------------------------------------+-------|
