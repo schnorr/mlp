@@ -1,0 +1,180 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Conversão Explícita
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Conversão explícita
+
+Construção usada deliberadamente para converter um tipo
+
+Alternativas
++ *Casting* de tipos
++ Funções de conversão e /wrappers/
+
+* Exemplos
+
+Exemplo de casting de tipo em C
+#+begin_src C
+int i = (int)f;
+veiculo *v = (veiculo*)apontador;
+#+end_src
+
+Exemplo com pseudofunções de conversão em Ada
+#+begin_src Ada
+n : inteiro;
+r : real;
+r := 10.4;
+n := inteiro(r);
+r := real(n);
+#+end_src
+
+Em R
+#+begin_src R :results output :session :exports both
+var = "12.34"
+i = as.numeric(var)
+#+end_src
+
+* Três formas de conversão explícita
+
+1. São estruturalmente equivalentes
+   + Mesma representação de baixo nível
+   + Exemplo: duas =struct= com mesmos campos
+   + Conversão é trivial
+
+2. Tipos tem domínios diferentes, mas mesma intersecção
+   + Exemplo: tipo inteiro com sinal, outro sem sinal
+   + Código necessário para fazer a conversão
+   + Verificar dinamicamente se a conversão é válida
+     + Se falha, um erro semântico de execução é lançado
+     + Se funciona, mesma representação é utilizada
+
+3. Tipos tem diferentes representações de baixo nível
+   + Hipótese: podemos definir uma função de correspondência
+   + Normalmente com suporte de hardware
+
+* De que tipo é o objeto?
+
+Linguagem permite testar dinamicamente o tipo do objeto
+
+#+Latex: \vfill
+
+Objective-C
+#+begin_src Objective-C
+BOOL b = [objeto isKindOfClass: [NSString class]];
+#+end_src
+
+Java
+#+begin_src Java
+bool b = p instanceof NomeDaClasse;
+#+end_src
+
+* Funções e /wrappers/
+
+Por funções de conversão (Pascal, ML)
+  #+begin_src Pascal
+  var n, m: Integer; x: Real;
+  ...
+  n := Round(x);
+  m := Trunc(x);
+  #+end_src
+
+Por uso de /wrappers/ (Java)
+  #+begin_src Java
+  int a = 10;
+  Integer b;
+  b = new Integer(a);
+  a = b.intValue();
+  #+end_src
+
+* /Casts/ sem conversão
+
+Utilizado para manipular blocos de memória
++ Alocados dinamicamente
++ Lidos de um arquivo em formato binário (raw)
+
+Exemplos em C
+#+begin_src C
+void *memoria_alocada = malloc(1000);
+char *minha_str = (char*)memoria_alocada;
+
+void *block = malloc(100);
+read(fd, block, 100);
+Record *header = (Record*)bloco;
+#+end_src
+
+* Tipos de /Casting/ (C++)
+
+Programador decide pelo tipo de cast
+
+Melhora a legibilidade do código
+
+#+latex: \vfill
+
+\pause =dynamic_cast<tipo>(valorParaConversao)=
++ Compilador embute código de checagem; pode retornar NULL
+
+#+latex: \vfill
+
+\pause =const_cast<tipo>(valorParaConversao)=
++ Permite remover o atributo constante de uma variável
++ Exemplo
+  #+begin_src C++
+  const_cast<MinhaClasse*>(this)->valor = 41;
+  #+end_src
+
+* Tipos de /Casting/ (C++)
+
+=static_cast<tipo>(valorParaConversao)=
++ Troca a interpretação do valor; segurança questionável
++ Exemplo
+    #+begin_src C++
+    int* a = new int();
+    void* b = static_cast<void*>(a);
+    int* c = static_cast<int*>(b);
+    #+end_src
+    + Todos apontam para o mesmo endereço
+
+=reinterpret_cast<tipo>(valorParaConversao)=
++ Utilizado em duplas para garantir semântica
++ Exemplo
+    #+begin_src C++
+    int* a = new int();
+    void* b = reinterpret_cast<void*>(a);
+    int* c = reinterpret_cast<int*>(b);
+    #+end_src
+    + a e c tem o mesmo valor
+    + Mas o valor de b não é definido
+https://stackoverflow.com/questions/573294/when-to-use-reinterpret-cast
+
+* Em OO: upcasting e downcasting
+
+Paradigma OO: Hierarquia de classes
+
+/Upcasting/
++ Sem restrições, sempre funciona
+
+/Downcasting/
++ Pode não funcionar
++ Ambiente de execução tem que estar preparado
+
+#+latex: \vfill
+
+Exemplo em Java -- =upcasting.java=
+
+* Conversão -- Sumário
+
+Coerção cada vez menos presente
+
+Mecanismos de conversão explícita se multiplicam

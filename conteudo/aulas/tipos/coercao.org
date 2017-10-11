@@ -1,0 +1,126 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Conversão Implícita
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Conversão
+Para tipos não compatíveis \rightarrow conversão
++ Implícita ou explícita
+
+#+latex: \vfill
+
+\pause Implicitamente
++ Com base em regras predefinidas na linguagem ou na
+    implementação da linguagem (compilador)
++ Chamada de *Coerção*
+\pause Explicitamente
++ Codificada pelo programador
++ Usando funções de conversão ou *Casting*
+
+* Coerção (conversão implícita)
+Automaticamente converter um tipo para outro
+
+Leva, em geral, a perda de informação
++ Truncamento
++ Arredondamento
+
+#+latex: \vfill
+
+\pause Necessita de mecanismos auxiliares
++ Código para checagem semântica durante a execução
++ Código para conversão de representações de baixo nível
+
+#+latex: \vfill
+\pause Exemplo Ada -- =coercao.adb=
+
+\pause Exemplo C -- =coercao.c=
+
+* Coerção por atribuição e por promoção
+#+begin_src C
+float f;
+int i;
+f = i;  //i é truncado para float
+#+end_src
+
+#+Latex: \vfill
+
+#+begin_src C
+float f;
+int i;
+float r;
+f = r/i; //i é promovido
+#+end_src
+
+* Discussão: coerção e sobrecarga de operadores
+
+#+BEGIN_CENTER
+Não basta coerção, temos que ter sobrecarga também.
+
+Efeitos similares.
+#+END_CENTER
+
+Supondo a expressão `` =a+b= '': soma inteiros e flutuantes
+#+latex: \vfill
+\pause Sem coerção
+- a,b são inteiros
+- a,b são flutuantes
+
+\pause Com: tudo é convertido para flutuante
+#+latex: \vfill
+\pause Uma linguagem _sem sobrecarga_, e somente com soma entre flutuantes
++ Sempre haveria conversão para flutuantes
+  + Mesmo com a e b sendo inteiros
+  + Custo computacional maior
+
+* Discussão: coerção e o tipo universal
+#+BEGIN_CENTER
+Tipo universal pode se referir a qualquer tipo
+
+Facilita a escrita de programas genéricos
+
+Se apresenta sob várias formas
+#+END_CENTER
+
+  | C/C++       | \texttt{void*}   |
+  | Clu         | \texttt{any}     |
+  | Modula-2    | \texttt{address} |
+  | Modula-3    | \texttt{refany}  |
+  | Java        | \texttt{Object}  |
+  | C#          | \texttt{object}  |
+  | Objective-C | \texttt{id}      |
+
+* Relação entre coerção e tipo universal
+
+Em geral, evita-se utilizar com tipos primitivos
++ Para qual tipo converter automaticamente?
++ Vejamos se C tem coerção com tipos universais
+    + Exemplo =tipo_universal.c=
+
+#+latex: \vfill\pause 
+
+Mas em LPs no paradigma orientado a objeto
++ Como garantir a validade de uma atribuição?
++ Ou de um uso a um objeto de tipo universal?
+
+\pause Checagem dinâmica de tipo universal
++ Associar um descritor de tipo ao objeto
++ Verificado *durante a execução* do programa
++ \pause Exemplo em Objective-C: =exemplo3.m=
+
+* Sumário de conversão implícita (coerção)
+Coerção é um assunto controverso
++ Enfraquecem a segurança do sistema de tipos
++ Por outro lado, apresenta flexibilidade
+

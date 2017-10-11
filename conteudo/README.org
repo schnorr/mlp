@@ -25,19 +25,25 @@ disciplina, podem variar em abrangência e profundidade.
  | Lógico      | [[./aulas/prolog/recursividade.org][Prolog: Recursividade]]                               | [[../catps/][#06]]   |
  | Lógico      | [[./aulas/prolog/metapredicados.org][Prolog: Metapredicados]]                              |       |
  | Lógico      | [[./aulas/prolog/listas.org][Prolog: Manipulação de Listas]]                       | [[../catps/][#07]]   |
+ |-------------+-----------------------------------------------------+-------|
  | Vinculações | [[./aulas/vinculos/introducao.org][Introdução e espaço de vinculações]]                  |       |
  | Vinculações | [[./aulas/vinculos/nomes.org][Nomes]]                                               |       |
  | Vinculações | [[./aulas/vinculos/tipos.org][Tipos]]                                               |       |
  | Vinculações | [[./aulas/vinculos/estocagem.org][Estocagem]]                                           |       |
+ |-------------+-----------------------------------------------------+-------|
  | Vinculações | [[./aulas/vinculos/escopo.org][Escopo]]                                              | [[../catps/][#08]]   |
  | Vinculações | [[./aulas/vinculos/declaracao.org][Declaração/Definição]]                                |       |
  | Vinculações | [[./aulas/vinculos/ponteiros.org][Ponteiros]]                                           |       |
+ |-------------+-----------------------------------------------------+-------|
  | Tipos       | [[./aulas/tipos/introducao.org][Introdução]]                                          |       |
  | Tipos       | [[./aulas/tipos/sistema.org][Sistema de Tipos]]                                    |       |
  | Tipos       | [[./aulas/tipos/implementacao.org][Implementação]]                                       |       |
  | Tipos       | [[./aulas/tipos/oo.org][Orientação a Objetos]]                                |       |
  |-------------+-----------------------------------------------------+-------|
- | Tipos       | [[./aulas/tipos/compatibilidade.org][Compatibilidade de Tipos]]                            |       |
+ | Tipos       | [[./aulas/tipos/compatibilidade.org][Compatibilidade]]                                     |       |
+ | Tipos       | [[./aulas/tipos/coercao.org][Coerção]]                                             |       |
+ | Tipos       | [[./aulas/tipos/explicita.org][Conversão Explícita]]                                 |       |
+ |-------------+-----------------------------------------------------+-------|
 
 *** Planejado
 
