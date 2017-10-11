@@ -1,0 +1,216 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Compatibilidade
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Compatibilidade de Tipos (arquitetura)
+Tamanho de um tipo pode ser diferente
+
+Pode depender da
++ Implementação da linguagem no compilador
++ Arquitetura do computador alvo
+
+#+latex: \vfill
+
+** Discurso do Bjarne Stroustrup (criador do C++)		    :B_block:
+ :PROPERTIES:
+ :BEAMER_envargs: \pause 
+ :BEAMER_env: block
+ :END:
+ \scriptsize
+
+ Pessoas que apregoam não se preocupar com portabilidade geralmente
+ fazem isto porque usam um único sistema e sentem que podem se dar
+ ao luxo de acreditar que ``a linguagem é aquilo que meu compilador
+ implementa''.
+
+ Esta é uma visão restrita e míope. Se seu programa é um sucesso, é
+ muito provável que seja portado, de modo que alguém vai ter que
+ procurar e corrigir problemas relacionados com características
+ dependentes da implementação.
+
+ Além disto, freqüentemente é necessário compilar programas com
+ outros compiladores para o mesmo sistema e mesmo uma versão futura
+ de seu compilador favorito pode fazer algumas coisas de maneira
+ diferente da atual.
+
+* Como saber o tamanho de um tipo?
+Especificação da linguagem
+
+Um operador que devolve os tamanhos
+
+#+begin_src C
+printf ("int = %d\n", sizeof(int));
+printf ("long int = %d\n", sizeof(long int));
+printf ("float = %d\n", sizeof(float));
+printf ("double = %d\n", sizeof(double));
+#+end_src
+* Situações em que um tipo de dado é esperado
+Atribuições
+#+begin_src C
+int a = <inteiro>;       
+#+end_src
+
+Operações
+#+begin_src C
+a % b; //resto da divisão em inteiros
+#+end_src
+
+Funções
+#+begin_src C
+int foo (int, float);
+#+end_src
+
+\pause *Compatibilidade*: quando um tipo pode ser usado no lugar do outro
+- por nome, ou por estrutura
+
+#+BEGIN_CENTER
+Quando ocorre, podemos usar tipos compatíveis
+
+sem que o compilador ou a execução detecte erros de tipo
+#+END_CENTER
+
+#+latex: \vfill
+
+\pause Podem haver =perdas.c=
+
+* Compatibilidade por nome
+
+#+BEGIN_CENTER
+É compatível por nome quando as variáveis tem
+
+em suas declarações o *mesmo nome de tipo*
+#+END_CENTER
+
+Vejamos este exemplo
+#+begin_src PASCAL
+type
+    natural : 1..MAXINT;
+var
+    n1, n2 : natural;
+    i : integer;
+    n3 : natural;
+#+end_src
+Exemplo
++ n1, n2 e n3 são compatíveis
++ i não é com nenhuma delas
+
+* Verificando existência de compatibilidade por nome
+
+Mais popular em linguagens mais recentes
++ Java, C#, standard Pascal, Ada
+
+#+latex: \vfill
+
+Exemplo com tipos incompatíveis em Ada
++ =compatibilidade.adb= com =gnat make=
+Vejamos se Pascal tem compatibilidade de tipos por nome
++ =exemplo2.pas= com =fpc=
+
+* Compatibilidade por estrutura
+
+#+BEGIN_CENTER
+É compatível quando os tipos possuem *estrutura idêntica*
+#+END_CENTER
+
+Considere o mesmo exemplo
+#+begin_src PASCAL
+type
+    natural : 1..MAXINT;
+var
+    n1, n2 : natural;
+    i : integer;
+    n3 : natural;
+#+end_src
+Exemplo
++ Todas as variáveis são compatíveis
+
+Implementação mais difícil
++ Deve-se comparar as estruturas
+
+* Vejamos o caso de C: compatibilidade estrutural de tipos
+
+#+BEGIN_CENTER
+=comp-estrutura1.c=
+#+END_CENTER
+
+\pause Na linguagem C
++ =typedef= só define um nome, um sinônimo
+
+Definem novos tipos
+- =enum=
+- =struct=
+- =union=
+
+* Compatibilidade por estrutura
+
+Algol-68: propôs equivalência estrutural
+#+begin_src ALGOL-68
+mode p = struct(int x, ref p z) 
+mode q = struct(int x, ref r z) 
+mode r = struct(int x, ref q z)
+#+end_src
+
+Modula-3
+#+begin_src Modula-3
+TYPE Complex1 = RECORD re, im: REAL END; 
+TYPE Complex2 = RECORD radius, angle: REAL END;
+#+end_src
+
+* Discussão
+
+#+BEGIN_CENTER
+Se a estrutura for a mesma, mas com um nome de campo
+
+diferente, a compatibilidade deveria ser válida?
+#+END_CENTER
+
+#+begin_src C
+struct DataBrasil { int dia, mes, ano; };
+struct DataEUA { int mes, dia, ano; };
+#+end_src
+
+\pause Uma possível solução proposta por Modula-3
+
+#+begin_src Modula-3
+TYPE Complex1 = BRANDED RECORD re, im: REAL END; 
+TYPE Complex2 = BRANDED RECORD radius, angle: REAL END;
+#+end_src
+
+* Forçar a incompatibilidade (por estrutura)
+
+#+BEGIN_CENTER
+E se quisermos criar tipos efetivamente diferentes?
+
+Ou seja, criar tipos derivados, que sejam incompatíveis.
+#+END_CENTER
+#+begin_src PASCAL
+type
+    celsius : float;
+    fahrenheit : float;
+#+end_src
+
+#+latex: \vfill
+
+\pause Linguagens sem suporte
++ Pascal =derivados.pas=
++ C =derivados.c=
+
+\pause Linguagens *com* suporte
++ Ada: =derivados.adb=
++ Haskell
+
+\pause Subtipos (compatíveis)
++ Ada =subtipos.adb=
