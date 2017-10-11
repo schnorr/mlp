@@ -37,6 +37,7 @@ disciplina, podem variar em abrangência e profundidade.
  | Tipos       | [[./aulas/tipos/implementacao.org][Implementação]]                                       |       |
  | Tipos       | [[./aulas/tipos/oo.org][Orientação a Objetos]]                                |       |
  |-------------+-----------------------------------------------------+-------|
+ | Tipos       | [[./aulas/tipos/compatibilidade.org][Compatibilidade de Tipos]]                            |       |
 
 *** Planejado
 
