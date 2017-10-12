@@ -1,0 +1,106 @@
+* Avaliação CATP #09
+** Respostas
+
+1. O segmento de dados deste programa é vazio, pois não existe nenhuma
+   variável global nem variáveis estáticas dentro das funções
+   declaradas. Quando a execução atinge a linha 12 deste programa, a
+   única variável alocada no monte é =tmp=. A alocação de
+   memória para o conteúdo de =tmp= é realizada na linha
+   1. Ao atingir a linha 12 deste programa, as variáveis alocadas
+   dinamicamente na pilha são as seguintes (em direção ao topo da
+   pilha): =char *dia= (linha 16), =char diaExt[][4]= (linha 9) e =char
+   *tmp= (linha 11).
+
+2. O segmento de dados deste programa é vazio, pois não existe nenhuma
+   variável global nem variáveis estáticas dentro das funções
+   declaradas. Ao atingir a linha 11 deste programa, não existe
+   nenhuma variável alocada dinamicamente no monte. As variáveis
+   alocadas dinamicamente na pilha são as seguintes (em direção ao
+   topo da pilha): =char dia[4]= (linha 15), =char *dia= (linha 8) e =char
+   diaExt[][4]= (linha 9).
+
+3. Supondo o início da execução deste programa pelo código da função
+   =main=. O conteúdo da pilha, em direção ao seu topo (na tabela
+   abaixo, o topo da pilha é a última linha da tabela) quando a
+   execução atinge a linha 8, é o seguinte:
+
+   |---+----------+----------+-----------------+----------------------|
+   |   | *Conteúdo* | *Variável* | *Tamanho (bytes)* | *Registro de ativação* |
+   |---+----------+----------+-----------------+----------------------|
+   | / | <c>      | <c>      |                 | <l>                  |
+   |   | 2        | p        | sizeof(int)     | =main=                 |
+   |---+----------+----------+-----------------+----------------------|
+   |   | 0        | w        | sizeof(int)     | =foo1=                 |
+   |   | 2        | z        | sizeof(int)     | =foo1=                 |
+   |   | "OK"     | str      | sizeof(char*)   | =foo1=                 |
+   |   | 2        | x        | sizeof(int)     | =foo1=                 |
+   |   | 0        | y        | sizeof(int)     | =foo1=                 |
+   |---+----------+----------+-----------------+----------------------|
+   |   | 0        | x        | sizeof(int)     | =foo2=                 |
+   |   | 2        | y        | sizeof(int)     | =foo2=                 |
+   |   | "OK"     | str      | sizeof(char*)   | =foo2=                 |
+   |---+----------+----------+-----------------+----------------------|
+
+4. O segmento de dados deste programa comporta a variável global
+   =diaExt=, de 4 bytes. Nenhuma variável é alocada dinamicamente no
+   monte (considerando apenas o código desta questão). As variáveis
+   alocadas dinamicamente na pilha são apresentadas na tabela abaixo.
+   Supondo o início da execução deste programa pelo código da função
+   =main=. O conteúdo da pilha, em direção ao seu topo (na tabela
+   abaixo, o topo da pilha é a última linha da tabela) quando a
+   execução atinge a linha 12, é o seguinte:
+
+   |---+----------+----------+------------------+----------------------|
+   |   | *Conteúdo* | *Variável* | *Tamanho (bytes)*  | *Registro de ativação* |
+   |---+----------+----------+------------------+----------------------|
+   | / | <c>      | <c>      |                  | <l>                  |
+   |   |          |          |                  | =main=                 |
+   |---+----------+----------+------------------+----------------------|
+   |   | ...      | diasExt  | sizeof(char)*7*4 | =diaSemanaExtenso=     |
+   |---+----------+----------+------------------+----------------------|
+
+5. Um sistema de tipos de uma linguagem de programação é um mecanismo
+   para definir tipos e associá-los às construções da linguagem
+   (variáveis, função, literal, expressões, etc). Ele consiste
+   igualmente em um conjunto de regras (equivalência, compatibilidade,
+   inferência) sobre os tipos das linguagem. Um sistema de tipos não é
+   essencial em uma linguagem de programação.
+
+6. A implementação do tipo =long= em Python é independente da
+   arquitetura, podendo virtualmente conter qualquer número inteiro,
+   supondo que memória disponível. As operações são realizadas em
+   nível de software, com implementação específica, portanto mais
+   lentas do que do tipo =long= tradicional da arquitetura da máquina. É
+   uma abordagem semelhante daquela implementada em Prolog, onde
+   existe uma desconexão dos tipos numéricos (inteiros, ponto
+   flutuantes) daqueles disponíveis e implementados pela arquitetura.
+
+7. Construções de tipo =union= foram criadas em uma época onde as
+   restrições de tamanho de memória eram marcantes. Atualmente, estas
+   restrições não mais se aplicam para o desenvolvimento de programas
+   de uma maneira geral. Esse tipo de construção de linguagem ainda é
+   útil em algumas áreas como em dispositivos com memória reduzida.
+
+8. Todas as declarações dentro de uma construção =union= ocupam o mesmo
+   espaço de memória. O tamanho da união é sempre igual ao tamanho da
+   maior variável declarada dentro dela. Neste caso são os 100 bytes
+   da declaração de =str=.
+
+9. Considerando apenas a declaração de =struct element=, sem contar que
+   ela pode estar dentro de outras construções da linguagem (vetores,
+   outras =struct=, etc) é 28 bytes. A variável =name= tem 3 bytes
+   perdidos, a variável =sobre= tem 1 byte perdido e, por fim, a
+   variável =c= tem 3 bytes perdidos. No entanto, o tamanho de =struct
+   element= deve estar igualmente alinhado. Por causa disso, seu
+   tamanho final é de 32 bytes uma vez que o tamanho de 28 bytes não é
+   alinhado.
+
+   Para o cálculo de =struct chave=, temos os primeiros 9 bytes alocados
+   para a variável =name=, em seguida, a variável =c= é alocada justamente
+   após o final da variável =name=, mantendo o alinhamento de 2 em 2
+   bytes.  A variável =k= fica alinhada imediatamente após a variável
+   =c=. Pelo fato que a próxima variável é do tipo inteiro, perdemos
+   aqui 1 byte. Por fim, a variável =x= ocupa os 4 bytes finais. Total:
+   16 bytes.
+
+
