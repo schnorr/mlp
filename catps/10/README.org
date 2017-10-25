@@ -1,0 +1,107 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #10 (Controle de Fluxo)
+
+1. Considerando que =A=3=, =B=4=, =C=5=, =D=6= e =E=7=, responda as
+   seguintes questões:
+   - Qual o valor final da expressão préfixada: =+*AB-CD=
+   - Qual o valor final da expressão pósfixada: =BCDAD-+-+=
+   - Qual das seguintes é uma expressão válida (pós ou préfixada)? \\
+         =BC*D-+= \\
+         =*ABC-= \\
+         =BBB**=
+
+2. Transforme as seguintes expressões em notação pré e pós-fixada:
+   - =A+B*C/D-4*9=
+   - =A*B*C*D*E=
+   - =A*B-C/D+10=
+   - =(10-8)*9=
+   - =((15 / (7 - (1 + 1))) * 3) - (2 + (1 + 1))=
+
+3. Mostre os passos de avaliação até o valor final da expressão
+   préfixada 
+   #+BEGIN_EXAMPLE
+    - * / 15 - 7 + 1\ 1\ 3 + 2 + 1\ 1
+   #+END_EXAMPLE
+
+4. O que é uma avaliação em curto-circuito?
+
+5. Suponha que uma linguagem de programação fictícia, desenvolvida
+   inicialmente alto desempenho, sofra sérios problemas de efeito
+   colateral. Os projetistas da linguagem convidaram você para propor
+   uma solução para o problema. Qual seria a sua proposta? Discute o
+   impacto da sua escolha em termos de legibilidade, regibilidade e
+   confiabilidade.
+
+6. Qual a versão com operador ternário das seguintes linhas de código?
+   Discuta brevemente sobre a legibilidade e expressividade de cada
+   versão.
+
+   #+BEGIN_EXAMPLE
+   if (teste == f()) {
+      x = y();
+   }else{
+      z = y();
+   }
+   #+END_EXAMPLE
+
+7. Um compilador seguidamente constroi um grafo de fluxo de controle
+   para realizar otimizações no processo de compilação. Qual o grafo
+   de fluxo de controle do seguinte programa? Suponha que a execução
+   começa pela função \texttt{main()}.
+
+   #+BEGIN_SRC C
+  void main() {
+    int x = 0;
+    if (x == 0){
+      int i;
+      for (i = 0; i < 20; i++){
+        x = 10;
+        if (x == 1) continue;
+        switch (i){
+          case 0: x = 2; break;
+          case 1: x = 3; break;
+          case 2: x = 4; break;
+          case 3:
+          case 4:
+          case 5: x = 6; break;
+          default: x = 0;
+        }
+      }
+    }else if (x == 1){
+      do {
+        x = 2;
+      }while (0);
+    }else{
+      i = 0;
+      do {
+        i++;
+        if (i == 4) return;
+      }while (i < 5);
+    }
+    zede();
+    while (x){
+      x--;
+    }
+  }
+
+  void zede() {
+    int k = 0, z = 1;
+    if (k == 0){
+      if (z == 3){
+        k = 1;
+      }else{
+        k = 2;
+        if (k == 2) return;
+      }
+    }else if (k == 2){
+      if (z == 1){
+        k = 2;
+      }
+    }else{
+      z = 1;
+    }
+  }   
+   #+END_SRC
