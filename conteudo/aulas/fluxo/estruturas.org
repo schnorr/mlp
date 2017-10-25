@@ -1,0 +1,168 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Estruturas Explícitas de Controle de Fluxo
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Estruturas de Controle
+Definição
++ Servem para agregar expressões e comandos
++ Controlar o fluxo de execução do programa
++ Podem ser primitivos ou compostos
+\pause Tipos
++ Sequenciais (conceito de bloco básico)
++ De seleção (comandos condicionais)
++ Iterativas (comandos iterativos)
++ De desvio incondicional
++ Comandos protegidos
+* Estruturas Condicionais
+Caminho condicionado
+
+Caminho duplo
+
+Caminhos múltiplos
+
++ ifs aninhados (else if)
++ Comando de seleção múltipla (switch, case)
+* Comandos Iterativos (Repetição)
+Número indifinido de repetições
++ Pré-teste
+    #+begin_src C
+    while (<teste_verdadeiro>) { <comandos> }
+    #+end_src
++ Pós-teste
+    #+begin_src C
+    do { <comandos> } while (<teste_verdadeiro>);
+    Repeat <comandos> until <teste_falso>;
+    #+end_src
+#+latex: \vfill
+\pause E se necessitarmos de outros pontos de saída?
++ Desvios incondicionais
+* Comandos Iterativos (Repetição)
+Número definido de repetições
++ Quantidade de iterações conhecidas
++ Variável de controle (contador/iterador)
++ Pode-se determinar o valor inicial, final, incremento
++ \pause Exemplos
+    #+begin_src C
+    for i := 1 to 10 do vetor[i] := i*2;
+    for i := 1 to 100 Step 2 do a := a + i;
+    for i := 10 DOWNTO 0 Step 2 do a := a + i;
+    for(i=0 ; i<10 ; i++) vetor[i] = i*2;
+    #+end_src
+\pause Pode-se usar =while=
+* Comandos Iterativos (Repetição)
+Considerações sobre número definido de repetições
+
+#+latex: \vfill
+
+Número de repetições deve ser fixo
++ Ada, por exemplo, impede a mudança dos limites
+
+Variável de controle deve ser discreta
+
+Comando =for= em C é um comando de repetição indefinida,
+  como o =while=
+
+A variável de controle deveria ter o escopo limitado ao laço
++ Ada, Java (até C)
+* Comando =for= em C/C++/Java
+Sintaxe
+  #+begin_src C
+  for (<expr1> ; <expr2> ; <expr3>) <bloco>;
+  #+end_src
+\pause Parâmetros do laço (todos opcionais)
++ =<expr1>= é avaliada uma vez (inicialização)
++ =<expr2>= é o controle do laço
+    + avaliada a cada iteração em pré-teste
++ =<expr3>= avaliada no final de cada iteração
+\pause Observações
++ Expressões podem conter declarações, comandos ou sequências de
+    comandos separados por vírgula
++ O corpo do laço pode ser vazio, conter um comando simples, uma
+    composição ou um bloco
+* Comando =for= em C/C++/Java
+Cada expressão pode conter múltiplos comandos
+  #+begin_src C
+  for (conta1 = 0, conta2 = 0.0;
+       conta1 <= 10 && conta2 <= 100.0;
+       soma = ++conta1 + conta2, conta2 *=2.5);
+  #+end_src
+
+Qualquer tipo de comando?
+
+Mais exemplos
+  #+begin_src C
+  for (int i=0; i <n; i++) ...
+  for (i = 0, int j = 10; j == i; i++) ...
+  for (;;) ...
+  for (;;);
+  #+end_src
+* Iteradores
+Motivação
++ Utilizar tipos de dados não convencionais para o controle de um
+    laço?
+
+LPs mais atuais permitem operações pré-definidas ou permitem
+  definir iteradores para os mais diferentes tipos abstrato de dados
+
+Também chamado de cursores
+
+Iteradores
++ Mostrar =grammar.cc= da ellerre
+* Iteradores
+Em Java, toda class que define uma coleção deve implementar a
+  interface *Iterator* que export os métodos
+  =hasNext()= e =next()=
+
+Exemplo 1
+  \small
+  #+begin_src Java
+  void cancelAll(Collection<TimerTask> c) {
+    for(Iterator<TimerTask> i = c.iterator(); i.hasNext();)
+       i.next().cancel();
+  }
+  #+end_src
+* Iteradores
+Exemplo 2
+  \small
+  #+begin_src Java
+  List<String> sabores = new ArrayList<String>();
+  sabores.add("chocolate");
+  sabores.add(“morango");
+  sabores.add(“limão");
+
+  Iterator<String> itemSabor = sabores.iterator();
+  while(itemSabor.hasNext()){
+    System.out.println( itemSabor.next() );
+  }
+  #+end_src
+* Iteradores -- Comando =foreach=
+Java 1.5, C#, PHP
+
+Exemplo 1
+  #+begin_src C
+  void cancelAll(Collection<TimerTask> c) {
+     for (TimerTask t : c) t.cancel();
+  }
+  #+end_src
+Exemplo 2
+  #+begin_src C
+  int sum (int[] a){
+      int result = 0;
+      for (int i : a) result += i;
+      return result;
+  }
+  #+end_src
+
