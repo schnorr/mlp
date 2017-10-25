@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Expressões de Atribuição
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Expressões condicionais
+Instruções de seleção para *executar atribuição de expressão condicional*
+C/Java
+  #+begin_src C
+  media = (cont == 0) ? 0 : soma/cont;
+  #+end_src
+* Instruções de atribuição
+Permitem *mudar o valor de uma variável*
+
+Fundamental em imperativas
+
+Tipos
++ Atribuição Simples
++ Atribuição com Alvos múltiplos
++ Atribuição com Alvos condicionais
++ Operadores de atribuição (compostos, unários e expressões de
+    atribuição)
+* Instruções de atribuição
+Atribuições simples
++ Sintaxe =<alvo> <operador> <expressão>=
++ Exemplos
+    #+begin_src C
+    a = b;
+    a := c + d;
+    #+end_src
++ \pause Problema de sobrecarga do operador de atribuição
+    #+begin_src C
+    a = b = c;
+    #+end_src
+\pause Atribuição com alvos múltiplos
++ Exemplo
+    #+begin_src C
+    a = b = 0; // C/C++/Java
+    soma, total = 0; // PL/I
+    #+end_src
+* Instruções de atribuição
+Alvos condicionais
+  #+begin_src C++
+  (flag ? cont1 : cont2) = 0;
+  #+end_src
+  #+begin_src PERL
+  $flag ? $count1 : $count2 = 0;
+  #+end_src
+\pause Operadores de atribuição compostos
+  #+begin_src C
+  soma += valor;
+  resultado /= numero;
+  #+end_src
+* Instruções de atribuição
+Operadores de atribuição unários (C/Java)
+  #+begin_src C
+  a++;
+  #+end_src
+\pause Atenção ao efeito colateral
+  #+begin_src C
+  soma = ++cont;
+  soma = cont++;
+  #+end_src
+* Instruções de atribuição
+Atribuição como expressão (em C/Java)
+
+A instrução de atribuição produz um resultado (igual ao valor
+atribuído)
+
+Exemplos
+  #+begin_src C
+  a = b + (c = d / b++) - 1;
+  if (x = y) { ... }
+  #+end_src
++ Java só aceita expressões booleanas
+* Atribuição de modo misto                                         :noexport:
+São aquelas que aceitam uma expressão que não é do mesmo tipo do
+  alvo
+
+Resolvidas através de coerção
+
+Quando ou onde fazer a coerção?
++ Se =real = int1 / int2=
