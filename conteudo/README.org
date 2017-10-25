@@ -45,6 +45,7 @@ disciplina, podem variar em abrangência e profundidade.
  | Tipos       | [[./aulas/tipos/explicita.org][Conversão Explícita]]                                 |       |
  |-------------+-----------------------------------------------------+-------|
  | Fluxo       | [[./aulas/fluxo/introducao.org][Introdução]]                                          |       |
+ | Fluxo       | [[./aulas/fluxo/basicas.org][Básicas]]                                             |       |
 
 *** Planejado
 

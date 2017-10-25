@@ -1,0 +1,47 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Expressões Básicas
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+** Expressões -- Tipos
+   + Literais
+     + Produzem um valor fixo
+     + Exemplos
+       #+begin_src C
+       'a'     87     0x54     1.23
+       #+end_src
+   + <2->Agregações
+     + Produzem um valor a partir de seus componentes
+     + Exemplos
+       #+begin_src C
+       int c = {1, 2, 3}; //Vetores
+       String nome = p.nome; //Registros
+       #+end_src
+   + <3->Chamada de funções
+     + Produzem o resultado da aplicação de uma função sobre um ou
+       mais parâmetros
+** Expressões -- Tipos
+   + Expressões de Referenciamento
+     + Acessam o conteúdo de variáveis ou constantes
+     + Retornam uma referência a esses elementos
+   + Mesmo operador para ambas as operações
+     + Diferencia-se utilizando o contexto
+   \vfill
+   + <2->Exemplo
+     #+begin_src C
+     *q = *q + 3;
+     #+end_src
+     + <3->O primeiro \texttt{*q} retorna um endereço
+     + <3->O segundo acessa o conteúdo
