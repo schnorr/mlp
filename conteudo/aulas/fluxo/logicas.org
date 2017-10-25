@@ -1,0 +1,109 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Expressões Lógicas
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Relacionais
+Envolvem operadores relacionais
++ igual, maior, menor, diferente
+São sobrecarregados para diversos tipos de dados primitivos
+* Lógicas
+Envolvem variáveis lógicas, constantes lógicas, expressões
+  relacionais lógicas, e *operadores lógicos*
++ And, Or, Not (Or exclusivo, equivalência)
+Possuem ordem de precedência 
++ Not
++ And
++ Or
+#+latex: \vfill
+Ausência do tipo booleano em C, usa-se outro tipo
+  #+begin_src C
+  int falso = 0;
+  int verdadeiro = !0;
+  #+end_src
++ Associação da esquerda para direita
+    + útil em curtos-circuitos
+* Lógicas
+Algumas consequências interessantes em C
+  #+begin_src C
+  int x = (a > b > c)
+  while (!feof(fd));
+  while (resultado = fread(fd));
+  #+end_src
+Em Objective-C
+  #+begin_src C
+  NSEnumerator *en = [conjunto objectEnumerator];
+  id object;
+  while ((object = [en nextObject]));
+  #+end_src
+#+latex: \vfill
+\pause  The Linux Backdoor Attempt in 2003
+  #+BEGIN_SRC C
+  if ((options == (__WCLONE|__WALL)) &&
+            (current->uid = 0)) ...
+  #+END_SRC
++ http://linux.slashdot.org/story/13/10/09/1551240/the-linux-backdoor-attempt-of-2003
+* Avaliação em curto-circuito
+Atalho quando o resultado de uma expressão é determinado por uma
+  parte dela
+Exemplos
+  #+begin_src C
+  (13 * a) * (b / 13 - 1)
+  (a >= 0) && (b < 10)
+  #+end_src
+#+latex: \vfill
+Técnica mais utilizada em expressões lógicas
+* Avaliação em curto-circuito
+Considere o seguinte exemplo
+#+begin_src C
+indice = 1;
+tamanho = 10;
+while ((indice < tamanho) && (lista[indice] != chave)){
+   indice++;
+}
+#+end_src
+O que aconteceria sem avaliação em curto-circuito?
+* Avaliação em curto-circuito
+Desvantagem?
+
+\pause Expressões com efeitos colaterais podem não ser executadas
++ Exemplo
+    #+begin_src C
+    (a > b) || (b++ / 3)
+    #+end_src
+  #+latex: \vfill
+\pause Observações
++ C/C++/Java avaliam && e || por curto-circuito
++ Ada
+    #+begin_src Ada
+    and
+    or //sem curto circuito
+    and then
+    or else //com curto circuito
+    #+end_src
+* Operador booleano /versus/ bit-a-bit
+Em Java, && e || são sempre lógicos \\
+  \rightarrow trabalham com expressões lógicas
+  #+begin_src Java
+  int a; boolean b;
+  if ((a>10) && b) { ... }
+  if (a && b) { ... }
+  #+end_src
+\pause  & e | trabalham com *bits*
++ Não são avaliadas com curto-circuito
+  #+begin_src Java
+  int a = 1, b = 2;
+  if (a & b) { ... } 
+  #+end_src

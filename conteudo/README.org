@@ -47,6 +47,7 @@ disciplina, podem variar em abrangência e profundidade.
  | Fluxo       | [[./aulas/fluxo/introducao.org][Introdução]]                                          |       |
  | Fluxo       | [[./aulas/fluxo/basicas.org][Básicas]]                                             |       |
  | Fluxo       | [[./aulas/fluxo/aritmeticas.org][Aritméticas]]                                         |       |
+ | Fluxo       | [[./aulas/fluxo/logicas.org][Lógicas]]                                             |       |
 
 *** Planejado
 
