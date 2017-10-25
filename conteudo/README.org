@@ -44,6 +44,7 @@ disciplina, podem variar em abrangência e profundidade.
  | Tipos       | [[./aulas/tipos/coercao.org][Coerção]]                                             |       |
  | Tipos       | [[./aulas/tipos/explicita.org][Conversão Explícita]]                                 |       |
  |-------------+-----------------------------------------------------+-------|
+ | Fluxo       | [[./aulas/fluxo/introducao.org][Introdução]]                                          |       |
 
 *** Planejado
 

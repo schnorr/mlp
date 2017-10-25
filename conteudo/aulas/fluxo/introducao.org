@@ -1,0 +1,145 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Introdução
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Principais questões no projeto de uma linguagem
+
+#+latex: \vfill
+Tipos de dados
++ Sistemas para tipagem, checagem de tipos
++ Equivalência, Compatibilidade, Inferência de tipos
+*Controle de Fluxo*
++ Avaliação de expressões (aritméticas, atribuição)
++ Fluxo estruturado e não-estruturado
+#+latex: \vfill
+Abstração de controle -- subprogramas
++ Registros de ativação
++ Modos de passagem de parâmetros
+Abstração de dados -- orientação a objeto
++ Encapsulamento e herança
++ Composição e polimorfismo
+#+latex: \vfill
+Concorrência
+
+* Visão geral sobre expressões
+Introdução geral
+
+Aritméticas, Relacionais, Lógicas, Atribuição (com modo misto)
+
+Operadores sobrecarregados
+
+Avaliação em curto-circuito
+
+Conversões de tipo
+* Introdução sobre expressões
+
+_Linguagens Imperativas_ (contexto)
+ 
+O que são expressões?
+
+Especifica computações; frase que, ao avaliada, produz valor
+
+Elementos: Operadores, Operandos, Parênteses
+
+#+latex: \vfill\pause
+
+Observações
+
+- Chamadas a funções podem ser operandos e operadores
+- Expressões envolvem sintaxe e semântica específicos
+- No projeto da linguagem, levar em conta
+  - Regras semânticas: *ordem* e *forma de avaliação*
+  - Efeitos *normais* e *colaterais* da avaliação
+
+* Aridade dos operadores
+_Aridade_: quantidade de operandos aceitos por um operadores
+#+latex: \vfill
+
+#+LaTeX: \begin{overlayarea}{\linewidth}{5cm}
+
+#+Latex: \only\pause {
+Unários
+
+=a + (- b) * c  # mudança de sinal=
+#+latex: \vfill
+
+#+Latex: }\only\pause {
+Binários
+
+=a - b=
+#+latex: \vfill
+
+#+Latex: }\only\pause {
+Ternários
+
+=(a > b) ? a : b=
+
+#+Latex: }\only\pause {
+Variável
+
+=printf=
+
+#+Latex: }\end{overlayarea}
+
+* Posição dos operadores
+Pré-fixados
+#+begin_src C
+a b
+- a
+soma(a, b)
+++cont
+Not a
+#+end_src
+#+latex: \vfill
+
+Infixados
+#+begin_src C
+a + b
+#+end_src
+#+latex: \vfill
+
+Pós-Fixados
+#+begin_src C
+cont++
+#+end_src
+* Exemplos de posição dos operadores
+
+  | Infixada | Pré-fixada | Pós-fixada |
+  |----------+------------+------------|
+  | $a+b*c$  | $+a*bc$    | $abc*+$    |
+  | $a*b+c$  | $+*abc$    | $ab*c+$    |
+  | $a+b+c$  | $++abc$    | $ab+c+$    |
+
+#+Latex: \pause\vfill
+
+Transformação de uma notação para outra
++ Muda a forma de visita do nó
+
+  | Infixada | Pré-fixada | Pós-fixada |
+  |----------+------------+------------|
+  | esquerda | *operador*   | esquerda   |
+  | *operador* | esquerda   | direita    |
+  | direita  | direita    | *operador*   |
+
+* Tipos de expressões
+
+Básicas (Literais, Agregações, Chamadas de funções, Referenciamento)
+
+Aritméticas
+
+Relacionais e lógicas (bit-a-bit ou não)
+
+Atribuição
