@@ -1,0 +1,140 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Expressões Aritméticas
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Aritméticas
+Finalidade \rightarrow especificar computações aritméticas
+
+Origem na Matemática
++ Define características e estabelece convenções
++ Define os operandos e expressões possíveis
+#+latex: \pause
+
+Com o que se preocupar
++ Ordem de avaliação dos operadores
+    + Precedência
+    + Associatividade
+    + Uso de parênteses
++ Ordem de avaliação dos operandos (e efeitos colaterais)
++ Sobrecarga e mesclagem dos modos
+* Aritméticas
+Ordem de Avaliação dos Operadores
++ Depende da precedência e da associatividade
+Resultado pode ser diferente
+  #+begin_src C
+  a = 3; b = 4; c = 5;
+  r = a + b * c
+  #+end_src
+\pause Tipo do operador dita a *ordem de precedência*
++ Precedência similar dos operadores matemáticos
++ Projetistas especificam ordens diferentes para não comuns
+* Aritméticas
+Regras de Precedência geral para operadores clássicos
++ Parênteses
++ Exponenciação
++ Multiplicação e divisão
++ Adição e subtração
+#+latex: \vfill
+Exemplo
+  #+begin_src C
+  r = a + b * c + d / e + (f + g)
+  #+end_src
++ Como implementar a avaliação desta expressão?
+    + Uma forma possível é através de uma estrutura hierárquica
+* Associatividade
+Como avaliar =a - b + c - d=?
+Regras de associatividade
++ Aplicadas quando há duas ou mais ocorrências de operadores de
+    mesmo nível de precedência
++ Dois tipos
+    + Associatividade *da esquerda para a direita*
+    + o contrário
+#+latex: \vfill
+#+Latex: \pause
+
+Em LPs comuns, sempre da esquerda para a direita
+#+Latex: \pause
+
+Algumas exceções
++ Exponenciação (em Fortran e Ada)
++ $++$ e $--$ prefixados (C, C++)
++ $+$ e $-$ unários (C, C++)
+* Associatividade
+E importa a ordem em casos como este?
+  #+begin_src C
+  a + b + c + d
+  #+end_src
+\pause Matematicamente não
++ Com a representação discreta pode importar
+* Ordem de avaliação 1/2
+Uso de parênteses controla a ordem de avaliação
+
+#+Latex: \pause
+
+Problemas relacionados com o seu uso
++ Escrita de expressões mais tediosa
++ Acabam com a legibilidade do código
+* Ordem de avaliação 2/2
+
+Preocupação quanto aos operandos
+
++ Variáveis -- como minimizar o acesso à memória?
++ Constantes -- em memória ou fixos no código?
++ Parênteses -- avaliadas antes das outras
++ Funções -- seu resultado deve ser recuperado
+
+\pause
+
+Preocupações quanto aos *efeitos colaterais*
+* Efeito colateral (funcional)
+Acontece quando uma função modifica um de seus parâmetros ou uma variável global
++ Não há em funções puras no paradigma funcional
++ Não há com passagem por valor
+\pause  Suponha que
+  #+begin_src C
+  int a = 10;
+  int foo (int &x) { //passagem por referência
+     x = x/2;
+     return x;
+  }
+  #+end_src
+\pause  Se tiveremos =a + foo(a)=, o que acontece?
++ Se avaliarmos =foo(a)= primeiro
++ Se avaliarmos a variável =a= primeiro
+* Efeito colateral -- Alternativas em Projeto
+Impedir/Eliminar funções que modifiquem vars. externas
++ Como programar sem variáveis globais?
+\pause Optar por uma única ordem de avaliação (Java)
++ Como otimizar o programa?
+\pause  Aceitar somente quando as funções não modificam os valores
+  dos outros operandos na mesma expressão (Fortran 77)
++ Como garantir isso?
+\pause Não fazer nada
++ Fica a critério do compilador/interpretador
+* Sobrecarga
+Mesmo símbolo, múltiplos propósitos
+  #+begin_src C
+  x = &y;
+  z = x & y;
+  #+end_src
+Conjuntos distintos, com resultados distintos
+  #+begin_src C
+  float media;
+  int soma, cont;
+  media = soma/cont;
+  #+end_src
++ \pause Pascal tem dois operadores de divisão
+
