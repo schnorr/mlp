@@ -1,0 +1,111 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Desvios Incondicionais
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Desvios *Incondicionais*
+Tipos
++ Irrestritos
++ Restritos
+* Irrestritos
+Evitá-los
+
+\pause  É o comando =goto=
++ Diminui a legibilidade
++ Em alguns casos, pode ter ganho de desempenho
+* Restritos
+Permitem finalização diferente da usual
+
+Desvios *disciplinados* e *estruturados*
+
+Não entram em repetições nem desviam o fluxo para um lugar
+  qualquer
+
+\pause Comandos típicos
++ =break;= -- termina um bloco de laço mais interno
++ =continue;= -- pula o resto da iteração do laço mais interno
++ =return;= -- sai do subprograma
++ =exit;= -- sai do programa
+#+latex: \vfill
+* Restritos
+Exemplo com =break;=
+  #+begin_src C
+  S=0;
+  for(;;){ // lê um número inteiro natural
+    printf("n: ");
+    scanf("%d", &n);
+    if(n <= 0) break; // vai para o fim do laço e sai
+    s+=n;
+  }
+  #+end_src
+* Restritos
+Exemplo com =continue;=
+  #+begin_src C
+  S=0; i = 0;
+  while(i<10){ // soma 10 números naturais
+     printf("n: ");
+     scanf("%d", &n);
+     if(n < 0) continue; // volta para o início do laço
+     s+=n;
+     i++;
+  }
+  #+end_src
+* Restritos
+Exemplo com =return= e com =exit=
+  #+begin_src C
+  void trata (int erro) {
+    if(erro==0){
+       printf("nada a tratar");
+       return; // interrompe função
+    }
+    if(erro<0){
+       printf("erro grave");
+       exit(1); // sai do programa
+    }
+    printf("erro tratado");
+  }
+  #+end_src
+* Restritos
+Escapes rotulados (Java/Ada)
+Exemplo
+  #+begin_src Java
+  busca:
+  for(i=0; i<arrayOfInts.length; i++) {
+      for(j=0; j<arrayOfInts[i].length; j++) {
+         if (arrayOfInts[i][j] == searchfor) {
+            encontrado = true;
+            break busca;
+         }
+      }
+  }
+  #+end_src
+* Restritos
+Escapes rotulados (Java/Ada)
+Exemplo genérico
+  #+begin_src Java
+  Loop_externo:
+  for(;;) {
+      Loop_interno:
+      for(;;){
+          /* comandos */
+          break Loop_interno;
+          /* comandos */
+          continue Loop_externo;
+      }
+  }
+  #+end_src
+
+
+
