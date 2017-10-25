@@ -38,4 +38,4 @@ Quando a entrega for por =Email (corpo)=, siga este método:
 | #08  | [[./08/README.org][Vinculação de estocagem e escopo]]     | [[https://goo.gl/forms/XiBUY20Uq27MO9QX2][Formulário]]    | 2017-10-10 | [[./eval/08/README.org][Respostas]] |
 | #09  | [[./09/README.org][Vínculos e Tipos de dados]]            | [[https://goo.gl/forms/hPgR5XrYwOhwLHB22][Formulário]]    | 2017-10-11 | [[./eval/09/README.org][Respostas]] |
 |------+--------------------------------------+---------------+------------+-----------|
-| #10  | Controle de Fluxo                    |               |            |           |
+| #10  | [[./10/README.org][Controle de Fluxo]]                    | [[https://goo.gl/forms/9q2TEEu3JmHyN17F2][Formulário]]    | 2017-10-31 |           |
