@@ -56,7 +56,7 @@ disciplina, podem variar em abrangência e profundidade.
  | Polimorfismo | [[./aulas/polimorfismo/introducao.org][Introdução]]                                          |       |
  | Polimorfismo | [[./aulas/polimorfismo/adhoc.org][Ad-hoc]]                                              |       |
  | Polimorfismo | [[./aulas/polimorfismo/universal.org][Universal]]                                           |       |
- | Polimorfismo | [[./aulas/polimorfismo/vinculacao.org][Vinculação]]                                          |       |
+ | Polimorfismo | [[./aulas/polimorfismo/vinculacao.org][Vinculação]]                                          | [[../catps/][#11]]   |
  |--------------+-----------------------------------------------------+-------|
 
 *** Planejado
