@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #11 (Polimorfismo)
+
+1. Implementa em C++ um tipo de dados =Pilha= que trabalhe com qualquer tipo.
+   - Use =templates=.
+   - Com tal definição, implemente uma pilha de pilha de pilha de inteiros.
+
+2. Demonstre polimorfismo por inclusão em OO
+   - Em qualquer linguagem salvo C++, Java e Python
+
