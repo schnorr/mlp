@@ -1,0 +1,70 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: TAD Paramétrico
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* TAD Parametrizados
+
+Um TAD que pode guardar elementos de qualquer tipo
+
++ Exemplo: Definir um TAD Pilha para qualquer coisa
+
+Conhecido por *Classes Genéricas*
+
+#+latex: \vfill
+
+Vinculação de tipo estática
++ C++, Ada, Java 5.0
+
+* Ada
+
+Pacotes Genéricos [[./generic_stack.ads]]
+
+#+latex: \vfill
+#+Latex: \pause
+
+Instanciação da pilha genérica
+
+#+Latex:  \small
+  #+begin_src Ada
+  package PilhaInteiros is new Pilha_Generica(100,Integer);
+  package PilhaFlutuantes is new Pilha_Generica(100,Float);
+  #+end_src
+
+* C++
+Templates [[./pilha_generica.cc]]
+
+#+latex: \vfill
+#+Latex: \pause
+
+Instanciação da pilha genérica
+#+Latex:  \small
+  #+begin_src C++
+  Pilha<int> minhaPilhaInteira;
+  #+end_src
+
+* Java
+
+Generics [[./pilha_generica.java]]
+
+#+latex: \vfill
+#+Latex: \pause
+
+Instanciação da pilha genérica
+
+#+Latex:  \small
+  #+begin_src Java
+  Pilha<string> minhaPilha = new Pilha<string> ();
+  #+end_src

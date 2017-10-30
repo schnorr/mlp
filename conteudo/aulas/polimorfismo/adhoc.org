@@ -1,0 +1,215 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Polimorfismo Ad-hoc
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Polimorfismo adhoc
+
+Polimorfismo de aparência
+
+Reuso aparente, na prática não o faz 
+
+#+latex: \vfill
+Subtipos
++ Coerção
++ Sobrecarga
+
+* Polimorfismo adhoc por coerção
+
+Conversão implícita
++ Alargamento
+    + Do conjunto mais restrito para o menos restrito
++ Estreitamento
+    + Do conjunto menos restrito para o mais restrito
+    + Perda de informação
+
+#+Latex: \vfill
+
+Exemplo de polimorfismo adhoc por coerção
+  #+begin_src C
+  void f(float i) { }
+  main() {
+    long num;
+    f(num);
+  }
+  #+end_src
++ O subprograma =f()= é polimórfico?
+
+* Polimorfismo adhoc por coerção
+
+Segundo exemplo de polimofirmo adhoc por coerção
+
+  #+begin_src C
+  main() {
+    int w = 3;
+    float x;
+    float y = 5.2;
+    x = x + y;
+    x = x + w;
+  }
+  #+end_src
+
+O operador =+= é polimórfico?
+
+* Exercício
+
+Onde ocorre *polimorfismo aparente* neste trecho em C?
+
+  #+begin_src C
+  1  main() {
+  2    int i;
+  3    char c = 'a';
+  4    float x;
+  5    i = c;
+  6    c = i + 1;
+  7    x = i;
+  8    i = x / 7;
+  9  }
+  #+end_src
+* Polimorfismo adhoc por coerção
+
+Redigibilidade facilitada
+
+Diminuem a confiabilidade
+
+#+latex: \vfill
+
+Algumas abordagens
++ Permitir todos os tipos de coerção
++ Não permitir coerção
++ Só permitir coerção por alargamento (caso de Java)
+
+* Polimorfismo *adhoc por sobrecarga*
+
+Sobrecarga: operador ou identificador com usos distintos
+
+Somente deve ser aceito *se não houver ambiguidades*
+#+latex: \vfill
+Exemplo
++ Operador - e + em C (e em várias linguagens)
+
+    #+begin_src C
+    main() {
+       int a = 1, b = 2;
+       float x = 1.2, y = 2.4;
+       x = a + b;
+       x = x + y;
+    }
+    #+end_src
+
+* Polimorfismo adhoc por sobrecarga
+
+Sobrecarga nos faz pensar em operações polimórficas
+
+Mas na realidade, não
+
+  #+begin_src C
+  main() {
+     int a = 1, b = 2;
+     float x = 1.2, y = 2.4;
+     x = a + b;
+     x = x + y;
+  }
+  #+end_src
+
+Veja [[./sobrecarga.c]]
+- Compile com =gcc -S sobrecarga.c=, olhe o arquivo =sobrecarga.s=
+
+* Sobrecarga em Linguagens
+
+C, Modula-2 tem sobrecarga embutida
+Java
++ Sobrecarga de métodos
+C++, Ada
++ Sobrecarga de métodos
++ Sobrecarga de operadores com algumas regras
+    + Ordens de precedência e associatividade são mantidas
+    + Não pode-se sobrecarregar =::= =.= =sizeof=
+
+* Exemplo de sobrecarga de operador em C++
+
+Sobrecarregando os operadores + e * para complexos
+  #+begin_src C++
+  class Complex {
+     double re, im;
+     public:
+        //...
+        Complex operator+ (Complex);
+        Complex operator* (Complex);
+  #+end_src
+Exemplo de Uso
+  #+begin_src C++
+  Complex d = a + b * c;
+  #+end_src
+
+* Exemplo de sobrecarga de operador em C++
+
+Uso do operador é apenas um atalho
+Exemplo
+  #+begin_src C++
+  void f(Complex a, Complex b) {
+     Complex c = a + b;
+     Complex d = a.operator+(b);
+  }
+  #+end_src
+
+* Sobrecarga de subprogramas
+
+Dependente do contexto -- distinção pelo valor de retorno
++ Abordagem não utilizada
++ Exemplos
+    #+begin_src C
+    void foo (void);
+    int foo (void);
+    #+end_src
+#+Latex: \pause
+
+*Independente do contexto* -- distinção pelos parâmetros
++ Mais comum, tipo de retorno é ignorado
++ Exemplos
+    #+begin_src C
+    void foo (void) { }
+    void foo (float a) { }
+    void foo (int x, int y) { }
+
+    main(){
+       foo();
+       foo(4.2);
+       foo(3, 1);
+    }
+    #+end_src
+* Exercício
+
+Quais funções são chamadas? 
+#+Latex: \scriptsize
+ Quais erros seriam detectados?
+#+Latex: \normalsize
++ Case Dependente versus Caso Independente do contexto
+  \normalsize
+  #+begin_src C
+  void f(void) {  }
+  void f(float) {  }
+  void f(int, int) {  }
+  void f(float, float) {  }
+  int  f(void) {  }
+  main(){
+     f();
+     f(2.3);
+     f(4, 5);
+     f(2.2f, 7.3f);
+     f(3, 5.1f);
+     f(1l, 2l);
+  }
+  #+end_src

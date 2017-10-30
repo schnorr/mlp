@@ -1,0 +1,111 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Vinculação Dinâmica e Estática 
+#+subtitle: (com Polimorfismo por Inclusão)
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Polimorfismo Universal por Inclusão \small Mecanismos
+
+#+BEGIN_CENTER
+Vinculação dinâmica (tardia) ou estática
+#+END_CENTER
+
+Considerando
+    #+begin_src Java
+    class Pessoa {
+       public mostrar() { }
+    }
+    class Aluno extends Pessoa {
+       public mostrar() { }
+    }
+    #+end_src
+
+Quando executarmos o seguinte código
+    #+begin_src Java
+    Pessoa p = new Aluno();
+    p.mostrar();
+    #+end_src
+
+Qual método é chamado?
+* Vinculação Dinâmica
+
+Escolha do método em tempo de execução
+
+Maior flexibilidade e reuso de código
+
+Desvantagens
+
++ Menor eficiência?
+    + C++, 15% mais lento? \\
+    + Objective-C, depende do runtime e do compilador
+
+* Vinculação Dinâmica -- Implementação
+
+Tabelas de métodos virtuais (C++, Java)
+
+#+latex: \vfill
+
+#+ATTR_LATEX: :width .8\linewidth
+[[./img/vtables.pdf]]
+
+
+* Vinculação Estática
+
+Em tempo de compilação
+
+Em C++, vinculação estática é o padrão
+
+  #+begin_src C++
+  class Pessoa {
+    public:
+      void mostrar() { }
+  };
+  class Aluno: public Pessoa {
+    public:
+      void mostrar() { }
+  };
+  Pessoa *p = new Aluno;
+  p->mostrar();
+  #+end_src
+#+latex: \vfill
+Linguagens deixam o programador decidir a vinculação
++ Estática ou dinâmica
+* Vinculação \small Escolha do Programador em C++
+
+Em C++ a vinculação é estática por padrão
+
+Vinculação dinâmica explícita com =virtual=
+
+  #+begin_src C++
+  class Pessoa {
+    public:
+      void ler() { } // estática
+      virtual void imprimir() { } // tardia
+  };
+  #+end_src
+
+* Vinculação \small Escolha do Programador em Java
+
+Em Java a vinculação é dinâmica por padrão
+
+Vinculação estática explícita com =final=
+
+  #+begin_src Java
+  class Aluno {
+     public void ler() { } // tardia
+     final public void imprimir() { } // estática
+     static public void nada() { } //método de classe
+  };
+  #+end_src     

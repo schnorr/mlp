@@ -1,0 +1,126 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Introdução
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Visão Geral
+
+Código capaz de operar sobre tipos diferentes
+
+Grau de Polimorfismo do Sistema de Tipos \\
+  \rightarrow *Reutilização de Código*
+
+#+latex: \vfill
+
+Existem vários tipos de polimorfismo
++ Coerção
++ Sobrecarga
++ Paramétrico
++ Inclusão
+
+* Conceitos Relacionados
+
+Sistema de Tipos
+
+Verificação de Tipos
++ Garante a compatibilidade entre operandos e operadores
++ Pode ser *estática* ou *dinâmica*
+
+Tipos Compatíveis
++ Adequados para a operação de um determinado operador
++ Operandos são convertidos implicitamente
+
+Inferência de Tipos
+
+* Tipagem Estática
+
+Verificação de tipo feita na *compilação*
+
+#+Latex: \pause
+
+Vantagens
++ Geração de código mais confiável
++ Depuração simplificada
++ Maior legibilidade
+
+#+Latex: \pause 
+
+Desvantagens
++ Menor redigibilidade
++ Menor reuso de código
+
+* Tipagem Dinâmica
+
+Verificação de tipo feita na *execução*
+
+#+Latex: \pause
+
+Vantagens
++ Flexibilidade
++ Redigibilidade
++ Reuso de código
+  #+begin_src LISP
+  (defun segundo (l)
+     (car (cdr l)))
+
+  (segundo (1 2 3))
+  (segundo ("abacate" "pessego" "banana"))
+  #+end_src
+#+Latex: \pause
+
+Desvantagens
++ Menor eficiência
++ Redução de legibilidade
++ Maior consumo de memória
+
+* Sistema de Tipos \small Mono /versus/ Polimórfico
+
+Monomórfico
++ Elementos da linguagem devem ter tipos específicos
++ Mais simplicidade
++ Nenhum reuso de código
++ Exemplos: Pascal e Modula-2
+
+#+latex: \vfill
+
+#+Latex: \pause
+
+Polimórfico
++ Algoritmos que atuam sobre vários tipos diversos
++ Tipos de Dados e Subprogramas polimórficos
++ Exemplos: Ada, ML, C++, Java, Objective-C, ...
+
+* Definições
+
+Possibilidade de criar código sobre tipos distintos
+
+Propriedade de um sistema de tipos
++ Permite escrever abstrações uniformes sobre tipos diversos
+
+#+latex: \vfill
+
+#+Latex: \pause
+
+Sistema de Tipos Polimórfico \\
+ \rightarrow Elementos da linguagem podem assumir vários tipos
+
+* Tipos de Polimorfismo
+
+#+ATTR_LATEX: :width .7\linewidth
+[[./img/tipos-polimorfismo.pdf]]
+
+Adhoc -- somente sobre abstrações de controle
+
+Universal -- sobre abstrações de dados e de controle

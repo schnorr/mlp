@@ -1,0 +1,106 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Polimorfismo Universal
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Polimorfismo Universal
+Polimorfismo verdadeiro
+
+Ocorre quando
++ Estrutura de dados incorpora elementos de tipos diversos
++ Aplica-se mesmo código sobre elementos de tipos diversos
+Permite a *programação genérica*
+#+latex: \vfill
+Subtipos
++ Paramétrico
++ Inclusão
+* Paramétrico
+TAD Parametrizados
++ Estrutura de Dados
++ Subprogramas
+Parâmetro adicional especifica o tipo
+
+Exemplos
++ Ada Generic Units
++ Templates C++
++ Java Generics
+
+* por Inclusão
+Característico de linguagens orientadas a objetos
+
+Uso de hierarquia de tipos
+
+Fundamentação
++ Elemento de um subtipo é também elemento do supertipo
++ Algoritmo para um supertipo pode ter elementos de subtipo
+#+latex: \vfill
+#+Latex: \pause
+
+Mecanismos
++ *Herança*
++ Sobreescrita -- *Polimorfismo por sobrecarga*
+
+* por Inclusão
+Permite a criação de código polimórfico
+
+Subprogramas dependem do tipo do objeto
+
+#+latex: \vfill
+Exemplo
+  #+begin_src C
+  public void manter (Veiculo veiculo) {
+      veiculo.vistoria();
+      veiculo.conserto();
+      veiculo.limpeza();
+  }
+  #+end_src
+* por Inclusão
+Mecanismos relevantes
++ Indentificação dinâmica de tipos
++ /Upcasting/
++ /Downcasting/
++ Vinculação dinâmica (tardia) ou estática
+* por Inclusão \small Mecanismos
+Indentificação dinâmica de tipos
+  #+begin_src Java
+  public void manter (Veiculo veiculo) {
+    veiculo.vistoria();
+    veiculo.conserto();
+    veiculo.limpeza();
+  }
+  #+end_src
+/Upcasting/
+  #+begin_src Java
+  Pessoa p = new Aluno();
+
+  Transporte[] transportes = new Transporte[3];
+  transportes[0] = new Navio();
+  transportes[1] = new Aviao();
+  transportes[2] = new Onibus();
+  #+end_src
++ Métodos específicos da subclasse se tornam invisíveis
+* por Inclusão \small Mecanismos
+/Downcasting/
++ Em geral, não é permitido implicitamente
++ Requer conversão explícita
+    #+begin_src Java
+    LinkedList listaI = new LinkedList();
+    for (int i = 0; i < 10; i++)
+       listaI.add(new Integer(i));
+
+    for (int i=0; i < listaI.length; i++)
+       Integer val1 = (Integer) listaI.getLast();
+    #+end_src
+
