@@ -4,7 +4,7 @@
 
 * CATP #11 (Polimorfismo)
 
-1. Implementa em C++ um tipo de dados =Pilha= que trabalhe com qualquer tipo.
+1. Implementa em C++ um tipo de dados =Fila= que trabalhe com qualquer tipo.
    - Use =templates=.
    - Com tal definição, implemente uma pilha de pilha de pilha de inteiros.
 
