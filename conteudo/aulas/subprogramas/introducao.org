@@ -1,0 +1,114 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Introdução
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Abstração
+Abstração é *fundamental* em linguagens de programação
++ Nomear uma parte do programa potencialmente complexa
++ Grau de separação entre
+    + Linguagem de programação
+    + Arquitetura do computador
+#+latex: \vfill
+\pause  Existem dois tipos de abstração
++ *Abstração de Controle* \scriptsize (operações e ações)
+    + Existe desde os primórdios da computação
++ \normalsize Abstração de Dados \scriptsize (representação de informações)
+    + Proposta na década de 80
+* Abstração de Controle
+Abstração de Controle \rightarrow *Subprogramas*
++ Separam-se as operações repetitivas do programa
++ Podem ser chamadas em diferentes momentos
+Vantagens
++ Permite economizar memória
++ Diminui o tempo de codificação
++ Aumentam legibilidade, simplificam o código
+* Subprograma
+Único ponto de entrada, vários de saída
+
+Apresenta uma relação de mestre-escravo
+#+latex: \vfill
+
+Controle é suspenso na unidade chamadora
+
+Retorna após o fim da unidade chamada
+#+latex: \vfill
+\pause Tipos de subprogramas
++ Função \scriptsize -- Retorna um valor
++ \small Procedimento \scriptsize -- *Não* retorna um valor
++ \pause \small Corotinas \rightarrow quebram a relação de mestre-escravo
+    + *Múltiplas entradas*
+    + Linguagens: apenas Lua (e Python) as implementam
+
+* Subprograma -- Algumas Questões de Projeto
+
+- Como se dá a ativação dos subprogramas?
+
+- Quais ambientes de referência são permitidos/usados? São locais ou
+  globais? Qual é o alcance e a visibilidade dos componentes?
+
+- Qual é o funcionamento e a semântica das variáveis locais?
+
+- Há proteção de componentes locais?
+
+- Subprogramas aninhados são permitidos?
+
+- Sobrecarga de subprogramas é permitida?
+
+- Podem ser usadas/declaradas unidades genéricas?
+
+* Subprograma -- Conceitos
+
+Uma *definição* de subprograma (cabeçalho e corpo)
++ O cabeçalho contém o tipo, nome e parâmetros
+    + Permite verificações de tipo pelo compilador
++ O corpo contém a implementação, ele define
+    + Um ponto de entrada da execução
+    + Um ambiente de execução
+    + Operações
++ Código reentrante
+\pause Algumas curiosidades
++ Python: diretiva =def= é executável
++ Lua: todas as funções são anônimas
+    #+begin_src Lua
+    function cube(x) return x*x*x end
+    cube = function (x) return x*x*x end
+    #+end_src
+#+latex: \vfill
+\pause  *Chamada* de subprograma o torna *ativo*
++ Requisição explícita de execução
++ *Vinculação* entre o ponto de chamada e o código
+
+* Semântica de Chamadas e Retornos
+
+Vinculação de subprogramas exige o registro de dados
+
+*Pergunta:* Quais informações são essenciais?
+
++ \pause Estado da execução no ponto de chamada
++ \pause Passagem de parâmetros, dependendo do método empregado
++ \pause Ambiente global de execução
++ \pause Ambiente local de execução
++ \pause Endereço de retorno
+
+\pause Armazenadas em um *Registro de Ativação* (RA ou /frame/)
+
+\pause Na chamada, uma *instância* do RA é criada na pilha
+
+* Visão Geral da Memória
+
+#+ATTR_LATEX: :width .7\linewidth
+[[../vinculos/code-data-stack-heap-6.png]]
+
