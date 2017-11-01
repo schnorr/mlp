@@ -16,13 +16,20 @@ main:
 	movss	%xmm0, -12(%rbp)
 	movss	.LC1(%rip), %xmm0
 	movss	%xmm0, -16(%rbp)
+	movsd	.LC2(%rip), %xmm0
+	movsd	%xmm0, -24(%rbp)
+	movsd	.LC3(%rip), %xmm0
+	movsd	%xmm0, -32(%rbp)
 	movl	-4(%rbp), %edx
 	movl	-8(%rbp), %eax
 	addl	%edx, %eax
-	movl	%eax, -20(%rbp)
+	movl	%eax, -36(%rbp)
 	movss	-12(%rbp), %xmm0
 	addss	-16(%rbp), %xmm0
-	movss	%xmm0, -24(%rbp)
+	movss	%xmm0, -40(%rbp)
+	movsd	-24(%rbp), %xmm0
+	addsd	-32(%rbp), %xmm0
+	movsd	%xmm0, -48(%rbp)
 	movl	$0, %eax
 	popq	%rbp
 	.cfi_def_cfa 7, 8
@@ -37,5 +44,13 @@ main:
 	.align 4
 .LC1:
 	.long	1074161254
+	.align 8
+.LC2:
+	.long	1717986918
+	.long	1073899110
+	.align 8
+.LC3:
+	.long	0
+	.long	1074528256
 	.ident	"GCC: (Debian 7.2.0-11) 7.2.0"
 	.section	.note.GNU-stack,"",@progbits
