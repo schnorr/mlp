@@ -1,0 +1,88 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Acesso a Dados
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Subprogramas -- Acesso a dados
+Duas formas
+#+latex: \vfill
+Através da passagem de parâmetros
++ Nomes locais aos subprogramas
++ Mais flexível, seguro e legível
+Através de *acesso direto a variáveis não locais*
+* Acesso a Variáveis não Locais
+Variáveis não-locais
++ Declaradas em outro bloco (visível) dentro do programa
++ Acesso depende se o escopo é *estático* ou *dinâmico*
+#+latex: \vfill
+\pause Escopo Dinâmico
++ Simples de implementar
++ Descendo na pilha até encontrar a variável
+\pause Escopo Estático
++ Um pouco mais complexo
++ Dois métodos de localização
+    + Encadeamento estático (/static chain/)
+    + Displays
+* Acesso a Variáveis não Locais \small (Encadeamento Estático)
+Cadeia de vínculos estáticos que conectam registros de ativação
+
+Vincula todos os ancestrais estáticos de um subprograma
+#+latex: \vfill
+\pause Endereço de uma variável é uma *tupla*
++ Profundidade estática
++ Deslocamento local
+#+latex: \vfill
+\pause Problemas do Encadeamento Estático
++ Encontrar uma variável pode envolver vários acessos
+    + Igual ao nível de profundidade do subprograma
++ Deve-se localizar o RA mais recente do subprograma pai
+* Acesso a Variáveis não Locais \small (Display)
+Vínculos estáticos ficam no *Display*
+
+Vetor que armazena uma lista de endereços dos RA
++ Na ordem em que estão aninhados
+#+latex: \vfill
+Custo baixo no acesso a variáveis locais
+
+Deve-se gerenciar o display (a cada chamada e retorno)
+* Display -- Exercício 3
+Supor o código
+  \scriptsize
+  #+begin_src C
+  A(){
+    int vara;
+
+    B(){
+      int varb;
+
+      C(){ int varc; }
+      D(){ int varc; }
+    }
+    E(){
+      int vare;
+ 
+    }
+  }
+  #+end_src
+\normalsize
+A ordem de chamada é
+  #+begin_src C
+  A E B D C
+  #+end_src
+Fornecer o conteúdo detalhado do display em cada passo
+* Algumas Observações (Bonus)
+Blocos
+Expansão =inline=
++ Diferença de macros do pré-processador
