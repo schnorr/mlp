@@ -58,6 +58,10 @@ disciplina, podem variar em abrangência e profundidade.
  | Polimorfismo | [[./aulas/polimorfismo/universal.org][Universal]]                                           |       |
  | Polimorfismo | [[./aulas/polimorfismo/vinculacao.org][Vinculação]]                                          | [[../catps/][#11]]   |
  |--------------+-----------------------------------------------------+-------|
+ | Subprogramas | [[./aulas/subprogramas/introducao.org][Introdução]]                                          |       |
+ | Subprogramas | [[./aulas/subprogramas/registro.org][Registros de Ativação]]                               |       |
+ | Subprogramas | [[./aulas/subprogramas/acesso.org][Acesso a Dados]]                                      |       |
+ |--------------+-----------------------------------------------------+-------|
 
 *** Planejado
 
