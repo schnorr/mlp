@@ -62,12 +62,10 @@ Várias chamadas ao mesmo subprograma \\
 Membros endereçáveis com deslocamento sobre =fp= \\
   \rightarrow Por questões de *Desempenho* e Simplicidade
 
+#+ATTR_LATEX: :width .45\linewidth
+[[./img/ar.svg.png]]
 
-
-
-
-#+latex: \pause
-
+* RA - Adicional
 Duas partes
 + Parte de tamanho fixo
 + Parte de tamanho variável
