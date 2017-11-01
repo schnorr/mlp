@@ -31,6 +31,135 @@ Em linguagens Algol-like, preocupa-se com os seguintes
 Formato de RA: há uma convenção entre compiladores
 + *Interoperabilidade*
 
+
+* Registro de Ativação -- Caso Típico
+Conteúdo de um Registro de Ativação (topo para baixo)
++ Variáveis Locais
++ Parâmetros
++ Vínculo Dinâmico (ponteiro para o RA do pai dinâmico)
++ Vínculo Estático (ponteiro para o RA do pai estático)
++ Endereço de Retorno (ponteiro para o segmento de código)
+* Registro de Ativação -- Instâncias
+Na invocação, criada e colocada no topo da pilha
+
+Removida da pilha no momento do retorno
+
+#+latex: \vfill\pause
+
+Várias chamadas ao mesmo subprograma \\
+  \rightarrow várias instâncias de registro de ativação
++ Chamadas recursivas
+#+latex: \pause
+
+Qual o problema desta abordagem?
++ Qual seria a possível solução para o problema?
+
+*** teste :noexport:
+#+latex: \vfill
+\pause Problema de estouro (/overflow/) de pilha \\
+  (para programas com *vários fluxos*)
++ GCC 4.6.0 \rightarrow *SplitStacks*
+    1. Pilha sempre tem espaço \rightarrow *Área de Guarda*
+    2. Função verifica se RA cabe nesta área
+    3. Se maior \rightarrow expansão do tamanho da pilha
+* Registro de Ativação -- Organização
+Membros endereçáveis com deslocamento sobre =fp= \\
+  \rightarrow Por questões de *Desempenho* e Simplicidade
+
+#+latex:
+\pause
+
+Duas partes
++ Parte de tamanho fixo
++ Parte de tamanho variável
+#+latex: \vfill
+\pause Variáveis locais de tamanho estático
++ Fazem parte da parte de tamanho fixa
+\pause Variáveis locais de tamanho dinâmico
++ Alocados na parte de tamanho variável
++ Ponteiro e Descritor na parte de tamanho fixo
++ Exemplo em C99
+    #+begin_src C99
+    void square(int n, double M[n][n]){
+       double T[n][n];
+       //...
+    }
+    #+end_src  
+* RA -- Exercício 1
+Qual o tamanho do registro de ativação da seguinte função?
+  #+begin_src C99
+  void sub (float total, int parte) {
+     int lista[30];
+     float real;
+     int m[parte];
+  }
+  #+end_src
+Considerando que ela é chamada assim
+  #+begin_src C99
+  sub (3.14, 2);
+  sub (1.07, 300);
+  #+end_src
+Tamanho da palavra é 4 bytes
+
+Como ficam os deslocamentos?
+* RA -- Exercício 2
+Supor o código
+  \scriptsize
+  #+begin_src C
+  A(){
+    int vara;
+
+    B(){
+      int varb;
+
+      C(){ int varc; }
+      D(){ int varc; }
+    }
+    E(){
+      int vare;
+ 
+    }
+  }
+  #+end_src
+\normalsize
+A ordem de chamada é
+  #+begin_src C
+  A E B D C
+  #+end_src
+Fornecer o conteúdo detalhado da pilha
+
+* Sequência de Chamada
+Parte da implementação de subprogramas
+
+Código adicionado pelo compilador
+
+Implementa as decisões de projeto
+
+#+latex: \vfill
+
+*Sequência de chamada* (executada pelo chamador)
+
+*Prólogo* (executado pelo chamado, no início)
+
+*Epílogo* (executado pelo chamado, no final)
+* Sequência de Chamada
+Sequência de chamada (chamador)
+  1. Cria um novo registro de ativação
+  2. Calcula o vínculo estático
+  3. Salva o estado de execução atual (registradores)
+  4. Passa os parâmetros (organizando-os na pilha)
+  5. Passa o endereço de retorno para o chamado
+  6. Transfere o controle
+\pause Prólogo (chamado, início)
+  1. Salva o antigo =fp= na pilha (como vínculo dinâmico)
+  2. Aloca variáveis locais
+\pause Epílogo (chamado, final)
+  1. Prepara os parâmetros de retorno
+  2. Disponibiliza o valor de retorno para o chamador
+  3. Atualiza o =fp= e o =sp=
+  4. Atualiza o estado de execução do chamador
+  5. Transfere o controle
+
 * Demo
 
 #+begin_src shell :results output
@@ -251,133 +380,4 @@ Disassembly of section .fini:
  6c8:	48 83 c4 08          	add    $0x8,%rsp
  6cc:	c3                   	retq   
 #+end_example
-
-
-* Registro de Ativação -- Caso Típico
-Conteúdo de um Registro de Ativação (topo para baixo)
-+ Variáveis Locais
-+ Parâmetros
-+ Vínculo Dinâmico (ponteiro para o RA do pai dinâmico)
-+ Vínculo Estático (ponteiro para o RA do pai estático)
-+ Endereço de Retorno (ponteiro para o segmento de código)
-* Registro de Ativação -- Instâncias
-Na invocação, criada e colocada no topo da pilha
-
-Removida da pilha no momento do retorno
-
-#+latex: \vfill\pause
-
-Várias chamadas ao mesmo subprograma \\
-  \rightarrow várias instâncias de registro de ativação
-+ Chamadas recursivas
-#+latex: \pause
-
-Qual o problema desta abordagem?
-+ Qual seria a possível solução para o problema?
-
-*** teste :noexport:
-#+latex: \vfill
-\pause Problema de estouro (/overflow/) de pilha \\
-  (para programas com *vários fluxos*)
-+ GCC 4.6.0 \rightarrow *SplitStacks*
-    1. Pilha sempre tem espaço \rightarrow *Área de Guarda*
-    2. Função verifica se RA cabe nesta área
-    3. Se maior \rightarrow expansão do tamanho da pilha
-* Registro de Ativação -- Organização
-Membros endereçáveis com deslocamento sobre =fp= \\
-  \rightarrow Por questões de *Desempenho* e Simplicidade
-
-#+latex:
-\pause
-
-Duas partes
-+ Parte de tamanho fixo
-+ Parte de tamanho variável
-#+latex: \vfill
-\pause Variáveis locais de tamanho estático
-+ Fazem parte da parte de tamanho fixa
-\pause Variáveis locais de tamanho dinâmico
-+ Alocados na parte de tamanho variável
-+ Ponteiro e Descritor na parte de tamanho fixo
-+ Exemplo em C99
-    #+begin_src C99
-    void square(int n, double M[n][n]){
-       double T[n][n];
-       //...
-    }
-    #+end_src  
-* RA -- Exercício 1
-Qual o tamanho do registro de ativação da seguinte função?
-  #+begin_src C99
-  void sub (float total, int parte) {
-     int lista[30];
-     float real;
-     int m[parte];
-  }
-  #+end_src
-Considerando que ela é chamada assim
-  #+begin_src C99
-  sub (3.14, 2);
-  sub (1.07, 300);
-  #+end_src
-Tamanho da palavra é 4 bytes
-
-Como ficam os deslocamentos?
-* RA -- Exercício 2
-Supor o código
-  \scriptsize
-  #+begin_src C
-  A(){
-    int vara;
-
-    B(){
-      int varb;
-
-      C(){ int varc; }
-      D(){ int varc; }
-    }
-    E(){
-      int vare;
- 
-    }
-  }
-  #+end_src
-\normalsize
-A ordem de chamada é
-  #+begin_src C
-  A E B D C
-  #+end_src
-Fornecer o conteúdo detalhado da pilha
-
-* Sequência de Chamada
-Parte da implementação de subprogramas
-
-Código adicionado pelo compilador
-
-Implementa as decisões de projeto
-
-#+latex: \vfill
-
-*Sequência de chamada* (executada pelo chamador)
-
-*Prólogo* (executado pelo chamado, no início)
-
-*Epílogo* (executado pelo chamado, no final)
-* Sequência de Chamada
-Sequência de chamada (chamador)
-  1. Cria um novo registro de ativação
-  2. Calcula o vínculo estático
-  3. Salva o estado de execução atual (registradores)
-  4. Passa os parâmetros (organizando-os na pilha)
-  5. Passa o endereço de retorno para o chamado
-  6. Transfere o controle
-\pause Prólogo (chamado, início)
-  1. Salva o antigo =fp= na pilha (como vínculo dinâmico)
-  2. Aloca variáveis locais
-\pause Epílogo (chamado, final)
-  1. Prepara os parâmetros de retorno
-  2. Disponibiliza o valor de retorno para o chamador
-  3. Atualiza o =fp= e o =sp=
-  4. Atualiza o estado de execução do chamador
-  5. Transfere o controle
 
