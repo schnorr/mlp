@@ -20,8 +20,20 @@
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
      id="metadata8"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs6"><marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker1140"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"><path
+         inkscape:connector-curvature="0"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1138" /></marker><marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
        refY="0"
@@ -40,7 +52,8 @@
        refX="0"
        id="Arrow1Lend"
        style="overflow:visible"
-       inkscape:isstock="true"><path
+       inkscape:isstock="true"
+       inkscape:collect="always"><path
          id="path1284"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
@@ -265,12 +278,12 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1918"
+     inkscape:window-width="958"
      inkscape:window-height="1078"
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.8180255"
-     inkscape:cx="570.98821"
+     inkscape:cx="420.31798"
      inkscape:cy="282.74691"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -1124,4 +1137,8 @@
          y="536.95459"
          style="stroke-width:0.64460796px"
          id="tspan2909-9">pointer</tspan></text>
-</g></svg>
+<path
+       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.50000004;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1140);stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 330.44572,1341.9787 25.59429,29.0202 56.84419,-0.9168"
+       id="path1130"
+       inkscape:connector-curvature="0" /></g></svg>
