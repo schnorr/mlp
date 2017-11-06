@@ -40,4 +40,4 @@ Quando a entrega for por =Email (corpo)=, siga este método:
 |------+--------------------------------------+---------------+------------+-----------|
 | #10  | [[./10/README.org][Controle de Fluxo]]                    | [[https://goo.gl/forms/9q2TEEu3JmHyN17F2][Formulário]]    | 2017-10-31 |           |
 | #11  | [[./11/README.org][Polimorfismo]]                         | [[https://goo.gl/forms/3M8jwFABt9rfzuFv1][Formulário]]    | 2017-11-06 |           |
-| #12  | [[./12/README.org][Subprogramas]]                         | Formulário    | 2017-11-12 |           |
+| #12  | [[./12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/a1jA9B98KnvQgVNr2][Formulário]]    | 2017-11-12 |           |
