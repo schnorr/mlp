@@ -71,28 +71,7 @@ aprendizado da disciplina.
   - [[./projeto/][Em HTML]]
   - [[./projeto/README.pdf][Em PDF]]
 - [[https://github.com/schnorr/mlpreport][Modelo Latex para o Relatório]]
-
-*** Definição final de grupos
-
-|---------------------------+---------+-----------+--------------|
-| Nome do Grupo             | Membros | Linguagem | Problema     |
-|---------------------------+---------+-----------+--------------|
-| Confia na Call            |       3 | Python    | TowerDefense |
-| root                      |       3 | Python    | BatalhaNaval |
-| GrupoHP                   |       3 | C++17     | TowerDefense |
-| WubbaLubbaDubDub          |       3 | Java8     | BatalhaNaval |
-| ClubedasWynx              |       3 | C#        | BatalhaNaval |
-| Mean Girls                |       3 | C++17     | BatalhaNaval |
-| Caiu a barca              |       3 | F#        | BatalhaNaval |
-| Batalha Barcal            |       3 | Java8     | BatalhaNaval |
-| SchnorR doidão            |       3 | R         | Galáxias     |
-| Fullbar                   |       3 | C#        | TowerDefense |
-| Al2O3:Cr                  |       3 | Ruby      | BatalhaNaval |
-|---------------------------+---------+-----------+--------------|
-| Guerreiros de Anúbis      |       2 | Groovy    | BatalhaNaval |
-| Os Gatos de Schnorrdingër |       2 | Swift     | TowerDefense |
-| Os Aforistas Desaforados  |       2 | OCAML     | Escopo       |
-|---------------------------+---------+-----------+--------------|
+- [[./projeto/grupos.org][Definição final de grupos]]
 
 ** Bibliografia
 - [[http://loja.grupoa.com.br/livros/programacao/conceitos-de-linguagens-de-programacao/9788577807918][Robert W. Sebesta. Conceitos de Linguagens de Programação. Bookman. 5th edition, 2003]]
