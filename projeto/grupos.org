@@ -5,6 +5,31 @@
 #+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
 #+Date: schnorr@inf.ufrgs.br
 
+* Projeto Inicial
+
+Todos os grupos entregaram no prazo, salvo:
+- WubbaLubbaDubDub (1 hora de atraso)
+- Caiu a barca (25 horas de atraso)
+
+|---------------------------+--------------+----------+-------+----------|
+| Nome do Grupo             | Entrega      | Arquivos | Latex | Conteúdo |
+|---------------------------+--------------+----------+-------+----------|
+| Al2O3:Cr                  | zip          |          |       |          |
+| Batalha Barcal            | zip          |          |       |          |
+| Caiu a barca              | zip          |          |       |          |
+| ClubedasWynx              | zip          |          |       |          |
+| Confia na Call            | zip          |          |       |          |
+| Fullbar                   | zip          |          |       |          |
+| GrupoHP                   | zip e tar.gz |          |       |          |
+| Guerreiros de Anúbis      | zip          |          |       |          |
+| Mean Girls                | zip          |          |       |          |
+| Os Aforistas Desaforados  | zip          |          |       |          |
+| Os Gatos de Schnorrdingër | zip          |          |       |          |
+| root                      | tar.gz       |          |       |          |
+| SchnorR doidão            | tar.gz       |          |       |          |
+| WubbaLubbaDubDub          | zip          |          |       |          |
+|---------------------------+--------------+----------+-------+----------|
+
 * Definição final de grupos
 
 |---------------------------+---------+-----------+--------------|
