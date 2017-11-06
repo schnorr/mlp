@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 # -*- mode: org -*-
 
-#+Title: Grupos do Trabalho Final de MLP
+#+Title: Acompanhamento do Trabalho Final de MLP
 #+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
 #+Date: schnorr@inf.ufrgs.br
 
-* Acompanhamento do Trabalho Final de MLP
-
-** Definição final de grupos
+* Definição final de grupos
 
 |---------------------------+---------+-----------+--------------|
 | Nome do Grupo             | Membros | Linguagem | Problema     |
