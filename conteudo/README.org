@@ -62,6 +62,9 @@ disciplina, podem variar em abrangência e profundidade.
  | Subprogramas | [[./aulas/subprogramas/registro.org][Registros de Ativação]]                               |       |
  | Subprogramas | [[./aulas/subprogramas/acesso.org][Acesso a Dados]]                                      |       |
  | Subprogramas | [[./aulas/subprogramas/didatica.pdf][Abstrações de Controle]] (Bonus fundamental)          |       |
+ | Subprogramas | [[./aulas/subprogramas/parametros.org][Parâmetros]]                                          |       |
+ | Subprogramas | [[./aulas/subprogramas/passagem.org][Métodos de Passagem de Parâmetros]]                   |       |
+ | Subprogramas | [[./aulas/subprogramas/closures.org][Subprogramas como parâmetros]]                        |       |
  |--------------+-----------------------------------------------------+-------|
 
 *** Planejado
