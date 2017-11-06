@@ -90,6 +90,7 @@ No final da execução do subprograma
 #+latex: \vfill
 
 \pause Mesmas vantagens/desvantagens de passagem por valor
+
 \pause Desvantangens
 
 + Não aceita literais: =subA(10,5);=
@@ -141,7 +142,7 @@ Transmite um caminho de acesso (endereço)
 + Parâmetro formal é um apelido (/alias/) do parâmetro real
 + Formal e real referenciam a mesma variável
 \pause Exemplos
-+ =foo(int \&num)= em C++
++ =foo(int &num)= em C++
 + =Procedure Foo(var num:integer)= em Pascal
 #+latex: \vfill
 \pause Vantagens
