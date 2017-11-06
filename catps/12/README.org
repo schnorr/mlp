@@ -1,0 +1,75 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #12 (Subprogramas)
+
+  1. Mostre o conteúdo detalhado da pilha com registros de ativação,
+     incluindo os ponteiros de vínculo dinâmico e estático, quando a
+     execução atinge a {\bf linha 10} no seguinte esqueleto de
+     programa. Para tal, considere que a sequência de chamada é a
+     seguinte: =main= chama =fun2=, =fun2= chama =fun1=, =fun1= chama =fun1=, e
+     =fun1= chama =fun3=.
+
+     #+BEGIN_EXAMPLE
+    void fun1() {
+      float a;
+      ...
+    }
+    void fun2() {
+      int b, c;
+      ...
+    }
+    void fun3() {
+      float d;
+      ...
+    }
+    void main() {
+      char e, f, g;
+      ...
+    }
+     #+END_EXAMPLE
+
+  2. Para o código do exercício anterior, mostre o deslocamento em
+     relação ao =fp= (\emph{frame pointer}) calculado pelo compilador
+     para cada uma das variáveis. Assuma que o tamanho dos tipos =int=,
+     =float= sejam de 4 bytes e =char= seja de 1 byte.
+
+  3. Considere o seguinte programa escrito na sintaxe da linguagem C:
+     #+BEGIN_EXAMPLE
+    void swap(int a, int b) {
+      int temp;
+      temp = a;
+      a = b;
+      b = temp;
+    }
+    void main() {
+      int value = 2, list[5] = {1, 3, 5, 7, 9};
+      swap(value, list[0]);
+      swap(list[0], list[1]);
+      swap(value, list[value]);
+    }
+     #+END_EXAMPLE
+     Para cada um dos métodos de passagem de parâmetros seguintes,
+     quais são os valores das variáveis =value= e =list= depois de cada
+     uma das três chamadas a função =swap=?
+     - Passagem por valor
+     - Passagem por referência
+     - Passagem por valor-resultado
+
+  4. Considere o seguinte programa escrito na sintaxe da linguagem C:
+     #+BEGIN_EXAMPLE
+    void fun(int first, int second) {
+      first += first;
+      second += second;
+    }
+    void main() {
+      int list[2] = {1, 3};
+      fun(list[0], list[1]);
+    }     
+     #+END_EXAMPLE
+     Para cada um dos métodos seguintes, quais são os valores no vetor
+     =list= após a execução?
+     - Passagem por valor
+     - Passagem por referência
+     - Passagem por valor-resultado
