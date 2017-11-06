@@ -31,7 +31,7 @@
      #+END_EXAMPLE
 
   2. Para o código do exercício anterior, mostre o deslocamento em
-     relação ao =fp= (\emph{frame pointer}) calculado pelo compilador
+     relação ao =fp= (/frame pointer/) calculado pelo compilador
      para cada uma das variáveis. Assuma que o tamanho dos tipos =int=,
      =float= sejam de 4 bytes e =char= seja de 1 byte.
 
@@ -73,3 +73,4 @@
      - Passagem por valor
      - Passagem por referência
      - Passagem por valor-resultado
+
