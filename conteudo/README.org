@@ -66,8 +66,6 @@ disciplina, podem variar em abrangência e profundidade.
 
 *** Planejado
 
- | Imperativo  | Polimorfismo: sobrecarga de operadores e funções, coerção, polimorfismo paramétrico, estático e dinâmico. |       |
- | Imperativo  | Subprogramas: Definição, invocação. Registros de ativação. Acesso a variáveis não locais.                 |       |
  | Imperativo  | Subprogramas: Semântica de passagem de parâmetros. Modos de passagem de parâmetros, implementação.        |       |
  | OO          | Orientação a Objeto: classes, atributos e métodos; encapsulamento; proteção; construtores                 |       |
  | OO          | Orientação a Objeto: Herança, polimorfismo                                                                |       |
