@@ -5,7 +5,9 @@
 #+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
 #+Date: schnorr@inf.ufrgs.br
 
-* Definição final de grupos
+* Acompanhamento do Trabalho Final de MLP
+
+** Definição final de grupos
 
 |---------------------------+---------+-----------+--------------|
 | Nome do Grupo             | Membros | Linguagem | Problema     |
