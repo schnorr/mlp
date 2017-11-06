@@ -1,0 +1,203 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Parâmetros
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Parâmetros -- Conceitos
+
+Parâmetros *formais*
++ Lista de parâmetros que o subprograma recebe (com tipos)
++ Estabelece *nomes locais* para a manipulação dos dados
+    #+begin_src C
+    int soma (int a, int b);
+    #+end_src
+\pause  Parâmetros *reais*
++ *Argumentos* usados na chamada ao subprograma
++ Valores (reais) passados à unidade chamada
+    #+begin_src C
+    soma (10, 2);
+    soma (a, 2*a);
+    #+end_src
+
+* Parâmetros Formais
+
+Elementos
++ Nome
++ Tipo
++ Modo de passagem do parâmetro (opcional, se há vários)
++ Inicialização do parâmetro (opcional, quando permitido)
+#+latex: \vfill\pause
+
+Exemplos
+  #+begin_src C
+  int soma (int a, int b);
+  Procedure somar (a: integer; var b: integer);
+  - (void) getTune: (out Tune*) theSong;
+  int soma (int a = 0, int b = 10);
+  #+end_src
+
+* 
+* Parâmetros Formais /versus/ Variáveis Locais
+Em geral, ambos são alocados na pilha
+
+Variáveis locais: no RA do subprograma
+
+Parâmetros formais
++ Podem estar ou no RA do chamado, ou no do chamador
++ Outra implementação possível?
+#+latex: \vfill\pause
+
+Exemplo
+  \small
+  #+begin_src C
+  void trocaInteiro (int *u, int *v) {
+    int t;
+    t = *u;
+    *u = *v;
+    *v = t;
+  }
+  int main () {
+    int a = 3, b = 5;
+    trocaInteiro (&a, &b);
+  }
+  #+end_src
+
+* Parâmetros Reais (Argumentos)
+
+Em geral, devem *concordar com os parâmetros formais*
++ Quantidade
++ Tipos
++ Ordem
++ Modo de passagem de parâmetros (valor, referência, etc)
+
+\pause Considerando os seguintes parâmetros formais
+  #+begin_src C
+  void somaA (int a = 0, int b = 0);
+  Procedure somaB (a: integer; var b: integer);
+  #+end_src
++ x e y devem ser passados como inteiros
+    \small
+    #+begin_src C
+    somaA (x, y);
+    #+end_src
++ Assume que b = 0
+    \small
+    #+begin_src C
+    somaA (10);
+    #+end_src
++ z é passado por referência
+    \small
+    #+begin_src C
+    somaB (10, z);
+    #+end_src
+
+* Vinculação de Parâmetros
+
+Definir uma regra de vinculação entre formais e reais
++ Existem várias abordagens
+
+* Vinculação de Parâmetros
+
+*Posição sintática* (mesma ordem, quantidade e tipo)
+  \small
+  #+begin_src C
+  float pag (float p1, float p2, float p3);
+  #+end_src
+  \normalsize
+\pause *Nome* (conhecido também por palavras-chave)
+  \small
+  #+begin_src C
+  proc1 (in out a, b, c)
+
+  proc1(a => x, b => y, c => z)
+  #+end_src
+  \normalsize
+\pause *Mista*
+  \small
+  #+begin_src C
+  proc1(x, c => z, b=> y)     
+  #+end_src
+\pause *Valor Padrão* \scriptsize (C++, devem aparecer por último)
+  \small
+  #+begin_src C++
+  float pag (float r, float imp=0.25, int isen=1);
+
+  calc = pag(2000f, 0.15);
+  calc = pag(2000f);
+  #+end_src
+
+* Vinculação de Parâmetros -- Mais Exemplos
+
+Nome (em Python)
+  #+begin_src Python
+  def soma(lista, inicio, fim): 
+  #...
+  soma(inicio = 1, fim = 2, lista = [4, 5, 6])
+  soma([4, 5, 6], fim = 1, inicio = 2)
+  #+end_src
+
+#+latex: \vfill
+
+Valor Padrão (em Python)
+  #+begin_src Python
+  def compute_pay(income, exemptions = 1, tax_rate):
+  #...
+  pay = compute_pay(20000.0, tax_rate = 0.15)
+  #+end_src
+
+* Número Variável de Argumentos
+
+Exemplos?
+\pause *Java*
+  \small
+  #+begin_src Java
+public class MLP {
+  public static int soma (int...lista){
+    int resultado = 0;
+    for (int i:lista) resultado += i;
+    return resultado;
+  }
+
+
+  public static void main (String[] args){
+    soma(1);
+    soma(1, 2, 3);
+    soma(1, 2, 3, 5, 1000);
+  }
+}
+  #+end_src
+
+* Número Variável de Argumentos
+
+Exemplos?
+*C*
+  \small
+  #+begin_src C
+  int soma (const int nargs, ...) {
+    int i, resultado = 0;
+    va_list argp;
+    va_start (argp, nargs);
+    for (i = 0; i < nargs; i++){
+       resultado += va_arg (argp, int);
+    }
+    va_end (argp);
+    return resultado;
+  }
+  
+  int main (){
+    soma (2, 1, 2);
+    soma (5, 1, 2, 4, 10);
+  }
+  #+end_src

@@ -1,0 +1,107 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Métodos de Passagem de Parâmetros
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Subprogramas como Parâmetros
+Passar um subprograma como argumento para outro
+
+Várias motivações
++ Implementar funções de ordem maior (característica funcional)
++ Funções de ordenação para diferentes elementos
++ Funções no modelo /callback/
++ ...
+#+latex: \vfill\pause
+
+*Questões de projeto*
++ Como passar subprogramas? Como verificar seus tipos?
+    + C/C++ se passa o endereço de uma função
+    + Exemplo
+	 #+begin_src C
+	 float (*pfun) (float, int);
+	 #+end_src
+
++ \pause Como definir o ambiente de referenciamento? \\
+    \rightarrow para linguagens que aceitam subprogramas aninhados
+
+* Subprogramas como Parâmetros -- Ambiente
+
+Devemos definir qual o ambiente de referenciamento
+
+Três abordagens
++ Vinculação *profunda* (/deep binding/)
+    + Ambiente \rightarrow onde ocorreu a *definição do subprograma*
+    + Equivalente ao vínculo estático do RA
++ Vinculação *rasa* (/shallow binding/)
+    + Ambiente \rightarrow onde ocorreu a *chamada do subprograma*
+    + Equivalente ao vínculo dinâmico do RA
++ Vinculação *arbitrária* (/ad-hoc binding/)
+    + Ambiente \rightarrow onde ocorreu a *passagem do subprograma*
+
+* Exemplo comparativo (sintaxe de Javascript)
+
+\scriptsize
+#+begin_src Javascript
+function sub1() {
+   var x;
+   function sub2() {
+      alert(x); //imprime na tela o valor de x
+   };
+   function sub3() {
+      var x;
+      x = 3;
+      sub4 (sub2);
+   };
+   function sub4(subx) {
+      var x;
+      x = 4;
+      subx();
+   };
+   x = 1;
+   sub3();
+};
+#+end_src
+\normalsize
+Qual o valor impresso de x quando usamos?
++ Vinculação profunda (vínculo estático)
++ Rasa (vínculo dinâmico -- quem chama)
++ Arbitrária (quem passa)
+
+* Closures
+
+Closure
++ Bloco de código
++ Vínculos já estabelecidos (do ambiente de origem)
+    + Usar variáveis visíveis no momento da sua definição
+\pause Utilizadas em linguagens dinâmicas (Lisp, Ruby, ...)
++ Influência do *Modelo Funcional*
+#+latex: \vfill
+\pause Exemplo em pseudocódigo
+  {\scriptsize
+  #+begin_src Pseudo
+  function makeAdder (x) {
+     return function(y) {return x + y;}
+  }
+
+  var add10 = makeAdder(10);
+  var add5 = makeAdder(5);
+
+  add10(20); //adiciona 10 a 20
+  add5(10); //adiciona 5 a 10
+  #+end_src
+\pause Mesmo quando retornado, o vínculo continua existindo
+
+
+

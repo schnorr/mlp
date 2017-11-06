@@ -1,0 +1,226 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Métodos de Passagem de Parâmetros
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Semântica de Parâmetros Formais
+
+Maneira pelas quais se transmitem parâmetros
++ Deve ser uma escolha no projeto da linguagem
++ Métodos semânticos e de implementação
+
+\bigskip
+\pause A vinculação entre reais e formais deve
+
++ Determinar *as operações* sobre um parâmetro *formal* \\
+    Exemplo: restringir sua modificação
++ Determinar *os efeitos* sobre o parâmetro *real*
+
+* Modelos Semântico e de Transferência
+
+Três modelos semânticos de passagem de parâmetros
++ *Modo entrada* (/in mode/) -- valor real não pode ser modificado
++ *Modo saída* (/out mode/) -- valor real não pode ser consultado
++ *Modo entrada/saída* (/in-out mode/)
+    + Valor pode ser consultado e modificado
+
+\pause Duas implementações para transferência de dados
++ Valor é *copiado* do real para o formal
++ Um *caminho de acesso* é transmitido
+
+#+latex: \vfill\pause
+
+Várias combinações \rightarrow Veremos as mais importantes
+
+* Métodos de Passagem de Parâmetros
+
+| Nome do Método         | Semântica     | Transferência de Dados |
+|------------------------+---------------+------------------------|
+| *Por Valor*      | Entrada       | Cópia                  |
+| Por Resultado          | Saída         | Cópia                  |
+| Por Valor-Resultado    | Entrada/Saída | Cópia                  |
+| *Por Referência* | Entrada/Saída | Caminho de Acesso      |
+| Por Nome               | Entrada/Saída |                        |
+
+#+latex: \vfill
+
+Essas combinações são possibilidades
++ Não quer dizer que linguagens utilizem todas elas
+``Transferência de Dados'' \rightarrow implementação mais comum
+
+* Métodos -- *Por Valor*
+
+Valor do parâmetro real $\rightarrow$ Inicializa o parâmetro formal
++ Em geral, transferência do valor é feita por cópia
++ Se comporta como uma variável de escopo local
+
+#+latex: \vfill
+
+Desvantagens
++ Espaço extra e maior tempo de cópia \\
+    \rightarrow se os dados forem volumosos
+
+Vantagens
++ Proteção do parâmetro real
++ Cópia de escalares é rápida
++ Acesso eficiente
+
+* Métodos -- Por Resultado
+
+Parâmetro formal não é definido: *``Zero entrada''*
+
+Parâmetro formal se comporta como uma variável local
++ Somente pode receber valores
+
+No final da execução do subprograma
++ Valor do parâmetro formal \rightarrow Atribuído ao parâmetro real \\
+
+#+latex: \vfill
+
+\pause Mesmas vantagens/desvantagens de passagem por valor
+\pause Desvantangens
+
++ Não aceita literais: =subA(10,5);=
++ \pause Colisão de parâmetros reais: =subA(p1, p1);=
+
+* Métodos -- Por Resultado (problema)
+
+Considerando o código
+  #+begin_src C#
+  void DoIt (out int x, int index){
+    x = 17;
+    index = 42;
+  }
+  //...
+  sub = 21;
+  f.DoIt(lista[sub], sub);
+  #+end_src
+
+\pause Tempo de avaliação do endereço (chamada e/ou retorno)
++ Endereço de lista[sub] muda entre início e fim de DoIt
+\pause Quando haverá o vínculo do parâmetro para o endereço
++ Na chamada ou no retorno?
+\pause  Resposta:
++ Chamada: lista [ 21 ] = 17
++ Retorno: lista [ 42 ] = 17
+
+* Métodos -- Por Valor-Resultado
+
+Semântica de entrada/saída, implementação por cópia
+
+Combina por valor e por resultado (passagem por cópia)
+
+#+latex: \vfill
+
+Na entrada do subprograma
++ Valor do parâmetro real $\rightarrow$ Inicializa o parâmetro formal
+
+No final do subprograma
++ Valor do parâmetro formal \rightarrow Atribuído ao parâmetro real
+#+latex: \vfill
+
+Combina as vantagens e desvantagens de cada uma
+
+* Métodos -- *Por Referência*
+
+Semântica de entrada/saída
+
+Transmite um caminho de acesso (endereço)
++ Parâmetro formal é um apelido (/alias/) do parâmetro real
++ Formal e real referenciam a mesma variável
+\pause Exemplos
++ =foo(int \&num)= em C++
++ =Procedure Foo(var num:integer)= em Pascal
+#+latex: \vfill
+\pause Vantagens
++ Eficiente em tempo e espaço no gerenciamento da referência
+\pause Desvantagens
++ Acesso por indireção através de desreferenciamento implícito
++ Efeitos colaterais
++ Criação de apelidos (/aliases/)
+
+* Exemplo de apelidos em Pascal
+
+Pascal tem passagem por referência 
++ Através da palavra reservada =var=
+Exemplo
+  #+begin_src Pascal
+procedure confusa(var m, n : integer);
+begin
+  n := 1;
+  n := m + n;
+end;
+//...
+i := 4;
+confusa (i, i);
+// Qual o valor de i?
+#+end_src
+
+* Exemplo de apelidos em C
+
+Exemplo em C/C++
+  #+begin_src C
+  void fun(int *first, int *second) { }
+
+  fun (&total, &total);
+  fun (&list[i], &list[j]); //i == j
+  fun (&list[i], &list);    //i == 0
+  #+end_src
+#+latex: \vfill\pause
+
+C/C++ têm apenas passagem por valor
++ *Ponteiros* tem for
++ Por valor
++ Por referência
+
+* Métodos -- Por Nome
+
+Semântica de entrada/saída
+
+Parâmetro real substitui *textualmente* o parâmetro formal
++ Onde o parâmetro formal aparecer
+Parâmetro formal representa uma função de acesso
+Vinculação tardia
+
++ Parâmetro formal é vinculado a um valor ou endereço somente quando é atribuído ou referenciado
+
+#+latex: \vfill\pause
+
+Vantagens
++ Maior flexibilidade
+\pause  Desvantagens
++ Menor velocidade
++ Difíceis de implementar, depurar
+
+* Exemplo de passagem por nome em Algol-like
+
+#+begin_src C
+procedure BIGSUB;
+  integer GLOBAL;
+  integer array LIST[1:2];
+  procedure SUB(PARAM);
+    integer PARAM;        //PARAM é LIST[GLOBAL]
+  begin
+    PARAM := 3;           //LIST[GLOBAL] := 3
+    GLOBAL := GLOBAL + 1;
+    PARAM := 5;           //LIST[GLOBAL] := 5
+  end;
+Begin
+  LIST[1] := 2;
+  LIST[2] := 2;
+  GLOBAL := 1;
+  SUB(LIST[GLOBAL])
+End;
+#+end_src
