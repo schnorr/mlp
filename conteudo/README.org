@@ -64,7 +64,7 @@ disciplina, podem variar em abrangência e profundidade.
  | Subprogramas | [[./aulas/subprogramas/didatica.pdf][Abstrações de Controle]] (Bonus fundamental)          |       |
  | Subprogramas | [[./aulas/subprogramas/parametros.org][Parâmetros]]                                          |       |
  | Subprogramas | [[./aulas/subprogramas/passagem.org][Métodos de Passagem de Parâmetros]]                   |       |
- | Subprogramas | [[./aulas/subprogramas/closures.org][Subprogramas como parâmetros]]                        |       |
+ | Subprogramas | [[./aulas/subprogramas/closures.org][Subprogramas como parâmetros]]                        | [[../catps/][#12]]   |
  |--------------+-----------------------------------------------------+-------|
 
 *** Planejado
