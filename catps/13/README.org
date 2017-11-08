@@ -1,0 +1,62 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #13 (Encapsulamento em OO)
+
+O objetivo da atividade consiste em praticar os conceitos relacionados
+com orientação a objetos, em especial, _encapsulamento_. Também é
+importante prover estruturas de inicialização de instâncias e
+separação entre a interface visível a quem usa a classe e a sua
+implementação propriamente dita. O uso de espaços de nome (pacotes,
+namespaces, etc.) também é estimulado.
+
+*Utilize C++ para implementar este exercício, com o compilador g++*.
+
+Implemente uma classe capaz de armazenar informações sobre pessoas,
+atentendo aos critérios abaixo:
+
+- A classe Pessoa deve ser capaz de armazenar e fornecer as seguintes
+  informações sobre uma Pessoa. Repare que algumas das informações
+  podem ser derivadas das outras (idade, por exemplo), não sendo
+  necessário um atributo específico para representá-las.
+  - nome (default: indefinido)
+  - data de nascimento (default: dia atual)
+  - sexo (default: indefinido)
+  - idade (default: estabelecido com base na data de nascimento)
+
+- Os atributos devem atender as seguintes restrições:
+  - nome: não deve iniciar com números, não deve ser maior do que 60 caracteres, deve ter no mínimo 2 partes (nome e sobrenome), não pode ser nulo.
+  - data de nascimento: não pode ser posterior ao dia atual.
+  - sexo: valores válidos são masculino, feminino ou indefinido; se possível, usar enumeração.
+  - idade: deve ser condizente com a data de nascimento.
+
+- A classe deve garantir que os atributos acima sejam _protegidos_ e que
+  contenham somente os valores válidos (métodos modificadores
+  adequados devem ser criados). Métodos que retornam valores devem
+  cuidar para não quebrar o encapsulamento (no caso dos atributos
+  serem mutáveis), _retornando cópias completas e não a referência ao
+  atributo original_.
+
+- Crie dois construtores:
+  - Construtor-padrão (inicializando todos os atributos).
+  - Construtor que receba todos os parâmetros (nome, data de
+    nascimento, sexo e localização), validando-os (caso sejam
+    inválidos, os respectivos atributos devem permanecer com o valor
+    padrão).
+
+- Criando cópia profundas:
+  - Se estiver trabalhando com linguagem C++ (ou similar), especifique
+    um construtor de cópia que faça uma cópia profunda de todos os
+    atributos da instância em questão. Especifique também uma
+    sobrecarga do operator= para que faça igualmente uma cópia
+    profunda.
+  - Se estiver trabalhando com Java ou similar, sobrecarregue o
+    método clone(), fazendo uma cópia profunda da instância.
+  - Descubra como fazer cópias profundas em outras linguagens
+
+Por fim, elabore um programa que crie duas ou mais instâncias de
+Pessoa. Uma pessoa deve ser criada com o construtor padrão e outra com
+o construtor alternativo. Ao final, o programa deve imprimir na tela
+os valores dos atributos das instâncias, mostrando o seu conteúdo de
+forma adequada (de acordo com o tipo da instância).
