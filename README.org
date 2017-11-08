@@ -56,8 +56,7 @@ aprendizado da disciplina.
 ** Principal
 
 - [[./conteudo/][Acesse o conteúdo da disciplina]]
-  - Aulas
-  - Exercícios
+- [[./acompanhamento.org][Acompanhamento das Avaliações]]
 
 ** Conjunto de Atividades Teórico-Práticas (CATP)
 
