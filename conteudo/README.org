@@ -69,7 +69,7 @@ disciplina, podem variar em abrangência e profundidade.
  | OO           | [[./aulas/oo/abstracao.org][Conceito de Abstração]]                               |       |
  | OO           | [[./aulas/oo/introducao.org][Introdução]]                                          |       |
  | OO           | [[./aulas/oo/encapsulamento.org][Encapsulamento]]                                      |       |
- | OO           | [[./aulas/oo/inicializacao.org][Inicialização, Finalização, Cópia]]                   |       |
+ | OO           | [[./aulas/oo/inicializacao.org][Inicialização, Finalização, Cópia]]                   | [[../catps/][#13]]   |
  |--------------+-----------------------------------------------------+-------|
 
 *** Planejado
