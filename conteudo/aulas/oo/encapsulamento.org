@@ -1,0 +1,50 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Encapsulamento
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Encapsulamento em orientação a objetos
+Agrupar dados e subrotinas em um único lugar
++ Relação com o mecanismo de herança
+#+latex: \vfill
+\pause  Algumas questões
++ Membros privados da base \rightarrow visíveis nas derivações?
++ \pause  Membros públicos na base \rightarrow continuam públicos?
++ \pause  Controle da classe base \rightarrow visibilidade dos seus atrib.?
+\pause Encapsulamento através de *controladores de visibilidade*
++ Público, privado e protegido
+* Exemplo de regras de visibilidade (C++)
+Classe limita a visibilidade dos seus membros
++ =public:= visível onde a classe está no escopo
++ =private:= visível dentro dos métodos da própria classe
++ =protected:= como private, mas visível para derivadas
+    + \pause  Quebrando estas regras com =friend=
+\pause Relação através da herança (base, derivada)
++ Derivada restringe, jamais aumenta a visibilidade
++ Membros privados da base não são visíveis nas derivadas
++ Membros públicos e protegidos assim se mantém
++ Se =class derivada : protected base=
+    + Membros públicos e protegidos \rightarrow protegidos
++ Se =class derivada : private base=
+    + Membros públicos e protegidos \rightarrow privados
+\pause Alterar visibilidade de membros da base
++ Usando =using= dentro da definição da derivada
+* Caso das linguagens Smalltalk e Objective-C
+Atributo \rightarrow público, privado e protegido
+
+\pause Inútil discustir visibilidade de métodos
++ Natureza dinâmica da chamada de métodos
++ *Tudo é público*
+    + \pause Python tem abordagem semelhante

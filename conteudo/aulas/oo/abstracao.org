@@ -1,0 +1,138 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Conceito de Abstração
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Contextualização
+Principais questões no projeto de uma linguagem
+#+latex: \vfill
+Tipos de dados
++ Sistemas de tipo
++ Checagem de tipo
++ Equivalência, Compatibilidade, Inferência de tipos
+Controle de Fluxo
++ Avaliação de expressões (aritméticas, atribuição)
++ Fluxo estruturado e não-estruturado
+#+latex: \vfill
+Abstração de controle -- subprogramas
++ Registros de ativação
++ Modos de passagem de parâmetros
+*Abstração de dados* -- orientação a objeto
++ Encapsulamento e herança
++ Composição e polimorfismo
+#+latex: \vfill
+Concorrência
+* Conceito de Abstração
+#+BEGIN_CENTER
+Uma visão ou representação de uma entidade que
+
+inclui somente os atributos mais significativos
+#+END_CENTER
+
+#+Latex: \pause
+
+É uma Ferramenta contra a complexidade
++ Simplifica a programação
++ Permite focar-se nos atributos essenciais
+#+latex: \vfill
+\pause Abstração de *Processo*
++ Manifesta-se através de subprogramas
++ Presente em praticamente todas as linguagens
++ Exemplo do =sortInt(list, listlen)=
+\pause Abstração de *Dados*
++ Presente em todos os projetos de linguagens desde 1980
++ Tipos Abstratos de Dados (TAD)
+* Abstração de dados: alternativas
+Variáveis
++ Globais, Locais, Escopo aninhado, Estáticas
+Módulo
++ Conjunto de funções que compartilham variáveis estáticas
++ *Exportam um tipo abstrato*
+#+latex: \vfill
+\hrule
+#+latex: \vfill
+\pause Módulo-tipo *é o tipo abstrato*
++ Permite instanciar múltiplas instâncias de uma abstração
+\pause Classe *é o tipo abstrato*
++ Definem famílias de abstrações relacionadas
++ \pause *Encapsulamento* \rightarrow esconder detalhes
++ \pause *Herança* \rightarrow novas abstrações são refinamentos
++ \pause *Vínculo dinâmico* \rightarrow nova abstração com comport. refinado
+\pause  Mas _historicamente_, como surgiu o paradigma OO?
+* Abstração de dados: histórico
+*Simula*, 1960s \rightarrow Centro de Computação Noruêgues
++ Encapsulamento, herança, vínculo dinâmico de métodos
+    + Encapsulamento era fácil de ser quebrado
++ \pause Autores: Ole-Johan Dahl, Kristen Nygaard
+    + ACM Turing Award, IEEE von Neumann Medal
+\pause  *Smalltalk*, 1970s
++ Adota herança, dinamismo métodos e encapsulamento
++ \pause  Modelo de programação baseado em /mensagens/
+    + Ao invés de chamada de métodos a objetos
+    + Lento, embora flexível
+\pause  Soluções recentes
++ C++, Ada95, Fortran2003, Python, Ruby, Java, C#
+    + Herança e vínculo dinâmico de métodos com
+    + Sintaxe e semântica imperativa ``clássica'' (C)
+\pause  *Objective-C*
++ Como Smalltalk, mas com sintaxe alternativa
+\pause  OO em linguagens funcionais: CLOS (baseada em LISP), R
+
+* Tipos abstratos de dados: introdução
+Tipo de dados de uma linguagem
++ Definição de um tipo de dado pelo usuário
++ Conjunto de operações sobre o tipo
+
+#+latex: \vfill\pause
+
+Requisitos de linguagem
+- *Unidade sintática* para encapsular a definição de tipo e operações
+  - Representação do tipo é escondida
+  - Separação entre *declaração e definição*?
+  - Como *tornar visível a declaração* do tipo abstrato
+  - Definição de mecanismos de *controle de acesso*? \\
+    (Nível de encapsulamento)
+- *Operações embutidas* de atribuição e comparação
+
+#+Latex: \pause\vfill
+
+Questões de projeto
+- Tipos abstratos de dados podem ser *parametrizados*?
+- Qual a *forma do container* do tipo?
+  + Classe (OO), Módulo-tipo, Módulo
+
+
+* Exemplo de tipo abstrato de dado
+Uma *Pilha*
+#+latex: \vfill
+Operações
++ =criar(pilha)=
++ =destruir(pilha)=
++ =vazio(pilha)=
++ =empilhar(pilha, elemento)=
++ =desempilhar(pilha)=
++ =topo(pilha)=
+* Algumas vantagens
+Representação dos objetos do tipo é escondida
++ Confiabilidade, legibilidade e redigibilidade
++ Escopo reduzido \rightarrow menos conflitos de nome
++ Trocar a implementação sem trocar o código usuário
+#+latex: \vfill\pause
+Mesma e única unidade sintática
++ Método de organização do programa
++ Facilita a modificação
++ Compilação pode ser separada
+
+

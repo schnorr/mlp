@@ -1,0 +1,50 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Orientação a Objeto
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Orientação a objeto: introdução
+Abstração de dados por módulo e módulo-tipo
++ Reduz a /carga conceitual/
++ Fornece /contenção de falhas/
++ Habilita um grau de /independência/ significativo
+\pause  Experiência mostra que o *reuso é limitado*
++ Lista já está implementada \rightarrow usá-la diferentemente
++ \pause  Necessidade de /mudar abstrações já existentes/
+#+latex: \vfill
+\pause  *Orientação a objeto* tenta melhorar reuso
++ Novas abstrações são refinamentos ou extensões
+    + Usando o mecanismo de *herança*
+* Tópicos em orientação a objeto
+
+Funções pequenas
+
+Classes derivadas
+
+Classes-base de propósito geral
+
+Sobrecarga de construtores
+
+Modificando métodos da classe base
+
+/Containers/ e coleções
+
+#+latex: \vfill
+
+*Membros públicos e privados, Encapsulamento*
+
+*Inicialização e Finalização, Cópia*
+
+*Copiando objetos*

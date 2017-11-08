@@ -1,0 +1,75 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Inicialização, Finalização, Cópia
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Inicialização e finalização
+Tempo de vida de objetos (de variáveis)
++ Inicializar um objeto no início de seu tempo de vida
+    + *Construtor*
++ \pause Finalizar quando sua vida chega ao fim
+    + *Destrutor*
+#+latex: \vfill\pause
+Questões de projeto
++ Escolhendo um construtor
+    + Vários construtores com mesmo nome (parâm. diferentes)
+    + Construtor de cópia em C++ para a classe X \linebreak
+      #+BEGIN_EXAMPLE
+      X(const X& copy_from_me);
+      #+END_EXAMPLE
+	 
++ \pause Referências e/ou valores
+    + Qual abordagem gera código mais rápido?
+    + Insistência do C++ em ter objeto valor
++ \pause Ordem de execução
+    + Qual construtor/destrutor chamar primeiro?
++ \pause Coletor de lixo
+* Copiando objetos por cópia rasa (/shallow copy/)
+Padrão em C++
+
+Copia cada membro de um objeto individualmente
+    #+BEGIN_SRC C++
+class Centavos {
+  private: int valor;
+  public:  Cents(int v=0) {
+         valor = v;
+      }
+};
+...
+Centavos c(25);
+Centavos b = c;
+    #+END_SRC
+* Problema da cópia rasa
+
+O que acontece quando o código abaixo é executado?
+
+#+BEGIN_SRC C++
+class MinhaString {
+  private:
+   char *string;
+   int tamanho;
+  ...
+}
+
+MinhaString ola("Ola!");
+{
+   MinhaString copia = ola;
+}
+std::cout << ola.GetString() << std::endl;
+#+END_SRC
+* Copiando objetos por cópia profunda
+Cópia profunda
++ Criam-se novas cópias completas dos atributos
++ Método deve ser recursivo (custo em tempo, memória)
