@@ -1,0 +1,75 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Herança
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Herança
+
+Uma classe /herda/ comportamento e atributos de outra
++ Permite refinamentos
++ Utilizada para organizar o código
+
+#+latex: \pause
+
+Gera uma *hierarquia de tipos*
++ Refletem relacionamentos no espaço de problemas
++ \pause Nova terminologia para lidar com tipos
+    + /classe derivada/ ou /subclasse/
+    + /classe pai/ ou /superclasse/
+    + Métodos (funções) e mensagens (chamadas de métodos)
+
+\pause  Diferenças entre subclasse e superclasse
++ Superclasse pode definir atributos privados
++ \pause  Subclasse pode adicionar novos atributos/variáveis
++ \pause  Subclasse pode modificar o comportamento da classe pai
+    + *Sobrescrita de método*
+
+#+latex: \vfill\pause
+Exemplo
++ Veiculo (cor, ano) \leftarrow Caminhao (rodas, capacidade)
+
+* Tipos de métodos e atributos
+
+Métodos e atributos de *instância*
++ Métodos são compartilhados entre os objetos da classe
++ Atributos /diferenciam/ dois objetos da mesma classe
+
+#+latex: \pause
+
+Métodos e atributos de *classe*
++ Definem comport. da classe (métodos /globais/ da classe)
++ Atributos pertencem à classe (só existe um)
+
+* Herança simples /versus/ múltipla
+
+Simples
++ Cada classe /herda/ de uma única classe
++ Gera uma árvore de derivação
+
+#+latex: \pause
+
+Múltipla
++ Uma classe pode /herdar/ de mais de uma superclasse
++ Grafo de derivação
+
+#+latex: \vfill\pause
+
+Problemas na implementação de _herança múltipla_
++ Herdar dois métodos com mesmo nome
++ \pause Herança repetida (problema do diamante)
+    + Herança replicada (várias cópias) \rightarrow C++
+    + \pause  Herança compartilhada (uma cópia) \rightarrow Eiffel
++ \pause *Alternativa*: interfaces (Java, C#, Ada), protocolos (ObjC)
+    + Uma das heranças apenas contém métodos
