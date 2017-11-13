@@ -70,6 +70,7 @@ disciplina, podem variar em abrangência e profundidade.
  | OO           | [[./aulas/oo/introducao.org][Introdução]]                                          |       |
  | OO           | [[./aulas/oo/encapsulamento.org][Encapsulamento]]                                      |       |
  | OO           | [[./aulas/oo/inicializacao.org][Inicialização, Finalização, Cópia]]                   | [[../catps/][#13]]   |
+ | OO           | [[./aulas/oo/heranca.org][Herança]]                                             | [[../catps/][#14]]   |
  |--------------+-----------------------------------------------------+-------|
 
 *** Planejado
