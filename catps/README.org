@@ -42,4 +42,4 @@ Quando a entrega for por =Email (corpo)=, siga este método:
 | #11  | [[./11/README.org][Polimorfismo]]                         | [[https://goo.gl/forms/3M8jwFABt9rfzuFv1][Formulário]]    | 2017-11-06 |           |
 | #12  | [[./12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]]    | 2017-11-12 |           |
 | #13  | [[./13/README.org][Encapsulamento em OO]]                 | [[https://goo.gl/forms/JsAzqE3rKboHzJx23][Formulário]]    | 2017-11-15 |           |
-| #14  | [[./14/README.org][Herança em OO]]                        |               | 2017-11-20 |           |
+| #14  | [[./14/README.org][Herança em OO]]                        | [[https://goo.gl/forms/YHaDmzofJaKQqJT22][Formulário]]    | 2017-11-20 |           |
