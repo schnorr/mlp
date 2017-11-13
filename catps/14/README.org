@@ -3,3 +3,76 @@
 #+startup: beamer overview indent
 
 * CATP #14 (Herança OO)
+
+O objetivo da atividade consiste em praticar os conceitos relacionados
+com orientação a objetos, em especial, *herança*. Também é importante
+prover estruturas de inicialização de instâncias e separação entre a
+interface visível a quem usa a classe e a sua implementação
+propriamente dita. O uso de espaços de nome (pacotes, namespaces,
+etc.) também é estimulado.
+
+** Herança (Parte #1)
+
+ Utilizando o mecanismo de herança, e tendo como base a classe =Pessoa=
+ desenvolvida no [[../13/README.org][CATP #13]], defina uma nova classe (no mesmo
+ pacote/namespace de estruturas) denominada =Funcionario=. Leve em conta
+ os seguintes requisitos:
+
+ 1. Todos os funcionários devem ter os seguintes atributos (além dos herdados):
+    - Salário (entre 0 e o teto de 30 mil reais, sendo 0.0 o default)
+    - Cargo (valores válidos: "Indefinido", "Programador", "Analista",
+      "Gerente de projeto", "Gerente de Equipe", "Diretor", sendo
+      "Indefinido" o valor default)
+
+ 2. A classe deve garantir que os atributos acima sejam protegidos e
+    que contenham somente os valores válidos (métodos modificadores
+    adequados devem ser criados).
+
+ 3. Métodos que retornam valores devem cuidar para não quebrar o
+    encapsulamento (no caso dos atributos possuírem tipo mutável),
+    cuidando para não retornar uma referência ao atributo original.
+
+ 4. A classe deve oferecer um construtor-padrão (inicializando todos
+    os atributos, inclusive herdados). Verifique ou force para que o
+    construtor da classe pai seja chamado (não reescreva código!)
+
+ 5. A classe deve oferecer um construtor que receba todos os
+    parâmetros (nome, data de nascimento, sexo, salario e cargo),
+    validando-os (caso sejam inválidos, os respectivos atributos devem
+    permanecer com o valor padrão).
+
+Por fim, elabore um programa que crie 10 instâncias aleatórias de
+Pessoas ou Funcionários, colocando-as em uma coleção qualquer (Array
+ou Lista, por exemplo). Ao final, o programa deve imprimir na tela os
+valores das instâncias da coleção, mostrando o seu conteúdo de forma
+adequada (de acordo com o tipo da instância).
+
+** Herança Múltipla (Parte #2)
+
+Para este experimento, escolha uma linguagem que suporte herança
+múltipla, tais como C++, Python, Perl, Curl, Eiffel, CLOS and PHP (com
+=traits=). Define uma classe X que herde de duas classes A e B (nesta
+ordem e o inverso). Faça com que as classes A e B tenham métodos e
+atributos com o mesmo nome, e tente acessar através, da classe X estes
+atributos e métodos. Isso é possível?
+
+Além disso, neste experimento, procure descobrir como a linguagem
+escolhida trata o problema da herança repetida: quando as classes A e
+B descritas acima herdam da mesma classe Y -- ou seja, o problema de
+herança diamante. Nesta situação, a linguagem de programação escolhida
+tem herança replicada (várias cópias) ou herança compartilhada (uma
+única cópia)? Descubra como acessar os diferentes atributos e métodos
+no caso de herança replicada.
+
+** Vínculo de métodos dinâmico /versus/ estático (Parte #3)
+
+Escolha pelo menos duas linguagens orientadas a objeto cujo
+implementação é através de um compilador, isto é, são linguagens
+compiladas. Verifique, através de experimentos que se caracterizam por
+ter pelo menos um nível de herança, se a linguagem tem seus métodos
+vinculados dinâmicamente ou estaticamente.
+
+Em um segundo momento, e considerando exclusivamente a linguagem C++,
+faça um teste de desempenho para verificar qual tipo de vínculo é mais
+rápido: estático ou dinâmico. Escolha livremente a forma como o teste
+será realizado. Esta forma deve estar descrita na resposta.
