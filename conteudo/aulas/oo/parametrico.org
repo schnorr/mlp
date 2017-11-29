@@ -1,0 +1,47 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Polimorfismo Paramétrico
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* TAD Parametrizados -- C++
+   + Templates
+
+     #+BEGIN_EXAMPLE
+     pilha_generica.cc
+     #+END_EXAMPLE
+
+     #+latex: \vfill
+
+   + Instanciação da pilha genérica
+
+     #+begin_src C++
+     Pilha<int> minhaPilhaInteira;
+     #+end_src
+
+* TAD Parametrizados -- Java
+
+   + Templates
+
+     #+BEGIN_EXAMPLE
+     pilha_generica.java
+     #+END_EXAMPLE
+
+     #+latex: \vfill
+
+   + Instanciação da pilha genérica
+
+     #+begin_src Java
+     Pilha<string> minhaPilha = new Pilha<string> ();
+     #+end_src
