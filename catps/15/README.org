@@ -1,0 +1,124 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #15 (Polimorfimo Paramétrico)
+
+O objetivo da atividade consiste em praticar os conceitos relacionados
+com orientação a objetos, em especial, {\bf polimorfismo
+paramétrico}. Procure realizar o exercício abaixo investigando a forma
+de funcionamento deste tipo de polimorfismo na linguagem de
+programação escolhida. Segue uma lista de linguagens de programação
+que tem suporte para polimorfismo paramétrico:
+
+- Scala
+- Java
+- C#
+- Delphi
+- C++
+
+
+** Trabalhando com C++ no Laboratório
+
+O compilador =g++= compila programas em C++, basta que a extensão do
+arquivo seja ou =cc= ou =cpp=. Para compilar o arquivo [[./main.cc]] abra um
+terminal no Linux e digite:
+
+#+begin_src shell :results output
+g++ main.cc -o main
+./main
+#+end_src
+
+#+RESULTS:
+: Oi Mundo
+
+Para compilar separadamente um módulo (um arquivo [[./troca.cc]] por
+exemplo), basta lançar:
+
+#+begin_src shell :results output
+g++ troca.cc -c # gera o arquivo objeto relocável troca.o
+g++ main.cc -c # gera o arquivo objeto relocável troca.o
+#+end_src
+
+#+RESULTS:
+
+Depois, para linkar todos os objetos relocáveis em um único binário:
+
+#+begin_src shell :results output
+g++ troca.o main.o -o main
+#+end_src
+
+#+RESULTS:
+
+
+** Lista de Atividades
+
+Existem quatro programas independentes que devem ser implementados:
+- troca
+- imprime
+- copia
+- polimorficos
+
+Abaixo está descrito os requisitos de cada um desses quatro programas.
+
+*** troca
+
+A função =troca=, cuja implementação está listada abaixo para o tipo
+int/, troca o conteúdo das duas variáveis: depois da função ser
+executada, o conteúdo da variável =a= encontra-se na variável =b= e
+vice-versa. Faça com que a função =troca= seja polimórfica, passível
+de ser chamada com qualquer tipo. Toda a implementação desta função
+deve estar no arquivo =troca.h=. Na função =main=, mostre exemplos de
+utilização da função polimórfica de troca com tipos variados.
+
+#+BEGIN_EXAMPLE
+void troca (int& a, int& b) {
+  int tmp = a;
+  a = b;
+  b = tmp;
+}
+#+END_EXAMPLE
+
+*** imprime
+
+A função =imprime= abaixo aceita somente inteiros. Transforme-a para
+uma função polimórfica.
+
+#+BEGIN_EXAMPLE
+#include <iostream>
+
+void imprime(int a, int b)
+{
+    int c = a + b;
+    std::cout << "You gave me " << a << " and " << b << ".\n";
+    std::cout << "Together they make " << c << "." << std::endl;
+}
+
+int main()
+{
+    string sA = "Ola";
+    string sB = "mundo";
+    imprime(1,2);
+    imprime(2.6, 3.7);
+    imprime('A','1');
+    //imprime(sA, sB);
+}
+#+END_EXAMPLE
+
+*** copia
+
+Implemente uma função =copia= que copia as posições de um vetor de
+qualquer tipo para um outro vetor do mesmo qualquer tipo. A função
+deve funcionar para qualquer tipo da linguagem de programação
+escolhida. Implemente esta função no arquivo =copia.h=. Na função =main=,
+utilize a função polimórfica de cópia.
+
+*** polimorficos
+
+Implemente uma classe polimórfica para =Vetor= e outra para
+=ListaEncadeada= com pelo menos três métodos para adicionar novos
+membros, remover e concatenar objetos da mesma classe.  Implemente
+estas classes com polimorfismo paramétrico nos respectivos arquivos de
+cabeçalho (.h). Na função =main=, implementada no arquivo =main.cc=,
+instancie objetos destas classes utilizando tipos já existentes como
+parâmetros.
