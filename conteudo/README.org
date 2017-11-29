@@ -76,9 +76,6 @@ disciplina, podem variar em abrangência e profundidade.
 
 *** Planejado
 
- | OO          | Orientação a Objeto: classes, atributos e métodos; encapsulamento; proteção; construtores                 |       |
- | OO          | Orientação a Objeto: Herança, polimorfismo                                                                |       |
- | OO          | Orientação a Objeto: Polimorfismo paramétrico; coleções; reflexão                                         |       |
  | Extra       | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação                      |       |
  | Extra       | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                                  |       |
  | Extra       | Linguagens de script                                                                                      |       |
