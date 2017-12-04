@@ -1,0 +1,212 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Motivação e Introdução
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Programas sem tratamento de exceções
+
+Código de tratamento de erros fica embutido no código
+#+begin_src Java
+public static void main (String args[]){
+  if (args.length != 3){
+  println ("Sintaxe: <string> <string> <int>");
+  exit(1);
+  }
+  if (validaArgumento(args[2]) == false){
+  println ("Terceiro parâmetro deve ser inteiro.");
+  exit(1);
+  }
+}
+#+end_src
+
+#+latex: \pause
+Manutenção do código se torna difícil
+
+#+latex: \pause
+Não há como prever todos os casos
+
+* Exceções
+
+Condições inesperadas que surgem durante a execução
+
+Representam situações anormais ou inválidas
+
+#+latex: \pause\vfill
+
+Falha na aquisição de um recurso. Exemplos:
++ Abrir um arquivo para saída
++ Alocar memória para um novo objeto
+
+#+latex: \pause
+
+Tentativa de fazer algo impossível ou inválido. Exemplos:
++ Divisão por zero
++ Índice inválido de elemento
++ Lista vazia
++ /Overflow/
+#+latex: \bigskip\pause
+Podem ser detectadas
++ Por hardware (erro de leitura em disco)
++ Por software (acesso a índice fora dos limites do arranjo)
+* Na ausência de exceções
+
+Se a linguagem não der suporte ao seu tratamento?
+
+#+latex: \bigskip
+
+Problemas detectados pelo hardware \rightarrow Término imediato do programa
+
+#+latex: \pause
+Detectados pelo software, os componentes podem \\
++ Terminar o programa com código de erro
++ Retornar um valor de erro indicando falha
++ Retornar, ignorando completamente o problema
++ Chamar uma função para tratar o erro
+
+* Na ausência de exceções
+Terminar o programa com código de erro
++ Mensagem de erro pode não ser clara
++ E se o programa for uma aplicação crítica?
+\pause Retornar um valor de erro indicando falha (comum em C)
++ Nem sempre existe um valor não válido
++ Valor de retorno deve ser sempre verificado \\
+    \rightarrow Eficiência, Disciplina, Legibilidade
+  #+begin_src C
+  #define FIM_DE_ARQUIVO 1
+  #define CARACTERE INESPERADO 2
+  #+end_src
+\pause Retornar, ignorando completamento o problema \\
+  Ou ``inventando'' um retorno válido
++ Altamente não confiável
+\pause Chamar uma função de tratamento de erros
++ Quem chama?
++ Qual função?
+* Tratamento adequado de exceções
+O que o usuário faria nos casos abaixo?
+
+#+latex: \bigskip
+
+#+attr_latex: :width .7\linewidth
+[[./excecao1.jpg]]
+
+#+attr_latex: :width .5\linewidth
+[[./excecao2.jpg]]
+
+#+attr_latex: :width .3\linewidth
+[[./excecao3.jpg]]
+
+* Tratamento adequado de exceções
+
+#+attr_latex: :width .8\linewidth
+[[./excecao4.jpg]]
+
+#+latex: \pause
+#+BEGIN_CENTER
+(/Nota: imagem editada manualmente./)
+
+#+latex: {\tiny
+http://www.junauza.com/2010/05/worlds-funniest-windows-error-messages.html
+#+latex: }
+#+END_CENTER
+
+* Premissas
+
+Possíveis problemas podem ser antecipados
+
+Situações de erro podem ser revertidas
+
+#+latex: \bigskip\pause
+
+*Solução ideal*
++ Tratamento de problemas separado do código normal
+#+latex: \bigskip\pause
+
+#+BEGIN_CENTER
+Mecanismo
+
+*Sistema de Tratamento de Exceções* (STE)
+#+END_CENTER
+
+* Histórico
+
+Primeira linguagem com suporte a exceções: *PL/I* (1964)
+
+Construção executável para registrar um tratador
+
+#+begin_src PL/I
+ON condition
+   statement
+#+end_src
+#+latex: \bigskip\pause
+
+Funcionamento
+#+latex: \bigskip\pause
+
+Experiência com essa técnica
++ Confuso
++ Sensível a erros de programação
+
+* Em linguagens mais recentes
+
+Clu, Ada, Modula-3, Python, PHP, Ruby, C++, Java, C#, ML
+
+*Tratadores são vinculados lexicalmente a blocos de código*
+
+#+latex: \pause
+
+Exemplo em C++
+#+latex: \small
+  #+begin_src C++
+  try {
+    ...
+    if (algo_inesperado)
+       throw minha_excecao();
+    ...
+    cout << "tudo vai bem" << endl;
+    ...
+  } catch (minha_excecao) {
+     cout << "oops" << endl;
+  }
+  #+end_src
+
+* Em linguagens mais recentes
+
+Subprogramas não precisam tratar todas as exceções
+#+latex:  {\small
+  #+begin_src C++
+  void foo() {
+    ...
+    if (algo_inesperado)
+       throw minha_excecao();
+    ...
+  }
+  #+end_src
+#+latex: }
+
+#+latex:\pause
+
+Tratador pode estar na função chamadora
+#+latex: \small
+  #+begin_src C++
+  try{
+     ...
+     foo();
+     ...
+     cout << "tudo vai bem" << endl;
+     ...
+  }catch (minha_excecao) {
+     cout << "oops" << endl;
+  }
+  #+end_src
