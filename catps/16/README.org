@@ -1,0 +1,29 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #16 (Tratamento de Exceções)
+
+Escolha *duas* entre as seguintes linguagens para implementar esta
+atividade.
+
+- Ruby
+- Java
+- C++
+- Python
+- Scala
+- Objective-C
+- PHP
+- ML
+- Swift
+
+Considerando uma superclasse =FormaGeometrica= que é a superclasse de
+todas as formas geométricas (=Circulo=; =Losango=; =Triangulo=), crie pelo
+menos quatro exceções que possam ser disparadas pelos construtores e
+métodos set para informar ao usuário da classe que os argumentos
+passados são incorretos.  Caso a linguagem escolhida tenha suporte,
+crie uma hierarquia de exceções para pessoa. Utilize nomes
+informativos como =FormaException= (mais genérica),
+=LosangoInvalidoException=, =CirculoInvalidoException= e assim por diante.
+Elabore um programa principal que instancia as classes e demonstre
+algumas das exceções que você definiu sendo geradas e *tratadas*.
