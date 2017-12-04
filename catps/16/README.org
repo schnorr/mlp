@@ -16,6 +16,10 @@ atividade.
 - PHP
 - ML
 - Swift
+- Go
+- Ada
+- Haskell
+- OCAML (by Lucas)
 
 Considerando uma superclasse =FormaGeometrica= que é a superclasse de
 todas as formas geométricas (=Circulo=; =Losango=; =Triangulo=), crie pelo
