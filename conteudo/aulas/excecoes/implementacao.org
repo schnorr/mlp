@@ -1,0 +1,84 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Implementação
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Implementação de Tratamento de Exceções
+Existem duas formas de implementação principais
++ Lista dinâmica
++ Tabela estática
+* Lista Dinâmica
+
+Lista dinâmica de tratadores
+
+#+latex: \pause
+
+Quando o controle entra em um bloco protegido
++ O tratador do bloco é colocado no início da lista
+
+#+latex: \bigskip\pause
+
+Se uma exceção é disparada
+
++ Ambiente de execução chama o primeiro tratador da lista
++ Se ele tratar a exceção
+    + Chama tratador para compensar o erro
++ Se ele não tratar a exceção
+    + Desempilha o subprograma
+    + Remove o tratador do início da lista
+    + Redispara a exceção no subprograma chamador
+#+latex: \vfill\pause
+
+Se houver mais de um tratador no mesmo subprograma
+
+* Lista Dinâmica (Análise)
+
+Precisa de suporte de tempo de execução
+
+Cada subprograma tem um tratador implícito
+
++ Executa o seu epílogo (da sua sequência de ativação), mais
+  + Remoção das rotinas de tratamento atual
+  + Redisparo da exceção
+
+#+latex: \vfill\pause Desvantagens
+
++ Empilha/Desempilha tratadores de forma dinâmica
++ Sempre há acréscimo no custo de execução (mesmo sem exceções)
+
+* Tabela Estática
+Embasamento
++ Lista permite determinar o tratador ativo em um dado momento
++ Blocos de código ficam em posições contíguas de memória
+#+latex: \vfill
+\pause Em *tempo de compilação*
++ Montar uma tabela de tratadores indexada pelo endereço inicial
+    de um bloco protegido
+\pause Cada entrada na tabela
++ Endereço de um bloco protegido
++ Endereço do tratador correspondente
+\pause Tabela fica ordenada pelo endereço do bloco protegido
+* Tabela Estática
+Se houver uma exceção
++ Busca binária na tabela usando PC como índice \\
+    \rightarrow Achar o endereço inicial do código de tratamento
+#+latex: \vfill
+\pause Se o tratador relançar a exceção
++ Processo se repete
++ Tratadores são blocos de código e também estarão na tabela
+#+latex: \vfill
+\pause *Custo* de se tratar a exceção é maior
++ Mas pago somente se houver uma exceção
++ Ou seja, sem custo durante uma execução sem exceções
