@@ -73,10 +73,14 @@ disciplina, podem variar em abrangência e profundidade.
  | OO           | [[./aulas/oo/heranca.org][Herança]]                                             | [[../catps/][#14]]   |
  | OO           | [[./aulas/oo/parametrico.org][Paramétrico]]                                         | [[../catps/][#15]]   |
  |--------------+-----------------------------------------------------+-------|
+ | Exceções     | [[./aulas/excecoes/introducao.org][Introdução]]                                          |       |
+ | Exceções     | [[./aulas/excecoes/sistema.org][Sistema de Tratamento de Exceções]]                   |       |
+ | Exceções     | [[./aulas/excecoes/implementacao.org][Implementação]]                                       | [[../catps/][#16]]   |
+ |--------------+-----------------------------------------------------+-------|
+
 
 *** Planejado
 
- | Extra       | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação                      |       |
  | Extra       | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                                  |       |
  | Extra       | Linguagens de script                                                                                      |       |
  | Extra       | Programação Concorrente/Distribuída: aspectos sintáticos e semânticos                                     |       |
