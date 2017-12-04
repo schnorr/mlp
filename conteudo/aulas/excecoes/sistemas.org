@@ -1,0 +1,301 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Sistema de Tratamento de Exceções
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Suporte ao tratamento de exceções
+
+#+BEGIN_CENTER
+Permite *separar* as partes que devem executar normalmente
+
+daquelas que devem ser executadas apenas em caso de problemas
+#+END_CENTER
+
+Vantagens
++ Legibilidade
++ Confiabilidade
++ Encapsulamento
++ Reuso
+
+#+latex: \bigskip
+
+No caso de problemas
++ Subprograma lança uma exceção
+Tratamento pode ser feito em diferentes níveis
+
+* Sistemas de tratamento de exceções (STE)
+
+Mecanismo oferecido pela linguagem (mais recente)
+
+um STE deve ser capaz de (ou permitir)
++ *Detectar* a ocorrência de uma situação anormal
++ Identificar o tipo do problema, e *Disparar* a exceção apropriada
++ *Capturar* a exceção em algum ponto do programa
++ Ter código de tratamento para *Tratar* a exceção
+
+* STE -- Questões de Projeto 
+
+1. Como e onde os tratadores de exceção são especificados?
+   - Qual seu escopo?
+2. Como a ocorrência de uma exceção é vinculada a um tratador?
+3. Onde a execução continua após o tratamento da exceção?
+4. Há exceções pré-definidas?
+5. Exceções pré-definidas podem ser ativadas explicitamente?
+6. Deve existir tratadores padrão?
+7. Erros detectáveis por hardware são tratados como exceções que podem ser manipuladas?
+8. Deve ser possível desativar exceções?
+
+* Tipos de Exceções
+
+*Pré-definidas* (embutidas na linguagem)
+
+Definidas pelo programador, podendo ser
++ Totalmente livres (ML)
++ Criadas com base em exceções existentes \\ (Java, Objective-C, C++, ...)
+
+#+latex: \vfill\pause
+
+*Tratáveis*
++ Código de tratamento pode ser elaborado
++ Programa pode compensar o erro e seguir em frente
+#+latex: \pause
+
+Não-tratáveis
++ Compensação de erro impossível
++ Execução é terminada
+#+latex: \vfill\pause
+
+Exemplo da linguagem Java (ver documentação de =Throwable=)
+
+* Tipos de Exceções
+
+*Parametrizáveis*
++ A exceção pode carregar parâmetros ao código de tratamento
++ Em linguagem OO, exceções são implementadas como classes
+*Não-Parametrizáveis*
++ Sem parâmetros
+#+latex: \vfill\pause
+
+*Verificadas* (/checked/)
++ Programador deve fornecer código de tratamento
+#+latex: \pause
+
+*Não-verificadas* (/unchecked/)
++ Não há necessidade de tratamento
+#+latex: \vfill\pause
+
+Exemplo da linguagem Java (documentação de =Throwable=)
++ Procurar pour =checked=
+
+* *Lançamento* de exceções
+
+*Implicitamente*
++ Lançadas pelo ambiente operacional
++ Todas as pré-definidas
+    + Divisão por zero
+    + Overflow
+    + Erros de subscritos
+    + Acesso a conteúdo de ponteiro nulo
+#+latex: \vfill\pause
+
+*Explicitamente*
++ Lançadas pelo próprio programa
++ Normalmente protegidas por uma condição
+    #+begin_src C
+    if condicao
+       throw minha_excecao
+    #+end_src
+#+latex: \vfill\pause
+
+Exemplos de lançamento explícito
+
+  #+begin_src ALL
+  if (t==NULL) throw new NullPointerException(); //Java
+  if t<l raise RunTimeError('valor invalido');//Python
+  if n<0 then raise ValorInvalido; //ML
+  #+end_src
+* *Detecção* de exceções
+
+STE oferece um jeito de especificar regiões monitoradas
+
+Comando =try= em Java/C++
+  #+begin_src Java/C++
+  try {
+     ...
+  }
+  #+end_src
+#+latex: \pause
+
+Comando =try= em Python
+  #+begin_src Python
+     try:
+        arq = open("arq", "w")
+        arq.write("teste")
+  #+end_src
+
+* *Captura* e *Tratamento* de exceções
+
+STE oferece um jeito de especificar blocos de tratamento
++ Capturam tipos específicos (declarados) de exceção
+
+Comando =catch= em Java/C++
+  #+begin_src Java/C++
+  catch (NumberFormatException e){
+    System.out.println ("Entrada Invalida");
+  }
+  #+end_src
+
+#+latex: \pause
+
+Comando =except= em Python
+  #+begin_src Python
+  except IOError:
+    print "Erro: arquivo não encontrado"
+  #+end_src
+
+#+latex: \pause
+
+Comando =handle= em ML
+  #+begin_src ML
+  checked_fatorial n handle fatorial
+      => print "n invalido"
+  #+end_src
+
+* Objetivos do tratador
+
+Compensação do erro
++ Recuperar um estado válido
++ Continuar a execução normal
+
+#+latex: \pause
+
+Se a recuperação não é possível
++ Imprimir uma mensagem de erro significativa
++ Terminar o programa graciosamente
+
+#+latex: \pause
+
+Se a exceção não pode ser tratada no bloco
++ Liberar recursos alocados localmente
++ Propagar a exceção para o bloco chamador
+
+* Fluxo após o lançamento da exceção
+
+Tratar exceções gera um fluxo de controle alternativo
++ *Fluxo excepcional*
+
+#+latex: \vfill
+
+Exemplo de fluxo de execução normal
+
+#+latex: {\small
+#+begin_src Java
+//A
+try { 
+   //B
+   num = Integer.parseInt(stdin.readLine());
+   valido = true;
+}catch (NumberFormatException exc) { 
+   //C
+   System.out.println(“Entrada invalida.”);
+}catch (IOException exc) {
+   //D
+   System.out.println(“Problema de E/S. Terminando!”);
+   System.exit(0); 
+}
+//E
+#+end_src
+#+latex: }
+
+* Tratamento local /versus/ não-local
+
+*Tratamento local* no mesmo subprograma (com =try-catch=)
+
+Propagação \rightarrow tratamento em outro ponto do programa
+
+#+latex: \bigskip
+
+Em java, as exceções verificadas devem ser tratadas localmente
++ O compilador =javac= garante que o método deve tratá-lo
++ Se não tratadas, devem aparecer no cabeçalho (com =throws=)
++ Exemplo =Teste.java=
+
+* Tratamento não-local -- *Propagação de exceções*
+
+Propagação acontece através do encadeamento dinâmico \\
+  Registrado em cada registro de ativação na pilha
+
+#+latex: \vfill\pause
+
+Para cada subprograma (RA) empilhado que não é tratador
++ RA correspondente é desempilhado
++ Objetos criados são destruídos
+
+#+latex: \vfill\pause
+
+No momento que a exceção é tratada
++ Bloco imediatamente posterior ao do *tratador* é executado
+
+#+latex: \vfill\pause
+
+Se nenhum tratador é encontrado
++ Exceção chega ao método principal, que termina o programa
++ Exemplo: =Teste.java=
+
+* Propagação e liberação de dados (/clean-up/)
+
+Para cada subprograma (RA) empilhado que não é tratador
++ RA correspondente é desempilhado
++ *Objetos criados são destruídos*
+
+#+latex: \vfill
+
+C++
++ Exceção sai do escopo \Rightarrow Chamada de métodos destrutores
++ Totalmente implícito e automático
+
+Java e Python
++ Programador deve escrever o bloco =finally=
+
+* Blocos de finalização
+
+Bloco sempre executado, independente se houve exceção
+
+Java: =finally=
+
+#+latex: {\small
+
+#+begin_src Java
+try { ... }
+catch (Tipo1 e1) { ... }
+catch (Tipo1 e1) { ... }
+finally { ... }  
+#+end_src
+
+#+latex: }\pause
+
+Python: =finally/else=
+
+#+latex: {\small
+#+begin_src Python
+try:
+except Tipo1:
+except Tipo2:
+finally:
+   #sempre executado
+else:
+   #executado se não houver exceção
+#+end_src
+#+latex: }\pause
