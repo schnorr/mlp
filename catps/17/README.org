@@ -11,11 +11,21 @@ Este exercício aparece originalmente aqui:
 
 Considerando o código em [[./imsobuggy.c]].
 
-Compile o código e o execute da seguinte forma:
+Compile o código da seguinte forma:
 
 #+begin_src shell :results output
 gcc imsobuggy.c -o imsobuggy
-valgrind --leak-check=full ./imsobuggy
+#+end_src
+
+Primeiro, manualmente (sem o valgrind), tente encontrar todos os 68
+errors em 19 situações diferentes que existem nesse código. Em
+seguida, tente usar o valgrind da seguinte forma para encontrar e
+corrigir todos os erros. Submeta sua versão corrigida do =imsobuggy.c=.
+
+*Lembre-se de colocar o seu nome no cabeçalho do arquivo*.
+
+#+begin_src shell :results outpu
+valgrind -v --leak-check=full ./imsobuggy
 #+end_src
 
 ** Parte Opcional
