@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # -*- mode: org -*-
 #+startup: beamer overview indent
+#+EXPORT_EXCLUDE_TAGS: noexport
 
 * CATP #17 (Valgrind: Gerenciamento do Monte)
 
@@ -28,7 +29,7 @@ corrigir todos os erros. Submeta sua versão corrigida do =imsobuggy.c=.
 valgrind -v --leak-check=full ./imsobuggy
 #+end_src
 
-** Parte Opcional
+** Parte Opcional                                                 :noexport:
 
 Utilize a documentação do Valgrind Massif para a realização desta
 atividade. O arquivo de resposta deve conter o perfil obtido com o
