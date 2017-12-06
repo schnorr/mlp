@@ -4,12 +4,29 @@
 
 * CATP #17 (Valgrind: Gerenciamento do Monte)
 
+** Parte Principal (obrigatória)
+
+Este exercício aparece originalmente aqui:
+- [[https://courses.cs.washington.edu/courses/cse333/12su/sections/][CSE333 - University of Washington Computer Science & Engineering]]
+
+Considerando o código em [[./imsobuggy.c]].
+
+Compile o código e o execute da seguinte forma:
+
+#+begin_src shell :results output
+gcc imsobuggy.c -o imsobuggy
+valgrind --leak-check=full ./imsobuggy
+#+end_src
+
+** Parte Opcional
+
 Utilize a documentação do Valgrind Massif para a realização desta
 atividade. O arquivo de resposta deve conter o perfil obtido com o
 comando =ms_print= em formato gráfico textual (veja o manual abaixo para
 um exemplo de como ele é gerado pelo comando).
 
 - [[http://valgrind.org/docs/manual/ms-manual.html][Documentação do Valgrind (massif)]]
+
 
 1. Crie um perfil da memória alocada no monte considerando o seguinte
    código de programa de computador:
