@@ -1,0 +1,266 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Coleta de Lixo
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Estratégias de Coleta de Lixo
+
+Programas maiores, mais complexos
+
+Assunto (nem tão mais) do momento -- /Big Data/
++ Deve-se lidar com um grande volume de dados
+
+#+latex: \vfill\pause
+
+Algoritmos para coleta de lixo
++ Diminuição da complexidade de programação
++ Abstraem preocupação com gerenciamento de memória
++ Diminuem quantidade de erros
++ \pause Torna o =valgrind= obsoleto :)
+
+#+latex: \vfill\pause
+Difíceis de implementar
+#+latex: \pause
+
+No projeto de uma linguagem, é uma escolha entre
++ Conveniência e segurança
++ Desempenho
+
+* Duas famílias de algoritmos
+
+1. Contador de referências
+
+2. Rastreador de coleções
+   + Marcar e Varrer (/Mark-and-sweep/)
+   + Pare e Copie (/Stop-and-copy/)
+   + Coleção de gerações (/Generational Collection/)
+   + Coleção conservativa (/Conservative Collection/)
+
+* Contador de referências
+
+Quando um bloco alocado não é mais útil?
+
++ \pause Quando ninguém mais aponta para ele
+#+latex: \vfill\pause
+
+Método mais simples e trivial \linebreak
+  \rightarrow Contar quantos ponteiros apontam para um bloco
+
+#+latex: \vfill\pause
+
+Quando um bloco é alocado
++ Seu *contador de referência* é inicializado para 1
+\pause Quando os apontadores vão ser destruídos
++ Blocos apontados têm seus contadores decrementados
+\pause Quando o contador chega a zero, o bloco é liberado
+
+* Contador de referências
+
+Liberação de blocos é uma ação *recursiva*
+
+#+latex: \vfill\pause
+
+Implementação da linguagem
++ Deve ser capaz de identificar a localização de todos os ponteiros
++ *Descritores de tipo* para regiões de memória \linebreak
+    \rightarrow Definidos pelo compilador, embutidos no programa
+
+#+latex: \vfill\pause
+
+Qual o problema da técnica?
++ \pause Estruturas circulares
+
+#+latex: \pause
+
+Mesmo assim, é útil para
++ Cadeias de caracteres (nunca representam ponteiros)
++ Perl implementa para todos os dados alocados no monte\linebreak
+    \rightarrow Manual avisa o programador para quebrar ciclos
++ Implementações Objective-C
+
+* Rastreador de coleções
+
+Quando um bloco não é mais útil?
++ Quando o bloco se torna inacessível de fora do monte
+
+#+latex: \vfill\pause
+
+Funcionamento do método 
++ Rastreamento recursivo do monte marcando objetos úteis
++ Iniciam isto a partir de ponteiros raízes
+
+* Marcar e Varrer \small (/Mark-and-sweep/)
+
+Se enquadra em rastreamento de coleções
+
+#+latex: \vfill
+
+Quando a ocupação do monte se torna inaceitável
+
+Funcionamento em três passos
+  1. \pause  Coletor varre o monte marcando os blocos como inúteis
+  2. \pause  Então, a partir dos ponteiros raízes
+	+ Navega recursivamente nas estruturas de dados
+	+ Cada bloco encontrado é marcado como útil
+  3. \pause  Coletor caminha no monte novamente
+	+ Blocos que restam como inúteis são movidos para livres
+
+#+latex: \vfill\pause
+
+Duas informações são necessárias
++ Início e fim de cada bloco (o tamanho)
++ Onde estão os ponteiros (descritor de tipo)
+
+* Pare e Copie \small (/Stop-and-Copy/)
+
+Algoritmos de *Compactação do Monte*
++ Mover blocos já alocados
++ Corrigir referências a esses blocos no programa \linebreak
+    \rightarrow Complexidade e custo computacional
+Objetivo principal: diminuir a fragmentação externa
+
+#+latex: \vfill\pause
+
+A técnica Pare e Copie é capaz de
++ Reduzir a fragmentação
++ Eliminar os passos 1 e 3 do algoritmo de marcar e varrer
+
+* Pare e Copie \small (/Stop-and-Copy/)
+
+Funcionamento
++ Divide o espaço do monte em duas metades
++ Todas as alocações são feitas na primeira metade
++ Quando a ocupação se torna inaceitável, *Pare*
++ \pause Executa-se então o passo 2 da técnica Marcar e Varrer
+    + *Copie* os blocos encontrados para a segunda metade
+    + \pause Ao mesmo tempo, ajustam-se os ponteiros
+
+#+latex: \vfill\pause
+
+No final, a primeira metade tem somente blocos inúteis
++ Troca-se então a noção de primeira e segunda metade
++ Novas alocações são feitas na ``nova'' primeira metade
+
+* Pare e Copie \small (/Stop-and-Copy/) \Large -- Observações
+
+Metade do monte pode ser usado a cada vez
+
+Comparação com Marcar e Varrer
++ \pause Elimina duas etapas do Marcar e Varrer (1 e 3)
+
+#+latex: \pause
+
+Sobrecarga é linear (quantidade de blocos úteis)
+
+* Coleção de Gerações \small (/Generational Collection/)
+
+Podemos diminuir ainda mais a sobrecarga?
+
+#+latex: \vfill\pause
+
+A técnica Coleção de Gerações assume que
++ Maioria dos blocos no monte tem um tempo de vida curto
+
+#+latex: \vfill\pause
+
+Funcionamento
++ Divide-se o monte em regiões (as gerações)
++ Toda a alocação é feita na região mais jovem
++ \pause Quando a ocupação do monte se torna inaceitável
+    + O coletor usa Marcar e Varrer sempre na região mais jovem
+    + Blocos úteis são transferidos para regiões mais velhas
+
+#+latex: \vfill\pause
+Coletor deve estar preparado para analisar todo o monte
+
+#+latex: \pause
+
+Sobrecarga proporcional ao tamanho da região jovem
+
+* Coleção Conservadora \small (/Conservative Collection/)
+
+Coletor de lixo só funciona para linguagem fortemente tipadas?
++ Algoritmos precisam saber a *localização dos ponteiros*
+
+#+latex: \vfill\pause
+
+#+BEGIN_CENTER
+Coleção Conservadora
+
+Implementa Marcar e Varrer sem saber os ponteiros
+#+END_CENTER
+
+#+latex: \vfill\pause
+
+Funcionamento
+  1. \pause  Coletor varre marcando os blocos como inúteis
+  2. \pause  Então, a partir dos ponteiros raízes, assume que
+	+ Qualquer padrão de bit no monte pode ser um ponteiro
+     + Se, interpretado como ponteiro, apontar para o monte
+  3. \pause  Coletor caminha no monte novamente
+	+ Blocos que restam como inúteis são movidos para livres
+
+* Coleção Conservadora \small (/Conservative Collection/)
+
+Algoritmo é considerado seguro
++ Nunca vai liberar um bloco útil
+
+#+latex: \pause 
+
+Salvo se o programador pode ``esconder'' um ponteiro
+
++ Fazer um /cast/ de um ponteiro para inteiro
++ Depois fazer uma operação =xor= com uma constante
+
+#+latex: \vfill\pause
+
+Memória pode ser perdida
++ Mas a vantagem é que Marcar e Varrer se torna genérico
+
+* Contagem Referência /versus/ Rastreamento
+
+Principais pontos
++ Incapacidade de lidar com ciclos (contador de referências)
++ Tendência de parar o mundo (rastreamento)
+
+#+latex: \vfill\pause
+
+Lidando com o ``Parar o Mundo''
++ Possível solução: Coletores incrementais e concorrentes
++ Problema: tem uma sobrecarga total maior
+
+#+latex: \vfill\pause
+
+Técnicas para coleta automática \rightarrow *área de pesquisa ativa*
+
+* O que é exatamente um bloco-lixo?
+
+Contador de referências
++ \pause  É um bloco sem nenhum apontador para ele
+
+Rastreador de coleções
++ \pause  É um bloco inacessível a partir de ponteiros raízes
+
+#+latex: \vfill\pause
+
+Definição ideal?
++ Exemplo onde faz diferença
++ ``Eu gosto de guardar todos os meus ponteiros''
+
+#+latex: \vfill\pause
+
+/Set to NULL!/
++ Pode ser complicado
++ Mais fácil que liberar manualmente a memória
