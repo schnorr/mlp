@@ -83,7 +83,6 @@ disciplina, podem variar em abrangência e profundidade.
 
 *** Planejado
 
- | Extra       | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                                  |       |
  | Extra       | Linguagens de script                                                                                      |       |
  | Extra       | Programação Concorrente/Distribuída: aspectos sintáticos e semânticos                                     |       |
  | Extra       | Laboratório sobre programação concorrente                                                                 |       |
