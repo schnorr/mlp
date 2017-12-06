@@ -1,0 +1,67 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #17 (Valgrind: Gerenciamento do Monte)
+
+Utilize a documentação do Valgrind Massif para a realização desta
+atividade. O arquivo de resposta deve conter o perfil obtido com o
+comando =ms_print= em formato gráfico textual (veja o manual abaixo para
+um exemplo de como ele é gerado pelo comando).
+
+- [[http://valgrind.org/docs/manual/ms-manual.html][Documentação do Valgrind (massif)]]
+
+1. Crie um perfil da memória alocada no monte considerando o seguinte
+   código de programa de computador:
+   #+BEGIN_SRC C
+#include <stdlib.h>
+
+void g(void)
+{
+   malloc(2000);
+}
+
+void f(void)
+{
+   malloc(16000);
+   g();
+}
+
+int main(void)
+{
+   int i;
+   int* a[10];
+
+   for (i = 0; i < 10; i++) {
+      a[i] = malloc(4000);
+   }
+
+   f();
+
+   g();
+
+   for (i = 0; i < 10; i++) {
+      free(a[i]);
+   }
+
+   return 0;
+}
+   #+END_SRC
+
+Para obter este perfil faça, após compilar o programa e supondo que o
+binário dele é =a.out=:
+
+#+begin_src shell :results output
+valgrind --tool=massif --time-unit=B --massif-out-file=perfil_monte ./a.out
+#+end_src
+
+Obtenha o perfil através do uso do programa =ms_print=, desta forma:
+
+#+begin_src shell :results output
+ms_print perfil_monte
+#+end_src
+
+2. Repita o primeiro exercício utilizando um outro programa que foi
+   escrito em uma liguagem C/C++. Preferencialmente, tente encontrar
+   um =memory leak= em algum programa que tu tenhas desenvolvido no
+   passado.
