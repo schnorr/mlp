@@ -74,10 +74,12 @@ disciplina, podem variar em abrangência e profundidade.
  | OO           | [[./aulas/oo/parametrico.org][Paramétrico]]                                         | [[../catps/][#15]]   |
  |--------------+-----------------------------------------------------+-------|
  | Exceções     | [[./aulas/excecoes/introducao.org][Introdução]]                                          |       |
- | Exceções     | [[./aulas/excecoes/sistema.org][Sistema de Tratamento de Exceções]]                   |       |
+ | Exceções     | [[./aulas/excecoes/sistemas.org][Sistema de Tratamento de Exceções]]                   |       |
  | Exceções     | [[./aulas/excecoes/implementacao.org][Implementação]]                                       | [[../catps/][#16]]   |
  |--------------+-----------------------------------------------------+-------|
-
+ | Monte        | [[./aulas/monte/gerenciamento.org][Gerenciamento]]                                       |       |
+ | Monte        | [[./aulas/monte/coleta.org][Coleta de Lixo]]                                      |       |
+ |--------------+-----------------------------------------------------+-------|
 
 *** Planejado
 
