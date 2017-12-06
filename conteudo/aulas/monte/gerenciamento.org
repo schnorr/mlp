@@ -1,0 +1,162 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Gerenciamento do Monte
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Organização da Memória e Conceitos básicos
+
+Monte
++ Região da memória para alocação e liberação de blocos
++ Momentos arbitrários durante a execução do programa
+
+Relação do monte com ponteiros raízes (/roots/)
+
+Blocos lixo e árvore de apontadores
+
+* Gerenciamento do Monte -- Introdução
+
+Principais preocupações em um gerenciador de monte
++ Espaço /versus/ Tempo
++ Normalmente é uma escolha entre os dois
+
+#+latex: \vfill\pause
+
+Espaço
++ Fragmentação interna
++ Fragmentação externa
+
+#+latex: \pause
+
+Tempo
++ Algoritmo sofisticado mas demorado?
++ Simples e rápido?
++ Híbrido
+
+* Gerenciamento do Monte -- Lista Única
+
+Gerenciadores com uma lista encadeada de blocos livres
++ Inicialmente com um único bloco com todo o monte
+
+#+latex: \bigskip\pause
+
+Dois algoritmos
++ Primeiro Encaixe (/first fit/)
++ Melhor Encaixe (/best fit/)
+
+#+latex: \pause
+
+Análise intuitiva
++ Best fit reserva blocos maiores para pedidos maiores
++ Best fit custa mais que o primeiro encaixe
+
+#+latex: \bigskip\pause
+*Pergunta*
++ Qual das abordagens gera menor fragmentação externa?
+
+* Gerenciamento do Monte -- Lista Única
+
+*Pergunta*. Considerando uma lista única
++ Qual o custo de uma alocação?
+
+#+latex: \bigskip\pause
+
+Custo de alocação é linear
++ Depende somente da quantidade de blocos já alocados
+
+#+latex: \bigskip\pause
+
+Reduzir para custo constante
++ Ter várias listas com *tamanho de blocos diferentes*
+
+* Gerenciamento do Monte -- Listas Múltiplas
+
+Monte é dividido em pools (uma para cada tamanho de bloco)
+
+Uma lista de blocos livres para cada pool
+
+#+latex: \bigskip\pause
+
+Quando vem um pedido de alocação
++ Pedido é arredondado para o tamanho mais próximo
++ Realiza o acesso direto a lista de blocos livres específica
+
+#+latex: \bigskip\pause
+
+Divisão de tamanhos de bloco: estática ou dinâmica
++ Estática, definida em tempo de compilação
++ Dinâmica
+  + Sistema Parceiro (/Buddy System/)
+  + Monte de Fobinacci (/Fibonacci Heap/)
+
+* Sistema Parceiro (/Buddy System/)
+
++ Tamanho dos blocos são potências de 2
+  + Blocos de tamanho 2^0, 2^1, 2^2, 2^3, 2^4 ... 2^n
+
+#+latex: \vfill
+
+#+BEGIN_CENTER
+Algoritmo
+#+END_CENTER
+
+#+latex: \vfill
++ \pause Se um bloco de tamanho 2^k é pedido, pega da piscina 2^k
++ \pause Caso não haja blocos livres nesta piscina
+  + Pega um bloco da piscina 2^{k+1}, divide em 2 e devolve
+  + O bloco que sobrou é adicionado na lista 2^k
++ \pause No momento da liberação do bloco de 2^{k}
+  + Fundido com o bloco parceiro (antes da separação)
+  + Colocado de volta na lista 2^{k+1}
+
+* Monte de Fibonacci (/Fibonacci Heap/)
+
+Tamanho dos blocos retirados da sequência de Fibonacci
++ 1, 1, 2, 3, 5, 8, 13, 21, ...
+
+#+latex: \vfill
+
+#+BEGIN_CENTER
+Algoritmo
+#+END_CENTER
+
+#+latex: \vfill\pause
+Funcionamento similar ao Sistema Parceiro
+
+#+latex: \vfill\pause
+Algoritmo é ligeiramente mais complexo \linebreak
+  \rightarrow tamanhos dos blocos são mais irregulares
+
+#+latex: \pause
+
+Permite uma fragmentação mais baixa
++ A sequência de fibonacci cresce mais devagar que 2^k
+
+* Framentação externa
+
+Todos os algoritmos geram algum tipo de fragmentação
++ Não importa qual algoritmo, quantas listas de blocos livres
++ Diminuim a habilidade de responder pedidos de alocação
+
+#+latex: \vfill\pause
+
+Algoritmos de *Compactação do Monte*
++ Mover blocos já alocados
++ Corrigir referências a esses blocos no programa \linebreak
+    \rightarrow Complexidade e custo computacional
+
+* valgrind \small (memcheck e massif)
+
+[[./valgrind.png]]
+
