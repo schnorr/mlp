@@ -1,0 +1,108 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Inovações, Discussão, "Pior é melhor"
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Inovações: Nomes e escopo (com tipagem dinâmica)
+
+#+BEGIN_CENTER
+*Questão:* Qual é o escopo de uma variável não declarada? \linebreak
+#+END_CENTER
+
+Supondo escopo estático (léxico)
++ Quando acessamos uma variável =x=, como saber se ela é
+    local, global ou algo entre os dois (c/ escopo aninhado)?
+
+#+latex: \pause
+
+Ruby tem dois níveis de escopo (local e global)
++ Distinção usando prefixos
++ foo é local
++ $foo é global
++ @foo é um atributo de instância
++ @@foo é um atributo de classe
+\pause Python, R
++ Regra interessante \linebreak
+    \rightarrow tudo é local, a menos que especificado o contrário
+* Inovações: Tipos de dados
+
+Declaração de tipos é desnecessária
++ Checagem de tipos feita dinamicamente
+    + Algumas linguagens são mais estritas \linebreak
+      \rightarrow Scheme, Python, Ruby
+    + \pause Outras menos (Perl, Javascript, Rexx, Tcl)
+
+#+latex: \pause
+
+Perl
++ Assume que o programador codifica erros importantes
++ Na ausência de checagem \rightarrow comportamento razoável
+    #+begin_src perl
+    $a[3] = "1";
+    print $a[3] + $a[4], "\n";
+    #+end_src
+
+* Inovações: Orientação a objeto
+
+Declaração de classes são executáveis (Python, Ruby)
++ *Compilação condicional*
+\pause Exemplo com código em Ruby
+  #+begin_src ruby
+    class My_class
+       def initialize(a, b)
+         @a = a;   @b = b;
+       end
+       if expensive_function()
+         def get()
+             return @a
+         end
+       else
+         def get()
+             return @b
+         end
+       end
+    end
+  #+end_src
+* Discussão
+
+Como aprender a programar?
++ Linguagem de script /versus/ linguagem de sistema
+Ronald P. Loui (/Washington University/)
++ /In Praise of Scripting: Real Programming Pragmatism/
+
+#+latex: \vfill\pause
+
+Qual linguagem de script para ensinar a programar?
++ Gawk
++ Javascript
++ PHP
++ ASP
++ Perl
++ Python (Raspberry Pi)
++ Ruby
+
+#+latex: \vfill\pause
+
+E sobre a *escalabilidade* de linguagens de script?
+* Pior é melhor?
+Linguagens de script /versus/ Linguagens de sistema
++ Qual é melhor?
+#+latex: \vfill
+\pause A discussão balança entre
++ Expressividade/flexibilidade /vs/ segurança e desempenho
++ \pause Rápido e sujo /vs/ aplicações polidas
+\pause Richard Gabriel (Lucid Corp., 1989)
++ http://dreamsongs.com/worseisbetter.html
++ Por que Unix e C tem tanto sucesso quando comparado a Common Lisp?
