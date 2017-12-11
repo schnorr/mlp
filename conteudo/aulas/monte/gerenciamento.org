@@ -98,7 +98,7 @@ Divisão de tamanhos de bloco: estática ou dinâmica
 + Estática, definida em tempo de compilação
 + Dinâmica
   + Sistema Parceiro (/Buddy System/)
-  + Monte de Fobinacci (/Fibonacci Heap/)
+  + Monte de Fibonacci (/Fibonacci Heap/)
 
 * Sistema Parceiro (/Buddy System/)
 
