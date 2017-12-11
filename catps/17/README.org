@@ -15,8 +15,10 @@ Considerando o código em [[./imsobuggy.c]].
 Compile o código da seguinte forma:
 
 #+begin_src shell :results output
-gcc imsobuggy.c -o imsobuggy
+gcc -g imsobuggy.c -o imsobuggy
 #+end_src
+
+#+RESULTS:
 
 Primeiro, manualmente (sem o valgrind), tente encontrar todos os 68
 errors em 19 situações diferentes que existem nesse código. Em
