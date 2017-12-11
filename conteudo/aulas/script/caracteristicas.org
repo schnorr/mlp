@@ -1,0 +1,149 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Características Comuns
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Batch/Interativo e Expressividade
+
+Definição precisa é difícil
++ Mas elas tem um conjunto de *características em comum*
+
+#+latex: \vfill\pause
+
+Uso em /batch/ ou interativo
++ Ler o programa fonte (/script/) linha por linha
+    + Rexx, Python, Tcl, Guile, Ruby
++ Notável exceção: Perl (insiste em ler todo o código antes)
+\pause Expressividade
++ Suportar o rápido desenvolvimento e uso interativo
+    + Pouco código para fazer coisas simples \rightarrow expressividade
++ Abordagens
+    + Uso forte de pontuação e identificadores curtos (Perl)
+    + /English-like/, várias palavras e pouca pontuação
++ *Evitar declarações extensivas, estrutura complexa*
+
+* Economia de expressão
+
+Exemplos /Hello World/ de (ou falta de) *economia de expressão*
+
+Java
+  #+begin_src Java
+  class Hello {
+     public static void main (String[] args) {
+        System.out.println ("Hello, world!");
+     }
+  }
+  #+end_src
+
+\pause Ada
+  #+begin_src Ada
+  with ada.text_IO; use ada.text_IO;
+  procedure hello is
+  begin
+      put_line ("Hello, world!");
+  end hello;
+  #+end_src
+\pause *Perl, Python, Ruby* (Linguagens de script)
+  #+begin_src Perl
+  print "Hello, world!\n"
+  #+end_src
+* Regras simples de escopo
+
+Inexistência de declarações, regras de escopo simples
++ Tudo é global por /default/ (Perl)
+    + Declarações opcionais limitam para um escopo aninhado
++ Tudo é local por /default/ (PHP, Tcl, ...)
+    + Globais devem ser importadas explicitamente
++ Em Python
+    + Atribuição define o escopo
+    + Sintaxe especial para atribuir para variável de outro escopo
+
+* Características comuns                                         :noexport:
+
+Exemplo de regras de escopo simples (Python)
+  \scriptsize
+  #+begin_src Python
+PRICE_RANGES = { 
+             64:(25, 0.35),
+             32:(13, 0.40),
+             }
+
+def get_order_total(quantity):
+ global PRICE_RANGES
+ _total = 0
+ _i = PRICE_RANGES.iterkeys()
+ def recurse(_i):
+     try:
+         key = _i.next()
+         if quantity % key != quantity:
+            _total += PRICE_RANGES[key][0]
+         return recurse(_i) 
+     except StopIteration:
+         return (key, quantity % key)
+
+ res = recurse(_i)     
+  #+end_src
+\pause \normalsize*Pergunta:* qual o problema com este programa?
++ Considerando que a atribuição define o escopo em Python
++ http://stackoverflow.com/questions/5218895/python-nested-functions-variable-scoping
+
+* Tipagem dinâmica flexível / Acesso fácil ao sistema
+
+Tipagem dinâmica flexível
+
++ Checagem imediatamente antes do uso (PHP, Python, ..)
++ Interpretação de acordo com contexto (Rexx, Perl, Tcl)
+    + Exemplo em perl
+    #+begin_src perl
+    $a = "4";
+    print $a . 3 . "\n";
+    print $a + 3 . "\n";
+    #+end_src
+    + \pause Parecido com coerção (sem a noção de um tipo ``natural'')
++ \pause *Linguagens sem tipo* \rightarrow Ousterhout's Plot (Figure 1)
+    + Exemplo em Tcl
+      \scriptsize
+      #+begin_src tcl
+      button .b -text Hello! -font {Times 16} -command {puts hello}
+      #+end_src
+\pause Acesso fácil a chamadas de sistema
++ Muito mais suporte que linguagens tradicionais
++ Perl tem mais de 100 comandos embutidos para acessar sistema
+* Manipulação de strings (sed) / Estruturas de dados
+
+Casamento de padrões e manipulação de /strings/
++ Expressões regulares estendidas (/regexp/)
+
+\pause Estruturas de dados de alto nível
++ Conjuntos, dicionários, listas, tuplas
++ \pause No caso de Perl, faz parte da sintaxe de nomes ($ @ #)
+* Reflexão
+Mudanças rápidas no desenvolvimento de LPs
++ Linguagens de script
+#+latex: \vfill
+\pause  Várias razões para esse enfoque
++ Dinamismo da comunidade de código aberto
++ Baixo investimento para criar uma nova linguagem
+#+latex: \vfill
+\pause  Linguagens de script incorporam novidades recentes
++ Exemplo com Ruby
+    + *Modelo uniforme de objetos* (parecido com Smalltalk)
+    + Iteradores (Clu)
+    + Atribuição de múltiplos caminhos
+    + Tratador de exceção estruturado
+    + Reflexão
++ Python
+    + Funções anônimas de primeira classe
+    + Listas (/list comprehensions/) no estilo de Haskell
