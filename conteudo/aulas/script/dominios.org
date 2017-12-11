@@ -1,0 +1,126 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Domínios de Problemas
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Domínio de problemas
+Linguagens de propósito geral \rightarrow /scripting/
++ Scheme, VB
+\pause Linguagens de script \rightarrow propósito geral
++ Perl, Python, Ruby
++ Características para construir programas grandes \linebreak
+    \scriptsize módulos, compilação separada, ambientes de desenvolvimento
+#+latex: \vfill
+\pause Na maioria das vezes, com *domínio de problemas restrito*
+* Domínio: Linguagens de comando /shell/
+Focadas em processamento /batch/
++ Ainda da era dos cartões perfurados
+\pause Sem retorno, JCL não tinha construções iterativas
+
+\pause Compartilhamento de tempo interativo (1970)
++ Maior sofisticação
++ /bash/ (/Bourne-again shell/)
+* Domínio: Ling. de comando /shell/ (Function.)
+Expansão de nome de arquivo (com /wildcars/)
+  #+begin_src bash
+	 ls *.pdf
+      for fig in *.eps; do ps2pdf $fig; done
+	 #+end_src
+\pause Testes e condições
+  #+begin_src bash
+	 if [ $fig -nt $target ]; then ps2pdf $fig; fi
+	 #+end_src
+\pause Redireção e canais (/pipes/)
+  #+begin_src bash
+    for fig in *; do echo $fig; done | sort -u | wc -l
+    #+end_src
+* Domínio: Linguagens de comando shell
+Aspas e expansão
+  #+BEGIN_SRC bash
+  foo=bar
+  single='$foo'
+  double="$foo"
+  echo $single $double
+  #+END_SRC
+\pause  Funções
+  #+BEGIN_SRC bash
+  function ll () { ls -l "$@" }
+  #+END_SRC
+\pause Convenção #!
+  #+BEGIN_SRC bash
+  #!/bin/bash
+  #+END_SRC
++ Problemas de portabilidade
+* Domínio: Processamento de texto
+Segundo principal ancestral de Linguagens de Script
++ Automatizar a edição de texto \linebreak
+    Substituição, inserção, casamento de parênteses, ...
+\pause Exemplos
++ sed (/stream editor/)
+    #+begin_src sed
+    sed -e '/^[[:space:]]*$/d'
+    #+end_src
+    + Ausência de variáveis
+    + Comandos de um único caractere
+    + Lê arquivo uma linha por vez
++ \pause awk (1977)
+    + Alfred *Aho*, Peter *Weinberger*, Brien *Kernighan*
+    + Características (Campos e Arranjos associativos)
+      #+begin_src awk
+      awk '{ print $2 }'
+      #+end_src
+    + Evolução do sed em direção a linguagens de script modernas
++ \pause perl (1987) -- /practical extraction and report language/
+    + Apropriada para programas grandes
+    + Moto: ``There's more than one way to do it.''
+* Domínio: Matemática e Estatística
+Matemática (Maple, Mathematica, Matlab)
++ Suporte para métodos numéricos
++ Matemática simbólica
++ Visualização de dados
++ Modelagem matemática
+#+latex: \vfill
+\pause Estatística (S, R)
++ S (1970s), proprietária
++ R
+    + Versão aberta de S
+    + Suporta arranjos multidimensionais
+    + Funções primeira classe
+* Outros domínios
+Linguagens ``colantes'' e de propósito geral
++ Tcl, Python, Ruby
+Linguagens extensoras
++ Permitem a criação de novos comandos
++ Javascript, Visual Basic, AppleScript, Tcl, Python
++ Gimp, estendido com
+    + Scheme (SIOD), Tcl, Python, Perl, ...
+* Escolha entre L. de /scripts/ e de sistema
+*Linguagens de script*
+
+- Objetivo é conectar componentes existentes?
+- Aplicação manipulará uma variedade de coisas diferentes?
+- Tem interface gráfica?
+- Muita manipulação de cadeias de caracteres?
+- Devem evoluir rapidamente ao longo do tempo?
+- A aplicação precisará ser estendida?
+
+#+latex: \vfill
+
+*Linguagens de sistema*
+
+- Implementa algoritmos e estruturas de dados complexos?
+- Manipula um grande volume de dados?
+  + Onde o desempenho é fundamental
+- Funções são bem definidas e difíceis de mudar
