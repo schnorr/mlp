@@ -14,3 +14,67 @@
 #+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
 #+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+Linguagens de programação tradicionais
++ Programa auto contido
+#+latex: \vfill
+\pause Realidade: coordenação de múltiplos programas
++ Sistema de pagamento
+    + Leitores de cartão
+    + Formulários escaneados
+    + Requisições a base de dados
+    + ...
++ Gerenciamento de fotos
+#+latex: \vfill
+\pause *Necessidade de programas coordenadores*
++ Em linguagens convencionais é mais complicado
+    + \scriptsize Eficiência, manutenção, portabilidade, detecção estática de erros
++ \pause Em linguagens de script
+    + \scriptsize Flexibilidade, rápido desenvolvimento, customização, checagem dinâmica
+* Introdução -- Linguagens ``colantes'' \scriptsize (/Glue Languages/)
+Perl e Python
++ Originalmente projetadas para ``colar'' programas existentes
+\pause WWW \rightarrow usadas para gerar conteúdo dinâmico
+
+\pause *Linguagens extensoras* (programas com /plugins/)
++ Javascript para construir /add-ons/ para o Firefox
+* O que são linguagens de script? \small (Histórico)
+Ancestrais das linguagens de script modernas (1977)
++ Interpretadores (/shell scripting/) -- JCL, sh, csh
+    + IBM's /Job Control Language/ (1966)
+    + Thompson shell para Unix (1971)
++ Processadores de texto e geração de relatórios -- sed, awk
+#+latex: \vfill
+\pause Linguagens sucessoras
++ REXX -- /Restructured Extended Executor/ (1979)
++ Perl (1980)
+\pause Rasmus L. cria uma coleção de /scripts/ baseado em Perl
++ Criação da linguagem PHP (1990)
+#+latex: \vfill
+\pause *John Ousterhout* (1998)
++ /Scripting: higher level programming for the 21st Century/ \linebreak
+    \rightarrow ``Elas assumem que componentes úteis já existem em
+    outras linguagens. Elas não são feitas para escrever aplicações
+    mas sim para combinar componentes.''
+    + \pause Antecipa um aumento no uso de linguagens de scripts \\
+    + \pause Desenvolvimento 5 a 10 \times mais rápido \linebreak
+      Execução 10 a 20 \times mais lenta
+* O que são linguagens de script? \small (Definição)
+/Scripting/ é um termo para linguagens ``colantes''
++ Unir programas já existentes criados com outras linguagens
++ /glue languages/ ou /system integration languages/       
+\pause Termo mais amplo e vago
++ /Web scripting/
++ Linguagens extensoras
+\pause *Definição precisa é difícil*
+#+latex: \vfill
+\pause Alguns exemplos
++ Incorporadas em (estendendo) outros programas
+    + /emacs-lisp/ (linguagem de extensão do editor Emacs)
+    + Tcl, Rexx, Python
+    + Dialetos Guile e Elk de Scheme
+    + Tk (arcabouço gráfico)
++ XSLT (/extensible stylesheet language transformations/)
+#+latex: \vfill
+
