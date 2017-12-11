@@ -80,6 +80,8 @@ disciplina, podem variar em abrangência e profundidade.
  | Monte        | [[./aulas/monte/gerenciamento.org][Gerenciamento]]                                       |       |
  | Monte        | [[./aulas/monte/coleta.org][Coleta de Lixo]]                                      | [[../catps/][#17]]   |
  |--------------+-----------------------------------------------------+-------|
+ | Script       | [[./aulas/script/introducao.org][Linguagens de Script]]                                |       |
+
 
 *** Planejado
 
