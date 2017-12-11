@@ -81,11 +81,13 @@ disciplina, podem variar em abrangência e profundidade.
  | Monte        | [[./aulas/monte/coleta.org][Coleta de Lixo]]                                      | [[../catps/][#17]]   |
  |--------------+-----------------------------------------------------+-------|
  | Script       | [[./aulas/script/introducao.org][Linguagens de Script]]                                |       |
-
+ | Script       | [[./aulas/script/caracteristicas.org][Características Comuns]]                              |       |
+ | Script       | [[./aulas/script/dominios.org][Domínios de Problemas]]                               |       |
+ | Script       | [[./aulas/script/inovacoes.org][Inovações, Discussão, "Pior é melhor"]]               |       |
+ |--------------+-----------------------------------------------------+-------|
 
 *** Planejado
 
- | Extra       | Linguagens de script                                                                                      |       |
  | Extra       | Programação Concorrente/Distribuída: aspectos sintáticos e semânticos                                     |       |
  | Extra       | Laboratório sobre programação concorrente                                                                 |       |
 
