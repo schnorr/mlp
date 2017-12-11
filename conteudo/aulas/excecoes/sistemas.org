@@ -230,7 +230,7 @@ Propagação \rightarrow tratamento em outro ponto do programa
 Em java, as exceções verificadas devem ser tratadas localmente
 + O compilador =javac= garante que o método deve tratá-lo
 + Se não tratadas, devem aparecer no cabeçalho (com =throws=)
-+ Exemplo =Teste.java=
++ Exemplo [[./Teste.java]]
 
 * Tratamento não-local -- *Propagação de exceções*
 
