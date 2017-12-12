@@ -665,6 +665,69 @@ Temos: IMPLEM. + CAPA + LING. + PROBLEM + CRIT. + ITENS + CONCL.
 | Primeira             |       |
 | Recursão             |       |
 |----------------------+-------|
+
+*** Os Aforistas Desaforados
+Temos: IMPLEM (279L) + CAPA + INTRO + ITENS?
+- Vários erros ortográficos
+- Trata-se de uma implementação funcional
+- Os itens (critérios funcionais) não estão explicados no relatório
+  - Faltam trechos de código e uma explicação de como os conceitos
+    funcionais vistos foram aplicados no trabalho. Por exemplo
+    simplório, funções anônimas foram usadas? Como, aonde, por quê?
+  - Trechos de código podem ser incluídos com listings, fazendo
+    referência ao código fonte. Explicar como funções puras são
+    usadas, etc.
+- Atenção aos demais requisitos do trabalho
+
+#+name: aforistas
+|----------------------+-------|
+| ITEM                 | Valor |
+|----------------------+-------|
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+|----------------------+-------|
+| Introducao           |     8 |
+|----------------------+-------|
+| Ling.Funcionalidades |       |
+| Ling.Dominio         |       |
+|----------------------+-------|
+| Crit.Tabela          |       |
+| Crit.Justificativas  |       |
+| Crit.Discussao       |       |
+|----------------------+-------|
+| Conc.Geral           |       |
+| Conc.Benefícios      |       |
+| Conc.Limitações      |       |
+|----------------------+-------|
+| Referências          |    10 |
+| Bibtex               |    10 |
+|----------------------+-------|
+| Git                  |       |
+| Virtual              |       |
+|----------------------+-------|
+| Classes              |       |
+| Encapsulamento       |       |
+| Construtores         |       |
+| Destrutores          |       |
+| Espaço               |       |
+| Herança              |       |
+| Inclusão             |       |
+| Paramétrico          |       |
+| Sobrecarga           |       |
+| Delegates            |       |
+|----------------------+-------|
+| Puras                |       |
+| Lambda               |       |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |       |
+| Lapply               |       |
+| Primeira             |    10 |
+| Recursão             |       |
+|----------------------+-------|
+
 * Projeto Inicial
 ** Entrega
 
