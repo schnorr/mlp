@@ -601,6 +601,70 @@ Temos: IMPLEMENTACAO + CAPA + LING. (um parágrafo) + ITENS + CONCL (duas frases
 | Primeira             |       |
 | Recursão             |       |
 |----------------------+-------|
+
+*** Mean Girls
+Temos: IMPLEM. + CAPA + LING. + PROBLEM + CRIT. + ITENS + CONCL.
+- Título não foi modificado
+- Problemas de referências, falta de uso de bibtex
+- Faltam trechos de código que ilustrem os itens (critérios)
+  - Usem o pacote =listings= sabiamente para evitar de copiar/colar código
+- "gaarante"
+- "dynamicPiece (que não foi declarada, porém não implementada),",
+  ou seja, ela não existe.
+- Seria bom usar =\texttt= para marcar os nomes das classes, tornando o
+  texto com um melhor typesetting. Uma vez tal convenção adotada,
+  usá-la sempre.
+- "implemntam", erros ortográficos!
+- A conclusão inexiste
+
+#+name: mean
+|----------------------+-------|
+| ITEM                 | Valor |
+|----------------------+-------|
+| Capa.Grupo           |       |
+| Capa.Membros         |    10 |
+| Capa.Problema        |     0 |
+| Capa.Linguagem       |     0 |
+|----------------------+-------|
+| Introducao           |    10 |
+|----------------------+-------|
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+|----------------------+-------|
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |     0 |
+|----------------------+-------|
+| Conc.Geral           |       |
+| Conc.Benefícios      |       |
+| Conc.Limitações      |       |
+|----------------------+-------|
+| Referências          |     0 |
+| Bibtex               |     0 |
+|----------------------+-------|
+| Git                  |    10 |
+| Virtual              |       |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |     9 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |    10 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |    10 |
+| Sobrecarga           |    10 |
+| Delegates            |     0 |
+|----------------------+-------|
+| Puras                |       |
+| Lambda               |       |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |       |
+| Lapply               |       |
+| Primeira             |       |
+| Recursão             |       |
+|----------------------+-------|
 * Projeto Inicial
 ** Entrega
 
