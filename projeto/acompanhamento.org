@@ -180,6 +180,66 @@ Temos: IMPLEMENTACAO + CAPA + LING + PROBLEMA + ITENS
 | Primeira             |       |
 | Recursão             |       |
 |----------------------+-------|
+
+*** Batalha Barcal
+Temos: IMPLEMENTACAO + ITENS
+- Trata-se da implementação funcional (package Java8/functional)
+- Não usou o template em Latex (embora os fontes estejam no pacote)
+- Sem capa, sem identificação
+- Ausência de trechos de código ilustrando os requisitos
+  - Dificuldade de averiguar se os requisitos foram cumpridos
+  - Tem que olhar o código para encontrá-las
+- Evitar o uso de caminhos absolutos em Makefiles
+  - Necessidade de instalar o pacote =openjfx= (após traditional pacotes java)
+
+#+name: batalha
+|----------------------+-------|
+| ITEM                 | Valor |
+|----------------------+-------|
+| Capa.Grupo           |     0 |
+| Capa.Membros         |     0 |
+| Capa.Problema        |     0 |
+| Capa.Linguagem       |     0 |
+|----------------------+-------|
+| Introducao           |     0 |
+|----------------------+-------|
+| Ling.Funcionalidades |       |
+| Ling.Dominio         |       |
+|----------------------+-------|
+| Crit.Tabela          |       |
+| Crit.Justificativas  |       |
+| Crit.Discussao       |       |
+|----------------------+-------|
+| Conc.Geral           |       |
+| Conc.Benefícios      |       |
+| Conc.Limitações      |       |
+|----------------------+-------|
+| Referências          |       |
+| Bibtex               |       |
+|----------------------+-------|
+| Git                  |       |
+| Virtual              |       |
+|----------------------+-------|
+| Classes              |       |
+| Encapsulamento       |       |
+| Construtores         |       |
+| Destrutores          |       |
+| Espaço               |       |
+| Herança              |       |
+| Inclusão             |       |
+| Paramétrico          |       |
+| Sobrecarga           |       |
+| Delegates            |       |
+|----------------------+-------|
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |    10 |
+| Lapply               |    10 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+|----------------------+-------|
 * Projeto Inicial
 ** Entrega
 
