@@ -122,6 +122,7 @@ Ou seja:
 | Recursão             |       |    2 |
 |----------------------+-------+------|
 
+* Projeto Inicial
 ** Entrega
 
  Todos os grupos entregaram no prazo, salvo:
