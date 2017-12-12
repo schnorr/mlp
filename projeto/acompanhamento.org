@@ -31,7 +31,96 @@ Todos os grupos entregaram no prazo.
 | Os Aforistas Desaforados  |  2 | OCAML     | Escopo       | Entrega (João)                  |
 |---------------------------+----+-----------+--------------+---------------------------------|
 
-* Projeto Inicial
+** Plano
+
+Veja detalhes em [[./README.org]].
+
+Da especificação, temos:
+
+#+BEGIN_EXAMPLE
+A *entrega parcial*, uma etapa obrigatória, deve vir acompanhada da
+implementação e relatório a respeito da solução utilizando um dos
+paradigmas (OO ou funcional), a critério do grupo. O professor
+utilizará esta oportunidade para formar um parecer rápido do relatório
+e da implementação; sugerindo ao grupo melhorias caso necessário.
+#+END_EXAMPLE
+
+Ou seja:
+- IMPLEMENTACAO + RELATORIO
+  - Sendo que o relatório: CAPA + INTRO + LING + CRITICA + CONCLU + REFS
+    - O relatório também deve conter ITENS (seguindo a espec.)
+  - E a implementação com o código fonte do programa
+
+** Sumário de avaliação
+
+ |---------------------------+---------+------------------------------|
+ | Nome do Grupo             | Páginas | Arquivos                     |
+ |---------------------------+---------+------------------------------|
+ | Al2O3:Cr                  |      12 | PDF, TEX + sources           |
+ | Batalha Barcal            |       5 | PDF + sources                |
+ | Caiu a barca              |      12 | PDF + FSX                    |
+ | ClubedasWynx              |      15 | PDF, TEX + sources + release |
+ | Confia na Call            |       9 | PDF, TEX + sources           |
+ | Fullbar                   |      15 | PDF, TEX + sources           |
+ | GrupoHP                   |      15 | PDF + sources                |
+ | Guerreiros de Anúbis      |       8 | PDF, TEX + sources           |
+ | Mean Girls                |      17 | PDF + sources                |
+ | Os Aforistas Desaforados  |       7 | PDF + source                 |
+ | Os Gatos de Schnorrdingër |      13 | PDF + sources                |
+ | root                      |      17 | PDF + sources                |
+ | SchnorR doidão            |      18 | PDF, TEX + sources           |
+ | WubbaLubbaDubDub          |       7 | PDF, TEX + sources           |
+ |---------------------------+---------+------------------------------|
+
+** Instrumento de avaliação
+
+|----------------------+-------+------|
+| ITEM                 | Valor | Peso |
+|----------------------+-------+------|
+| Capa.Grupo           |       |    1 |
+| Capa.Membros         |       |    1 |
+| Capa.Problema        |       |    1 |
+| Capa.Linguagem       |       |    1 |
+|----------------------+-------+------|
+| Intro                |       |    1 |
+|----------------------+-------+------|
+| Ling.Funcionalidades |       |    1 |
+| Ling.Dominio         |       |    1 |
+|----------------------+-------+------|
+| Crit.Tabela          |       |    3 |
+| Crit.Justificativas  |       |    3 |
+| Crit.Discussao       |       |    3 |
+|----------------------+-------+------|
+| Conc.Geral           |       |    1 |
+| Conc.Benefícios      |       |    1 |
+| Conc.Limitações      |       |    1 |
+|----------------------+-------+------|
+| Referências          |       |    1 |
+| Bibtex               |       |    1 |
+|----------------------+-------+------|
+| Git                  |       |    1 |
+| Virtual              |       |    1 |
+|----------------------+-------+------|
+| Classes              |       |    2 |
+| Encapsulamento       |       |    2 |
+| Construtores         |       |    2 |
+| Destrutores          |       |    2 |
+| Espaço               |       |    2 |
+| Herança              |       |    2 |
+| Inclusão             |       |    2 |
+| Paramétrico          |       |    2 |
+| Sobrecarga           |       |    2 |
+| Delegates            |       |    2 |
+|----------------------+-------+------|
+| Puras                |       |    2 |
+| Lambda               |       |    2 |
+| Currying             |       |    2 |
+| Pattern              |       |    2 |
+| Maior                |       |    2 |
+| Lapply               |       |    2 |
+| Primeira             |       |    2 |
+| Recursão             |       |    2 |
+|----------------------+-------+------|
 
 ** Entrega
 
