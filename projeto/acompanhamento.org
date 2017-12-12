@@ -122,6 +122,64 @@ Ou seja:
 | Recursão             |       |    2 |
 |----------------------+-------+------|
 
+** Relatório de avaliação com comentários
+*** Al2O3:Cr
+
+Temos: IMPLEMENTACAO + CAPA + LING + PROBLEMA + ITENS
+- Trata-se de um trabalho de OO (Sec. 2)
+- Carece de uma introdução, uma conclusão, e referências
+- "uma classe que responsável pelo"
+- Figuras devem ser citadas no documento
+- Os exemplos de cada um dos itens deve vir do próprio trabalho
+
+#+name: al203cr
+|----------------------+-------|
+| ITEM                 | Valor |
+|----------------------+-------|
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+|----------------------+-------|
+| Introducao           |     0 |
+|----------------------+-------|
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |     0 |
+|----------------------+-------|
+| Crit.Tabela          |       |
+| Crit.Justificativas  |       |
+| Crit.Discussao       |       |
+|----------------------+-------|
+| Conc.Geral           |       |
+| Conc.Benefícios      |       |
+| Conc.Limitações      |       |
+|----------------------+-------|
+| Referências          |       |
+| Bibtex               |       |
+|----------------------+-------|
+| Git                  |    10 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |     8 |
+| Encapsulamento       |     8 |
+| Construtores         |     8 |
+| Destrutores          |     8 |
+| Espaço               |    10 |
+| Herança              |     5 |
+| Inclusão             |       |
+| Paramétrico          |    10 |
+| Sobrecarga           |    10 |
+| Delegates            |    10 |
+|----------------------+-------|
+| Puras                |       |
+| Lambda               |       |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |       |
+| Lapply               |       |
+| Primeira             |       |
+| Recursão             |       |
+|----------------------+-------|
 * Projeto Inicial
 ** Entrega
 
