@@ -536,6 +536,68 @@ Temos: IMPLEMENTACAO + CAPA + INTRO + LING + PROBLEMA + ITENS + CRIT.
 | Lapply               |       |
 | Primeira             |       |
 | Recursão             |       |
+|----------------------+-------|
+
+*** Guerreiros de Anúbis
+Temos: IMPLEMENTACAO + CAPA + LING. (um parágrafo) + ITENS + CONCL (duas frases)
+- Título poderia melhorar
+- Implementação: OO
+- A introdução poderia ser mais elaborada, colocando a estrutura do texto
+- Usar bibtex nas referências, citar algum livro de Groovy
+- Itens
+  - Espaço de nomes: pacotes _é_ uma implementação de espaço de nomes
+  - Apresentar trechos de código que ilustrem _todos_ os pontos
+  - Evitar copiar/colar trechos de texto da especificação (partes em negrito)
+    - Duas páginas apenas descrevem a implementação
+  - Evitar escrever um texto na forma de itens, isso pode ser visto
+    com um estilo de escrita de baixa qualidade
+- Conclusão demasiadamente sumária: duas frases.
+
+#+name: guerreiros
+|----------------------+-------|
+| ITEM                 | Valor |
+|----------------------+-------|
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |     0 |
+| Capa.Linguagem       |     0 |
+|----------------------+-------|
+| Introducao           |     7 |
+|----------------------+-------|
+| Ling.Funcionalidades |     5 |
+| Ling.Dominio         |     5 |
+|----------------------+-------|
+| Crit.Tabela          |       |
+| Crit.Justificativas  |       |
+| Crit.Discussao       |       |
+|----------------------+-------|
+| Conc.Geral           |       |
+| Conc.Benefícios      |       |
+| Conc.Limitações      |       |
+|----------------------+-------|
+| Referências          |     7 |
+| Bibtex               |     0 |
+|----------------------+-------|
+| Git                  |       |
+| Virtual              |       |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |     7 |
+| Construtores         |     7 |
+| Destrutores          |    10 |
+| Espaço               |     3 |
+| Herança              |     9 |
+| Inclusão             |     0 |
+| Paramétrico          |     0 |
+| Sobrecarga           |       |
+| Delegates            |       |
+|----------------------+-------|
+| Puras                |       |
+| Lambda               |       |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |       |
+| Lapply               |       |
 | Primeira             |       |
 | Recursão             |       |
 |----------------------+-------|
