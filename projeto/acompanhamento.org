@@ -240,6 +240,67 @@ Temos: IMPLEMENTACAO + ITENS
 | Primeira             |    10 |
 | Recursão             |    10 |
 |----------------------+-------|
+
+*** Caiu a barca
+Temos: IMPLEMENTACAO + CAPA + CRITICA + CONCL.
+- Trata-se de uma implementação funcional
+- A introdução é uma cópia da especificação do trabalho
+- "são expressões composável com um"
+- Linguagens funcionais são utilizadas fora do meio acadêmico
+- Nenhum requisito de implementação foi apresentado no trabalho
+  - Esperava-se um relato com trechos de código
+- Enfoque grande na análise crítica
+- A conclusão é uma lista de tópicos
+- Referências não estão com bibtex
+
+#+name: caiu
+|----------------------+-------|
+| ITEM                 | Valor |
+|----------------------+-------|
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+|----------------------+-------|
+| Introducao           |     0 |
+|----------------------+-------|
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |     5 |
+|----------------------+-------|
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |     8 |
+|----------------------+-------|
+| Conc.Geral           |     3 |
+| Conc.Benefícios      |     3 |
+| Conc.Limitações      |     3 |
+|----------------------+-------|
+| Referências          |    10 |
+| Bibtex               |     0 |
+|----------------------+-------|
+| Git                  |       |
+| Virtual              |       |
+|----------------------+-------|
+| Classes              |       |
+| Encapsulamento       |       |
+| Construtores         |       |
+| Destrutores          |       |
+| Espaço               |       |
+| Herança              |       |
+| Inclusão             |       |
+| Paramétrico          |       |
+| Sobrecarga           |       |
+| Delegates            |       |
+|----------------------+-------|
+| Puras                |       |
+| Lambda               |       |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |       |
+| Lapply               |       |
+| Primeira             |       |
+| Recursão             |       |
+|----------------------+-------|
 * Projeto Inicial
 ** Entrega
 
