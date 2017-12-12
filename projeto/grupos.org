@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # -*- mode: org -*-
+#+STARTUP: overview indent
 
 #+Title: Acompanhamento do Trabalho Final de MLP
 #+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
@@ -7,28 +8,125 @@
 
 * Projeto Inicial
 
-Todos os grupos entregaram no prazo, salvo:
-- WubbaLubbaDubDub (1 hora de atraso)
-- Caiu a barca (25 horas de atraso)
+** Entrega
 
-|---------------------------+--------------+---------+----------+-------+----------|
-| Nome do Grupo             | Entrega      | Páginas | Arquivos | Latex | Conteúdo |
-|---------------------------+--------------+---------+----------+-------+----------|
-| Al2O3:Cr                  | zip          |       4 | TEX, PDF | TRUE  |          |
-| Batalha Barcal            | zip          |       7 | PDF      | ?     |          |
-| Caiu a barca              | zip          |         |          |       |          |
-| ClubedasWynx              | zip          |         |          |       |          |
-| Confia na Call            | zip          |         |          |       |          |
-| Fullbar                   | zip          |         |          |       |          |
-| GrupoHP                   | zip e tar.gz |         |          |       |          |
-| Guerreiros de Anúbis      | zip          |         |          |       |          |
-| Mean Girls                | zip          |         |          |       |          |
-| Os Aforistas Desaforados  | zip          |         |          |       |          |
-| Os Gatos de Schnorrdingër | zip          |         |          |       |          |
-| root                      | tar.gz       |         |          |       |          |
-| SchnorR doidão            | tar.gz       |         |          |       |          |
-| WubbaLubbaDubDub          | zip          |         |          |       |          |
-|---------------------------+--------------+---------+----------+-------+----------|
+ Todos os grupos entregaram no prazo, salvo:
+ - WubbaLubbaDubDub (1 hora de atraso)
+ - Caiu a barca (25 horas de atraso)
+
+ |---------------------------+--------------+---------+-----------------+-------+----------|
+ | Nome do Grupo             | Entrega      | Páginas | Arquivos        | Latex | Conteúdo |
+ |---------------------------+--------------+---------+-----------------+-------+----------|
+ | Al2O3:Cr                  | zip          |       4 | PDF + TEX       | TRUE  |        6 |
+ | Batalha Barcal            | zip          |       7 | PDF             | TRUE  |        9 |
+ | Caiu a barca              | zip          |       7 | PDF             | TRUE  |        8 |
+ | ClubedasWynx              | zip          |      10 | PDF + sources   | TRUE  |       10 |
+ | Confia na Call            | zip          |       5 | PDF             | TRUE  |        7 |
+ | Fullbar                   | zip          |       7 | PDF + TEX       | TRUE  |        6 |
+ | GrupoHP                   | zip e tar.gz |       6 | PDF + sources   | TRUE  |        7 |
+ | Guerreiros de Anúbis      | zip          |       3 | PDF             | TRUE  |        5 |
+ | Mean Girls                | zip          |      11 | PDF + many dirs | TRUE  |        8 |
+ | Os Aforistas Desaforados  | zip          |  17 (4) | PDF + sources   | TRUE  |        4 |
+ | Os Gatos de Schnorrdingër | zip          |      10 | PDF             | TRUE  |        8 |
+ | root                      | tar.gz       |       8 | PDF + TEX + git | TRUE  |        8 |
+ | SchnorR doidão            | tar.gz       |       2 | PDF sem capa    | TRUE  |        6 |
+ | WubbaLubbaDubDub          | zip          |       7 | PDF             | TRUE  |        4 |
+ |---------------------------+--------------+---------+-----------------+-------+----------|
+
+** Plano
+
+Da especificação, temos:
+
+#+BEGIN_EXAMPLE
+O *projeto inicial*, uma etapa obrigatória, deve vir acompanhada apenas
+da capa, introdução e da apresentação da linguagem escolhida e do
+problema. Sugere-se que uma estrutura completa do relatório já esteja
+igualmente presente.
+#+END_EXAMPLE
+
+Ou seja:
+- CAPA + INTRO + LINGUAGEM + PROBLEMA + ESTRUTURA
+
+** Relatório de avaliação com comentários
+
+De uma maneira geral, os grupos não utilizaram seus nomes nos
+relatórios, o que poderia ser considerado como lamentável. Alguns
+grupos copiaram elementos da especificação como texto escrito pelos
+membros do grupo, o que pode ser considerado plágio. Escrever os
+objetivos desse trabalho com as palavras do grupo é bastante
+construtivo.
+
+*** Al2O3:Cr
+Temos: CAPA + LINGUAGEM + PROBLEMA
+- Carece de uma introdução para dizer do que se trata
+- Estrutura da linguagem faltante
+*** Batalha Barcal
+Temos: CAPA + INTRO + LINGUAGEM + PROBLEMA + ESTRUTURA
+- E ainda, temos as referências
+*** Caiu a barca
+Temos: CAPA + INTRO + LINGUAGEM + PROBLEMA
+- Conclusão e referências vazias
+*** ClubedasWynx
+Temos: CAPA + INTRO + LINGUAGEM + PROBLEMA + ESTRUTURA
+- Interessante adaptação do jogo com a ``chama da vida''
+- "aprendível" me parece ser uma palavra que não existe
+- Com referências
+*** Confia na Call
+Temos: CAPA + INTRO(Problema) + LINGUAGEM
+- Faltou uma introdução para dizer do que é este relatório
+- Com referências
+*** Fullbar
+Temos: CAPA + INTRO + ESTRUTURA
+- "foi escolhida a linguagem de programação C"?
+- Problema e a linguagem apresentados de forma superficial
+- Referências vazio
+*** GrupoHP
+Temos: CAPA + INTRO + LINGUAGEM + PROBLEMA
+- Sumário está vazio
+- Interessante histórico das LPs
+- Referências "(??)" faltantes
+- As características do C++ poderia ser apresentada na forma de texto
+  e não de itens com primeiras palavras em negrito
+*** Guerreiros de Anúbis
+Temos: CAPA + (nano) INTRO + LINGUAGEM
+- O título do documento como "Projeto Inicial" é inapropriado
+- Uma introdução de duas linhas é superficial
+- Apresentação da linguagem é um parágrafo de 6 linhas
+*** Mean Girls
+Temos: CAPA + INTRO + LINGUAGEM + PROBLEMA + ESTRUTURA
+- Definir um título
+- "C++ é uma linguagem comercial?"
+- Capítulo contendo enunciado do trabalho (a evitar)
+- Lista de referências inapropriadas
+*** Os Aforistas Desaforados
+Temos: CAPA + PROBLEMA
+- Apenas capítulo 1, o resto são do template
+*** Os Gatos de Schnorrdingër
+Temos: CAPA + PROBLEMA + LINGUAGEM + ESTRUTURA
+- Descrição do problema com figuras, e isso é bom!
+- Uma introdução sempre é bom
+- Para as referências, utilizar bibtex com comandos =\cite=.
+*** root
+Temos: CAPA + INTRO + PROBLEMA + LINGUAGEM
+- Fornecer o link para GIT é positivo
+- Interessante "organização do grupo" mostrando coesão
+- Descrição do problema poderia ter menos itens
+  - O mesmo vale para a desc. da ling.
+- Vários termos em inglês que talvez devem virar citação
+  - Colocá-los em itálico quando incorporados no texto, fornecer  tradução
+- Ateçã ao eros orogrficos
+*** SchnorR doidão
+Temos: INTRO + LINGUAGEM + PROBLEMA
+- Não usou o template fornecido
+- Apenas 1 página com uma figura na outra, sendo esta não referenciada 
+- Citar o artigo de Barnes e Hut, e não uma implementação
+*** WubbaLubbaDubDub
+Temos: CAPA + PROBLEMA
+- Carece fortemente de uma introdução
+- Escrever um texto com parágrafos ao invés de uma lista de itens
+- Diagrama de classes não é descrito textualmente
+- Referências vazias
+- Linguagem Java não é apresentada
 
 * Definição final de grupos
 
