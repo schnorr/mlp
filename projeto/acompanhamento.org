@@ -301,6 +301,63 @@ Temos: IMPLEMENTACAO + CAPA + CRITICA + CONCL.
 | Primeira             |       |
 | Recursão             |       |
 |----------------------+-------|
+
+*** ClubedasWynx
+Temos: IMPLEMENTACAO + CAPA + INTRO + PROBLEMA + LING + ITENS
+- Globalmente bem escrito
+- Seria bom colocar trechos de código em todos os itens
+- A Seção 3 tem subseções com apenas um parágrafo, o que pode ser
+  considerado um estilo de escrita de baixa qualidade
+- Interessante o release, embora não portável
+
+#+name: clube
+|----------------------+-------|
+| ITEM                 | Valor |
+|----------------------+-------|
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+|----------------------+-------|
+| Introducao           |     9 |
+|----------------------+-------|
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+|----------------------+-------|
+| Crit.Tabela          |       |
+| Crit.Justificativas  |       |
+| Crit.Discussao       |       |
+|----------------------+-------|
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |     0 |
+| Conc.Limitações      |     5 |
+|----------------------+-------|
+| Referências          |    10 |
+| Bibtex               |    10 |
+|----------------------+-------|
+| Git                  |    10 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |     5 |
+| Herança              |     7 |
+| Inclusão             |    10 |
+| Paramétrico          |     7 |
+| Sobrecarga           |    10 |
+| Delegates            |     0 |
+|----------------------+-------|
+| Puras                |       |
+| Lambda               |       |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |       |
+| Lapply               |       |
+| Primeira             |       |
+| Recursão             |       |
+|----------------------+-------|
 * Projeto Inicial
 ** Entrega
 
