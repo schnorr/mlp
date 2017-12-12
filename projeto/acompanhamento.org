@@ -895,10 +895,69 @@ Temos: IMPLEM. + CAPA
 | Primeira             |    10 |
 | Recursão             |       |
 |----------------------+-------|
+
+*** WubbaLubbaDubDub
+Temos: IMPLEM. + CAPA + DESCRICAO
+- Trata-se de OO
+- Na introdução, dizer que se trata de um trabalho de MLP, etc.
+  - Evitar uso excessivo de itens
+- Falta uma descrição detalhada de cada conceitos (requisitos) de OO,
+  com trechos de código que os ilustrem. Ao invés de fornecer
+  pseudo-código (que pode até ser mantido), fornecer o código em java
+  que mostra como herança de três níveis foi implementada, como o
+  encapsulamento foi realizado, como o espaço de nomes foi organizado,
+  etc.
+- Não existem referências
+
+#+name: wubba
+|----------------------+-------|
+| ITEM                 | Valor |
+|----------------------+-------|
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+|----------------------+-------|
+| Introducao           |     5 |
+|----------------------+-------|
+| Ling.Funcionalidades |       |
+| Ling.Dominio         |       |
+|----------------------+-------|
+| Crit.Tabela          |       |
+| Crit.Justificativas  |       |
+| Crit.Discussao       |       |
+|----------------------+-------|
+| Conc.Geral           |       |
+| Conc.Benefícios      |       |
+| Conc.Limitações      |       |
+|----------------------+-------|
+| Referências          |     0 |
+| Bibtex               |       |
+|----------------------+-------|
+| Git                  |       |
+| Virtual              |       |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |       |
+| Construtores         |       |
+| Destrutores          |       |
+| Espaço               |       |
+| Herança              |       |
+| Inclusão             |       |
+| Paramétrico          |       |
+| Sobrecarga           |       |
+| Delegates            |       |
+|----------------------+-------|
+| Puras                |       |
+| Lambda               |       |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |       |
 | Lapply               |       |
 | Primeira             |       |
 | Recursão             |       |
 |----------------------+-------|
+
 * Projeto Inicial
 ** Entrega
 
