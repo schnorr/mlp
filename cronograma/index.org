@@ -56,7 +56,7 @@
 | Extra      | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação                      |             |              |
 | Extra      | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                                  |             |              |
 | Extra      | Linguagens de script                                                                                      |             |              |
-| Extra      | Laboratório sobre programação concorrente                                                                 |      67-104 |              |
+| Extra      | Laboratório sobre programação concorrente                                                                 |      67-103 |              |
 |            | Revisão para  prova                                                                                       |             |              |
 |            | PB                                                                                                        |     65-AUD1 |              |
 |            | Sessão #1 de apresentação dos projetos                                                                    |             | Apresentação |
@@ -201,7 +201,7 @@ aulas %>%
 | 22 | 2017-12-04 |             | Extra      | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação                      |              |
 | 23 | 2017-12-06 |             | Extra      | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                                  |              |
 | 24 | 2017-12-11 |             | Extra      | Linguagens de script                                                                                      |              |
-| 25 | 2017-12-13 |      67-104 | Extra      | Laboratório sobre programação concorrente                                                                 |              |
+| 25 | 2017-12-13 |      67-103 | Extra      | Laboratório sobre programação concorrente                                                                 |              |
 | 26 | 2017-12-18 |             |            | Revisão para  prova                                                                                       |              |
 | 27 | 2017-12-20 |     65-AUD1 |            | PB                                                                                                        |              |
 | 28 | 2018-01-15 |             |            | Sessão #1 de apresentação dos projetos                                                                    | Apresentação |
