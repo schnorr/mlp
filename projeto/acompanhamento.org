@@ -418,6 +418,67 @@ Temos: IMPLEMENTACAO + CAPA + PROBL. + LINGUAGEM
 | Primeira             |       |
 | Recursão             |       |
 |----------------------+-------|
+
+*** Fullbar
+Temos: IMPLEM. + CAPA + LING. + CRIT.
+- Não fica claro no relatório se a primeira implementação é OO ou funcional
+  - Isso deve ficar claro desde o início
+  - Apenas é citado no final da Seção 2
+- Sustenido parece estranho
+- Repositório GIT sem código (apenas o relatório)
+- Descrição dos itens inexistente (salvo o uso de destrutores)
+  - Carece de trechos de código explicando todos os demais itens
+- Usar bibtex para as referências
+
+#+name: fullbar
+|----------------------+-------|
+| ITEM                 | Valor |
+|----------------------+-------|
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+|----------------------+-------|
+| Introducao           |     8 |
+|----------------------+-------|
+| Ling.Funcionalidades |     6 |
+| Ling.Dominio         |     9 |
+|----------------------+-------|
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |     9 |
+| Crit.Discussao       |       |
+|----------------------+-------|
+| Conc.Geral           |       |
+| Conc.Benefícios      |       |
+| Conc.Limitações      |       |
+|----------------------+-------|
+| Referências          |     7 |
+| Bibtex               |     0 |
+|----------------------+-------|
+| Git                  |    10 |
+| Virtual              |       |
+|----------------------+-------|
+| Classes              |       |
+| Encapsulamento       |       |
+| Construtores         |       |
+| Destrutores          |       |
+| Espaço               |       |
+| Herança              |       |
+| Inclusão             |       |
+| Paramétrico          |       |
+| Sobrecarga           |       |
+| Delegates            |       |
+|----------------------+-------|
+| Puras                |       |
+| Lambda               |       |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |       |
+| Lapply               |       |
+| Primeira             |       |
+| Primeira             |       |
+| Recursão             |       |
+|----------------------+-------|
 * Projeto Inicial
 ** Entrega
 
