@@ -784,6 +784,66 @@ Temos: IMPLEM. + CAPA +
 | Primeira             |       |
 | Recursão             |       |
 |----------------------+-------|
+
+*** root
+Temos: IMPLEM. + CAPA + INTRO + PROBLEMA + LINGUAGEM + ITENS OO
+- Trata-se de OO
+- Não há necessidade de repetir a lista de requisitos
+- "Por python não possui suporte"
+- Namespaces em python: https://www.programiz.com/python-programming/namespace
+
+#+name: root
+|----------------------+-------|
+| ITEM                 | Valor |
+|----------------------+-------|
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+|----------------------+-------|
+| Introducao           |       |
+|----------------------+-------|
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |     4 |
+|----------------------+-------|
+| Crit.Tabela          |       |
+| Crit.Justificativas  |       |
+| Crit.Discussao       |       |
+|----------------------+-------|
+| Conc.Geral           |       |
+| Conc.Benefícios      |       |
+| Conc.Limitações      |       |
+|----------------------+-------|
+| Referências          |     0 |
+| Bibtex               |     0 |
+|----------------------+-------|
+| Git                  |    10 |
+| Virtual              |       |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |     5 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |     0 |
+| Sobrecarga           |    10 |
+| Delegates            |    10 |
+|----------------------+-------|
+| Puras                |       |
+| Lambda               |       |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |       |
+| Lapply               |       |
+| Primeira             |       |
+| Recursão             |       |
+|----------------------+-------|
+| Lapply               |       |
+| Primeira             |       |
+| Recursão             |       |
+|----------------------+-------|
 * Projeto Inicial
 ** Entrega
 
