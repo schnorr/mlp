@@ -840,6 +840,61 @@ Temos: IMPLEM. + CAPA + INTRO + PROBLEMA + LINGUAGEM + ITENS OO
 | Primeira             |       |
 | Recursão             |       |
 |----------------------+-------|
+
+*** SchnorR doidão
+Temos: IMPLEM. + CAPA
+- Trata-se de uma implementação funcional
+- Fornecer referência ao fato de R ser GNU
+- Citar o artigo de Barnes-Hut
+- Usar referências citadas no artigo
+
+#+name: schnorR
+|----------------------+-------|
+| ITEM                 | Valor |
+|----------------------+-------|
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+|----------------------+-------|
+| Introducao           |    10 |
+|----------------------+-------|
+| Ling.Funcionalidades |       |
+| Ling.Dominio         |       |
+|----------------------+-------|
+| Crit.Tabela          |     0 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |       |
+|----------------------+-------|
+| Conc.Benefícios      |       |
+| Conc.Limitações      |     8 |
+|----------------------+-------|
+| Referências          |     5 |
+| Bibtex               |     0 |
+|----------------------+-------|
+| Git                  |       |
+| Virtual              |       |
+|----------------------+-------|
+| Classes              |       |
+| Encapsulamento       |       |
+| Construtores         |       |
+| Destrutores          |       |
+| Espaço               |       |
+| Herança              |       |
+| Inclusão             |       |
+| Paramétrico          |       |
+| Sobrecarga           |       |
+| Delegates            |       |
+|----------------------+-------|
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |    10 |
+| Pattern              |     0 |
+| Maior                |    10 |
+| Lapply               |    10 |
+| Primeira             |    10 |
+| Recursão             |       |
+|----------------------+-------|
 | Lapply               |       |
 | Primeira             |       |
 | Recursão             |       |
