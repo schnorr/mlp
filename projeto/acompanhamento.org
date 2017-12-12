@@ -7,7 +7,6 @@
 #+Date: schnorr@inf.ufrgs.br
 
 * Projeto Fase 1
-
 ** Entrega
 
 Todos os grupos entregaram no prazo.
