@@ -728,6 +728,62 @@ Temos: IMPLEM (279L) + CAPA + INTRO + ITENS?
 | Recursão             |       |
 |----------------------+-------|
 
+*** Os Gatos de Schnorrdingër
+Temos: IMPLEM. + CAPA + 
+- Trata-se de OO
+- Referências não estão em bibtex
+  - Elas devem estar citadas no texto!
+- Evitar de copiar texto da especificação
+- Melhorar a conclusão
+
+#+name: gatos
+|----------------------+-------|
+| ITEM                 | Valor |
+|----------------------+-------|
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+|----------------------+-------|
+| Introducao           |     7 |
+|----------------------+-------|
+| Ling.Funcionalidades |       |
+| Ling.Dominio         |       |
+|----------------------+-------|
+| Crit.Tabela          |       |
+| Crit.Justificativas  |       |
+| Crit.Discussao       |       |
+|----------------------+-------|
+| Conc.Geral           |       |
+| Conc.Benefícios      |       |
+| Conc.Limitações      |       |
+|----------------------+-------|
+| Referências          |       |
+| Bibtex               |       |
+|----------------------+-------|
+| Git                  |    10 |
+| Virtual              |       |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |     0 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |     7 |
+| Sobrecarga           |    10 |
+| Delegates            |    10 |
+|----------------------+-------|
+| Puras                |       |
+| Lambda               |       |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |       |
+| Lapply               |       |
+| Primeira             |       |
+| Recursão             |       |
+|----------------------+-------|
 * Projeto Inicial
 ** Entrega
 
