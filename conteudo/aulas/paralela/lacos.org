@@ -1,0 +1,111 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Paralelização de Laços
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\scriptsize}
+
+* Distribuição de trabalho em laços
+O laço *for* pode ser paralelizado
+  #+BEGIN_SRC C
+int i;
+#pragma omp parallel
+#pragma omp for
+for (i = 0; i < MAX; i++)
+   calculo_pesado(i);
+  #+END_SRC
+\pause  Observações
++ Unidade de trabalho é uma iteração
++ Barreira de sincronização no final do laço
++ Como fazer a distribuição das iterações para os fluxos?
+    + Diretiva *schedule*
+* Exemplo de escalonamento, parte 1
+Temos 14 iterações, a distribuir em 3 fluxos
+
+#+ATTR_LATEX: :width \linewidth
+[[./openmp_schedule_0.png]]
+
+#+latex: \vfill
+
+\pause  Distribuição por blocos
+
+#+ATTR_LATEX: :width \linewidth
+[[./openmp_schedule_1.png]]
+
++ Boa localidade, balanceamento ruim
+* Exemplo de escalonamento, parte 2
+Distribuição puramente cíclica
+
+#+ATTR_LATEX: :width \linewidth
+[[./openmp_schedule_2.png]]
+
++ Localidade ruim, bom balanceamento
+#+latex: \vfill
+\pause  Distribuição por blocos, mas cíclica
+
+#+ATTR_LATEX: :width \linewidth
+[[./openmp_schedule_3.png]]
+
++ Localidade e balanceamento se encontram
+* Discussão sobre escalonamento
+Forma da distribuição das iterações
++ Influencia na *granularidade do trabalho* dos fluxos
+#+latex: \vfill
+\pause  Iterações com tempos diferentes
+
+\pause  Bloco maior \rightarrow melhor localidade espacial
+
+\pause  Bloco menor \rightarrow melhor balanceamento de carga
+#+latex: \vfill
+\pause  Encontrar um bom equilíbrio?
++ Execuções experimentais
++ Análise de desempenho
++ Fixo?
+* Diretiva de escalonamento -- omp for schedule
+*omp for schedule (static [, chunk])*
++ Distribuição estática das iterações por bloco
+    + Tamanho do bloco é *chunk*
+\pause  *omp for schedule (dynamic [, chunk])*
++ Distribuição dinâmica (cíclica)
+\pause  *omp for schedule (guided [, chunk])*
++ Distribuição estática
++ Tamanho do bloco diminui a medida que o cálculo anda
+\pause  *omp for schedule (runtime)*
++ Definido em tempo de execução
+    + Variável de ambiente *OMP_SCHEDULE*
+* Exemplo comparativo
+omp parallel
+  \small
+  #+BEGIN_SRC C
+    #pragma omp parallel
+    {
+      int th = omp_get_thread_num();
+      int nth = omp_get_num_threads();
+      int inicio = th * MAX / nth;
+      int fim = (th+1) * MAX / nth;
+      for (i = inicio; i < fim; i++)
+        a[i] = a[i] + b[i];
+    }     
+  #+END_SRC
+\normalsize
+\pause  omp for
+  \small
+  #+BEGIN_SRC C
+#pragma omp parallel
+#pragma omp for schedule(static)
+for (i = 0; i < MAX; i++)
+  a[i] = a[i] + b[i]
+  #+END_SRC
+

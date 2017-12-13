@@ -1,0 +1,143 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: OpenMP
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+Segue o modelo SPMD -- Single Program Multiple Data
++ Um único código executado com dados diferentes
+Norma OpenMP
++ Implementações em memória compartilhada
++ *Paralelismo de laços*
+    + Explícito, tipo fork-join
++ Especificação alto-nível (sobre threads)
++ Usa diretivas de compilação
+    #+BEGIN_SRC C
+    #pragma omp ...
+    #+END_SRC
+#+latex: \vfill
+\pause  Observações
++ Fácil obter o código sequencial
++ Suporte em C, C++, Fortran, ...
++ OpenMP: __Compilador compatível + runtime__
+
+* Disponibilidade
+Consórcio de fabricantes HW/SW
++ HP, IBM, Intel, SGI
+Compiladores compatíveis
++ gcc -- https://gcc.gnu.org/wiki/openmp
++ clang -- https://clang-omp.github.io/
++ Lista completa: \\ http://openmp.org/wp/openmp-compilers/
+#+latex: \vfill
+\pause  Testar com um olá mundo
+  \tiny
+  #+BEGIN_SRC C
+#include <omp.h>
+#include <stdio.h>
+int main() {
+#pragma omp parallel
+    printf("Hello from thread %d, nthreads %d\n",
+            omp_get_thread_num(), omp_get_num_threads());
+}
+  #+END_SRC
+\pause Em um Debian
+  #+BEGIN_SRC C
+  gcc -fopenmp hello.c
+  #+END_SRC
+#+latex: \vfill
+* Paralelização em OpenMP
+Identifique os laços *custosos*
+  #+BEGIN_SRC C
+double res[MAX];
+for (i = 0; i < MAX; i++)
+   calculo_pesado(&res[i]);
+  #+END_SRC
+#+latex: \vfill
+\pause  Versão paralelizada com OpenMP
+  #+BEGIN_SRC C
+double res[MAX];
+#pragma omp parallel for
+for (i = 0; i < MAX; i++)
+   calculo_pesado(&res[i]);    
+  #+END_SRC
+* Comunicação entre fluxos de execução
+Via memória compartilhada
++ Possibilidade de definir quais variáveis são compartilhadas
+Necessidade de sincronizar os acessos
++ Implica em sobrecusto (escondido do programador)
++ \pause  Bom projeto do algoritmo
+    + Distribuição de dados
+    + Volume de acessos remoto
+* Diretivas OpenMP (5 categorias)
+Regiões paralelas
+  #+BEGIN_SRC C
+  omp parallel
+  #+END_SRC
+\pause  Compartilhamento dos dados
+  #+BEGIN_SRC C
+  omp shared, private
+  #+END_SRC
+\pause  Distribuição de trabalho
+  #+BEGIN_SRC C
+  omp for
+  #+END_SRC
+\pause  Sincronizações
+  #+BEGIN_SRC C
+  omp atomic, critical, barrier
+  #+END_SRC
+\pause  Funções para tempo de execução, variáveis de ambiente
+  #+BEGIN_SRC C
+  omp_set_num_threads()
+  omp_set_lock(), ...
+  OMP_SCHEDULE, OMP_NUM_THREADS, ...
+  #+END_SRC
+* Regiões Paralelas
+Criação de fluxos de execução
+  #+BEGIN_SRC C
+double A[10000];
+#pragma omp parallel
+{
+   int th_id = omp_get_thread_num();
+   calculo_pesado(th_id, A);
+}
+  #+END_SRC
+\pause  Observações
++ Abertura de chaves sinaliza fork das threads
++ Fechamento de chaves indica join
++ Variável A é compartilhada
+* Compartilhamento dos dados
+Variáveis compartilhadas
++ Estáticas
++ Globais
+Variáveis privadas a cada fluxo
++ Locais a um bloco
++ Alocadas na pilha do fluxo paralelo
+    + Exemplo: função chamada por uma seção paralela
+* Definir compartilhamento diferenciado
+Existem cláusulas que dão liberdade ao programador
++ Permite especificar o que compartilhar
+\pause  Completam as diretivas
+  #+BEGIN_SRC C
+  omp parallel
+  omp sections
+  omp for
+  #+END_SRC
+#+latex: \vfill
+\pause  São elas
++ shared(var) -- especifica que var é compartilhada
++ private(var) -- especifica que var é privada
+    + Cria-se uma cópia privada em cada fluxo
++ default(private), default(shared)
+

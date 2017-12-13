@@ -1,0 +1,76 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Compartilhamento de Variáveis
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\scriptsize}
+
+* Diferenças de compartilhamento privado
+#+BEGIN_SRC C
+ int i = 10;
+ #pragma omp parallel private(i)
+ {
+     printf("th %d: i = %d\n", omp_get_thread_num(), i);
+     i = 1000 + omp_get_thread_num();
+ }
+ printf("i = %d\n", i);   
+#+END_SRC
+#+latex: \vfill
+\pause  Valor inicial de variáveis privadas é aleatório
+
+\pause  Modificações na região paralela não são visíveis fora dela
+* Inicializando e Exportando uma variável privada
+*firstprivate* é utilizada para inicializar variáveis privadas
+  #+BEGIN_SRC C
+ int i = 10;
+ #pragma omp parallel firstprivate(i)
+ {
+     printf("th %d: i=%d\n", omp_get_thread_num(), i);
+     i = 1000 + omp_get_thread_num();
+ }
+ printf("i = %d\n", i);   
+  #+END_SRC
+#+latex: \vfill
+\pause  Modificações na região paralela não são visíveis fora dela
++ *lastprivate* exporta o valor da __última iteração do laço__
+* Exemplo com private, firstprivate, lastprivate
+Qual o valor impresso no printf caso
++ private(soma)
++ firstprivate(soma)
++ lastprivate(soma)
++ firstprivate(soma) lastprivate(soma)
+  #+BEGIN_SRC C
+  int soma = 0;
+#pragma omp parallel for schedule (static)
+#pragma omp private(soma)
+  for (i=0; i < MAX; i++) {
+ soma += i;
+  }
+  printf ("soma = %d\n", soma);
+  #+END_SRC
+#+latex: \vfill
+\pause  Qual operações nós precisamos para este algoritmo?
+* Operadores sobre variáveis privadas
+Cláusula *reduction (op : list)*
++ *op* é uma operação, exemplo a soma '+'
++ *list* é uma lista de variáveis
+#+latex: \vfill
+\pause  Cada fluxo tem uma cópia inicializada
+
+\pause  Operação é feita no ponto de sincronização (join)
+
+\pause  Atribuído para a variável ``global''
+#+latex: \vfill
+Vejamos um exemplo em __reduction.c__

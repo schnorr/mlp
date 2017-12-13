@@ -1,0 +1,62 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Paralelismo
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Principais questões no projeto de uma linguagem
+
+*Tipos de dados*
++ Sistemas de tipo
++ Checagem de tipo
++ Equivalência, Compatibilidade, Inferência de tipos
+
+Controle de Fluxo
++ Avaliação de expressões (aritméticas, atribuição)
++ Fluxo estruturado e não-estruturado
+
+Abstração de controle -- subprogramas
++ Registros de ativação
++ Modos de passagem de parâmetros
+
+Abstração de dados -- orientação a objeto
++ Encapsulamento e herança
++ Composição e polimorfismo
+
+#+latex: \vfill\pause
+
+#+BEGIN_CENTER
+Paralelismo
+#+END_CENTER
+
+* Objetivo
+
+Ter mecanismos que facilitam o uso de paralelismo
+- Processadores multi-core
+- Aceleradores many-core
+
+Linguagens com suporte a paralelismo
+- Erlang
+- Go
+
+Veremos
+- C + OpenMP (com um certo enfoque em PAD)
+
+* Material
+
+OpenMP @ SC17 Denver, Colorado
+http://www.openmp.org/events/openmp-sc17-denver-co/
+
+- [[http://press3.mcs.anl.gov/atpesc/files/2017/08/ATPESC_2017_Track-2_3_8-2_830am_Mattson-OpenMP.pdf][OpenMP Common Core: A Hands-On Exploration]]
+  - Irregular parallelism and tasks
