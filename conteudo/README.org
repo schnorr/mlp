@@ -87,8 +87,8 @@ disciplina, podem variar em abrangência e profundidade.
  |--------------+-----------------------------------------------------+-------|
  | Paralelismo  | [[./aulas/paralela/introducao.org][Introdução]]                                          |       |
  | OpenMP       | [[./aulas/paralela/openmp.org][OpenMP]]                                              |       |
- | OpenMP       | [[./aulas/openmp/lacos.org][Algoritmos de escalonamento]]                         |       |
- | OpenMP       | [[./aulas/openmp/compartilhamento.org][Compartilhamento de Variáveis]]                       | [[../catps/][#19]]   |
+ | OpenMP       | [[./aulas/paralela/lacos.org][Algoritmos de escalonamento]]                         |       |
+ | OpenMP       | [[./aulas/paralela/compartilhamento.org][Compartilhamento de Variáveis]]                       | [[../catps/][#19]]   |
  |--------------+-----------------------------------------------------+-------|
 
 *** Conteúdo de edições anteriores
