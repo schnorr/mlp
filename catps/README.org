@@ -40,7 +40,7 @@ Quando a entrega for por =Email (corpo)=, siga este método:
 |------+--------------------------------------+---------------+------------+-----------------------|
 | #10  | [[./10/README.org][Controle de Fluxo]]                    | [[https://goo.gl/forms/9q2TEEu3JmHyN17F2][Formulário]]    | 2017-10-31 | [[./eval/10/README.org][Relatório e Respostas]] |
 | #11  | [[./11/README.org][Polimorfismo]]                         | [[https://goo.gl/forms/3M8jwFABt9rfzuFv1][Formulário]]    | 2017-11-06 | [[./eval/11/README.org][Relatório]]             |
-| #12  | [[./12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]]    | 2017-11-12 |                       |
+| #12  | [[./12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]]    | 2017-11-12 | [[./eval/12/README.org][Relatório]]             |
 | #13  | [[./13/README.org][Encapsulamento em OO]]                 | [[https://goo.gl/forms/JsAzqE3rKboHzJx23][Formulário]]    | 2017-11-15 |                       |
 | #14  | [[./14/README.org][Herança em OO]]                        | [[https://goo.gl/forms/YHaDmzofJaKQqJT22][Formulário]]    | 2017-11-20 |                       |
 | #15  | [[./15/README.org][Polimorfimo Paramétrico em OO]]        | [[https://goo.gl/forms/xzLPAPJAWoTlKtki2][Formulário]]    | 2017-12-06 |                       |
