@@ -1,0 +1,85 @@
+* Avaliação CATP #10
+
+** Respostas
+
+1. 
+   - A expressão $+*AB-CD$ se torna $+*3 \; 4 - 5 \; 6$ depois da
+     substituição dos valores. Como temos uma notação préfixada nesta
+     expressão, devemos considerar que os operandos de um operador
+     encontram-se após o operador. Desta forma, avaliamos as
+     expressões $* 3 \; 4$ e $- 5 \; 6$ simultaneamente, obtendo a
+     expressão $+12 (-1)$ que, quando avaliada, se torna $11$.
+
+   - A expressão $BCDAD-+-+$ se torna $4 \; 5 \; 6 \; 3 \; 6 -+-+$ depois
+     da substituição pelos valores das variáveis. Como a expressão
+     está explicitamente em notação pósfixada, onde o operador aparece
+     depois de seus operandos, devemos realizar avaliar $3\;6-$
+     obtendo $(-3)$. Dessa forma, obtemos a seguinte expressão: $4 \;
+     5 \; 6 \; (-3) + - +$. Os próximos passos de avaliação são
+     $4\;5\;3-+$ que, avaliando $5\;3-$, obtém-se $4\;2+$. Por fim,
+     obtemos $6$.
+
+   - _Discussão sobre (BC*D-+)_: vamos primeiro supor que $BC*D-+$ é
+     préfixada. Neste caso, os operandos devem aparecer depois dos
+     operadores. Isto ocorre apenas com o operador $*$, que tem como
+     operando a variável $D$ e o resultado do operador $-$. Como o
+     operador $-$ tem somente um operando (o resultado do operador
+     $+$), isto já é um indício que esta expressão não é préfixada. Um
+     segundo indício contra a suposição desta expressão ser préfixada
+     é que o operador $+$ não contém nenhum operando sob a suposição
+     préfixada. Portanto, podemos concluir que esta expressão não está
+     em notação préfixada. Vamos agora supor que $BC*D-+$ é pósfixada,
+     onde os operadores aparecem depois dos operandos. Sendo assim,
+     $BC*$ está em notação pósfixada, assim como $BC*D-$. No entanto,
+     o operador $+$ tem somente um operando que é o resultado da
+     expressão $BC*D-$. Portanto, esta expressão também não está em
+     notação pósfixada. _Discussão sobre $*ABC-$_: a expressão não é
+     préfixada porque o operador $-$ não tem nenhum operando. Ela
+     também não é pósfixada porque o operador $*$ não tem nenhum
+     operando. _Discussão sobre $BBB**$_: a expressão é pósfixada pois o
+     primeiro operador $*$ tem dois operandos $BB$ e o segundo
+     operador $*$ tem dois operandos: $B$ e $BB*$.
+
+2. As respostas são dadas em notação pré e pósfixada:
+   - $+A-*B/CD*4\;9$ (em notação préfixada) e $ABCD/*+4\;9*-$ (em pósfixada)
+
+   - $****ABCDE$ (em pré) e $ABCDE****$ (em pós)
+
+   - $-*AB+/CD10$ (pré) e $AB*CD/-10+$ (pós)
+
+   - $*-10\;8\;9$ (pré) e $10\;8-9*$ (pós)
+
+   - $-*/15-7+1\;1\;3+2+1\;1$ (pré) e $15\;7\;1\;1+-/3*2\;1\;1++-$ (pós)
+
+3. A subexpressão que será avaliada no passo é sublinhada simples, o
+   resultado da avaliação é sublinhado duplo no próximo passo:
+
+   #+BEGIN_EXAMPLE
+     $- * / 15 - 7 \uline{+ 1\ 1}\ 3 + 2 + 1\ 1$ \\
+     $- * / 15 - 7\; \uuline{2}\ 3 + 2 \uline{+ 1\ 1}$ \\
+     $- * / 15 \uline{- 7\; 2}\ 3 + 2\; \uuline{2}$ \\
+     $- * / 15 \;\uuline{5}\ 3 \uline{+ 2\; 2}$ \\
+     $- * \uline{/ 15 \;5}\ 3 \;\uuline{4}$ \\
+     $- * \uuline{3}\ 3 \;4$ \\
+     $- \uline{* 3\ 3} \;4$ \\
+     $- \uuline{9} \;4$ \\
+     $\uline{- 9 \;4}$ \\
+     $\uuline{5}$   
+   #+END_EXAMPLE
+
+4. Uma avaliação em curto-circuito ocorre quando é possível retornar o
+   valor da expressão sem avaliar ela por completo.
+
+5. (TBD)
+
+6. Supondo que a linguagem de programação deste exercício aceite alvos
+   condicionais em comandos de atribuição, o código acima seria
+   equivalente a \texttt{(teste == f() ? x : z) = y();}. Este tipo de
+   construção sintática está disponível na linguagem Perl, por
+   exemplo. O código original pode ser considerado mais legível que a
+   versão ternária, pois fica claro o comportamento. O código na sua
+   versão ternária é mais expressivo pois existe a mesma semântica com
+   uma menor quantidade de código.
+
+7. Veja [[./fluxo.pdf]].
+
