@@ -1,0 +1,52 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* CATP #19 (Integração Numérica com Paralelismo)
+
+Paralelize a seguinte versão do cálculo de PI por integração numérica
+utilizando a especificação OpenMP. Na sua solução, forneça um programa
+completo passível de compilação com o seguinte comando:
+
+#+begin_src shell :results output
+gcc fonte.c -o binario -fopenmp 
+#+end_src
+
+#+begin_src C :results output
+#include <stdio.h>
+#include <sys/time.h>
+#include <stdio.h>
+
+double calcula_pi (long num_steps)
+{
+    int i; 
+    double x, pi, sum = 0.0;
+    double step = 1.0/(double) num_steps ;
+    for (i = 0; i < num_steps; i++){
+      x = (i+0.5)*step;
+      sum = sum + 4.0/(1.0+x*x);
+    }
+    pi = step * sum;
+    return pi;
+}
+
+double gettime (void)
+{
+  struct timeval tr;
+  gettimeofday(&tr, NULL);
+  return (double)tr.tv_sec+(double)tr.tv_usec/1000000;
+}
+
+int main (int argc, char **argv)
+{
+  long num_steps = 1000000000;
+  double t0 = gettime();
+  double pi = calcula_pi(num_steps);
+  double t1 = gettime();
+  printf("%.20f em %f segundos\n", pi, t1-t0);
+}
+#+end_src
+
+#+RESULTS:
+: 3.14159265358997075168 em 11.092743 segundos
