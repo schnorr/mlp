@@ -55,19 +55,16 @@
 3. A subexpressão que será avaliada no passo é sublinhada simples, o
    resultado da avaliação é sublinhado duplo no próximo passo:
 
-   #+BEGIN_EXAMPLE
-     $- * / 15 - 7 \uline{+ 1\ 1}\ 3 + 2 + 1\ 1$ \\
-     $- * / 15 - 7\; \uuline{2}\ 3 + 2 \uline{+ 1\ 1}$ \\
-     $- * / 15 \uline{- 7\; 2}\ 3 + 2\; \uuline{2}$ \\
-     $- * / 15 \;\uuline{5}\ 3 \uline{+ 2\; 2}$ \\
-     $- * \uline{/ 15 \;5}\ 3 \;\uuline{4}$ \\
-     $- * \uuline{3}\ 3 \;4$ \\
-     $- \uline{* 3\ 3} \;4$ \\
-     $- \uuline{9} \;4$ \\
-     $\uline{- 9 \;4}$ \\
-     $\uuline{5}$   
-   #+END_EXAMPLE
-
+   | Passo | Expressão                      | Resolve |
+   |     1 | =- * / 15 - 7 + 1 1 3 + 2 + 1 1= | =+ 1 1=   |
+   |     2 | =- * / 15 - 7 2 3 + 2 + 1 1=     | =+ 1 1=   |
+   |     3 | =- * / 15 - 7 2 3 + 2 2=         | =- 7 2=   |
+   |     4 | =- * / 15 5 3 + 2 2=             | =+ 2 2=   |
+   |     5 | =- * / 15 5 3 4=                 | =/ 15 5=  |
+   |     6 | =- * 3 3 4=                      | =* 3 3=   |
+   |     7 | =- 9 4=                          | =-9 4=    |
+   |     8 | =5=                              |         |
+   
 4. Uma avaliação em curto-circuito ocorre quando é possível retornar o
    valor da expressão sem avaliar ela por completo.
 
