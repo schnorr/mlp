@@ -50,3 +50,8 @@ int main (int argc, char **argv)
 
 #+RESULTS:
 : 3.14159265358997075168 em 11.092743 segundos
+
+Aprenda mais em:
+- https://en.wikipedia.org/wiki/Approximations_of_%CF%80
+
+Quanto tempo levaria para obter uma precisão de 10^14?
