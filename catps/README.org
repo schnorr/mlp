@@ -42,9 +42,9 @@ Quando a entrega for por =Email (corpo)=, siga este método:
 | #11  | [[./11/README.org][Polimorfismo]]                         | [[https://goo.gl/forms/3M8jwFABt9rfzuFv1][Formulário]]    | 2017-11-06 | [[./eval/11/README.org][Relatório]]             |
 | #12  | [[./12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]]    | 2017-11-12 | [[./eval/12/README.org][Relatório]]             |
 | #13  | [[./13/README.org][Encapsulamento em OO]]                 | [[https://goo.gl/forms/JsAzqE3rKboHzJx23][Formulário]]    | 2017-11-15 | [[./eval/13/README.org][Relatório]]             |
-| #14  | [[./14/README.org][Herança em OO]]                        | [[https://goo.gl/forms/YHaDmzofJaKQqJT22][Formulário]]    | 2017-11-20 |                       |
-| #15  | [[./15/README.org][Polimorfimo Paramétrico em OO]]        | [[https://goo.gl/forms/xzLPAPJAWoTlKtki2][Formulário]]    | 2017-12-06 |                       |
-| #16  | [[./16/README.org][Exceções]]                             | [[https://goo.gl/forms/g0AJ2VlY3fmq17UG2][Formulário]]    | 2017-12-11 |                       |
-| #17  | [[./17/README.org][Valgrind]]                             | [[https://goo.gl/forms/YzaGXvZxrtS3xlZs2][Formulário]]    | 2017-12-13 |                       |
-| #18  | Linguagens de Script                 |               | 2017-12-18 |                       |
-| #19  | [[./19/README.org][Integração Numérica com Paralelismo]]  | [[https://goo.gl/forms/pPEETL2bPIr80dvf2][Formulário]]    | 2017-12-13 |                       |
+| #14  | [[./14/README.org][Herança em OO]]                        | [[https://goo.gl/forms/YHaDmzofJaKQqJT22][Formulário]]    | 2017-11-20 | [[./eval/14/README.org][Relatório]]             |
+| #15  | [[./15/README.org][Polimorfimo Paramétrico em OO]]        | [[https://goo.gl/forms/xzLPAPJAWoTlKtki2][Formulário]]    | 2017-12-06 | [[./eval/15/README.org][Relatório]]             |
+| #16  | [[./16/README.org][Exceções]]                             | [[https://goo.gl/forms/g0AJ2VlY3fmq17UG2][Formulário]]    | 2017-12-11 | [[./eval/16/README.org][Relatório]]             |
+| #17  | [[./17/README.org][Valgrind]]                             | [[https://goo.gl/forms/YzaGXvZxrtS3xlZs2][Formulário]]    | 2017-12-13 | [[./eval/17/README.org][Relatório]]             |
+| #18  | Linguagens de Script                 |               | 2017-12-18 | (não foi realizado)   |
+| #19  | [[./19/README.org][Integração Numérica com Paralelismo]]  | [[https://goo.gl/forms/pPEETL2bPIr80dvf2][Formulário]]    | 2017-12-13 | [[./eval/17/README.org][Relatório]]             |
