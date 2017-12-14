@@ -58,7 +58,7 @@
 | Extra      | Linguagens de script                                                                                      |             |              |
 | Extra      | Laboratório sobre programação concorrente                                                                 |      67-103 |              |
 |            | Revisão para  prova                                                                                       |             |              |
-|            | PB                                                                                                        |     65-AUD1 |              |
+|            | PB                                                                                                        |      67-INF |              |
 |            | Sessão #1 de apresentação dos projetos                                                                    |             | Apresentação |
 |            | Sessão #2 de apresentação dos projetos                                                                    |             | Apresentação |
 |            | PR                                                                                                        |             |              |
@@ -203,7 +203,7 @@ aulas %>%
 | 24 | 2017-12-11 |             | Extra      | Linguagens de script                                                                                      |              |
 | 25 | 2017-12-13 |      67-103 | Extra      | Laboratório sobre programação concorrente                                                                 |              |
 | 26 | 2017-12-18 |             |            | Revisão para  prova                                                                                       |              |
-| 27 | 2017-12-20 |     65-AUD1 |            | PB                                                                                                        |              |
+| 27 | 2017-12-20 |      67-INF |            | PB                                                                                                        |              |
 | 28 | 2018-01-15 |             |            | Sessão #1 de apresentação dos projetos                                                                    | Apresentação |
 | 29 | 2018-01-17 |             |            | Sessão #2 de apresentação dos projetos                                                                    | Apresentação |
 | 30 | 2018-01-22 |             |            | PR                                                                                                        |              |
