@@ -2,6 +2,10 @@
 # -*- mode: org -*-
 #+STARTUP: overview indent
 
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
 #+Title: Acompanhamento do Trabalho Final de MLP
 #+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
 #+Date: schnorr@inf.ufrgs.br
