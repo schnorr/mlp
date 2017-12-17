@@ -1,0 +1,2 @@
+all: 
+include ../../Makefile.base
