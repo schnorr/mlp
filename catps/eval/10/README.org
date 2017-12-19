@@ -187,42 +187,41 @@
 ** Respostas
 
 1. 
-   - A expressão $+*AB-CD$ se torna $+*3 \; 4 - 5 \; 6$ depois da
+   - A expressão =+ * A B - C D= se torna =+ * 3 4 - 5 6= depois da
      substituição dos valores. Como temos uma notação préfixada nesta
      expressão, devemos considerar que os operandos de um operador
      encontram-se após o operador. Desta forma, avaliamos as
-     expressões $* 3 \; 4$ e $- 5 \; 6$ simultaneamente, obtendo a
-     expressão $+12 (-1)$ que, quando avaliada, se torna $11$.
+     expressões =* 3 4= e =- 5 6= simultaneamente, obtendo a expressão =+
+     12 (-1)= que, quando avaliada, se torna =11=.
 
-   - A expressão $BCDAD-+-+$ se torna $4 \; 5 \; 6 \; 3 \; 6 -+-+$ depois
+   - A expressão =B C D A D - + - += se torna =4 5 6 3 6 - + - += depois
      da substituição pelos valores das variáveis. Como a expressão
      está explicitamente em notação pósfixada, onde o operador aparece
-     depois de seus operandos, devemos realizar avaliar $3\;6-$
-     obtendo $(-3)$. Dessa forma, obtemos a seguinte expressão: $4 \;
-     5 \; 6 \; (-3) + - +$. Os próximos passos de avaliação são
-     $4\;5\;3-+$ que, avaliando $5\;3-$, obtém-se $4\;2+$. Por fim,
-     obtemos $6$.
+     depois de seus operandos, devemos realizar avaliar =3 6 -= obtendo
+     =(-3)=. Dessa forma, obtemos a seguinte expressão: =4 5 6 (-3) + -
+     +=. Os próximos passos de avaliação são =4 5 3 - += que, avaliando =5
+     3 -=, obtém-se =4 2 +=. Por fim, obtemos =6=.
 
-   - _Discussão sobre (BC*D-+)_: vamos primeiro supor que $BC*D-+$ é
+   - _Discussão sobre (BC*D-+)_: vamos primeiro supor que =BC*D-+= é
      préfixada. Neste caso, os operandos devem aparecer depois dos
-     operadores. Isto ocorre apenas com o operador $*$, que tem como
-     operando a variável $D$ e o resultado do operador $-$. Como o
-     operador $-$ tem somente um operando (o resultado do operador
-     $+$), isto já é um indício que esta expressão não é préfixada. Um
+     operadores. Isto ocorre apenas com o operador =*=, que tem como
+     operando a variável =D= e o resultado do operador =-=. Como o
+     operador =-= tem somente um operando (o resultado do operador
+     =+=), isto já é um indício que esta expressão não é préfixada. Um
      segundo indício contra a suposição desta expressão ser préfixada
-     é que o operador $+$ não contém nenhum operando sob a suposição
+     é que o operador =+= não contém nenhum operando sob a suposição
      préfixada. Portanto, podemos concluir que esta expressão não está
-     em notação préfixada. Vamos agora supor que $BC*D-+$ é pósfixada,
+     em notação préfixada. Vamos agora supor que =BC*D-+= é pósfixada,
      onde os operadores aparecem depois dos operandos. Sendo assim,
-     $BC*$ está em notação pósfixada, assim como $BC*D-$. No entanto,
-     o operador $+$ tem somente um operando que é o resultado da
-     expressão $BC*D-$. Portanto, esta expressão também não está em
-     notação pósfixada. _Discussão sobre $*ABC-$_: a expressão não é
-     préfixada porque o operador $-$ não tem nenhum operando. Ela
-     também não é pósfixada porque o operador $*$ não tem nenhum
-     operando. _Discussão sobre $BBB**$_: a expressão é pósfixada pois o
-     primeiro operador $*$ tem dois operandos $BB$ e o segundo
-     operador $*$ tem dois operandos: $B$ e $BB*$.
+     =BC*= está em notação pósfixada, assim como =BC*D-=. No entanto,
+     o operador =+= tem somente um operando que é o resultado da
+     expressão =BC*D-=. Portanto, esta expressão também não está em
+     notação pósfixada. _Discussão sobre =*ABC-=_: a expressão não é
+     préfixada porque o operador =-= não tem nenhum operando. Ela
+     também não é pósfixada porque o operador =*= não tem nenhum
+     operando. _Discussão sobre =BBB**=_: a expressão é pósfixada pois o
+     primeiro operador =*= tem dois operandos =BB= e o segundo
+     operador =*= tem dois operandos: =B= e =BB*=.
 
 2. As respostas são dadas em notação pré e pósfixada:
 
