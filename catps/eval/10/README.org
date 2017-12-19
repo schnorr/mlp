@@ -234,6 +234,47 @@
    | =* - 10 8 9=                     | =10 8 - 9 *=                     |
    | =- * / 15 - 7 + 1 1 3 + 2 + 1 1= | =15 7 1 1 + - / 3 * 2 1 1 + + -= |
    |--------------------------------+--------------------------------|
+   Explicação para o item 2.
+
+   Criamos a árvore seguindo a associação a esquerda, da seguinte
+   forma: =((((A * B) * C) * D) * E)=. Obtemos a seguinte árvore:
+
+   #+BEGIN_EXAMPLE
+   nível
+
+   0          *
+             / \
+   1        *   E
+           / \
+   2      *   D
+         / \
+   3    *   C
+       / \
+   4  A   B
+   #+END_EXAMPLE
+
+   Quando realizamos uma busca em profundidade nesta árvore, podemos
+   obter as notações pré, pós e infixada seguinte os seguintes
+   procedimentos quando visitamos qualquer nó:
+
+   |--------------------+--------------------+--------------------|
+   | Pré-fixada         | Pós-fixada         | Infixada           |
+   |--------------------+--------------------+--------------------|
+   | Imprime o operador | Visita esquerda    | Visita esquerda    |
+   | Visita esquerda    | Visita direita     | Imprime o operador |
+   | Visita direita     | Imprime o operador | Visita direita     |
+   |--------------------+--------------------+--------------------|
+
+   Ou seja, caso desejamos obter a notação pré-fixada nós vamos
+   primeiro =imprimir o operador=, em seguida =visitar esquerda= e por fim
+   =visitar o filho da direita=. No exemplo acima (item 2), para obter a
+   notação pré-fixada, começando sempre pelo nós raiz, temos:
+
+   =* * * * A B C D E=
+
+   Para obter a notação pós-fixada teremos:
+
+   =A B * C * D * E *=
 
 3. A subexpressão que será avaliada no passo é sublinhada simples, o
    resultado da avaliação é sublinhado duplo no próximo passo:
