@@ -346,7 +346,9 @@
 4. Uma avaliação em curto-circuito ocorre quando é possível retornar o
    valor da expressão sem avaliar ela por completo.
 
-5. (TBD)
+5. Veja as alternativas de projeto no item 9 do conteúdo em
+   [[../../../conteudo/aulas/fluxo/aritmeticas.org]], correlacione tais
+   soluções com o impacto no desempenho do programa.
 
 6. Supondo que a linguagem de programação deste exercício aceite alvos
    condicionais em comandos de atribuição, o código acima seria
