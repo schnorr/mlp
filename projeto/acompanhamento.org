@@ -20,25 +20,25 @@ Somente um grupo entregou com um atraso de 6 minutos.
 Os grupos *Batalha Barcal* e *Fullbar*, inicialmente com três membros,
 agora tem somente dois.
 
-|---------------------------+----+-----------+--------------+------------------------------------------|
-| Grupo                     | NM | Linguagem | Problema     | Fase 2                                   |
-|---------------------------+----+-----------+--------------+------------------------------------------|
-| Confia na Call            |  3 | Python    | TowerDefense | Gabriel M. (07/01) + GIT + PDF/TEX 14    |
-| root                      |  3 | Python    | BatalhaNaval | Vicente (07/01) + GIT + PDF 25           |
-| GrupoHP                   |  3 | C++17     | TowerDefense | Andre (07/01 + 6min) + GIT + PDF/TEX 26  |
-| WubbaLubbaDubDub          |  3 | Java8     | BatalhaNaval | Flávia (07/01) + PDF/TEX 32              |
-| ClubedasWynx              |  3 | C#        | BatalhaNaval | Thiago (07/01) + GIT? + PDF 18           |
-| Mean Girls                |  3 | C++17     | BatalhaNaval | Afonso (07/01) + PDF/TEX 32              |
-| Caiu a barca              |  3 | F#        | BatalhaNaval | Leonardo (07/01) + PDF 24                |
-| Batalha Barcal            |  2 | Java8     | BatalhaNaval | Jonatas T. S. (07/01) + PDF/TEX 17       |
-| SchnorR doidão            |  3 | R         | Galáxias     | Lucas B. (07/01) + GIT + PDF/TEX 10 + VM |
-| Fullbar                   |  2 | C#        | TowerDefense | Pietra (07/01) + PDF/TEX 33              |
-| Al2O3:Cr                  |  3 | Ruby      | BatalhaNaval | Gabriel W. (07/01) + PDF 26              |
-|---------------------------+----+-----------+--------------+------------------------------------------|
-| Guerreiros de Anúbis      |  2 | Groovy    | BatalhaNaval | Amanda (06/01) + GIT + PDF/TEX 9         |
-| Os Gatos de Schnorrdingër |  2 | Swift     | TowerDefense | Augusto (07/01) + PDF 26                 |
-| Os Aforistas Desaforados  |  2 | OCAML     | Escopo       | Renan (07/01) + GIT + PDF/TEX 23  + VM   |
-|---------------------------+----+-----------+--------------+------------------------------------------|
+|---------------------------+----+-----------+--------------+------------------------------------------+---------|
+| Grupo                     | NM | Linguagem | Problema     | Fase 2                                   | Páginas |
+|---------------------------+----+-----------+--------------+------------------------------------------+---------|
+| Confia na Call            |  3 | Python    | TowerDefense | Gabriel M. (07/01) + GIT + PDF/TEX 14    |      14 |
+| root                      |  3 | Python    | BatalhaNaval | Vicente (07/01) + GIT + PDF 25           |      25 |
+| GrupoHP                   |  3 | C++17     | TowerDefense | Andre (07/01 + 6min) + GIT + PDF/TEX 26  |      26 |
+| WubbaLubbaDubDub          |  3 | Java8     | BatalhaNaval | Flávia (07/01) + PDF/TEX 32              |      32 |
+| ClubedasWynx              |  3 | C#        | BatalhaNaval | Thiago (07/01) + GIT? + PDF 18           |      18 |
+| Mean Girls                |  3 | C++17     | BatalhaNaval | Afonso (07/01) + PDF/TEX 32              |      32 |
+| Caiu a barca              |  3 | F#        | BatalhaNaval | Leonardo (07/01) + PDF 24                |      24 |
+| Batalha Barcal            |  2 | Java8     | BatalhaNaval | Jonatas T. S. (07/01) + PDF/TEX 17       |      17 |
+| SchnorR doidão            |  3 | R         | Galáxias     | Lucas B. (07/01) + GIT + PDF/TEX 10 + VM |      10 |
+| Fullbar                   |  2 | C#        | TowerDefense | Pietra (07/01) + PDF/TEX 33              |      33 |
+| Al2O3:Cr                  |  3 | Ruby      | BatalhaNaval | Gabriel W. (07/01) + PDF 26              |      26 |
+|---------------------------+----+-----------+--------------+------------------------------------------+---------|
+| Guerreiros de Anúbis      |  2 | Groovy    | BatalhaNaval | Amanda (06/01) + GIT + PDF/TEX 9         |       9 |
+| Os Gatos de Schnorrdingër |  2 | Swift     | TowerDefense | Augusto (07/01) + PDF 26                 |      26 |
+| Os Aforistas Desaforados  |  2 | OCAML     | Escopo       | Renan (07/01) + GIT + PDF/TEX 23  + VM   |      23 |
+|---------------------------+----+-----------+--------------+------------------------------------------+---------|
 ** Plano
 
 Veja detalhes em [[./README.org]].
