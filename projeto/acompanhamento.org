@@ -39,7 +39,70 @@ agora tem somente dois.
 | Os Gatos de Schnorrdingër |  2 | Swift     | TowerDefense | Augusto (07/01) + PDF 26                 |
 | Os Aforistas Desaforados  |  2 | OCAML     | Escopo       | Renan (07/01) + GIT + PDF/TEX 23  + VM   |
 |---------------------------+----+-----------+--------------+------------------------------------------|
+** Plano
 
+Veja detalhes em [[./README.org]].
+
+Ou seja:
+- IMPLEMENTACAO com código fonte
+- RELATORIO: CAPA + INTRO + LING + ITENS + CRITICA + CONCLU + REFS
+
+** Instrumento de avaliação
+
+Com leves alterações em relação a fase 1.
+- Código|Relatório: nota subjetiva representa opinião geral
+
+#+name: MLPAVALIA
+|----------------------+-------+------|
+| ITEM                 | Valor | Peso |
+|----------------------+-------+------|
+| Capa.Grupo           |       |    1 |
+| Capa.Membros         |       |    1 |
+| Capa.Problema        |       |    1 |
+| Capa.Linguagem       |       |    1 |
+|----------------------+-------+------|
+| Intro                |       |    1 |
+|----------------------+-------+------|
+| Ling.Funcionalidades |       |    1 |
+| Ling.Dominio         |       |    1 |
+|----------------------+-------+------|
+| Crit.Tabela          |       |    3 |
+| Crit.Justificativas  |       |    3 |
+| Crit.Discussao       |       |    3 |
+|----------------------+-------+------|
+| Conc.Geral           |       |    1 |
+| Conc.Benefícios      |       |    1 |
+| Conc.Limitações      |       |    1 |
+|----------------------+-------+------|
+| Referências          |       |    1 |
+| Bibtex               |       |    1 |
+|----------------------+-------+------|
+| Git                  |       |    1 |
+| Virtual              |       |    1 |
+|----------------------+-------+------|
+| Classes              |       |    2 |
+| Encapsulamento       |       |    2 |
+| Construtores         |       |    2 |
+| Destrutores          |       |    2 |
+| Espaço               |       |    2 |
+| Herança              |       |    2 |
+| Inclusão             |       |    2 |
+| Paramétrico          |       |    2 |
+| Sobrecarga           |       |    2 |
+| Delegates            |       |    2 |
+|----------------------+-------+------|
+| Puras                |       |    2 |
+| Lambda               |       |    2 |
+| Currying             |       |    2 |
+| Pattern              |       |    2 |
+| Maior                |       |    2 |
+| Lapply               |       |    2 |
+| Primeira             |       |    2 |
+| Recursão             |       |    2 |
+|----------------------+-------+------|
+| Código               |       |   10 |
+| Relatório            |       |   10 |
+|----------------------+-------+------|
 
 * Projeto Fase 1
 ** Entrega
