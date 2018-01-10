@@ -44,7 +44,7 @@ agora tem somente dois.
 Veja detalhes em [[./README.org]].
 
 Ou seja:
-- IMPLEMENTACAO com código fonte
+- OO + FUNC (implementação com código fonte)
 - RELATORIO: CAPA + INTRO + LING + ITENS + CRITICA + CONCLU + REFS
 
 ** Instrumento de avaliação
