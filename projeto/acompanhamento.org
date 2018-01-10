@@ -101,8 +101,8 @@ Com leves alterações em relação a fase 1.
 | Recursão             |       |    2 |
 |----------------------+-------+------|
 | Relatório            |       |   20 |
-| Código               |       |   10 |
 |----------------------+-------+------|
+
 
 * Projeto Fase 1
 ** Entrega
