@@ -31,7 +31,7 @@ agora tem somente dois.
 | Mean Girls                |  3 | C++17     | BatalhaNaval | Afonso (07/01) + PDF/TEX 32              |      32 |
 | Caiu a barca              |  3 | F#        | BatalhaNaval | Leonardo (07/01) + PDF 24                |      24 |
 | Batalha Barcal            |  2 | Java8     | BatalhaNaval | Jonatas T. S. (07/01) + PDF/TEX 17       |      17 |
-| SchnorR doidão            |  3 | R         | Galáxias     | Lucas B. (07/01) + GIT + PDF/TEX 10 + VM |      10 |
+| SchnorR doidão            |  3 | R         | Galáxias     | Lucas B. (07/01) + GIT + PDF/TEX 27 + VM |      27 |
 | Fullbar                   |  2 | C#        | TowerDefense | Pietra (07/01) + PDF/TEX 33              |      33 |
 | Al2O3:Cr                  |  3 | Ruby      | BatalhaNaval | Gabriel W. (07/01) + PDF 26              |      26 |
 |---------------------------+----+-----------+--------------+------------------------------------------+---------|
