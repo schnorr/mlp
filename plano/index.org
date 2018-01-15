@@ -168,7 +168,7 @@ média é então recalculada levando-se em conta o novo valor obtido (e o
 peso da prova substituída), gerando o conceito final conforme a tabela
 apresentada anteriormente.  A prova de recuperação avalia o conteúdo
 de todas as unidades e sua data está prevista no cronograma
-disponibilizado pelo professor, no ambiente EAD.  Não é previsto
+disponibilizado pelo professor no ambiente EAD.  Não é previsto
 nenhum tipo de recuperação para o TP ou para o CATPs, exceto para os
 casos previstos na legislação (ver a seguir).  A recuperação das
 provas ou atividades individuais será realizada somente para os casos
