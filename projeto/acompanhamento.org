@@ -832,6 +832,321 @@ Temos: OO + FUNC + RELATORIO
 | Recursão             |     5 |
 | Relatório            |     8 |
 
+** Avaliação da apresentação
+*** Dia 1
+**** 1. Confia na Call
+
+Início: 15:37
+Fim: 15:44
+
+- Fazer recursão em python geraria um stack overflow?
+- Se deixar rodando por muito tempo dá crash
+- Horas: OO (3 dias) + FF (1 dia)
+
+#+name: zconfia
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |    10 |
+| Problema     |    10 |
+| Linguagem    |     7 |
+| Vantagens    |     8 |
+| Demonstração |    10 |
+| Perguntas    |     8 |
+| Apresentação |     7 |
+
+**** 2. Al2O3:Cr
+
+Início: 15:52
+Fim: 16:07
+
+- Portabilidade: depende do interpretador
+- Dificuldade de atender três níveis da hierarquia
+- Não tem overload com classes?
+
+Estourou bastante o tempo.
+
+#+name: zal203cr
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |     0 |
+| Problema     |    10 |
+| Linguagem    |    10 |
+| Vantagens    |     9 |
+| Demonstração |     3 |
+| Perguntas    |    10 |
+| Apresentação |     7 |
+
+**** 3. Os Aforistas Desaforados
+
+Inicio: 16:11
+Fim: 16:23
+
+- Abstração das representação original dele
+  - Transformação em árvores
+- OCaml
+- O que é pattern matching?
+- Criam a árvore inteira?
+- OO sintaxe deixa a desejar pois foi adicionada depois
+  - Existe Caml sozinho, sem o "O"
+  - Pouco material, pouca gente utilizando
+- Difícil de fazer uma função de alta ordem
+- Funciona para soma, divisão, outras operações mais complexas?
+
+#+name: zaforistas
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |     0 |
+| Problema     |    10 |
+| Linguagem    |     7 |
+| Vantagens    |    10 |
+| Demonstração |     9 |
+| Perguntas    |    10 |
+| Apresentação |     8 |
+
+**** 4. Batalha Barcal
+
+Início: 16:27
+Fim: 16:33
+
+- Java8 é compilada?
+- Funcional: 170 linhas
+  - Deixa o código muito mais legível
+  - Eficiência é um problema
+- Três níveis de hierarquia difícil novamente
+- Não entendi
+  - Primeiro FF era melhor, depois muito ilegível?
+
+#+name: zbatalha
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |     8 |
+| Problema     |     9 |
+| Linguagem    |     8 |
+| Vantagens    |    10 |
+| Demonstração |     7 |
+| Perguntas    |    10 |
+| Apresentação |     8 |
+
+**** 5. Caiu a barca
+
+Início: 16:35
+Fim: 16:45
+
+- F#, usa através do scripting
+
+Perguntas:
+- Converter F# para gerar HTML?
+- Pattern matching em todas as linguagens funcionais?
+- Pattern matching?
+
+#+name: zcaiu
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |    10 |
+| Problema     |     8 |
+| Linguagem    |    10 |
+| Vantagens    |    10 |
+| Demonstração |     4 |
+| Perguntas    |     9 |
+| Apresentação |     8 |
+
+**** 6. Fullbar
+
+Início: 16:48
+Fim: 16:54
+
+Tower Defense, C#
+
+- J++ quebra de contrato com a Sun
+  - Por isso surgiu .NET e C#
+- Semelhante a C++
+- Acesso direta à memória?
+- Garbage Collector
+
+#+name: zfullbar
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |     8 |
+| Problema     |    10 |
+| Linguagem    |    10 |
+| Vantagens    |    10 |
+| Demonstração |    10 |
+| Perguntas    |     8 |
+| Apresentação |     9 |
+
+**** 7. ClubedasWynx
+
+Início: 16:58
+Fim: 17:05
+
+- Windows Forms, não é bom ambiente de jogos
+- Partiu da OO, para não quebrar o projeto inicial
+
+#+name: zclube
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |     8 |
+| Problema     |     5 |
+| Linguagem    |     6 |
+| Vantagens    |     7 |
+| Demonstração |    10 |
+| Perguntas    |    10 |
+| Apresentação |     6 |
+
+*** Dia 2
+**** 1. Mean Girls
+
+Início: 15:35
+Fim: 15:45
+
+C++
+
+- Tem suporte a internacionalização
+- Slides não tem texto, apenas imagens
+  - Imagens remetem a conceitos da linguagem
+- Peças dinâmicas
+
+#+name: zmean
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |    10 |
+| Problema     |     8 |
+| Linguagem    |    10 |
+| Vantagens    |     7 |
+| Demonstração |    10 |
+| Perguntas    |    10 |
+| Apresentação |     9 |
+
+**** 2. Guerreiros de Anúbis
+
+Início: 15:48
+Fim: 15:55
+
+Groovy
+- Basicamente Java com Python
+- Maior expressividade que Java
+- Linguagem meio que à deriva
+- Ferramentas InteliJ + Github
+  - Listas em Groovy é algo bem lento
+
+#+name: zguerreiros
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |     8 |
+| Problema     |    10 |
+| Linguagem    |    10 |
+| Vantagens    |     7 |
+| Demonstração |    10 |
+| Perguntas    |    10 |
+| Apresentação |     8 |
+
+**** 3. WubbaLubbaDubDub
+
+Início: 16:00
+Fim: 16:13
+
+- Terceiro participante abandonou
+- Avaliação de desempenho.
+
+#+name: zwubba
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |     5 |
+| Problema     |    10 |
+| Linguagem    |     8 |
+| Vantagens    |    10 |
+| Demonstração |    10 |
+| Perguntas    |     9 |
+| Apresentação |     8 |
+
+**** 4. Os Gatos de Schnorrdingër
+
+Início: 16:17
+Fim: 16:
+
+- Nome do grupo tem a ver com física quântica
+- Swift: github.com/apple/swift/ (2017, mais amada)
+  - Implementada em C++
+- Temática espacial: Marte contra os invasores da Terra.
+
+#+name: zgatos
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |     5 |
+| Problema     |    10 |
+| Linguagem    |    10 |
+| Vantagens    |     9 |
+| Demonstração |    10 |
+| Perguntas    |    10 |
+| Apresentação |     7 |
+**** 5. SchnorR doidão
+
+Início: 16:31
+Fim: 16:41
+
+- Demora de instalação na segunda tentativa
+- Enfim apresentação no segundo dia
+- Apresenta uma reflexão interessante a respeito das múltiplas
+  implementações OO dentro da linguagem R
+- Implementaram polimorfismo paramétrica
+
+#+name: zschnorR
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |    10 |
+| Problema     |    10 |
+| Linguagem    |    10 |
+| Vantagens    |    10 |
+| Demonstração |     3 |
+| Perguntas    |    10 |
+| Apresentação |     8 |
+
+**** 6. GrupoHP
+
+Início: 16:47
+Fim: 16:57
+
+- C++
+- Marca do monitor define o nome do grupo
+- Evolução do C?
+  - C++ = C + OO, mesmo?
+- Ganha bitcoins
+- Sabia menos funcional: tivemos que correr atrás
+- Discussão: paradigma híbrido seria melhor
+  - Preferência ecônomica pela OO
+  - Listas: várias funções que muda uma struct
+
+#+name: zgrupohp
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |    10 |
+| Problema     |    10 |
+| Linguagem    |    10 |
+| Vantagens    |    10 |
+| Demonstração |    10 |
+| Perguntas    |    10 |
+| Apresentação |     9 |
+
+**** 7. root
+
+Início: 17:01
+Fim: 17:09
+
+- Python: "é a melhor linguagem do mundo"
+  - Implementada em C
+- Condição de parada
+- Jogo é difícil
+
+#+name: zroot
+| ITEM         | Valor |
+|--------------+-------|
+| Pontualidade |     8 |
+| Problema     |     7 |
+| Linguagem    |    10 |
+| Vantagens    |     5 |
+| Demonstração |    10 |
+| Perguntas    |    10 |
+| Apresentação |     8 |
 * Projeto Fase 1
 ** Entrega
 
