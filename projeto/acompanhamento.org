@@ -120,7 +120,7 @@ As estatísticas da avaliação até este momento são as seguintes:
   :   0.000   5.820   7.920   6.755   8.715   9.030
   #+END_EXAMPLE
 
-** Relatório de avaliação com comentários
+** Avaliação da submissão com comentários
 *** Al2O3:Cr
 
 Temos:
