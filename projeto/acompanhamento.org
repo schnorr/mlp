@@ -120,6 +120,718 @@ As estatísticas da avaliação até este momento são as seguintes:
   :   0.000   5.820   7.920   6.755   8.715   9.030
   #+END_EXAMPLE
 
+** Relatório de avaliação com comentários
+*** Al2O3:Cr
+
+Temos:
+- OO, FUNC, RELATORIO completo
+- Desta vez com introdução, conclusão e referências
+- A figura continua não sendo citada no documento
+- Os exemplos de cada um dos itens deve vir do próprio trabalho
+- Faltaram trechos de código na descrição da parte funcional
+  - Nos itens iniciais, pois depois os trechos são utilizados
+- Faltou uma reflexão comparando OO e FUNC na conclusão
+
+#+name: al203cr
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    26 |
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     8 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |     0 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |    10 |
+| Conc.Geral           |     5 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |    10 |
+| Bibtex               |    10 |
+| Git                  |    10 |
+| Virtual              |     0 |
+| Classes              |     8 |
+| Encapsulamento       |     8 |
+| Construtores         |     8 |
+| Destrutores          |     8 |
+| Espaço               |    10 |
+| Herança              |     5 |
+| Inclusão             |       |
+| Paramétrico          |    10 |
+| Sobrecarga           |    10 |
+| Delegates            |    10 |
+| Puras                |     7 |
+| Lambda               |     8 |
+| Currying             |    10 |
+| Pattern              |       |
+| Maior                |    10 |
+| Lapply               |    10 |
+| Primeira             |       |
+| Recursão             |    10 |
+| Relatório            |     9 |
+
+*** Batalha Barcal
+
+Temos:
+- OO (mais completa) e FUNC (168 linhas de código)
+- Agora usou o template em Latex
+- Agora tem capa e identificação, melhorou
+- Agora com trechos de código ilustrando os requisitos
+- Evitar o uso de caminhos absolutos em Makefiles
+  - Usar javac ao invés de =/bin/javac=, informar o usuário para
+    customizar sua variável PATH para que ela tenha o compilador java
+  - Necessidade de instalar o pacote =openjfx= (após tradicionais pacotes java)
+
+#+name: batalha
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    17 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |    10 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |    10 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |    10 |
+| Bibtex               |    10 |
+| Git                  |    10 |
+| Virtual              |       |
+| Classes              |     8 |
+| Encapsulamento       |     8 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |     0 |
+| Herança              |     8 |
+| Inclusão             |     8 |
+| Paramétrico          |    10 |
+| Sobrecarga           |    10 |
+| Delegates            |     5 |
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |    10 |
+| Lapply               |    10 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+| Relatório            |     8 |
+
+*** Caiu a barca
+
+Temos: OO (5.1KB) + FUNC (5.5KB) + RELATORIO
+- A introdução melhorou
+- Existe falta de acentos em algumas partes do texto (3.10 por ex.)
+- Referências não estão com bibtex
+
+#+name: caiu
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    24 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     5 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |     5 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |     8 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |     8 |
+| Conc.Limitações      |     8 |
+| Referências          |    10 |
+| Bibtex               |     0 |
+| Git                  |     5 |
+| Virtual              |       |
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |    10 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |    10 |
+| Sobrecarga           |    10 |
+| Delegates            |     8 |
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |     5 |
+| Pattern              |     0 |
+| Maior                |    10 |
+| Lapply               |     1 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+| Relatório            |     8 |
+
+*** ClubedasWynx
+
+Temos: FUNC + RELATORIO
+- Globalmente bem escrito
+- Trechos de código em todos os itens não estão presentes
+- A versão funcional usa OO, feriando a especificação
+- Faltou uma análise crítica da linguagem (seção)
+
+#+name: clube
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    18 |
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     9 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |       |
+| Crit.Justificativas  |       |
+| Crit.Discussao       |       |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |     0 |
+| Conc.Limitações      |     5 |
+| Referências          |    10 |
+| Bibtex               |    10 |
+| Git                  |    10 |
+| Virtual              |     0 |
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |     5 |
+| Herança              |     7 |
+| Inclusão             |    10 |
+| Paramétrico          |     7 |
+| Sobrecarga           |    10 |
+| Delegates            |     0 |
+| Puras                |       |
+| Lambda               |     5 |
+| Currying             |     0 |
+| Pattern              |       |
+| Maior                |       |
+| Lapply               |     5 |
+| Primeira             |       |
+| Recursão             |       |
+| Relatório            |     5 |
+
+*** Confia na Call
+
+Temos: OO + FUNC + RELATORIO
+- Título não foi modificado com linguagem/problema
+- Na intro, seria bom ter a estrutura do texto
+- Usar bibtex para as referências
+- Faltam trechos de código no relatório
+  - Parte que descreve as funcionalidades mal organizada
+- Comandos =/section= estranhos
+
+#+name: confia
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    14 |
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |     0 |
+| Capa.Linguagem       |     0 |
+| Introducao           |     9 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |       |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |     9 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |     7 |
+| Bibtex               |     0 |
+| Git                  |    10 |
+| Virtual              |       |
+| Classes              |       |
+| Encapsulamento       |     5 |
+| Construtores         |       |
+| Destrutores          |       |
+| Espaço               |       |
+| Herança              |     3 |
+| Inclusão             |       |
+| Paramétrico          |       |
+| Sobrecarga           |       |
+| Delegates            |       |
+| Puras                |     4 |
+| Lambda               |     4 |
+| Currying             |    10 |
+| Pattern              |    10 |
+| Maior                |       |
+| Lapply               |       |
+| Primeira             |       |
+| Recursão             |       |
+| Relatório            |     4 |
+
+*** Fullbar
+
+Temos: OO + FUNC + RELATORIO
+- Seria bom que a introdução descreva, no final, a estrutura do texto
+- Usar bibtex para as referências
+- Implementar todos os requisitos faltantes
+
+#+name: fullbar
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    33 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     9 |
+| Ling.Funcionalidades |     9 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |     9 |
+| Crit.Discussao       |    10 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |    10 |
+| Bibtex               |     0 |
+| Git                  |    10 |
+| Virtual              |       |
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |       |
+| Destrutores          |    10 |
+| Espaço               |    10 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |    10 |
+| Sobrecarga           |    10 |
+| Delegates            |    10 |
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |    10 |
+| Pattern              |       |
+| Maior                |       |
+| Lapply               |    10 |
+| Primeira             |    10 |
+| Recursão             |       |
+| Relatório            |     9 |
+
+*** GrupoHP
+
+Temos: OO + FUNC + RELATORIO
+- Relatório utilizado foi o arquivo =relatorio.pdf= em =doc=
+- Relatório deve ter uma seção para a Análise Crítica
+  - Faltou uma discussão geral sobre os pontos
+  - As justificativas poderiam ficar no texto
+- Nenhuma referência de C++, ainda que seja a LP escolhida
+- Os /captions/ das figuras poderiam ser mais detalhados
+- Múltiplos erros ortográficos no texto
+
+
+#+name: grupohp
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    26 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     8 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |     0 |
+| Crit.Tabela          |     7 |
+| Crit.Justificativas  |     7 |
+| Crit.Discussao       |     0 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |     9 |
+| Conc.Limitações      |     9 |
+| Referências          |     6 |
+| Bibtex               |    10 |
+| Git                  |    10 |
+| Virtual              |       |
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |    10 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |     5 |
+| Sobrecarga           |    10 |
+| Delegates            |    10 |
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |    10 |
+| Pattern              |     0 |
+| Maior                |    10 |
+| Lapply               |    10 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+| Relatório            |     7 |
+
+*** Guerreiros de Anúbis
+
+Temos: OO + FUNC + RELATORIO
+- Título poderia melhorar
+- Comandos =\cite= (para citações devem vir ao longo do texto)
+- A introdução poderia ser mais elaborada, colocando a estrutura do texto
+
+
+- Itens
+  - Espaço de nomes: pacotes _é_ uma implementação de espaço de nomes
+  - Apresentar trechos de código que ilustrem _todos_ os pontos
+  - Evitar copiar/colar trechos de texto da especificação (partes em negrito)
+    - Duas páginas apenas descrevem a implementação
+  - Evitar escrever um texto na forma de itens, isso pode ser visto
+    com um estilo de escrita de baixa qualidade
+- Conclusão demasiadamente sumária: duas frases.
+
+#+name: guerreiros
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |     9 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     7 |
+| Ling.Funcionalidades |     5 |
+| Ling.Dominio         |     5 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |     7 |
+| Crit.Discussao       |     5 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |       |
+| Conc.Limitações      |       |
+| Referências          |     7 |
+| Bibtex               |     0 |
+| Git                  |       |
+| Virtual              |       |
+| Classes              |    10 |
+| Encapsulamento       |     8 |
+| Construtores         |     8 |
+| Destrutores          |    10 |
+| Espaço               |    10 |
+| Herança              |     9 |
+| Inclusão             |     0 |
+| Paramétrico          |     0 |
+| Sobrecarga           |     8 |
+| Delegates            |     0 |
+| Puras                |       |
+| Lambda               |     1 |
+| Currying             |     2 |
+| Pattern              |       |
+| Maior                |    10 |
+| Lapply               |    10 |
+| Primeira             |     6 |
+| Recursão             |    10 |
+| Relatório            |     3 |
+
+*** Mean Girls
+
+Temos: OO + FUNC + RELATORIO
+- Existem erros ortográficos (em vários lugares)
+- O português (semântico) precisa ser melhorado
+  - A conclusão é um retalho de ideias
+
+#+name: mean
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    32 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |    10 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |     0 |
+| Conc.Geral           |     8 |
+| Conc.Benefícios      |     7 |
+| Conc.Limitações      |     7 |
+| Referências          |    10 |
+| Bibtex               |    10 |
+| Git                  |    10 |
+| Virtual              |       |
+| Classes              |    10 |
+| Encapsulamento       |     9 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |    10 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |    10 |
+| Sobrecarga           |    10 |
+| Delegates            |     0 |
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |     1 |
+| Pattern              |     1 |
+| Maior                |    10 |
+| Lapply               |    10 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+| Relatório            |   7.5 |
+
+*** Os Aforistas Desaforados
+
+Temos: OO + FUNC + RELATORIO
+- Erro de Copiar/Colar na Seção 5.1
+  - Lembrar de revisar minuciosamente o texto
+- Usar o pacote =listings= para trechos de código
+- Citações às referências no texto não permitem a correta
+  identificação da referência. Exemplo, veja seção 5.1.8.
+
+#+name: aforistas
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    23 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     8 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |     8 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |    10 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |    10 |
+| Bibtex               |    10 |
+| Git                  |    10 |
+| Virtual              |    10 |
+| Classes              |    10 |
+| Encapsulamento       |     8 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |    10 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |     0 |
+| Sobrecarga           |     0 |
+| Delegates            |    10 |
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |    10 |
+| Pattern              |    10 |
+| Maior                |    10 |
+| Lapply               |    10 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+| Relatório            |     9 |
+
+*** Os Gatos de Schnorrdingër
+
+Temos: OO + FUNC + RELATORIO
+- Fontes do relatório não foram submetidos
+- Faltou a tabela, discussão global dos critérios
+
+#+name: gatos
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    26 |
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     7 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |       |
+| Crit.Justificativas  |     8 |
+| Crit.Discussao       |       |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |    10 |
+| Bibtex               |    10 |
+| Git                  |    10 |
+| Virtual              |       |
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |     0 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |     7 |
+| Sobrecarga           |    10 |
+| Delegates            |    10 |
+| Puras                |     7 |
+| Lambda               |    10 |
+| Currying             |       |
+| Pattern              |    10 |
+| Maior                |       |
+| Lapply               |    10 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+| Relatório            |     8 |
+
+*** root
+
+Temos: OO + FUNC + RELATORIO
+- Faltam os fontes do relatório no arquivo submetido
+- Não há necessidade de repetir a lista de requisitos
+
+#+name: root
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    25 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |       |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |     4 |
+| Crit.Tabela          |       |
+| Crit.Justificativas  |       |
+| Crit.Discussao       |       |
+| Conc.Geral           |       |
+| Conc.Benefícios      |       |
+| Conc.Limitações      |       |
+| Referências          |     0 |
+| Bibtex               |     0 |
+| Git                  |    10 |
+| Virtual              |       |
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |     5 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |     0 |
+| Sobrecarga           |    10 |
+| Delegates            |    10 |
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |     6 |
+| Pattern              |     0 |
+| Maior                |    10 |
+| Lapply               |    10 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+| Relatório            |     7 |
+
+*** SchnorR doidão
+
+Temos: OO + FUNC + RELATORIO
+- Figs 1.1 e 2.1 não respeitam as margens da página
+- Na descrição com R6Class, citação errada
+  - Outras citações também estão erradas (veja Sec 2.4.3)
+
+#+name: schnorR
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    27 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |    10 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |     2 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |     8 |
+| Referências          |     5 |
+| Bibtex               |     0 |
+| Git                  |    10 |
+| Virtual              |    10 |
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |     3 |
+| Espaço               |     5 |
+| Herança              |    10 |
+| Inclusão             |     0 |
+| Paramétrico          |    10 |
+| Sobrecarga           |    10 |
+| Delegates            |    10 |
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |    10 |
+| Pattern              |     0 |
+| Maior                |    10 |
+| Lapply               |    10 |
+| Primeira             |    10 |
+| Recursão             |     8 |
+| Relatório            |   9.5 |
+
+*** WubbaLubbaDubDub
+
+Temos: OO + FUNC + RELATORIO
+- Introdução melhorou; precisa descrever a estrutura do texto no final
+  - Evitar uso excessivo de itens
+- Pontos interessantes
+  - Contém uma única interface gráfica para as duas implementações
+  - Apresenta uma análise de desempenho entre soluções funcional e OO
+- Usar bibtex para as referências
+- Algumas seções estão em posições estranhas (4.6 Ideia Inicial)
+- Na parte funcional
+  - Embora com trechos de código e uma extensiva explicação do
+    funcionamento, o texto carece de um detalhamento da relação destes
+    com o detalhamento dos requisitos. Por exemplo, /pattern matching/
+    foi utilizado ou não? Funções de ordem maior? etc.
+- A discussão sobre recursão direta em funcional não ser possível:
+  veja que o paradigma funcional todo ele é baseado em recursão.
+
+#+name: wubba
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    32 |
+| Capa.Grupo           |     0 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     5 |
+| Ling.Funcionalidades |       |
+| Ling.Dominio         |       |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |       |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |       |
+| Conc.Limitações      |     3 |
+| Referências          |    10 |
+| Bibtex               |       |
+| Git                  |       |
+| Virtual              |       |
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |     0 |
+| Espaço               |     0 |
+| Herança              |    10 |
+| Inclusão             |     5 |
+| Paramétrico          |     5 |
+| Sobrecarga           |       |
+| Delegates            |       |
+| Puras                |     3 |
+| Lambda               |     3 |
+| Currying             |       |
+| Pattern              |       |
+| Maior                |     3 |
+| Lapply               |    10 |
+| Primeira             |    10 |
+| Recursão             |     5 |
+| Relatório            |     8 |
+
 * Projeto Fase 1
 ** Entrega
 
