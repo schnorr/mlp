@@ -91,9 +91,13 @@ Com leves alterações em relação a fase 1.
 | Primeira             |       |    2 |
 | Recursão             |       |    2 |
 | Relatório            |       |   10 |
+| Pontualidade         |       |    2 |
+| Problema             |       |    1 |
+| Linguagem            |       |    1 |
+| Vantagens            |       |    2 |
+| Demonstração         |       |    2 |
+| Perguntas            |       |    1 |
 | Apresentação         |       |   10 |
-| Pontualidade         |       |    1 |
-| Demonstração         |       |    5 |
 
 ** Estatísticas da Avaliação
 
