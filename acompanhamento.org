@@ -6,8 +6,11 @@
 #+Date: schnorr@inf.ufrgs.br
 
 #+LATEX_CLASS: article
-#+LATEX_CLASS_OPTIONS: [10pt, twocolumn, a4paper]
-#+LATEX_HEADER: \input{org-babel.tex}
+#+LATEX_CLASS_OPTIONS: [10pt, a4paper]
+#+LATEX_HEADER: \usepackage{color}
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+#+LATEX_HEADER: \usepackage[margin=1cm]{geometry}
 
 #+OPTIONS: toc:nil
 #+STARTUP: overview indent
