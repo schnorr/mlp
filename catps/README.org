@@ -2,95 +2,27 @@
 
 Todos os prazos são até as 23:59 da data informada.
 
-Existem duas formas de entrega, em papel e por e-mail. A forma de
-entrega específica de cada CATP está listada na tabela abaixo. Caso o
-campo esteja vazio, isso indica que a entrega é por e-mail. Quando a
-entrega é por papel, este deve ser entregue em mãos antes do prazo
-especificado. Quando a entrega é por e-mail, este deve ser enviado
-antes do prazo especificado com o título "CATP #NN", onde NN são os
-dois digítos que identificam o CATP.
+| CATP | Descrição                            | Entrega    | Prazo | Resultado             |
+|------+--------------------------------------+------------+-------+-----------------------|
+| #01  | [[./01/formulario.pdf][Formulário de Avaliação de LPs]]       |            |       | [[./eval/01/README.org][Relatório]]             |
+| #02  | [[./02/README.org][Listas e recursividade em R]]          |            |       | [[./eval/02/README.org][Relatório]]             |
+| #03  | [[./03/README.org][Recursividade e funcionais em R]]      |            |       | [[./eval/03/README.org][Relatório]]             |
+| #04  | [[./04/README.org][Manipulação de dados em R]]            |            |       | [[./eval/04/README.org][Relatório]]             |
+| #05  | [[./05/README.org][Processo de Inferência em Prolog]]     | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]] |       | [[./eval/05/README.org][Relatório]]             |
+| #06  | Implementação de Fibonacci em Prolog | [[https://goo.gl/forms/SlzDngBjA3Fcqanl1][Formulário]] |       | [[./eval/06/README.org][Relatório]]             |
+| #07  | [[./07/README.org][Manipulação de listas em Prolog]]      | [[https://goo.gl/forms/WK9Ug9D1dZWbfNJx2][Formulário]] |       | [[./eval/07/README.org][Relatório]]             |
+| #08  | [[./08/README.org][Vinculação de estocagem e escopo]]     | [[https://goo.gl/forms/XiBUY20Uq27MO9QX2][Formulário]] |       | [[./eval/08/README.org][Relatório e Respostas]] |
+| #09  | [[./09/README.org][Vínculos e Tipos de dados]]            | [[https://goo.gl/forms/hPgR5XrYwOhwLHB22][Formulário]] |       | [[./eval/09/README.org][Relatório e Respostas]] |
+|------+--------------------------------------+------------+-------+-----------------------|
+| #10  | [[./10/README.org][Controle de Fluxo]]                    | [[https://goo.gl/forms/9q2TEEu3JmHyN17F2][Formulário]] |       | [[./eval/10/README.org][Relatório e Respostas]] |
+| #11  | [[./11/README.org][Polimorfismo]]                         | [[https://goo.gl/forms/3M8jwFABt9rfzuFv1][Formulário]] |       | [[./eval/11/README.org][Relatório]]             |
+| #12  | [[./12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]] |       | [[./eval/12/README.org][Relatório]]             |
+| #13  | [[./13/README.org][Encapsulamento em OO]]                 | [[https://goo.gl/forms/JsAzqE3rKboHzJx23][Formulário]] |       | [[./eval/13/README.org][Relatório]]             |
+| #14  | [[./14/README.org][Herança em OO]]                        | [[https://goo.gl/forms/YHaDmzofJaKQqJT22][Formulário]] |       | [[./eval/14/README.org][Relatório]]             |
+| #15  | [[./15/README.org][Polimorfimo Paramétrico em OO]]        | [[https://goo.gl/forms/xzLPAPJAWoTlKtki2][Formulário]] |       | [[./eval/15/README.org][Relatório]]             |
+| #16  | [[./16/README.org][Exceções]]                             | [[https://goo.gl/forms/g0AJ2VlY3fmq17UG2][Formulário]] |       | [[./eval/16/README.org][Relatório]]             |
+| #17  | [[./17/README.org][Valgrind]]                             | [[https://goo.gl/forms/YzaGXvZxrtS3xlZs2][Formulário]] |       | [[./eval/17/README.org][Relatório]]             |
+| #18  | Linguagens de Script                 |            |       |                       |
+| #19  | [[./19/README.org][Integração Numérica com Paralelismo]]  | [[https://goo.gl/forms/pPEETL2bPIr80dvf2][Formulário]] |       | [[./eval/17/README.org][Relatório]]             |
 
-Somente serão válidos os relatórios textuais em arquivos do tipo TXT
-ou PDF. Código fonte em arquivos com codificação UTF8, ou diretamente
-no corpo do e-mail quando o resultado do CATP é pequeno. E lembre-se:
-todos os CATP devem ter uma identificação clara dos participantes, em
-todos os arquivos enviados.
 
-Quando a entrega for por =Email (corpo)=, siga este método:
-- Escreva um e-mail (em texto puro, sem HTML) para o professor @INF
-- O título do e-mail deve ser =CATP #DD=
-  - Onde =DD= são os dois dígitos que identificam o CATP
-- A solução deve estar no corpo do e-mail (e _não em anexo_)
-- No início do corpo do e-mail, a mensagem deve ter
-  - "# Aluno: ..." ou
-  - "# Aluna: ..."
-  - Após o dois pontos, coloque o *nome completo*
-
-| CATP | Descrição                            | Entrega       |      Prazo | Resultado             |
-|------+--------------------------------------+---------------+------------+-----------------------|
-| #01  | [[./01/formulario.pdf][Formulário de Avaliação de LPs]]       | Papel/Email   | 2017-08-30 | [[./eval/01/README.org][Relatório]]             |
-| #02  | [[./02/README.org][Listas e recursividade em R]]          | Email (corpo) | 2017-09-06 | [[./eval/02/README.org][Relatório]]             |
-| #03  | [[./03/README.org][Recursividade e funcionais em R]]      | Email (corpo) | 2017-09-11 | [[./eval/03/README.org][Relatório]]             |
-| #04  | [[./04/README.org][Manipulação de dados em R]]            | Email (corpo) | 2017-09-13 | [[./eval/04/README.org][Relatório]]             |
-| #05  | [[./05/README.org][Processo de Inferência em Prolog]]     | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]]    | 2017-09-19 | [[./eval/05/README.org][Relatório]]             |
-| #06  | Implementação de Fibonacci em Prolog | [[https://goo.gl/forms/SlzDngBjA3Fcqanl1][Formulário]]    | 2017-09-25 | [[./eval/06/README.org][Relatório]]             |
-| #07  | [[./07/README.org][Manipulação de listas em Prolog]]      | [[https://goo.gl/forms/WK9Ug9D1dZWbfNJx2][Formulário]]    | 2017-10-02 | [[./eval/07/README.org][Relatório]]             |
-| #08  | [[./08/README.org][Vinculação de estocagem e escopo]]     | [[https://goo.gl/forms/XiBUY20Uq27MO9QX2][Formulário]]    | 2017-10-10 | [[./eval/08/README.org][Relatório e Respostas]] |
-| #09  | [[./09/README.org][Vínculos e Tipos de dados]]            | [[https://goo.gl/forms/hPgR5XrYwOhwLHB22][Formulário]]    | 2017-10-11 | [[./eval/09/README.org][Relatório e Respostas]] |
-|------+--------------------------------------+---------------+------------+-----------------------|
-| #10  | [[./10/README.org][Controle de Fluxo]]                    | [[https://goo.gl/forms/9q2TEEu3JmHyN17F2][Formulário]]    | 2017-10-31 | [[./eval/10/README.org][Relatório e Respostas]] |
-| #11  | [[./11/README.org][Polimorfismo]]                         | [[https://goo.gl/forms/3M8jwFABt9rfzuFv1][Formulário]]    | 2017-11-06 | [[./eval/11/README.org][Relatório]]             |
-| #12  | [[./12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]]    | 2017-11-12 | [[./eval/12/README.org][Relatório]]             |
-| #13  | [[./13/README.org][Encapsulamento em OO]]                 | [[https://goo.gl/forms/JsAzqE3rKboHzJx23][Formulário]]    | 2017-11-15 | [[./eval/13/README.org][Relatório]]             |
-| #14  | [[./14/README.org][Herança em OO]]                        | [[https://goo.gl/forms/YHaDmzofJaKQqJT22][Formulário]]    | 2017-11-20 | [[./eval/14/README.org][Relatório]]             |
-| #15  | [[./15/README.org][Polimorfimo Paramétrico em OO]]        | [[https://goo.gl/forms/xzLPAPJAWoTlKtki2][Formulário]]    | 2017-12-06 | [[./eval/15/README.org][Relatório]]             |
-| #16  | [[./16/README.org][Exceções]]                             | [[https://goo.gl/forms/g0AJ2VlY3fmq17UG2][Formulário]]    | 2017-12-11 | [[./eval/16/README.org][Relatório]]             |
-| #17  | [[./17/README.org][Valgrind]]                             | [[https://goo.gl/forms/YzaGXvZxrtS3xlZs2][Formulário]]    | 2017-12-13 | [[./eval/17/README.org][Relatório]]             |
-| #18  | Linguagens de Script                 |               | 2017-12-18 | (não foi realizado)   |
-| #19  | [[./19/README.org][Integração Numérica com Paralelismo]]  | [[https://goo.gl/forms/pPEETL2bPIr80dvf2][Formulário]]    | 2017-12-13 | [[./eval/17/README.org][Relatório]]             |
-
-* Grande resultado final dos CATPs
-
-#+RESULTS:
-| ID      | CATP.Final | CATP.Entregues |
-|---------+------------+----------------|
-| ???973  |       7.82 |             18 |
-| ???031  |       7.78 |             18 |
-| ???653  |       7.32 |             18 |
-| ???274  |       6.87 |             16 |
-| ???567  |       6.76 |             16 |
-| ???292  |       6.24 |             16 |
-| ???591  |        5.5 |             14 |
-| ???866  |       5.41 |             14 |
-| ???285  |       5.31 |             16 |
-| ???849  |       5.27 |             15 |
-| ???658  |       5.26 |             13 |
-| ???259  |       4.96 |             14 |
-| ???109  |       4.77 |             11 |
-| ???249  |       4.71 |             13 |
-| ???262  |       4.69 |             14 |
-| ???848  |       4.64 |             14 |
-| ???834  |       4.45 |             12 |
-| ???410  |        4.4 |             12 |
-| ???575  |       4.32 |             15 |
-| ???288  |       4.08 |             13 |
-| ???820  |       3.81 |              9 |
-| ???289  |       3.71 |              9 |
-| ???106  |       3.66 |             10 |
-| ???688  |       3.48 |             10 |
-| ???525  |       3.45 |             12 |
-| ???172  |       3.38 |              9 |
-| ???950  |       3.37 |             11 |
-| ???787  |       3.22 |              8 |
-| ???434  |        3.2 |             10 |
-| ???856  |       3.05 |              7 |
-| ???586  |          3 |             11 |
-| ???341  |       2.29 |              7 |
-| ???680  |       2.14 |              7 |
-| ???883  |       2.11 |              4 |
-| ???055  |       1.94 |              5 |
-| ???160  |       1.31 |              4 |
-| ???665  |       1.11 |              2 |
-| ???810  |       1.06 |              5 |
-| ???680  |       0.83 |              2 |
-| ???8856 |       0.15 |              1 |
