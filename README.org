@@ -42,16 +42,8 @@ aprendizado da disciplina.
 
 ** Plano e Cronograma
 
-- [[./plano/index.org][Plano da disciplina]] (permanente), com detalhamento dos seguintes itens
-  - Conteúdo programático
-  - Metodologia
-  - Experiências de aprendizagem
-  - Critérios de avaliação
-  - Atividades de recuperação
-  - Bibliografia
-- [[./cronograma/index.org][Cronograma]]
-  - Edição 2017/2 - Turma Única
-  - Segundas e Quartas, 15:30 – 17:10
+- [[./plano/index.org][Plano da disciplina]] (permanente)
+- [[./cronograma/index.org][Cronograma Edição 2018/1]] (Turma A, Terças e Quintas, 08:30 – 10:10)
 
 ** Principal
 
