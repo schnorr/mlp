@@ -45,7 +45,7 @@ aprendizado da disciplina.
 - [[./plano/index.org][Plano da disciplina]] (permanente)
 - [[./cronograma/index.org][Cronograma Edição 2018/1]] (Turma A, Terças e Quintas, 08:30 – 10:10)
 
-** Elementos pedagógicos
+** Elementos Pedagógicos
 
 - [[./conteudo/][Acesse o conteúdo da disciplina]]
 - [[./catps/][Conjunto de Atividades Teórico-Práticas (CATP)]]
