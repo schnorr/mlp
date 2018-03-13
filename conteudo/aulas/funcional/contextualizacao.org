@@ -52,7 +52,9 @@ Várias proposições independentes, exemplos
 #+BEGIN_CENTER
 *Um programa visto como uma prova construtiva*.
 
-Evitando: Infinito (\infty) e Terceiro Excluído (falso = !verdadeiro)
+Evitar Infinito (\infty)
+
+Assumir a [[https://pt.wikipedia.org/wiki/Lei_do_terceiro_exclu%C3%ADdo][Lei do Terceiro Excluído]] (falso = !verdadeiro)
 #+END_CENTER
 
 * Detalhamento histórico
