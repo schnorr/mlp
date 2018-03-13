@@ -130,7 +130,6 @@ dados.
 # dando detalhes de como pretende implementar a solução para o mesmo.
 
 * Problemas disponíveis
-
 ** War
 
 A ideia é desenvolver um jogo de batalha por turnos estilo o jogo
@@ -155,7 +154,7 @@ controle um exército para competir no jogo Starcraft Broodwar. Maiores
 detalhes em: http://sscaitournament.com/ e
 https://github.com/bwapi/bwapi.
 
-** BatalhaNaval
+** BatalhaNaval                                                   :noexport:
 
 O computador deve sortear uma configuração ao inicial do jogo, em que
 estarão colocados num tabuleiro de tamanho 15x15 os seguintes itens: 4
@@ -167,7 +166,7 @@ mina).  O jogo termina quando o usuário afundar toda a frota, ou
 quando indicar que não quer continuar a jogar. Ao invés de solicitar
 as coordenadas, você pode usar o mouse como entrada de dados.
 
-** TowerDefence
+** TowerDefence                                                   :noexport:
 
 Neste tipo de jogo você precisa defender algum elemento ou posição na
 tela, normalmente em algum cenário composto de uma ou mais estradas ou
@@ -209,6 +208,10 @@ e pode ser utilizado como inspiração para o projeto.
 No caso, o grupo deve encaminhar sua ideia ao professor, descrita em
 detalhes, que avaliará sua viabilidade.
 
+** Frogger
+https://froggerclassic.appspot.com/
+** Space Invaders
+http://www.pacxon4u.com/space-invaders/
 * Recursos Necessários (critérios mínimos)
 
 O trabalho realizado *deve considerar os aspectos especificados nesta
