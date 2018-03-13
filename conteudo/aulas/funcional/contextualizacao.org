@@ -136,6 +136,6 @@ mdc a b = mdc b (a `mod` b)
 - Lógico (Prolog)
   #+BEGIN_SRC LOG
 mdc(A,A,A).
-mdc(A,B,R) :- A>B, A1 is A-B, mdc(A1,Y,R).
+mdc(A,B,R) :- A>B, A1 is A-B, mdc(A1,B,R).
 mdc(A,B,R) :- B>A, B1 is B-A, mdc(A,B1,R).
 #+END_SRC
