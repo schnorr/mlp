@@ -276,8 +276,8 @@ os motivos para ele não existir *e utilize um mecanismo alternativo*.
 * Relatório
 
 O grupo deve apresentar um relatório técnico com os itens descritos
-abaixo. O relatório deve ser escrito utilizando a linguagem de
-marcação =LaTeX=. O modelo do relatório pode ser obtido aqui:
+abaixo. O relatório deve ser escrito utilizando a linguagem =LaTeX=. O
+modelo do relatório pode ser obtido aqui:
 - https://github.com/schnorr/mlpreport
 
 Segue a lista dos itens obrigatórios para o relatório:
