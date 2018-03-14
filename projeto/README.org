@@ -54,10 +54,10 @@ linguagens de programação, seguindo os critérios abordados em aula*.
 
 Cada grupo *deve selecionar uma linguagem de programação da lista
 abaixo*. Cada linguagem poderá ser escolhida por no máximo dois
-grupos. A ordem de preferência da escolha da linguagem será baseada no
-recebimento de e-mails pelo professor, que informará através de meio
-hábil qual o mapeamento grupo e linguagem. A escolha do grupo deve ser
-realizada dentro do prazo estabelecido.
+grupos. A ordem de preferência da escolha da linguagem será por
+sorteio, no cenário onde mais de dois grupos estejam interessados na
+mesma linguagem. A escolha do grupo deve ser realizada dentro do prazo
+estabelecido.
 
 | C++17          | [[https://isocpp.org/std/status][ISO-CPP]]                         |
 | Clojure        | http://clojure.org/             |
