@@ -207,7 +207,8 @@ e pode ser utilizado como inspiração para o projeto.
 https://froggerclassic.appspot.com/
 ** Space Invaders
 http://www.pacxon4u.com/space-invaders/
-
+** Editor de Polígonos
+** Processamento de dados
 ** Pessoal
 
 No caso, o grupo deve encaminhar sua ideia ao professor, descrita em
