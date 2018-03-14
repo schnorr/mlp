@@ -301,7 +301,12 @@ Segue a lista dos itens obrigatórios para o relatório:
    # discutidos nas primeiras aulas). Se possível, fazer paralelo com
    # outra linguagem mais tradicional (que implemente ou não o recurso
    # em questão de forma melhor ou pior).
-3. Análise Crítica: uma análise crítica da linguagem estudada,
+3. Recursos: esta seção deve descrever cada um dos recursos que foram
+   empregados nas duas soluções (OO e Funcional), incluindo trechos de
+   código implementados pelo grupo e utilizados na solução
+   final. Recomenda-se o uso do pacote =listings= (Latex) para a
+   inclusão de código no relatório.
+4. Análise Crítica: uma análise crítica da linguagem estudada,
    envolvendo uma tabela com os critérios e propriedades estudados em
    aula (i.e. simplicidade, ortogonalidade, expressividade,
    adequabilidade e variedade de estruturas de controle, mecanismos de
@@ -313,9 +318,9 @@ Segue a lista dos itens obrigatórios para o relatório:
    descrevendo situações que contariam como pontos favoráveis ou
    desfavoráveis para cada critério ou propriedade). Indicar qual
    paradigma foi mais adequado para resolver o problema e por que.
-4. Conclusão: descrevendo as facilidades e dificuldades encontradas,
+5. Conclusão: descrevendo as facilidades e dificuldades encontradas,
    benefícios, problemas e limitações da linguagem estudada.
-5. Referências: todo material consultado, incluindo livros, artigos,
+6. Referências: todo material consultado, incluindo livros, artigos,
    páginas na Internet, etc., que tenha relação com o
    assunto. Elaborar a lista usando =bibtex=.
 
