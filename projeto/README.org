@@ -33,14 +33,15 @@
 Os prazos são até às 23:59 do dia informado.
 #+END_CENTER
 
-| Item                              |      Prazo |
-|-----------------------------------+------------|
-| Escolha da LP, Problema, Grupos   | 2017-09-25 |
-| Projeto inicial                   | 2017-10-30 |
-| Entrega *parcial* (OO ou funcional) | 2017-12-01 |
-| Entrega *final*                     | 2018-01-07 |
-| Apresentações Sessão #1           | 2018-01-15 |
-| Apresentações Sessão #2           | 2018-01-17 |
+| Item                            |      Prazo |
+|---------------------------------+------------|
+| Anúncio (Início do TF)          | 2018-03-15 |
+| Escolha da LP, Problema, Grupos | 2018-03-22 |
+| Projeto inicial                 | 2018-04-03 |
+| Entrega *parcial*                 | 2018-05-10 |
+| Entrega *final*                   | 2018-06-21 |
+| Apresentações Sessão #1         | 2018-07-03 |
+| Apresentações Sessão #2         | 2018-07-05 |
 
 * Visão Geral e Linguagens
 
