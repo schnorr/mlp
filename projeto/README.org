@@ -188,7 +188,7 @@ espaçonavas inimigas que querem invadir o planeta do jogador. Na
 medida que elas avançam na tela (de cima para baixo), o jogador guia
 sua espaçonave (de maneira livre na tela mas sempre realizando
 disparos em direção ao alto da tela), para destruir todas as ondas de
-inimigos que se seguem. [[Mais informações aqui][http://www.pacxon4u.com/space-invaders/]] e na
+inimigos que se seguem. [[http://www.pacxon4u.com/space-invaders/][Mais informações aqui]] e na
 [[https://pt.wikipedia.org/wiki/Space_Invaders][Wikipedia Space Invaders]].
 
 ** Editor de Polígonos
