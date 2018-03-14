@@ -172,11 +172,40 @@ disponível em http://github.com/schnorr/viva/tree/master/src/libtupi,
 e pode ser utilizado como inspiração para o projeto.
 
 ** Frogger
-https://froggerclassic.appspot.com/
+
+Frogger é um jogo arcade de 1981 onde o objetivo é realizar o
+cruzamento de sapos (a partir da parte inferior da tela) em uma
+estrada e depois em um rio até ocupar todos os espaços (na parte
+superior da tela). Existem vários obstáculos que devem ser evitados
+(ou utilizados para se atingir o objetivo) como carros, pedaços de
+madeira, tartarugas, jacarés, etc. Os obstáculos se movem com
+diferentes velocidades. [[https://froggerclassic.appspot.com/][Mais informações aqui]] e na [[https://pt.wikipedia.org/wiki/Frogger][Wikipedia Frogger]]
+(entrada em inglês mais completa).
+
 ** Space Invaders
-http://www.pacxon4u.com/space-invaders/
+
+O jogo expõem o jogador como uma espaçonave que deve destruir as
+espaçonavas inimigas que querem invadir o planeta do jogador. Na
+medida que elas avançam na tela (de cima para baixo), o jogador guia
+sua espaçonave (de maneira livre na tela mas sempre realizando
+disparos em direção ao alto da tela), para destruir todas as ondas de
+inimigos que se seguem. [[Mais informações aqui][http://www.pacxon4u.com/space-invaders/]] e na
+[[https://pt.wikipedia.org/wiki/Space_Invaders][Wikipedia Space Invaders]].
+
 ** Editor de Polígonos
+
+Construir um editor de polígonos interativo parecido com a ferramenta
+vetorial de código aberto [[https://inkscape.org][Inkscape]]. O editor deve permitir ao usuário
+editar polígonos através de todos os pontos do seu perímetro, assim
+como realizar operações clássicas como alinhamento de objetos,
+centralização, cálculo de área e extensão do perímetro.
+
 ** Processamento de dados
+
+Construir um programa de mineração ou processamento de dados, onde os
+dados são colocados na entrada de maneira continua e o sistema deve
+realizar operações estatísticas sobre eles.
+
 ** Pessoal
 
 No caso, o grupo deve encaminhar sua ideia ao professor, descrita em
