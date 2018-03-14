@@ -87,24 +87,14 @@ que o foco não está na interface do programa.
 * Definição dos grupos, do problema e da linguagem
 
 Cada grupo é formato com três participantes e elege um líder. O líder
-informa ao professor, por e-mail, qual o problema escolhido, a
-linguagem, e os membros do grupo conforme instruções a seguir. Grupos
-com outra quantidade de membros só serão aceitos para fins de
-arrendondamento da turma. O e-mail deve ter o título =MLP: Grupo TF= e
-ter no corpo da mensagem em texto puro (sem HTML) _somente_ os seguintes
-dados.
+informa ao professor, via formulário abaixo, qual o problema
+escolhido, a linguagem, e os membros do grupo. Grupos com outra
+quantidade de membros são aceitos somente para fins de arrendondamento
+da turma (converse com o professor antes).
 
-| Linha | Descrição                     |
-|-------+-------------------------------|
-|     1 | Nome do grupo (seja criativo) |
-|     2 | Nome completo do líder        |
-|     3 | Código do líder               |
-|     4 | Nome completo do membro #2    |
-|     5 | Código do membro #2           |
-|     6 | Nome completo do membro #3    |
-|     7 | Código do membro #3           |
-|     8 | Linguagem                     |
-|     9 | Problema                      |
+|------------------------------------|
+| [[https://goo.gl/forms/cJz0v618SYpoqr153][Formulário de definição dos grupos]] |
+|------------------------------------|
 
 * Problemas disponíveis
 ** War
