@@ -203,15 +203,15 @@ algoritmo de Barnes-Hut. Um exemplo utilizando a linguagem C já está
 disponível em http://github.com/schnorr/viva/tree/master/src/libtupi,
 e pode ser utilizado como inspiração para o projeto.
 
-** Pessoal
-
-No caso, o grupo deve encaminhar sua ideia ao professor, descrita em
-detalhes, que avaliará sua viabilidade.
-
 ** Frogger
 https://froggerclassic.appspot.com/
 ** Space Invaders
 http://www.pacxon4u.com/space-invaders/
+
+** Pessoal
+
+No caso, o grupo deve encaminhar sua ideia ao professor, descrita em
+detalhes, que avaliará sua viabilidade.
 * Recursos Necessários (critérios mínimos)
 
 O trabalho realizado *deve considerar os aspectos especificados nesta
