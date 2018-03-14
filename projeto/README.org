@@ -331,6 +331,13 @@ paradigmas (OO ou funcional), a critério do grupo. O professor
 utilizará esta oportunidade para formar um parecer rápido do relatório
 e da implementação; sugerindo ao grupo melhorias caso necessário.
 
+** Entrega Final
+
+A *entrega final* incorpora os comentários do parecer do professor das
+entregas anteriores e a implementação e relatório nos dois paradigmas
+(OO e funcional). É a entrega final que será utilizada para a
+avaliação, conforme método descrito abaixo.
+
 * Apresentação
 
 A apresentação do trabalho prático será feita diante da turma e do
