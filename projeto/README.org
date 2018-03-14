@@ -140,7 +140,7 @@ envolver somente dois adversários (seja outro ser humano ou o
 computador). Preferencialmente, o jogo pode utilizar os tiles do
 OpenStreetMap para desenhar o mapa e posicionar exércitos.
 
-** MarioBrosAI 
+** MarioBrosAI                                                    :noexport:
 
 A ideia consiste em desenvolver um software (bot ou agente) que
 controle o personagem Mário Bros para o ambiente InfiniteMarioBros,
