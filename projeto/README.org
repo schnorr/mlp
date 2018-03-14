@@ -299,8 +299,7 @@ em forma de paráfrase, é permitido e estimulado, desde que a menção
 
 * Boas práticas
 
-Sugere-se uma lista de boas práticas para a execução deste
-trabalho.
+Sugere-se adoção destas técnicas para a execução deste trabalho.
 
 - GIT: para gerenciar o desenvolvimento em grupo e manter um
   repositório único de código, permitindo não só gerenciar versões,
