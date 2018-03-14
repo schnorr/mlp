@@ -74,25 +74,6 @@ realizada dentro do prazo estabelecido.
 | Swift          | http://swift.org/               |
 | TypeScript     | https://www.typescriptlang.org/ |
 
-# | F#             | http://fsharp.org/          |
-# | Java 8         | [[http://www.java.com/pt_BR/download/faq/java8.xml][Java8@java.com]]              |
-# | Python         | http://python.org/          |
-
-# | \textbf{Dart} (maiores detalhes em: \url{http://www.dartlang.org/})
-
-# | \textbf{Go} (maiores detalhes em: \url{http://golang.org/})
-# | \textbf{Javascript} (maiores detalhes em: \url{http://en.wikipedia.org/wiki/JavaScript},\\ \url{http://en.wikipedia.org/wiki/ECMAScript})
-# | Object Pascal 
-# | \textbf{Open Swift}(maiores detalhes em: \url{http://developer.apple.com/swift},
-# | \textbf{R} (maiores detalhes em: \url{http://www.r-project.org/})
-# | Racket 
-# | \textbf{Rust} (maiores detalhes em: \url{http://www.rust-lang.org/})
-
-# Outras linguagens podem ser utilizadas, desde que possuam enfoque em
-# funcional e fundamentalmente orientadas a objetos (para o segundo
-# grupo). Caso o grupo opte por escolher outra linguagem, antes de
-# fechar essa escolha, converse com o professor.
-
 A tarefa principal do trabalho consiste em experimentar e comparar as
 características e funcionalidades orientadas a objeto e funcionais da
 linguagem de programação escolhida. Após definir um grupo e selecionar
@@ -125,12 +106,6 @@ dados.
 |     7 | Código do membro #3           |
 |     8 | Linguagem                     |
 |     9 | Problema                      |
-
-
-
-# %Após escolher a linguagem e o problema a ser resolvido, cada grupo
-# deve preparar um documento informando: (i) problema a ser resolvido,
-# dando detalhes de como pretende implementar a solução para o mesmo.
 
 * Problemas disponíveis
 ** War
@@ -294,13 +269,6 @@ Segue a lista dos itens obrigatórios para o relatório:
    descrevendo suas características, fundamentos, funcionalidades,
    benefícios e principais aplicações (inclusive com discussão de sua
    aplicabilidade em questões práticas).
-   # %\item {\bf Tutorial}. Demonstração dos aspectos descritos na seção
-   # anterior das implementações. Elaborar um exemplo para cada quesito
-   # e explicá-lo, traçando comentários positivos ou negativos (usando
-   # como base os critérios de avaliação de linguagens de programação
-   # discutidos nas primeiras aulas). Se possível, fazer paralelo com
-   # outra linguagem mais tradicional (que implemente ou não o recurso
-   # em questão de forma melhor ou pior).
 3. Recursos: esta seção deve descrever cada um dos recursos que foram
    empregados nas duas soluções (OO e Funcional), incluindo trechos de
    código implementados pelo grupo e utilizados na solução
