@@ -101,10 +101,9 @@ da turma (converse com o professor antes).
 ** War
 
 A ideia é desenvolver um jogo de batalha por turnos estilo o jogo
-americano Risk (\url{http://en.wikipedia.org/wiki/Risk_(game)/}) ou a
-versão Brasileira War (\url{http://pt.wikipedia.org/wiki/War}). A fim
-de tornar o jogo menos complexo e menos demorado, sua versão pode
-envolver somente dois adversários (seja outro ser humano ou o
+americano [[http://en.wikipedia.org/wiki/Risk_(game)][Risk]], a versão Brasileira [[http://pt.wikipedia.org/wiki/War][War]]. A fim de tornar o jogo menos
+complexo e menos demorado, sua versão pode envolver somente dois
+adversários (seja outro ser humano ou o
 computador). Preferencialmente, o jogo pode utilizar os tiles do
 OpenStreetMap para desenhar o mapa e posicionar exércitos.
 
