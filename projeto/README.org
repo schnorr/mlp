@@ -16,13 +16,12 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 
 * Sumário
-
 ** Geral
 
 | Item          | Descrição                                                    |
 |---------------+--------------------------------------------------------------|
 | Grupos        | Três alunos                                                  |
-| Linguagem     | Uma  dentre aquelas listadas                                 |
+| Linguagem     | Uma dentre aquelas listadas                                  |
 | Problema      | Um dentre aqueles sugeridos                                  |
 | Implementação | Duas: OO e funcional                                         |
 | Relatório     | Um com os requisitos obrigatórios (=latex= e =bibtex=) -- [[https://github.com/schnorr/mlpreport][Modelo]] |
