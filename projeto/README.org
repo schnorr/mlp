@@ -98,8 +98,8 @@ características e funcionalidades orientadas a objeto e funcionais da
 linguagem de programação escolhida. Após definir um grupo e selecionar
 uma linguagem, é necessário escolher um problema a ser solucionado com
 ela.  O problema será, então, implementado *duas vezes na mesma
-linguagem*: uma delas usando somente Orientação a Objetos e a outra
-usando somente características funcionais. Interfaces (gráficas ou
+linguagem*: uma delas usando *somente* Orientação a Objetos e a outra
+usando *somente* características funcionais. Interfaces (gráficas ou
 textuais) podem ser feitas em qualquer paradigma ou plataforma,
 podendo inclusive serem compartilhadas entre as duas versões, visto
 que o foco não está na interface do programa.
