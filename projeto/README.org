@@ -61,7 +61,6 @@ hábil qual o mapeamento grupo e linguagem. A escolha do grupo deve ser
 realizada dentro do prazo estabelecido.
 
 | C++17          | [[https://isocpp.org/std/status][ISO-CPP]]                         |
-| C# 7.1         | [[https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-1][C#@Microsoft]]                    |
 | Clojure        | http://clojure.org/             |
 | Erlang         | http://www.erlang.org/          |
 | Groovy         | http://www.groovy-lang.org/     |
