@@ -43,7 +43,7 @@ Os prazos são até às 23:59 do dia informado.
 | Apresentações Sessão #1           | 2018-01-15 |
 | Apresentações Sessão #2           | 2018-01-17 |
 
-* Visão Geral
+* Visão Geral e Linguagens
 
 O objetivo deste trabalho consiste em fornecer aos alunos a
 oportunidade de *estudar uma linguagem de programação moderna com
