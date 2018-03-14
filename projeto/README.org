@@ -60,26 +60,27 @@ recebimento de e-mails pelo professor, que informará através de meio
 hábil qual o mapeamento grupo e linguagem. A escolha do grupo deve ser
 realizada dentro do prazo estabelecido.
 
-| C++ 17         | [[https://isocpp.org/std/status][ISO-CPP]]                     |
-| C# 7.1         | [[https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-1][C#@Microsoft]]                |
-| Clojure        | http://clojure.org/         |
-| Groovy         | http://www.groovy-lang.org/ |
-| Julia          | http://julialang.org/       |
-| Objective-C    | [[https://developer.apple.com/documentation/objectivec][ObjC@Apple]]                  |
-| Objective CAML | http://ocaml.org/           |
-| R              | https://www.r-project.org/  |
-| Ruby           | http://ruby-lang.org/       |
-| Scala          | http://www.scala-lang.org/  |
-| Swift 3.0      | http://swift.org/           |
-| Rust           | https://www.rust-lang.org/  |
-| Kotlin         | https://kotlinlang.org      |
+| C++17          | [[https://isocpp.org/std/status][ISO-CPP]]                         |
+| C# 7.1         | [[https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-1][C#@Microsoft]]                    |
+| Clojure        | http://clojure.org/             |
+| Erlang         | http://www.erlang.org/          |
+| Groovy         | http://www.groovy-lang.org/     |
+| Julia          | http://julialang.org/           |
+| Kotlin         | https://kotlinlang.org          |
+| Objective CAML | http://ocaml.org/               |
+| R              | https://www.r-project.org/      |
+| Ruby           | http://ruby-lang.org/           |
+| Rust           | https://www.rust-lang.org/      |
+| Scala          | http://www.scala-lang.org/      |
+| Swift          | http://swift.org/               |
+| TypeScript     | https://www.typescriptlang.org/ |
 
 # | F#             | http://fsharp.org/          |
 # | Java 8         | [[http://www.java.com/pt_BR/download/faq/java8.xml][Java8@java.com]]              |
 # | Python         | http://python.org/          |
 
 # | \textbf{Dart} (maiores detalhes em: \url{http://www.dartlang.org/})
-# | \textbf{Erlang} (maiores detalhes em: \url{http://www.erlang.org/}) 
+
 # | \textbf{Go} (maiores detalhes em: \url{http://golang.org/})
 # | \textbf{Javascript} (maiores detalhes em: \url{http://en.wikipedia.org/wiki/JavaScript},\\ \url{http://en.wikipedia.org/wiki/ECMAScript})
 # | Object Pascal 
