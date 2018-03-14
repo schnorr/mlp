@@ -158,7 +158,7 @@ simples. Com base nisso, demonstrar como ficaria sua pilha de chamadas
 (call-stack) e o conteúdo das variáveis locais a cada passo de
 execução.
 
-** Galáxias
+** Simulador de Galáxias
 
 Implementar um simulador de partículas, considerando forças físicas de
 repulsão e atração. Uma possibilidade é utilizar as leis
