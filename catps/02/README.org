@@ -4,6 +4,8 @@
 
 * CATP #02
 
+Sem utilizar funcionais (=map=, =lapply=, etc).
+
 1. Elaborar a função =lst_vezes=, que recebe uma lista e um número. Ela
    deve retornar uma nova lista cujos elementos são o resultado de sua
    multiplicação pelo número passado. Exemplo:
