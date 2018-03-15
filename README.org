@@ -49,7 +49,7 @@ aprendizado da disciplina.
 
 - [[./conteudo/][Acesse o conteúdo da disciplina]]
 - [[./catps/][Conjunto de Atividades Teórico-Práticas (CATP)]]
-- (Desatualizado) [[./projeto/][Especificação e prazos do Trabalho Final (TF)]] ([[./projeto/README.pdf][em PDF]])
+- [[./projeto/][Especificação e prazos do Trabalho Final (TF)]]
   - [[https://github.com/schnorr/mlpreport][Modelo Latex para o Relatório]]
 
 ** Avaliações
