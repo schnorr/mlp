@@ -67,10 +67,8 @@ terremotos. O arquivo com as observações contém oito colunas:
 
    - Utilize a função =mean= para calcular a média.
 
-** Exercícios opcionais
-
-1. Calcule o IPC (Instruções Por Ciclo = =PAPI_TOT_CYC/PAPI_TOT_INS=)
+5. Calcule o IPC (Instruções Por Ciclo = =PAPI_TOT_CYC/PAPI_TOT_INS=)
    por número de iteração e por tipo de operação para cada processo,
    apresente somente os resultados da iteração 110.
 
-2. Liste as observações quando o IPC for menor que 50% do valor médio.
+6. Liste as observações quando o IPC for menor que 50% do valor médio.
