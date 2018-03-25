@@ -71,4 +71,4 @@ terremotos. O arquivo com as observações contém oito colunas:
    por número de iteração e por tipo de operação para cada processo,
    apresente somente os resultados da iteração 110.
 
-6. Liste as observações quando o IPC for menor que 50% do valor médio.
+6. Liste as observações quando o IPC for menor que o valor médio.
