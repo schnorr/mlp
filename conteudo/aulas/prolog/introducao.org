@@ -92,17 +92,6 @@ Sejam dois conjuntos de valores S e T
 + Não há distinção entre entrada e saída
   + y não é gerado a partir de x
   + uma entrada não é transformada em saída
-* Fatos
-Considerando a seguinte árvore genealógica
-
-[[./arvore-genealogica.png]]
-
-São fatos
-+ Pessoas
-+ Sexo das pessoas
-+ Parentesco entre pais e filhos
-
-Fatos são informados com *Cláusulas Horn* incondicionais
 * Cláusulas Horn
 + Alfred Horn, propôs tais cláusulas em 1951
 + Um programa lógico é uma coleção de cláusulas Horn
