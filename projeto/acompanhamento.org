@@ -14,8 +14,313 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 
 * Definição Final dos Grupos
+** Tamanho dos Grupos
 
-(por confirmar)
+Existem dois grupos com apenas um membro:
+
+| Grupo                         | Ocupação |
+|-------------------------------+----------|
+| Han Solo                      |        1 |
+| One Man Army                  |        1 |
+| get.sh*t.done                 |        2 |
+| My Little Frogger Haters      |        2 |
+| Cowboy Value                  |        3 |
+| Furogga                       |        3 |
+| GirlsRule                     |        3 |
+| Monstros da Louca Programação |        3 |
+| Programadores Anônimos        |        3 |
+| Scipio Project                |        3 |
+| teletypewriters               |        3 |
+
+Sugere-se portanto aos grupos /Han Solo/ e /One Man Army/ a integrar as
+equipes /get.sh*t.done/ e /My Little Frogger Haters/, que são grupos com
+apenas dois membros.
+
+** Grupo vs Linguagens
+
+A tabela abaixo mostra a definição das linguagens após sorteio
+naqueles cenários onde os grupos selecionaram demasiadamente uma
+linguagem. O código de análise encontra-se abaixo.
+
+| Grupo                         | Prioridade | Linguagem  |
+|-------------------------------+------------+------------|
+| Furogga                       |          1 | Julia      |
+| GirlsRule                     |          1 | Julia      |
+| Han Solo                      |          1 | C++17      |
+| Monstros da Louca Programação |          1 | Scala      |
+| My Little Frogger Haters      |          1 | C#7.1      |
+| Programadores Anônimos        |          1 | C#7.1      |
+| Scipio Project                |          1 | Scala      |
+| Tóquio                        |          1 | R          |
+| Here for Beer                 |          1 | R          |
+| GSN                           |          1 | TypeScript |
+| Delta                         |          1 | TypeScript |
+| get.sh*t.done                 |          2 | Closure    |
+| One Man Army                  |          2 | Kotlin     |
+| Cowboy Value                  |          3 | Swift      |
+| teletypewriters               |          4 | Rust       |
+
+** Código de Análise                                                :ATTACH:
+:PROPERTIES:
+:Attachments: respostas.csv.gz
+:ID:       8eb2a3ee-d2f7-4610-9a77-279a7f4d93ed
+:END:
+
+*** Leitura dos dados
+
+#+begin_src R :results table :session :exports both :colnames yes
+library(tidyverse);
+df <- read_csv("data/8e/b2a3ee-d2f7-4610-9a77-279a7f4d93ed/respostas.csv.gz", col_types=cols(
+  Grupo = col_character(),
+  Prioridade = col_integer(),
+  Linguagem = col_character()
+))
+df;
+#+end_src
+
+#+RESULTS:
+| Grupo                         | Prioridade | Linguagem  |
+|-------------------------------+------------+------------|
+| Cowboy Value                  |          1 | TypeScript |
+| Cowboy Value                  |          2 | Scala      |
+| Cowboy Value                  |          3 | Swift      |
+| Cowboy Value                  |          4 | Ruby       |
+| Cowboy Value                  |          5 | OCAML      |
+| Delta                         |          1 | TypeScript |
+| Delta                         |          2 | Kotlin     |
+| Delta                         |          3 | Ruby       |
+| Delta                         |          4 | R          |
+| Delta                         |          5 | Scala      |
+| Furogga                       |          1 | Julia      |
+| Furogga                       |          2 | Kotlin     |
+| Furogga                       |          3 | Rust       |
+| Furogga                       |          4 | TypeScript |
+| get.sh*t.done                 |          1 | R          |
+| get.sh*t.done                 |          2 | Closure    |
+| get.sh*t.done                 |          3 | Rust       |
+| get.sh*t.done                 |          4 | Scala      |
+| get.sh*t.done                 |          5 | Erlang     |
+| GirlsRule                     |          1 | Julia      |
+| GSN                           |          1 | TypeScript |
+| GSN                           |          2 | Groovy     |
+| GSN                           |          3 | Rust       |
+| GSN                           |          4 | Ruby       |
+| GSN                           |          5 | Closure    |
+| Han Solo                      |          1 | C++17      |
+| Han Solo                      |          2 | TypeScript |
+| Han Solo                      |          3 | Rust       |
+| Han Solo                      |          4 | Ruby       |
+| Han Solo                      |          5 | Kotlin     |
+| Here for Beer                 |          1 | R          |
+| Here for Beer                 |          2 | Swift      |
+| Here for Beer                 |          3 | Ruby       |
+| Here for Beer                 |          4 | Scala      |
+| Here for Beer                 |          5 | Groovy     |
+| Monstros da Louca Programação |          1 | Scala      |
+| Monstros da Louca Programação |          2 | Kotlin     |
+| Monstros da Louca Programação |          3 | TypeScript |
+| Monstros da Louca Programação |          4 | Ruby       |
+| Monstros da Louca Programação |          5 | R          |
+| My Little Frogger Haters      |          1 | C#7.1      |
+| My Little Frogger Haters      |          2 | TypeScript |
+| My Little Frogger Haters      |          3 | Ruby       |
+| My Little Frogger Haters      |          4 | Swift      |
+| My Little Frogger Haters      |          5 | R          |
+| One Man Army                  |          1 | TypeScript |
+| One Man Army                  |          2 | Kotlin     |
+| One Man Army                  |          3 | Swift      |
+| One Man Army                  |          4 | R          |
+| One Man Army                  |          5 | Scala      |
+| Programadores Anônimos        |          1 | C#7.1      |
+| Programadores Anônimos        |          2 | Kotlin     |
+| Programadores Anônimos        |          3 | C++17      |
+| Programadores Anônimos        |          4 | Ruby       |
+| Programadores Anônimos        |          5 | TypeScript |
+| Scipio Project                |          1 | Scala      |
+| Scipio Project                |          2 | Ruby       |
+| Scipio Project                |          3 | Kotlin     |
+| Scipio Project                |          4 | C#7.1      |
+| Scipio Project                |          5 | C++17      |
+| teletypewriters               |          1 | TypeScript |
+| teletypewriters               |          2 | Julia      |
+| teletypewriters               |          3 | Kotlin     |
+| teletypewriters               |          4 | Rust       |
+| teletypewriters               |          5 | OCAML      |
+| Tóquio                        |          1 | R          |
+| Tóquio                        |          2 | Ruby       |
+| Tóquio                        |          3 | C++17      |
+| Tóquio                        |          4 | C#7.1      |
+| Tóquio                        |          5 | TypeScript |
+
+*** As Linguagens mais preferidas menos que duas vezes
+
+#+begin_src R :results table :session :exports both :colnames yes
+df %>%
+    filter(Prioridade == 1) %>%
+    group_by(Prioridade, Linguagem) %>%
+    summarize(N=n()) %>%
+    filter(N <= 2) -> semsorteio;
+semsorteio
+#+end_src
+
+#+RESULTS:
+| Prioridade | Linguagem | N |
+|------------+-----------+---|
+|          1 | C#7.1     | 2 |
+|          1 | C++17     | 1 |
+|          1 | Julia     | 2 |
+|          1 | Scala     | 2 |
+
+*** (definidos.1) Grupos com linguagens pouco preferida em prioridade
+
+#+begin_src R :results table :session :exports both :colnames yes
+df %>%
+    filter(Prioridade == 1) %>%
+    filter(Linguagem %in% semsorteio$Linguagem) -> definidos.1
+definidos.1;
+#+end_src
+
+#+RESULTS:
+| Grupo                         | Prioridade | Linguagem |
+|-------------------------------+------------+-----------|
+| Furogga                       |          1 | Julia     |
+| GirlsRule                     |          1 | Julia     |
+| Han Solo                      |          1 | C++17     |
+| Monstros da Louca Programação |          1 | Scala     |
+| My Little Frogger Haters      |          1 | C#7.1     |
+| Programadores Anônimos        |          1 | C#7.1     |
+| Scipio Project                |          1 | Scala     |
+
+*** As Linguagens mais preferidas mais que duas vezes (as mais preferidas)
+
+#+begin_src R :results table :session :exports both :colnames yes
+df %>%
+    filter(Prioridade == 1) %>%
+    group_by(Prioridade, Linguagem) %>%
+    summarize(N=n()) %>%
+    filter(N > 2) -> maispreferidas
+maispreferidas
+#+end_src
+
+#+RESULTS:
+| Prioridade | Linguagem  | N |
+|------------+------------+---|
+|          1 | R          | 3 |
+|          1 | TypeScript | 5 |
+
+*** (definidos.2) Sorteio (realizado na aula do 27/03)             :ATTACH:
+:PROPERTIES:
+:Attachments: sorteio.csv.gz
+:ID:       419d71be-1b20-4081-8783-919c4911f172
+:END:
+
+O sorteio foi salvo em arquivo =sorteio.csv.gz=.
+
+Carregar sorteio do arquivo =sorteio.csv.gz=.
+
+#+begin_src R :results table :session :exports both :colnames yes
+read_csv("data/41/9d71be-1b20-4081-8783-919c4911f172/sorteio.csv.gz", col_types=cols(
+  Grupo = col_character(),
+  Prioridade = col_integer(),
+  Linguagem = col_character()
+)) -> definidos.2
+definidos.2;
+#+end_src
+
+#+RESULTS:
+| Grupo         | Prioridade | Linguagem  |
+|---------------+------------+------------|
+| Tóquio        |          1 | R          |
+| Here for Beer |          1 | R          |
+| GSN           |          1 | TypeScript |
+| Delta         |          1 | TypeScript |
+
+*** (definidos.3) Escolher nível de prioridade 2
+
+#+begin_src R :results table :session :exports both :colnames yes
+df %>%
+    filter(!(Grupo %in% definidos.1$Grupo)) %>%
+    filter(!(Grupo %in% definidos.2$Grupo)) %>%
+    filter(Prioridade == 2) %>%
+    filter(!(Linguagem %in% definidos.1$Linguagem)) -> definidos.3;
+definidos.3
+#+end_src
+
+#+RESULTS:
+| Grupo         | Prioridade | Linguagem |
+|---------------+------------+-----------|
+| get.sh*t.done |          2 | Closure   |
+| One Man Army  |          2 | Kotlin    |
+
+*** (definidos.4) Prioridade 3
+
+#+begin_src R :results table :session :exports both :colnames yes
+df %>%
+    filter(Prioridade == 3) %>%
+    filter(!(Grupo %in% definidos.1$Grupo)) %>%
+    filter(!(Grupo %in% definidos.2$Grupo)) %>%
+    filter(!(Grupo %in% definidos.3$Grupo)) %>%
+    filter(!(Linguagem %in% definidos.1$Linguagem)) %>%
+    filter(!(Linguagem %in% definidos.2$Linguagem)) %>%
+    filter(!(Linguagem %in% definidos.3$Linguagem)) -> definidos.4;
+definidos.4;
+#+end_src
+
+#+RESULTS:
+| Grupo        | Prioridade | Linguagem |
+|--------------+------------+-----------|
+| Cowboy Value |          3 | Swift     |
+
+*** (definidos.5) Prioridade 4
+
+#+begin_src R :results table :session :exports both :colnames yes
+df %>%
+    filter(Prioridade == 4) %>%
+    filter(!(Grupo %in% definidos.1$Grupo)) %>%
+    filter(!(Grupo %in% definidos.2$Grupo)) %>%
+    filter(!(Grupo %in% definidos.3$Grupo)) %>%
+    filter(!(Grupo %in% definidos.4$Grupo)) %>%
+    filter(!(Linguagem %in% definidos.1$Linguagem)) %>%
+    filter(!(Linguagem %in% definidos.2$Linguagem)) %>%
+    filter(!(Linguagem %in% definidos.3$Linguagem)) %>%
+    filter(!(Linguagem %in% definidos.4$Linguagem)) -> definidos.5;
+definidos.5;
+#+end_src
+
+#+RESULTS:
+| Grupo           | Prioridade | Linguagem |
+|-----------------+------------+-----------|
+| teletypewriters |          4 | Rust      |
+
+*** Listagem Final
+
+#+begin_src R :results table :session :exports both :colnames yes
+definidos.1 %>%
+    bind_rows(definidos.2) %>%
+    bind_rows(definidos.3) %>%
+    bind_rows(definidos.4) %>%
+    bind_rows(definidos.5) -> definidos;
+definidos
+#+end_src
+
+#+RESULTS:
+| Grupo                         | Prioridade | Linguagem  |
+|-------------------------------+------------+------------|
+| Furogga                       |          1 | Julia      |
+| GirlsRule                     |          1 | Julia      |
+| Han Solo                      |          1 | C++17      |
+| Monstros da Louca Programação |          1 | Scala      |
+| My Little Frogger Haters      |          1 | C#7.1      |
+| Programadores Anônimos        |          1 | C#7.1      |
+| Scipio Project                |          1 | Scala      |
+| Tóquio                        |          1 | R          |
+| Here for Beer                 |          1 | R          |
+| GSN                           |          1 | TypeScript |
+| Delta                         |          1 | TypeScript |
+| get.sh*t.done                 |          2 | Closure    |
+| One Man Army                  |          2 | Kotlin     |
+| Cowboy Value                  |          3 | Swift      |
+| teletypewriters               |          4 | Rust       |
 
 * 2017/2                                                           :noexport:
 ** Projeto Fase 2
