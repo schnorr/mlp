@@ -11,6 +11,7 @@
 #+Date: schnorr@inf.ufrgs.br
 
 #+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_EXCLUDE_TAGS: noexport
 
 * Definição Final dos Grupos
 
