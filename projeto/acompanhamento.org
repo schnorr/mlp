@@ -10,8 +10,15 @@
 #+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
 #+Date: schnorr@inf.ufrgs.br
 
-* Projeto Fase 2
-** Entrega
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+
+* Definição Final dos Grupos
+
+(por confirmar)
+
+* 2017/2                                                           :noexport:
+** Projeto Fase 2
+*** Entrega
 
 Data limite é 7 de janeiro, às 23h59.
 
@@ -39,7 +46,7 @@ agora tem somente dois.
 | Os Gatos de Schnorrdingër |  2 | Swift     | TowerDefense | Augusto (07/01) + PDF 26                 |      26 |
 | Os Aforistas Desaforados  |  2 | OCAML     | Escopo       | Renan (07/01) + GIT + PDF/TEX 23  + VM   |      23 |
 |---------------------------+----+-----------+--------------+------------------------------------------+---------|
-** Plano
+*** Plano
 
 Veja detalhes em [[./README.org]].
 
@@ -47,7 +54,7 @@ Ou seja:
 - OO + FUNC (implementação com código fonte)
 - RELATORIO: CAPA + INTRO + LING + ITENS + CRITICA + CONCLU + REFS
 
-** Instrumento de avaliação
+*** Instrumento de avaliação
 
 Com leves alterações em relação a fase 1.
 
@@ -99,7 +106,7 @@ Com leves alterações em relação a fase 1.
 | Perguntas            |       |    1 |
 | Apresentação         |       |   10 |
 
-** Estatísticas da Avaliação
+*** Estatísticas da Avaliação
 
 Até este momento, foram avaliados a submissão das implementações e o
 relatório técnico produzido na etapa final do trabalho da
@@ -120,8 +127,8 @@ As estatísticas da avaliação até este momento são as seguintes:
   :   0.000   5.820   7.920   6.755   8.715   9.030
   #+END_EXAMPLE
 
-** Avaliação da submissão com comentários
-*** Al2O3:Cr
+*** Avaliação da submissão com comentários
+**** Al2O3:Cr
 
 Temos:
 - OO, FUNC, RELATORIO completo
@@ -173,7 +180,7 @@ Temos:
 | Recursão             |    10 |
 | Relatório            |     9 |
 
-*** Batalha Barcal
+**** Batalha Barcal
 
 Temos:
 - OO (mais completa) e FUNC (168 linhas de código)
@@ -226,7 +233,7 @@ Temos:
 | Recursão             |    10 |
 | Relatório            |     8 |
 
-*** Caiu a barca
+**** Caiu a barca
 
 Temos: OO (5.1KB) + FUNC (5.5KB) + RELATORIO
 - A introdução melhorou
@@ -274,7 +281,7 @@ Temos: OO (5.1KB) + FUNC (5.5KB) + RELATORIO
 | Recursão             |    10 |
 | Relatório            |     8 |
 
-*** ClubedasWynx
+**** ClubedasWynx
 
 Temos: FUNC + RELATORIO
 - Globalmente bem escrito
@@ -323,7 +330,7 @@ Temos: FUNC + RELATORIO
 | Recursão             |       |
 | Relatório            |     5 |
 
-*** Confia na Call
+**** Confia na Call
 
 Temos: OO + FUNC + RELATORIO
 - Título não foi modificado com linguagem/problema
@@ -374,7 +381,7 @@ Temos: OO + FUNC + RELATORIO
 | Recursão             |       |
 | Relatório            |     4 |
 
-*** Fullbar
+**** Fullbar
 
 Temos: OO + FUNC + RELATORIO
 - Seria bom que a introdução descreva, no final, a estrutura do texto
@@ -422,7 +429,7 @@ Temos: OO + FUNC + RELATORIO
 | Recursão             |       |
 | Relatório            |     9 |
 
-*** GrupoHP
+**** GrupoHP
 
 Temos: OO + FUNC + RELATORIO
 - Relatório utilizado foi o arquivo =relatorio.pdf= em =doc=
@@ -475,7 +482,7 @@ Temos: OO + FUNC + RELATORIO
 | Recursão             |    10 |
 | Relatório            |     7 |
 
-*** Guerreiros de Anúbis
+**** Guerreiros de Anúbis
 
 Temos: OO + FUNC + RELATORIO
 - Título poderia melhorar
@@ -533,7 +540,7 @@ Temos: OO + FUNC + RELATORIO
 | Recursão             |    10 |
 | Relatório            |     3 |
 
-*** Mean Girls
+**** Mean Girls
 
 Temos: OO + FUNC + RELATORIO
 - Existem erros ortográficos (em vários lugares)
@@ -581,7 +588,7 @@ Temos: OO + FUNC + RELATORIO
 | Recursão             |    10 |
 | Relatório            |   7.5 |
 
-*** Os Aforistas Desaforados
+**** Os Aforistas Desaforados
 
 Temos: OO + FUNC + RELATORIO
 - Erro de Copiar/Colar na Seção 5.1
@@ -631,7 +638,7 @@ Temos: OO + FUNC + RELATORIO
 | Recursão             |    10 |
 | Relatório            |     9 |
 
-*** Os Gatos de Schnorrdingër
+**** Os Gatos de Schnorrdingër
 
 Temos: OO + FUNC + RELATORIO
 - Fontes do relatório não foram submetidos
@@ -678,7 +685,7 @@ Temos: OO + FUNC + RELATORIO
 | Recursão             |    10 |
 | Relatório            |     8 |
 
-*** root
+**** root
 
 Temos: OO + FUNC + RELATORIO
 - Faltam os fontes do relatório no arquivo submetido
@@ -725,7 +732,7 @@ Temos: OO + FUNC + RELATORIO
 | Recursão             |    10 |
 | Relatório            |     7 |
 
-*** SchnorR doidão
+**** SchnorR doidão
 
 Temos: OO + FUNC + RELATORIO
 - Figs 1.1 e 2.1 não respeitam as margens da página
@@ -773,7 +780,7 @@ Temos: OO + FUNC + RELATORIO
 | Recursão             |     8 |
 | Relatório            |   9.5 |
 
-*** WubbaLubbaDubDub
+**** WubbaLubbaDubDub
 
 Temos: OO + FUNC + RELATORIO
 - Introdução melhorou; precisa descrever a estrutura do texto no final
@@ -832,9 +839,9 @@ Temos: OO + FUNC + RELATORIO
 | Recursão             |     5 |
 | Relatório            |     8 |
 
-** Avaliação da apresentação
-*** Dia 1
-**** 1. Confia na Call
+*** Avaliação da apresentação
+**** Dia 1
+***** 1. Confia na Call
 
 Início: 15:37
 Fim: 15:44
@@ -854,7 +861,7 @@ Fim: 15:44
 | Perguntas    |     8 |
 | Apresentação |     7 |
 
-**** 2. Al2O3:Cr
+***** 2. Al2O3:Cr
 
 Início: 15:52
 Fim: 16:07
@@ -876,7 +883,7 @@ Estourou bastante o tempo.
 | Perguntas    |    10 |
 | Apresentação |     7 |
 
-**** 3. Os Aforistas Desaforados
+***** 3. Os Aforistas Desaforados
 
 Inicio: 16:11
 Fim: 16:23
@@ -903,7 +910,7 @@ Fim: 16:23
 | Perguntas    |    10 |
 | Apresentação |     8 |
 
-**** 4. Batalha Barcal
+***** 4. Batalha Barcal
 
 Início: 16:27
 Fim: 16:33
@@ -927,7 +934,7 @@ Fim: 16:33
 | Perguntas    |    10 |
 | Apresentação |     8 |
 
-**** 5. Caiu a barca
+***** 5. Caiu a barca
 
 Início: 16:35
 Fim: 16:45
@@ -950,7 +957,7 @@ Perguntas:
 | Perguntas    |     9 |
 | Apresentação |     8 |
 
-**** 6. Fullbar
+***** 6. Fullbar
 
 Início: 16:48
 Fim: 16:54
@@ -974,7 +981,7 @@ Tower Defense, C#
 | Perguntas    |     8 |
 | Apresentação |     9 |
 
-**** 7. ClubedasWynx
+***** 7. ClubedasWynx
 
 Início: 16:58
 Fim: 17:05
@@ -993,8 +1000,8 @@ Fim: 17:05
 | Perguntas    |    10 |
 | Apresentação |     6 |
 
-*** Dia 2
-**** 1. Mean Girls
+**** Dia 2
+***** 1. Mean Girls
 
 Início: 15:35
 Fim: 15:45
@@ -1017,7 +1024,7 @@ C++
 | Perguntas    |    10 |
 | Apresentação |     9 |
 
-**** 2. Guerreiros de Anúbis
+***** 2. Guerreiros de Anúbis
 
 Início: 15:48
 Fim: 15:55
@@ -1040,7 +1047,7 @@ Groovy
 | Perguntas    |    10 |
 | Apresentação |     8 |
 
-**** 3. WubbaLubbaDubDub
+***** 3. WubbaLubbaDubDub
 
 Início: 16:00
 Fim: 16:13
@@ -1059,7 +1066,7 @@ Fim: 16:13
 | Perguntas    |     9 |
 | Apresentação |     8 |
 
-**** 4. Os Gatos de Schnorrdingër
+***** 4. Os Gatos de Schnorrdingër
 
 Início: 16:17
 Fim: 16:
@@ -1079,7 +1086,7 @@ Fim: 16:
 | Demonstração |    10 |
 | Perguntas    |    10 |
 | Apresentação |     7 |
-**** 5. SchnorR doidão
+***** 5. SchnorR doidão
 
 Início: 16:31
 Fim: 16:41
@@ -1101,7 +1108,7 @@ Fim: 16:41
 | Perguntas    |    10 |
 | Apresentação |     8 |
 
-**** 6. GrupoHP
+***** 6. GrupoHP
 
 Início: 16:47
 Fim: 16:57
@@ -1127,7 +1134,7 @@ Fim: 16:57
 | Perguntas    |    10 |
 | Apresentação |     9 |
 
-**** 7. root
+***** 7. root
 
 Início: 17:01
 Fim: 17:09
@@ -1147,8 +1154,8 @@ Fim: 17:09
 | Demonstração |    10 |
 | Perguntas    |    10 |
 | Apresentação |     8 |
-* Projeto Fase 1
-** Entrega
+** Projeto Fase 1
+*** Entrega
 
 Todos os grupos entregaram no prazo.
 
@@ -1172,7 +1179,7 @@ Todos os grupos entregaram no prazo.
 | Os Aforistas Desaforados  |  2 | OCAML     | Escopo       | Entrega (João)                  |
 |---------------------------+----+-----------+--------------+---------------------------------|
 
-** Plano
+*** Plano
 
 Veja detalhes em [[./README.org]].
 
@@ -1192,7 +1199,7 @@ Ou seja:
     - O relatório também deve conter ITENS (seguindo a espec.)
   - E a implementação com o código fonte do programa
 
-** Sumário de avaliação
+*** Sumário de avaliação
 
  |---------------------------+---------+------------------------------|
  | Nome do Grupo             | Páginas | Arquivos                     |
@@ -1213,7 +1220,7 @@ Ou seja:
  | WubbaLubbaDubDub          |       7 | PDF, TEX + sources           |
  |---------------------------+---------+------------------------------|
 
-** Instrumento de avaliação
+*** Instrumento de avaliação
 
 |----------------------+-------+------|
 | ITEM                 | Valor | Peso |
@@ -1263,8 +1270,8 @@ Ou seja:
 | Recursão             |       |    2 |
 |----------------------+-------+------|
 
-** Relatório de avaliação com comentários
-*** Al2O3:Cr
+*** Relatório de avaliação com comentários
+**** Al2O3:Cr
 
 Temos: IMPLEMENTACAO + CAPA + LING + PROBLEMA + ITENS
 - Trata-se de um trabalho de OO (Sec. 2)
@@ -1322,7 +1329,7 @@ Temos: IMPLEMENTACAO + CAPA + LING + PROBLEMA + ITENS
 | Recursão             |       |
 |----------------------+-------|
 
-*** Batalha Barcal
+**** Batalha Barcal
 Temos: IMPLEMENTACAO + ITENS
 - Trata-se da implementação funcional (package Java8/functional)
 - Não usou o template em Latex (embora os fontes estejam no pacote)
@@ -1382,7 +1389,7 @@ Temos: IMPLEMENTACAO + ITENS
 | Recursão             |    10 |
 |----------------------+-------|
 
-*** Caiu a barca
+**** Caiu a barca
 Temos: IMPLEMENTACAO + CAPA + CRITICA + CONCL.
 - Trata-se de uma implementação funcional
 - A introdução é uma cópia da especificação do trabalho
@@ -1443,7 +1450,7 @@ Temos: IMPLEMENTACAO + CAPA + CRITICA + CONCL.
 | Recursão             |       |
 |----------------------+-------|
 
-*** ClubedasWynx
+**** ClubedasWynx
 Temos: IMPLEMENTACAO + CAPA + INTRO + PROBLEMA + LING + ITENS
 - Globalmente bem escrito
 - Seria bom colocar trechos de código em todos os itens
@@ -1500,7 +1507,7 @@ Temos: IMPLEMENTACAO + CAPA + INTRO + PROBLEMA + LING + ITENS
 | Recursão             |       |
 |----------------------+-------|
 
-*** Confia na Call
+**** Confia na Call
 Temos: IMPLEMENTACAO + CAPA + PROBL. + LINGUAGEM
 - Implementação incompleta
   - Não fica claro se a implementação é OO ou funcional
@@ -1560,7 +1567,7 @@ Temos: IMPLEMENTACAO + CAPA + PROBL. + LINGUAGEM
 | Recursão             |       |
 |----------------------+-------|
 
-*** Fullbar
+**** Fullbar
 Temos: IMPLEM. + CAPA + LING. + CRIT.
 - Não fica claro no relatório se a primeira implementação é OO ou funcional
   - Isso deve ficar claro desde o início
@@ -1620,7 +1627,7 @@ Temos: IMPLEM. + CAPA + LING. + CRIT.
 | Recursão             |       |
 |----------------------+-------|
 
-*** GrupoHP
+**** GrupoHP
 Temos: IMPLEMENTACAO + CAPA + INTRO + LING + PROBLEMA + ITENS + CRIT.
 - Duas submissões, levemente diferentes (o grupo deve ser coeso)
 - Título não foi mudado
@@ -1679,7 +1686,7 @@ Temos: IMPLEMENTACAO + CAPA + INTRO + LING + PROBLEMA + ITENS + CRIT.
 | Recursão             |       |
 |----------------------+-------|
 
-*** Guerreiros de Anúbis
+**** Guerreiros de Anúbis
 Temos: IMPLEMENTACAO + CAPA + LING. (um parágrafo) + ITENS + CONCL (duas frases)
 - Título poderia melhorar
 - Implementação: OO
@@ -1743,7 +1750,7 @@ Temos: IMPLEMENTACAO + CAPA + LING. (um parágrafo) + ITENS + CONCL (duas frases
 | Recursão             |       |
 |----------------------+-------|
 
-*** Mean Girls
+**** Mean Girls
 Temos: IMPLEM. + CAPA + LING. + PROBLEM + CRIT. + ITENS + CONCL.
 - Título não foi modificado
 - Problemas de referências, falta de uso de bibtex
@@ -1807,7 +1814,7 @@ Temos: IMPLEM. + CAPA + LING. + PROBLEM + CRIT. + ITENS + CONCL.
 | Recursão             |       |
 |----------------------+-------|
 
-*** Os Aforistas Desaforados
+**** Os Aforistas Desaforados
 Temos: IMPLEM (279L) + CAPA + INTRO + ITENS?
 - Vários erros ortográficos
 - Trata-se de uma implementação funcional
@@ -1869,7 +1876,7 @@ Temos: IMPLEM (279L) + CAPA + INTRO + ITENS?
 | Recursão             |       |
 |----------------------+-------|
 
-*** Os Gatos de Schnorrdingër
+**** Os Gatos de Schnorrdingër
 Temos: IMPLEM. + CAPA + 
 - Trata-se de OO
 - Referências não estão em bibtex
@@ -1926,7 +1933,7 @@ Temos: IMPLEM. + CAPA +
 | Recursão             |       |
 |----------------------+-------|
 
-*** root
+**** root
 Temos: IMPLEM. + CAPA + INTRO + PROBLEMA + LINGUAGEM + ITENS OO
 - Trata-se de OO
 - Não há necessidade de repetir a lista de requisitos
@@ -1982,7 +1989,7 @@ Temos: IMPLEM. + CAPA + INTRO + PROBLEMA + LINGUAGEM + ITENS OO
 | Recursão             |       |
 |----------------------+-------|
 
-*** SchnorR doidão
+**** SchnorR doidão
 Temos: IMPLEM. + CAPA
 - Trata-se de uma implementação funcional
 - Fornecer referência ao fato de R ser GNU
@@ -2037,7 +2044,7 @@ Temos: IMPLEM. + CAPA
 | Recursão             |       |
 |----------------------+-------|
 
-*** WubbaLubbaDubDub
+**** WubbaLubbaDubDub
 Temos: IMPLEM. + CAPA + DESCRICAO
 - Trata-se de OO
 - Na introdução, dizer que se trata de um trabalho de MLP, etc.
@@ -2099,8 +2106,8 @@ Temos: IMPLEM. + CAPA + DESCRICAO
 | Recursão             |       |
 |----------------------+-------|
 
-* Projeto Inicial
-** Entrega
+** Projeto Inicial
+*** Entrega
 
  Todos os grupos entregaram no prazo, salvo:
  - WubbaLubbaDubDub (1 hora de atraso)
@@ -2125,7 +2132,7 @@ Temos: IMPLEM. + CAPA + DESCRICAO
  | WubbaLubbaDubDub          | zip          |       7 | PDF             | TRUE  |        4 |
  |---------------------------+--------------+---------+-----------------+-------+----------|
 
-** Plano
+*** Plano
 
 Da especificação, temos:
 
@@ -2139,7 +2146,7 @@ igualmente presente.
 Ou seja:
 - CAPA + INTRO + LINGUAGEM + PROBLEMA + ESTRUTURA
 
-** Relatório de avaliação com comentários
+*** Relatório de avaliação com comentários
 
 De uma maneira geral, os grupos não utilizaram seus nomes nos
 relatórios, o que poderia ser considerado como lamentável. Alguns
@@ -2148,57 +2155,57 @@ membros do grupo, o que pode ser considerado plágio. Escrever os
 objetivos desse trabalho com as palavras do grupo é bastante
 construtivo.
 
-*** Al2O3:Cr
+**** Al2O3:Cr
 Temos: CAPA + LINGUAGEM + PROBLEMA
 - Carece de uma introdução para dizer do que se trata
 - Estrutura da linguagem faltante
-*** Batalha Barcal
+**** Batalha Barcal
 Temos: CAPA + INTRO + LINGUAGEM + PROBLEMA + ESTRUTURA
 - E ainda, temos as referências
-*** Caiu a barca
+**** Caiu a barca
 Temos: CAPA + INTRO + LINGUAGEM + PROBLEMA
 - Conclusão e referências vazias
-*** ClubedasWynx
+**** ClubedasWynx
 Temos: CAPA + INTRO + LINGUAGEM + PROBLEMA + ESTRUTURA
 - Interessante adaptação do jogo com a ``chama da vida''
 - "aprendível" me parece ser uma palavra que não existe
 - Com referências
-*** Confia na Call
+**** Confia na Call
 Temos: CAPA + INTRO(Problema) + LINGUAGEM
 - Faltou uma introdução para dizer do que é este relatório
 - Com referências
-*** Fullbar
+**** Fullbar
 Temos: CAPA + INTRO + ESTRUTURA
 - "foi escolhida a linguagem de programação C"?
 - Problema e a linguagem apresentados de forma superficial
 - Referências vazio
-*** GrupoHP
+**** GrupoHP
 Temos: CAPA + INTRO + LINGUAGEM + PROBLEMA
 - Sumário está vazio
 - Interessante histórico das LPs
 - Referências "(??)" faltantes
 - As características do C++ poderia ser apresentada na forma de texto
   e não de itens com primeiras palavras em negrito
-*** Guerreiros de Anúbis
+**** Guerreiros de Anúbis
 Temos: CAPA + (nano) INTRO + LINGUAGEM
 - O título do documento como "Projeto Inicial" é inapropriado
 - Uma introdução de duas linhas é superficial
 - Apresentação da linguagem é um parágrafo de 6 linhas
-*** Mean Girls
+**** Mean Girls
 Temos: CAPA + INTRO + LINGUAGEM + PROBLEMA + ESTRUTURA
 - Definir um título
 - "C++ é uma linguagem comercial?"
 - Capítulo contendo enunciado do trabalho (a evitar)
 - Lista de referências inapropriadas
-*** Os Aforistas Desaforados
+**** Os Aforistas Desaforados
 Temos: CAPA + PROBLEMA
 - Apenas capítulo 1, o resto são do template
-*** Os Gatos de Schnorrdingër
+**** Os Gatos de Schnorrdingër
 Temos: CAPA + PROBLEMA + LINGUAGEM + ESTRUTURA
 - Descrição do problema com figuras, e isso é bom!
 - Uma introdução sempre é bom
 - Para as referências, utilizar bibtex com comandos =\cite=.
-*** root
+**** root
 Temos: CAPA + INTRO + PROBLEMA + LINGUAGEM
 - Fornecer o link para GIT é positivo
 - Interessante "organização do grupo" mostrando coesão
@@ -2207,12 +2214,12 @@ Temos: CAPA + INTRO + PROBLEMA + LINGUAGEM
 - Vários termos em inglês que talvez devem virar citação
   - Colocá-los em itálico quando incorporados no texto, fornecer  tradução
 - Ateçã ao eros orogrficos
-*** SchnorR doidão
+**** SchnorR doidão
 Temos: INTRO + LINGUAGEM + PROBLEMA
 - Não usou o template fornecido
 - Apenas 1 página com uma figura na outra, sendo esta não referenciada 
 - Citar o artigo de Barnes e Hut, e não uma implementação
-*** WubbaLubbaDubDub
+**** WubbaLubbaDubDub
 Temos: CAPA + PROBLEMA
 - Carece fortemente de uma introdução
 - Escrever um texto com parágrafos ao invés de uma lista de itens
@@ -2220,7 +2227,7 @@ Temos: CAPA + PROBLEMA
 - Referências vazias
 - Linguagem Java não é apresentada
 
-* Definição final de grupos
+** Definição final de grupos
 
 |---------------------------+---------+-----------+--------------|
 | Nome do Grupo             | Membros | Linguagem | Problema     |
