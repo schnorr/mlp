@@ -22,19 +22,22 @@ Existem dois grupos com apenas um membro:
 |-------------------------------+----------|
 | Han Solo                      |        1 |
 | One Man Army                  |        1 |
-| get.sh*t.done                 |        2 |
-| My Little Frogger Haters      |        2 |
+| Tóquio                        |        2 |
 | Cowboy Value                  |        3 |
+| Delta                         |        3 |
 | Furogga                       |        3 |
+| get.sh*t.done                 |        3 |
 | GirlsRule                     |        3 |
+| GSN                           |        3 |
+| Here for Beer                 |        3 |
 | Monstros da Louca Programação |        3 |
+| My Little Frogger Haters      |        3 |
 | Programadores Anônimos        |        3 |
 | Scipio Project                |        3 |
 | teletypewriters               |        3 |
 
-Sugere-se portanto aos grupos /Han Solo/ e /One Man Army/ a integrar as
-equipes /get.sh*t.done/ e /My Little Frogger Haters/, que são grupos com
-apenas dois membros.
+Sugere-se portanto aos grupos /Han Solo/ e /One Man Army/ formem um único
+grupo.
 
 ** Grupo vs Linguagens
 
