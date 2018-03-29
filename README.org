@@ -55,7 +55,6 @@ aprendizado da disciplina.
 ** Avaliações
 
 - [[./acompanhamento.org][Geral]]
-- (Desatualizado) [[./projeto/grupos.org][Trabalho Final]]
 
 ** Bibliografia
 - [[http://loja.grupoa.com.br/livros/programacao/conceitos-de-linguagens-de-programacao/9788577807918][Robert W. Sebesta. Conceitos de Linguagens de Programação. Bookman. 5th edition, 2003]]
