@@ -274,3 +274,50 @@ terremotos. O arquivo com as observações contém oito colunas:
    #+end_example
    Okay, 608 operações das 1024 da iteração 110 tem IPC menor que a
    média global de IPC.
+
+* Bonus
+
+Após calcular a média:
+#+begin_src R :results output :session :exports both
+df %>%
+    group_by(Iteration, Operation, Rank) %>%
+    summarize(MeanDuration = mean(Time))
+#+end_src
+
+#+RESULTS:
+#+begin_example
+# A tibble: 76,800 x 4
+# Groups:   Iteration, Operation [?]
+   Iteration     Operation  Rank MeanDuration
+       <int>         <chr> <int>        <dbl>
+ 1         1 Intermediates     0  0.018290854
+ 2         1 Intermediates     1  0.014638043
+ 3         1 Intermediates     2  0.014637041
+ 4         1 Intermediates     3  0.014389801
+ 5         1 Intermediates     4  0.014399862
+ 6         1 Intermediates     5  0.014379263
+ 7         1 Intermediates     6  0.014418554
+ 8         1 Intermediates     7  0.018077898
+ 9         1 Intermediates     8  0.012763977
+10         1 Intermediates     9  0.006267691
+# ... with 76,790 more rows
+#+end_example
+
+Visualizar todos os 76800 pontos em um gráfico único:
+
+#+begin_src R :results output graphics :file img/full.png :exports both :width 1000 :height 800 :session
+library(ggplot2);
+df %>%
+    group_by(Iteration, Operation, Rank) %>%
+    summarize(MeanDuration = mean(Time)) %>%
+    ggplot(aes(x=Iteration, y=MeanDuration, color=Operation)) +
+    geom_point() +
+    geom_line(alpha=.2) +
+    theme_bw(base_size=16) +
+    xlab("Iteration [count]") +
+    ylab("Avg. Duration [s]") +
+    facet_wrap(~Rank)
+#+end_src
+
+#+RESULTS:
+[[file:img/full.png]]
