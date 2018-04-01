@@ -26,14 +26,7 @@ terremotos. O arquivo com as observações contém oito colunas:
 
    #+begin_src R :results output :session :exports both
    library(readr);
-   df <- read_csv("ondes3d_1_ligurian_64_grisou-5.nancy.grid5000.fr_counter.csv.gz");
-   df
-   #+end_src
-
-   #+RESULTS:
-   #+begin_example
-   Parsed with column specification:
-   cols(
+   df <- read_csv("ondes3d_1_ligurian_64_grisou-5.nancy.grid5000.fr_counter.csv.gz", progress=FALSE, col_types=cols(
      Iteration = col_integer(),
      Rank = col_integer(),
      Time = col_double(),
@@ -42,7 +35,12 @@ terremotos. O arquivo com as observações contém oito colunas:
      PAPI_TOT_CYC = col_integer(),
      PAPI_TOT_INS = col_integer(),
      PAPI_L2_ICM = col_integer()
-   )
+   ));
+   df
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
    # A tibble: 307,200 x 8
       Iteration  Rank       Time  Operation PAPI_BR_MSP PAPI_TOT_CYC PAPI_TOT_INS
           <int> <int>      <dbl>      <chr>       <int>        <int>        <int>
@@ -58,6 +56,8 @@ terremotos. O arquivo com as observações contém oito colunas:
    10         1    15 0.01896119 SeisMoment         768     49261678     45359487
    # ... with 307,190 more rows, and 1 more variables: PAPI_L2_ICM <int>
    #+end_example
+
+   Podemos ver que existem 307200 observações: cada uma é uma operação.
 
 2. Contar quantas operações =Operation= são realizadas por iteração (=Iteration=).
 
