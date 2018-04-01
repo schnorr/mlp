@@ -14,54 +14,27 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 
 * Definição Final dos Grupos
-** Tamanho dos Grupos
+** Grupo com Ocupação vs Linguagens e Problemas
 
-Existem dois grupos com apenas um membro:
+O grupo *Delta* deve definir seu problema, tendo em vista que esta
+informação não foi fornecida no formulário de respostas.
 
-| Grupo                         | Ocupação |
-|-------------------------------+----------|
-| Han Solo                      |        1 |
-| One Man Army                  |        1 |
-| Tóquio                        |        2 |
-| Cowboy Value                  |        3 |
-| Delta                         |        3 |
-| Furogga                       |        3 |
-| get.sh*t.done                 |        3 |
-| GirlsRule                     |        3 |
-| GSN                           |        3 |
-| Here for Beer                 |        3 |
-| Monstros da Louca Programação |        3 |
-| My Little Frogger Haters      |        3 |
-| Programadores Anônimos        |        3 |
-| Scipio Project                |        3 |
-| teletypewriters               |        3 |
-
-Sugere-se portanto aos grupos /Han Solo/ e /One Man Army/ formem um único
-grupo.
-
-** Grupo vs Linguagens
-
-A tabela abaixo mostra a definição das linguagens após sorteio
-naqueles cenários onde os grupos selecionaram demasiadamente uma
-linguagem. O código de análise encontra-se abaixo.
-
-| Grupo                         | Prioridade | Linguagem  |
-|-------------------------------+------------+------------|
-| Furogga                       |          1 | Julia      |
-| GirlsRule                     |          1 | Julia      |
-| Han Solo                      |          1 | C++17      |
-| Monstros da Louca Programação |          1 | Scala      |
-| My Little Frogger Haters      |          1 | C#7.1      |
-| Programadores Anônimos        |          1 | C#7.1      |
-| Scipio Project                |          1 | Scala      |
-| Tóquio                        |          1 | R          |
-| Here for Beer                 |          1 | R          |
-| GSN                           |          1 | TypeScript |
-| Delta                         |          1 | TypeScript |
-| get.sh*t.done                 |          2 | Closure    |
-| One Man Army                  |          2 | Kotlin     |
-| Cowboy Value                  |          3 | Swift      |
-| teletypewriters               |          4 | Rust       |
+| Grupo                         | Linguagem  | Problema               | Ocupação |
+|-------------------------------+------------+------------------------+----------|
+| Code Runner                   | Kotlin     | Space Invaders         |        3 |
+| Cowboy Value                  | Swift      | Space Invaders         |        3 |
+| Delta                         | TypeScript |                        |        3 |
+| Furogga                       | Julia      | Frogger                |        3 |
+| get.sh*t.done                 | Closure    | Processamento de dados |        3 |
+| GirlsRule                     | Julia      | Space Invaders         |        3 |
+| GSN                           | TypeScript | War                    |        3 |
+| Han Solo                      | C++17      | Space Invaders         |        1 |
+| Here for Beer                 | R          | Space Invaders         |        3 |
+| Monstros da Louca Programação | Scala      | Frogger                |        3 |
+| My Little Frogger Haters      | C#7.1      | Frogger                |        3 |
+| Programadores Anônimos        | C#7.1      | Frogger                |        3 |
+| Scipio Project                | Scala      | Starcraft              |        3 |
+| teletypewriters               | Rust       | Space invaders         |        3 |
 
 ** Código de Análise                                                :ATTACH:
 :PROPERTIES:
