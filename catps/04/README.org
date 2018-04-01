@@ -214,4 +214,31 @@ terremotos. O arquivo com as observações contém oito colunas:
    por número de iteração e por tipo de operação para cada processo,
    apresente somente os resultados da iteração 110.
 
+   Vamos filtrar primeiro para reduzir a quantidade de dados, depois
+   criar uma nova coluna para manter o IPC:
+   #+begin_src R :results output :session :exports both
+   df %>%
+       filter(Iteration == 110) %>%
+       mutate(IPC = PAPI_TOT_INS/PAPI_TOT_CYC) %>%
+       select(Rank, Operation, IPC)
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   # A tibble: 1,024 x 3
+       Rank     Operation      IPC
+      <int>         <chr>    <dbl>
+    1     0    SeisMoment 1.440249
+    2     0 Intermediates 1.393930
+    3     0 Intermediates 1.290690
+    4     0 Intermediates 1.346528
+    5     0 Intermediates 1.252267
+    6     0 Intermediates 1.333597
+    7     0        Stress 1.401467
+    8     0        Stress 1.186838
+    9     0        Stress 1.335837
+   10     0        Stress 1.131852
+   # ... with 1,014 more rows
+   #+end_example
+
 6. Liste as observações quando o IPC for menor que o valor médio.
