@@ -105,6 +105,51 @@ terremotos. O arquivo com as observações contém oito colunas:
 
 3. Como o exercício anterior, mas por iteração (=Iteration=) e processo (=Rank=).
    
+   #+begin_src R :results output :session :exports both
+   df %>%
+       group_by(Rank, Iteration) %>%
+       summarize(N=n()) %>%
+       ungroup()
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   # A tibble: 19,200 x 3
+       Rank Iteration     N
+      <int>     <int> <int>
+    1     0         1    16
+    2     0         2    16
+    3     0         3    16
+    4     0         4    16
+    5     0         5    16
+    6     0         6    16
+    7     0         7    16
+    8     0         8    16
+    9     0         9    16
+   10     0        10    16
+   # ... with 19,190 more rows
+   #+end_example
+   Temos a impressão que cada Rank realizar 16 operações por
+   iteração. O que faria sentido, sendo que existem 64 ranks, cada um
+   fazendo 16, temos o total de 1024 operações (como visto na segunda
+   questão). Para confirmar, podemos selecionar apenas a coluna =N= e
+   ver quantas entradas distantas nós temos:
+   #+begin_src R :results output :session :exports both
+   df %>%
+       group_by(Rank, Iteration) %>%
+       summarize(N=n()) %>%
+       ungroup() %>%
+       select(N) %>%
+       distinct()
+   #+end_src
+
+   #+RESULTS:
+   : # A tibble: 1 x 1
+   :       N
+   :   <int>
+   : 1    16
+   De fato, cada rank realiza 16 operações por iteração.
+
 4. Calcular o tempo médio da operação =Stress= para o processo =21= para cada iteração (=Iteration=)
 
    - Utilize a função =mean= para calcular a média.
