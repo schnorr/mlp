@@ -242,3 +242,35 @@ terremotos. O arquivo com as observações contém oito colunas:
    #+end_example
 
 6. Liste as observações quando o IPC for menor que o valor médio.
+
+   Vamos assumir que o valor médio é de todas as operações, de todas
+   as iterações, de todos os processos, criando uma coluna chamada
+   =MeanIPC=.
+   #+begin_src R :results output :session :exports both
+   df %>%
+       mutate(MeanIPC = mean(PAPI_TOT_INS/PAPI_TOT_CYC)) %>%
+       filter(Iteration == 110) %>%
+       mutate(IPC = PAPI_TOT_INS/PAPI_TOT_CYC) %>%
+       filter(IPC < MeanIPC) %>%
+       select(Rank, Operation, IPC, MeanIPC)
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   # A tibble: 608 x 4
+       Rank     Operation      IPC MeanIPC
+      <int>         <chr>    <dbl>   <dbl>
+    1     0        Stress 1.131852 1.16983
+    2     1 Intermediates 1.069143 1.16983
+    3     1        Stress 1.168952 1.16983
+    4     1        Stress 1.065353 1.16983
+    5     8 Intermediates 1.084385 1.16983
+    6     8        Stress 1.039276 1.16983
+    7     8        Stress 1.074971 1.16983
+    8     8        Stress 1.080635 1.16983
+    9     8        Stress 1.099167 1.16983
+   10     2 Intermediates 1.068320 1.16983
+   # ... with 598 more rows
+   #+end_example
+   Okay, 608 operações das 1024 da iteração 110 tem IPC menor que a
+   média global de IPC.
