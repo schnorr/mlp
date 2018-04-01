@@ -56,7 +56,6 @@ terremotos. O arquivo com as observações contém oito colunas:
    10         1    15 0.01896119 SeisMoment         768     49261678     45359487
    # ... with 307,190 more rows, and 1 more variables: PAPI_L2_ICM <int>
    #+end_example
-
    Podemos ver que existem 307200 observações: cada uma é uma operação.
 
 2. Contar quantas operações =Operation= são realizadas por iteração (=Iteration=).
