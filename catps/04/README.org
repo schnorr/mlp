@@ -154,6 +154,62 @@ terremotos. O arquivo com as observações contém oito colunas:
 
    - Utilize a função =mean= para calcular a média.
 
+   Ou seja, para cada combinação única de iteração (=Iteration=), tipo
+   de operação (=Operation=) e processo (=Rank=), devemos calcular a média
+   de todas as operações envolvidas nesta combinação de fatores. É
+   importante contar a quantidade de operações envolvidas para
+   eventualmente calcular a variabilidade da média (por exemplo,
+   usando o desvio padrão e um intervalo de confiança dado, assumindo
+   uma distribuição gaussiana). Vamos nos limitar a calcular a média e
+   contar quantas operações acontecem para cada uma daquelas
+   combinações.  Mas como o exercício pede a média de cada iteração
+   apenas para a operação =Stress= e o processo =21=, devemos primeiro
+   filtrar:
+   #+begin_src R :results output :session :exports both
+   df %>%
+       filter(Operation == "Stress", Rank == 21) %>%
+       group_by(Iteration, Operation, Rank) %>%
+       summarize(MeanDuration = mean(Time), N=n())
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   # A tibble: 300 x 5
+   # Groups:   Iteration, Operation [?]
+      Iteration Operation  Rank MeanDuration     N
+          <int>     <chr> <int>        <dbl> <int>
+    1         1    Stress    21   0.01819377     5
+    2         2    Stress    21   0.01819172     5
+    3         3    Stress    21   0.01820679     5
+    4         4    Stress    21   0.01818929     5
+    5         5    Stress    21   0.01819053     5
+    6         6    Stress    21   0.01819911     5
+    7         7    Stress    21   0.01819544     5
+    8         8    Stress    21   0.01820064     5
+    9         9    Stress    21   0.01819701     5
+   10        10    Stress    21   0.01819830     5
+   # ... with 290 more rows
+   #+end_example
+   Talvez seja interessante fazer um gráfico dessa média ao longo das
+   iterações, para verificar seu comportamento com mais detalhes:
+   #+begin_src R :results output graphics :file img/21-stress-average.png :exports both :width 600 :height 200 :session
+   library(ggplot2)
+   df %>%
+       filter(Operation == "Stress", Rank == 21) %>%
+       group_by(Iteration, Operation, Rank) %>%
+       summarize(MeanDuration = mean(Time), N=n()) %>%
+       ggplot(aes(x=Iteration, y=MeanDuration, color=Operation)) +
+       geom_point() +
+       geom_line(alpha=.2) +
+       theme_bw(base_size=16) +
+       xlab("Iteration [count]") +
+       ylab("Avg. Duration [s]") +
+       facet_wrap(~Rank)
+   #+end_src
+
+   #+RESULTS:
+   [[file:img/21-stress-average.png]]
+
 5. Calcule o IPC (Instruções Por Ciclo = =PAPI_TOT_INS/PAPI_TOT_CYC=)
    por número de iteração e por tipo de operação para cada processo,
    apresente somente os resultados da iteração 110.
