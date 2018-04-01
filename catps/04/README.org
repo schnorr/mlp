@@ -60,6 +60,49 @@ terremotos. O arquivo com as observações contém oito colunas:
 
 2. Contar quantas operações =Operation= são realizadas por iteração (=Iteration=).
 
+   #+begin_src R :results output :session :exports both
+   suppressMessages(library(tidyverse));
+   df %>%
+       group_by(Iteration) %>%
+       summarize(N=n())
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   # A tibble: 300 x 2
+      Iteration     N
+          <int> <int>
+    1         1  1024
+    2         2  1024
+    3         3  1024
+    4         4  1024
+    5         5  1024
+    6         6  1024
+    7         7  1024
+    8         8  1024
+    9         9  1024
+   10        10  1024
+   # ... with 290 more rows
+   #+end_example
+   Temos a impressão que todas as 300 iterações tem a mesma quantidade
+   de operações. Para confirmar, podemos ver quantas linhas dessa
+   tabela são diferentes, depois de calcular a variável =N=, assim:
+   #+begin_src R :results output :session :exports both
+   df %>%
+       group_by(Iteration) %>%
+       summarize(N=n()) %>%
+       ungroup() %>% # desagrupar para poder remover a coluna Iteration
+       select(-Iteration) %>%
+       unique # para confirmar que todas as linhas são iguais
+   #+end_src
+
+   #+RESULTS:
+   : # A tibble: 1 x 1
+   :       N
+   :   <int>
+   : 1  1024
+   Sim, cada iteração tem =1024= operações.
+
 3. Como o exercício anterior, mas por iteração (=Iteration=) e processo (=Rank=).
    
 4. Calcular o tempo médio da operação =Stress= para o processo =21= para cada iteração (=Iteration=)
