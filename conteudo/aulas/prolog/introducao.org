@@ -48,7 +48,8 @@ write('Ola Mundo').
 
 Ou:
 
-Coloque o conteúdo acima em =codigo.pl= e depois
+Coloque o conteúdo acima em =codigo.pl= (todas as letras do nome do
+arquivo devem ser minúsculas) e depois
 
 #+begin_src shell :results output
 cat codigo.pl | swipl
@@ -147,8 +148,9 @@ Termos funcionais (cláusulas)
 * Exercício #1 (Base de conhecimento)
 
 #+BEGIN_CENTER
-Especifique, no arquivo =exercicio.pl=, os *fatos* que representem a
-árvore seguinte, considerando as pessoas e seus respectivos sexos
+Especifique, no arquivo =exercicio.pl= (este arquivo deve ser composto
+apenas de letras minúsculas) os *fatos* que representem a árvore
+seguinte, considerando as pessoas e seus respectivos sexos
 #+END_CENTER
 
 [[./arvore-genealogica.png]]
