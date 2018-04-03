@@ -9,7 +9,7 @@ Todos os prazos são até as 23:59 da data informada.
 | #03  | [[./03/README.org][Recursividade e funcionais em R]]      | [[https://goo.gl/forms/i66aq6jtqohvh6jG3][Formulário]] | 2018-03-26 | [[./eval/03/README.org][Relatório]]             |
 | #04  | [[./04/README.org][Manipulação de dados em R]]            | [[https://goo.gl/forms/JlyBnySDhWH4eeKq1][Formulário]] | 2018-03-28 | [[./eval/04/README.org][Relatório]]             |
 | #05  | [[./05/README.org][Processo de Inferência em Prolog]]     | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]] | 2018-04-02 | [[./eval/05/README.org][Relatório]]             |
-| #06  | Implementação de Fibonacci em Prolog | [[https://goo.gl/forms/SlzDngBjA3Fcqanl1][Formulário]] |            | [[./eval/06/README.org][Relatório]]             |
+| #06  | Implementação de Fibonacci em Prolog | [[https://goo.gl/forms/SlzDngBjA3Fcqanl1][Formulário]] | 2018-04-05 | [[./eval/06/README.org][Relatório]]             |
 | #07  | [[./07/README.org][Manipulação de listas em Prolog]]      | [[https://goo.gl/forms/WK9Ug9D1dZWbfNJx2][Formulário]] |            | [[./eval/07/README.org][Relatório]]             |
 | #08  | [[./08/README.org][Vinculação de estocagem e escopo]]     | [[https://goo.gl/forms/XiBUY20Uq27MO9QX2][Formulário]] |            | [[./eval/08/README.org][Relatório e Respostas]] |
 | #09  | [[./09/README.org][Vínculos e Tipos de dados]]            | [[https://goo.gl/forms/hPgR5XrYwOhwLHB22][Formulário]] |            | [[./eval/09/README.org][Relatório e Respostas]] |
