@@ -23,7 +23,7 @@ informação não foi fornecida no formulário de respostas.
 |-------------------------------+------------+------------------------+----------|
 | Code Runner                   | Kotlin     | Space Invaders         |        3 |
 | Cowboy Value                  | Swift      | Space Invaders         |        3 |
-| Delta                         | TypeScript |                        |        3 |
+| Delta                         | TypeScript | War                    |        3 |
 | Furogga                       | Julia      | Frogger                |        3 |
 | get.sh*t.done                 | Closure    | Processamento de dados |        3 |
 | GirlsRule                     | Julia      | Space Invaders         |        3 |
