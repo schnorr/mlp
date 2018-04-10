@@ -8,7 +8,7 @@
 
 Considerando a seguinte base de conhecimento no arquivo =gosta1.pl=
 
-#+BEGIN_EXAMPLE
+#+BEGIN_SRC txt :tangle gosta1.pl
 gosta(pedro,leitura).
 gosta(maria,leitura).
 gosta(paulo,leitura).
@@ -18,7 +18,7 @@ gosta(vera,cinema).
 gosta(paulo,boliche).
 gosta(maria,boliche).
 gosta(vera,boliche).
-#+END_EXAMPLE
+#+END_SRC
 
 Formule as seguintes consultas e observe o resultado (pressione
 ``barra de espaço'' para mais respostas):
@@ -32,10 +32,19 @@ gosta(X,cinema). /* Quem gosta de cinema? */
 Modifique a base de conhecimento, incluindo regras para a geração de
 conhecimento, como abaixo:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_SRC txt :tangle gosta11.pl
+gosta(pedro,leitura).
+gosta(maria,leitura).
+gosta(paulo,leitura).
+gosta(pedro,cinema).
+gosta(paulo,cinema).
+gosta(vera,cinema).
+gosta(paulo,boliche).
+gosta(maria,boliche).
+gosta(vera,boliche).
 gosta(paulo,X) :- gosta(maria,X).   /* Paulo gosta de tudo que Maria gosta */
 gosta(pedro,X) :- gosta(X,boliche). /* pedro gosta de quem gosta de boliche*/
-#+END_EXAMPLE
+#+END_SRC
 
 Recarregue a base de conhecimento modificada e realize a consulta
 abaixo e explique o que aconteceu:
@@ -50,10 +59,21 @@ Inicialize uma nova base de conhecimento =gosta2.pl=, iniciando-a com o
 conhecimento final da base =gosta1.pl=. Acrescente as regras abaixo na
 base de conhecimento:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_SRC txt :tangle gosta2.pl
+gosta(pedro,leitura).
+gosta(maria,leitura).
+gosta(paulo,leitura).
+gosta(pedro,cinema).
+gosta(paulo,cinema).
+gosta(vera,cinema).
+gosta(paulo,boliche).
+gosta(maria,boliche).
+gosta(vera,boliche).
+gosta(paulo,X) :- gosta(maria,X).   /* Paulo gosta de tudo que Maria gosta */
+gosta(pedro,X) :- gosta(X,boliche). /* pedro gosta de quem gosta de boliche*/
 gosta(pedro,boliche).         /* Pedro gosta de boliche */
 gosta(pedro,X) :- gosta(X,X). /* Pedro gosta de qualquer um que goste de si mesmo */
-#+END_EXAMPLE
+#+END_SRC
 
 Repita a consulta feita, explique o que aconteceu.
 
@@ -63,11 +83,24 @@ gosta(pedro,X).
  
 *** Exercício 3
 
-Adicione a cláusula abaixo na base de conhecimento.
+Adicione a cláusula =combina/3= na base de conhecimento.
 
-#+BEGIN_EXAMPLE
+#+BEGIN_SRC txt :tangle gosta3.pl
+gosta(pedro,leitura).
+gosta(maria,leitura).
+gosta(paulo,leitura).
+gosta(pedro,cinema).
+gosta(paulo,cinema).
+gosta(vera,cinema).
+gosta(paulo,boliche).
+gosta(maria,boliche).
+gosta(vera,boliche).
+gosta(paulo,X) :- gosta(maria,X).   /* Paulo gosta de tudo que Maria gosta */
+gosta(pedro,X) :- gosta(X,boliche). /* pedro gosta de quem gosta de boliche*/
+gosta(pedro,boliche).         /* Pedro gosta de boliche */
+gosta(pedro,X) :- gosta(X,X). /* Pedro gosta de qualquer um que goste de si mesmo */
 combina(X,Y,Z):- gosta(X,Z), gosta(Y,Z). /* Existe algo (Z) que X e Y gostam? */
-#+END_EXAMPLE
+#+END_SRC
 
 Faça a consulta abaixo, explique o que aconteceu.
 
@@ -83,11 +116,24 @@ Na base de conhecimento, adicione uma nova condição
 X\=Y
 #+END_EXAMPLE
 
-à cláusula =combina=, escrevendo-a desta forma:
+à cláusula =combina=, escrevendo-a da forma que aparece na base seguinte:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_SRC txt :tangle gosta4.pl
+gosta(pedro,leitura).
+gosta(maria,leitura).
+gosta(paulo,leitura).
+gosta(pedro,cinema).
+gosta(paulo,cinema).
+gosta(vera,cinema).
+gosta(paulo,boliche).
+gosta(maria,boliche).
+gosta(vera,boliche).
+gosta(paulo,X) :- gosta(maria,X).   /* Paulo gosta de tudo que Maria gosta */
+gosta(pedro,X) :- gosta(X,boliche). /* pedro gosta de quem gosta de boliche*/
+gosta(pedro,boliche).         /* Pedro gosta de boliche */
+gosta(pedro,X) :- gosta(X,X). /* Pedro gosta de qualquer um que goste de si mesmo */
 combina(X,Y,Z):- gosta(X,Z), gosta(Y,Z), X\=Y. /* Existe algo (Z) que X e Y gostam? */
-#+END_EXAMPLE
+#+END_SRC
 
 Realize a consulta abaixo, e explique a diferença de resultado obtido
 com as duas versões de =combina=.
