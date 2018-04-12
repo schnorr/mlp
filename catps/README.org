@@ -11,7 +11,7 @@ Todos os prazos são até as 23:59 da data informada.
 | #05  | [[./05/README.org][Processo de Inferência em Prolog]]     | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]] | 2018-04-02 |           |
 | #06  | Implementação de Fibonacci em Prolog | [[https://goo.gl/forms/SlzDngBjA3Fcqanl1][Formulário]] | 2018-04-05 |           |
 | #07  | [[./07/README.org][Manipulação de listas em Prolog]]      | [[https://goo.gl/forms/WK9Ug9D1dZWbfNJx2][Formulário]] | 2018-04-10 |           |
-| #08  | [[./08/README.org][Vinculação de estocagem e escopo]]     | [[https://goo.gl/forms/XiBUY20Uq27MO9QX2][Formulário]] | 2018-04-17 |           |
+| #08  | [[./08/README.org][Vinculação de estocagem e escopo]]     | [[https://goo.gl/forms/XiBUY20Uq27MO9QX2][Formulário]] | 2018-04-19 |           |
 | #09  | [[./09/README.org][Vínculos e Tipos de dados]]            | [[https://goo.gl/forms/hPgR5XrYwOhwLHB22][Formulário]] |            |           |
 |------+--------------------------------------+------------+------------+-----------|
 | #10  | [[./10/README.org][Controle de Fluxo]]                    | [[https://goo.gl/forms/9q2TEEu3JmHyN17F2][Formulário]] |            |           |
