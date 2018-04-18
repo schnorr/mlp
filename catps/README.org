@@ -5,7 +5,7 @@ Todos os prazos são até as 23:59 da data informada.
 | CATP | Descrição                            | Entrega    |      Prazo | Aval. | Resp. |
 |------+--------------------------------------+------------+------------+-------+-------|
 | #01  | [[./def/01/formulario.pdf][Formulário de Avaliação de LPs]]       | [[https://goo.gl/forms/ESOxCX5dI85V895R2][Formulário]] | 2018-03-12 |       | NA    |
-| #02  | [[./def/02/README.org][Listas e recursividade em R]]          | [[https://goo.gl/forms/zBzVXAaCxTUJMngA3][Formulário]] | 2018-03-19 |       |       |
+| #02  | [[./def/02/README.org][Listas e recursividade em R]]          | [[https://goo.gl/forms/zBzVXAaCxTUJMngA3][Formulário]] | 2018-03-19 |       | [[./resp/02.org][#02]]   |
 | #03  | [[./def/03/README.org][Recursividade e funcionais em R]]      | [[https://goo.gl/forms/i66aq6jtqohvh6jG3][Formulário]] | 2018-03-26 |       |       |
 | #04  | [[./def/04/README.org][Manipulação de dados em R]]            | [[https://goo.gl/forms/JlyBnySDhWH4eeKq1][Formulário]] | 2018-03-28 |       |       |
 | #05  | [[./def/05/README.org][Processo de Inferência em Prolog]]     | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]] | 2018-04-02 |       |       |
