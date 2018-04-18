@@ -1,0 +1,360 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* #1
+
+Considerando a base de conhecimento:
+
+#+BEGIN_SRC pl :tangle gosta1v1.pl
+gosta(pedro,leitura).
+gosta(maria,leitura).
+gosta(paulo,leitura).
+gosta(pedro,cinema).
+gosta(paulo,cinema).
+gosta(vera,cinema).
+gosta(paulo,boliche).
+gosta(maria,boliche).
+gosta(vera,boliche).
+#+END_SRC
+
+Ao consultar =gosta(vera,X).=, o interpretador realiza a busca
+exaustiva, que ocorre da seguinte forma. Primeiro ele (o
+interpretador) procura o predicado de mesmo nome. Ao encontrá-lo,
+procura unificar o primeiro termo do predicado =gosta/2=, tendo em vista
+que =vera= foi informado na consulta. Quando ele encontrar, na base de
+conhecimento, o predicado =gosta= com =vera=, a variável X será unificada
+com o segundo termo, sendo impresso na tela. No momento que o usuário
+aperta na barra de espaço, a busca exaustiva prossegue, imprimindo a
+seguinte saída (perceba a ausência de =false= no final, tendo em vista
+que o fato =gosta(vera,boliche).= é o último da base de conhecimento:
+
+#+BEGIN_EXAMPLE
+?- gosta(vera,X).
+X = cinema ;
+X = boliche.
+#+END_EXAMPLE
+
+Modificamos a base de conhecimento para:
+
+#+BEGIN_SRC pl :tangle gosta1v2.pl
+gosta(pedro,leitura).
+gosta(maria,leitura).
+gosta(paulo,leitura).
+gosta(pedro,cinema).
+gosta(paulo,cinema).
+gosta(vera,cinema).
+gosta(paulo,boliche).
+gosta(maria,boliche).
+gosta(vera,boliche).
+gosta(paulo,X) :- gosta(maria,X).   /* Paulo gosta de tudo que Maria gosta */
+gosta(pedro,X) :- gosta(X,boliche). /* pedro gosta de quem gosta de boliche*/
+#+END_SRC
+
+Ao consultar =gosta(pedro,X).=, obtemos o resultado abaixo. As duas
+primeiras respostas para =X= aparecem pois existem fatos explícitos na
+base de conhecimento. As demais respostas aparecem devido a busca
+exaustiva através da regra "pedro gosta de quem gosta de boliche",
+fazendo que que pedro goste também de =paulo=, =maria=, e =vera=. Tendo em
+vista que "Paulo gosta de tudo que Maria gosta", e maria gosta de
+boliche, algo que paulo também gosta, pedro acaba gostando de paulo
+uma segunda vez. A busca exaustiva continua e termina por =false= visto
+que mais nenhum "verdade" é encontrada.
+
+#+BEGIN_EXAMPLE
+?- gosta(pedro,X).
+X = leitura ;
+X = cinema ;
+X = paulo ;
+X = maria ;
+X = vera ;
+X = paulo ;
+false.
+#+END_EXAMPLE
+
+* #2
+
+#+BEGIN_SRC pl :tangle gosta2.pl
+gosta(pedro,leitura).
+gosta(maria,leitura).
+gosta(paulo,leitura).
+gosta(pedro,cinema).
+gosta(paulo,cinema).
+gosta(vera,cinema).
+gosta(paulo,boliche).
+gosta(maria,boliche).
+gosta(vera,boliche).
+gosta(paulo,X) :- gosta(maria,X).   /* Paulo gosta de tudo que Maria gosta */
+gosta(pedro,X) :- gosta(X,boliche). /* pedro gosta de quem gosta de boliche*/
+gosta(pedro,boliche).         /* Pedro gosta de boliche */
+gosta(pedro,X) :- gosta(X,X). /* Pedro gosta de qualquer um que goste de si mesmo */
+#+END_SRC
+
+A saída ao consultar =gosta(pedro,X).= é a descrita abaixo. Isso
+acontece pelo combinação do fato que "Pedro gosta de qualquer um que
+goste de si mesmo" e "Pedro gosta de boliche". Isso acaba tornando a
+busca exaustiva sem fim, pois pedro gosta de boliche, e a regra "pedro
+gosta de quem gosta de boliche" leva a pedro gostar de pedro. A busca
+não termina pois a regra "pedro gosta de quem gosta de boliche" leva
+novamente a buscar por "Pedro gosta de qualquer um que goste de si
+mesmo" e assim por diante. Isso caracteriza um ciclo na busca
+exaustiva.
+
+#+BEGIN_EXAMPLE
+?- gosta(pedro,X).
+X = leitura ;
+X = cinema ;
+X = paulo ;
+X = maria ;
+X = vera ;
+X = paulo ;
+X = pedro ;
+X = boliche ;
+X = pedro ;
+X = pedro ;
+X = pedro ;
+X = pedro ;
+X = pedro ;
+X = pedro ;
+X = pedro ;
+X = pedro ;
+X = pedro ;
+(...)
+#+END_EXAMPLE
+* #3
+
+#+BEGIN_SRC pl :tangle combina1.pl
+gosta(pedro,leitura).
+gosta(maria,leitura).
+gosta(paulo,leitura).
+gosta(pedro,cinema).
+gosta(paulo,cinema).
+gosta(vera,cinema).
+gosta(paulo,boliche).
+gosta(maria,boliche).
+gosta(vera,boliche).
+gosta(paulo,X) :- gosta(maria,X).   /* Paulo gosta de tudo que Maria gosta */
+gosta(pedro,X) :- gosta(X,boliche). /* pedro gosta de quem gosta de boliche*/
+gosta(pedro,boliche).         /* Pedro gosta de boliche */
+gosta(pedro,X) :- gosta(X,X). /* Pedro gosta de qualquer um que goste de si mesmo */
+combina(X,Y,Z):- gosta(X,Z), gosta(Y,Z). /* Existe algo (Z) que X e Y gostam? */
+#+END_SRC
+
+Ao consultar =combina(X,Y,Z).=, obtemos o resultado abaixo. Novamente, a
+busca exaustiva procura todas as combinações que responde
+positivamente a pergunta "Existe algo (Z) que X e Y gostam?". Após
+isso, a busca exaustiva responde de maneira "infinita" (até a pilha da
+busca estourar) a resposta "X = Y, Y = Z, Z = pedro ;". Isso acontece
+devido ao ciclo obtido com "Pedro gosta de qualquer um que goste de
+si mesmo" e "Pedro gosta de boliche".
+
+#+BEGIN_EXAMPLE
+?- combina(X,Y,Z).
+X = Y, Y = pedro,
+Z = leitura ;
+X = pedro,
+Y = maria,
+Z = leitura ;
+X = pedro,
+Y = paulo,
+Z = leitura ;
+(...)
+X = Y, Y = Z, Z = pedro ;
+X = Y, Y = Z, Z = pedro ;
+X = Y, Y = Z, Z = pedro ;
+X = Y, Y = Z, Z = pedro ;
+X = Y, Y = Z, Z = pedro ;
+X = Y, Y = Z, Z = pedro ;
+X = Y, Y = Z, Z = pedro ;
+X = Y, Y = Z, Z = pedro ;
+X = Y, Y = Z, Z = pedro ;
+(...)
+#+END_EXAMPLE
+
+* #4
+
+#+BEGIN_SRC pl :tangle combina2.pl
+gosta(pedro,leitura).
+gosta(maria,leitura).
+gosta(paulo,leitura).
+gosta(pedro,cinema).
+gosta(paulo,cinema).
+gosta(vera,cinema).
+gosta(paulo,boliche).
+gosta(maria,boliche).
+gosta(vera,boliche).
+gosta(paulo,X) :- gosta(maria,X).   /* Paulo gosta de tudo que Maria gosta */
+gosta(pedro,X) :- gosta(X,boliche). /* pedro gosta de quem gosta de boliche*/
+gosta(pedro,boliche).         /* Pedro gosta de boliche */
+gosta(pedro,X) :- gosta(X,X). /* Pedro gosta de qualquer um que goste de si mesmo */
+combina(X,Y,Z):- gosta(X,Z), gosta(Y,Z), X\=Y. /* Existe algo (Z) que X e Y gostam? */
+#+END_SRC
+
+A consulta =combina(X,Y,Z).= traz uma saída diferente do exercício
+anterior pelo fato que =X\=Y= não permitir que as variáveis X e Y se
+unificam. O que obtemos em saída são todas as combinações válidas. No
+entanto, ao invés de informar "X = Y, Y = Z, Z = pedro ;", o
+interpretador fica eternamente no ciclo (o mesmo descrito no exercício
+anterior) sem jamais poder fornecer outra resposta.
+
+* #5
+
+#+BEGIN_SRC pl :tangle cut1.pl
+holiday(friday,may1).
+weather(friday,fair).
+weather(saturday,fair).
+weather(sunday,fair).
+weekend(saturday).
+weekend(sunday).
+/*
+ Faremos piquenique em dias do fim de semana com tempo bom ou no dia primeiro de maio
+ Observe que duas clausulas que possuem o mesmo lado esquerdo sao
+ interpretadas como uma clausula com duas opcoes
+*/
+picnic(Day) :- weather(Day,fair), weekend(Day).
+picnic(Day) :- holiday(Day,may1).
+#+END_SRC
+
+Obtemos a saída abaixo, sabendo que se o tempo estiver =fair= e o dia
+for um final de semana (sábado e domingo), ou se o dia for um primeiro
+de maio (sexta).
+
+#+BEGIN_EXAMPLE
+?- picnic(When).
+When = saturday ;
+When = sunday ;
+When = friday.
+#+END_EXAMPLE
+
+Mas ao trocar para o predicado =picnic/1= como abaixo:
+
+#+BEGIN_SRC pl :tangle cut2.pl
+holiday(friday,may1).
+weather(friday,fair).
+weather(saturday,fair).
+weather(sunday,fair).
+weekend(saturday).
+weekend(sunday).
+/*
+ Faremos piquenique em dias do fim de semana com tempo bom ou no dia primeiro de maio
+ Observe que duas clausulas que possuem o mesmo lado esquerdo sao
+ interpretadas como uma clausula com duas opcoes
+*/
+picnic(Day) :- weather(Day,fair), !, weekend(Day).
+picnic(Day) :- holiday(Day,may1).
+#+END_SRC
+
+Obtemos simplesmente =false=. O que ocorre é que o operador de corte
+bloqueia a busca exaustiva no momento do retrocesso. No processo de
+avaliação de =picnic/1= (primeira regra), ao encontrar o primeiro
+predicado =weather(friday,fair).=, acontece a unificação de =Day= com
+=friday=; em seguida se observa o corte que sempre é avaliado para =true=,
+em seguida encontramos =weekend(Day)=. Como Day está unificado com
+=friday=, o interpretador procura o fato =weekend(friday)=, algo
+inexistente na base de conhecimento. Esse último termo avalia para
+falso, causando o retrocesso. Ao encontrar o operador de corte, a
+busca para e avalia tudo para falso. Por isso a resposta =false=.
+
+#+BEGIN_EXAMPLE
+?- picnic(When).
+false.
+#+END_EXAMPLE
+* #6
+
+#+BEGIN_SRC pl :tangle cut3.pl
+holiday(friday,may1).
+weather(friday,fair).
+weather(saturday,fair).
+weather(sunday,fair).
+weekend(saturday).
+weekend(sunday).
+/*
+ Faremos piquenique em dias do fim de semana com tempo bom ou no dia primeiro de maio
+ Observe que duas clausulas que possuem o mesmo lado esquerdo sao
+ interpretadas como uma clausula com duas opcoes
+*/
+picnic(Day) :- weather(Day,fair), weekend(Day), !.
+picnic(Day) :- holiday(Day,may1).
+#+END_SRC
+
+O corte agora está no final da primeira regra do predicado =picnic/1=. A
+busca unifica Day com =friday=, avalia =weekend(friday)= para falso,
+realiza o retrocesso para unificar Day com =saturday=, avalia
+=weekend(saturday)= para verdadeiro, encontra o corte que sempre avalia
+para verdadeiro e imprime na tela a saída abaixo. Ao iniciar o
+retrocesso para continuar a busca exaustiva, o interpretador encontra
+o corte e para.
+
+#+BEGIN_EXAMPLE
+?- picnic(When).
+When = saturday.
+#+END_EXAMPLE
+* #7
+
+#+BEGIN_SRC pl :tangle cut4.pl
+holiday(friday,may1).
+weather(friday,fair).
+weather(saturday,fair).
+weather(sunday,fair).
+weekend(saturday).
+weekend(sunday).
+/*
+ Faremos piquenique em dias do fim de semana com tempo bom ou no dia primeiro de maio
+ Observe que duas clausulas que possuem o mesmo lado esquerdo sao
+ interpretadas como uma clausula com duas opcoes
+*/
+picnic(Day) :- !, weather(Day,fair), weekend(Day).
+picnic(Day) :- holiday(Day,may1).
+#+END_SRC
+
+Agora o corte está no início da primeira regra de predicado
+=picnic/1=. O corte é então encontrado na consulta =picnic(When).=,
+avaliando para verdadeiro. Como anteriormente, acontece a unificação
+de =Day= com =friday=, algo que se termina por ser sem usufruto tendo em
+vista que =weekend(friday)= é avaliado para falso. A busca exaustiva
+retrocede para a última decisão tomada; unificando =Day= com =saturday=,
+levando até o final da regra e imprimindo na saída =When=saturday=. A
+busca continua, realizando o retrocesso e unificando =Day= com
+=sunday=. Isso se avera verdadeiro resultando em =When=sunday=. O
+retrocesso é novamente ativiado, e como não existe mais nenhum outro
+dia possível, ele retrocede até o corte, que para a busca
+exaustiva. Isso não dá oportunidade de procurar pela regra que dia de
+piquenique poderia ser uma sexta, 1 de maio.
+
+* #8
+
+#+BEGIN_SRC pl :tangle fechado.pl
+star(sirius). /* star(X) é verdade se X e uma estrela */
+star(sol).
+star(vega).
+orbita(mercurio,sol). /* orbita(X,Y) é verdade se X está na orbita de Y */
+orbita(venus,sol).
+orbita(terra,sol).
+orbita(marte,sol).
+orbita(lua,terra).
+orbita(phobos,marte).
+orbita(deimos,marte).
+planeta(B) :- orbita(B,sol). /* planeta(B) é verdade se B é um planeta do sistema solar */
+
+satelite(B) :- orbita(B,P),planeta(P). /* satelite(B) é verdade se B é um satelite de um planeta do sistema solar */
+
+cometa(B) :- not(star(B)),not(planeta(B)),not(satelite(B)). /* Agora, o uso da negacao: cometa(B) é verdade se B nao é planeta, nem satelite, nem estrela */
+#+END_SRC
+
+Realizando as três consultas temos a saída abaixo. Pelo fato que um
+cometa pode ser qualquer coisa que não é uma estrela, um planeta ou um
+satelite, a regra de cometa é avaliado para verdadeiro para qualquer
+constante fornecida, salvo nos casos onde explicitamente uma dessas
+regras se tornará falso (ou seja, a constante está presente na base de
+conhecimento). Isso evidencia a hipótese do mundo fechado.
+
+#+BEGIN_EXAMPLE
+?- cometa(halley).
+true.
+
+?- cometa(apollo13).
+true.
+
+?- orbita(halley,sol).
+false.
+#+END_EXAMPLE
