@@ -1,0 +1,43 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* imprime
+
+#+BEGIN_SRC pl :tangle imprime.pl
+imprime([]) :- !.
+imprime([H|T]) :- write(H), imprime(T).
+#+END_SRC
+
+* ultimo
+
+#+BEGIN_SRC pl :tangle ultimo.pl
+ultimo([H|[]], H) :- !.
+ultimo([_|T], Z) :- ultimo(T, Z).
+#+END_SRC
+
+* inverte
+
+#+BEGIN_SRC pl :tangle inverte.pl
+concat([], L2, L2) :- !.
+concat([X|L1], L2, [X|D]) :- concat(L1, L2, D).
+
+inverte([], []) :- !.
+inverte([H|T], SAIDA) :- inverte(T, VAR), concat(VAR, [H], SAIDA).
+#+END_SRC
+
+* insere
+
+#+BEGIN_SRC pl :tangle insere.pl
+insere(ELE, [], ELE) :- !.
+insere(ELE, [H|T], [ELE|[H|T]]) :- ELE =< H, !.
+insere(ELE, [H|T], [H|Resto]) :- ELE > H, insere(ELE,T, Resto).
+#+END_SRC
+
+* remove
+
+#+BEGIN_SRC pl :tangle remove.pl
+remove(_, [], []) :- !.
+remove(ELE, [ELE| Resto], Resto) :- !.
+remove(ELE, [H| Resto], [H|NewResto]) :- ELE \= H, remove(ELE, Resto, NewResto).
+#+END_SRC
