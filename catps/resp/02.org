@@ -7,7 +7,7 @@
 
 Com =lapply=.
 
-#+begin_src R :results output :session :exports none
+#+begin_src R :results output :session :exports both
 vezes <- function(l, n)
 {
     unlist(lapply(l, function(x) x*n))
@@ -35,7 +35,7 @@ vezes(list(1,2,3), 2)
 
 * inverte
 
-#+begin_src R :results output :session :exports none
+#+begin_src R :results output :session :exports both
 inverte <- function (lista)
 {
     len = length(lista);
@@ -53,7 +53,7 @@ inverte (list(1,2,3,4));
 
 * expoente
 
-#+begin_src R :results output :session :exports none
+#+begin_src R :results output :session :exports both
 expoente <- function (lista, expo)
 {
     len = length(lista);
