@@ -116,7 +116,9 @@ printf("%d\n", sizeof(union MU));
 : 104
 
 Como pode ser visto, o operador =sizeof= do compilador GCC retorna 104
-bytes. A razão destes 4 bytes adicionais ainda está sendo investigada.
+bytes em uma máquina de 64 bits (tamanho da palavra é 8 bytes). Como o
+tamanho da =union= deve ser múltiplo do tamanho da palavra da máquina, o
+seu tamanho se torna 104 bytes, ou seja, 13 palavras de 8 bytes.
 
 * #9
 
