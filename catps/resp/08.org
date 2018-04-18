@@ -1,0 +1,70 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* #1
+
+| Método de Escopo | Resultado dos comandos /printf/ |
+|------------------+-------------------------------|
+| Estático         |                               |
+| Dinâmico         |                               |
+|------------------+-------------------------------|
+
+* #2
+
+Existem somente uma variável estática (global), alocada no segmento de
+dados: é a variável =x= (linha 1). As variáveis dinâmicas, alocadas na
+pilha, são as seguintes: =n= (linha 3), =x= (linha 17), =argc= e =argv= (linha
+22).
+
+* #3
+
+Existem duas variáveis alocadas estaticamente: a variável global =x=
+(linha 1) e variável =b= (linha 4), pelo fato desta ter sido
+declarada com a palavra chave =static=, indicando uma alocação
+estática no segmento de dados. As variáveis dinâmicas alocadas /na
+pilha/ são: =int a= (linha 3), =int c= (linha 5), =int d= (linha 10) e
+float *e= (um ponteiro para ponto-flutuante, na linha 11). Como
+variáveis dinâmicas alocadas /no monte/ temos apenas o conteúdo
+apontado pela variável =e=.
+
+* #4
+
+O segmento de dados deste programa contém apenas a variável =x= (linha
+1). Esta alocação estática é feita no momento da compilação do
+programa. As variáveis dinâmicas, alocadas em tempo de execução na
+pilha do programa, são =n= (linha 3), =x= (linha 17), =argc= e =argv= (linha
+22). Nenhuma variável é alocada dinamicamente no monte, pois o
+programa não apresenta nenhuma diretiva de alocação dinâmica (como
+/malloc/, ou /strdup/ por exemplo).
+
+* #5
+
+O segmento de dados deste programa contém duas variáveis: a variável
+global =x= (linha 1) e variável =b= (linha 4), pelo fato desta ter sido
+declarada com a palavra chave =static=, indicando uma alocação estática
+no segmento de dados. As variáveis alocadas dinamicamente na pilha, em
+tempo de execução, são: =int a= (linha 3), int c= (linha 5), =int d=
+(linha 10) e =float *e= (linha 11). A única variável cujo conteúdo é
+alocado dinamicamente em tempo de execução é a variável =e= (linha 11).
+
+* #6
+
+O problema deste programa se encontra na função =diaSemana=, que retorna
+um ponteiro para uma variável alocada dinamicamente na pilha:
+=diaExt=. Ora, no momento que esta função retornar, o espaço na pilha
+que ocupava a variável poderá ser sobrescrito por qualquer outra
+chamada de função. Isto explica o comportamento errático, uma vez que
+o endereço para o qual o ponteiro aponta pode ainda conter dados
+úteis. Isto depende, claramente, das funções que forem chamadas entre
+o retorno da função =diaSemana= e o uso do ponteiro.
+
+Uma solução possível é marcar a variável =diaExt= como estática. Dessa
+forma, seu espaço estará sempre válido no segmento de dados do
+programa, sendo perfeitamente válida o retorno de um ponteiro para
+este espaço. Uma segunda solução é alocar dinamicamente o espaço da
+variável =diaExt=, mas a função chamadora deverá realizar um =free= deste
+espaço posteriormente, após o retorno da função =diaSemana=. Uma
+terceira abordagem é transformar =diaExt= em global, tendo o mesmo
+efeito que a primeira solução descrita acima.
+
