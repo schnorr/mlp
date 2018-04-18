@@ -1,0 +1,154 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* construir
+
+#+begin_src R :results output :session :exports both
+construir <- function(l, v)
+{
+    if (length(l) == 0) return(c())
+    cabeca <- head(l, n=1)[[1]];
+    resto <- tail(l, n=length(l)-1)
+    return(c(cabeca(v), construir(resto, v)))
+}
+
+f <- function (x) x*x
+g <- function (x) x*x*x
+h <- function (x) x*x*x*x
+
+l <- c(f, g, h);
+
+construir(l, 2)
+#+end_src
+
+#+RESULTS:
+: [1]  4  8 16
+
+* construirdois
+
+#+begin_src R :results output :session :exports both
+construirdois <- function(l, ...)
+{
+    if (length(l) == 0) return(c())
+    cabeca <- head(l, n=1)[[1]];
+    resto <- tail(l, n=length(l)-1)
+    return(c(cabeca(...), construirdois(resto, ...)))
+}
+
+construirdois(l, c(2,3))
+#+end_src
+
+#+RESULTS:
+: [1]  4  9  8 27 16 81
+
+* duplica
+
+#+begin_src R :results output :session :exports both
+duplica <- function (l)
+{
+    unlist(lapply(l, function(x) x*2));
+}
+duplica (c(1,2,3))
+#+end_src
+
+#+RESULTS:
+: [1] 2 4 6
+
+* soma
+
+#+begin_src R :results output :session :exports both
+soma <- function(l)
+{
+    accum = 0;
+
+    somainterna <- function(l, accum)
+    {
+        if (length(l) == 0) return(accum);
+        cabeca <- head(l, n=1)[[1]];
+        accum <- accum + cabeca;
+        resto <- tail(l, n=length(l)-1)
+        return(somainterna(resto, accum))
+    }
+
+
+    return(somainterna(l, accum));
+}
+soma(c(1,2,3));
+#+end_src
+
+#+RESULTS:
+: [1] 6
+
+* positivos
+
+#+begin_src R :results output :session :exports both
+positivos <- function (l)
+{
+    if (length(l) == 0) return(c());
+    cabeca <- head(l, n=1)[[1]];
+    resto <- tail(l, n=length(l)-1)
+    if(cabeca > 0){
+        return(c(TRUE, positivos(resto)));
+    }else{
+        return(c(FALSE, positivos(resto)));
+    }
+}
+
+positivos <- function(l)
+{
+    unlist(lapply(l, function(x) ifelse(x < 0, FALSE, TRUE)))
+}
+
+positivos(c(-1, 2, -4))
+#+end_src
+
+#+RESULTS:
+: [1] FALSE  TRUE FALSE
+
+* norma
+
+A solução abaixo usa:
+- a função *expoente*, do CATP anterior, e
+- a *soma* deste CATP.
+
+#+begin_src R :results output :session :exports both
+norma <- function(l)
+{
+    expoente <- function (lista, expo)
+    {
+        len = length(lista);
+        if (len == 0) return(list());
+
+        h <- head(lista, n = 1);
+        t <- tail(lista, n = len-1)
+
+        l <- c(unlist(h) ^ expo, expoente(t, expo))
+        return(unlist(l));
+    }
+
+    soma <- function(l)
+    {
+        accum = 0;
+
+        somainterna <- function(l, accum)
+        {
+            if (length(l) == 0) return(accum);
+            cabeca <- head(l, n=1)[[1]];
+            accum <- accum + cabeca;
+            resto <- tail(l, n=length(l)-1)
+            return(somainterna(resto, accum))
+        }
+
+
+        return(somainterna(l, accum));
+    }
+    l1 <- expoente (l, 2);
+    return(sqrt(soma(l1)))
+}
+
+norma(c(0.1, 0.2, 0.3, 0.4));
+#+end_src
+
+#+RESULTS:
+: [1] 0.5477226
