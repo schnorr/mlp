@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* fibonacci
+
+Uma solução possível:
+
+#+BEGIN_SRC pl :tangle fib.pl
+fibonacci(0,0):- !.
+fibonacci(1,1):- !.
+fibonacci(X,Y):- X>=0, A is X-1, fibonacci(A,K),
+                       B is X-2, fibonacci(B,Z),
+                       Y is K+Z.
+#+END_SRC
