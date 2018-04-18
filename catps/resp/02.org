@@ -1,0 +1,73 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* vezes
+** #1
+
+Com =lapply=.
+
+#+begin_src R :results output :session :exports none
+vezes <- function(l, n)
+{
+    unlist(lapply(l, function(x) x*n))
+};
+#+end_src
+
+#+RESULTS:
+
+** #2
+
+Fazendo manualmente (resposta esperada).
+
+#+begin_src R :results output :session :exports both
+vezes <- function(l, m)
+{
+    if(length(l) == 0) return(list());
+    e <- head(l, n=1)[[1]]*m
+    return(unlist(c(e, vezes(tail(l, n=-1), m))));
+}
+vezes(list(1,2,3), 2)
+#+end_src
+
+#+RESULTS:
+: [1] 2 4 6
+
+* inverte
+
+#+begin_src R :results output :session :exports none
+inverte <- function (lista)
+{
+    len = length(lista);
+    if(len == 0) return(list())
+    h <- head(lista, n = 1);
+    t <- tail(lista, n = len-1)
+    l <- c(inverte(t), h)
+    return(unlist(l));
+}
+inverte (list(1,2,3,4));
+#+end_src
+
+#+RESULTS:
+: [1] 4 3 2 1
+
+* expoente
+
+#+begin_src R :results output :session :exports none
+expoente <- function (lista, expo)
+{
+    len = length(lista);
+    if (len == 0) return(list());
+
+    h <- head(lista, n = 1);
+    t <- tail(lista, n = len-1)
+
+    l <- c(unlist(h) ^ expo, expoente(t, expo))
+    return(unlist(l));
+}
+expoente(c(2,3), 2)
+#+end_src
+
+#+RESULTS:
+: [1] 4 9
+
