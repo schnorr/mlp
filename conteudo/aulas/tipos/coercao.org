@@ -118,9 +118,15 @@ Mas em LPs no paradigma orientado a objeto
 + Associar um descritor de tipo ao objeto
 + Verificado *durante a execução* do programa
 + \pause Exemplo em Objective-C: =exemplo3.m=
+  #+BEGIN_EXAMPLE
+  gcc -I/usr/include/GNUstep/  \
+      exemplo3.m  -lgnustep-base -lobjc \
+      -o exemplo3
+  #+END_EXAMPLE
+
 
 * Sumário de conversão implícita (coerção)
 Coerção é um assunto controverso
 + Enfraquecem a segurança do sistema de tipos
-+ Por outro lado, apresenta flexibilidade
++ Por outro lado, aumenta a flexibilidade da LP
 

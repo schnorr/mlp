@@ -178,3 +178,4 @@ Exemplo em Java -- =upcasting.java=
 Coerção cada vez menos presente
 
 Mecanismos de conversão explícita se multiplicam
+- em LPs compiladas
