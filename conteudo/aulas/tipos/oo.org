@@ -53,12 +53,15 @@ Parecido com uma \texttt{struct} em C
     char nome[100];
     int idade;
     float peso;
-    void setPeso (struct pessoa *p, float npeso);
-    void setIdade (struct pessoa *p, int nidade);
-    float getPeso (struct pessoa *p);
-    int getIdade (struct pessoa *p);
+    void (*setPeso) (struct pessoa *p, float npeso);
+    void (*setIdade) (struct pessoa *p, int nidade);
+    float (*getPeso) (struct pessoa *p);
+    int (*getIdade) (struct pessoa *p);
   };
   #+end_src
+
+  #+RESULTS:
+
 * Objeto
 Instância de uma classe
 
