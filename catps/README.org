@@ -146,7 +146,6 @@ Até o CATP 7 inclusive, somente para aqueles que entregaram no prazo.
 | ???317 |    1 |   10 |
 | ???317 |    2 |   10 |
 | ???317 |    3 |  6.7 |
-| ???317 |    3 |  6.7 |
 | ???317 |    4 |   10 |
 | ???317 |    5 |    5 |
 | ???317 |    6 |   10 |
@@ -186,7 +185,6 @@ Até o CATP 7 inclusive, somente para aqueles que entregaram no prazo.
 | ???846 |    7 |    3 |
 | ???574 |    1 |   10 |
 | ???574 |    2 |   10 |
-| ???574 |    3 |   10 |
 | ???574 |    3 |   10 |
 | ???574 |    4 |    9 |
 | ???574 |    5 |  6.1 |
