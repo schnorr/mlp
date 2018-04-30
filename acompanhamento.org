@@ -20,6 +20,9 @@
 
 * Principal
 
+Nota CATP é sobre 18, considerando notas liberadas até o CATP #7
+inclusive.
+
 | ID     | CATP |   P1 |  Freq |
 |--------+------+------+-------|
 | ???887 | 2.48 | 5.67 | 78.57 |
