@@ -20,7 +20,7 @@
 
 * Principal
 
-Nota CATP é sobre 18, considerando notas liberadas até o CATP #7
+Nota CATP é sobre 18 atividades, considerando notas liberadas até o CATP #7
 inclusive.
 
 | ID     | CATP |   P1 |  Freq |
