@@ -89,7 +89,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 
 ** Resultados
 
- Até o CATP 7 inclusive, somente para aqueles que entregaram no prazo.
+ Até o CATP#8 inclusive, somente para aqueles que entregaram no prazo.
 
  | ID     | CATP | Nota |
  |--------+------+------|
