@@ -20,8 +20,8 @@
 
 * Principal
 
-Nota CATP é sobre 18 atividades, considerando notas liberadas até o CATP #7
-inclusive.
+A nota na coluna CATP é sobre o total de atividades, considerando as
+avaliações realizadas até o presente momento.
 
 | ID     | CATP |   P1 |  Freq |
 |--------+------+------+-------|
