@@ -52,5 +52,5 @@ main:
 .LC3:
 	.long	0
 	.long	1074528256
-	.ident	"GCC: (Debian 7.2.0-11) 7.2.0"
+	.ident	"GCC: (Debian 7.3.0-16) 7.3.0"
 	.section	.note.GNU-stack,"",@progbits
