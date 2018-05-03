@@ -9,5 +9,5 @@
    - Com tal definição, implemente uma pilha de pilha de pilha de inteiros.
 
 2. Demonstre polimorfismo por inclusão em OO
-   - Em qualquer linguagem salvo C++, Java e Python
+   - Em qualquer linguagem salvo Python, Java, C#, Swift, JS, ObjC
 
