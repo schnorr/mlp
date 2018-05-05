@@ -1,7 +1,6 @@
 #include <iostream>
 
-template <class TipoGenerico>
-class Pilha {
+template <class TipoGenerico> class Pilha {
 private:
   TipoGenerico *stackPtr;
   int maxLen;
