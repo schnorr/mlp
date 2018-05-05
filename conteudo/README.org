@@ -17,94 +17,94 @@ PDF.
 
 *** Realizado
 
- | Setor        | Descrição                                           | CATPs |
- |--------------+-----------------------------------------------------+-------|
- | Geral        | [[./aulas/geral/apresentacao.org][Apresentação da Disciplina]]                          |       |
- | Geral        | [[./aulas/geral/introducao.org][Introdução Geral]]                                    |       |
- | Geral        | [[./aulas/geral/criterios.org][Critérios e Características de LP]]                   | [[../catps/][#01]]   |
- | Geral        | [[./aulas/geral/implementacao.org][Implementação de LP: compilação e interpretação]]     |       |
- | Funcional    | [[./aulas/funcional/contextualizacao.org][Contextualização e Histórico, Origem dos Paradigmas]] |       |
- | Funcional    | [[./aulas/funcional/funcional.org][Programação Funcional]]                               |       |
- | Funcional    | [[./aulas/funcional/lambda.org][Cálculo Lambda]]                                      |       |
- | Funcional    | [[./aulas/r/introducao.org][R: Introdução, Listas e recursividade]]               | [[../catps/][#02]]   |
- | Funcional    | [[./aulas/r/funcionais.org][R: Funcionais]]                                       | [[../catps/][#03]]   |
- | Funcional    | [[./aulas/r/manipulacao.org][R: Manipulação de Dados]]                             | [[../catps/][#04]]   |
- | Lógico       | [[./aulas/prolog/introducao.org][Prolog: Introdução]]                                  |       |
- | Lógico       | [[./aulas/prolog/inferencia.org][Prolog: Processo de Inferência]]                      | [[../catps/][#05]]   |
- | Lógico       | [[./aulas/prolog/controlefluxo.org][Prolog: Controle de Fluxo]]                           |       |
- | Lógico       | [[./aulas/prolog/recursividade.org][Prolog: Recursividade]]                               | [[../catps/][#06]]   |
- | Lógico       | [[./aulas/prolog/metapredicados.org][Prolog: Metapredicados]]                              |       |
- | Lógico       | [[./aulas/prolog/listas.org][Prolog: Manipulação de Listas]]                       | [[../catps/][#07]]   |
- |--------------+-----------------------------------------------------+-------|
- | Vinculações  | [[./aulas/vinculos/introducao.org][Introdução e espaço de vinculações]]                  |       |
- | Vinculações  | [[./aulas/vinculos/nomes.org][Nomes]]                                               |       |
- | Vinculações  | [[./aulas/vinculos/tipos.org][Tipos]]                                               |       |
- | Vinculações  | [[./aulas/vinculos/estocagem.org][Estocagem]]                                           |       |
- |--------------+-----------------------------------------------------+-------|
- | Vinculações  | [[./aulas/vinculos/escopo.org][Escopo]]                                              | [[../catps/][#08]]   |
- | Vinculações  | [[./aulas/vinculos/declaracao.org][Declaração/Definição]]                                |       |
- | Vinculações  | [[./aulas/vinculos/ponteiros.org][Ponteiros]]                                           |       |
- |--------------+-----------------------------------------------------+-------|
- | Tipos        | [[./aulas/tipos/introducao.org][Introdução]]                                          |       |
- | Tipos        | [[./aulas/tipos/sistema.org][Sistema de Tipos]]                                    | [[../catps/][#09]]   |
- | Tipos        | [[./aulas/tipos/implementacao.org][Implementação]]                                       |       |
- | Tipos        | [[./aulas/tipos/oo.org][Orientação a Objetos]]                                |       |
- |--------------+-----------------------------------------------------+-------|
- | Tipos        | [[./aulas/tipos/compatibilidade.org][Compatibilidade]]                                     |       |
- | Tipos        | [[./aulas/tipos/coercao.org][Coerção]]                                             |       |
- | Tipos        | [[./aulas/tipos/explicita.org][Conversão Explícita]]                                 |       |
- |--------------+-----------------------------------------------------+-------|
+ | Setor       | Descrição                                           | CATPs | Sebesta | Scott |
+ |-------------+-----------------------------------------------------+-------+---------+-------|
+ | Geral       | [[./aulas/geral/apresentacao.org][Apresentação da Disciplina]]                          |       |         |       |
+ | Geral       | [[./aulas/geral/introducao.org][Introdução Geral]]                                    |       |         |       |
+ | Geral       | [[./aulas/geral/criterios.org][Critérios e Características de LP]]                   | [[../catps/][#01]]   |         |       |
+ | Geral       | [[./aulas/geral/implementacao.org][Implementação de LP: compilação e interpretação]]     |       |         |       |
+ | Funcional   | [[./aulas/funcional/contextualizacao.org][Contextualização e Histórico, Origem dos Paradigmas]] |       |         |       |
+ | Funcional   | [[./aulas/funcional/funcional.org][Programação Funcional]]                               |       |         |       |
+ | Funcional   | [[./aulas/funcional/lambda.org][Cálculo Lambda]]                                      |       |         |       |
+ | Funcional   | [[./aulas/r/introducao.org][R: Introdução, Listas e recursividade]]               | [[../catps/][#02]]   |         |       |
+ | Funcional   | [[./aulas/r/funcionais.org][R: Funcionais]]                                       | [[../catps/][#03]]   |         |       |
+ | Funcional   | [[./aulas/r/manipulacao.org][R: Manipulação de Dados]]                             | [[../catps/][#04]]   |         |       |
+ | Lógico      | [[./aulas/prolog/introducao.org][Prolog: Introdução]]                                  |       |         |       |
+ | Lógico      | [[./aulas/prolog/inferencia.org][Prolog: Processo de Inferência]]                      | [[../catps/][#05]]   |         |       |
+ | Lógico      | [[./aulas/prolog/controlefluxo.org][Prolog: Controle de Fluxo]]                           |       |         |       |
+ | Lógico      | [[./aulas/prolog/recursividade.org][Prolog: Recursividade]]                               | [[../catps/][#06]]   |         |       |
+ | Lógico      | [[./aulas/prolog/metapredicados.org][Prolog: Metapredicados]]                              |       |         |       |
+ | Lógico      | [[./aulas/prolog/listas.org][Prolog: Manipulação de Listas]]                       | [[../catps/][#07]]   |         |       |
+ |-------------+-----------------------------------------------------+-------+---------+-------|
+ | Vinculações | [[./aulas/vinculos/introducao.org][Introdução e espaço de vinculações]]                  |       |         |       |
+ | Vinculações | [[./aulas/vinculos/nomes.org][Nomes]]                                               |       |         |       |
+ | Vinculações | [[./aulas/vinculos/tipos.org][Tipos]]                                               |       |         |       |
+ | Vinculações | [[./aulas/vinculos/estocagem.org][Estocagem]]                                           |       |         |       |
+ |-------------+-----------------------------------------------------+-------+---------+-------|
+ | Vinculações | [[./aulas/vinculos/escopo.org][Escopo]]                                              | [[../catps/][#08]]   |         |       |
+ | Vinculações | [[./aulas/vinculos/declaracao.org][Declaração/Definição]]                                |       |         |       |
+ | Vinculações | [[./aulas/vinculos/ponteiros.org][Ponteiros]]                                           |       |         |       |
+ |-------------+-----------------------------------------------------+-------+---------+-------|
+ | Tipos       | [[./aulas/tipos/introducao.org][Introdução]]                                          |       |         |       |
+ | Tipos       | [[./aulas/tipos/sistema.org][Sistema de Tipos]]                                    | [[../catps/][#09]]   |         |       |
+ | Tipos       | [[./aulas/tipos/implementacao.org][Implementação]]                                       |       |         |       |
+ | Tipos       | [[./aulas/tipos/oo.org][Orientação a Objetos]]                                |       |         |       |
+ |-------------+-----------------------------------------------------+-------+---------+-------|
+ | Tipos       | [[./aulas/tipos/compatibilidade.org][Compatibilidade]]                                     |       |         |       |
+ | Tipos       | [[./aulas/tipos/coercao.org][Coerção]]                                             |       |         |       |
+ | Tipos       | [[./aulas/tipos/explicita.org][Conversão Explícita]]                                 |       |         |       |
+ |-------------+-----------------------------------------------------+-------+---------+-------|
 
  PA até este ponto.
 
- | Setor        | Descrição                                  | CATPs |
- |--------------+--------------------------------------------+-------|
- | Fluxo        | [[./aulas/fluxo/introducao.org][Introdução]]                                 |       |
- | Fluxo        | [[./aulas/fluxo/basicas.org][Básicas]]                                    |       |
- | Fluxo        | [[./aulas/fluxo/aritmeticas.org][Aritméticas]]                                |       |
- | Fluxo        | [[./aulas/fluxo/logicas.org][Lógicas]]                                    |       |
- | Fluxo        | [[./aulas/fluxo/atribuicao.org][Atribuição]]                                 |       |
- | Fluxo        | [[./aulas/fluxo/estruturas.org][Estruturas Explícitas de Controle]]          | [[../catps/][#10]]   |
- | Fluxo        | [[./aulas/fluxo/desvios.org][Desvios incondicionais]]                     |       |
- |--------------+--------------------------------------------+-------|
- | Polimorfismo | [[./aulas/polimorfismo/tad-parametrico.org][Tipos Abstratos de Dados Parametrizados]]    |       |
- | Polimorfismo | [[./aulas/polimorfismo/introducao.org][Introdução]]                                 |       |
- | Polimorfismo | [[./aulas/polimorfismo/adhoc.org][Ad-hoc]]                                     |       |
- | Polimorfismo | [[./aulas/polimorfismo/universal.org][Universal]]                                  |       |
- | Polimorfismo | [[./aulas/polimorfismo/vinculacao.org][Vinculação]]                                 | [[../catps/][#11]]   |
- |--------------+--------------------------------------------+-------|
- | Subprogramas | [[./aulas/subprogramas/introducao.org][Introdução]]                                 |       |
- | Subprogramas | [[./aulas/subprogramas/registro.org][Registros de Ativação]]                      |       |
- | Subprogramas | [[./aulas/subprogramas/acesso.org][Acesso a Dados]]                             |       |
- | Subprogramas | [[./aulas/subprogramas/didatica.pdf][Abstrações de Controle]] (Bonus fundamental) |       |
- | Subprogramas | [[./aulas/subprogramas/parametros.org][Parâmetros]]                                 |       |
- | Subprogramas | [[./aulas/subprogramas/passagem.org][Métodos de Passagem de Parâmetros]]          |       |
- | Subprogramas | [[./aulas/subprogramas/closures.org][Subprogramas como parâmetros]]               | [[../catps/][#12]]   |
- |--------------+--------------------------------------------+-------|
- | OO           | [[./aulas/oo/abstracao.org][Conceito de Abstração]]                      |       |
- | OO           | [[./aulas/oo/introducao.org][Introdução]]                                 |       |
- | OO           | [[./aulas/oo/encapsulamento.org][Encapsulamento]]                             |       |
- | OO           | [[./aulas/oo/inicializacao.org][Inicialização, Finalização, Cópia]]          | [[../catps/][#13]]   |
- | OO           | [[./aulas/oo/heranca.org][Herança]]                                    | [[../catps/][#14]]   |
- | OO           | [[./aulas/oo/parametrico.org][Paramétrico]]                                | [[../catps/][#15]]   |
- |--------------+--------------------------------------------+-------|
- | Exceções     | [[./aulas/excecoes/introducao.org][Introdução]]                                 |       |
- | Exceções     | [[./aulas/excecoes/sistemas.org][Sistema de Tratamento de Exceções]]          |       |
- | Exceções     | [[./aulas/excecoes/implementacao.org][Implementação]]                              | [[../catps/][#16]]   |
- |--------------+--------------------------------------------+-------|
- | Monte        | [[./aulas/monte/gerenciamento.org][Gerenciamento]]                              |       |
- | Monte        | [[./aulas/monte/coleta.org][Coleta de Lixo]]                             | [[../catps/][#17]]   |
- |--------------+--------------------------------------------+-------|
- | Script       | [[./aulas/script/introducao.org][Linguagens de Script]]                       |       |
- | Script       | [[./aulas/script/caracteristicas.org][Características Comuns]]                     |       |
- | Script       | [[./aulas/script/dominios.org][Domínios de Problemas]]                      |       |
- | Script       | [[./aulas/script/inovacoes.org][Inovações, Discussão, "Pior é melhor"]]      | #18   |
- |--------------+--------------------------------------------+-------|
- | Paralelismo  | [[./aulas/paralela/introducao.org][Introdução]]                                 |       |
- | OpenMP       | [[./aulas/paralela/openmp.org][OpenMP]]                                     |       |
- | OpenMP       | [[./aulas/paralela/lacos.org][Algoritmos de escalonamento]]                |       |
- | OpenMP       | [[./aulas/paralela/compartilhamento.org][Compartilhamento de Variáveis]]              | [[../catps/][#19]]   |
- |--------------+--------------------------------------------+-------|
+ | Setor        | Descrição                                  | CATPs | Sebesta | Scott |
+ |--------------+--------------------------------------------+-------+---------+-------|
+ | Fluxo        | [[./aulas/fluxo/introducao.org][Introdução]]                                 |       |         |       |
+ | Fluxo        | [[./aulas/fluxo/basicas.org][Básicas]]                                    |       |         |       |
+ | Fluxo        | [[./aulas/fluxo/aritmeticas.org][Aritméticas]]                                |       |         |       |
+ | Fluxo        | [[./aulas/fluxo/logicas.org][Lógicas]]                                    |       |         |       |
+ | Fluxo        | [[./aulas/fluxo/atribuicao.org][Atribuição]]                                 |       |         |       |
+ | Fluxo        | [[./aulas/fluxo/estruturas.org][Estruturas Explícitas de Controle]]          | [[../catps/][#10]]   |         |       |
+ | Fluxo        | [[./aulas/fluxo/desvios.org][Desvios incondicionais]]                     |       |         |       |
+ |--------------+--------------------------------------------+-------+---------+-------|
+ | Polimorfismo | [[./aulas/polimorfismo/tad-parametrico.org][Tipos Abstratos de Dados Parametrizados]]    |       |         |       |
+ | Polimorfismo | [[./aulas/polimorfismo/introducao.org][Introdução]]                                 |       |         |       |
+ | Polimorfismo | [[./aulas/polimorfismo/adhoc.org][Ad-hoc]]                                     |       |         |       |
+ | Polimorfismo | [[./aulas/polimorfismo/universal.org][Universal]]                                  |       |         |       |
+ | Polimorfismo | [[./aulas/polimorfismo/vinculacao.org][Vinculação]]                                 | [[../catps/][#11]]   |         |       |
+ |--------------+--------------------------------------------+-------+---------+-------|
+ | Subprogramas | [[./aulas/subprogramas/introducao.org][Introdução]]                                 |       |         |       |
+ | Subprogramas | [[./aulas/subprogramas/registro.org][Registros de Ativação]]                      |       |         |       |
+ | Subprogramas | [[./aulas/subprogramas/acesso.org][Acesso a Dados]]                             |       |         |       |
+ | Subprogramas | [[./aulas/subprogramas/didatica.pdf][Abstrações de Controle]] (Bonus fundamental) |       |         |       |
+ | Subprogramas | [[./aulas/subprogramas/parametros.org][Parâmetros]]                                 |       |         |       |
+ | Subprogramas | [[./aulas/subprogramas/passagem.org][Métodos de Passagem de Parâmetros]]          |       |         |       |
+ | Subprogramas | [[./aulas/subprogramas/closures.org][Subprogramas como parâmetros]]               | [[../catps/][#12]]   |         |       |
+ |--------------+--------------------------------------------+-------+---------+-------|
+ | OO           | [[./aulas/oo/abstracao.org][Conceito de Abstração]]                      |       |         |       |
+ | OO           | [[./aulas/oo/introducao.org][Introdução]]                                 |       |         |       |
+ | OO           | [[./aulas/oo/encapsulamento.org][Encapsulamento]]                             |       |         |       |
+ | OO           | [[./aulas/oo/inicializacao.org][Inicialização, Finalização, Cópia]]          | [[../catps/][#13]]   |         |       |
+ | OO           | [[./aulas/oo/heranca.org][Herança]]                                    | [[../catps/][#14]]   |         |       |
+ | OO           | [[./aulas/oo/parametrico.org][Paramétrico]]                                | [[../catps/][#15]]   |         |       |
+ |--------------+--------------------------------------------+-------+---------+-------|
+ | Exceções     | [[./aulas/excecoes/introducao.org][Introdução]]                                 |       |         |       |
+ | Exceções     | [[./aulas/excecoes/sistemas.org][Sistema de Tratamento de Exceções]]          |       |         |       |
+ | Exceções     | [[./aulas/excecoes/implementacao.org][Implementação]]                              | [[../catps/][#16]]   |         |       |
+ |--------------+--------------------------------------------+-------+---------+-------|
+ | Monte        | [[./aulas/monte/gerenciamento.org][Gerenciamento]]                              |       |         |       |
+ | Monte        | [[./aulas/monte/coleta.org][Coleta de Lixo]]                             | [[../catps/][#17]]   |         |       |
+ |--------------+--------------------------------------------+-------+---------+-------|
+ | Script       | [[./aulas/script/introducao.org][Linguagens de Script]]                       |       |         |       |
+ | Script       | [[./aulas/script/caracteristicas.org][Características Comuns]]                     |       |         |       |
+ | Script       | [[./aulas/script/dominios.org][Domínios de Problemas]]                      |       |         |       |
+ | Script       | [[./aulas/script/inovacoes.org][Inovações, Discussão, "Pior é melhor"]]      | #18   |         |       |
+ |--------------+--------------------------------------------+-------+---------+-------|
+ | Paralelismo  | [[./aulas/paralela/introducao.org][Introdução]]                                 |       |         |       |
+ | OpenMP       | [[./aulas/paralela/openmp.org][OpenMP]]                                     |       |         |       |
+ | OpenMP       | [[./aulas/paralela/lacos.org][Algoritmos de escalonamento]]                |       |         |       |
+ | OpenMP       | [[./aulas/paralela/compartilhamento.org][Compartilhamento de Variáveis]]              | [[../catps/][#19]]   |         |       |
+ |--------------+--------------------------------------------+-------+---------+-------|
 
 *** Conteúdo de edições anteriores
 
