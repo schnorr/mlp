@@ -40,7 +40,7 @@ public:
     }
   };
 
-  int topo() {
+  TipoGenerico topo() {
     if (vazio()){
       std::cerr << "Error in top - stack is empty" << std::endl;
     }else{
