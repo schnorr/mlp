@@ -4,6 +4,12 @@
 
 * #1
 
+| Sumário de respostas |
+|----------------------|
+|                   11 |
+|                    6 |
+|                BBB** |
+
 A expressão =+*AB-CD= se torna =+ * 3 4 - 5 6= depois da substituição dos
 valores. Como temos uma notação préfixada nesta expressão, devemos
 considerar que os operandos de um operador encontram-se após o
