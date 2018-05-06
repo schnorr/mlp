@@ -67,8 +67,30 @@ operandos: =B= e =B B *=.
 
 * #4
 
+Uma avaliação em curto-circuito ocorre quando é possível retornar o
+valor da expressão sem avaliar ela por completo.
+
 * #5
+
+(por fazer)
 
 * #6
 
+Supondo que a linguagem de programação deste exercício aceite alvos
+condicionais em comandos de atribuição, o código acima seria
+equivalente a:
+#+BEGIN_EXAMPLE
+(teste == f() ? x : z) = y();
+#+END_EXAMPLE
+Este tipo de construção sintática está disponível na linguagem Perl,
+por exemplo. O código original pode ser considerado mais legível que a
+versão ternária, pois fica claro o comportamento. O código na sua
+versão ternária é mais expressivo pois existe a mesma semântica com
+uma menor quantidade de código.
+
 * #7
+
+O grafo a seguir é uma possível resposta para esta questão. Os números
+no interior dos nós indicam as linhas de código correspondentes.
+
+[[./grafo.png]]
