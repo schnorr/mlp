@@ -44,6 +44,12 @@ operandos: =B= e =B B *=.
 
 * #2
 
+- + A - B / C D * 4 9 (pré) e A B C D / * + 4 9 - (pós)
+- * * * * A B C D E (pré) e A B C D E * * * * (pós)
+- - * A B + / C D 10  (pré) e A B * C D / - 10 + (pós)
+- * - 10 8 9 (pré) e 10 8 - 9 * (pós)
+- - * / 15 - 7 + 1 1 3 + 2 + 1 1 (pré) e 15 7 1 1 + - / 3 * 2 1 1 + + - (pós)
+
 * #3
 
 * #4
