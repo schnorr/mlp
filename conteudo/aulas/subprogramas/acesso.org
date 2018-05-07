@@ -23,6 +23,7 @@ Duas formas
    - Mais flexível, seguro e legível
 2. Através de *acesso direto a variáveis não locais*
 * Acesso a Variáveis não Locais
+
 Variáveis não-locais
 + Declaradas em outro bloco (visível) dentro do programa
 + Acesso depende se o escopo é *estático* ou *dinâmico*
@@ -35,19 +36,26 @@ Variáveis não-locais
 + Dois métodos de localização
     + Encadeamento estático (/static chain/)
     + Displays
+
 * Acesso a Variáveis não Locais \small (Encadeamento Estático)
+
 Cadeia de vínculos estáticos (VE) que conectam registros de ativação
 
 Vincula todos os ancestrais estáticos de um subprograma
-#+latex: \vfill
-\pause Endereço de uma variável é uma *tupla*
+
+#+latex: \vfill\pause
+
+Endereço de uma variável é uma *tupla*
 + Profundidade estática
 + Deslocamento local
-#+latex: \vfill
-\pause Problemas do Encadeamento Estático
+
+#+latex: \vfill\pause
+
+Problemas do Encadeamento Estático
 + Encontrar uma variável pode envolver vários acessos
     + Igual ao nível de profundidade do subprograma
 + Deve-se localizar o RA mais recente do subprograma pai
+
 * Acesso a Variáveis não Locais \small (Display)
 Vínculos estáticos ficam no *Display*
 
@@ -88,6 +96,9 @@ Fornecer
 * Observações
 
 Blocos de código sem nome
+1. Tratar como um subprograma sem parâmetro, ou seja, com RA
+2. Alocar vars. locais no topo do RA do subprograma que o engloba
+
 
 Expansão =inline=
 + Diferença de macros do pré-processador
