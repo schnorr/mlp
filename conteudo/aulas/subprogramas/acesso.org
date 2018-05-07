@@ -57,7 +57,7 @@ Vetor que armazena uma lista de endereços dos RA
 Custo baixo no acesso a variáveis locais
 
 Deve-se gerenciar o display (a cada chamada e retorno)
-* Display -- Exercício 3
+* Exercício
 Supor o código
   \scriptsize
   #+begin_src C
@@ -81,7 +81,10 @@ A ordem de chamada é
   #+begin_src C
   A E B D C
   #+end_src
-Fornecer o conteúdo detalhado do display em cada passo
+Fornecer
+- o conteúdo detalhado do display em cada passo
+- VE na pilha
+
 * Observações
 
 Blocos de código sem nome
