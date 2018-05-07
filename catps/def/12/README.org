@@ -73,7 +73,10 @@
        | por Valor-Resultado | B     |       |      |
        | por Valor-Resultado | C     |       |      |
 
-  4. Considere o seguinte programa escrito na sintaxe da linguagem C:
+** Opcional
+
+
+ 1. Considere o seguinte programa escrito na sintaxe da linguagem C:
      #+BEGIN_EXAMPLE
     void fun(int first, int second) {
       first += first;
