@@ -33,7 +33,9 @@
   2. Para o código do exercício anterior, mostre o deslocamento em
      relação ao =fp= (/frame pointer/) calculado pelo compilador
      para cada uma das variáveis. Assuma que o tamanho dos tipos =int=,
-     =float= sejam de 4 bytes e =char= seja de 1 byte.
+     =float= sejam de 4 bytes e =char= seja de 1 byte. Assuma que os
+     vínculos dinâmicos e estático ocupem 4 bytes, e que o estado da
+     máquina (registradores, etc) ocupa 8 bytes.
 
   3. Considere o seguinte programa escrito na sintaxe da linguagem C:
      #+BEGIN_EXAMPLE
