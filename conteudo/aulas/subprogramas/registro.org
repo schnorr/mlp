@@ -104,16 +104,16 @@ Supor o código
   \scriptsize
   #+begin_src C
   A(){
-    int vara;
+    int va;
 
     B(){
-      int varb;
+      int vb;
 
-      C(){ int varc; }
-      D(){ int varc; }
+      C(){ int vc; }
+      D(){ int vc; }
     }
     E(){
-      int vare;
+      int ve;
  
     }
   }
