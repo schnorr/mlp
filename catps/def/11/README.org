@@ -6,7 +6,7 @@
 
 1. Implementa em C++ um tipo de dados =Fila= que trabalhe com qualquer tipo.
    - Use =templates=.
-   - Com tal definição, implemente uma pilha de pilha de pilha de inteiros.
+   - Com tal definição, implemente uma fila de fila de fila de inteiros.
 
 2. Demonstre polimorfismo por inclusão em OO
    - Em qualquer linguagem salvo Python, Java, C#, Swift, JS, ObjC
