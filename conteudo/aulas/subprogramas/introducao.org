@@ -38,7 +38,7 @@ Vantagens
 * Subprograma
 Único ponto de entrada, vários de saída
 
-Apresenta uma relação de mestre-escravo
+Apresenta uma relação de mestre-trabalhador
 #+latex: \vfill
 
 Controle é suspenso na unidade chamadora
