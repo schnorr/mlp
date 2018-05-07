@@ -84,9 +84,12 @@
       fun(list[0], list[1]);
     }     
      #+END_EXAMPLE
+
      Para cada um dos métodos seguintes, quais são os valores no vetor
      =list= após a execução?
-     - Passagem por valor
-     - Passagem por referência
-     - Passagem por valor-resultado
 
+     | Método              | Valor do vetor =list= no final |
+     |---------------------+------------------------------|
+     | por Valor           |                              |
+     | por Referência      |                              |
+     | por Valor-Resultado |                              |
