@@ -6,7 +6,7 @@
 
   1. Mostre o conteúdo detalhado da pilha com registros de ativação,
      incluindo os ponteiros de vínculo dinâmico e estático, quando a
-     execução atinge a {\bf linha 10} no seguinte esqueleto de
+     execução atinge a =linha 10= no seguinte esqueleto de
      programa. Para tal, considere que a sequência de chamada é a
      seguinte: =main= chama =fun2=, =fun2= chama =fun1=, =fun1= chama =fun1=, e
      =fun1= chama =fun3=.
@@ -21,7 +21,7 @@
       ...
     }
     void fun3() {
-      float d;
+      float d; // Esta é a linha 10
       ...
     }
     void main() {
