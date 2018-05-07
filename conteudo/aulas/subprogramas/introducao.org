@@ -48,7 +48,7 @@ Retorna após o fim da unidade chamada
 \pause Tipos de subprogramas
 + Função \scriptsize -- Retorna um valor
 + \small Procedimento \scriptsize -- *Não* retorna um valor
-+ \pause \small Corotinas \rightarrow quebram a relação de mestre-escravo
++ \pause \small Corotinas \rightarrow quebram a relação de mestre-trabalhador
     + *Múltiplas entradas*
     + Linguagens: apenas Lua (e Python) as implementam
 
