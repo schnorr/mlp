@@ -4,28 +4,28 @@ Todos os prazos são até as 23:59 da data informada.
 
 Não se engane, tente resolvê-los antes de olhar as respostas.
 
-| CATP | Descrição                            | Entrega    |      Prazo | Aval. | Resp. |
-|------+--------------------------------------+------------+------------+-------+-------|
-| #01  | [[./def/01/formulario.pdf][Formulário de Avaliação de LPs]]       | [[https://goo.gl/forms/ESOxCX5dI85V895R2][Formulário]] | 2018-03-12 |       | NA    |
-| #02  | [[./def/02/README.org][Listas e recursividade em R]]          | [[https://goo.gl/forms/zBzVXAaCxTUJMngA3][Formulário]] | 2018-03-19 |       | [[./resp/02.org][#02]]   |
-| #03  | [[./def/03/README.org][Recursividade e funcionais em R]]      | [[https://goo.gl/forms/i66aq6jtqohvh6jG3][Formulário]] | 2018-03-26 |       | [[./resp/03.org][#03]]   |
-| #04  | [[./def/04/README.org][Manipulação de dados em R]]            | [[https://goo.gl/forms/JlyBnySDhWH4eeKq1][Formulário]] | 2018-03-28 |       | [[./def/04/README.org][#04]]   |
-| #05  | [[./def/05/README.org][Processo de Inferência em Prolog]]     | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]] | 2018-04-02 |       | [[./resp/05.org][#05]]   |
-| #06  | Implementação de Fibonacci em Prolog | [[https://goo.gl/forms/SlzDngBjA3Fcqanl1][Formulário]] | 2018-04-05 |       | [[./resp/06.org][#06]]   |
-| #07  | [[./def/07/README.org][Manipulação de listas em Prolog]]      | [[https://goo.gl/forms/WK9Ug9D1dZWbfNJx2][Formulário]] | 2018-04-10 |       | [[./resp/07.org][#07]]   |
-| #08  | [[./def/08/README.org][Vinculação de estocagem e escopo]]     | [[https://goo.gl/forms/XiBUY20Uq27MO9QX2][Formulário]] | 2018-04-19 |       | [[./resp/08.org][#08]]   |
-| #09  | [[./def/09/README.org][Vínculos e Tipos de dados]]            | [[https://goo.gl/forms/hPgR5XrYwOhwLHB22][Formulário]] | 2018-04-23 |       | [[./resp/09.org][#09]]   |
-|------+--------------------------------------+------------+------------+-------+-------|
-| #10  | [[./def/10/README.org][Controle de Fluxo]]                    | [[https://goo.gl/forms/9q2TEEu3JmHyN17F2][Formulário]] | 2018-05-03 |       | [[./resp/10.org][#10]]   |
-| #11  | [[./def/11/README.org][Polimorfismo]]                         | [[https://goo.gl/forms/3M8jwFABt9rfzuFv1][Formulário]] | 2018-05-10 |       |       |
-| #12  | [[./def/12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]] | 2018-05-17 |       |       |
-| #13  | [[./def/13/README.org][Encapsulamento em OO]]                 | [[https://goo.gl/forms/JsAzqE3rKboHzJx23][Formulário]] |            |       |       |
-| #14  | [[./def/14/README.org][Herança em OO]]                        | [[https://goo.gl/forms/YHaDmzofJaKQqJT22][Formulário]] |            |       |       |
-| #15  | [[./def/15/README.org][Polimorfimo Paramétrico em OO]]        | [[https://goo.gl/forms/xzLPAPJAWoTlKtki2][Formulário]] |            |       |       |
-| #16  | [[./def/16/README.org][Exceções]]                             | [[https://goo.gl/forms/g0AJ2VlY3fmq17UG2][Formulário]] |            |       |       |
-| #17  | [[./def/17/README.org][Valgrind]]                             | [[https://goo.gl/forms/YzaGXvZxrtS3xlZs2][Formulário]] |            |       |       |
-| #18  | Linguagens de Script                 |            |            |       |       |
-| #19  | [[./def/19/README.org][Integração Numérica com Paralelismo]]  | [[https://goo.gl/forms/pPEETL2bPIr80dvf2][Formulário]] |            |       |       |
+| CATP | Descrição                            | Entrega    |      Prazo | Resp. |
+|------+--------------------------------------+------------+------------+-------|
+| #01  | [[./def/01/formulario.pdf][Formulário de Avaliação de LPs]]       | [[https://goo.gl/forms/ESOxCX5dI85V895R2][Formulário]] | 2018-03-12 | NA    |
+| #02  | [[./def/02/README.org][Listas e recursividade em R]]          | [[https://goo.gl/forms/zBzVXAaCxTUJMngA3][Formulário]] | 2018-03-19 | [[./resp/02.org][#02]]   |
+| #03  | [[./def/03/README.org][Recursividade e funcionais em R]]      | [[https://goo.gl/forms/i66aq6jtqohvh6jG3][Formulário]] | 2018-03-26 | [[./resp/03.org][#03]]   |
+| #04  | [[./def/04/README.org][Manipulação de dados em R]]            | [[https://goo.gl/forms/JlyBnySDhWH4eeKq1][Formulário]] | 2018-03-28 | [[./def/04/README.org][#04]]   |
+| #05  | [[./def/05/README.org][Processo de Inferência em Prolog]]     | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]] | 2018-04-02 | [[./resp/05.org][#05]]   |
+| #06  | Implementação de Fibonacci em Prolog | [[https://goo.gl/forms/SlzDngBjA3Fcqanl1][Formulário]] | 2018-04-05 | [[./resp/06.org][#06]]   |
+| #07  | [[./def/07/README.org][Manipulação de listas em Prolog]]      | [[https://goo.gl/forms/WK9Ug9D1dZWbfNJx2][Formulário]] | 2018-04-10 | [[./resp/07.org][#07]]   |
+| #08  | [[./def/08/README.org][Vinculação de estocagem e escopo]]     | [[https://goo.gl/forms/XiBUY20Uq27MO9QX2][Formulário]] | 2018-04-19 | [[./resp/08.org][#08]]   |
+| #09  | [[./def/09/README.org][Vínculos e Tipos de dados]]            | [[https://goo.gl/forms/hPgR5XrYwOhwLHB22][Formulário]] | 2018-04-23 | [[./resp/09.org][#09]]   |
+|------+--------------------------------------+------------+------------+-------|
+| #10  | [[./def/10/README.org][Controle de Fluxo]]                    | [[https://goo.gl/forms/9q2TEEu3JmHyN17F2][Formulário]] | 2018-05-03 | [[./resp/10.org][#10]]   |
+| #11  | [[./def/11/README.org][Polimorfismo]]                         | [[https://goo.gl/forms/3M8jwFABt9rfzuFv1][Formulário]] | 2018-05-10 |       |
+| #12  | [[./def/12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]] | 2018-05-17 |       |
+| #13  | [[./def/13/README.org][Encapsulamento em OO]]                 | [[https://goo.gl/forms/JsAzqE3rKboHzJx23][Formulário]] |            |       |
+| #14  | [[./def/14/README.org][Herança em OO]]                        | [[https://goo.gl/forms/YHaDmzofJaKQqJT22][Formulário]] |            |       |
+| #15  | [[./def/15/README.org][Polimorfimo Paramétrico em OO]]        | [[https://goo.gl/forms/xzLPAPJAWoTlKtki2][Formulário]] |            |       |
+| #16  | [[./def/16/README.org][Exceções]]                             | [[https://goo.gl/forms/g0AJ2VlY3fmq17UG2][Formulário]] |            |       |
+| #17  | [[./def/17/README.org][Valgrind]]                             | [[https://goo.gl/forms/YzaGXvZxrtS3xlZs2][Formulário]] |            |       |
+| #18  | Linguagens de Script                 |            |            |       |
+| #19  | [[./def/19/README.org][Integração Numérica com Paralelismo]]  | [[https://goo.gl/forms/pPEETL2bPIr80dvf2][Formulário]] |            |       |
 
 * Avaliação
 ** Estatísticas
