@@ -86,11 +86,31 @@ Vínculos estáticos ficam no *Display*
 
 Vetor que armazena uma lista de endereços dos RA
 + Na ordem em que estão aninhados
-#+latex: \vfill
-Custo constante no acesso a variáveis não locais
+#+latex: \vfill\pause
 
-Deve-se gerenciar o display (a cada chamada e retorno)
-- Da mesma forma que o encadeamento
+Gerenciamento do Display
+- Posição no vetor é a profundida estática do procedimento
+- Tamanho k+1; k é a profundidade da função em execução
+- Para uma chamada a um procedimento P com profundidade k
+  - Salvar uma cópia da posição k no RA
+  - Colocar o ponteiro para o novo RA para P na posição k
+  - No retorno, mover a posição salva de volta a posição k
+  
+
+* Comparação entre encadeamento estático e displays
+
+- Referências para variáveis locais (sem diferença)
+- Referências para variáveis _não locais_
+  - Se um nível longe, o custo é o mesmo
+  - Se mais longe, o display é melhor
+  - Display é melhor para código para aplic. de tempo real
+    - Referências para variáveis não locais é constante
+- Chamadas de procedimentos (display usa mais memória no RA)
+
+#+latex: \vfill\pause
+
+Sumário: encadeamento estático é melhor
+- a menos que o display seja mantido em registradores
 
 * Exercício
 Supor o código
