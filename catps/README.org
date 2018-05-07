@@ -18,7 +18,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 |------+--------------------------------------+------------+------------+-------+-------|
 | #10  | [[./def/10/README.org][Controle de Fluxo]]                    | [[https://goo.gl/forms/9q2TEEu3JmHyN17F2][Formulário]] | 2018-05-03 |       | [[./resp/10.org][#10]]   |
 | #11  | [[./def/11/README.org][Polimorfismo]]                         | [[https://goo.gl/forms/3M8jwFABt9rfzuFv1][Formulário]] | 2018-05-10 |       |       |
-| #12  | [[./def/12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]] |            |       |       |
+| #12  | [[./def/12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]] | 2018-05-17 |       |       |
 | #13  | [[./def/13/README.org][Encapsulamento em OO]]                 | [[https://goo.gl/forms/JsAzqE3rKboHzJx23][Formulário]] |            |       |       |
 | #14  | [[./def/14/README.org][Herança em OO]]                        | [[https://goo.gl/forms/YHaDmzofJaKQqJT22][Formulário]] |            |       |       |
 | #15  | [[./def/15/README.org][Polimorfimo Paramétrico em OO]]        | [[https://goo.gl/forms/xzLPAPJAWoTlKtki2][Formulário]] |            |       |       |
