@@ -18,10 +18,10 @@
 * Subprogramas -- Acesso a dados
 Duas formas
 #+latex: \vfill
-Através da passagem de parâmetros
-+ Nomes locais aos subprogramas
-+ Mais flexível, seguro e legível
-Através de *acesso direto a variáveis não locais*
+1. Através da passagem de parâmetros
+   - Nomes locais aos subprogramas (como variáveis locais)
+   - Mais flexível, seguro e legível
+2. Através de *acesso direto a variáveis não locais*
 * Acesso a Variáveis não Locais
 Variáveis não-locais
 + Declaradas em outro bloco (visível) dentro do programa
@@ -82,7 +82,9 @@ A ordem de chamada é
   A E B D C
   #+end_src
 Fornecer o conteúdo detalhado do display em cada passo
-* Algumas Observações (Bonus)
-Blocos
+* Observações
+
+Blocos de código sem nome
+
 Expansão =inline=
 + Diferença de macros do pré-processador
