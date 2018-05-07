@@ -55,12 +55,23 @@
       //Ponto C
     }
      #+END_EXAMPLE
-     Para cada um dos métodos de passagem de parâmetros seguintes,
-     quais são os valores das variáveis =value= e =list= depois de cada
-     uma das três chamadas a função =swap=?
-     - Passagem por valor
-     - Passagem por referência
-     - Passagem por valor-resultado
+     Para cada um dos métodos de passagem de parâmetros (por valor,
+     por referência, por valor-resultado), quais são os valores das
+     variáveis =value= e =list= nos três pontos (=A=, =B=, =C=)?
+
+       | Método              | Ponto | value | list |
+       |---------------------+-------+-------+------|
+       | por Valor           | A     |       |      |
+       | por Valor           | B     |       |      |
+       | por Valor           | C     |       |      |
+       |---------------------+-------+-------+------|
+       | por Referência      | A     |       |      |
+       | por Referência      | B     |       |      |
+       | por Referência      | C     |       |      |
+       |---------------------+-------+-------+------|
+       | por Valor-Resultado | A     |       |      |
+       | por Valor-Resultado | B     |       |      |
+       | por Valor-Resultado | C     |       |      |
 
   4. Considere o seguinte programa escrito na sintaxe da linguagem C:
      #+BEGIN_EXAMPLE
