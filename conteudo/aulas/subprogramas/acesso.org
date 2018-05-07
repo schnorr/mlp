@@ -27,15 +27,20 @@ Duas formas
 Variáveis não-locais
 + Declaradas em outro bloco (visível) dentro do programa
 + Acesso depende se o escopo é *estático* ou *dinâmico*
-#+latex: \vfill
-\pause Escopo Dinâmico
+
+#+latex: \vfill\pause
+
+_Escopo Dinâmico_
 + Simples de implementar
 + Descendo na pilha até encontrar a variável (Vínculo Dinâmico -- VD)
-\pause Escopo Estático
+
+#+latex: \pause
+
+_Escopo Estático_
 + Um pouco mais complexo
-+ Dois métodos de localização
-    + Encadeamento estático (/static chain/)
-    + Displays
++ Dois métodos de localização das variáveis
+  + Encadeamento estático (/static chain/)
+  + Displays
 
 * Acesso a Variáveis não Locais \small (Encadeamento Estático)
 
@@ -45,26 +50,48 @@ Vincula todos os ancestrais estáticos de um subprograma
 
 #+latex: \vfill\pause
 
-Endereço de uma variável é uma *tupla*
-+ Profundidade estática
-+ Deslocamento local
+Endereço de uma variável é uma *tupla* (profundidade, deslocamento)
 
 #+latex: \vfill\pause
 
-Problemas do Encadeamento Estático
-+ Encontrar uma variável pode envolver vários acessos
-    + Igual ao nível de profundidade do subprograma
-+ Deve-se localizar o RA mais recente do subprograma pai
+Gerenciamento do VE
+- Na chamada
+  - RA deve ser construído, VD é apenas o antigo FP
+  - o VE deve apontar para o mais recente RA do pai estático
+
+#+latex: \vfill\pause
+
+- Melhor método
+  - Se A chama B, então o VE de B deve apontar para o RA que é
+    #+BEGIN_EXAMPLE
+    profundidade(A) - profundidade(B) + 1
+    #+END_EXAMPLE
+    saltos ao longo do encadeamento estático começando em A
+  - A profundidade (na sintaxe) de A e B é conhecida em compilação
+    - Compilador pode gerar código para realizar os saldos \\
+      (uma série de instruções =load=)
+
+* Problemas do Encadeamento Estático
+
+Encontrar uma variável pode envolver vários acessos
++ Igual ao nível de profundidade do subprograma
+
+Deve-se localizar o RA mais recente do subprograma pai
+  - Os saltos (instruções =load=) podem ser lentas
 
 * Acesso a Variáveis não Locais \small (Display)
+
 Vínculos estáticos ficam no *Display*
+- É uma pilha separada somente de VE
 
 Vetor que armazena uma lista de endereços dos RA
 + Na ordem em que estão aninhados
 #+latex: \vfill
-Custo baixo no acesso a variáveis locais
+Custo constante no acesso a variáveis não locais
 
 Deve-se gerenciar o display (a cada chamada e retorno)
+- Da mesma forma que o encadeamento
+
 * Exercício
 Supor o código
   \scriptsize
