@@ -29,14 +29,14 @@ Variáveis não-locais
 #+latex: \vfill
 \pause Escopo Dinâmico
 + Simples de implementar
-+ Descendo na pilha até encontrar a variável
++ Descendo na pilha até encontrar a variável (Vínculo Dinâmico -- VD)
 \pause Escopo Estático
 + Um pouco mais complexo
 + Dois métodos de localização
     + Encadeamento estático (/static chain/)
     + Displays
 * Acesso a Variáveis não Locais \small (Encadeamento Estático)
-Cadeia de vínculos estáticos que conectam registros de ativação
+Cadeia de vínculos estáticos (VE) que conectam registros de ativação
 
 Vincula todos os ancestrais estáticos de um subprograma
 #+latex: \vfill
