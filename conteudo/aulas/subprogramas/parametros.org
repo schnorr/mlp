@@ -48,7 +48,6 @@ Exemplos
   int soma (int a = 0, int b = 10);
   #+end_src
 
-* 
 * Parâmetros Formais /versus/ Variáveis Locais
 Em geral, ambos são alocados na pilha
 
