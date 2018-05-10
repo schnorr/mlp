@@ -106,3 +106,16 @@ Exemplo em pseudocódigo
 Mesmo quando retornado, o vínculo continua existindo
 
 
+* Como implementar closures?
+
+- Colocar RA no monte como uma lista encadeada (pilha spaghetti)
+  - https://en.wikipedia.org/wiki/Parent_pointer_tree
+- Reescrever as funções para alocar closures no monte e
+  copiar/localizar as variáveis que podem ser reutilizadas
+- Copiar o RA atual em um ambiente separado, assegurar que as
+  variáveis da closure se tornem referências ao ambiente
+
+Fonte:
+- http://hokstad.com/how-to-implement-closures
+
+
