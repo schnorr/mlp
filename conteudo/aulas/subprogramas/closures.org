@@ -87,9 +87,9 @@ Closure
     + Usar variáveis visíveis no momento da sua definição
 \pause Utilizadas em linguagens dinâmicas (Lisp, Ruby, ...)
 + Influência do *Modelo Funcional*
-#+latex: \vfill
-\pause Exemplo em pseudocódigo
-  {\scriptsize
+#+latex: \vfill\pause
+Exemplo em pseudocódigo
+#+latex: {\scriptsize
   #+begin_src Pseudo
   function makeAdder (x) {
      return function(y) {return x + y;}
@@ -101,7 +101,8 @@ Closure
   add10(20); //adiciona 10 a 20
   add5(10); //adiciona 5 a 10
   #+end_src
-\pause Mesmo quando retornado, o vínculo continua existindo
 
+#+latex: }\pause
+Mesmo quando retornado, o vínculo continua existindo
 
 
