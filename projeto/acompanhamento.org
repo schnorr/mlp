@@ -13,6 +13,29 @@
 #+TAGS: Lucas(L) noexport(n) deprecated(d)
 #+EXPORT_EXCLUDE_TAGS: noexport
 
+* Parcial
+** Sumário da entrega
+
+Um grupo não entregou, e um grupo entregou com atraso de 12 minutos.
+
+| Grupo                         | Entrega             |
+|-------------------------------+---------------------|
+| Monstros da Louca Programação | 05/07/2018 10:49 PM |
+| My Little Frogger Haters      | 05/10/2018 09:14 PM |
+| Programadores Anônimos        | 05/10/2018 10:39 PM |
+| Here for Beer                 | 05/10/2018 10:39 PM |
+| GirlsRule                     | 05/10/2018 11:12 PM |
+| Code Runner                   | 05/10/2018 11:21 PM |
+| Furogga                       | 05/10/2018 11:33 PM |
+| get.sh*t.done                 | 05/10/2018 11:42 PM |
+| Delta                         | 05/10/2018 11:55 PM |
+| teletypewriters               | 05/10/2018 11:56 PM |
+| Cowboy Value                  | 05/10/2018 11:58 PM |
+| Scipio Project                | 05/10/2018 11:58 PM |
+| GSN                           | 05/11/2018 12:12 AM |
+| Han Solo                      |                     |
+
+
 * Projeto Inicial
 ** Sumário da entrega
 
