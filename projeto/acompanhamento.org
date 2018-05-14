@@ -158,7 +158,7 @@ igualmente presente.
 
 - Capa: faltou o nome do grupo
 - 12 páginas, estrutura completa
-- Referências mau formadas: "(THE.... 2018)"
+- Referências mal formadas: "(THE.... 2018)"
   - Consultar um bom manual de bibtex, ou conversar com o professor
 - Evitar uso de termos em inglês, como /affordances/
 - Boa descrição do jogo, com histórico
