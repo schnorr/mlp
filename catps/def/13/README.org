@@ -52,11 +52,10 @@ forma adequada (de acordo com o tipo da instância).
 
 ** Exercício opcional
 
-- Criando cópia profundas:
-  - Ao usar C++, especifique um construtor de cópia que faça uma cópia
-    profunda de todos os atributos da instância em
-    questão. Especifique também uma sobrecarga do operator= para que
-    faça igualmente uma cópia profunda.
-  - Se estiver trabalhando com Java ou similar, sobrecarregue o
-    método clone(), fazendo uma cópia profunda da instância.
-  - Descubra como fazer cópias profundas em outras linguagens
+Criando cópia profundas:
+- Ao usar C++, especifique um construtor de cópia que faça uma cópia
+  profunda de todos os atributos da instância em questão. Especifique
+  também uma sobrecarga do operator= para que faça igualmente uma
+  cópia profunda.
+- Se estiver trabalhando com Java ou similar, sobrecarregue o método
+  clone(), fazendo uma cópia profunda da instância.
