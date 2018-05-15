@@ -8,8 +8,8 @@ O objetivo da atividade consiste em praticar os conceitos relacionados
 com orientação a objetos, em especial, _encapsulamento_. Também é
 importante prover estruturas de inicialização de instâncias e
 separação entre a interface visível a quem usa a classe e a sua
-implementação propriamente dita. O uso de espaços de nome (pacotes,
-namespaces, etc.) também é estimulado.
+implementação propriamente dita. O uso de espaços de nome (/namespaces/,
+etc.) também é estimulado.
 
 *Utilize C++ para implementar este exercício, com o compilador g++*.
 
@@ -25,11 +25,11 @@ atentendo aos critérios abaixo:
   - sexo (default: indefinido)
   - idade (default: estabelecido com base na data de nascimento)
 
-- Os atributos devem atender as seguintes restrições:
-  - nome: não deve iniciar com números, não deve ser maior do que 60 caracteres, deve ter no mínimo 2 partes (nome e sobrenome), não pode ser nulo.
-  - data de nascimento: não pode ser posterior ao dia atual.
-  - sexo: valores válidos são masculino, feminino ou indefinido; se possível, usar enumeração.
-  - idade: deve ser condizente com a data de nascimento.
+# - Os atributos devem atender as seguintes restrições:
+#  - nome: não deve iniciar com números, não deve ser maior do que 60 caracteres, deve ter no mínimo 2 partes (nome e sobrenome), não pode ser nulo.
+#  - data de nascimento: não pode ser posterior ao dia atual.
+#  - sexo: valores válidos são masculino, feminino ou indefinido; se possível, usar enumeração.
+#  - idade: deve ser condizente com a data de nascimento.
 
 - A classe deve garantir que os atributos acima sejam _protegidos_ e que
   contenham somente os valores válidos (métodos modificadores
@@ -41,22 +41,22 @@ atentendo aos critérios abaixo:
 - Crie dois construtores:
   - Construtor-padrão (inicializando todos os atributos).
   - Construtor que receba todos os parâmetros (nome, data de
-    nascimento, sexo e localização), validando-os (caso sejam
-    inválidos, os respectivos atributos devem permanecer com o valor
-    padrão).
-
-- Criando cópia profundas:
-  - Se estiver trabalhando com linguagem C++ (ou similar), especifique
-    um construtor de cópia que faça uma cópia profunda de todos os
-    atributos da instância em questão. Especifique também uma
-    sobrecarga do operator= para que faça igualmente uma cópia
-    profunda.
-  - Se estiver trabalhando com Java ou similar, sobrecarregue o
-    método clone(), fazendo uma cópia profunda da instância.
-  - Descubra como fazer cópias profundas em outras linguagens
+    nascimento, sexo e localização), aceitando-os somente caso sejam
+    válidos.
 
 Por fim, elabore um programa que crie duas ou mais instâncias de
 Pessoa. Uma pessoa deve ser criada com o construtor padrão e outra com
 o construtor alternativo. Ao final, o programa deve imprimir na tela
 os valores dos atributos das instâncias, mostrando o seu conteúdo de
 forma adequada (de acordo com o tipo da instância).
+
+** Exercício opcional
+
+- Criando cópia profundas:
+  - Ao usar C++, especifique um construtor de cópia que faça uma cópia
+    profunda de todos os atributos da instância em
+    questão. Especifique também uma sobrecarga do operator= para que
+    faça igualmente uma cópia profunda.
+  - Se estiver trabalhando com Java ou similar, sobrecarregue o
+    método clone(), fazendo uma cópia profunda da instância.
+  - Descubra como fazer cópias profundas em outras linguagens
