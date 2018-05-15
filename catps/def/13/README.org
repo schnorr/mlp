@@ -50,9 +50,13 @@ o construtor alternativo. Ao final, o programa deve imprimir na tela
 os valores dos atributos das instâncias, mostrando o seu conteúdo de
 forma adequada (de acordo com o tipo da instância).
 
+Tente quebrar o encapsulamento acessando diretamente os campos da
+classe quando estes são privados, protegidos e públicos.
+
 ** Exercício opcional
 
-Criando cópia profundas:
+Criando cópias profundas
+
 - Ao usar C++, especifique um construtor de cópia que faça uma cópia
   profunda de todos os atributos da instância em questão. Especifique
   também uma sobrecarga do operator= para que faça igualmente uma
