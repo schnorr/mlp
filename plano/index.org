@@ -25,7 +25,7 @@ A disciplina será desenvolvida através de aulas expositivas, com
 explicação dos conteúdos e discussão de exercícios, intercaladas com
 aulas práticas de programação em linguagens imperativas, lógicas e
 Funcionais. Além disso, serão realizados trabalhos em aula e
-extra-classe de caráter teórico e prático. Finalmente, trabalhos
+extraclasse de caráter teórico e prático. Finalmente, trabalhos
 práticos de programação de maior porte serão definidos para a fixação
 e comparação dos paradigmas estudados.  O material apresentado em sala
 de aula será disponibilizado no ambiente EAD escolhido pelo professor.
@@ -58,7 +58,7 @@ A carga horária desta disciplina é de 40 horas teóricas e 20 práticas.
 
 Espera-se que os alunos tenham uma participação ativa nas aulas,
 realizando anotações, procurando compreender os conteúdos e
-discutí-los com o professor e colegas.
+discuti-los com o professor e colegas.
 
 Como atividades complementares serão disponibilizados exercícios
 (questionários e exercícios práticos), além de fóruns de
@@ -151,7 +151,7 @@ O seguintes critérios de avaliação serão utilizados ao longo deste semestre:
 
 - Duas provas PA e PB correspondendo cada uma a 30% da nota final
 - Um trabalho prático TP correspondendo a 25% da nota final
-- Um conjunto de atividades teóricos-práticas (CATP) correspondendo a $15\%$ da nota final
+- Um conjunto de atividades teórico-práticas (CATP) correspondendo a $15\%$ da nota final
 
 A média final MF, por sua vez, será calculada através da seguinte equação:
 
@@ -174,7 +174,7 @@ casos previstos na legislação (ver a seguir).  A recuperação das
 provas ou atividades individuais será realizada somente para os casos
 previstos na legislação: saúde, parto, serviço militar, convocação
 judicial, luto, etc., devidamente comprovados, através de processo
-aberto na Junta Médica da UFRGS ou no orgão competente, conforme o
+aberto na Junta Médica da UFRGS ou no órgão competente, conforme o
 caso. Tendo o direito a recuperação, o professor estipulará a data,
 horário e local de sua realização.
 
