@@ -2,14 +2,11 @@
 # -*- mode: org -*-
 #+startup: beamer overview indent
 
-* CATP #14 (Herança OO)
+* CATP #14 (Herança em OO)
 
-O objetivo da atividade consiste em praticar os conceitos relacionados
-com orientação a objetos, em especial, *herança*. Também é importante
-prover estruturas de inicialização de instâncias e separação entre a
-interface visível a quem usa a classe e a sua implementação
-propriamente dita. O uso de espaços de nome (pacotes, namespaces,
-etc.) também é estimulado.
+O objetivo da atividade consiste em praticar o conceito de herança em
+orientação à objeto, do ponto de vista da implementação da
+linguagem. Utilizaremos C++ para este CATP.
 
 ** Herança (Parte #1)
 
@@ -19,13 +16,12 @@ etc.) também é estimulado.
  os seguintes requisitos:
 
  1. Todos os funcionários devem ter os seguintes atributos (além dos herdados):
-    - Salário (entre 0 e o teto de 30 mil reais, sendo 0.0 o default)
+    - Salário
     - Cargo (valores válidos: "Indefinido", "Programador", "Analista",
-      "Gerente de projeto", "Gerente de Equipe", "Diretor", sendo
-      "Indefinido" o valor default)
+      sendo "Indefinido" o valor default)
 
- 2. A classe deve garantir que os atributos acima sejam protegidos e
-    que contenham somente os valores válidos (métodos modificadores
+ 2. A classe deve garantir que os atributos acima sejam privados e
+    que possam conter somente os valores válidos (métodos modificadores
     adequados devem ser criados).
 
  3. Métodos que retornam valores devem cuidar para não quebrar o
@@ -34,18 +30,23 @@ etc.) também é estimulado.
 
  4. A classe deve oferecer um construtor-padrão (inicializando todos
     os atributos, inclusive herdados). Verifique ou force para que o
-    construtor da classe pai seja chamado (não reescreva código!)
+    construtor da classe pai seja chamado (não reescreva código!). O
+    código exemplo (no arquivo CPP e não no H) abaixo ilustra como um
+    construtor pode chamar um construtor da classe pai (sendo =B()= um
+    construtor da classe =B= que herda de =C=).
+
+    #+BEGIN_SRC C++
+    B():C() {}
+    #+END_SRC
 
  5. A classe deve oferecer um construtor que receba todos os
     parâmetros (nome, data de nascimento, sexo, salario e cargo),
-    validando-os (caso sejam inválidos, os respectivos atributos devem
-    permanecer com o valor padrão).
+    validando-os. Um construtor somente deve validar os atributos de
+    sua classe.
 
-Por fim, elabore um programa que crie 10 instâncias aleatórias de
-Pessoas ou Funcionários, colocando-as em uma coleção qualquer (Array
-ou Lista, por exemplo). Ao final, o programa deve imprimir na tela os
-valores das instâncias da coleção, mostrando o seu conteúdo de forma
-adequada (de acordo com o tipo da instância).
+Por fim, elabore um programa que crie instâncias com diferentes
+valores para Pessoas ou Funcionários, colocando-as em uma coleção
+qualquer (=std::vector<Pessoa*>=).
 
 ** Herança Múltipla (Parte #2)
 
