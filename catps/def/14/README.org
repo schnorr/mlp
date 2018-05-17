@@ -50,12 +50,16 @@ qualquer (=std::vector<Pessoa*>=).
 
 ** Herança Múltipla (Parte #2)
 
+Suporte para problema do diamante:
+- https://www.geeksforgeeks.org/multiple-inheritance-in-c/
+- Ou aqui neste link local [[./SupportMI.org]]
+
 Para este experimento, escolha uma linguagem que suporte herança
 múltipla, tais como C++, Python, Perl, Curl, Eiffel, CLOS and PHP (com
 =traits=). Define uma classe X que herde de duas classes A e B (nesta
 ordem e o inverso). Faça com que as classes A e B tenham métodos e
-atributos com o mesmo nome, e tente acessar através, da classe X estes
-atributos e métodos. Isso é possível?
+atributos com o mesmo nome, e tente acessá-los na classe X. Isso é
+possível?
 
 Além disso, neste experimento, procure descobrir como a linguagem
 escolhida trata o problema da herança repetida: quando as classes A e
