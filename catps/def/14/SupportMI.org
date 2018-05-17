@@ -1,0 +1,188 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* Introduction
+
+  This is an ORG version of what you can find in
+  - https://www.geeksforgeeks.org/multiple-inheritance-in-c/
+
+* Simple case of multiple Inheritance in C++
+
+#+begin_src C++ :results output :session :exports both
+#include<iostream>
+using namespace std;
+ 
+class A
+{
+public:
+  A()  { cout << "A's constructor called" << endl; }
+  ~A()  { cout << "A's deconstructor called" << endl; }
+};
+ 
+class B
+{
+public:
+  B()  { cout << "B's constructor called" << endl; }
+  ~B()  { cout << "B's deconstructor called" << endl; }
+};
+ 
+class C: public B, public A  // Note the order
+{
+public:
+  C()  { cout << "C's constructor called" << endl; }
+  ~C()  { cout << "C's deconstructor called" << endl; }
+};
+ 
+int main()
+{
+    C c;
+    return 0;
+}
+#+end_src
+
+#+RESULTS:
+: B's constructor called
+: A's constructor called
+: C's constructor called
+: C's deconstructor called
+: A's deconstructor called
+: B's deconstructor called
+
+* The diamond problem
+
+#+BEGIN_SRC C++ :results output :session :exports both
+#include<iostream>
+using namespace std;
+class Person {
+   // Data members of person 
+public:
+    Person(int x)  { cout << "Person::Person(int ) called" << endl;   }
+};
+ 
+class Faculty : public Person {
+   // data members of Faculty
+public:
+    Faculty(int x):Person(x)   {
+       cout<<"Faculty::Faculty(int ) called"<< endl;
+    }
+};
+ 
+class Student : public Person {
+   // data members of Student
+public:
+    Student(int x):Person(x) {
+        cout<<"Student::Student(int ) called"<< endl;
+    }
+};
+ 
+class TA : public Faculty, public Student  {
+public:
+    TA(int x):Student(x), Faculty(x)   {
+        cout<<"TA::TA(int ) called"<< endl;
+    }
+};
+ 
+int main()  {
+    TA ta1(30);
+}
+#+END_SRC
+
+#+RESULTS:
+: Person::Person(int ) called
+: Faculty::Faculty(int ) called
+: Person::Person(int ) called
+: Student::Student(int ) called
+: TA::TA(int ) called
+
+Note Person's constructor being called two times.
+
+* Using =virtual= in inheritance
+
+#+begin_src C++ :results output :session :exports both
+#include<iostream>
+using namespace std;
+class Person {
+public:
+    Person(int x)  { cout << "Person::Person(int ) called" << endl;   }
+    Person()     { cout << "Person::Person() called" << endl;   }
+};
+ 
+class Faculty : virtual public Person {
+public:
+    Faculty(int x):Person(x)   {
+       cout<<"Faculty::Faculty(int ) called"<< endl;
+    }
+};
+ 
+class Student : virtual public Person {
+public:
+    Student(int x):Person(x) {
+        cout<<"Student::Student(int ) called"<< endl;
+    }
+};
+ 
+class TA : public Faculty, public Student  {
+public:
+    TA(int x):Student(x), Faculty(x)   {
+        cout<<"TA::TA(int ) called"<< endl;
+    }
+};
+ 
+int main()  {
+    TA ta1(30);
+}
+#+end_src
+
+#+RESULTS:
+: Person::Person() called
+: Faculty::Faculty(int ) called
+: Student::Student(int ) called
+: TA::TA(int ) called
+
+But Person's constructor is called without the parameter, as one might
+expect. So, we need to call Person's constructor directly in the TA
+class (the bottom of the diamond).
+
+#+begin_src C++ :results output :session :exports both
+#include<iostream>
+using namespace std;
+class Person {
+public:
+    Person(int x)  { cout << "Person::Person(int ) called" << endl;   }
+    Person()     { cout << "Person::Person() called" << endl;   }
+};
+ 
+class Faculty : virtual public Person {
+public:
+    Faculty(int x):Person(x)   {
+       cout<<"Faculty::Faculty(int ) called"<< endl;
+    }
+};
+ 
+class Student : virtual public Person {
+public:
+    Student(int x):Person(x) {
+        cout<<"Student::Student(int ) called"<< endl;
+    }
+};
+ 
+class TA : public Faculty, public Student  {
+public:
+    TA(int x):Student(x), Faculty(x), Person(x)   {
+        cout<<"TA::TA(int ) called"<< endl;
+    }
+};
+ 
+int main()  {
+    TA ta1(30);
+}
+#+end_src
+
+#+RESULTS:
+: Person::Person(int ) called
+: Faculty::Faculty(int ) called
+: Student::Student(int ) called
+: TA::TA(int ) called
+
+This is only possible because intermediate superclasses are virtual.
