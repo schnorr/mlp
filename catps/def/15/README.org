@@ -5,8 +5,8 @@
 * CATP #15 (Polimorfimo Paramétrico)
 
 O objetivo da atividade consiste em praticar os conceitos relacionados
-com orientação a objetos, em especial, {\bf polimorfismo
-paramétrico}. Procure realizar o exercício abaixo investigando a forma
+com orientação a objetos, em especial, *polimorfismo
+paramétrico*. Procure realizar o exercício abaixo investigando a forma
 de funcionamento deste tipo de polimorfismo na linguagem de
 programação escolhida. Segue uma lista de linguagens de programação
 que tem suporte para polimorfismo paramétrico:
@@ -16,7 +16,6 @@ que tem suporte para polimorfismo paramétrico:
 - C#
 - Delphi
 - C++
-
 
 ** Trabalhando com C++ no Laboratório
 
@@ -50,7 +49,6 @@ g++ troca.o main.o -o main
 
 #+RESULTS:
 
-
 ** Lista de Atividades
 
 Existem quatro programas independentes que devem ser implementados:
@@ -63,26 +61,13 @@ Abaixo está descrito os requisitos de cada um desses quatro programas.
 
 *** troca
 
-A função =troca=, cuja implementação está listada abaixo para o tipo
-int/, troca o conteúdo das duas variáveis: depois da função ser
-executada, o conteúdo da variável =a= encontra-se na variável =b= e
-vice-versa. Faça com que a função =troca= seja polimórfica, passível
-de ser chamada com qualquer tipo. Toda a implementação desta função
-deve estar no arquivo =troca.h=. Na função =main=, mostre exemplos de
-utilização da função polimórfica de troca com tipos variados.
-
-#+BEGIN_EXAMPLE
-void troca (int& a, int& b) {
-  int tmp = a;
-  a = b;
-  b = tmp;
-}
-#+END_EXAMPLE
-
-Uma solução possível:
+A função =troca=, cuja implementação está listada abaixo para o tipo =int=
+(com um exemplo de funcionamento na função =main=) troca o conteúdo das
+duas variáveis: depois da função ser executada, o conteúdo da variável
+=a= encontra-se na variável =b= e vice-versa.
 
 #+BEGIN_SRC C++
-#include <iostream> 
+#include <iostream>
 
 void troca (int& a, int& b) {
   int tmp = a;
@@ -90,32 +75,24 @@ void troca (int& a, int& b) {
   b = tmp;
 }
 
-template <typename T> void troca_generica (T& a, T& b) {
-  T tmp = a;
-  a = b;
-  b = tmp;
-}
-
-int main (int argc, char **argv){
+int main()
+{
   int a = 1;
-  int b = 3;
-  float c = 4;
-  float d = 5;
+  int b = 2;
+  std::cout << "a = " << a << ", b = " << b << std::endl;
   troca(a, b);
-  troca_generica(a, b);
-  troca_generica(d, c);
-  std::cout << "a: " << a << std::endl;
-  std::cout << "b: " << b << std::endl;
-  std::cout << "c: " << c << std::endl;
-  std::cout << "d: " << d << std::endl;
+  std::cout << "a = " << a << ", b = " << b << std::endl;
 }
 #+END_SRC
 
 #+RESULTS:
-| a: | 1 |
-| b: | 3 |
-| c: | 5 |
-| d: | 4 |
+| a = 1 | b = 2 |
+| a = 2 | b = 1 |
+
+Faça com que a função =troca= seja polimórfica, passível de ser chamada
+com qualquer tipo. Toda a implementação desta função deve estar no
+arquivo =troca.h=. Na função =main=, mostre exemplos de utilização da
+função polimórfica de troca com tipos variados.
 
 *** imprime
 
