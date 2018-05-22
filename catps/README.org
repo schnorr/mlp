@@ -21,7 +21,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 | #12  | [[./def/12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]] | 2018-05-17 |       |
 | #13  | [[./def/13/README.org][Encapsulamento em OO]]                 | [[https://goo.gl/forms/JsAzqE3rKboHzJx23][Formulário]] | 2018-05-22 |       |
 | #14  | [[./def/14/README.org][Herança em OO]]                        | [[https://goo.gl/forms/YHaDmzofJaKQqJT22][Formulário]] | 2018-05-24 |       |
-| #15  | [[./def/15/README.org][Polimorfimo Paramétrico em OO]]        | [[https://goo.gl/forms/xzLPAPJAWoTlKtki2][Formulário]] |            |       |
+| #15  | [[./def/15/README.org][Polimorfimo Paramétrico em OO]]        | [[https://goo.gl/forms/xzLPAPJAWoTlKtki2][Formulário]] | 2018-05-29 |       |
 | #16  | [[./def/16/README.org][Exceções]]                             | [[https://goo.gl/forms/g0AJ2VlY3fmq17UG2][Formulário]] |            |       |
 | #17  | [[./def/17/README.org][Valgrind]]                             | [[https://goo.gl/forms/YzaGXvZxrtS3xlZs2][Formulário]] |            |       |
 | #18  | Linguagens de Script                 |            |            |       |
