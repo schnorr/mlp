@@ -96,9 +96,9 @@ função polimórfica de troca com tipos variados.
 
 *** imprime
 
-A função =imprime= abaixo aceita somente inteiros.
-
-Transforme-a para uma função polimórfica.
+A função =imprime= abaixo aceita somente inteiros. Transforme-a para uma
+função polimórfica que funcione também para uma class =Aula= (por ser
+implementada).
 
 #+BEGIN_SRC C++
 #include <iostream>
@@ -140,10 +140,10 @@ utilize a função polimórfica de cópia.
 
 *** polimorficos
 
-Implemente uma classe polimórfica para =Vetor= e outra para
-=ListaEncadeada= com pelo menos três métodos para adicionar novos
-membros, remover e concatenar objetos da mesma classe.  Implemente
-estas classes com polimorfismo paramétrico nos respectivos arquivos de
+Implemente uma classe polimórfica para =Vetor= (não vale utilizar
+=std::vector=) com pelo menos três métodos para adicionar novos membros,
+remover e concatenar objetos da mesma classe.  Implemente estas
+classes com polimorfismo paramétrico nos respectivos arquivos de
 cabeçalho (.h). Na função =main=, implementada no arquivo =main.cc=,
 instancie objetos destas classes utilizando tipos já existentes como
 parâmetros.
