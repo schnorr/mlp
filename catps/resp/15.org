@@ -1,0 +1,192 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* troca polimórfica
+
+O arquivo =troca.h=.
+
+#+BEGIN_SRC c++ :tangle troca.h
+template <typename T> void troca_generica (T& a, T& b) {
+  T tmp = a;
+  a = b;
+  b = tmp;
+}
+#+END_SRC
+
+O arquivo =troca-main.cc=.
+
+#+BEGIN_SRC c++ :tangle troca-main.cc
+#include <iostream>
+#include "troca.h"
+
+int main (int argc, char **argv){
+  int a = 1;
+  int b = 3;
+  float c = 4;
+  float d = 5;
+  troca_generica(a, b);
+  troca_generica(d, c);
+  std::cout << "a: " << a << std::endl;
+  std::cout << "b: " << b << std::endl;
+  std::cout << "c: " << c << std::endl;
+  std::cout << "d: " << d << std::endl;
+}
+#+END_SRC
+
+#+RESULTS:
+
+Compilando esta solução:
+
+#+begin_src shell :results table
+g++ -c troca-main.cc           # compilar, criando o .o
+g++ troca-main.o -o troca-main # linkar, criando o executável
+./troca-main
+#+end_src
+
+#+RESULTS:
+| a: | 3 |
+| b: | 1 |
+| c: | 5 |
+| d: | 4 |
+
+* imprime polimórfica
+** Considerando apenas tipos primitivos
+
+O arquivo =imprime.h=.
+
+#+BEGIN_SRC c++ :tangle imprime.h
+#include <iostream>
+
+template<class T> void imprime(T a, T b)
+{
+    std::cout << "You gave me " << a << " and " << b << ".\n";
+    T c = a + b;
+    std::cout << "Together they make " << c << "." << std::endl;
+}
+#+END_SRC
+
+O arquivo =main.cc=.
+
+#+BEGIN_SRC C++ :tangle imprime-main.cc
+#include <iostream>
+#include <string>
+#include "imprime.h"
+
+int main()
+{
+    std::string sA = "Ola";
+    std::string sB = "mundo";
+    imprime(1, 2);
+    imprime(2.6, 3.7);
+    imprime('A','1');
+    imprime(sA, sB);
+//    Aula a(123);
+//    Aula b(456);
+//    imprime(a, b);
+}
+#+END_SRC
+
+Compilando esta solução:
+
+#+begin_src shell :results table
+g++ -c imprime-main.cc           # compilar, criando o .o
+g++ imprime-main.o -o imprime-main # linkar, criando o executável
+./imprime-main
+#+end_src
+
+#+RESULTS:
+| You      | gave | me   |         1 | and |      2 |
+| Together | they | make |         3 |     |        |
+| You      | gave | me   |       2.6 | and |   3.7. |
+| Together | they | make |      6.3. |     |        |
+| You      | gave | me   |         A | and |      1 |
+| Together | they | make |        r. |     |        |
+| You      | gave | me   |       Ola | and | mundo. |
+| Together | they | make | Olamundo. |     |        |
+
+** Permitindo outras classes
+
+O problema da abordagem anterior (do imprime polimórfico) é que ele só
+funciona para tipos primitivos, pois estes tem o operador =+= e =<<= já
+implementado na linguagem. Sendo assim, para que a função polimórfica
+=imprime= funcione (na sua implementação atual) para outras classes (do
+usuário), devemos implementar esses operadores especificamente para
+estas outras classes.
+
+Para exemplificar, vamos criar um classe =Aula=, e vamos implementar os
+operadores necessários para que esta classe funcione com a função
+polimórfica =imprime=.
+
+O arquivo =Aula.h=.
+
+#+BEGIN_SRC c++ :tangle Aula.h
+#include <iostream>
+#include <ostream>
+
+class Aula {
+  public:
+    int x;
+    Aula();
+    Aula(int inicia);
+    Aula &operator+ (Aula &b);
+};
+
+std::ostream &operator<< (std::ostream &output, const Aula &aula);
+#+END_SRC
+
+#+RESULTS:
+
+O arquivo =Aula.cc= (implementação da classe Aula);
+
+#+begin_src c++ :tangle Aula.cc
+#include "Aula.h"
+
+Aula::Aula(){
+  x = 2;
+};
+
+Aula::Aula(int inicia){
+  x = inicia;
+};
+
+Aula &Aula::operator+ (Aula &b) {
+  x = x + b.x;
+};
+
+std::ostream &operator<< (std::ostream &output, const Aula &aula) {
+  output << "Aula: " << aula.x;
+  return output;
+}
+#+end_src
+
+O arquivo =aula-main.cc=, que inclui a função imprime polimórfica e cria
+objetos da classe =Aula=, realizando testes.
+
+#+BEGIN_SRC C++ :tangle aula-main.cc
+#include <iostream>
+#include <string>
+#include "Aula.h"
+#include "imprime.h"
+
+int main()
+{
+    Aula a(123);
+    Aula b(456);
+    imprime(a, b);
+}
+#+END_SRC
+
+Vamos compilar e executar:
+
+#+begin_src shell :results output
+g++ -c Aula.cc
+g++ -c aula-main.cc
+g++ Aula.o aula-main.o -o aula-main
+./aula-main
+#+end_src
+
+#+RESULTS:
+: You gave me Aula: 123 and Aula: 456.
+: Together they make Aula: 579.
+
