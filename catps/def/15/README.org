@@ -59,7 +59,7 @@ Existem quatro programas independentes que devem ser implementados:
 
 Abaixo está descrito os requisitos de cada um desses quatro programas.
 
-*** troca
+*** troca (somente exemplo, veja resposta)
 
 A função =troca=, cuja implementação está listada abaixo para o tipo =int=
 (com um exemplo de funcionamento na função =main=) troca o conteúdo das
@@ -94,7 +94,7 @@ com qualquer tipo. Toda a implementação desta função deve estar no
 arquivo =troca.h=. Na função =main=, mostre exemplos de utilização da
 função polimórfica de troca com tipos variados.
 
-*** imprime
+*** imprime (somente exemplo, veja resposta)
 
 A função =imprime= abaixo aceita somente inteiros. Transforme-a para uma
 função polimórfica que funcione também para uma class =Aula= (por ser
