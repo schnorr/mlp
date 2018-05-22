@@ -51,13 +51,14 @@ g++ troca.o main.o -o main
 
 ** Lista de Atividades
 
-Existem quatro programas independentes que devem ser implementados:
+Abaixo está descrito os requisitos de cada um dos quatro programas que
+devem ser implementados.
 - troca
 - imprime
 - copia
 - polimorficos
-
-Abaixo está descrito os requisitos de cada um desses quatro programas.
+Os dois primeiros já estão implementados em C++, como exemplo (veja
+resposta deste CATP).
 
 *** troca (somente exemplo, veja resposta)
 
