@@ -22,3 +22,4 @@ atividade.
 - OCAML
 
 Como o sistema de exceções é implementado na linguagem escolhida?
+- Escreva um parágrafo com 100 a 250 palavras
