@@ -78,6 +78,7 @@ Não-tratáveis
 #+latex: \vfill\pause
 
 Exemplo da linguagem Java (ver documentação de =Throwable=)
+- [[https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html][java/lang/Throwable]]
 
 * Tipos de Exceções
 
@@ -98,6 +99,7 @@ Exemplo da linguagem Java (ver documentação de =Throwable=)
 
 Exemplo da linguagem Java (documentação de =Throwable=)
 + Procurar pour =checked=
++ [[https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html][java/lang/Throwable]] e [[https://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html][java/lang/Exception]]
 
 * *Lançamento* de exceções
 
