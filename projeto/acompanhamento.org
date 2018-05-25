@@ -34,7 +34,318 @@ Um grupo não entregou, e um grupo entregou com atraso de 12 minutos.
 | Scipio Project                | 05/10/2018 11:58 PM |
 | GSN                           | 05/11/2018 12:12 AM |
 | Han Solo                      |                     |
+** Revisão
 
+Da especificação:
+
+#+BEGIN_EXAMPLE
+A *entrega parcial*, uma etapa obrigatória, deve vir acompanhada da
+implementação e relatório a respeito da solução utilizando um dos
+paradigmas (OO ou funcional), a critério do grupo. O professor
+utilizará esta oportunidade para formar um parecer rápido do relatório
+e da implementação; sugerindo ao grupo melhorias caso necessário.
+#+END_EXAMPLE
+
+*** Monstros da Louca Programação
+
+- PDF com 22 páginas, mais fontes produzidos
+  - Versão OO
+- Mssim
+- verbosidade"de (falta de espaço)
+- negrito na primeira letra de itemize (em vários lugares)
+- "o programa se executava uma"
+- As figuras em 1.2 e 1.3 não são citadas no texto; todas as figuras
+  assim o devem ser para que sejam explicadas com detalhes (ainda que
+  em exemplos como esses)
+- Criada em 2001 2003
+- Os fontes latex não estão disponíveis
+- "ÉCOLE POLYTECHNIQUE FÉDÉRALE DE LAUSANNE" - evitar o uso de
+  maiúsculas dessa forma, e por que as aspas? Pode-se usar itálico.
+- "à longo prazo" - reavaliar o uso da crase
+- Pg5: texto com itens em demasia é considerado estilo ruim
+- Logo solitário
+- "divulgau"
+- Sec3: seria bom ter uma introdução, dizendo "Esta seção traz uma
+  descrição detalhada dos requisitos do trabalho, onde explicaremos os
+  diferentes recursos do projeto juntamente com trechos de código que
+  ilustram os conceitos". Preparar o leitor para o que vem é bom.
+- "tenod"
+- Sec3.1-Item1: não ficou claro a diferença entre class, object e
+  trait em Scala
+- Sec3.1-Item2: não ficou claro o encapsulamento
+- Sec3.1-Item3: o comentário do código poderia fazer parte do texto
+- Sec3.1-Item4: Por quê?
+- Sec3.1: de uma maneira geral, os itens com trechos de código são
+  minimamente explicados
+- Figura3.1 não ilustra a hierarquia de classes; somente a hierarquia
+  de organização do projeto
+- Tabela4.1 não respeita as margens
+  - Por que usar a seq de fibonacci? Justificar.
+- Sec4.2: a citação ao Sebesta esta ilustrada de maneira incorreta
+  - Caso seja um copy/paste do texto do Sebesta, apresentar uma frase
+    dizendo algo como "Segundo Sebesta", colocar o texto copiado em
+    ambiente quote, citar o livro. No entanto, isso não é comum em
+    computação. A alternativa é descrever com as próprias palavras.
+  - O mesmo acontece no item 3 da Pg16.
+- Fig4.1 não é uma tabela, é uma figura
+- Onde está o uso de =bibtex=?
+  - Alguns links não respeitam as margens (Pg22)
+- Sumário: melhorar bastante
+
+*** My Little Frogger Haters
+
+- PDF com 6 páginas, ausência do código fonte produzido
+  - Versão OO
+- A capa não deixa claro a linguagem de programação escolhida
+- Na intro, se fala em C#7.2, o que a versão 7.2 tem diferente das anteriores?
+- No final da intro, é bom ter um parágrafo que explica a estrutura do documento
+- "CARACTERISTICAS" (acentuação)
+- Aplicar o uso da crase
+- Quão dependente da IDE é a linguagem C#?
+- "á operações" (rever uso da crase)
+- Sec3: explicação OO
+  - Não se espera uma explicação de cada classe, embora vejo isso
+    positivamente
+  - Requisitos do trabalho com trechos de código estão ausentes
+- Relatório termina de maneira abrupta
+- Sumário: melhorar muito!
+  - Fontes?
+
+*** Programadores Anônimos
+
+- PDF com 9 páginas, ausência do código fonte produzido
+  - Versão OO descrita
+- Sec2: subseções com apenas um parágrafo, evitar
+  - parágrafos com uma frase, evitar
+- Sec4: uma subseção por classe
+  - Não se espera uma explicação de cada classe, embora positivo
+  - Requisitos do trabalho com trechos de código estão ausentes
+- Relatório termina de maneira abrupta (conclusão, refs?)
+- Sumário: melhorar muito!
+  - Fontes?
+
+*** Here for Beer
+
+- Submetido em RAR: submeter em ZIP ou TGZ da próxima vez (veja espec.)
+- PDF de 11 páginas, com um arquivo fonte R
+  - Versão funcional
+  - Sem fontes Latex
+- Introdução
+  - Parágrafo de uma linha. Poderia dar um contexto, etc.
+  - Seções com apenas um parágrafo
+  - Figura não referenciada no texto
+- Sec2 Recursos
+  - Falta uma introdução explicando o que é a seção...
+  - Ok para a estrutura interna, mas...
+  - "basico" (acento)
+  - Layout dos trechos de código poderia ser melhor (use =listings=)
+  - Item 2.1.1 : e tem como alterar os argumentos passados?
+  - Rever o conceito de currying
+- Análise Crítica: ok mas incompleta, rever a especificação do TF
+- Conclusão de duas linhas?
+  - Por que não é boa?
+  - Notem que o objetivo principal é avaliar os dois paradigmas
+- Referências: rever margens, usar bibtex
+
+*** GirlsRule
+
+- Arquivo ZIP bem recebido, mas o TEX não veio compilado em PDF dentro.
+  - Melhor se os arquivos do relatório estão em um diretório "doc" algo assim
+  - E os fontes nem um diretório "src"
+- PDF compilado pelo professor com 9 páginas, com um arquivo fonte =jl=
+  - Implementação OO ou funcional? Fica só claro na Sec2.1
+- Intro, somente com subseções, sem texto
+- "performance" \to desempenho
+- "alienigenas"
+- Sec1.4: no item 1.2, onde está?
+- Sec2.1
+  - Figura sem /caption/
+  - Embora interessante no projeto do jogo, qual a relação com a
+    implementação OO?
+- Seção 2.2 vazia (na ausência de texto, remover)
+  - Preencher quando houver texto
+- Seção 3
+  - O principal objetivo do trabalho é relatar como as construções
+    requisitadas (os ditos "recursos") se manifestam na linguagem
+    escolhida. O relato da compreensão da linguagem pode ser colocado
+    em uma seção específica para este fim.
+  - Usar pacote =listings= para colocar código no relatório. Percebam
+    que existem muitas linhas em branco no código da Pg6 e 7.
+- Seções 3.1 e 3.2 vazias
+- Observar a estrutura do relatório na especificação
+- Sem referências
+- Melhorar bastante!
+
+*** Code Runner
+
+- Sem referências
+- Sem código fonte, portanto apenas PDF, 10 páginas
+  - Sem fontes latex
+- "suporta as dois tipos de implementação" \to de paradigmas 
+- "criou as melhores IDEs existentes atualmente no mercado" segundo quem?
+- Frase "perdida"
+  - Construída inicialmente para melhorar o desempenho interno de suas aplicações.
+- "oferecendo algumas vantagens comparado ao Java" \to quais?
+- "A principal aplicação da linguagem Kotlin é o desenvolvimento
+  Android ele ajuda o desenvolvedor a escrever códigos mais limpos e
+  de forma mais fácil." \to falta pelo menos uma vírgula, ou quebrar em
+  duas frases
+- Vantagens/desvantagens é uma lista de itens, sem apresentação
+- Usar =listings= para typeset de códigos
+- "já existente h, chamá-lo"
+- "Uma boa prática para a utilização do framework" segundo quem?
+- Faltam citações
+- A seção 3.2 não descreve os recursos exigidos para OO
+  - Veja especificação do TF
+- Análise crítica é repetida três vezes: no título da seção, no início
+  do parágrafo antes de ":" e depois. Além disso, percebo agora que a
+  seção está incompleta (é uma cópia da especificação)
+- Conclusão?
+- Relação com inicial: vários elementos do projeto inicial foram
+  perdidos nesta versão, por que eles foram removidos?
+- Sumário: Melhorar muito!
+
+*** Furogga
+
+- Entrega de PDF com 11 páginas, sem fontes latex
+  - Mas com GIT que tem tudo (código, fontes latex, relatório)
+    - Isso é bastante positivo, a ser replicado pelos outros grupos
+- Sec1: tem apenas uma subseção. quando é o caso, melhor não ter
+  nenhuma subseção
+  - figura 1.1 \to "Figura 1.1".
+  - Problema a Ser Resolvido \to "Problema a ser resolvido"
+- Pode-se usar footnotes para informar links WWW que em geral ficam
+  ruins no meio do texto.
+- Sec2
+  - Ref incompleta "(JULIA. . . , 2018)."
+  - Subseção única
+  - Seção bastante curta
+- Rever o conceito de /pattern matching/ no contexto de linguagens funcionais
+- Todos os itens funcionais foram abordados?
+- Poderia ter mais referências
+  - Aplicações "reais" que utilizem mecanismos funcionais (e depois OO)
+  - Apoiar (suportar) as afirmações nas seções anteriores
+- Está indo bem, mas...
+  - Além dos pontos acima
+  - Globalmente melhorar o typeset do documento
+
+*** Get Shit Done
+
+- Submetido TAR.GZ com PDF de 6 páginas, sem fontes latex
+  - Fontes do trabalho estão inclusas
+- Poucas evoluções em relação ao projeto inicial (que tinha 4
+  páginas): a recomendação do professor de fornecer uma boa introdução
+  não foi executada; nenhuma evolução em relação às referências também
+- O que mudou?
+  - Sec1.2
+    - sem link para a "alpha vantage (Documentation)"
+    - O que são aqueles "índices" e abreviaturas
+  - Sec2
+    - link para o github aparece no texto, seria bom ou colocar em uma
+      nota de rodapé ou utilizar o comando \url para que ele tenha um
+      typeset alternativo daquele do texto
+    - "pŕoxima"
+- Nenhum recurso funcional/orientado a objeto (que é o grande objetivo
+  deste trabalho) foi apresentado
+- Sumário: muito pouco foi realizado no que diz respeito aos
+  requisitos do trabalho (itens funcionais ou orientados a objeto)
+
+*** Delta
+
+- ZIP com tudo, PDF com 20! páginas
+  - No título falta um "u" (... War sando ...)
+  - A aplicação tem um website!
+- Sec1: parágrafos iniciais demasiadamente curtos
+  - Falta uma apresentação da estrutura do documento
+- Sec2:
+  - "o maior ecosistema de bibliotecas open source do mundo" \to aqui
+    realmente falta uma citação.
+  - "sem nenhuma ligação com sistema operacional do usuário" \to a
+    linguagem precisa de um navegador que este depende de um SO. Okay,
+    é indireto, mas o "nenhuma" talvez tenha sido muito forte. Quem
+    captura cliques do mouse, ou apertos de tecla no teclado? ;-)
+  - em ' "compilar"o ', faltou um espaço
+  - Faltam citações nas subseções de 2 para apontar às dependências
+  - "Ao pé da letra" \to evitar discurso informal
+  - "não a torna disruptiva em relação ao JavaScript" \to a tipagem
+    estática não indica uma disrupção, uma quebra de abordagem?
+- Sec3:
+  - Falta mencionar no relatório a Figura 3.1
+  - Tratar o caso de fim de jogo (quando um jogador ganha)
+- Usar bibtex nas referências!
+- Está bem encaminhado... continuar!
+
+*** teletypewriters
+
+- Recebido PDF de 12 páginas, sem fontes latex
+  - Com fontes do programa
+- Rever todos os comentários ao projeto inicial
+  - Mudou alguma coisa? Parece que não.
+
+*** Cowboy Value
+
+- Apenas PDF de 7 páginas, sem fonte TEX, sem fonte solução
+  - No Inicial tinham 4 páginas
+  - Somente OO até o momento
+- Continua sem lista de referências, sem bibtex
+- Sec1
+  - Cópia da wikipedia (aka "plágio") removido, mas texto ficou menor
+    com menor riqueza de detalhes: podem escrever com as próprias
+    palavras
+- Sec2
+  - "Swift é oficialmente a linguagem que mais cresceu na história." \to
+    poderia fornecer a fonte desta informação e as outras no entorno?
+    Propaganda?
+- Temos mais duas seções 3 e 4
+- Sec3
+  - "versâo"
+  - "consiguimos"
+  - "ainda nã se implementou os aliens"
+  - "templete" \to /template/
+  - "sére"
+  - "Do projeto nos"
+  - "o que séria a tela"
+  - Múltiplos errors ortográficos: revisar o texto
+  - Falta uma subseção para cada requisito funcional (e OO),
+    ilustrando o conceito com trechos de código produzido na execução
+    deste projeto
+- Sec4
+  - Relembro a especificação, onde se deve justificar cada nota
+
+*** Scipio Project
+
+- PDF com 13 páginas (tinha 10 no inicial), sem fontes latex
+  - Código scala acompanha no seu próprio ZIP
+- Ainda usa-se bastante itens (Pg 5, por exemplo)
+  - A subseção 3.3 é a mais representativa do problema
+- Sec4 (Recursos)
+  - Cada seção deve ter uma explicação do trecho de código
+  - Fundo escuro não é uma boa alternativa
+  - Código da Sec4.1 não aparece
+- Sec5 (Crítica)
+  - Justificar todas as notas da tabela (veja espec.)
+- Sem conclusão
+  - Poderia ter algo ainda que um visão parcial
+
+*** GSN
+
+- Com 12 minutos de atraso, PDF de 12 páginas com fontex TEX
+  - Código do projeto disponível
+- Pg3: "tudo é representado por funções matemáticas" \to achei forte
+  demais esta afirmação. Note que não necessariamente precisam ser
+  "funções matemáticas".
+- comercias
+- "IDE altamente usada na indústria" \to fornecer referência
+- "jogadores (??)."
+- Figuras 3.1, 3.2 e 3.3 aparecem antes da referência no texto
+  - Figuras tem tamanho de fonte diferentes, a 3.3 tem texto
+    demasiadamente pequeno
+- Sec4 (OO)
+  - Figuras ilegíveis (compare o tamanho da fonte do texto com o
+    tamanho da fonte da figura)
+- Conclusão vazia: ainda que conclusões parciais sejam poucas, a
+  primeira impressão sobre OO seria positivo
+- Referências inexistentes
 
 * Projeto Inicial
 ** Sumário da entrega
