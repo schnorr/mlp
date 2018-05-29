@@ -17,12 +17,12 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 | #09  | [[./def/09/README.org][Vínculos e Tipos de dados]]            | [[https://goo.gl/forms/hPgR5XrYwOhwLHB22][Formulário]] | 2018-04-23 | [[./resp/09.org][#09]]   |
 |------+--------------------------------------+------------+------------+-------|
 | #10  | [[./def/10/README.org][Controle de Fluxo]]                    | [[https://goo.gl/forms/9q2TEEu3JmHyN17F2][Formulário]] | 2018-05-03 | [[./resp/10.org][#10]]   |
-| #11  | [[./def/11/README.org][Polimorfismo]]                         | [[https://goo.gl/forms/3M8jwFABt9rfzuFv1][Formulário]] | 2018-05-10 |       |
-| #12  | [[./def/12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]] | 2018-05-17 |       |
-| #13  | [[./def/13/README.org][Encapsulamento em OO]]                 | [[https://goo.gl/forms/JsAzqE3rKboHzJx23][Formulário]] | 2018-05-22 |       |
-| #14  | [[./def/14/README.org][Herança em OO]]                        | [[https://goo.gl/forms/YHaDmzofJaKQqJT22][Formulário]] | 2018-05-24 |       |
+| #11  | [[./def/11/README.org][Polimorfismo]]                         | [[https://goo.gl/forms/3M8jwFABt9rfzuFv1][Formulário]] | 2018-05-10 | NA    |
+| #12  | [[./def/12/README.org][Subprogramas]]                         | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]] | 2018-05-17 | NA    |
+| #13  | [[./def/13/README.org][Encapsulamento em OO]]                 | [[https://goo.gl/forms/JsAzqE3rKboHzJx23][Formulário]] | 2018-05-22 | NA    |
+| #14  | [[./def/14/README.org][Herança em OO]]                        | [[https://goo.gl/forms/YHaDmzofJaKQqJT22][Formulário]] | 2018-05-24 | NA    |
 | #15  | [[./def/15/README.org][Polimorfimo Paramétrico em OO]]        | [[https://goo.gl/forms/xzLPAPJAWoTlKtki2][Formulário]] | 2018-05-29 | [[./resp/15.org][#15]]   |
-| #16  | [[./def/16/README.org][Exceções]]                             | [[https://goo.gl/forms/g0AJ2VlY3fmq17UG2][Formulário]] | 2018-05-31 |       |
+| #16  | [[./def/16/README.org][Exceções]]                             | [[https://goo.gl/forms/g0AJ2VlY3fmq17UG2][Formulário]] | 2018-05-31 | NA    |
 | #17  | [[./def/17/README.org][Valgrind]]                             | [[https://goo.gl/forms/YzaGXvZxrtS3xlZs2][Formulário]] |            |       |
 | #18  | Linguagens de Script                 |            |            |       |
 | #19  | [[./def/19/README.org][Integração Numérica com Paralelismo]]  | [[https://goo.gl/forms/pPEETL2bPIr80dvf2][Formulário]] |            |       |
