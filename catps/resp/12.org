@@ -4,52 +4,55 @@
 
 * #1
 
-|-----------------------|
-| Crescendo para baixo  |
-|-----------------------|
-| =RA_main()=             |
-|-----------------------|
-| char e;               |
-| char f;               |
-| char g;               |
-| RA* din = =&RA_global;= |
-| RA* est = =&RA_global;= |
-| ret = void;           |
-| estado;               |
-|-----------------------|
-| =RA_fun2()=             |
-|-----------------------|
-| int b;                |
-| int c;                |
-| RA* din = =&RA_main;=   |
-| RA* est = =&RA_global;= |
-| ret = &main;          |
-| estado;               |
-|-----------------------|
-| =RA_fun1()=             |
-|-----------------------|
-| float a;              |
-| RA* din = =&RA_fun2;=   |
-| RA* est = =&RA_global;= |
-| ret = &fun2;          |
-| estado;               |
-|-----------------------|
-| =RA_fun1_2()=           |
-|-----------------------|
-| float a;              |
-| RA* din = =&RA_fun1;=   |
-| RA* est = =&RA_global;= |
-| ret = &fun1           |
-| estado;               |
-|-----------------------|
-| =RA_fun3()=             |
-|-----------------------|
-| float d;              |
-| RA* din = =&RA_fun1_2;= |
-| RA* est = =&RA_global;= |
-| ret = &fun1;          |
-| estado;               |
-|-----------------------|
+A ordem dos elementos em um RA pode variar. Na resposta abaixo,
+assumimos que os elementos aparecem na seguinte ordem:
+- variáveis locais
+- vínculo dinâmico (VD)
+- vínculo estático (VE)
+- endereço de retorno
+- estado da máquina
+- valor de retorno
+
+| Fundo da pilha        | RA        | Explicações         |
+|-----------------------+-----------+---------------------|
+| char e;               | =RA_main()= |                     |
+| char f;               |           |                     |
+| char g;               |           |                     |
+| RA* din = =&RA_global;= |           | VD                  |
+| RA* est = =&RA_global;= |           | VE                  |
+| ret = void;           |           | endereço de retorno |
+| estado;               |           | estado da máquina   |
+| valor;                |           | valor de retorno    |
+|-----------------------+-----------+---------------------|
+| int b;                | =RA_fun2()= |                     |
+| int c;                |           |                     |
+| RA* din = =&RA_main;=   |           | VD                  |
+| RA* est = =&RA_global;= |           | VE                  |
+| ret = &main;          |           | endereço de retorno |
+| estado;               |           | estado da máquina   |
+| valor;                |           | valor de retorno    |
+|-----------------------+-----------+---------------------|
+| float a;              | =RA_fun1()= |                     |
+| RA* din = =&RA_fun2;=   |           | VD                  |
+| RA* est = =&RA_global;= |           | VE                  |
+| ret = &fun2;          |           | endereço de retorno |
+| estado;               |           | estado da máquina   |
+| valor;                |           | valor de retorno    |
+|-----------------------+-----------+---------------------|
+| float a;              | =RA_fun1()= |                     |
+| RA* din = =&RA_fun1;=   |           | VD                  |
+| RA* est = =&RA_global;= |           | VE                  |
+| ret = &fun1           |           | endereço de retorno |
+| estado;               |           | estado da máquina   |
+| valor;                |           | valor de retorno    |
+|-----------------------+-----------+---------------------|
+| float d;              | =RA_fun3()= |                     |
+| RA* din = =&RA_fun1;=   |           | VD                  |
+| RA* est = =&RA_global;= |           | VE                  |
+| ret = &fun1;          |           | endereço de retorno |
+| estado;               |           | estado da máquina   |
+| valor;                |           | valor de retorno    |
+|-----------------------+-----------+---------------------|
 
 * #2
 
