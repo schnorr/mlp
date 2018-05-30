@@ -1,0 +1,132 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* #1
+
+|-----------------------|
+| Crescendo para baixo  |
+|-----------------------|
+| =RA_main()=             |
+|-----------------------|
+| char e;               |
+| char f;               |
+| char g;               |
+| RA* din = =&RA_global;= |
+| RA* est = =&RA_global;= |
+| ret = void;           |
+| estado;               |
+|-----------------------|
+| =RA_fun2()=             |
+|-----------------------|
+| int b;                |
+| int c;                |
+| RA* din = =&RA_main;=   |
+| RA* est = =&RA_global;= |
+| ret = &main;          |
+| estado;               |
+|-----------------------|
+| =RA_fun1()=             |
+|-----------------------|
+| float a;              |
+| RA* din = =&RA_fun2;=   |
+| RA* est = =&RA_global;= |
+| ret = &fun2;          |
+| estado;               |
+|-----------------------|
+| =RA_fun1_2()=           |
+|-----------------------|
+| float a;              |
+| RA* din = =&RA_fun1;=   |
+| RA* est = =&RA_global;= |
+| ret = &fun1           |
+| estado;               |
+|-----------------------|
+| =RA_fun3()=             |
+|-----------------------|
+| float d;              |
+| RA* din = =&RA_fun1_2;= |
+| RA* est = =&RA_global;= |
+| ret = &fun1;          |
+| estado;               |
+|-----------------------|
+
+* #2
+
+Assumindo que as variáveis locais ficam alocadas na base do RA.
+
+- função =main=
+  - e: =(fp + 0)=
+  - f: =(fp + 1)= 
+  - g: =(fp + 2)=
+- função =fun1=
+  - a: =(fp + 0)=
+- função =fun2=
+  - b: =(fp + 0)=
+  - c: =(fp + 4)=
+- função =fun3=
+  - d: =(fp + 0)=
+
+No caso da função =main=, como as variáveis são do tipo char, poderíamos
+pensar em alinhá-las de acordo com o tamanho da palavra. Mas o código
+abaixo mostra que isso não acontece (em um Linux com GCC).
+
+#+BEGIN_SRC C :colnames yes :exports both
+char e;
+char f;
+char g;
+
+int ee = &e;
+int ef = &f;
+int eg = &g;
+
+printf("Endereço, Valor\n");
+printf("ee, %d\n"
+       "ee - ef, %d\n"
+       "ee - eg, %d\n", ee, ee-ef, ee-eg);
+#+END_SRC
+
+#+RESULTS:
+| Endereço |       Valor |
+| ee       | -1804979789 |
+| ee - ef  |           1 |
+| ee - eg  |           2 |
+
+* #3
+
+| Método              | Ponto |    value | list      |
+|---------------------+-------+----------+-----------|
+| por Valor           | A     |        3 | 1 3 5 7 9 |
+| por Valor           | B     |        3 | 1 3 5 7 9 |
+| por Valor           | C     |        3 | 1 3 5 7 9 |
+|---------------------+-------+----------+-----------|
+| por Referência      | A     |        1 | 3 3 5 7 9 |
+| por Referência      | B     |        1 | 3 3 5 7 9 |
+| por Referência      | C     |        3 | 3 1 5 7 9 |
+|---------------------+-------+----------+-----------|
+| por Valor-Resultado | A     |        1 | 3 3 5 7 9 |
+| por Valor-Resultado | B     |        1 | 3 3 5 7 9 |
+| por Valor-Resultado | C     | (abaixo) | (abaixo)  |
+
+No caso do ponto =C= em =Valor-Resultado= a resposta depende:
+
+- Se a resolução de endereço de saída é feita na chamada (início de =swap=)
+
+  | Método              | Ponto | value | list      |
+  |---------------------+-------+-------+-----------|
+  | por Valor-Resultado | C     |     3 | 3 1 5 7 9 |
+
+- Se a resolução de endereço de saída é feito no retorno (fim de =swap=)
+
+  | Método              | Ponto | value | list      |
+  |---------------------+-------+-------+-----------|
+  | por Valor-Resultado | C     |     3 | 3 3 5 1 9 |
+
+* #4 (opcional)
+
+| Método              | Valor do vetor =list= no final |
+|---------------------+------------------------------|
+| por Valor           | 1 3                          |
+| por Referência      | 2 6                          |
+| por Valor-Resultado | 2 6                          |
+
