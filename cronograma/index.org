@@ -55,8 +55,8 @@
 | OO         | Orientação a Objeto: Polimorfismo paramétrico; coleções; reflexão                            |   67-104 |              |
 | Extra      | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação         |          |              |
 | Extra      | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                     |          |              |
-| Extra      | Linguagens de script                                                                         |          |              |
-| Extra      | Laboratório sobre programação concorrente                                                    |   67-104 | Final        |
+| Extra      | Laboratório sobre programação concorrente                                                    |   67-104 |              |
+| Extra      | Linguagens de script                                                                         |          | Final        |
 |            | Revisão para  prova                                                                          |          |              |
 |            | PB                                                                                           | Castilho |              |
 |            | Sessão #1 de apresentação dos projetos                                                       |          | Apresentação |
@@ -190,8 +190,8 @@ aulas %>%
 | 21 | 2018-05-22 |   67-104 | OO         | Orientação a Objeto: Polimorfismo paramétrico; coleções; reflexão                            |              |
 | 22 | 2018-05-24 |          | Extra      | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação         |              |
 | 23 | 2018-06-19 |          | Extra      | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                     |              |
-| 24 | 2018-06-21 |          | Extra      | Linguagens de script                                                                         |              |
-| 25 | 2018-06-26 |   67-104 | Extra      | Laboratório sobre programação concorrente                                                    | Final        |
+| 24 | 2018-06-21 |   67-104 | Extra      | Laboratório sobre programação concorrente                                                    |              |
+| 25 | 2018-06-26 |          | Extra      | Linguagens de script                                                                         | Final        |
 | 26 | 2018-06-28 |          |            | Revisão para  prova                                                                          |              |
 | 27 | 2018-07-03 | Castilho |            | PB                                                                                           |              |
 | 28 | 2018-07-05 |          |            | Sessão #1 de apresentação dos projetos                                                       | Apresentação |
