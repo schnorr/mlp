@@ -48,9 +48,9 @@ Ancestrais das linguagens de script modernas (1977)
 #+latex: \vfill
 \pause Linguagens sucessoras
 + REXX -- /Restructured Extended Executor/ (1979)
-+ Perl (1980)
++ Perl (1987)
 \pause Rasmus L. cria uma coleção de /scripts/ baseado em Perl
-+ Criação da linguagem PHP (1990)
++ Criação da linguagem PHP (1995)
 #+latex: \vfill
 \pause *John Ousterhout* (1998)
 + /Scripting: higher level programming for the 21st Century/ \linebreak
