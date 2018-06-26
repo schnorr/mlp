@@ -33,9 +33,10 @@ Ruby tem dois níveis de escopo (local e global)
 + $foo é global
 + @foo é um atributo de instância
 + @@foo é um atributo de classe
-\pause Python, R
-+ Regra interessante \linebreak
-    \rightarrow tudo é local, a menos que especificado o contrário
+#+latex: \pause
+Python
+
+R; regra interessante: tudo é local, a menos que use o operador =<<-=
 * Inovações: Tipos de dados
 
 Declaração de tipos é desnecessária
