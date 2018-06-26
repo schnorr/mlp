@@ -97,9 +97,9 @@ Matemática (Maple, Mathematica, Matlab)
 + Modelagem matemática
 #+latex: \vfill
 \pause Estatística (S, R)
-+ S (1970s), proprietária
++ S (1976), proprietária (operador ~)
 + R
-    + Versão aberta de S
+    + Versão GNU de S
     + Suporta arranjos multidimensionais
     + Funções primeira classe
 * Outros domínios
