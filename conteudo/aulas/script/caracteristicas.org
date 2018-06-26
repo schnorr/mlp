@@ -25,7 +25,7 @@ Definição precisa é difícil
 Uso em /batch/ ou interativo
 + Ler o programa fonte (/script/) linha por linha
     + Rexx, Python, Tcl, Guile, Ruby
-+ Notável exceção: Perl (insiste em ler todo o código antes)
++ Confirmar exceções: Perl, onde lê-se todo o código
 \pause Expressividade
 + Suportar o rápido desenvolvimento e uso interativo
     + Pouco código para fazer coisas simples \rightarrow expressividade
