@@ -10,10 +10,12 @@ utilizando a especificação OpenMP. Na sua solução, forneça um programa
 completo passível de compilação com o seguinte comando:
 
 #+begin_src shell :results output
-gcc fonte.c -o binario -fopenmp 
+gcc fonte.c -o binario -fopenmp
 #+end_src
 
-#+begin_src C :results output
+#+RESULTS:
+
+#+begin_src C :results output :tangle fonte.c
 #include <stdio.h>
 #include <sys/time.h>
 #include <stdio.h>
