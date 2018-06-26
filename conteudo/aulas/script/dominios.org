@@ -34,34 +34,38 @@ Focadas em processamento /batch/
 + /bash/ (/Bourne-again shell/)
 * Domínio: Ling. de comando /shell/ (Function.)
 Expansão de nome de arquivo (com /wildcars/)
-  #+begin_src bash
-	 ls *.pdf
-      for fig in *.eps; do ps2pdf $fig; done
-	 #+end_src
-\pause Testes e condições
-  #+begin_src bash
-	 if [ $fig -nt $target ]; then ps2pdf $fig; fi
-	 #+end_src
-\pause Redireção e canais (/pipes/)
-  #+begin_src bash
-    for fig in *; do echo $fig; done | sort -u | wc -l
-    #+end_src
+#+begin_src bash
+ls *.pdf
+for fig in *.eps; do ps2pdf $fig; done
+#+end_src
+#+latex: \pause
+Testes e condições
+#+begin_src bash
+if [ $fig -nt $target ]; then ps2pdf $fig; fi
+#+end_src
+#+latex: \pause
+Redireção e canais (/pipes/)
+#+begin_src bash
+for fig in *; do echo $fig; done | sort -u | wc -l
+#+end_src
 * Domínio: Linguagens de comando shell
 Aspas e expansão
-  #+BEGIN_SRC bash
-  foo=bar
-  single='$foo'
-  double="$foo"
-  echo $single $double
-  #+END_SRC
-\pause  Funções
-  #+BEGIN_SRC bash
-  function ll () { ls -l "$@" }
-  #+END_SRC
-\pause Convenção #!
-  #+BEGIN_SRC bash
-  #!/bin/bash
-  #+END_SRC
+#+BEGIN_SRC bash
+foo=bar
+single='$foo'
+double="$foo"
+echo $single $double
+#+END_SRC
+#+latex: \pause
+Funções
+#+BEGIN_SRC bash
+function ll () { ls -l "$@" }
+#+END_SRC
+#+latex: \pause
+Convenção #!
+#+BEGIN_SRC bash
+#!/bin/bash
+#+END_SRC
 + Problemas de portabilidade
 * Domínio: Processamento de texto
 Segundo principal ancestral de Linguagens de Script
