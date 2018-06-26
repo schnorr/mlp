@@ -105,5 +105,5 @@ Linguagens de script /versus/ Linguagens de sistema
 + Expressividade/flexibilidade /vs/ segurança e desempenho
 + \pause Rápido e sujo /vs/ aplicações polidas
 \pause Richard Gabriel (Lucid Corp., 1989)
-+ http://dreamsongs.com/worseisbetter.html
++ https://www.dreamsongs.com/WorseIsBetter.html
 + Por que Unix e C tem tanto sucesso quando comparado a Common Lisp?
