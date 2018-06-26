@@ -78,7 +78,7 @@ Segundo principal ancestral de Linguagens de Script
     #+end_src
     + Ausência de variáveis
     + Comandos de um único caractere
-    + Lê arquivo uma linha por vez
+    + Normalmente lê arquivo uma linha por vez
 + \pause awk (1977)
     + Alfred *Aho*, Peter *Weinberger*, Brien *Kernighan*
     + Características (Campos e Arranjos associativos)
