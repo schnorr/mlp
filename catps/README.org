@@ -93,10 +93,13 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 |   12 |       34 |       7.25 |        1.67 |          10 |
 |   13 |       32 |       9.06 |           5 |          10 |
 |   14 |       25 |       5.87 |           0 |          10 |
+|   15 |        2 |         10 |          10 |          10 |
+|   16 |       22 |       6.82 |           5 |          10 |
+|   17 |       13 |         10 |          10 |          10 |
 
 ** Resultados
 
- Até o CATP#14 inclusive, somente para aqueles que entregaram no prazo.
+ Até o CATP#17 inclusive, somente para aqueles que entregaram no prazo.
  
  | ID     | CATP | Nota |
  |--------+------+------|
