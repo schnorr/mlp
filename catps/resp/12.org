@@ -13,46 +13,46 @@ assumimos que os elementos aparecem na seguinte ordem:
 - estado da máquina
 - valor de retorno
 
-| Fundo da pilha        | RA         | Explicações         |
-|-----------------------+------------+---------------------|
-| char e;               | =RA_main()=  |                     |
-| char f;               |            |                     |
-| char g;               |            |                     |
-| RA* din = =&RA_global;= |            | VD                  |
-| RA* est = =&RA_global;= |            | VE                  |
-| ret = void;           |            | endereço de retorno |
-| estado;               |            | estado da máquina   |
-| valor;                |            | valor de retorno    |
-|-----------------------+------------+---------------------|
-| int b;                | =RA_fun2()=  |                     |
-| int c;                |            |                     |
-| RA* din = =&RA_main;=   |            | VD                  |
-| RA* est = =&RA_global;= |            | VE                  |
-| ret = &main;          |            | endereço de retorno |
-| estado;               |            | estado da máquina   |
-| valor;                |            | valor de retorno    |
-|-----------------------+------------+---------------------|
-| float a;              | =RA_fun1()=  |                     |
-| RA* din = =&RA_fun2;=   |            | VD                  |
-| RA* est = =&RA_global;= |            | VE                  |
-| ret = &fun2;          |            | endereço de retorno |
-| estado;               |            | estado da máquina   |
-| valor;                |            | valor de retorno    |
-|-----------------------+------------+---------------------|
-| float a;              | =RA_fun1()'= |                     |
-| RA* din = =&RA_fun1;=   |            | VD                  |
-| RA* est = =&RA_global;= |            | VE                  |
-| ret = &fun1           |            | endereço de retorno |
-| estado;               |            | estado da máquina   |
-| valor;                |            | valor de retorno    |
-|-----------------------+------------+---------------------|
-| float d;              | =RA_fun3()=  |                     |
-| RA* din = =&RA_fun1';=  |            | VD                  |
-| RA* est = =&RA_global;= |            | VE                  |
-| ret = &fun1;          |            | endereço de retorno |
-| estado;               |            | estado da máquina   |
-| valor;                |            | valor de retorno    |
-|-----------------------+------------+---------------------|
+| Fundo da pilha        | RA                                       | Explicações         |
+|-----------------------+------------------------------------------+---------------------|
+| char e;               | =RA_main()=                                |                     |
+| char f;               |                                          |                     |
+| char g;               |                                          |                     |
+| RA* din = =&RA_global;= |                                          | VD                  |
+| RA* est = =&RA_global;= |                                          | VE                  |
+| ret = void;           |                                          | endereço de retorno |
+| estado;               |                                          | estado da máquina   |
+| valor;                |                                          | valor de retorno    |
+|-----------------------+------------------------------------------+---------------------|
+| int b;                | =RA_fun2()=                                |                     |
+| int c;                |                                          |                     |
+| RA* din = =&RA_main;=   |                                          | VD                  |
+| RA* est = =&RA_global;= |                                          | VE                  |
+| ret = &main;          |                                          | endereço de retorno |
+| estado;               |                                          | estado da máquina   |
+| valor;                |                                          | valor de retorno    |
+|-----------------------+------------------------------------------+---------------------|
+| float a;              | =RA_fun1()=                                |                     |
+| RA* din = =&RA_fun2;=   |                                          | VD                  |
+| RA* est = =&RA_global;= |                                          | VE                  |
+| ret = &fun2;          |                                          | endereço de retorno |
+| estado;               |                                          | estado da máquina   |
+| valor;                |                                          | valor de retorno    |
+|-----------------------+------------------------------------------+---------------------|
+| float a;              | @@latex:\texttt{@@ RA_fun1()' @@latex:}@@ |                     |
+| RA* din = =&RA_fun1;=   |                                          | VD                  |
+| RA* est = =&RA_global;= |                                          | VE                  |
+| ret = &fun1           |                                          | endereço de retorno |
+| estado;               |                                          | estado da máquina   |
+| valor;                |                                          | valor de retorno    |
+|-----------------------+------------------------------------------+---------------------|
+| float d;              | =RA_fun3()=                                |                     |
+| RA* din = =&RA_fun1';=  |                                          | VD                  |
+| RA* est = =&RA_global;= |                                          | VE                  |
+| ret = &fun1;          |                                          | endereço de retorno |
+| estado;               |                                          | estado da máquina   |
+| valor;                |                                          | valor de retorno    |
+|-----------------------+------------------------------------------+---------------------|
 
 * #2
 
