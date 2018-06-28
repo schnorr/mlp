@@ -112,6 +112,28 @@ PDF.
 | Funcional | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.  |
 | Funcional | ML: Tipos definidos pelo usuário e tipos estruturados de dados, tipos polimórficos. |
 
+** Revisão
+
+Fluxo de controle
+- notação pré, pós e infixada
+- efeito colateral em =a+foo(a)= quando foo recebe por referência
+  - gcc e clang avaliam em ordem diferente
+- desvios incondicionais com nome
+- dúvidas sobre o termo "sobrecarga"
+  - sobrecarga de operadores
+  - sobrecarga de métodos...
+- discussão sobre polimorfismo (geral)
+- como que se calcula o vínculo estático?
+- passagem de parâmetros (semântica, implementação)
+  - variáveis
+  - subprogramas (formas de vinculação)
+- implementação de exceções (parecer sobre o catp)
+- paralelismo nas linguagens de programação
+  - Especificidade OpenMP versus filosofia geral
+  - Casos de Erlang, Go, ...
+- super discussão sobre o termo "sobrecarga"
+  - emprego em vários contextos
+
 ** Material de apoio
 ** Exercícios
 ** Artigos para leitura
