@@ -13,6 +13,30 @@
 #+TAGS: Lucas(L) noexport(n) deprecated(d)
 #+EXPORT_EXCLUDE_TAGS: noexport
 
+* Final
+** Sumário da entrega
+
+Apenas 7.5 grupos entregaram no prazo, outros 6.5 grupos entregaram
+com 5 até 12 horas e 5 minutos de atraso. Um grupo não entregou.
+
+| Grupo                         | Entrega             |
+|-------------------------------+---------------------|
+| Monstros da Louca Programação | 06/24/2018 10:16 PM |
+| teletypewriters               | 06/26/2018 08:49 PM |
+| Cowboy Value                  | 06/26/2018 11:39 PM |
+| Programadores Anônimos (1)    | 06/26/2018 11:45 PM |
+| Furogga                       | 06/26/2018 11:50 PM |
+| Here for Beer                 | 06/26/2018 11:50 PM |
+| My Little Frogger Haters      | 06/26/2018 11:51 PM |
+| GirlsRule                     | 06/26/2018 11:55 PM |
+| Programadores Anônimos (2)    | 06/27/2018 12:05 PM |
+| Code Runner                   | 06/27/2018 12:06 AM |
+| Scipio Project                | 06/27/2018 12:19 AM |
+| get.sh*t.done                 | 06/27/2018 12:28 AM |
+| GSN                           | 06/27/2018 02:02 AM |
+| Delta                         | 06/27/2018 12:05 PM |
+| Han Solo                      |                     |
+
 * Parcial
 ** Sumário da entrega
 
