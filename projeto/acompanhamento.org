@@ -17,7 +17,7 @@
 ** Sumário da entrega
 
 Apenas 7.5 grupos entregaram no prazo, outros 6.5 grupos entregaram
-com 5 até 12 horas e 5 minutos de atraso. Um grupo não entregou.
+com 5 minutos até 12 horas e 5 minutos de atraso. Um grupo não entregou.
 
 | Grupo                         | Entrega             |
 |-------------------------------+---------------------|
