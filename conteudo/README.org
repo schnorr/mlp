@@ -1,3 +1,6 @@
+#+STARTUP: overview
+#+STARTUP: indent
+
 * Conteúdo
 ** Aulas
 
