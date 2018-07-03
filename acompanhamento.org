@@ -149,6 +149,101 @@ sobre 9.
 - E6: algoritmos de coleta afetados por ciclos
 - E7: notação pré e pós-fixada
 - E8: implementação de subprogramas
+** Respostas
+*** E1
+
+(por fazer)
+
+*** E2 
+
+| Método              | Ponto | value | list      |
+|---------------------+-------+-------+-----------|
+| por Valor           | A     |     2 | 1 3 5 7 9 |
+| por Valor           | B     |     2 | 1 3 5 7 9 |
+| por Valor           | C     |     2 | 1 3 5 7 9 |
+|---------------------+-------+-------+-----------|
+| por Referência      | A     |     1 | 2 3 5 7 9 |
+| por Referência      | B     |     1 | 3 2 5 7 9 |
+| por Referência      | C     |     2 | 3 1 5 7 9 |
+|---------------------+-------+-------+-----------|
+| por Valor-Resultado | A     |     1 | 2 3 5 7 9 |
+| por Valor-Resultado | B     |     1 | 3 2 5 7 9 |
+| por Valor-Resultado | C1    |     2 | 3 1 5 7 9 |
+| por Valor-Resultado | C2    |     2 | 3 2 1 7 9 |
+
+- C1 Se a resolução de endereço de saída é feita na chamada (início de =swap=)
+- C2 Se a resolução de endereço de saída é feito no retorno (fim de =swap=)
+
+*** E3
+
+- (a) cópia rasa
+- (b) realizar cópia profunda sempre
+
+*** E4
+
+- (a): A B H I N O L D E G
+- (b): A B H I N O P S T J L M C E F G
+
+*** E5
+
+Coleção de gerações, pois este método particiona o monte em pedaços
+menores, aplicando pare e copia sobre uma fatia potencialmente da
+metade do monte.
+
+*** E6
+
+- Contador de referências
+
+*** E7
+
+Expressão infixada original:
+
+A + B / C * D - E * F
+
+Árvore correspondente com regras tradicionais
+- de associatividade a esquerda
+- e precedência matemática
+
+#+BEGIN_EXAMPLE
+      -
+     / \
+    /   \
+   /     *
+  +     / \
+ / \   E   F
+A   \
+     *
+    / \
+   /   D
+  / \
+ B   C
+#+END_EXAMPLE
+
+Pré-fixada correta: - + A * / B C D * E F
+Pós-fixada correta: A B C / D * + E F * -
+
+Ordem de avaliação:
+1. Divide B e C
+2. Multiplica 1 com D
+3. Soma A com 2
+4. Multiplica E F
+5. Subtrai 4 de 3
+
+*** E8
+
+(por completar)
+
+(b)
+  foo
+  a fp + 0
+  b fp + 4
+  x fp + 8
+
+  main
+  a fp + 0
+  x fp + 4
+
+
 ** Notas máximas
 
 As notas máximas foram:
