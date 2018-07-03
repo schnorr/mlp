@@ -149,6 +149,18 @@ sobre 9.
 - E6: algoritmos de coleta afetados por ciclos
 - E7: notação pré e pós-fixada
 - E8: implementação de subprogramas
+** Notas máximas
+
+As notas máximas foram:
+
+- E1: [1.5]
+- E2: [1.5]
+- E3: [1.0]
+- E4: [1.0]
+- E5: [1.0]
+- E6: [1.0]
+- E7: [1.5]
+- E8: [1.5]
 
 ** Detalhamento por questão
 
