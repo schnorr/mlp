@@ -100,8 +100,8 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 
 ** Resultados
 
- Até o CATP#17 inclusive, somente para aqueles que entregaram no prazo.
- 
+ Todos os CATPs propostos, somente para aqueles que entregaram no prazo.
+
  | ID     | CATP | Nota |
  |--------+------+------|
  | ???887 |    1 |   10 |
@@ -117,6 +117,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???887 |   14 |    0 |
  | ???887 |   15 |   10 |
  | ???887 |   17 |   10 |
+ | ???887 |   19 |   10 |
  | ???142 |    1 |   10 |
  | ???142 |    3 |  8.3 |
  | ???142 |    4 |   10 |
@@ -127,6 +128,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???142 |   12 |  8.3 |
  | ???142 |   13 |   10 |
  | ???142 |   17 |   10 |
+ | ???142 |   19 |   10 |
  | ???584 |    1 |   10 |
  | ???584 |    2 |   10 |
  | ???584 |    3 |  6.7 |
@@ -137,6 +139,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???584 |   12 |  8.3 |
  | ???584 |   13 |   10 |
  | ???584 |   16 |    5 |
+ | ???584 |   19 |    5 |
  | ???026 |    1 |   10 |
  | ???026 |    3 |  8.3 |
  | ???026 |    6 |   10 |
@@ -146,6 +149,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???026 |   14 |    0 |
  | ???026 |   15 |   10 |
  | ???026 |   16 |    5 |
+ | ???026 |   19 |   10 |
  | ???679 |    1 |   10 |
  | ???526 |    1 |   10 |
  | ???526 |    2 |   10 |
@@ -184,6 +188,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???964 |   15 |   10 |
  | ???964 |   16 |    5 |
  | ???964 |   17 |   10 |
+ | ???964 |   19 |    5 |
  | ???820 |    1 |   10 |
  | ???820 |    2 |   10 |
  | ???820 |    2 |   10 |
@@ -197,6 +202,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???820 |   10 |  7.1 |
  | ???820 |   12 |   10 |
  | ???820 |   13 |   10 |
+ | ???820 |   19 |    0 |
  | ???713 |    1 |   10 |
  | ???713 |    2 |   10 |
  | ???713 |    3 |   10 |
@@ -208,9 +214,11 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???713 |   12 |  6.7 |
  | ???713 |   13 |    5 |
  | ???713 |   14 |  6.7 |
+ | ???713 |   19 |   10 |
  | ???030 |    1 |   10 |
  | ???030 |    2 |   10 |
  | ???030 |    3 |   10 |
+ | ???030 |   19 |   10 |
  | ???281 |    1 |   10 |
  | ???281 |    2 |   10 |
  | ???281 |    3 |  8.3 |
@@ -227,6 +235,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???281 |   14 |   10 |
  | ???281 |   15 |   10 |
  | ???281 |   16 |   10 |
+ | ???281 |   19 |   10 |
  | ???321 |    1 |   10 |
  | ???321 |    2 |  6.7 |
  | ???321 |    3 |   10 |
@@ -243,6 +252,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???321 |   14 |   10 |
  | ???321 |   16 |   10 |
  | ???321 |   17 |   10 |
+ | ???321 |   19 |   10 |
  | ???195 |    1 |   10 |
  | ???195 |    2 |  6.7 |
  | ???195 |    3 |  8.3 |
@@ -256,6 +266,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???195 |   13 |    5 |
  | ???195 |   14 |    0 |
  | ???195 |   15 |   10 |
+ | ???195 |   19 |    5 |
  | ???911 |    1 |   10 |
  | ???911 |    4 |    9 |
  | ???911 |    6 |   10 |
@@ -276,6 +287,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???499 |   15 |   10 |
  | ???499 |   16 |    5 |
  | ???499 |   17 |   10 |
+ | ???499 |   19 |   10 |
  | ???256 |    1 |   10 |
  | ???256 |    2 |   10 |
  | ???256 |    3 |   10 |
@@ -293,6 +305,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???256 |   15 |   10 |
  | ???256 |   16 |   10 |
  | ???256 |   17 |   10 |
+ | ???256 |   19 |   10 |
  | ???266 |    1 |   10 |
  | ???266 |    2 |   10 |
  | ???266 |    3 |   10 |
@@ -349,6 +362,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???317 |   13 |   10 |
  | ???317 |   14 |    0 |
  | ???317 |   17 |   10 |
+ | ???317 |   19 |   10 |
  | ???654 |    1 |   10 |
  | ???654 |    2 |   10 |
  | ???654 |    3 |   10 |
@@ -360,6 +374,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???654 |   12 |    5 |
  | ???654 |   13 |   10 |
  | ???654 |   14 |  6.7 |
+ | ???654 |   19 |   10 |
  | ???657 |    1 |   10 |
  | ???657 |    2 |   10 |
  | ???657 |    3 |  8.3 |
@@ -394,6 +409,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???534 |   15 |   10 |
  | ???534 |   16 |    5 |
  | ???534 |   17 |   10 |
+ | ???534 |   19 |   10 |
  | ???736 |    1 |   10 |
  | ???736 |    2 |   10 |
  | ???736 |    3 |  6.7 |
@@ -431,6 +447,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???574 |   14 |   10 |
  | ???574 |   15 |   10 |
  | ???574 |   16 |   10 |
+ | ???574 |   19 |   10 |
  | ???588 |    1 |   10 |
  | ???588 |    2 |   10 |
  | ???588 |    2 |   10 |
@@ -441,6 +458,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???588 |    9 |  8.3 |
  | ???588 |   12 |  6.7 |
  | ???588 |   14 |    0 |
+ | ???588 |   19 |    5 |
  | ???595 |    1 |   10 |
  | ???595 |    2 |   10 |
  | ???595 |    3 |  8.3 |
@@ -450,6 +468,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???595 |    9 |  9.4 |
  | ???595 |   12 |  6.7 |
  | ???595 |   14 |    0 |
+ | ???595 |   19 |    5 |
  | ???596 |    1 |   10 |
  | ???596 |    2 |   10 |
  | ???596 |    3 |  6.7 |
@@ -480,6 +499,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???612 |   14 |    0 |
  | ???612 |   15 |   10 |
  | ???612 |   16 |    5 |
+ | ???612 |   19 |    5 |
  | ???503 |    1 |   10 |
  | ???503 |    2 |   10 |
  | ???503 |    3 |   10 |
@@ -540,6 +560,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???515 |   15 |   10 |
  | ???515 |   16 |    5 |
  | ???515 |   17 |   10 |
+ | ???515 |   19 |   10 |
  | ???845 |    3 |  8.3 |
  | ???845 |    4 |    8 |
  | ???845 |    6 |   10 |
@@ -550,6 +571,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???845 |   12 |  1.7 |
  | ???845 |   13 |   10 |
  | ???845 |   17 |   10 |
+ | ???845 |   19 |   10 |
  | ???611 |    1 |   10 |
  | ???611 |    2 |   10 |
  | ???611 |    3 |  8.3 |
@@ -563,6 +585,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???611 |   12 |    5 |
  | ???611 |   13 |   10 |
  | ???611 |   15 |   10 |
+ | ???611 |   19 |   10 |
  | ???114 |    1 |   10 |
  | ???114 |    2 |   10 |
  | ???114 |    3 |   10 |
@@ -579,6 +602,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???114 |   14 |   10 |
  | ???114 |   15 |   10 |
  | ???114 |   16 |    5 |
+ | ???114 |   19 |   10 |
  | ???694 |    1 |   10 |
  | ???694 |    2 |   10 |
  | ???694 |    3 |  8.3 |
@@ -594,6 +618,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???694 |   13 |   10 |
  | ???694 |   14 |  6.7 |
  | ???694 |   15 |   10 |
+ | ???694 |   19 |   10 |
  | ???698 |    1 |   10 |
  | ???698 |    2 |   10 |
  | ???698 |    3 |   10 |
@@ -610,6 +635,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
  | ???698 |   14 |  6.7 |
  | ???698 |   15 |   10 |
  | ???698 |   16 |    5 |
+ | ???698 |   19 |   10 |
  | ???711 |    1 |   10 |
  | ???711 |    2 |   10 |
  | ???711 |    3 |  6.7 |
