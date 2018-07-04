@@ -51,7 +51,6 @@ Instrumento preliminar, ainda por ser confirmado:
 | Introducao           |       |    1 |
 | Ling.Funcionalidades |       |    1 |
 | Ling.Dominio         |       |    1 |
-| Recursos             |       |    2 |
 | Crit.Tabela          |       |    3 |
 | Crit.Justificativas  |       |    3 |
 | Crit.Discussao       |       |    3 |
@@ -77,7 +76,6 @@ Instrumento preliminar, ainda por ser confirmado:
 | Currying             |       |    1 |
 | Pattern              |       |    1 |
 | Maior                |       |    2 |
-| Lapply               |       |    2 |
 | Primeira             |       |    2 |
 | Recursão             |       |    2 |
 | Relatório            |       |   10 |
