@@ -96,6 +96,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 |   15 |       22 |         10 |          10 |          10 |
 |   16 |       22 |       6.82 |           5 |          10 |
 |   17 |       13 |         10 |          10 |          10 |
+|   19 |       26 |       8.46 |           0 |          10 |
 
 ** Resultados
 
