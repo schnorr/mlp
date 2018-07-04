@@ -29,7 +29,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 
 * Avaliação
 ** Estatísticas
-*** Desempenho por aluno até o momento
+*** Desempenho por aluno
 
 | ID     | Entregas | Nota.Média |
 |--------+----------+------------|
