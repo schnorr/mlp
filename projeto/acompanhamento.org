@@ -14,6 +14,26 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 
 * Final
+** Ordem
+
+Dia 1 (05/07)
+- Furogga (Julia)
+- Code Runner (Kotlin)
+- teletypewriters (Rust)
+- Monstros da Louca Programação (Scala)
+- get.sh*t.done (Closure)
+- Delta (TypeScript)
+- Scipio Project (Scala)
+
+Dia 2 (10/07)
+- Prog. Anônimos .1 (C#)
+- GSN (TypeScript)
+- My Little Frogger Haters (C#)
+- Cowboy Value (Swift)
+- Here for Beer (R)
+- GirlsRule (Julia)
+- Prog. Anônimos .2 (C#)
+
 ** Sumário da entrega
 
 Apenas 7.5 grupos entregaram no prazo, outros 6.5 grupos entregaram
