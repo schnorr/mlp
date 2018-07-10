@@ -63,10 +63,14 @@ aprendizado da disciplina.
 - [[http://www.wiley.com/WileyCDA/WileyTitle/productCd-EHEP000973.html][David A Watt. Programming language design concepts . John Wiley & Sons, 2004]]
 - [[https://inf.ufes.br/~fvarejao/livroLP.html][Flávio Varejão. Linguagens de Programação, Conceitos e Técnicas . Campus, 2004.]]
 
+** Avaliação da disciplina
+
+Avalie a disciplina se você participou da edição 2018/1 (Turma A):
+
+- [[https://goo.gl/forms/2PEu2P7Qw7OFEfo73][MLP/INF/UFRGS - Avaliação Anônima]]
+
 ** Contato
 
 Se você encontrar algum problema, e também no caso de dúvidas, entre em contato por e-mail:
 - [[http://www.inf.ufrgs.br/~schnorr][Prof. Lucas (http://www.inf.ufrgs.br/~schnorr)]]
-* Avaliação da disciplina
 
-- [[https://goo.gl/forms/2PEu2P7Qw7OFEfo73][MLP/INF/UFRGS - Avaliação Anônima]]
