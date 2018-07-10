@@ -106,6 +106,731 @@ Instrumento preliminar, ainda por ser confirmado:
 | Demonstração         |    2 |
 | Perguntas            |    1 |
 | Apresentação         |   10 |
+** Avaliação por grupo
+**** Furogga
+
+#+name: furogga
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    27 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     8 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |     0 |
+| Crit.Justificativas  |     0 |
+| Crit.Discussao       |     0 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |     8 |
+| Latex/Bibtex         |    10 |
+| Git                  |    10 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |    10 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |    10 |
+| Sobrecarga           |    10 |
+| Delegates            |    10 |
+|----------------------+-------|
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |    10 |
+| Pattern              |     3 |
+| Maior                |    10 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+|----------------------+-------|
+| Relatório            |     7 |
+| Pontualidade         |    10 |
+| Problema             |    10 |
+| Linguagem            |    10 |
+| Vantagens            |    10 |
+| Demonstração         |    10 |
+| Perguntas            |    10 |
+| Apresentação         |     9 |
+
+**** Code Runner
+
+#+name: runner
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    14 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |    10 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |     0 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |    10 |
+| Latex/Bibtex         |    10 |
+| Git                  |     0 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |     0 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |     0 |
+| Herança              |    10 |
+| Inclusão             |     0 |
+| Paramétrico          |     0 |
+| Sobrecarga           |     0 |
+| Delegates            |     0 |
+|----------------------+-------|
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |     0 |
+| Pattern              |     0 |
+| Maior                |     0 |
+| Primeira             |     0 |
+| Recursão             |    10 |
+|----------------------+-------|
+| Relatório            |     5 |
+| Pontualidade         |     8 |
+| Problema             |    10 |
+| Linguagem            |    10 |
+| Vantagens            |    10 |
+| Demonstração         |     5 |
+| Perguntas            |    10 |
+| Apresentação         |     6 |
+
+**** teletypewriters
+
+#+name: teletypewriters
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    35 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |    10 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |    10 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |    10 |
+| Latex/Bibtex         |    10 |
+| Git                  |     0 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |    10 |
+| Herança              |     8 |
+| Inclusão             |     8 |
+| Paramétrico          |    10 |
+| Sobrecarga           |    10 |
+| Delegates            |    10 |
+|----------------------+-------|
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |    10 |
+| Pattern              |     3 |
+| Maior                |    10 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+|----------------------+-------|
+| Relatório            |    10 |
+|----------------------+-------|
+| Pontualidade         |     0 |
+| Problema             |    10 |
+| Linguagem            |    10 |
+| Vantagens            |    10 |
+| Demonstração         |     8 |
+| Perguntas            |     0 |
+| Apresentação         |     7 |
+
+**** Monstros da Louca Programação
+
+#+name: monstros
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    36 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |    10 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |    10 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |    10 |
+| Latex/Bibtex         |    10 |
+| Git                  |    10 |
+| Virtual              |     0 |
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |    10 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |     3 |
+| Sobrecarga           |    10 |
+| Delegates            |     3 |
+| Puras                |     3 |
+| Lambda               |    10 |
+| Currying             |    10 |
+| Pattern              |     0 |
+| Maior                |    10 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+| Relatório            |    10 |
+|----------------------+-------|
+| Pontualidade         |     0 |
+| Problema             |    10 |
+| Linguagem            |    10 |
+| Vantagens            |    10 |
+| Demonstração         |    10 |
+| Perguntas            |    10 |
+| Apresentação         |    10 |
+
+**** get.sh*t.done
+
+#+name: shit
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    12 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |    10 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |     5 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |     5 |
+| Latex/Bibtex         |     5 |
+| Git                  |    10 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |     0 |
+| Construtores         |    10 |
+| Destrutores          |     0 |
+| Espaço               |    10 |
+| Herança              |    10 |
+| Inclusão             |     0 |
+| Paramétrico          |     0 |
+| Sobrecarga           |     0 |
+| Delegates            |     0 |
+|----------------------+-------|
+| Puras                |     5 |
+| Lambda               |     5 |
+| Currying             |     0 |
+| Pattern              |     8 |
+| Maior                |     5 |
+| Primeira             |     0 |
+| Recursão             |     5 |
+|----------------------+-------|
+| Relatório            |     4 |
+| Pontualidade         |    10 |
+| Problema             |    10 |
+| Linguagem            |     5 |
+| Vantagens            |     0 |
+| Demonstração         |     3 |
+| Perguntas            |    10 |
+| Apresentação         |     6 |
+
+**** Delta
+
+#+name: delta
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    39 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     8 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |     0 |
+| Crit.Justificativas  |     0 |
+| Crit.Discussao       |     0 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |     5 |
+| Latex/Bibtex         |    10 |
+| Git                  |    10 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |     0 |
+| Espaço               |     0 |
+| Herança              |     0 |
+| Inclusão             |     0 |
+| Paramétrico          |     0 |
+| Sobrecarga           |     0 |
+| Delegates            |    10 |
+|----------------------+-------|
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |     5 |
+| Pattern              |    10 |
+| Maior                |    10 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+|----------------------+-------|
+| Relatório            |     9 |
+| Problema             |    10 |
+| Linguagem            |    10 |
+| Vantagens            |    10 |
+| Demonstração         |    10 |
+| Pontualidade         |     0 |
+| Perguntas            |    10 |
+| Apresentação         |    10 |
+
+**** Scipio Project
+
+#+name: scipio
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    21 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     7 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |    10 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |    10 |
+| Latex/Bibtex         |    10 |
+| Git                  |     0 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |     0 |
+| Construtores         |    10 |
+| Destrutores          |     0 |
+| Espaço               |    10 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |    10 |
+| Sobrecarga           |    10 |
+| Delegates            |     0 |
+|----------------------+-------|
+| Puras                |     0 |
+| Lambda               |    10 |
+| Currying             |    10 |
+| Pattern              |    10 |
+| Maior                |    10 |
+| Primeira             |     0 |
+| Recursão             |    10 |
+|----------------------+-------|
+| Relatório            |     8 |
+| Problema             |    10 |
+| Linguagem            |    10 |
+| Vantagens            |    10 |
+| Demonstração         |    10 |
+| Pontualidade         |     0 |
+| Perguntas            |    10 |
+| Apresentação         |     7 |
+
+**** Cowboy Value
+
+#+name: cowboy
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    14 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |    10 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |     9 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |     0 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |    10 |
+| Latex/Bibtex         |    10 |
+| Git                  |     0 |
+| Virtual              |     0 |
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |     0 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |     0 |
+| Sobrecarga           |     0 |
+| Delegates            |     0 |
+| Puras                |    10 |
+| Lambda               |     5 |
+| Currying             |     0 |
+| Pattern              |     0 |
+| Maior                |     0 |
+| Primeira             |     0 |
+| Recursão             |    10 |
+| Relatório            |     5 |
+| Problema             |    10 |
+| Linguagem            |    10 |
+| Vantagens            |    10 |
+| Demonstração         |    10 |
+| Pontualidade         |    10 |
+| Perguntas            |    10 |
+| Apresentação         |     8 |
+
+**** Programadores Anônimos (1)
+
+#+name: anom1
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    17 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     8 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |     0 |
+| Crit.Justificativas  |     0 |
+| Crit.Discussao       |     0 |
+| Conc.Geral           |     5 |
+| Conc.Benefícios      |     5 |
+| Conc.Limitações      |     5 |
+| Referências          |    10 |
+| Latex/Bibtex         |    10 |
+| Git                  |    10 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |    10 |
+| Herança              |    10 |
+| Inclusão             |    10 |
+| Paramétrico          |    10 |
+| Sobrecarga           |     0 |
+| Delegates            |     0 |
+|----------------------+-------|
+| Puras                |     0 |
+| Lambda               |     0 |
+| Currying             |     0 |
+| Pattern              |     0 |
+| Maior                |     0 |
+| Primeira             |     0 |
+| Recursão             |     0 |
+|----------------------+-------|
+| Relatório            |     6 |
+| Problema             |    10 |
+| Linguagem            |    10 |
+| Vantagens            |    10 |
+| Demonstração         |     9 |
+| Pontualidade         |     0 |
+| Perguntas            |    10 |
+| Apresentação         |     9 |
+
+**** My Little Frogger Haters
+
+#+name: haters
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    21 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     5 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |    10 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |    10 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |    10 |
+| Conc.Limitações      |    10 |
+| Referências          |     0 |
+| Latex/Bibtex         |     5 |
+| Git                  |     0 |
+| Virtual              |     0 |
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |     0 |
+| Destrutores          |     0 |
+| Espaço               |     0 |
+| Herança              |     0 |
+| Inclusão             |     0 |
+| Paramétrico          |     0 |
+| Sobrecarga           |     0 |
+| Delegates            |     0 |
+|----------------------+-------|
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |     0 |
+| Pattern              |     0 |
+| Maior                |     0 |
+| Primeira             |     0 |
+| Recursão             |     0 |
+|----------------------+-------|
+| Relatório            |     5 |
+| Problema             |    10 |
+| Linguagem            |    10 |
+| Vantagens            |    10 |
+| Demonstração         |    10 |
+| Perguntas            |    10 |
+| Pontualidade         |    10 |
+| Apresentação         |     9 |
+
+**** Here for Beer
+
+#+name: hereforbeer
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    18 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |     5 |
+| Ling.Funcionalidades |    10 |
+| Ling.Dominio         |     8 |
+| Crit.Tabela          |     0 |
+| Crit.Justificativas  |     5 |
+| Crit.Discussao       |    10 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |     5 |
+| Conc.Limitações      |     5 |
+| Referências          |    10 |
+| Latex/Bibtex         |    10 |
+| Git                  |     0 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |     0 |
+| Destrutores          |    10 |
+| Espaço               |     0 |
+| Herança              |    10 |
+| Inclusão             |     0 |
+| Paramétrico          |     0 |
+| Sobrecarga           |    10 |
+| Delegates            |     0 |
+|----------------------+-------|
+| Puras                |    10 |
+| Lambda               |    10 |
+| Currying             |    10 |
+| Pattern              |     0 |
+| Maior                |    10 |
+| Primeira             |    10 |
+| Recursão             |    10 |
+|----------------------+-------|
+| Relatório            |   5.5 |
+| Problema             |    10 |
+| Linguagem            |    10 |
+| Vantagens            |    10 |
+| Demonstração         |    10 |
+| Pontualidade         |    10 |
+| Perguntas            |    10 |
+| Apresentação         |     8 |
+
+**** GirlsRule
+
+#+name: girls
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    14 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |    10 |
+| Ling.Funcionalidades |     5 |
+| Ling.Dominio         |     5 |
+| Crit.Tabela          |     0 |
+| Crit.Justificativas  |     0 |
+| Crit.Discussao       |     0 |
+| Conc.Geral           |     0 |
+| Conc.Benefícios      |     0 |
+| Conc.Limitações      |     0 |
+| Referências          |    10 |
+| Latex/Bibtex         |    10 |
+| Git                  |    10 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |    10 |
+| Destrutores          |     0 |
+| Espaço               |     0 |
+| Herança              |     0 |
+| Inclusão             |     8 |
+| Paramétrico          |     8 |
+| Sobrecarga           |    10 |
+| Delegates            |     0 |
+| Puras                |     0 |
+| Lambda               |     0 |
+| Currying             |     0 |
+| Pattern              |     0 |
+| Maior                |     0 |
+| Primeira             |     0 |
+| Recursão             |     0 |
+|----------------------+-------|
+| Relatório            |     4 |
+| Problema             |    10 |
+| Linguagem            |    10 |
+| Vantagens            |    10 |
+| Demonstração         |    10 |
+| Perguntas            |    10 |
+| Pontualidade         |     0 |
+| Apresentação         |    10 |
+
+**** GSN
+
+#+name: gsn
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |    17 |
+| Capa.Grupo           |    10 |
+| Capa.Membros         |    10 |
+| Capa.Problema        |    10 |
+| Capa.Linguagem       |    10 |
+| Introducao           |    10 |
+| Ling.Funcionalidades |     8 |
+| Ling.Dominio         |     8 |
+| Crit.Tabela          |    10 |
+| Crit.Justificativas  |    10 |
+| Crit.Discussao       |     0 |
+| Conc.Geral           |    10 |
+| Conc.Benefícios      |     5 |
+| Conc.Limitações      |    10 |
+| Referências          |     5 |
+| Latex/Bibtex         |    10 |
+| Git                  |     0 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |     5 |
+| Construtores         |    10 |
+| Destrutores          |    10 |
+| Espaço               |     0 |
+| Herança              |     5 |
+| Inclusão             |    10 |
+| Paramétrico          |     0 |
+| Sobrecarga           |     0 |
+| Delegates            |     0 |
+|----------------------+-------|
+| Puras                |     0 |
+| Lambda               |     5 |
+| Currying             |     5 |
+| Pattern              |     0 |
+| Maior                |    10 |
+| Primeira             |     8 |
+| Recursão             |     5 |
+|----------------------+-------|
+| Relatório            |     7 |
+| Problema             |    10 |
+| Linguagem            |    10 |
+| Vantagens            |     8 |
+| Demonstração         |    10 |
+| Pontualidade         |    10 |
+| Perguntas            |    10 |
+| Apresentação         |     8 |
+
+**** Programadores Anônimos (2)
+
+Não se fez presente para apresentar.
+- Relatório não foi entregue
+
+#+name: anom2
+| ITEM                 | Valor |
+|----------------------+-------|
+| Páginas              |     0 |
+| Capa.Grupo           |     0 |
+| Capa.Membros         |     0 |
+| Capa.Problema        |     0 |
+| Capa.Linguagem       |     0 |
+| Introducao           |     0 |
+| Ling.Funcionalidades |     0 |
+| Ling.Dominio         |     0 |
+| Crit.Tabela          |     0 |
+| Crit.Justificativas  |     0 |
+| Crit.Discussao       |     0 |
+| Conc.Geral           |     0 |
+| Conc.Benefícios      |     0 |
+| Conc.Limitações      |     0 |
+| Referências          |     0 |
+| Latex/Bibtex         |     0 |
+| Git                  |     0 |
+| Virtual              |     0 |
+|----------------------+-------|
+| Classes              |    10 |
+| Encapsulamento       |    10 |
+| Construtores         |     0 |
+| Destrutores          |     0 |
+| Espaço               |     5 |
+| Herança              |     0 |
+| Inclusão             |     0 |
+| Paramétrico          |     0 |
+| Sobrecarga           |     0 |
+| Delegates            |     0 |
+|----------------------+-------|
+| Puras                |     0 |
+| Lambda               |     0 |
+| Currying             |     0 |
+| Pattern              |     0 |
+| Maior                |     0 |
+| Primeira             |     0 |
+| Recursão             |     0 |
+|----------------------+-------|
+| Relatório            |     0 |
+| Pontualidade         |     0 |
+| Problema             |     0 |
+| Linguagem            |     0 |
+| Vantagens            |     0 |
+| Demonstração         |     0 |
+| Perguntas            |     0 |
+| Apresentação         |     0 |
 
 * Parcial
 ** Sumário da entrega
