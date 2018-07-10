@@ -832,6 +832,25 @@ Não se fez presente para apresentar.
 | Perguntas            |     0 |
 | Apresentação         |     0 |
 
+** Notas finais do TF
+
+| Grupo                         | Nota do TF |
+|-------------------------------+------------|
+| Monstros da Louca Programação |       9.23 |
+| teletypewriters               |       9.02 |
+| Furogga                       |       8.07 |
+| Scipio Project                |       7.88 |
+| Delta                         |       7.07 |
+| Here for Beer                 |        6.9 |
+| GSN                           |       6.85 |
+| Cowboy Value                  |       6.67 |
+| Code Runner                   |          6 |
+| Programadores Anônimos (1)    |       5.89 |
+| My Little Frogger Haters      |       5.88 |
+| get.sh*t.done                 |       5.43 |
+| GirlsRule                     |        4.8 |
+| Programadores Anônimos (2)    |       0.55 |
+
 * Parcial
 ** Sumário da entrega
 
