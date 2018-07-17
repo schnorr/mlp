@@ -64,6 +64,89 @@ As notas são finais. Os conceitos serão enviados por e-mail.
 | ???588 | 4.72 | 5.22 | 7.9 |  6.9 |
 | ???026 | 4.51 | 4.22 | 4.7 |  6.9 |
 
+* PR Detalhamento
+** Questões
+
+- E1: notação pré e pós-fixada
+- E2: fluxo excepcional versus fluxo normal de execução
+- E3: unificação em prolog
+- E4: polimorfismo paramétrico
+- E5: curto-circuito
+- E6: algoritmos de coleta afetados por ciclos
+- E7: implementar três versões da seq. de números positivos
+- E8: emprego de método de passagem de parâmetros
+
+** Respostas
+
+E1
+- Pré
+  #+BEGIN_EXAMPLE
+  - + A * / B C D * E F
+  #+END_EXAMPLE
+- Pós
+  #+BEGIN_EXAMPLE
+  A B C / D * + E F * -
+  #+END_EXAMPLE
+
+E2
+- (a) Com exceção
+  #+BEGIN_EXAMPLE
+  A B H I N O L D E G
+  #+END_EXAMPLE
+- (b) Sem exceção
+  #+BEGIN_EXAMPLE
+  A B H I N O P S T J L M C E F G
+  #+END_EXAMPLE
+
+E3
+- Fatorial corrigido
+  #+BEGIN_EXAMPLE
+  fatorial(0,1) :- !.
+  fatorial(N,X) :- N > 0, N1 is N - 1, fatorial(N1, Y), X is N*Y.
+  #+END_EXAMPLE
+- Erro é lançado porque N1 ainda não foi unificado no momento da
+  avaliação do termo =fatorial(N1,Y)= e porque Y ainda não foi unificado
+  com um valor ao avaliar o termo =X is N*Y=.
+
+E4
+- Definição de polimorfismo paramétrico
+
+E5
+- A implementa curto-circuito; B não.
+
+E6
+- Contador de referências
+
+E7
+- Três implementações que salientem as características de cada paradigma
+  - Imperativo (laços, controle estruturado)
+  - Funcional (funções)
+  - Lógico (axiomas)
+
+E8
+- Valor
+  #+BEGIN_EXAMPLE
+  0 2 4
+  #+END_EXAMPLE
+- Caminho de acesso (referência)
+  #+BEGIN_EXAMPLE
+  5 7 9
+  #+END_EXAMPLE
+
+** Notas máximas
+
+As notas máximas foram:
+
+- E1: [1.5]
+- E2: [1.0]
+- E3: [1.0]
+- E4: [1.0]
+- E5: [1.0]
+- E6: [1.0]
+- E7: [2.0]
+- E8: [1.5]
+
+** Detalhamento por questão
 * P2 Detalhamento
 ** Questões
 
@@ -75,6 +158,7 @@ As notas são finais. Os conceitos serão enviados por e-mail.
 - E6: algoritmos de coleta afetados por ciclos
 - E7: notação pré e pós-fixada
 - E8: implementação de subprogramas
+
 ** Respostas
 *** E1
 
@@ -168,7 +252,6 @@ Ordem de avaliação:
   main
   a fp + 0
   x fp + 4
-
 
 ** Notas máximas
 
