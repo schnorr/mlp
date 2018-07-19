@@ -30,38 +30,38 @@
 ** Aulas (em ORG)
 
 #+NAME: listagem_de_encontros
-| Setor      | Descrição                                                                                    |    Local | Projeto      |
-|------------+----------------------------------------------------------------------------------------------+----------+--------------|
-| Geral      | Definições, requisitos e posicionamento da disciplina                                        |          |              |
-| Geral      | Sintaxe e semântica. Proc. de linguagens. Compilação, interpretação. Máquinas virtuais.      |          |              |
-| Funcional  | Modelo de Programação Funcional: características do modelo; semântica de programas.          |          |              |
-| Funcional  | ML: Introdução, tipos de dados primitivos e estruturados, funções.                           |   67-104 | Anúncio      |
-| Funcional  | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.           |   67-104 |              |
-| Funcional  | ML: Tipos definidos pelo usuário e tipos estruturados de dados, tipos polimórficos.          |   67-104 | Def. Grupos  |
-| Lógico     | Prolog: Modelo de prog. em lógica; caract. do modelo; fundamentos de lógica; semântica.      |   67-104 |              |
-| Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                            |   67-104 |              |
-| Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                   |   67-104 | Inicial      |
-| Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                       |          |              |
-| Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.  |          |              |
-| Imperativo | Tipos de Dados: sist. de tipos, primitivos, estrut. e compostos, tipos de usuário; Intro. OO |          |              |
-| Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos. |          |              |
-|            | PA                                                                                           | Castilho |              |
-| Imperativo | Controle de Fluxo: Expressões e atribuição. Operadores. Comandos: condicionais e iterativos. |          |              |
-| Imperativo | Polimorfismo: sobrecarga de ops. e funções, coerção, paramétrico, estático/dinâmico.         |          |              |
-| Imperativo | Subprogramas: Definição, invocação. Registros de ativação. Acesso a variáveis não locais.    |          |              |
-| Imperativo | Subprogramas: Semântica de pass. de parâmetros. Modos de pass. de parâmetros, implementação. |          | Parcial      |
-| OO         | Orientação a Objeto: classes, atributos e métodos; encapsulamento; proteção; construtores    |   67-104 |              |
-| OO         | Orientação a Objeto: Herança, polimorfismo                                                   |   67-104 |              |
-| OO         | Orientação a Objeto: Polimorfismo paramétrico; coleções; reflexão                            |   67-104 |              |
-| Extra      | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação         |          |              |
-| Extra      | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                     |          |              |
-| Extra      | Laboratório sobre programação concorrente                                                    |   67-104 |              |
-| Extra      | Linguagens de script                                                                         |          | Final        |
-|            | Revisão para  prova                                                                          |          |              |
-|            | PB                                                                                           | Castilho |              |
-|            | Sessão #1 de apresentação dos projetos                                                       |          | Apresentação |
-|            | Sessão #2 de apresentação dos projetos                                                       |          | Apresentação |
-|            | PR                                                                                           |          |              |
+| Setor      | Descrição                                                                                    | Local | Projeto      |
+|------------+----------------------------------------------------------------------------------------------+-------+--------------|
+| Geral      | Definições, requisitos e posicionamento da disciplina                                        |       |              |
+| Geral      | Sintaxe e semântica. Proc. de linguagens. Compilação, interpretação. Máquinas virtuais.      |       |              |
+| Funcional  | Modelo de Programação Funcional: características do modelo; semântica de programas.          |       |              |
+| Funcional  | ML: Introdução, tipos de dados primitivos e estruturados, funções.                           | LAB   | Anúncio      |
+| Funcional  | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.           | LAB   |              |
+| Funcional  | ML: Tipos definidos pelo usuário e tipos estruturados de dados, tipos polimórficos.          | LAB   | Def. Grupos  |
+| Lógico     | Prolog: Modelo de prog. em lógica; caract. do modelo; fundamentos de lógica; semântica.      | LAB   |              |
+| Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                            | LAB   |              |
+| Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                   | LAB   | Inicial      |
+| Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                       |       |              |
+| Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.  |       |              |
+| Imperativo | Tipos de Dados: sist. de tipos, primitivos, estrut. e compostos, tipos de usuário; Intro. OO |       |              |
+| Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos. |       |              |
+|            | PA                                                                                           |       |              |
+| Imperativo | Controle de Fluxo: Expressões e atribuição. Operadores. Comandos: condicionais e iterativos. |       |              |
+| Imperativo | Polimorfismo: sobrecarga de ops. e funções, coerção, paramétrico, estático/dinâmico.         |       |              |
+| Imperativo | Subprogramas: Definição, invocação. Registros de ativação. Acesso a variáveis não locais.    |       |              |
+| Imperativo | Subprogramas: Semântica de pass. de parâmetros. Modos de pass. de parâmetros, implementação. |       | Parcial      |
+| OO         | Orientação a Objeto: classes, atributos e métodos; encapsulamento; proteção; construtores    | LAB   |              |
+| OO         | Orientação a Objeto: Herança, polimorfismo                                                   | LAB   |              |
+| OO         | Orientação a Objeto: Polimorfismo paramétrico; coleções; reflexão                            | LAB   |              |
+| Extra      | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação         |       |              |
+| Extra      | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                     |       |              |
+| Extra      | Programação concorrente                                                                      | LAB   |              |
+| Extra      | Linguagens de script                                                                         |       | Final        |
+|            | Revisão                                                                                      |       |              |
+|            | PB                                                                                           |       |              |
+|            | Sessão #1 de apresentação dos projetos                                                       |       | Apresentação |
+|            | Sessão #2 de apresentação dos projetos                                                       |       | Apresentação |
+|            | PR                                                                                           |       |              |
 
 ** Cronograma (para TEX)
 #+name: cronograma
@@ -71,20 +71,24 @@ suppressMessages(library(lubridate));
 suppressMessages(library(tidyverse));
 suppressMessages(library(xtable));
 
-aulas <- aulas %>% as.tibble();
-
 daysOff <- c(
 ymd("2018-03-30"), # Religioso
 ymd("2018-03-31"), # Não Letivo
 seq(ymd("2018-04-04"), ymd("2018-04-06"), by="days"), # ERAD
 ymd("2018-04-21"), # Tiradentes
 ymd("2018-05-01"), # Trabalho
-ymd("2018-05-19"), # Portas Abertas
-ymd("2018-05-29"), # Falta combustível
+ymd("2018-05-19"), # Portas Abert
+ymd("2018-05-29"), # Falta de Combust.
 ymd("2018-05-31"), # Religioso
+ymd("2018-06-01"), # Não Letivo
 seq(ymd("2018-06-03"), ymd("2018-06-17"), by="days"), # BRAFITEC
 ymd("2018-09-07"), # Independência
 ymd("2018-09-20"), # Farroupilha
+ymd("2018-09-24"), # SBAC
+ymd("2018-09-25"), # SBAC
+ymd("2018-09-26"), # SBAC
+ymd("2018-09-27"), # SBAC
+ymd("2018-09-28"), # LICIA
 ymd("2018-10-12"), # Religioso
 ymd("2018-10-15"), # SEMAC
 ymd("2018-10-16"), # SEMAC
@@ -96,13 +100,13 @@ ymd("2018-11-02"), # Mortos
 ymd("2018-11-15")  # República
 )
 
-dataDaRecuperação <- ymd("2018-07-17");
+dataDaRecuperação <- ymd("2018-12-05");
 
-dates <- tibble(Dia=seq(ymd("2018-03-05"), ymd("2018-07-14"), by="days")) %>%
+dates <- tibble(Dia=seq(ymd("2018-08-07"), ymd("2018-12-22"), by="days")) %>%
     # Define o dia da semana
     mutate(DiaDaSemana = wday(Dia)) %>%
     # Aulas de MLP nas Terças-Quintas
-    filter(DiaDaSemana %in% c(3, 5)) %>%
+    filter(DiaDaSemana %in% c(2, 4)) %>%
     # Remove dias onde não haverá aula
     filter(!(Dia %in% daysOff));
 
@@ -136,8 +140,8 @@ aulas %>%
 #+begin_src R :results output :session :exports both
 cronograma.modelo.filename = "data/8d/06941c-8871-4365-980a-b54f54214592/layout-cronograma.tex"
 cronograma.modelo = readChar(cronograma.modelo.filename, file.info(cronograma.modelo.filename)$size);
-turma = "A";
-semestre = "2018/1 -- Outono"
+turma = "U";
+semestre = "2018/2 -- Primavera"
 cronograma.modelo <- gsub("TURMA", turma, cronograma.modelo);
 cronograma.modelo <- gsub("SEMESTRE", semestre, cronograma.modelo);
 cronograma.modelo <- gsub("TABELA", gsub("\\\\", "\\\\\\\\", cronograma), cronograma.modelo);
@@ -165,35 +169,35 @@ aulas %>%
 #+end_src
 
 #+RESULTS:
-|  N |   Encontro |    Local | Setor      | Descrição                                                                                    | Projeto      |
-|----+------------+----------+------------+----------------------------------------------------------------------------------------------+--------------|
-|  1 | 2018-03-06 |          | Geral      | Definições, requisitos e posicionamento da disciplina                                        |              |
-|  2 | 2018-03-08 |          | Geral      | Sintaxe e semântica. Proc. de linguagens. Compilação, interpretação. Máquinas virtuais.      |              |
-|  3 | 2018-03-13 |          | Funcional  | Modelo de Programação Funcional: características do modelo; semântica de programas.          |              |
-|  4 | 2018-03-15 |   67-104 | Funcional  | ML: Introdução, tipos de dados primitivos e estruturados, funções.                           | Anúncio      |
-|  5 | 2018-03-20 |   67-104 | Funcional  | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.           |              |
-|  6 | 2018-03-22 |   67-104 | Funcional  | ML: Tipos definidos pelo usuário e tipos estruturados de dados, tipos polimórficos.          | Def. Grupos  |
-|  7 | 2018-03-27 |   67-104 | Lógico     | Prolog: Modelo de prog. em lógica; caract. do modelo; fundamentos de lógica; semântica.      |              |
-|  8 | 2018-03-29 |   67-104 | Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                            |              |
-|  9 | 2018-04-03 |   67-104 | Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                   | Inicial      |
-| 10 | 2018-04-10 |          | Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                       |              |
-| 11 | 2018-04-12 |          | Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.  |              |
-| 12 | 2018-04-17 |          | Imperativo | Tipos de Dados: sist. de tipos, primitivos, estrut. e compostos, tipos de usuário; Intro. OO |              |
-| 13 | 2018-04-19 |          | Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos. |              |
-| 14 | 2018-04-24 | Castilho |            | PA                                                                                           |              |
-| 15 | 2018-04-26 |          | Imperativo | Controle de Fluxo: Expressões e atribuição. Operadores. Comandos: condicionais e iterativos. |              |
-| 16 | 2018-05-03 |          | Imperativo | Polimorfismo: sobrecarga de ops. e funções, coerção, paramétrico, estático/dinâmico.         |              |
-| 17 | 2018-05-08 |          | Imperativo | Subprogramas: Definição, invocação. Registros de ativação. Acesso a variáveis não locais.    |              |
-| 18 | 2018-05-10 |          | Imperativo | Subprogramas: Semântica de pass. de parâmetros. Modos de pass. de parâmetros, implementação. | Parcial      |
-| 19 | 2018-05-15 |   67-104 | OO         | Orientação a Objeto: classes, atributos e métodos; encapsulamento; proteção; construtores    |              |
-| 20 | 2018-05-17 |   67-104 | OO         | Orientação a Objeto: Herança, polimorfismo                                                   |              |
-| 21 | 2018-05-22 |   67-104 | OO         | Orientação a Objeto: Polimorfismo paramétrico; coleções; reflexão                            |              |
-| 22 | 2018-05-24 |          | Extra      | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação         |              |
-| 23 | 2018-06-19 |          | Extra      | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                     |              |
-| 24 | 2018-06-21 |   67-104 | Extra      | Laboratório sobre programação concorrente                                                    |              |
-| 25 | 2018-06-26 |          | Extra      | Linguagens de script                                                                         | Final        |
-| 26 | 2018-06-28 |          |            | Revisão para  prova                                                                          |              |
-| 27 | 2018-07-03 | Castilho |            | PB                                                                                           |              |
-| 28 | 2018-07-05 |          |            | Sessão #1 de apresentação dos projetos                                                       | Apresentação |
-| 29 | 2018-07-10 |          |            | Sessão #2 de apresentação dos projetos                                                       | Apresentação |
-| 30 | 2018-07-17 |          |            | PR                                                                                           |              |
+|  N |   Encontro | Local | Setor      | Descrição                                                                                    | Projeto      |
+|----+------------+-------+------------+----------------------------------------------------------------------------------------------+--------------|
+|  1 | 2018-08-08 |       | Geral      | Definições, requisitos e posicionamento da disciplina                                        |              |
+|  2 | 2018-08-13 |       | Geral      | Sintaxe e semântica. Proc. de linguagens. Compilação, interpretação. Máquinas virtuais.      |              |
+|  3 | 2018-08-15 |       | Funcional  | Modelo de Programação Funcional: características do modelo; semântica de programas.          |              |
+|  4 | 2018-08-20 | LAB   | Funcional  | ML: Introdução, tipos de dados primitivos e estruturados, funções.                           | Anúncio      |
+|  5 | 2018-08-22 | LAB   | Funcional  | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.           |              |
+|  6 | 2018-08-27 | LAB   | Funcional  | ML: Tipos definidos pelo usuário e tipos estruturados de dados, tipos polimórficos.          | Def. Grupos  |
+|  7 | 2018-08-29 | LAB   | Lógico     | Prolog: Modelo de prog. em lógica; caract. do modelo; fundamentos de lógica; semântica.      |              |
+|  8 | 2018-09-03 | LAB   | Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                            |              |
+|  9 | 2018-09-05 | LAB   | Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                   | Inicial      |
+| 10 | 2018-09-10 |       | Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                       |              |
+| 11 | 2018-09-12 |       | Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.  |              |
+| 12 | 2018-09-17 |       | Imperativo | Tipos de Dados: sist. de tipos, primitivos, estrut. e compostos, tipos de usuário; Intro. OO |              |
+| 13 | 2018-09-19 |       | Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos. |              |
+| 14 | 2018-10-01 |       |            | PA                                                                                           |              |
+| 15 | 2018-10-03 |       | Imperativo | Controle de Fluxo: Expressões e atribuição. Operadores. Comandos: condicionais e iterativos. |              |
+| 16 | 2018-10-08 |       | Imperativo | Polimorfismo: sobrecarga de ops. e funções, coerção, paramétrico, estático/dinâmico.         |              |
+| 17 | 2018-10-10 |       | Imperativo | Subprogramas: Definição, invocação. Registros de ativação. Acesso a variáveis não locais.    |              |
+| 18 | 2018-10-22 |       | Imperativo | Subprogramas: Semântica de pass. de parâmetros. Modos de pass. de parâmetros, implementação. | Parcial      |
+| 19 | 2018-10-24 | LAB   | OO         | Orientação a Objeto: classes, atributos e métodos; encapsulamento; proteção; construtores    |              |
+| 20 | 2018-10-29 | LAB   | OO         | Orientação a Objeto: Herança, polimorfismo                                                   |              |
+| 21 | 2018-10-31 | LAB   | OO         | Orientação a Objeto: Polimorfismo paramétrico; coleções; reflexão                            |              |
+| 22 | 2018-11-05 |       | Extra      | Sistemas de Tratamento de Exceções: técnicas em diferentes linguagens de programação         |              |
+| 23 | 2018-11-07 |       | Extra      | Gerenciamento do Monte: técnicas em diferentes linguagens de programação                     |              |
+| 24 | 2018-11-12 | LAB   | Extra      | Programação concorrente                                                                      |              |
+| 25 | 2018-11-14 |       | Extra      | Linguagens de script                                                                         | Final        |
+| 26 | 2018-11-19 |       |            | Revisão                                                                                      |              |
+| 27 | 2018-11-21 |       |            | PB                                                                                           |              |
+| 28 | 2018-11-26 |       |            | Sessão #1 de apresentação dos projetos                                                       | Apresentação |
+| 29 | 2018-11-28 |       |            | Sessão #2 de apresentação dos projetos                                                       | Apresentação |
+| 30 | 2018-12-05 |       |            | PR                                                                                           |              |

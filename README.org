@@ -43,7 +43,7 @@ aprendizado da disciplina.
 ** Plano e Cronograma
 
 - [[./plano/index.org][Plano da disciplina]] (permanente)
-- [[./cronograma/index.org][Cronograma Edição 2018/1]] (Turma A, Terças e Quintas, 08:30 – 10:10)
+- [[./cronograma/index.org][Cronograma Edição 2018/2]] (Turma U, Segundas e Quartas, 15:30 – 17:10)
 
 ** Elementos Pedagógicos
 
