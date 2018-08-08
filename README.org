@@ -49,12 +49,12 @@ aprendizado da disciplina.
 
 - [[./conteudo/][Acesse o conteúdo da disciplina]]
 - [[./catps/][Conjunto de Atividades Teórico-Práticas (CATP)]]
-- [[./projeto/][Especificação e prazos do Trabalho Final (TF)]] ([[https://github.com/schnorr/mlpreport][Modelo Latex do
+- (obsoleto) [[./projeto/][Especificação e prazos do Trabalho Final (TF)]] ([[https://github.com/schnorr/mlpreport][Modelo Latex do
   Relatório]]) ([[./projeto/acompanhamento.org][Acompanhamento]])
 
 ** Avaliações
 
-- [[./acompanhamento.org][Geral]]
+- (obsoleto) [[./acompanhamento.org][Geral]]
 
 ** Bibliografia
 - [[https://loja.grupoa.com.br/livros/programacao/conceitos-de-linguagens-de-programacao/9788582604687][Robert W. Sebesta. Conceitos de Linguagens de Programação. Bookman. 5th edition, 2003]]
