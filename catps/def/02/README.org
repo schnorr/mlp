@@ -36,3 +36,16 @@ Sem utilizar funcionais (=map=, =lapply=, etc).
 
    #+RESULTS:
    : [1]  1  4  9 16 25 36
+
+4. Elaborar a função =multiplica=, que recebe duas listas de tamanhos
+   idênticos e um número, retornando uma lista com o mesmo tamanho das
+   listas de entrada que contém o resultado da multiplicação entre os
+   elementos das listas (por posição) com o número passado como
+   argumento.
+
+   #+begin_src R :results output :session :exports both
+   multiplica(list(2,3), list(4,5), 2)
+   #+end_src
+
+   #+RESULTS:
+   : [1]  16  30
