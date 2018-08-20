@@ -174,9 +174,9 @@ aulas %>%
 |  1 | 2018-08-08 |          | Geral      | Definições, requisitos e posicionamento da disciplina                                        |              |
 |  2 | 2018-08-13 |          | Geral      | Sintaxe e semântica. Proc. de linguagens. Compilação, interpretação. Máquinas virtuais.      |              |
 |  3 | 2018-08-15 |          | Funcional  | Modelo de Programação Funcional: características do modelo; semântica de programas.          |              |
-|  4 | 2018-08-20 |   67-104 | Funcional  | ML: Introdução, tipos de dados primitivos e estruturados, funções.                           | Anúncio      |
-|  5 | 2018-08-22 |   67-104 | Funcional  | ML: Funções compostas, recursividade, pattern matching, polimorfismo e sobrecarga.           |              |
-|  6 | 2018-08-27 |   67-104 | Funcional  | ML: Tipos definidos pelo usuário e tipos estruturados de dados, tipos polimórficos.          | Def. Grupos  |
+|  4 | 2018-08-20 |   67-104 | Funcional  | R: Introdução, Listas e recursividade                                                        | Anúncio      |
+|  5 | 2018-08-22 |   67-104 | Funcional  | R: Funcionais                                                                                |              |
+|  6 | 2018-08-27 |   67-104 | Funcional  | R: Manipulação de Dados                                                                      | Def. Grupos  |
 |  7 | 2018-08-29 |   67-104 | Lógico     | Prolog: Modelo de prog. em lógica; caract. do modelo; fundamentos de lógica; semântica.      |              |
 |  8 | 2018-09-03 |   67-104 | Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                            |              |
 |  9 | 2018-09-05 |   67-104 | Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                   | Inicial      |
