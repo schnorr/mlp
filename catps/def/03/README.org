@@ -86,9 +86,7 @@
 
    Deve retornar =0.547722557505=.
 
-** Exercícios opcionais
-
-1. Elabore uma função =produtoInterno= que receba duas listas, cada uma
+7. Elabore uma função =produtoInterno= que receba duas listas, cada uma
    representando um vetor Euclidiano diferente, e calcule o seu
    produto interno, conforme a definição seguinte:
 
@@ -105,7 +103,7 @@
    
    Deve retornar =0.63=.
 
-2. Elaborar uma função =similaridade= que receba duas listas de números,
+8. Elaborar uma função =similaridade= que receba duas listas de números,
    cada uma representando um vetor de características textuais, e
    calcule a sua similaridade utilizando a definição seguinte:
 
