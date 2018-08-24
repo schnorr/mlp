@@ -35,13 +35,13 @@ Os prazos são até às 23:59 do dia informado.
 
 | Item                            |      Prazo |
 |---------------------------------+------------|
-| Anúncio (Início do TF)          | 2018-03-15 |
-| Escolha da LP, Problema, Grupos | 2018-03-22 |
-| Projeto inicial                 | 2018-04-03 |
-| Entrega *parcial*                 | 2018-05-10 |
-| Entrega *final*                   | 2018-06-21 |
-| Apresentações Sessão #1         | 2018-07-03 |
-| Apresentações Sessão #2         | 2018-07-05 |
+| Anúncio (Início do TF)          | 2018-08-29 |
+| Escolha da LP, Problema, Grupos | 2018-09-05 |
+| Projeto inicial                 | 2018-09-12 |
+| Entrega *parcial*                 | 2018-10-22 |
+| Entrega *final*                   | 2018-11-14 |
+| Apresentações Sessão #1         | 2018-11-26 |
+| Apresentações Sessão #2         | 2018-11-28 |
 
 * Visão Geral e Linguagens
 

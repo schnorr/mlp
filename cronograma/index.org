@@ -35,14 +35,14 @@
 | Geral      | Definições, requisitos e posicionamento da disciplina                                        |          |              |
 | Geral      | Sintaxe e semântica. Proc. de linguagens. Compilação, interpretação. Máquinas virtuais.      |          |              |
 | Funcional  | Modelo de Programação Funcional: características do modelo; semântica de programas.          |          |              |
-| Funcional  | R: Introdução, Listas e recursividade                                                        |   67-104 | Anúncio      |
+| Funcional  | R: Introdução, Listas e recursividade                                                        |   67-104 |              |
 | Funcional  | R: Funcionais                                                                                |   67-104 |              |
-| Funcional  | R: Manipulação de Dados                                                                      |   67-104 | Def. Grupos  |
-| Lógico     | Prolog: Modelo de prog. em lógica; caract. do modelo; fundamentos de lógica; semântica.      |   67-104 |              |
+| Funcional  | R: Manipulação de Dados                                                                      |   67-104 |              |
+| Lógico     | Prolog: Modelo de prog. em lógica; caract. do modelo; fundamentos de lógica; semântica.      |   67-104 | Anúncio      |
 | Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                            |   67-104 |              |
-| Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                   |   67-104 | Inicial      |
+| Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                   |   67-104 | Def. Grupos  |
 | Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                       |          |              |
-| Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.  |          |              |
+| Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.  |          | Inicial      |
 | Imperativo | Tipos de Dados: sist. de tipos, primitivos, estrut. e compostos, tipos de usuário; Intro. OO |          |              |
 | Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos. |          |              |
 |            | PA                                                                                           | Castilho |              |
@@ -174,14 +174,14 @@ aulas %>%
 |  1 | 2018-08-08 |          | Geral      | Definições, requisitos e posicionamento da disciplina                                        |              |
 |  2 | 2018-08-13 |          | Geral      | Sintaxe e semântica. Proc. de linguagens. Compilação, interpretação. Máquinas virtuais.      |              |
 |  3 | 2018-08-15 |          | Funcional  | Modelo de Programação Funcional: características do modelo; semântica de programas.          |              |
-|  4 | 2018-08-20 |   67-104 | Funcional  | R: Introdução, Listas e recursividade                                                        | Anúncio      |
+|  4 | 2018-08-20 |   67-104 | Funcional  | R: Introdução, Listas e recursividade                                                        |              |
 |  5 | 2018-08-22 |   67-104 | Funcional  | R: Funcionais                                                                                |              |
-|  6 | 2018-08-27 |   67-104 | Funcional  | R: Manipulação de Dados                                                                      | Def. Grupos  |
-|  7 | 2018-08-29 |   67-104 | Lógico     | Prolog: Modelo de prog. em lógica; caract. do modelo; fundamentos de lógica; semântica.      |              |
+|  6 | 2018-08-27 |   67-104 | Funcional  | R: Manipulação de Dados                                                                      |              |
+|  7 | 2018-08-29 |   67-104 | Lógico     | Prolog: Modelo de prog. em lógica; caract. do modelo; fundamentos de lógica; semântica.      | Anúncio      |
 |  8 | 2018-09-03 |   67-104 | Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                            |              |
-|  9 | 2018-09-05 |   67-104 | Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                   | Inicial      |
+|  9 | 2018-09-05 |   67-104 | Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                   | Def. Grupos  |
 | 10 | 2018-09-10 |          | Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                       |              |
-| 11 | 2018-09-12 |          | Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.  |              |
+| 11 | 2018-09-12 |          | Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.  | Inicial      |
 | 12 | 2018-09-17 |          | Imperativo | Tipos de Dados: sist. de tipos, primitivos, estrut. e compostos, tipos de usuário; Intro. OO |              |
 | 13 | 2018-09-19 |          | Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos. |              |
 | 14 | 2018-10-01 | Castilho |            | PA                                                                                           |              |
