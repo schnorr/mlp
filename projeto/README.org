@@ -299,7 +299,8 @@ Segue a lista dos itens obrigatórios para o relatório:
    empregados nas duas soluções (OO e Funcional), incluindo trechos de
    código implementados pelo grupo e utilizados na solução
    final. Recomenda-se o uso do pacote =listings= (Latex) para a
-   inclusão de código no relatório.
+   inclusão de código no relatório. Todos os trechos de código devem
+   ser explicados na língua utilizada para redigir o documento.
 4. Análise Crítica: uma análise crítica da linguagem estudada,
    envolvendo uma tabela com os critérios e propriedades estudados em
    aula (i.e. simplicidade, ortogonalidade, expressividade,
