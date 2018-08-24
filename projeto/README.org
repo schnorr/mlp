@@ -72,7 +72,6 @@ estabelecido.
 | Rust           | https://www.rust-lang.org/      |
 | Scala          | http://www.scala-lang.org/      |
 | Swift          | http://swift.org/               |
-| TypeScript     | https://www.typescriptlang.org/ |
 
 A tarefa principal do trabalho consiste em experimentar e comparar as
 características e funcionalidades orientadas a objeto e funcionais da
