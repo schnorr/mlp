@@ -23,7 +23,7 @@
 | Grupos        | Três alunos                                                  |
 | Linguagem     | Uma dentre aquelas listadas                                  |
 | Problema      | Um dentre aqueles sugeridos                                  |
-| Implementação | Duas: OO e funcional                                         |
+| Implementação | Duas: OO e funcional, cada uma com paralelismo               |
 | Relatório     | Um com os requisitos obrigatórios (=latex= e =bibtex=) -- [[https://github.com/schnorr/mlpreport][Modelo]] |
 | Submissão     | ZIP ou TAR.GZ, por e-mail, com [[https://filesender.rnp.br/][FileSender da RNP]]             |
 
@@ -206,13 +206,13 @@ editar polígonos através de todos os pontos do seu perímetro, assim
 como realizar operações clássicas como alinhamento de objetos,
 centralização, cálculo de área e extensão do perímetro.
 
-** Processamento de dados
+** Processamento de dados                                         :noexport:
 
 Construir um programa de mineração ou processamento de dados, onde os
 dados são colocados na entrada de maneira continua e o sistema deve
 realizar operações estatísticas sobre eles.
 
-** Pessoal
+** Escolhendo um problema pessoal
 
 No caso, o grupo deve encaminhar sua ideia ao professor, descrita em
 detalhes, que avaliará sua viabilidade.
@@ -222,7 +222,9 @@ O trabalho realizado *deve considerar os aspectos especificados nesta
 seção*, sendo um conjunto específico de recursos para a solução
 orientada a objetos e outro para a solução funcional. Caso um recurso
 não esteja disponível na linguagem, *explique e justifique* no relatório
-os motivos para ele não existir *e utilize um mecanismo alternativo*.
+os motivos para ele não existir *e utilize um mecanismo alternativo*. Os
+recursos de processamento paralelo _devem aparecer tanto na
+implementação orientada a objetos quando na solução funcional_.
 
 ** Requisitos de orientação a objetos
 
@@ -297,9 +299,10 @@ Segue a lista dos itens obrigatórios para o relatório:
    aplicabilidade em questões práticas).
 3. Recursos: esta seção deve descrever cada um dos recursos que foram
    empregados nas duas soluções (OO e Funcional), incluindo trechos de
-   código implementados pelo grupo e utilizados na solução
-   final. Recomenda-se o uso do pacote =listings= (Latex) para a
-   inclusão de código no relatório. Todos os trechos de código devem
+   código implementados pelo grupo e utilizados na solução final. Os
+   requisitos de processamento paralelo devem estar descritos nas duas
+   implementações.  Recomenda-se o uso do pacote =listings= (Latex) para
+   a inclusão de código no relatório. Todos os trechos de código devem
    ser explicados na língua utilizada para redigir o documento.
 4. Análise Crítica: uma análise crítica da linguagem estudada,
    envolvendo uma tabela com os critérios e propriedades estudados em
@@ -313,9 +316,14 @@ Segue a lista dos itens obrigatórios para o relatório:
    descrevendo situações que contariam como pontos favoráveis ou
    desfavoráveis para cada critério ou propriedade). Indicar qual
    paradigma foi mais adequado para resolver o problema e por que.
-5. Conclusão: descrevendo as facilidades e dificuldades encontradas,
+5. Melhoramentos: o grupo deve sugerir mudanças que melhorem a
+   linguagem naqueles pontos que o grupo identificou como
+   problemáticos. Na ausência de pontos problemáticos (o que raramente
+   será o caso), o grupo deve sugerir melhoramentos que permitam
+   a linguagem evoluir sob todos os aspectos.
+6. Conclusão: descrevendo as facilidades e dificuldades encontradas,
    benefícios, problemas e limitações da linguagem estudada.
-6. Referências: todo material consultado, incluindo livros, artigos,
+7. Referências: todo material consultado, incluindo livros, artigos,
    páginas na Internet, etc., que tenha relação com o
    assunto. Elaborar a lista usando =bibtex=.
 
@@ -356,16 +364,17 @@ igualmente presente.
 
 A *entrega parcial*, uma etapa obrigatória, deve vir acompanhada da
 implementação e relatório a respeito da solução utilizando um dos
-paradigmas (OO ou funcional), a critério do grupo. O professor
-utilizará esta oportunidade para formar um parecer rápido do relatório
-e da implementação; sugerindo ao grupo melhorias caso necessário.
+paradigmas (OO ou funcional) com paralelismo, a critério do grupo. O
+professor utilizará esta oportunidade para formar um parecer rápido do
+relatório e da implementação; sugerindo ao grupo melhorias caso
+necessário.
 
 ** Entrega Final
 
 A *entrega final* incorpora os comentários do parecer do professor das
 entregas anteriores e a implementação e relatório nos dois paradigmas
-(OO e funcional). É a entrega final que será utilizada para a
-avaliação, conforme método descrito abaixo.
+(OO e funcional) com paralelismo em cada um deles. É a entrega final
+que será utilizada para a avaliação, conforme método descrito abaixo.
 
 * Apresentação
 
@@ -375,10 +384,11 @@ grupo terá 10 minutos para a apresentação. Dentro desse tempo, os
 alunos deverão: apresentar o problema, apresentar a linguagem
 escolhida para a implementação, apresentar quais foram as vantagens e
 desvantagens da abordagem OO e da funcional para a implementação da
-solução do problema e, por fim, fazer uma breve demonstração. O
-professor fará perguntas pontuais direcionadas para cada um dos
-membros do grupo. A apresentação faz parte da nota. Pontualidade
-também.
+solução do problema, detalhar os melhoramentos que foram sugeridos e,
+por fim, fazer uma breve demonstração. O professor fará perguntas
+pontuais direcionadas para cada um dos membros do grupo. A
+apresentação faz parte da nota. Pontualidade e participação na
+apresentação dos colegas também.
 
 * Nota
 Os alunos que estão repetindo a disciplina, por qualquer razão, devem
