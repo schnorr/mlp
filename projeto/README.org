@@ -378,6 +378,10 @@ professor fará perguntas pontuais direcionadas para cada um dos
 membros do grupo. A apresentação faz parte da nota. Pontualidade
 também.
 
+* Nota
+Os alunos que estão repetindo a disciplina, por qualquer razão, devem
+obrigatoriamente escolher uma combinação linguagem/problema diferente
+daquela que foi escolhida nas edições anteriores.
 * Avaliação
 
 A avaliação geral do trabalho incluirá os seguintes critérios:
