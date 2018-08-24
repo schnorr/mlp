@@ -270,7 +270,8 @@ os motivos para ele não existir *e utilize um mecanismo alternativo*.
 - Usar recursão como mecanismo de iteração (pelo menos em funções de
   ordem superior que manipulem listas).
   
-** Recursos de processamento paralelo e distribuído               :noexport:
+** Recursos de processamento paralelo
+
 - Definição, uso e gerência de streams (de preferência, com recursos
   funcionais, i.e., funções de alta ordem e anônimas) para o
   processamento de dados
