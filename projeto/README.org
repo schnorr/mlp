@@ -96,6 +96,15 @@ da turma (converse com o professor antes).
 |------------------------------------|
 
 * Problemas disponíveis
+** Jogo pedagógico
+
+Implementar um jogo pedagógico, com o objetivo de ajudar qualquer
+pessoa a aprender um conceito, seja este de qualquer nível. O jogo
+deve ter interatividade com o seu usuário, e algumas telas que
+demonstram o conceito que está querendo se passar, do básico ao
+complexo. Sugere-se adicionalmente que o jogo tenha um cunho
+colaborativo ao invés de competitivo.
+
 ** War
 
 A ideia é desenvolver um jogo de batalha por turnos estilo o jogo
