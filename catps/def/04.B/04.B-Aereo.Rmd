@@ -1,0 +1,206 @@
+---
+title: "Tutorial #1 - US 1987-2008 Airline Dataset"
+author: "Prof. Lucas Mello Schnorr"
+date: "3 de agosto de 2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introdução
+
+O conjunto de dados de teste tem origem aqui:
+
+- http://stat-computing.org/dataexpo/2009/the-data.html
+
+Trata-se de todos os vôos domésticos nos Estados Unidos entre 1987 e 2008, ou seja, aproximadamente 120 milhões de registros em formato CSV compactado com `bzip2`. As informações sobre cada coluna podem ser consultadas no site acima. Os arquivos CSV foram convertidos previamente para o formato colunar `feather`, para acelerar a leitura sequencial dos arquivos.
+
+## Objetivo deste tutorial/exercícios
+
+O objetivo deste tutorial é utilizar este conjunto de dados para aprender os conceitos básicos do uso dos pacotes R em torno do `tidyverse`, principalmente referente aos pacotes `dplyr` de manipulação de dados e o encadeamento de transformações através do operador `%>%` do pacote `magrittr`.
+
+## Obtenção dos arquivos de dados
+
+### Apenas do ano de 1987
+
+Em aula, de qualquer lugar, baixe apenas os 109MBytes do ano de 1987.
+
+```{r, eval=FALSE}
+download.file("http://www.inf.ufrgs.br/~schnorr/1987.feather", destfile = "1987.feather", quiet=TRUE)
+```
+
+## Carregar o metapacote `tidyverse` (com `dplyr` e `magrittr`)
+
+O metapacote `tidyverse` e `feather` podem ser instalados com os seguintes comandos.
+
+Perceba que nos laboratórios 103/104 pelo menos o pacote `tidyverse` já encontra-se instalado.
+
+```{r, eval=FALSE}
+install.packages("tidyverse")
+install.packages("feather")
+```
+
+Carregar o metapacote
+
+```{r}
+suppressMessages(library(tidyverse))
+suppressMessages(library(feather))
+```
+
+## Leitura de arquivo
+
+```{r}
+df.1987 <- read_feather("1987.feather");
+```
+
+Vamos ver os primeiros registros dos 1.3 milhões daquele ano:
+
+```{r}
+df.1987
+```
+
+# Preliminares com verbos `dplyr`
+
+O operador `%>%` serve para encadear comandos:
+
+```{r}
+df.1987 %>% select(Month) %>% unique
+```
+
+Uso do verbo `select` para selecionar algumas colunas:
+
+```{r}
+df.1987 %>% select(Origin, Dest, DepDelay)
+```
+
+Podemos usar o `select` com o sinal negativo para remover colunas:
+
+```{r}
+df.1987 %>% select(-Year, -Month, -DayofMonth)
+```
+
+Uso do verbo `mutate` para criar colunas. No caso abaixo, estamos criando uma coluna chamada `Another.DayOfWeek` que terá o valor (de cada elemento) da coluna `DayOfWeek` subtraído de 1.
+
+```{r}
+df.1987 %>% mutate(Another.DayOfWeek = DayOfWeek - 1)
+```
+
+Podemos filtrar as linhas baseado em duas condições:
+
+```{r}
+df.1987 %>% filter(DayofMonth == 1, Month == 12)
+```
+
+Podemos fatiar linhas com `slice`, por exemplo para pegar as linhas 532, 533, 534 e 535 dos dados:
+
+```{r}
+df.1987 %>% slice(532:535)
+```
+
+Podemos reordenar os dados por alguma (ou mais) coluna com `arrange`:
+
+```{r}
+df.1987 %>% arrange(DayOfWeek)
+```
+
+Ou aindar ordenar de maneira decrescente, por exemplo para mostrar qual foi o vôo de 1987 com o maior atraso (SFO até SNA, com 1033 minutos de atraso na chegada):
+
+```{r}
+df.1987 %>% arrange(-ArrDelay) %>% select(ArrDelay, Origin, Dest)
+```
+
+Podemos criar grupos com `group_by`. Por exemplo, vamos agrupar os dados por `Origin` e `Dest` para percebermos que existem 3464 pares origem/destino de vôos em 1987.
+
+```{r}
+df.1987 %>%
+  group_by(Origin, Dest) %>%
+  summarize(N=n()) # conta quantas linhas tem cada combinação Origin/Dest
+```
+
+A partir do `group_by`, podemos ir além e obter qual foi o maior atraso para cada uma das rotas Origem/Destino utilizando a função `summarize` (fornecemos o parâmetro `na.rm=TRUE` para ignorarmos os valores ausentes na coluna `ArrDelay`) e logo em seguida desfazendo o agrupamento. Para terminar, ordenamos pelo pior atraso:
+
+```{r}
+df.1987 %>%
+  group_by(Origin, Dest) %>%
+  summarize(MaxArrDelay = max(ArrDelay, na.rm=TRUE)) %>%
+  ungroup %>%
+  arrange(-MaxArrDelay)
+```
+
+O uso do encadeamento com o operador `%>%` permite calcular de maneira bastante legível um sumário estatístico dos atrasos, em conjunto com o verbo `pull` que extrai os dados de uma coluna:
+
+```{r}
+df.1987 %>% pull(ArrDelay) %>% summary(na.rm=TRUE)
+```
+
+## Todos os anos do dataset
+
+Após a aula, e de dentro da rede do Instituto de Informática (em laboratório por exemplo), baixe os arquivos de dados deste `ZIP` de 1.9GBytes:
+
+```{r, eval=FALSE}
+download.file("http://guarani.inf.ufrgs.br/expo09.zip", destfile="expo09.zip", quiet=TRUE)
+```
+
+O arquivo `expo09.zip` está no diretório de trabalho local (deste arquivo RMarkdown), vamos descompactá-lo:
+
+```{r, eval=FALSE}
+unzip("expo09.zip", overwrite=TRUE)
+```
+
+E listar o conteúdo do diretório (veja que ele contém arquivos no formato colunar `feather`):
+
+```{r}
+list.files("expo09", full.names=TRUE)
+```
+
+
+### Ler múltiplos arquivos
+
+Após descompactar `expo09.zip` como foi obtido acima, podemos ler múltiplos arquivos da seguinte forma. O parâmetro `pattern` tem uma expressão de filtragem dos arquivos. Faça isso apenas em um computador com pelo menos 16 GBytes de memória.
+
+```{r}
+df <- do.call("bind_rows",
+        lapply(list.files("expo09", full.names=TRUE, pattern="200[12]"),
+               function(file) {
+                  read_feather(file)
+               }))
+```
+
+Vamos ver o início dos registros:
+
+```{r}
+df
+```
+
+# Exercícios
+
+Carregue a maior quantidade de anos que couber na memória do seu computador.
+
+Em laboratório, escolha vamos usar apenas um único ano para tratar dos exercícios abaixo (por exemplo o ano de 1987). Caso haja interesse, podes consultar (em laboratório) o link http://guarani.inf.ufrgs.br/expo09/ para a listagem dos arquivos feather por ano, de todos os anos.
+
+```{r}
+df <- read_feather("1987.feather")
+```
+
+Responda incluindo blocos R neste arquivo Rmd (R Markdown).
+
+## Simples
+
+1. Qual a empresa que tem mais vôos?
+2. Qual a `UniqueCarrier` que tem o maior atraso de chegada (`ArrDelay`)?
+3. Qual o dia da semana que tem mais vôos?
+4. Qual a empresa que apresentar o maior número de cancelamentos?
+5. Qual empresa que voou mais milhas?
+
+## Avançados
+
+1. Qual a empresa `UniqueCarrier` que conseguiu recuperar melhor os atrasos durante o vôo?
+2. Há um crescimento no número de vôos?
+3. Qual empresa que apresenta uma redução no número de vôos?
+4. Qual a época do ano que apresenta o maior cancelamento de vôos?
+
+## Livre
+
+Faça uma consulta original para este dataset, potencialmente mais complexa que todas as anteriores.
