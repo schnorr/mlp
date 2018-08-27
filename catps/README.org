@@ -9,7 +9,7 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 | #01   | [[./def/01/formulario.pdf][Formulário de Avaliação de LPs]]        | [[https://goo.gl/forms/ESOxCX5dI85V895R2][Formulário]] | 2018-08-27 | NA    |
 | #02   | [[./def/02/README.org][Listas e recursividade em R]]           | [[https://goo.gl/forms/zBzVXAaCxTUJMngA3][Formulário]] | 2018-08-27 | [[./resp/02.org][#02]]   |
 | #03   | [[./def/03/README.org][Recursividade e funcionais em R]]       | [[https://goo.gl/forms/i66aq6jtqohvh6jG3][Formulário]] | 2018-08-29 | [[./resp/03.org][#03]]   |
-| #04   | [[./def/04/README.org][Manipulação de dados em R]] (Terremoto) | [[https://goo.gl/forms/JlyBnySDhWH4eeKq1][Formulário]] |            | [[./def/04/README.org][#04]]   |
+| #04   | +Manipulação de dados em R (Terremoto)+ | [[https://goo.gl/forms/JlyBnySDhWH4eeKq1][Formulário]] |            | [[./def/04/README.org][#04]]   |
 | #04.B | [[./def/04.B/04.B-Aereo.Rmd][Manipulação de dados em R]] (Aéreo)     | [[https://goo.gl/forms/UVZrckRl1mJors6r2][Formulário]] | 2018-09-03 |       |
 | #05   | [[./def/05/README.org][Processo de Inferência em Prolog]]      | [[https://goo.gl/forms/Okq61k41Tnc0zKOj1][Formulário]] |            | [[./resp/05.org][#05]]   |
 | #06   | Implementação de Fibonacci em Prolog  | [[https://goo.gl/forms/SlzDngBjA3Fcqanl1][Formulário]] |            | [[./resp/06.org][#06]]   |
