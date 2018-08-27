@@ -63,7 +63,6 @@ estabelecido.
 | C++17          | [[https://isocpp.org/std/status][ISO-CPP]]                         |
 | Clojure        | http://clojure.org/             |
 | Erlang         | http://www.erlang.org/          |
-| Groovy         | http://www.groovy-lang.org/     |
 | Julia          | http://julialang.org/           |
 | Kotlin         | https://kotlinlang.org          |
 | Objective CAML | http://ocaml.org/               |
