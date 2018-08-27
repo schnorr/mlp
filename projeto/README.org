@@ -273,9 +273,9 @@ implementação orientada a objetos quando na solução funcional_.
   
 ** Recursos de processamento paralelo
 
-- Definição, uso e gerência de streams (de preferência, com recursos
-  funcionais, i.e., funções de alta ordem e anônimas) para o
-  processamento de dados
+# - Definição, uso e gerência de streams (de preferência, com recursos
+#  funcionais, i.e., funções de alta ordem e anônimas) para o
+#  processamento de dados
 - Definição, uso e gerência de unidades (threads, módulos, classes,
   métodos, funções, trechos ou instruções) de execução concorrente e o
   seu sincronismo
