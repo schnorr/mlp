@@ -60,16 +60,18 @@ sorteio, no cenário onde mais de dois grupos estejam interessados na
 mesma linguagem. A escolha do grupo deve ser realizada dentro do prazo
 estabelecido.
 
-| C++17          | [[https://isocpp.org/std/status][ISO-CPP]]                         |
-| Clojure        | http://clojure.org/             |
-| Erlang         | http://www.erlang.org/          |
-| Julia          | http://julialang.org/           |
-| Kotlin         | https://kotlinlang.org          |
-| Objective CAML | http://ocaml.org/               |
-| R              | https://www.r-project.org/      |
-| Ruby           | http://ruby-lang.org/           |
-| Rust           | https://www.rust-lang.org/      |
-| Scala          | http://www.scala-lang.org/      |
+| C++17          | https://isocpp.org/         |
+| Clojure        | https://clojure.org/        |
+| Common Lisp    | https://common-lisp.net/    |
+| Erlang         | https://www.erlang.org/     |
+| Julia          | https://julialang.org/      |
+| Kotlin         | https://kotlinlang.org      |
+| Lua            | https://www.lua.org/        |
+| Objective CAML | https://ocaml.org/          |
+| R              | https://www.r-project.org/  |
+| Ruby           | https://ruby-lang.org/      |
+| Rust           | https://www.rust-lang.org/  |
+| Scala          | https://www.scala-lang.org/ |
 
 A tarefa principal do trabalho consiste em experimentar e comparar as
 características e funcionalidades orientadas a objeto e funcionais da
