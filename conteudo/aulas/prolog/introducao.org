@@ -277,14 +277,14 @@ sintaxe da linguagem Prolog
 #+latex: \vfill\pause
 
 #+BEGIN_SRC pl
-capital(‘Brasil’, ‘Brasilia’).
-capital(‘Franca’, ‘Paris’).
-capital(‘RS’, 'Porto Alegre').
-capital(‘SC', ‘Florianopolis’).
-estadode(‘Brasil’, ‘SC’).
-estadode(‘Brasil, ‘RS’).
-estadode(‘Franca’, ‘Bretanha').
-estadode(‘Franca’, ‘Normandia').
+capital(brasil, brasilia).
+capital(franca, paris).
+capital(rs, portoalegre).
+capital(sc, florianopolis).
+estadode(brasil, rs).
+estadode(brasil, rs).
+estadode(franca, bretanha).
+estadode(franca, normandia).
 capital_pais(X, Y) :- pais(X), cidade(Y), capital(X,Y).
 capital_estado(X,Y) :- estado(X), cidade(Y), capital(X,Y).
 #+END_SRC
