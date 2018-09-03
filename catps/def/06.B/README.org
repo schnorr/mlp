@@ -9,11 +9,17 @@ quantas vezes um número pode ser expresso como a soma de potências de
 números inteiros. Dado dois números inteiros =x= e =n=, nós precisamos
 contar quantas vezes =x= pode ser expresso como a soma e potências de =n=
 de números naturais únicos. É dado que o valor de =n= deve ser entre 1 e
-20 inclusive.
+20 inclusive.  O código abaixo em C foi retirado de [[https://www.geeksforgeeks.org/count-ways-express-number-sum-powers/][GeeksForGeeks]]. No
+link encontram-se implementações em outras linguagems que podem
+auxiliá-lo a realizar este CATP.
 
-O código abaixo em C foi retirado de [[https://www.geeksforgeeks.org/count-ways-express-number-sum-powers/][GeeksForGeeks]]. No link
-encontram-se implementações em outras linguagems que podem auxiliá-lo
-a realizar este CATP.
+- Implemente a mesma coisa em Prolog, lembrando que
+
+  #+BEGIN_SRC prolog
+  X is 3 ** 4
+  #+END_SRC
+
+  Faz com que o resultando de 3^4 seja unificado com X.
 
 #+BEGIN_SRC C :tangle countways.c
 #include<stdio.h>
