@@ -1,0 +1,61 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #06.B
+
+O objetivo deste CATP é o de contar, usando a linguagem Prolog,
+quantas vezes um número pode ser expresso como a soma de potências de
+números inteiros. Dado dois números inteiros =x= e =n=, nós precisamos
+contar quantas vezes =x= pode ser expresso como a soma e potências de =n=
+de números naturais únicos. É dado que o valor de =n= deve ser entre 1 e
+20 inclusive.
+
+O código abaixo em C foi retirado de [[https://www.geeksforgeeks.org/count-ways-express-number-sum-powers/][GeeksForGeeks]]. No link
+encontram-se implementações em outras linguagems que podem auxiliá-lo
+a realizar este CATP.
+
+#+BEGIN_SRC C :tangle countways.c
+#include<stdio.h>
+#include<math.h>
+
+int countWaysUtil(int x, int n, int num)
+{
+    // Base cases
+    int val = (x - pow(num, n));
+    if (val == 0)
+        return 1;
+    if (val < 0)
+        return 0;
+ 
+    // Consider two possibilities, num is
+    // included and num is not included.
+    return countWaysUtil(val, n, num + 1) +
+           countWaysUtil(x, n, num + 1);
+}
+ 
+// Returns number of ways to express
+// x as sum of n-th power of two.
+int countWays(int x, int n)
+{
+    return countWaysUtil(x, n, 1);
+}
+ 
+// Driver code
+int main()
+{
+    int x = 100, n = 2;
+    printf("%d\n", countWays(x, n));
+    return 0;
+}
+#+END_SRC
+
+#+RESULTS:
+
+Compile o código acima com
+
+#+begin_src shell :results output
+gcc countways.c -o countways -lm
+#+end_src
+
+#+RESULTS:
