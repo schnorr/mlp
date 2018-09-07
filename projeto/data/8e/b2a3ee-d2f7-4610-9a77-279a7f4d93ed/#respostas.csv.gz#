@@ -1,0 +1,71 @@
+	Grupo,Prioridade,Linguagem
+Cowboy Value,1,TypeScript
+Cowboy Value,2,Scala
+Cowboy Value,3,Swift
+Cowboy Value,4,Ruby
+Cowboy Value,5,OCAML
+Delta,1,TypeScript
+Delta,2,Kotlin
+Delta,3,Ruby
+Delta,4,R
+Delta,5,Scala
+Furogga,1,Julia
+Furogga,2,Kotlin
+Furogga,3,Rust
+Furogga,4,TypeScript
+get.sh*t.done,1,R
+get.sh*t.done,2,Closure
+get.sh*t.done,3,Rust
+get.sh*t.done,4,Scala
+get.sh*t.done,5,Erlang
+GirlsRule,1,Julia
+GSN,1,TypeScript
+GSN,2,Groovy
+GSN,3,Rust
+GSN,4,Ruby
+GSN,5,Closure
+Han Solo,1,C++17
+Han Solo,2,TypeScript
+Han Solo,3,Rust
+Han Solo,4,Ruby
+Han Solo,5,Kotlin
+Here for Beer,1,R
+Here for Beer,2,Swift
+Here for Beer,3,Ruby
+Here for Beer,4,Scala
+Here for Beer,5,Groovy
+Monstros da Louca Programação,1,Scala
+Monstros da Louca Programação,2,Kotlin
+Monstros da Louca Programação,3,TypeScript
+Monstros da Louca Programação,4,Ruby
+Monstros da Louca Programação,5,R
+My Little Frogger Haters,1,C#7.1
+My Little Frogger Haters,2,TypeScript
+My Little Frogger Haters,3,Ruby
+My Little Frogger Haters,4,Swift
+My Little Frogger Haters,5,R
+One Man Army,1,TypeScript
+One Man Army,2,Kotlin
+One Man Army,3,Swift
+One Man Army,4,R
+One Man Army,5,Scala
+Programadores Anônimos,1,C#7.1
+Programadores Anônimos,2,Kotlin
+Programadores Anônimos,3,C++17
+Programadores Anônimos,4,Ruby
+Programadores Anônimos,5,TypeScript
+Scipio Project,1,Scala
+Scipio Project,2,Ruby
+Scipio Project,3,Kotlin
+Scipio Project,4,C#7.1
+Scipio Project,5,C++17
+teletypewriters,1,TypeScript
+teletypewriters,2,Julia
+teletypewriters,3,Kotlin
+teletypewriters,4,Rust
+teletypewriters,5,OCAML
+Tóquio,1,R
+Tóquio,2,Ruby
+Tóquio,3,C++17
+Tóquio,4,C#7.1
+Tóquio,5,TypeScript
