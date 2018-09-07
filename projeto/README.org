@@ -37,7 +37,7 @@ Os prazos são até às 23:59 do dia informado.
 |---------------------------------+------------|
 | Anúncio (Início do TF)          | 2018-08-29 |
 | Escolha da LP, Problema, Grupos | 2018-09-05 |
-| Projeto inicial                 | 2018-09-12 |
+| Projeto inicial                 | 2018-09-19 |
 | Entrega *parcial*                 | 2018-10-22 |
 | Entrega *final*                   | 2018-11-14 |
 | Apresentações Sessão #1         | 2018-11-26 |
