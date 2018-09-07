@@ -1391,4 +1391,25 @@ contato com o professor imediatamente.
 | Cerberus                                     | ???666 |
 | G&B Produções                                | ???719 |
 | G&B Produções                                | ???704 |
-** 
+** Problemas por grupo
+
+Temos muitos grupos com Space Invaders. Se algum quiser trocar para
+fazer algo diferente, entre em contato com o professor.
+
+| Grupo                                        | Problema                  |
+|----------------------------------------------+---------------------------|
+| Space Force                                  | Space Invaders            |
+| RISKy business                               | War                       |
+| Good Bye, Java!                              | Space Invaders            |
+| Quarenta e 2                                 | Space Invaders            |
+| Hoje sim, Hoje sim                           | Space Invaders            |
+| Equipe 7                                     | Space Invaders            |
+| Null                                         | Frogger                   |
+| Moon Invaders                                | Space Invaders            |
+| War Pigs                                     | War                       |
+| Destemidos                                   | Space Invaders ou Frogger |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Space Invaders            |
+| Cerberus                                     | Jogo Pedagógico           |
+| G&B Produções                                | Frogger                   |
+
+** Grupos /versus/ Linguagens
