@@ -1411,5 +1411,40 @@ fazer algo diferente, entre em contato com o professor.
 | Kotlin Scalando a Lua pelo Ruby para a Julia | Space Invaders            |
 | Cerberus                                     | Jogo Pedagógico           |
 | G&B Produções                                | Frogger                   |
+** Prioridade de linguagens por grupo
+
+| Grupo                                        | L1     | L2             | L3     | L4      | L5     |
+|----------------------------------------------+--------+----------------+--------+---------+--------|
+| Space Force                                  | Ruby   | Objective CAML | Kotlin |         |        |
+| RISKy business                               | Ruby   | Kotlin         | Julia  | Lua     |        |
+| Good Bye, Java!                              | Kotlin | Scala          | Ruby   | Julia   | R      |
+| Quarenta e 2                                 | Ruby   | Lua            | C++17  | Rust    | Scala  |
+| Hoje sim, Hoje sim                           | C++17  | Ruby           | Kotlin | Lua     | Scala  |
+| Equipe 7                                     | Lua    | C++17          | Julia  | Closure | Erlang |
+| Null                                         | Kotlin |                | Erlang | Closure | Rust   |
+| Moon Invaders                                | Lua    | Ruby           | Rust   | Scala   | C++17  |
+| War Pigs                                     | Lua    | Ruby           | C++17  |         |        |
+| Destemidos                                   | Ruby   | Lua            | Kotlin | Closure | C++17  |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Ruby   | Scala          | Lua    | Kotlin  | Julia  |
+| Cerberus                                     | C++17  | Kotlin         | Julia  | R       | Scala  |
+| G&B Produções                                | C++17  | Ruby           |        |         |        |
 
 ** Grupos /versus/ Linguagens
+
+Após o sorteio, o mapeamento entre grupos e linguagens ficou definido assim.
+
+| Grupo                                        | Prioridade | Linguagem      |
+|----------------------------------------------+------------+----------------|
+| Good Bye, Java!                              |          1 | Kotlin         |
+| Null                                         |          1 | Kotlin         |
+| Cerberus                                     |          1 | C++17          |
+| G&B Produções                                |          1 | C++17          |
+| War Pigs                                     |          1 | Lua            |
+| Equipe 7                                     |          1 | Lua            |
+| RISKy business                               |          1 | Ruby           |
+| Kotlin Scalando a Lua pelo Ruby para a Julia |          1 | Ruby           |
+| Space Force                                  |          2 | Objective CAML |
+| Moon Invaders                                |          3 | Rust           |
+| Destemidos                                   |          4 | Closure        |
+| Hoje sim, Hoje sim                           |          5 | Scala          |
+| Quarenta e 2                                 |          5 | Scala ou Rust  |
