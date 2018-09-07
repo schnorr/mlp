@@ -1431,6 +1431,14 @@ fazer algo diferente, entre em contato com o professor.
 
 ** Grupos /versus/ Linguagens
 
+A semente do sorteio foi definida da seguinte forma:
+
+#+begin_src R :results output :session :exports both
+seed.str <- "2018-09-07 10:21:09 -03"
+seed <- as.POSIXct(seed.str)
+set.seed(seed)
+#+end_src
+
 Após o sorteio, o mapeamento entre grupos e linguagens ficou definido assim.
 
 | Grupo                                        | Prioridade | Linguagem      |
