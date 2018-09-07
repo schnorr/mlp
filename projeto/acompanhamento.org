@@ -13,7 +13,7 @@
 #+TAGS: Lucas(L) noexport(n) deprecated(d)
 #+EXPORT_EXCLUDE_TAGS: noexport
 
-* Final
+* Final                                                            :noexport:
 ** Ordem
 
 Dia 1 (05/07)
@@ -851,7 +851,7 @@ Não se fez presente para apresentar.
 | GirlsRule                     |        4.8 |
 | Programadores Anônimos (2)    |       0.55 |
 
-* Parcial
+* Parcial                                                          :noexport:
 ** Sumário da entrega
 
 Um grupo não entregou, e um grupo entregou com atraso de 12 minutos.
@@ -1185,7 +1185,7 @@ e da implementação; sugerindo ao grupo melhorias caso necessário.
   primeira impressão sobre OO seria positivo
 - Referências inexistentes
 
-* Projeto Inicial
+* Projeto Inicial                                                  :noexport:
 ** Sumário da entrega
 
 Quatro grupos não entregaram (coluna Entrega em branco), e dois grupos
