@@ -42,9 +42,9 @@
 | Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                            |   67-104 |              |
 | Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                   |   67-104 | Def. Grupos  |
 | Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                       |          |              |
-| Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.  |          | Inicial      |
+| Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.  |          |              |
 | Imperativo | Tipos de Dados: sist. de tipos, primitivos, estrut. e compostos, tipos de usuário; Intro. OO |          |              |
-| Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos. |          |              |
+| Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos. |          | Inicial      |
 |            | PA                                                                                           | Castilho |              |
 | Imperativo | Controle de Fluxo: Expressões e atribuição. Operadores. Comandos: condicionais e iterativos. |          |              |
 | Imperativo | Polimorfismo: sobrecarga de ops. e funções, coerção, paramétrico, estático/dinâmico.         |          |              |
@@ -181,9 +181,9 @@ aulas %>%
 |  8 | 2018-09-03 |   67-104 | Lógico     | Prolog: Aritmética, recursividade, estrutura de um programa, I/O.                            |              |
 |  9 | 2018-09-05 |   67-104 | Lógico     | Prolog: Listas, estruturas, base de dados, gramáticas DCG.                                   | Def. Grupos  |
 | 10 | 2018-09-10 |          | Imperativo | Vinculações: Nomes, Vinculação, Escopo                                                       |              |
-| 11 | 2018-09-12 |          | Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.  | Inicial      |
+| 11 | 2018-09-12 |          | Imperativo | Vinculações: Checagem de Tipos, Espaço de Vinculações, Definições e Declarações, Ponteiros.  |              |
 | 12 | 2018-09-17 |          | Imperativo | Tipos de Dados: sist. de tipos, primitivos, estrut. e compostos, tipos de usuário; Intro. OO |              |
-| 13 | 2018-09-19 |          | Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos. |              |
+| 13 | 2018-09-19 |          | Imperativo | Tipos de Dados: representação, equivalência, compatibilidade, conversão e checagem de tipos. | Inicial      |
 | 14 | 2018-10-01 | Castilho |            | PA                                                                                           |              |
 | 15 | 2018-10-03 |          | Imperativo | Controle de Fluxo: Expressões e atribuição. Operadores. Comandos: condicionais e iterativos. |              |
 | 16 | 2018-10-08 |          | Imperativo | Polimorfismo: sobrecarga de ops. e funções, coerção, paramétrico, estático/dinâmico.         |              |
