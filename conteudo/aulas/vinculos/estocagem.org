@@ -194,7 +194,7 @@ Parâmetros e Variáveis Locais (não =static=)
 #+latex: \vfill
 
 #+latex: {\scriptsize
-=gcc -g -O0 -rdynamic exemplo1.c=
+=gcc -g -O0 -rdynamic exemplo2.c=
 #+latex: }
 
 Observar registros de ativação
