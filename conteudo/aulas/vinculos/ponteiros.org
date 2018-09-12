@@ -105,7 +105,7 @@ Endereços de memória se tornam inacessíveis
 Exemplo (C++)
 #+begin_src C++
 int *a = new int;
-int *a = NULL;
+a = NULL;
 #+end_src
 
 Exemplo (Objective-C)
