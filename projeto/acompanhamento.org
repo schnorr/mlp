@@ -1453,6 +1453,6 @@ Após o sorteio, o mapeamento entre grupos e linguagens ficou definido assim.
 | Kotlin Scalando a Lua pelo Ruby para a Julia |          1 | Ruby           |
 | Space Force                                  |          2 | Objective CAML |
 | Moon Invaders                                |          3 | Rust           |
-| Destemidos                                   |          4 | Closure        |
+| Destemidos                                   |          4 | Rust           |
 | Hoje sim, Hoje sim                           |          5 | Scala          |
-| Quarenta e 2                                 |          5 | Scala ou Rust  |
+| Quarenta e 2                                 |          5 | Scala          |
