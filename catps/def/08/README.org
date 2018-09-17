@@ -9,7 +9,7 @@ Segue a especificação dos exercícios:
 1. Indique o resultado impresso na tela caso a linguagem utilize
    Escopo estático e Escopo Dinâmico.
    #+begin_src shell :results output
-   int x = 1;
+   int x = 3;
    void inc (int n) {
        x += n;
    }
@@ -19,18 +19,18 @@ Segue a especificação dos exercícios:
    }
    
    void primeiro (void) {
-       inc (7);
+       inc (9);
        print ();
    }
    
    void segundo (void) {
-       int x = 9;
-       inc (3);
+       int x = 6;
+       inc (7);
        print ();
    }
    
    void main (int argc, char **argv) {
-       inc (-1);
+       inc (-4);
        primeiro ();
        print ();
        segundo ();
