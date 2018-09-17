@@ -122,8 +122,10 @@
    #+BEGIN_SRC C
    union {
      int c;
+     char i;
      double d;
      char str[100];
+     float vector[25];
    };   
    #+END_SRC
 
