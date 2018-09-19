@@ -16,7 +16,7 @@
 #+LATEX_HEADER: \input{../org-babel.tex}
 
 
-* Sumário de tipos
+* Motivação
 Tipos compostos podem não ser suficientes
 + \pause A linguagem permite operações sobre eles?
 + \pause A linguagem faz validação e testes sobre eles?
