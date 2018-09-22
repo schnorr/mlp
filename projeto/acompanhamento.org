@@ -1185,28 +1185,26 @@ e da implementação; sugerindo ao grupo melhorias caso necessário.
   primeira impressão sobre OO seria positivo
 - Referências inexistentes
 
-* Projeto Inicial                                                  :noexport:
+* Projeto Inicial
 ** Sumário da entrega
 
-Quatro grupos não entregaram (coluna Entrega em branco), e dois grupos
-entregaram com um atraso de até 33 minutos.
+Um grupo entregou com 1h42 minutos de atraso.
 
-| Grupo                         | Entrega             |
-|-------------------------------+---------------------|
-| Code Runner                   | 04/04/2018 12:14 PM |
-| Cowboy Value                  | 04/04/2018 12:33 AM |
-| Delta                         | 04/03/2018 11:43 PM |
-| Furogga                       | 04/03/2018 08:38 PM |
-| get.sh*t.done                 | 04/03/2018 10:36 PM |
-| GirlsRule                     | 04/03/2018 11:35 PM |
-| GSN                           |                     |
-| Han Solo                      |                     |
-| Here for Beer                 | 04/02/2018 10:48 PM |
-| Monstros da Louca Programação |                     |
-| My Little Frogger Haters      |                     |
-| Programadores Anônimos        | 04/03/2018 09:53 PM |
-| Scipio Project                | 04/03/2018 10:56 PM |
-| teletypewriters               | 04/03/2018 09:52 PM |
+| Grupo                                        | Entrega             |
+|----------------------------------------------+---------------------|
+| Equipe 7                                     | 2018-09-18 21:47:00 |
+| Null                                         | 2018-09-19 15:51:00 |
+| Moon Invaders                                | 2018-09-19 17:21:00 |
+| War Pigs                                     | 2018-09-19 18:27:00 |
+| Good Bye, Java!                              | 2018-09-19 20:15:00 |
+| RISKy business                               | 2018-09-19 20:38:00 |
+| G&B Produções                                | 2018-09-19 21:12:00 |
+| Hoje sim, Hoje sim                           | 2018-09-19 21:39:00 |
+| Cerberus                                     | 2018-09-19 21:43:00 |
+| Space Force                                  | 2018-09-19 21:56:00 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | 2018-09-19 23:34:00 |
+| Destemidos                                   | 2018-09-19 23:51:00 |
+| Quarenta e 2                                 | 2018-09-20 01:42:00 |
 
 ** Revisão
 
@@ -1219,130 +1217,7 @@ problema. Sugere-se que uma estrutura completa do relatório já esteja
 igualmente presente.
 #+END_EXAMPLE
 
-*** Code Runner                   | 04/04/2018 12:14 PM |
-
-- Atraso de 14 minutos
-- Falta na capa: linguagem, problema
-  - Dar um título original
-- 18 páginas, com sumário
-- Não copiar texto da especificação (veja primeiro parágrafo)
-- Frase sem verbo: "Algumas características interessantes da linguagem."
-- Evitar subsubsubsections (1.1.1.1); considerado estilo ruim
-- "O Kotlin tem seguro contra valores nulos" estranho
-- A partir da seção 1.2.1, os autores esqueceram de "apagar" o template
-  - Registro portanto falta de atenção e cuidado com o seu trabalho
-- Não usou bibtex; não usou referências (por exemplo a Kotlin)
-
-*** Cowboy Value                  | 04/04/2018 12:33 AM |
-
-- Atraso de 33 minutos
-- Capa: falta nome do grupo, problema, LP
-- 4 páginas
-- Descrição do jogo
-  - Copiado da Wikipedia em PT-BR, sem usar referência em bibtex
-  - Evitem de copiar texto da wikipedia...
-- Evitem de copiar texto da apple.com/br/swift
-- Onde está o estilo do grupo na escrita quando se copia texto?
-- Sem lista de referências, sem bibtex
-
-*** Delta                         | 04/03/2018 11:43 PM |
-
-- Capa: nome do grupo?
-- 7 páginas, estruturado
-- Sec 1.1: onde estão as identações de parágrafos?
-  - Múltiplas referências a ferramentas sem citações
-- Sem referências, sem bibtex
-
-*** Furogga                       | 04/03/2018 08:38 PM |
-
-- Capa: Faltam LP e Problema
-- 4 páginas
-- Muito sintético
-- Figura 1.1 não é referenciada no texto
-  - Figura pequena demais
-- Inexistência de referências (bibtex?)
-
-*** get.sh*t.done                 | 04/03/2018 10:36 PM |
-
-- Capa completa
-- 4 páginas
-- Falta uma verdadeira intro para o trabalho
-- Onde estão as referências? Usar bibtex
-- Não está explicado como plotly será integrado com a LP
-
-*** GirlsRule                     | 04/03/2018 11:35 PM |
-
-- Capa: faltou o nome do grupo
-- 8 páginas, estrutura
-- Referências com dados faltantes
-  - Ano, título, etc
-  - Usar livros ao invés de links web
-- As citações devem fazer parte das frases (veja parágrafo inical da
-  seção 1.2)
-
-*** GSN                           |                     |
-
-- Não entregou
-- A. falou que vai entregar hoje
-
-*** Han Solo                      |                     |
-
-- Não entregou
-
-*** Here for Beer                 | 04/02/2018 10:48 PM |
-
-- Capa: customizou o título com tamanho de fonte!
-- A descrição da linguagem é uma frase
-- Figura não referenciada no texto
-- Sem referências, embora wikipedia tenha sido consultada
-- bibtex?
-
-*** Monstros da Louca Programação |                     |
-
-- Não entregou
-
-*** My Little Frogger Haters      |                     |
-
-- Não entregou
-- N. falou que vai entregar hoje
-
-*** Programadores Anônimos        | 04/03/2018 09:53 PM |
-
-- Capa: Nome do grupo?
-- 5 páginas
-- Sec. 2 e 2.1 tem o nome da LP repetido
-- Intro: estrutura do texto não é apresentado
-  - Muito curto
-- Referências?
-  - Bibtex?
-
-*** Scipio Project                | 04/03/2018 10:56 PM |
-
-- Capa: Faltam problema e LP
-- 10 páginas
-- Pg. 4 (e Cap 2), evitar uso excessivo de itens; além de ser um
-  estilo ruim, fica ruim de ler o texto.
-  - Mesmo vale para outros trechos com itens
-- Onde estão as referências?
-  - Usar bibtex
-
-*** teletypewriters               | 04/03/2018 09:52 PM |
-
-- Capa: faltou o nome do grupo
-- 12 páginas, estrutura completa
-- Referências mal formadas: "(THE.... 2018)"
-  - Consultar um bom manual de bibtex, ou conversar com o professor
-- Evitar uso de termos em inglês, como /affordances/
-- Boa descrição do jogo, com histórico
-  - Mas parece ter sido copiado da Wikipedia em PT-BR, sem citação
-- Conceito /ownership/ \to traduzir
-  - "explicado mais adiante": por que não explicar de imediato?
-- Segurança!
-  - Por que ela é tão importante: de qual LP Rust se inspira?
-- Pg. 6: "solve." sozinho lá em cima
-- O conceito de /ownership/ não é explicado, embora tenha texto para
-  isso na seção 2.4
-- Usar bibtex
+Parecer por grupo em composição.
 
 * Definição Final dos Grupos
 ** Formação dos grupos
