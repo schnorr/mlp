@@ -1188,23 +1188,26 @@ e da implementação; sugerindo ao grupo melhorias caso necessário.
 * Projeto Inicial
 ** Sumário da entrega
 
-Um grupo entregou com 1h42 minutos de atraso.
+Um grupo entregou com 1h42 minutos de atraso. As notas fornecidas na
+tabela abaixo são apenas indicativas e servem como parâmetro de
+comparação entre os grupos. Elas não serão utilizadas na entrega
+parcial ou final.
 
-| Grupo                                        | Entrega             |
-|----------------------------------------------+---------------------|
-| Equipe 7                                     | 2018-09-18 21:47:00 |
-| Null                                         | 2018-09-19 15:51:00 |
-| Moon Invaders                                | 2018-09-19 17:21:00 |
-| War Pigs                                     | 2018-09-19 18:27:00 |
-| Good Bye, Java!                              | 2018-09-19 20:15:00 |
-| RISKy business                               | 2018-09-19 20:38:00 |
-| G&B Produções                                | 2018-09-19 21:12:00 |
-| Hoje sim, Hoje sim                           | 2018-09-19 21:39:00 |
-| Cerberus                                     | 2018-09-19 21:43:00 |
-| Space Force                                  | 2018-09-19 21:56:00 |
-| Kotlin Scalando a Lua pelo Ruby para a Julia | 2018-09-19 23:34:00 |
-| Destemidos                                   | 2018-09-19 23:51:00 |
-| Quarenta e 2                                 | 2018-09-20 01:42:00 |
+| Grupo                                        | Entrega             | Nota.Indicativa |
+|----------------------------------------------+---------------------+-----------------|
+| Equipe 7                                     | 2018-09-18 21:47:00 |             7.5 |
+| Null                                         | 2018-09-19 15:51:00 |             9.5 |
+| Moon Invaders                                | 2018-09-19 17:21:00 |             5.5 |
+| War Pigs                                     | 2018-09-19 18:27:00 |             6.5 |
+| Good Bye, Java!                              | 2018-09-19 20:15:00 |               9 |
+| RISKy business                               | 2018-09-19 20:38:00 |               7 |
+| G&B Produções                                | 2018-09-19 21:12:00 |             5.5 |
+| Hoje sim, Hoje sim                           | 2018-09-19 21:39:00 |             7.5 |
+| Cerberus                                     | 2018-09-19 21:43:00 |             5.5 |
+| Space Force                                  | 2018-09-19 21:56:00 |             5.5 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | 2018-09-19 23:34:00 |             8.5 |
+| Destemidos                                   | 2018-09-19 23:51:00 |               7 |
+| Quarenta e 2                                 | 2018-09-20 01:42:00 |               6 |
 
 ** Revisão
 
@@ -1424,24 +1427,6 @@ Parecer por grupo abaixo, seguido de notas indicativas.
     - Por exemplo, elaborar mais os itens citados no último parágrafo
 - [ ] dígitos até nove pode ser escritos pelo nome "nove" ao invés de 9
 - [ ] Texto sem nenhuma referência, sem =bibtex=
-
-*** Sumário da entrega
-
-| Grupo                                        | Entrega             | Nota.Indicativa |
-|----------------------------------------------+---------------------+-----------------|
-| Equipe 7                                     | 2018-09-18 21:47:00 |             7.5 |
-| Null                                         | 2018-09-19 15:51:00 |             9.5 |
-| Moon Invaders                                | 2018-09-19 17:21:00 |             5.5 |
-| War Pigs                                     | 2018-09-19 18:27:00 |             6.5 |
-| Good Bye, Java!                              | 2018-09-19 20:15:00 |               9 |
-| RISKy business                               | 2018-09-19 20:38:00 |               7 |
-| G&B Produções                                | 2018-09-19 21:12:00 |             5.5 |
-| Hoje sim, Hoje sim                           | 2018-09-19 21:39:00 |             7.5 |
-| Cerberus                                     | 2018-09-19 21:43:00 |             5.5 |
-| Space Force                                  | 2018-09-19 21:56:00 |             5.5 |
-| Kotlin Scalando a Lua pelo Ruby para a Julia | 2018-09-19 23:34:00 |             8.5 |
-| Destemidos                                   | 2018-09-19 23:51:00 |               7 |
-| Quarenta e 2                                 | 2018-09-20 01:42:00 |               6 |
 
 * Definição Final dos Grupos
 ** Formação dos grupos
