@@ -1217,7 +1217,231 @@ problema. Sugere-se que uma estrutura completa do relatório já esteja
 igualmente presente.
 #+END_EXAMPLE
 
-Parecer por grupo em composição.
+Parecer por grupo abaixo, seguido de notas indicativas.
+
+*** Equipe 7
+
+- [ ] PDF com 8 páginas
+  - [ ] Apenas uma página para problema, uma para linguagem
+- [ ] "figura" no texto deve estar em maiúscula
+- [ ] A Figura 1.1 foi copiada de algum lugar, colocar ref.
+- [ ] A Sec1 tem apenas uma subseção, quando isso ocorre, manter um único corpo de texto para a seção inteira
+- [ ] Sec2, Par1, colocar a citação dentro da frase, e não ao final do parágrafo
+- [ ] Sec2, Par1, colocar a citação do manual ao lado do nome da linguagem
+- [ ] Corrigir a referência, pois tem "..." na citação
+- [ ] Sec2.1, citação deve estar dentro da frase
+  - A citação "MANUAL" é a única que existe? Procurar um livro.
+  - Se tem somente o manual, citar qual a seção aquela citação específica se refere
+- [ ] /trechos/ está em itálico, por quê? Colocar o termo em inglês em itálico
+- [ ] Prover o arquivo =.bib= com as referências bibliográficas em =bibtex=
+- [ ] Na visão geral da linguagem, poucos aspectos técnicos são apresentados
+  - Esta seção (Sec2) deve ser muito mais enriquecida
+
+*** Null
+
+- [ ] PDF com 11 páginas
+  - [ ] 3 páginas para linguagem, 1 para o problema
+- [ ] O pacote =tar.gz= deve conter apenas =tex=, imagens, =bib=
+  - Remover portanto todos os arquivos "escondidos" que começam por ponto
+- [ ] Ausência do nome do grupo, em destaque, na capa
+- [ ] "por cada dentro"
+- Boa descrição da linguagem, com origem das imagens
+
+*** Moon Invaders
+
+- O arquivo não é um =zip=, é um =tar.gz=, tem diferença
+- PDF de 4 páginas
+- [ ] 1 página com texto apenas
+- [ ] Data de 2017, e não 2018
+- [ ] Sem nome do grupo, sem problema, sem linguagem na capa
+- [ ] Ausência de referências
+
+*** War Pigs
+
+- PDF de 6 páginas
+- [ ] Ausência dos fontes (tex, bib, etc)
+- [ ] Rever https://github.com/schnorr/mlp/issues/19
+  - Pois na capa tens um problema de codificação de fontes
+- [ ] Ausência de bibtex?
+  - Somente devem aparecer as referências efetivamente citadas no texto
+- [ ] "La Conquite deu Monde" \to isso não é bem francês
+- [ ] Rever o pt-br, pois várias problemas de acentuação
+  - distribuidas
+  - bonus
+
+*** Good Bye, Java!
+
+- PDF com 13 páginas
+- [ ] Faltou espaço entre a palavra e a citação subsequente
+  - Exemplo do problema "Kotlin(KOTLIN, 2018)"
+- [ ] Ausência da origem da Figura 1.1
+- [ ] "NullPointerExeception"
+- [ ] Respeitar a margem direita na Página 5
+- [ ] Referências devem fazer parte da frase (veja o ponto)
+  - "Developer Survey 2017 e 2018 do StackOverflow. (STACKOVERFLOW, 2018)"
+- [ ] "gerou centenas de milhões de dólares" - Referência?
+- [ ] Ausência da origem da Figura 1.2
+- Uso de GIT, para manter o desenvolvimento
+
+*** RISKy business
+
+- [ ] Ausência de fontes tex, bib, etc
+- PDF de 13 páginas
+  - Página 11 até a 13 não é de autoria do grupo
+- [ ] A referência à figura 1.1 pode aparecer no texto
+  - Ou seja, fora dos parênteses-
+- [ ] "de 2 a seis" -> de dois a seis
+- [ ] Ausência de origem da Figura 1.1
+- [ ] "middleman" -> interpretador
+- [ ] Origem da Figura 2.1? A borda faz parte da figura?
+- [ ] O que é "design inteligente de gráficos"?
+- [ ] Problema das páginas 11 à 13
+
+*** G&B Produções
+
+- [ ] Codificação bizarra do nome do diretório dentro do zip
+  - Que sistema foi usado para criá-lo? Use UTF8.
+- [ ] Ausência de PDF já compilado internamente
+- Após compilação manual pelo professor, PDF com 6 páginas
+- [ ] Capa sem nome do grupo, problema, linguagem
+- [ ] Ausência da arquivo bib, uso de citações no texto
+- [ ] Espera-se que na seção 1.1 ("1.1 Aspectos técnicos da linguagem
+  e do programa") apareçam os aspectos técnicas da linguagem e do
+  programa. Mas a leitura frustra, no sentido que se faz referência a
+  algo que vem depois no texto.
+  - [ ] Portanto, remover subseções da introdução
+- [ ] Já que o conhecimento OO de C++17 é adquirido, exigiremos uma
+  excelente implementação com esse paradigma. O enfoque em funcional
+  deve ter pelo menos a mesma amplitude que o enfoque OO.
+- [ ] O que é uma máquina "Arcade"?
+- [ ] Ausência da origem da Figura 3.1
+- [ ] Ausência de referências
+
+*** Hoje sim, Hoje sim
+
+- PDF com 5 páginas
+- [ ] Ausência do nome do grupo, problema, linguagem na capa
+- [ ] Problema de condificação da fonte, veja issue #19
+- [ ] Ausência de referências bibtex, e citações no texto
+- [ ] Sec1. O indivíduo "Orientador da Disciplina" pode ser simplesmente "professor"
+  - [ ] Sec1. A linguagem de programação foi de escolhida pelo grupo
+- [ ] Falta de espaço "Objetos(OO)."
+- [ ] Adicionar elementos técnicos na descrição técnica da linguagem Scala
+
+*** Kotlin Scalando a Lua pelo Ruby para a Julia
+
+- PDF com 9 páginas
+- [ ] Falta nome do grupo, problema, linguagem na capa
+- [ ] Sec1 Adicionar referência ao índice TIOBE (entrada bibtex e comando =\cite=)
+- [ ] Ao final da Intro, adicionar um parágrafo com a estrutura do texto
+  - Dizer "A Seção X apresenta isso. A Seção Y apresenta aquilo.
+- [ ] Sec1, Par2: do que este parágrafo está falando?
+- [ ] Referências para =gosu=, =rubygame=, =metro=?
+- [ ] Sec 2.1 é uma lista de itens comentado - mudar para texto com
+  uma forma mais agradável para a leitura (isso é mais uma questão de
+  estilo, mas em geral listas de itens são precedidas de um parágrafo
+  que diz o que é aquela lista).
+- [ ] sec 2.1.1: O que é o formato =gem=?
+  - [ ] Qual o propósito desta seção?
+- [ ] Colocar /blocks/ em itálico no início de 2.1.2
+- [ ] Colocar /procs/ em itálico?
+- [ ] Sec3, colocar um texto no início desta seção
+- [ ] Referenciar a figura no texto
+  - Todas as figuras devem ser referenciadas (e comentadas, explicadas)
+- [ ] Melhorar a forma da listagem da Seção 3.3
+  - Por exemplo, transformando em texto corrido
+- [ ] Nenhuma referência na lista final foi usada no texto
+  - Somente as referências citadas no texto devem aparecer na lista
+- [ ] Usar bibtex com o comando =\cite=
+- [ ] Propor um nome de grupo mais curto
+
+*** Quarenta e 2
+
+- PDF com 5 páginas
+- [ ] Faltou os fontes =tex=, =bib=, etc
+- [ ] Problema de configuração, olha a issue #19
+- [ ] Colocar um texto logo após 1 e antes de 1.1
+  - Por exemplo para dizer do que se trata o manuscrito
+- [ ] "(seja lá que recursos forem esses, ainda vamos descobrir)"
+  - Ser mais preciso, evitando prosa, ainda mais prosa informal
+- [ ] Evitar construções que dificultem a leitura
+  - Exemplo "em <arewegameyet.com>"
+  - Alternativamente, colocar o nome do site e um comando =\cite= de
+    forma que a citação apareça na lista de referências
+- [ ] Sec1.1, Par2: segundo parágrafo é uma única frase -> reescrever
+- [ ] Referência para "gerou um lucro de 500 milhões de dólares"
+- [ ] Usar =bibtex=
+- [ ] Melhorar significativamente a descrição técnica da linguagem
+- [ ] Procurar entregar no prazo
+
+*** Space Force
+
+- PDF com 4 páginas
+  - 1.1 páginas de texto útil
+- [ ] Zip dentro de zip, evitar
+- [ ] Faltou o nome do grupo na capa
+- [ ] Problema de codificação de fonte, ver issue #19
+- [ ] Faltou lista de referências
+- [ ] Faltou usar =bibtex=, =\cite=, ver comentários relacionados nos outros grupos
+- [ ] Evitar termos excessivos "notório"
+- [ ] Revisar o português pois erros deste tipo indicam despreocupação com o texto
+  - "formula"
+  - horizoltalmente
+  - alienigenas
+  - acertar uso de vírgulas, como por exemplo na última frase da Sec 1.1
+- [ ] Cuidar com espaços
+  - "pattern matching"e
+- [ ] Colocar termos em inglês em /itálico/
+- [ ] Incluir referências para as aplicações industriais e comerciais
+  - Inclusive nos estudos de caso sobre aprendizagem
+  - Quais disciplinas usam? Em quais universidades?
+
+*** Destemidos
+
+- PDF de 7 páginas
+- [ ] Evitar zip dentro de zip
+- [ ] Falta nome do grupo, problema, linguagem na capa
+- [ ] Problema de codificação de fonte, veja issue #19
+- [ ] Revisar o uso de vírgulas, por exemplo na segunda frase
+- [ ] Colocar um texto entre 2 e 2.1
+  - Notem que 2.1 pode ser levantado para dar o nome da seção 2
+- [ ] Dúvida em relação ao termo "orientada-a-objetos", confirmar
+- [ ] Termos em inglês devem ser traduzidos e, se usados, devem estar em /itálico/
+- [ ] Usar ambientes do pacote =listings= para listar código
+- [ ] Usar =bibtex=, comandos =\cite=
+- [ ] Em latex, aspas devem estar =``assim''=
+- [ ] Melhorar a descrição do jogo
+
+*** Cerberus
+
+- PDF com 4 páginas
+- Evitar colocar o conteúdo do diretório =.git= dentro do zip
+- [ ] Melhorar a descrição da linguagem (meia página é pouco)
+  - Por que foi dado um enfoque nos quatro tipos de gerenciamento de memória?
+  - Embora importante, existem inúmeros outros aspectos mais
+    relevantes para um texto que apresenta a linguagem em mais alto
+    nível
+    - Por exemplo, elaborar mais os itens citados no último parágrafo
+- [ ] dígitos até nove pode ser escritos pelo nome "nove" ao invés de 9
+- [ ] Texto sem nenhuma referência, sem =bibtex=
+
+*** Sumário da entrega
+
+| Grupo                                        | Entrega             | Nota.Indicativa |
+|----------------------------------------------+---------------------+-----------------|
+| Equipe 7                                     | 2018-09-18 21:47:00 |             7.5 |
+| Null                                         | 2018-09-19 15:51:00 |             9.5 |
+| Moon Invaders                                | 2018-09-19 17:21:00 |             5.5 |
+| War Pigs                                     | 2018-09-19 18:27:00 |             6.5 |
+| Good Bye, Java!                              | 2018-09-19 20:15:00 |               9 |
+| RISKy business                               | 2018-09-19 20:38:00 |               7 |
+| G&B Produções                                | 2018-09-19 21:12:00 |             5.5 |
+| Hoje sim, Hoje sim                           | 2018-09-19 21:39:00 |             7.5 |
+| Cerberus                                     | 2018-09-19 21:43:00 |             5.5 |
+| Space Force                                  | 2018-09-19 21:56:00 |             5.5 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | 2018-09-19 23:34:00 |             8.5 |
+| Destemidos                                   | 2018-09-19 23:51:00 |               7 |
+| Quarenta e 2                                 | 2018-09-20 01:42:00 |               6 |
 
 * Definição Final dos Grupos
 ** Formação dos grupos
