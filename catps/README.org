@@ -18,7 +18,8 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 | #08   | [[./def/08/README.org][Vinculação de estocagem e escopo]]       | [[https://goo.gl/forms/XiBUY20Uq27MO9QX2][Formulário]] | 2018-09-24 | [[./resp/08.org][#08]]   |
 | #09   | [[./def/09/README.org][Vínculos e Tipos de dados]]              | [[https://goo.gl/forms/hPgR5XrYwOhwLHB22][Formulário]] | 2018-09-26 | [[./resp/09.org][#09]]   |
 |-------+----------------------------------------+------------+------------+-------|
-| #10   | [[./def/10/README.org][Controle de Fluxo]]                      | [[https://goo.gl/forms/9q2TEEu3JmHyN17F2][Formulário]] |            | [[./resp/10.org][#10]]   |
+| #10   | +[[./def/10/README.org][Controle de Fluxo]]+                      | [[https://goo.gl/forms/9q2TEEu3JmHyN17F2][Formulário]] |            | [[./resp/10.org][#10]]   |
+| #10.B | [[./def/10.B/README.org][Controle de Fluxo]]                      | [[https://goo.gl/forms/6eTApdJ8epLqUijo1][Formulário]] | 2018-10-15 |       |
 | #11   | [[./def/11/README.org][Polimorfismo]]                           | [[https://goo.gl/forms/3M8jwFABt9rfzuFv1][Formulário]] |            | NA    |
 | #12   | [[./def/12/README.org][Subprogramas]]                           | [[https://goo.gl/forms/QWYkuJpck34g2tNh1][Formulário]] |            | [[./resp/12.org][#12]]   |
 | #13   | [[./def/13/README.org][Encapsulamento em OO]]                   | [[https://goo.gl/forms/JsAzqE3rKboHzJx23][Formulário]] |            | NA    |
