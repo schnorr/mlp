@@ -18,7 +18,7 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
-* Principal
+* Principal                                                        :noexport:
 
 As notas são finais. Os conceitos serão enviados por e-mail.
 
@@ -64,7 +64,7 @@ As notas são finais. Os conceitos serão enviados por e-mail.
 | ???030 | 2.22 | 5.33 | 3.4 |     |  nil |
 | ???911 | 2.17 | 4.11 | nil |     |  nil |
 
-* PR Detalhamento
+* PR Detalhamento                                                  :noexport:
 ** Questões
 
 - E1: notação pré e pós-fixada
@@ -158,7 +158,7 @@ As notas máximas foram:
 | ???964 | 1.5 |   1 |  1 | 0.8 |   1 |  1 | 1.5 | 1.5 |
 | ???026 | 1.5 |   1 |  1 |   0 |   1 |  1 | 1.5 | 1.5 |
 
-* P2 Detalhamento
+* P2 Detalhamento                                                  :noexport:
 ** Questões
 
 - E1: efeito colateral e ordem de avaliação de expressões aritméticas
@@ -323,76 +323,3 @@ As notas máximas foram:
 | ???026 |   0 |   1 |   0 | 0.5 |   1 |   1 |   0 | 1.2 |
 | ???736 | nil | nil | nil | nil | nil | nil | nil | nil |
 
-* P1 Detalhamento
-** Questões
-
-- E1: implementar =vezes= em funcional (sem =lapply=)
-- E2: implementar três versões da seq. de números positivos
-- E3: Por que X = paulo aparece duas vezes? O que acontece?
-- E4: Definir um predicado =ins/3= que insere elemento em lista ordenada
-- E5: Informar a vinculação de cada variável e região de mem.
-- E6: Espaço ocupado em memória da union
-- E7: Indicar o conteúdo do monte/pilha/seg. ao atingir a linha 12
-- E8: Descrever problemas com ponteiros utilizando código da E5
-
-** Notas máximas
-
-As notas máximas foram:
-
-- E1: [1.0]
-- E2: [2.0]
-- E3: [1.0]
-- E4: [1.5]
-- E5: [1.0]
-- E6: [0.5]
-- E7: [1.0]
-- E8: [1.0]
-
-Somatório máximo é de 9 pontos. As notas finais foram portanto
-sobre 9.
-
-** Detalhamento por questão
-
-| ID     |  E1 |  E2 |  E3 |  E4 |  E5 |  E6 |  E7 |  E8 |
-|--------+-----+-----+-----+-----+-----+-----+-----+-----|
-| ???142 | 0.9 | 1.4 | 0.5 |   0 | 0.9 | 0.5 |   1 | 0.5 |
-| ???911 | 0.7 | 0.5 | 0.5 |   0 | 0.5 |   0 | 0.5 |   1 |
-| ???295 | 0.8 | 1.4 |   1 |   0 |   0 | 0.5 |   0 | 0.3 |
-| ???515 | 0.9 | 1.4 | 0.5 | 0.3 | 0.5 |   0 | 0.3 |   1 |
-| ???574 | 0.9 |   2 |   1 | 1.5 |   1 | 0.5 | 0.9 |   1 |
-| ???887 | 0.9 | 1.3 | 0.5 |   0 | 0.9 | 0.5 |   0 |   1 |
-| ???321 |   1 |   2 | 0.5 | 1.4 |   1 |   0 |   1 |   1 |
-| ???711 | 0.9 | 1.4 | 0.7 |   0 | 0.5 | 0.5 |   0 |   1 |
-| ???046 | 0.9 |   2 | 0.5 |   0 | 0.5 |   0 | 0.5 |   1 |
-| ???266 | 0.9 | 0.7 |   1 | 1.3 | 0.9 |   0 | 0.5 |   0 |
-| ???534 |   1 |   2 |   1 | 1.5 |   1 |   0 |   1 | 0.4 |
-| ???612 |   1 | 1.4 |   1 |   0 | 0.5 |   0 | 0.7 | 0.8 |
-| ???846 |   1 | 1.6 | 0.5 |   0 |   0 | 0.5 | 0.5 | 0.8 |
-| ???657 |   1 |   2 |   1 |   0 |   1 | 0.5 |   1 | 0.7 |
-| ???845 | 0.9 | 1.4 | 0.5 |   0 |   1 | 0.5 |   1 | 0.8 |
-| ???595 |   1 | 1.5 | 0.5 | 0.5 | 0.5 |   0 | 0.5 |   1 |
-| ???503 | 0.9 | 1.4 |   1 |   0 | 0.9 | 0.5 |   1 | 0.9 |
-| ???713 | 0.9 | 1.9 | 0.6 |   0 |   1 | 0.5 | 0.9 | 0.8 |
-| ???030 |   1 | 0.3 | 0.5 |   0 |   1 | 0.5 | 0.5 | 0.8 |
-| ???286 |   1 | 1.4 |   0 | 1.5 | 0.9 | 0.5 |   1 |   1 |
-| ???508 | 0.5 | 1.4 | 0.5 | 1.5 |   1 | 0.5 |   1 |   1 |
-| ???679 | nil | nil | nil | nil | nil | nil | nil | nil |
-| ???584 |   1 | 1.9 | 0.5 |   0 | 0.9 | 0.5 | 0.5 | 0.3 |
-| ???694 |   1 | 1.4 |   1 | 1.5 |   1 | 0.5 |   1 | 0.3 |
-| ???114 |   1 | 1.4 | 0.5 |   0 | 0.5 | 0.5 |   1 | 0.7 |
-| ???256 | 0.9 |   2 | 0.5 |   0 |   1 | 0.2 |   1 | 0.6 |
-| ???499 | 0.9 | 1.4 | 0.5 | 1.5 |   1 | 0.2 |   1 | 0.6 |
-| ???654 |   1 | 1.4 | 0.5 |   0 | 0.5 | 0.5 |   1 | 0.5 |
-| ???820 | 0.9 |   2 | 0.5 | 0.8 |   1 | 0.1 | 0.5 |   1 |
-| ???317 |   1 | 1.4 | 0.5 |   0 |   1 | 0.5 |   1 | 0.2 |
-| ???698 |   1 |   2 | 0.5 | 1.4 |   1 | 0.5 |   1 |   1 |
-| ???505 |   1 | 1.4 | 0.5 |   0 | 0.5 | 0.5 |   1 | 0.4 |
-| ???964 | 0.9 | 1.4 | 0.2 |   0 | 0.5 |   0 | 0.5 |   0 |
-| ???195 | 0.9 | 1.4 | 0.5 |   0 | 0.9 | 0.5 |   0 | 0.7 |
-| ???281 |   1 | 1.4 |   1 |   0 | 0.9 |   0 |   1 | 0.8 |
-| ???611 | 0.9 | 1.4 |   1 |   0 |   1 |   0 |   0 |   0 |
-| ???526 | 0.9 | 0.6 |   1 |   0 | 0.5 | 0.5 |   1 | 0.3 |
-| ???596 | 0.9 |   2 |   1 | 1.5 |   1 |   0 |   1 | 0.5 |
-| ???588 | 0.9 | 1.4 |   0 |   0 |   1 | 0.5 | 0.9 |   0 |
-| ???026 |   0 |   2 |   0 |   0 | 0.5 |   0 |   1 | 0.3 |
-| ???736 | nil | nil | nil | nil | nil | nil | nil | nil |
