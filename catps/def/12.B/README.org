@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* CATP #12 (Subprogramas)
+
+Considere o seguinte programa escrito na sintaxe da linguagem C:
+#+BEGIN_EXAMPLE
+void swap(int a, int b) {
+  int temp;
+  temp = a;
+  a = b;
+  b = temp;
+}
+void main() {
+  int value = 4, list[5] = {9, 7, 5, 3, 1};
+  swap(value, list[0]);
+  //Ponto A
+  swap(list[0], list[1]);
+  //Ponto B
+  swap(value, list[value]);
+  //Ponto C
+}
+#+END_EXAMPLE
+Para cada um dos métodos de passagem de parâmetros (por valor, por
+referência, por valor-resultado nas duas versões), quais são os
+valores das variáveis =value= e =list= nos três pontos (=A=, =B=, =C=)?
+Considere que na versão #1 do valor-resultado, a vinculação de
+estocagem é resolvida na chamada da função, enquando que na versão #2,
+tal vinculação é definida no retorno da função.
+
+| Método                 | Ponto | value | list |
+|------------------------+-------+-------+------|
+| por Valor              | A     |       |      |
+| por Valor              | B     |       |      |
+| por Valor              | C     |       |      |
+|------------------------+-------+-------+------|
+| por Referência         | A     |       |      |
+| por Referência         | B     |       |      |
+| por Referência         | C     |       |      |
+|------------------------+-------+-------+------|
+| por Valor-Resultado #1 | A     |       |      |
+| por Valor-Resultado #1 | B     |       |      |
+| por Valor-Resultado #1 | C     |       |      |
+|------------------------+-------+-------+------|
+| por Valor-Resultado #2 | A     |       |      |
+| por Valor-Resultado #2 | B     |       |      |
+| por Valor-Resultado #2 | C     |       |      |
