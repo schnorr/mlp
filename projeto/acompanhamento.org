@@ -851,7 +851,7 @@ Não se fez presente para apresentar.
 | GirlsRule                     |        4.8 |
 | Programadores Anônimos (2)    |       0.55 |
 
-* Parcial                                                          :noexport:
+* Parcial
 ** Sumário da entrega
 
 Um grupo não entregou.
