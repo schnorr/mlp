@@ -854,12 +854,13 @@ Não se fez presente para apresentar.
 * Parcial                                                          :noexport:
 ** Sumário da entrega
 
-Dois grupos não entregaram.
+Um grupo não entregou.
 
 | Grupo                                        | Entrega             |
 |----------------------------------------------+---------------------|
 | Moon Invaders                                | 10/22/2018 06:56 PM |
 | Null                                         | 10/22/2018 07:38 PM |
+| Good Bye, Java!                              | 10/22/2018 09:19 PM |
 | Space Force                                  | 10/22/2018 09:21 PM |
 | RISKy business                               | 10/22/2018 09:43 PM |
 | Cerberus                                     | 10/22/2018 10:33 PM |
@@ -870,7 +871,6 @@ Dois grupos não entregaram.
 | Destemidos                                   | 10/22/2018 11:53 PM |
 | Hoje sim, Hoje sim                           | 10/22/2018 11:59 PM |
 | War Pigs                                     |                     |
-| Good Bye, Java!                              |                     |
 
 ** Revisão                                                        :noexport:
 
