@@ -53,8 +53,8 @@ g++ troca.o main.o -o main
 
 Abaixo está descrito os requisitos de cada um dos quatro programas que
 devem ser implementados.
-- troca (já implementado, [[../resp/15.org][veja solução]] e entenda como funciona)
-- imprime (já implementado, [[../resp/15.org][veja solução]] e entenda como funciona)
+- troca (já implementado, [[../../resp/15.org][veja solução]] e entenda como funciona)
+- imprime (já implementado, [[../../resp/15.org][veja solução]] e entenda como funciona)
 - copia
 - polimorficos
 Os dois primeiros já estão implementados em C++, como exemplo (veja
