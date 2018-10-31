@@ -39,7 +39,7 @@ Os prazos são até às 23:59 do dia informado.
 | Escolha da LP, Problema, Grupos | 2018-09-05 |
 | Projeto inicial                 | 2018-09-19 |
 | Entrega *parcial*                 | 2018-10-22 |
-| Entrega *final*                   | 2018-11-14 |
+| Entrega *final*                   | 2018-11-18 |
 | Apresentações Sessão #1         | 2018-11-26 |
 | Apresentações Sessão #2         | 2018-11-28 |
 
