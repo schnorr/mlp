@@ -872,7 +872,7 @@ Um grupo não entregou.
 | Hoje sim, Hoje sim                           | 10/22/2018 11:59 PM |
 | War Pigs                                     |                     |
 
-** Revisão                                                        :noexport:
+** Revisão
 
 Da especificação:
 
@@ -884,306 +884,444 @@ utilizará esta oportunidade para formar um parecer rápido do relatório
 e da implementação; sugerindo ao grupo melhorias caso necessário.
 #+END_EXAMPLE
 
-*** Monstros da Louca Programação
+Parecer por grupo abaixo.
 
-- PDF com 22 páginas, mais fontes produzidos
-  - Versão OO
-- Mssim
-- verbosidade"de (falta de espaço)
-- negrito na primeira letra de itemize (em vários lugares)
-- "o programa se executava uma"
-- As figuras em 1.2 e 1.3 não são citadas no texto; todas as figuras
-  assim o devem ser para que sejam explicadas com detalhes (ainda que
-  em exemplos como esses)
-- Criada em 2001 2003
-- Os fontes latex não estão disponíveis
-- "ÉCOLE POLYTECHNIQUE FÉDÉRALE DE LAUSANNE" - evitar o uso de
-  maiúsculas dessa forma, e por que as aspas? Pode-se usar itálico.
-- "à longo prazo" - reavaliar o uso da crase
-- Pg5: texto com itens em demasia é considerado estilo ruim
-- Logo solitário
-- "divulgau"
-- Sec3: seria bom ter uma introdução, dizendo "Esta seção traz uma
-  descrição detalhada dos requisitos do trabalho, onde explicaremos os
-  diferentes recursos do projeto juntamente com trechos de código que
-  ilustram os conceitos". Preparar o leitor para o que vem é bom.
-- "tenod"
-- Sec3.1-Item1: não ficou claro a diferença entre class, object e
-  trait em Scala
-- Sec3.1-Item2: não ficou claro o encapsulamento
-- Sec3.1-Item3: o comentário do código poderia fazer parte do texto
-- Sec3.1-Item4: Por quê?
-- Sec3.1: de uma maneira geral, os itens com trechos de código são
-  minimamente explicados
-- Figura3.1 não ilustra a hierarquia de classes; somente a hierarquia
-  de organização do projeto
-- Tabela4.1 não respeita as margens
-  - Por que usar a seq de fibonacci? Justificar.
-- Sec4.2: a citação ao Sebesta esta ilustrada de maneira incorreta
-  - Caso seja um copy/paste do texto do Sebesta, apresentar uma frase
-    dizendo algo como "Segundo Sebesta", colocar o texto copiado em
-    ambiente quote, citar o livro. No entanto, isso não é comum em
-    computação. A alternativa é descrever com as próprias palavras.
-  - O mesmo acontece no item 3 da Pg16.
-- Fig4.1 não é uma tabela, é uma figura
-- Onde está o uso de =bibtex=?
-  - Alguns links não respeitam as margens (Pg22)
-- Sumário: melhorar bastante
+*** Moon Invaders
 
-*** My Little Frogger Haters
+- [X] O arquivo não é um =zip=, é um =tar.gz=, tem diferença
+  - O arquivo agora é um =tar.gz=
+- [ ] O PDF não veio previamente compilado
+- [ ] Problema de compilação do PDF nas linhas 111, 151 e 152
+  - Algo a ver com a ciação, caracteres em codificação UTF-8 inválida, etc
+  - Observe a saída de compilação
+- [ ] O título do trabalho "Relatorio inicial do Projeto"
+- PDF de +4+ 13 páginas
+- [X] 1 página com texto apenas
+- [X] Data de 2017, e não 2018
+- [ ] Sem nome do grupo, sem problema, sem linguagem na capa
+- [-] Ausência de referências
+  - [ ] Uso de bibtex para colocação de apenas uma referência
+  - [X] Encontrar mais referências
+  - [ ] Referência Rust mal formatada
+- [ ] Margens não respeitadas em /code snippets/
+- [ ] Seção sobre Currying não reflete corretamente seu conceito
+- [ ] Idem para Seção sobre Pattern Matching
+- [ ] Na 3.4, está nomeando-se a função anônima
+- [ ] Em 3.5, código demasiado grande. A ideia é fazer /code snippets/
+  - Cuidar para não ir ao outro extremo
+- [ ] rust -> Rust (Nome da linguagem)
+- [ ] Rever especificação pois falta uma série de elementos
 
-- PDF com 6 páginas, ausência do código fonte produzido
-  - Versão OO
-- A capa não deixa claro a linguagem de programação escolhida
-- Na intro, se fala em C#7.2, o que a versão 7.2 tem diferente das anteriores?
-- No final da intro, é bom ter um parágrafo que explica a estrutura do documento
-- "CARACTERISTICAS" (acentuação)
-- Aplicar o uso da crase
-- Quão dependente da IDE é a linguagem C#?
-- "á operações" (rever uso da crase)
-- Sec3: explicação OO
-  - Não se espera uma explicação de cada classe, embora vejo isso
-    positivamente
-  - Requisitos do trabalho com trechos de código estão ausentes
-- Relatório termina de maneira abrupta
-- Sumário: melhorar muito!
-  - Fontes?
+*** Null
 
-*** Programadores Anônimos
+- [ ] PDF com +11+ 23 páginas
+  - [ ] 3 páginas para linguagem, +1+ 1.5 para o problema
+- [X] O pacote =tar.gz= deve conter apenas =tex=, imagens, =bib=
+  - Remover portanto todos os arquivos "escondidos" que começam por ponto
+- [X] Ausência do nome do grupo, em destaque, na capa
+- [X] "por cada dentro"
+- Boa descrição da linguagem, com origem das imagens
+- [ ] Idas e vindas na introdução da Seção 2
+- [ ] "possiblidade"
+- [ ] Frase estranha com uso de "-" (Intro Seção 2.1)
+  - [ ] Cuidar uso de tracinho seguido de vírgula
+  - [ ] Para melhor typeset de tracinho, usar dois tracinhos
+- [ ] Seção 2.2 sem intro
+- [ ] /Code snippets/ das subseções podem ser numerados, referenciados
+  no texto e explicados. Lembrar que a ref no texto deve sempre
+  aparecer antes da aparição da fig/tab/snippet.
+- [ ] Cuidar espaçamento entre palavra e comando \cite
+- [ ] Análise crítica está vazia
+- [ ] Referências não respeitam margens do texto
+- [ ] Várias referências são do mesmo manual, juntá-las
 
-- PDF com 9 páginas, ausência do código fonte produzido
-  - Versão OO descrita
-- Sec2: subseções com apenas um parágrafo, evitar
-  - parágrafos com uma frase, evitar
-- Sec4: uma subseção por classe
-  - Não se espera uma explicação de cada classe, embora positivo
-  - Requisitos do trabalho com trechos de código estão ausentes
-- Relatório termina de maneira abrupta (conclusão, refs?)
-- Sumário: melhorar muito!
-  - Fontes?
+*** Space Force
 
-*** Here for Beer
+- PDF com +4+ 11 páginas
+  - 1.1 páginas de texto útil
+- [X] Zip dentro de zip, evitar
+- [X] Faltou o nome do grupo na capa
+- [X] Problema de codificação de fonte, ver issue #19
+- [X] Faltou lista de referências
+- [X] Faltou usar =bibtex=, =\cite=, ver comentários relacionados nos outros grupos
+- [X] Evitar termos excessivos "notório"
+- [X] Revisar o português pois erros deste tipo indicam despreocupação com o texto
+  - "formula"
+  - horizoltalmente
+  - alienigenas
+  - acertar uso de vírgulas, como por exemplo na última frase da Sec 1.1
+- [ ] Cuidar com espaços
+  - "pattern matching"e
+- [ ] Colocar termos em inglês em /itálico/
+- [X] Incluir referências para as aplicações industriais e comerciais
+  - Inclusive nos estudos de caso sobre aprendizagem
+  - Quais disciplinas usam? Em quais universidades?
+- [ ] Separar a apresentação dos recursos por item dos requisitos obrigatórios
+- [ ] Análise crítica
+- [ ] Conclusão
 
-- Submetido em RAR: submeter em ZIP ou TGZ da próxima vez (veja espec.)
-- PDF de 11 páginas, com um arquivo fonte R
-  - Versão funcional
-  - Sem fontes Latex
-- Introdução
-  - Parágrafo de uma linha. Poderia dar um contexto, etc.
-  - Seções com apenas um parágrafo
-  - Figura não referenciada no texto
-- Sec2 Recursos
-  - Falta uma introdução explicando o que é a seção...
-  - Ok para a estrutura interna, mas...
-  - "basico" (acento)
-  - Layout dos trechos de código poderia ser melhor (use =listings=)
-  - Item 2.1.1 : e tem como alterar os argumentos passados?
-  - Rever o conceito de currying
-- Análise Crítica: ok mas incompleta, rever a especificação do TF
-- Conclusão de duas linhas?
-  - Por que não é boa?
-  - Notem que o objetivo principal é avaliar os dois paradigmas
-- Referências: rever margens, usar bibtex
+*** RISKy business
 
-*** GirlsRule
+- [ ] Ausência de fontes tex, bib, etc
+- PDF de +13+ 20 páginas
+  - +Página 11 até a 13 não é de autoria do grupo+
+- [X] A referência à figura 1.1 pode aparecer no texto
+  - Ou seja, fora dos parênteses-
+- [X] "de 2 a seis" -> de dois a seis
+- [X] Ausência de origem da Figura 1.1
+- [X] "middleman" -> interpretador
+- [X] Origem da Figura 2.1? A borda faz parte da figura?
+- [ ] O que é "design inteligente de gráficos"?
+- [X] Problema das páginas 11 à 13
+- [ ] ZIP dentro do TAR.GZ, a evitar
+- [ ] O que são "destrutores implícitos"?
+- [ ] Os /code snippets/ poderiam ser numerados (como figuras) e citados
+  no texto ao invés de aparecerem "soltos"
+- [ ] Figuras tais como aquela da página 12 devem estar em ambiente
+  figure com caption e ser citadas no texto com ref/label.
+- [ ] Evitar uso de ambiente itemize que ocupam várias páginas, tais
+  como o conteúdo da Seção 3.1. Preferir subsubsection, por exemplo.
+- [ ] Itens de processamento paralelo devem estar em sua própria
+  subseção de 3 e constar com partes em para OO e funcional, com
+  comparação direta.
 
-- Arquivo ZIP bem recebido, mas o TEX não veio compilado em PDF dentro.
-  - Melhor se os arquivos do relatório estão em um diretório "doc" algo assim
-  - E os fontes nem um diretório "src"
-- PDF compilado pelo professor com 9 páginas, com um arquivo fonte =jl=
-  - Implementação OO ou funcional? Fica só claro na Sec2.1
-- Intro, somente com subseções, sem texto
-- "performance" \to desempenho
-- "alienigenas"
-- Sec1.4: no item 1.2, onde está?
-- Sec2.1
-  - Figura sem /caption/
-  - Embora interessante no projeto do jogo, qual a relação com a
-    implementação OO?
-- Seção 2.2 vazia (na ausência de texto, remover)
-  - Preencher quando houver texto
-- Seção 3
-  - O principal objetivo do trabalho é relatar como as construções
-    requisitadas (os ditos "recursos") se manifestam na linguagem
-    escolhida. O relato da compreensão da linguagem pode ser colocado
-    em uma seção específica para este fim.
-  - Usar pacote =listings= para colocar código no relatório. Percebam
-    que existem muitas linhas em branco no código da Pg6 e 7.
-- Seções 3.1 e 3.2 vazias
-- Observar a estrutura do relatório na especificação
-- Sem referências
-- Melhorar bastante!
+#+begin_src shell :results output
+tar vxfz data/54/f1adf2-81a1-41e7-bbf7-236717633a46/RISKy_Business.tar.gz
+evince RISKy_Business/Relatorio.pdf & 
+cd RISKy_Business
+unzip relatorio_latex.zip
+#+end_src
 
-*** Code Runner
+#+RESULTS:
+#+begin_example
+RISKy_Business/
+RISKy_Business/relatorio_latex.zip
+RISKy_Business/RISKyBusiness/
+RISKy_Business/RISKyBusiness/README.md
+RISKy_Business/RISKyBusiness/LICENSE
+RISKy_Business/RISKyBusiness/src/
+RISKy_Business/RISKyBusiness/src/MenuItem.rb
+RISKy_Business/RISKyBusiness/src/Dice.rb
+RISKy_Business/RISKyBusiness/src/TerritoryObjective.rb
+RISKy_Business/RISKyBusiness/src/Battle.rb
+RISKy_Business/RISKyBusiness/src/Cursor.rb
+RISKy_Business/RISKyBusiness/src/ConquerObjective.rb
+RISKy_Business/RISKyBusiness/src/Continent.rb
+RISKy_Business/RISKyBusiness/src/buttons/
+RISKy_Business/RISKyBusiness/src/buttons/PlayButton.rb
+RISKy_Business/RISKyBusiness/src/buttons/ExitButton.rb
+RISKy_Business/RISKyBusiness/src/buttons/Button.rb
+RISKy_Business/RISKyBusiness/src/buttons/TerritoryButton.rb
+RISKy_Business/RISKyBusiness/src/ui/
+RISKy_Business/RISKyBusiness/src/ui/Ui.rb
+RISKy_Business/RISKyBusiness/src/ui/TroopsAvailable.rb
+RISKy_Business/RISKyBusiness/src/ui/GameState.rb
+RISKy_Business/RISKyBusiness/src/Menu.rb
+RISKy_Business/RISKyBusiness/src/Objective.rb
+RISKy_Business/RISKyBusiness/src/Game.rb
+RISKy_Business/RISKyBusiness/src/Player.rb
+RISKy_Business/RISKyBusiness/src/Main.rb
+RISKy_Business/RISKyBusiness/src/modules/
+RISKy_Business/RISKyBusiness/src/modules/constants.rb
+RISKy_Business/RISKyBusiness/src/modules/zorder.rb
+RISKy_Business/RISKyBusiness/src/modules/Interface.rb
+RISKy_Business/RISKyBusiness/src/modules/auxiliar.rb
+RISKy_Business/RISKyBusiness/src/Territory.rb
+RISKy_Business/RISKyBusiness/.gitignore
+RISKy_Business/Relatorio.pdf
+Archive:  relatorio_latex.zip
+  inflating: abnt-alf.sty            
+  inflating: abntex2-alf.bst         
+  inflating: abntex2-options.bib     
+  inflating: abntex2abrev.sty        
+  inflating: abntex2cite.sty         
+  inflating: biblio.bib              
+  inflating: iidefs.sty              
+  inflating: iiufrgs.cls             
+  inflating: relatorio.tex           
+  inflating: 1.Introducao.tex        
+  inflating: 2.Linguagem.tex         
+  inflating: 3.Requisitos.tex        
+  inflating: brazilian.babel         
+  inflating: english.babel           
+  inflating: formais.def             
+  inflating: nominata.def            
+  inflating: rel_mlp.def             
+  inflating: images/image1.png       
+  inflating: images/Risk.jpeg        
+  inflating: images/ruby.png         
+  inflating: images/organizacao_codigo.png  
+#+end_example
 
-- Sem referências
-- Sem código fonte, portanto apenas PDF, 10 páginas
-  - Sem fontes latex
-- "suporta as dois tipos de implementação" \to de paradigmas 
-- "criou as melhores IDEs existentes atualmente no mercado" segundo quem?
-- Frase "perdida"
-  - Construída inicialmente para melhorar o desempenho interno de suas aplicações.
-- "oferecendo algumas vantagens comparado ao Java" \to quais?
-- "A principal aplicação da linguagem Kotlin é o desenvolvimento
-  Android ele ajuda o desenvolvedor a escrever códigos mais limpos e
-  de forma mais fácil." \to falta pelo menos uma vírgula, ou quebrar em
-  duas frases
-- Vantagens/desvantagens é uma lista de itens, sem apresentação
-- Usar =listings= para typeset de códigos
-- "já existente h, chamá-lo"
-- "Uma boa prática para a utilização do framework" segundo quem?
-- Faltam citações
-- A seção 3.2 não descreve os recursos exigidos para OO
-  - Veja especificação do TF
-- Análise crítica é repetida três vezes: no título da seção, no início
-  do parágrafo antes de ":" e depois. Além disso, percebo agora que a
-  seção está incompleta (é uma cópia da especificação)
-- Conclusão?
-- Relação com inicial: vários elementos do projeto inicial foram
-  perdidos nesta versão, por que eles foram removidos?
-- Sumário: Melhorar muito!
+*** Cerberus
 
-*** Furogga
+- PDF com +4+ 10 páginas
+- [ ] Nome do grupo deve estar na capa
+- [X] Melhorar a descrição da linguagem (meia página é pouco)
+  - Por que foi dado um enfoque nos quatro tipos de gerenciamento de memória?
+  - Embora importante, existem inúmeros outros aspectos mais
+    relevantes para um texto que apresenta a linguagem em mais alto
+    nível
+    - Por exemplo, elaborar mais os itens citados no último parágrafo
+- [X] dígitos até nove pode ser escritos pelo nome "nove" ao invés de 9
+- [ ] Texto sem nenhuma referência, sem =bibtex=
+  - Continua sem bibtex, ver https://github.com/schnorr/mlp/issues/24
+- [ ] Falta de texto entre Sec3 e Sec3.1
+  - Uma introdução sobre a estrutura interna da seção
+- [ ] Recursos sobre OO (Sec3.2)
+  - Evitar uso de itemize, cada recurso pode estar em sua própria   subseção
+- [ ] Ainda que exista um pedaço de código para o item 1 (da Sec3.2),
+  por exemplo, é interessante que o texto _explique_ o que está na
+  listagem (3.1 por exemplo)
+- [ ] Vários itens TODO refletindo que pouco foi feito pelo grupo para OO
+- [ ] Idem para funcional
+- [ ] Sugestão de estrutura interna para a Sec3:
+  - Sec 3.1 OO
+  - Sec 3.2 Func
+  - Sec 3.3 Paral
+- [ ] Apenas um /code snippet/ (Listing 3.1) para tudo
 
-- Entrega de PDF com 11 páginas, sem fontes latex
-  - Mas com GIT que tem tudo (código, fontes latex, relatório)
-    - Isso é bastante positivo, a ser replicado pelos outros grupos
-- Sec1: tem apenas uma subseção. quando é o caso, melhor não ter
-  nenhuma subseção
-  - figura 1.1 \to "Figura 1.1".
-  - Problema a Ser Resolvido \to "Problema a ser resolvido"
-- Pode-se usar footnotes para informar links WWW que em geral ficam
-  ruins no meio do texto.
-- Sec2
-  - Ref incompleta "(JULIA. . . , 2018)."
-  - Subseção única
-  - Seção bastante curta
-- Rever o conceito de /pattern matching/ no contexto de linguagens funcionais
-- Todos os itens funcionais foram abordados?
-- Poderia ter mais referências
-  - Aplicações "reais" que utilizem mecanismos funcionais (e depois OO)
-  - Apoiar (suportar) as afirmações nas seções anteriores
-- Está indo bem, mas...
-  - Além dos pontos acima
-  - Globalmente melhorar o typeset do documento
+*** Quarenta e 2 (sem relatório parcial)
 
-*** Get Shit Done
+- [ ] *Submissão parcial sem relatório*
+  - Um dos requisitos da submissão parcial era o relatório
+  - Comentários acima se aplicam
+  - *Sem PDF*, *sem relatório*
+- PDF com 5 páginas
+- [ ] Faltou os fontes =tex=, =bib=, etc
+- [ ] Problema de configuração, olha a issue #19
+- [ ] Colocar um texto logo após 1 e antes de 1.1
+  - Por exemplo para dizer do que se trata o manuscrito
+- [ ] "(seja lá que recursos forem esses, ainda vamos descobrir)"
+  - Ser mais preciso, evitando prosa, ainda mais prosa informal
+- [ ] Evitar construções que dificultem a leitura
+  - Exemplo "em <arewegameyet.com>"
+  - Alternativamente, colocar o nome do site e um comando =\cite= de
+    forma que a citação apareça na lista de referências
+- [ ] Sec1.1, Par2: segundo parágrafo é uma única frase -> reescrever
+- [ ] Referência para "gerou um lucro de 500 milhões de dólares"
+- [ ] Usar =bibtex=
+- [ ] Melhorar significativamente a descrição técnica da linguagem
+- [ ] Procurar entregar no prazo
 
-- Submetido TAR.GZ com PDF de 6 páginas, sem fontes latex
-  - Fontes do trabalho estão inclusas
-- Poucas evoluções em relação ao projeto inicial (que tinha 4
-  páginas): a recomendação do professor de fornecer uma boa introdução
-  não foi executada; nenhuma evolução em relação às referências também
-- O que mudou?
-  - Sec1.2
-    - sem link para a "alpha vantage (Documentation)"
-    - O que são aqueles "índices" e abreviaturas
-  - Sec2
-    - link para o github aparece no texto, seria bom ou colocar em uma
-      nota de rodapé ou utilizar o comando \url para que ele tenha um
-      typeset alternativo daquele do texto
-    - "pŕoxima"
-- Nenhum recurso funcional/orientado a objeto (que é o grande objetivo
-  deste trabalho) foi apresentado
-- Sumário: muito pouco foi realizado no que diz respeito aos
-  requisitos do trabalho (itens funcionais ou orientados a objeto)
 
-*** Delta
+#+begin_src shell :results output
+unzip -o data/cb/2906fe-15b4-40c6-9cb0-d01c53fadb6b/space_invaders_rust-master.zip
+#+end_src
 
-- ZIP com tudo, PDF com 20! páginas
-  - No título falta um "u" (... War sando ...)
-  - A aplicação tem um website!
-- Sec1: parágrafos iniciais demasiadamente curtos
-  - Falta uma apresentação da estrutura do documento
-- Sec2:
-  - "o maior ecosistema de bibliotecas open source do mundo" \to aqui
-    realmente falta uma citação.
-  - "sem nenhuma ligação com sistema operacional do usuário" \to a
-    linguagem precisa de um navegador que este depende de um SO. Okay,
-    é indireto, mas o "nenhuma" talvez tenha sido muito forte. Quem
-    captura cliques do mouse, ou apertos de tecla no teclado? ;-)
-  - em ' "compilar"o ', faltou um espaço
-  - Faltam citações nas subseções de 2 para apontar às dependências
-  - "Ao pé da letra" \to evitar discurso informal
-  - "não a torna disruptiva em relação ao JavaScript" \to a tipagem
-    estática não indica uma disrupção, uma quebra de abordagem?
-- Sec3:
-  - Falta mencionar no relatório a Figura 3.1
-  - Tratar o caso de fim de jogo (quando um jogador ganha)
-- Usar bibtex nas referências!
-- Está bem encaminhado... continuar!
+#+RESULTS:
+#+begin_example
+Archive:  data/cb/2906fe-15b4-40c6-9cb0-d01c53fadb6b/space_invaders_rust-master.zip
+  inflating: space_invaders/Cargo.toml  
+  inflating: space_invaders/src/main.rs  
+  inflating: space_invaders/resources/slkscr.ttf  
+  inflating: space_invaders/resources/shot.png  
+  inflating: space_invaders/resources/shoot.ogg  
+  inflating: space_invaders/resources/player.png  
+  inflating: space_invaders/resources/invaderkilled.ogg  
+  inflating: space_invaders/resources/explosion.ogg  
+ extracting: space_invaders/resources/enemy4.png  
+ extracting: space_invaders/resources/enemy3.png  
+ extracting: space_invaders/resources/enemy2.png  
+ extracting: space_invaders/resources/enemy1.png  
+ extracting: space_invaders/resources/barrier4.png  
+ extracting: space_invaders/resources/barrier3.png  
+  inflating: space_invaders/resources/barrier2.png  
+  inflating: space_invaders/resources/barrier1.png  
+  inflating: README.md               
+#+end_example
 
-*** teletypewriters
+*** G&B Produções
 
-- Recebido PDF de 12 páginas, sem fontes latex
-  - Com fontes do programa
-- Rever todos os comentários ao projeto inicial
-  - Mudou alguma coisa? Parece que não.
+- [X] Codificação bizarra do nome do diretório dentro do zip
+  - Que sistema foi usado para criá-lo? Use UTF8.
+- [X] Ausência de PDF já compilado internamente
+- Após compilação manual pelo professor, PDF com 6 páginas
+- [X] Capa sem nome do grupo, problema, linguagem
+- [ ] Ausência da arquivo bib, uso de citações no texto
+- [X] Espera-se que na seção 1.1 ("1.1 Aspectos técnicos da linguagem
+  e do programa") apareçam os aspectos técnicas da linguagem e do
+  programa. Mas a leitura frustra, no sentido que se faz referência a
+  algo que vem depois no texto.
+  - [X] Portanto, remover subseções da introdução
+- [ ] Já que o conhecimento OO de C++17 é adquirido, exigiremos uma
+  excelente implementação com esse paradigma. O enfoque em funcional
+  deve ter pelo menos a mesma amplitude que o enfoque OO.
+- [X] O que é uma máquina "Arcade"?
+- [X] Ausência da origem da Figura 3.1
+  - Colocar a fonte abaixo da figura (conforme modelo latex inf/ufrgs)
+- [ ] Ausência de referências
+- PDF de 10 páginas já compilado
+- [ ] Problemas de codificação UTF-8: a palavra "Relatório" na capa
+- [ ] Existem 141 entradas bibtex no arquivo =biblio.bib=, nenhuma é usada
+  - De que adianta todas aquelas entradas?
+  - Usar bibtex, veja em: https://github.com/schnorr/mlp/issues/24
+- [ ] Sugestão de uso do pacote listings para trechos de código, ao invés de uma
+  captura da tela.
+- [ ] Tamanho da fonte das figuras muda, outra razão para usar listings
+- [ ] Frase sem ponto final, como em: "Para cada classe foram criados
+  um arquivo .h e um arquivo .cpp"
+- [ ] "Outa forma"
+- [ ] Separar cada recurso em sua subseção
+- [ ] Figura 4.4 sozinha em uma página
+- [ ] Conclusão parcial inexistente
 
-*** Cowboy Value
+*** Equipe 7
 
-- Apenas PDF de 7 páginas, sem fonte TEX, sem fonte solução
-  - No Inicial tinham 4 páginas
-  - Somente OO até o momento
-- Continua sem lista de referências, sem bibtex
-- Sec1
-  - Cópia da wikipedia (aka "plágio") removido, mas texto ficou menor
-    com menor riqueza de detalhes: podem escrever com as próprias
-    palavras
-- Sec2
-  - "Swift é oficialmente a linguagem que mais cresceu na história." \to
-    poderia fornecer a fonte desta informação e as outras no entorno?
-    Propaganda?
-- Temos mais duas seções 3 e 4
-- Sec3
-  - "versâo"
-  - "consiguimos"
-  - "ainda nã se implementou os aliens"
-  - "templete" \to /template/
-  - "sére"
-  - "Do projeto nos"
-  - "o que séria a tela"
-  - Múltiplos errors ortográficos: revisar o texto
-  - Falta uma subseção para cada requisito funcional (e OO),
-    ilustrando o conceito com trechos de código produzido na execução
-    deste projeto
-- Sec4
-  - Relembro a especificação, onde se deve justificar cada nota
+- [-] PDF com +8+ 16 páginas
+  - [ ] Apenas meia página para problema
+  - [X] Apenas uma para linguagem
+- [ ] "figura" no texto deve estar em maiúscula
+- [ ] A Figura 1.1 foi copiada de algum lugar, colocar ref.
+- [ ] A Sec1 tem apenas uma subseção, quando isso ocorre, manter um único corpo de texto para a seção inteira
+- [ ] Sec2, Par1, colocar a citação dentro da frase, e não ao final do parágrafo
+- [ ] Sec2, Par1, colocar a citação do manual ao lado do nome da linguagem
+- [ ] Corrigir a referência, pois tem "..." na citação
+- [ ] Sec2.1, citação deve estar dentro da frase
+  - A citação "MANUAL" é a única que existe? Procurar um livro.
+  - Se tem somente o manual, citar qual a seção aquela citação específica se refere
+- [ ] /trechos/ está em itálico, por quê? Colocar o termo em inglês em itálico
+- [ ] Prover o arquivo =.bib= com as referências bibliográficas em =bibtex=
+- [ ] Na visão geral da linguagem, poucos aspectos técnicos são apresentados
+  - Esta seção (Sec2) deve ser muito mais enriquecida
+- [ ] Remover o diretório =.git= do pacote submetido (reduzir o tamanho
+  do TAR.GZ)
+  - Remover arquivos "escondidos" tais como aqueles que começam com .
+- Na Sec3.1, cuidar pois a citação deve estar dentro da frase (e não
+  depois do ponto final).
+- [ ] Falta de texto introdutório entre Sec4 e Sec4.1
+- [ ] Usar listings para código (ao invés de simplesmente usar verbatim)
+- [ ] Blocos de código não respeitam margens, um cuidado especial deve
+  ser empregado para linhas longas
+- [ ] Curry é um processo automático em ling. funcionais, mas conceito
+  e exemplo okay
+- [ ] Rever o conceito de /pattern matching/ no contexto de ling. funcionais
+- [ ] Em sec4.5, a função map retorna uma lista?
+- [ ] Empregar funções de ordem maior fornecidas pela linguagem
+- [ ] Página 11 tem um código gigantesco sem explicação compatível,
+  apenas um pequeno parágrafo depois (que potencialmente deveria vir
+  antes).
+- [ ] Usar /code snippets/ (trechos pequenos de código) para ilustrar
+  cada item; mais de um trecho pode ser empregado
+- [ ] Empregar paralelismo nativo de Lua, potencialmente fora do
+  Love2d
+- [ ] Sec6 vazia (recursos OO)
+- [ ] Sem conclusão final
 
-*** Scipio Project
+*** Kotlin Scalando a Lua pelo Ruby para a Julia
 
-- PDF com 13 páginas (tinha 10 no inicial), sem fontes latex
-  - Código scala acompanha no seu próprio ZIP
-- Ainda usa-se bastante itens (Pg 5, por exemplo)
-  - A subseção 3.3 é a mais representativa do problema
-- Sec4 (Recursos)
-  - Cada seção deve ter uma explicação do trecho de código
-  - Fundo escuro não é uma boa alternativa
-  - Código da Sec4.1 não aparece
-- Sec5 (Crítica)
-  - Justificar todas as notas da tabela (veja espec.)
-- Sem conclusão
-  - Poderia ter algo ainda que um visão parcial
+- PDF com +9+ 11 páginas (um acréscimo de 2 páginas)
+- [X] Falta nome do grupo, problema, linguagem na capa
+- [ ] Sec1 Adicionar referência ao índice TIOBE (entrada bibtex e comando =\cite=)
+- [X] Ao final da Intro, adicionar um parágrafo com a estrutura do texto
+  - Dizer "A Seção X apresenta isso. A Seção Y apresenta aquilo.
+- [ ] Sec1, Par2: do que este parágrafo está falando?
+- [ ] Referências para =gosu=, =rubygame=, =metro=?
+- [ ] Sec 2.1 é uma lista de itens comentado - mudar para texto com
+  uma forma mais agradável para a leitura (isso é mais uma questão de
+  estilo, mas em geral listas de itens são precedidas de um parágrafo
+  que diz o que é aquela lista).
+- [ ] sec 2.1.1: O que é o formato =gem=?
+  - [ ] Qual o propósito desta seção?
+- [ ] Colocar /blocks/ em itálico no início de 2.1.2
+- [ ] Colocar /procs/ em itálico?
+- [ ] Sec3, colocar um texto no início desta seção
+- [X] Referenciar a figura no texto
+  - Todas as figuras devem ser referenciadas (e comentadas, explicadas)
+- [ ] Melhorar a forma da listagem da Seção 3.3
+  - Por exemplo, transformando em texto corrido
+- [ ] Nenhuma referência na lista final foi usada no texto
+  - Somente as referências citadas no texto devem aparecer na lista
+- [ ] Usar bibtex com o comando =\cite=
+- [ ] Propor um nome de grupo mais curto
+- [ ] Tentar reduzir o tamanho do PDF gerado
+  - Basta diminuir a resolução das figuras
+- [ ] Faltou o código fonte do relatório PDF
+- [ ] Várias sugestões do professor foram ignoradas (vejam itens não
+  marcados acima, que pena)
+- [ ] Usar bibtex! Veja https://github.com/schnorr/mlp/issues/24
+- [ ] Nenhum trecho de código é apresentado ou explicado
+- [ ] Sec4 é basicamente um itemize, transformar _cada item da espec_ e
+  uma subseção onde se explica os recursos obrigatórios com trechos de
+  código
+- [ ] Sem conclusão, sem análise crítica
 
-*** GSN
+*** Destemidos
 
-- Com 12 minutos de atraso, PDF de 12 páginas com fontex TEX
-  - Código do projeto disponível
-- Pg3: "tudo é representado por funções matemáticas" \to achei forte
-  demais esta afirmação. Note que não necessariamente precisam ser
-  "funções matemáticas".
-- comercias
-- "IDE altamente usada na indústria" \to fornecer referência
-- "jogadores (??)."
-- Figuras 3.1, 3.2 e 3.3 aparecem antes da referência no texto
-  - Figuras tem tamanho de fonte diferentes, a 3.3 tem texto
-    demasiadamente pequeno
-- Sec4 (OO)
-  - Figuras ilegíveis (compare o tamanho da fonte do texto com o
-    tamanho da fonte da figura)
-- Conclusão vazia: ainda que conclusões parciais sejam poucas, a
-  primeira impressão sobre OO seria positivo
-- Referências inexistentes
+- PDF de +7+ 10 páginas
+- [ ] Evitar zip dentro de zip
+  - Na parcial, um ZIP dentro de um TAR.GZ
+  - Evitar arquivos comprimidos dentro de arquivos comprimidos
+- [X] Falta nome do grupo, problema, linguagem na capa
+- [X] Problema de codificação de fonte, veja issue #19
+- [ ] Revisar o uso de vírgulas, por exemplo na segunda frase
+- [ ] Colocar um texto entre 2 e 2.1
+  - Notem que 2.1 pode ser levantado para dar o nome da seção 2
+- [ ] Dúvida em relação ao termo "orientada-a-objetos", confirmar
+- [X] Termos em inglês devem ser traduzidos e, se usados, devem estar em /itálico/
+- [X] Usar ambientes do pacote =listings= para listar código
+- [ ] Usar =bibtex=, comandos =\cite=
+- [X] Em latex, aspas devem estar =``assim''=
+- [ ] Melhorar a descrição do jogo
+- [ ] PDF não compilado dentro do pacote
+- [ ] Introdução sendo sumária, elaborar mais
+  - [ ] Estrutura do texto por exemplo está faltando
+  - [ ] De que adianta uma subseção 1.1 em uma seção 1 com apenas uma   subseção?
+- [ ] Customizar o pacote listings para trechos de código Scala
+- [ ] Texto estranho após referências: "(CONTRIBUTORS, b) (COMPANY, )
+  (CONTRIBUTORS, a)"
+  - [ ] Provavelmente pela existência de três comandos \cite que
+    deveriam estar no texto (nos pontos apropriados) e não após a
+    listagem de referências. Vejam
+    https://github.com/schnorr/mlp/issues/24
+- [ ] Deve haver uma subseção para lidar com cada recurso obrigatório
+  contendo uma explicação e um trecho de código
+- [ ] Sem conclusão, sem análise crítica
+
+*** Hoje sim, Hoje sim
+
+- PDF com +5+ 8 páginas
+- [X] Ausência do nome do grupo, problema, linguagem na capa
+- [ ] Problema de condificação da fonte, veja issue #19
+  - Problema continua na parcial
+- [ ] Ausência de referências bibtex, e citações no texto
+- [ ] Sec1. O indivíduo "Orientador da Disciplina" pode ser simplesmente "professor"
+  - [ ] Sec1. A linguagem de programação foi de escolhida pelo grupo
+- [ ] Falta de espaço "Objetos(OO)."
+- [ ] Adicionar elementos técnicos na descrição técnica da linguagem Scala
+- [ ] Algumas sugestões do professor foram ignoradas
+  - Sobre citações, veja https://github.com/schnorr/mlp/issues/24
+- [ ] Falta de texto introdutório entre Sec4 e Sec4.1
+- [ ] A seção 4 não reflete uma descrição dos requisitos obrigatórios
+  sobre OO
+  - Uma subseção _para cada requisito_ com seu trecho de código e
+    explicação é sugerido
+- [ ] Sem conclusão, sem análise crítica
+
+*** Good Bye, Java!
+
+- PDF com +13+ 19 páginas
+- [X] Faltou espaço entre a palavra e a citação subsequente
+  - Exemplo do problema "Kotlin(KOTLIN, 2018)"
+- [X] Ausência da origem da Figura 1.1
+- [X] "NullPointerExeception"
+- [X] Respeitar a margem direita na Página 5
+- [X] Referências devem fazer parte da frase (veja o ponto)
+  - "Developer Survey 2017 e 2018 do StackOverflow. (STACKOVERFLOW, 2018)"
+- [X] "gerou centenas de milhões de dólares" - Referência?
+- [X] Ausência da origem da Figura 1.2
+- Uso de GIT, para manter o desenvolvimento
+- Por alguma razão a mensagem de envio caiu na caixa de spam
+- [ ] Fazer com que a imagem do logo e dos diagramas fiquem menores
+  caso contrário o tamanho do PDF é enorme sem uma boa
+  justificativa. Preferir colocar imagens vetoriais ao invés de
+  imagens bitmaps, pois elas em geral são menores.
+- [ ] Falta de texto introdutório entre Sec2 e Sec2.1
+- [ ] Idem entre Sec2.1 e Sec2.1.1
+- [ ] Tornar os trechos de código referenciáveis a partir do texto
+  (com identificação única como se fossem figuras de forma que os
+  comandos \label e \ref possam ser empregados)
+- [ ] Sem conclusão, ainda que parcial
 
 * Projeto Inicial
 ** Sumário da entrega
