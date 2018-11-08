@@ -1,0 +1,59 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+* #1
+
+| Ponto | Sumário de respostas |
+|-------+----------------------|
+|     1 |                   19 |
+|     2 |                    7 |
+|     3 |                BBB** |
+
+Apresentação sobre o terceiro ponto.
+
+Discussão sobre =( B C * D - +)=: vamos primeiro supor que =B C * D - += é
+préfixada. Neste caso, os operandos devem aparecer depois dos
+operadores. Isto ocorre apenas com o operador =*=, que tem como operando
+a variável =D= e o resultado do operador =-=. Como este operador tem
+somente um operando (o resultado do operador `+`), isto já é um
+indício que esta expressão não é préfixada. Um segundo indício contra
+a suposição desta expressão ser préfixada é que o operador `+` não
+contém nenhum operando sob a suposição préfixada. Portanto, podemos
+concluir que esta expressão não está em notação préfixada. Vamos agora
+supor que =B C * D - += é pósfixada, onde os operadores aparecem depois
+dos operandos. Sendo assim, =B C *= está em notação pósfixada, assim
+como =B C * D -=. No entanto, o operador `+` tem somente um operando que
+é o resultado da expressão =B C * D -=. Portanto, esta expressão também
+não está em notação pósfixada.
+
+Discussão sobre =* A B C -=: a expressão não é préfixada porque o
+operador `-` não tem nenhum operando. Ela também não é pósfixada
+porque o operador `*` não tem nenhum operando.
+
+Discussão sobre =B B B * *=: a expressão é pósfixada pois o primeiro
+operador `*` tem dois operandos =BB= e o segundo operador `*` tem dois
+operandos: =B= e =B B *=.
+
+* #2
+
+| N | Entrada                        | Pré                            | Pós                            |
+|---+--------------------------------+--------------------------------+--------------------------------|
+| 1 | A * B * C + D + E              | + + * * A B C D E              | A B * C * D + E +              |
+| 2 | A + B + C * D * E              | + + A B * * C D E              | A B + C D * E * +              |
+| 3 | A * B - C / D + 10             | + - * A B / C D 10             | A B * C D / - 10 +             |
+| 4 | 15 / 7 - 1 + 1 * 3 - 2 + 1 * 1 | + - + - / 15 7 1 * 2 3 2 * 1 1 | 15 7 / 1 - 1 3 * + 2 - 1 1 * + |
+
+* #3
+
+Houve uma tolerância na resolução do ponto flutuante.
+
+| Número | Passos                    |
+|--------+---------------------------|
+|      1 | _8 9 /_ 4 3 + * 6 2 - * 7 * |
+|      2 | 0.89 _4 3 +_ * 6 2 - * 7 *  |
+|      3 | _0.89 7 *_ 6 2 - * 7 *      |
+|      4 | 6.23 _6 2 -_ * 7 *          |
+|      5 | _6.23 4 *_ 7 *              |
+|      6 | _24.92 7 *_                 |
+|      7 | 174.44                    |
