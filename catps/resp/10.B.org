@@ -10,7 +10,7 @@
 |     2 |                    7 |
 |     3 |                BBB** |
 
-Apresentação sobre o terceiro ponto.
+Apresentação sobre o *terceiro ponto*.
 
 Discussão sobre =( B C * D - +)=: vamos primeiro supor que =B C * D - += é
 préfixada. Neste caso, os operandos devem aparecer depois dos
