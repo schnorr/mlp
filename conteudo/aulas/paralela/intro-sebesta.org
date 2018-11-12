@@ -1,0 +1,125 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Concorrência
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Motivação e introdução
+O que é concorrência?
+- Um programa de computador que tem vários fluxos de execução
+- Um PC (/program counter/) e uma pilha de RAs por fluxo
+
+#+latex: \pause\vfill
+
+Razões para emprego da concorrência
+1. Velocidade de execução em computadores atuais
+2. Versões paralelas mais rápidas que sequenciais (/compute-bound/)
+3. Método mais realista para concepção de soluções para problemas
+4. Aplicações distribuídas (jogos, carros, etc)
+
+* Níveis de concorrência
+  + Instrução de máquina
+    + Duas ou mais instruções
+    + Pipelines, processadores vetoriais
+    + Controlado pelo hardware
+  + <2->\alert{Comandos}
+    + Dois ou mais comandos de linguagem
+    + Máquinas SIMD (/Single Instruction Multiple Data/)
+    + Um controlador, vários processadores e memória local
+  + <3->\alert{Subprogramas}
+    + Dois ou mais subprogramas
+    + Processos ou /threads/
+    + Máquinas MIMD (/Multiple Instruction Multiple Data/)
+    + Memória compartilhada ou distribuída
+  + <4->Programa
+    + Dois ou mais programas
+    + Controlado pelo sistema operacional
+* Terminologia de tarefa
+Tarefa é a unidade básica de computação
++ Pode ser executada concorrentemente com outras
++ Cada uma suporta um fluxo de controle
+#+latex: \pause
+Exemplos
++ Linguagens OO: um método pode ser uma tarefa
++ C: uma função
+* Tarefa /versus/ subprogramas
+Tarefas tem
++ Lançamento implícito
++ Execução não-bloqueante para o invocador (assincronismo)
++ Controle pode não voltar para o lançador
+#+latex: \vfill\pause
+Outras características de tarefas
++ Comunicação entre tarefas para cooperação/competição
++ Várias instâncias do mesmo tipo de tarefa
+* Categorias de tarefas
+  + Tarefas pesadas -- espaço de endereçamento exclusivo
+  + Tarefas leves -- espaço de endereçamento compartilhado
+#+latex: \vfill
+  + Tarefas disjuntas
+    + Duas tarefas que não se comunicam 
+#+latex: \vfill
+  + Comparação com o conceito de /threads/
+* Comunicação e Sincronização
+  + \alert{Comunicação}
+    + Mecanismos para que uma tarefa obtenha informações de outra
+    + Duas técnicas
+      + Memória compartilhada
+      + Passagem de mensagens 
+#+latex:  \vfill
+  + \alert{Sincronização}
+    + Controlar a ordem na qual as tarefas se executam
+    + Implícita em passagem de mensagens
+    + Geralmente não-implícita em memória compartilhada
+    + Espera ativa /versus/ Espera bloqueante
+* Sincronização entre tarefas
+  + Mecanismo para controlar a ordem na qual as tarefas executam
+  + Existem dois tipos
+    + \alert{Sincronização por Cooperação}
+      + Existe uma dependência entre as tarefas
+    + \alert{Sincronização por Competição}
+      + Acesso a um recurso único, mas compartilhado
+      + Cada uma necessita acesso exclusivo ao recurso
+  \vfill
+  + <2->Exemplo de condição de corrida
+* Construções fundamentais de linguagem 
++ Indicar quais unidades são concorrentes
++ Ativar e controlar um fluxo de execução concorrente
++ Possibilitar a sincronização entre unidades concorrentes
+#+latex: \vfill\pause
+Podem estar presentes sob diferentes formas
+
++ Linguagens explicitamente concorrentes
+  + Algol68, Simula, Ada
+  + Vantagem do suporte do compilador
++ <3->Extensões suportadas pelo compilador da linguagem
+  + OpenMP (definições de pré-processador) em Fortran/C/C++
++ <4->Bibliotecas auxiliares
+  + Pthread (da linguagem C), NSThread (Objective-C), Java Threads
+  + MPI (passagem de mensagens)
+  + CUDA (com alterações sintáticas) \\
+    =www.nvidia.com/content/gtc-2010/pdfs/2131_gtc2010.pdf=
+* Mecanismos
+Sintaxe para criação de tarefas (/threads/)
++ Criação e destruição de tarefas dinamicamente
++ Suporte dinâmico em praticamente todos os sistemas
+#+latex: \pause
+Implementando sincronização
++ Semáforos
+#+latex: \pause
+Mecanismos em nível de linguagem
++ Monitores
++ Regiões críticas condicionais
++ Memória transacional
+#+latex: \pause
+Passagem de mensagem
