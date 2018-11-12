@@ -40,10 +40,10 @@ Compiladores compatíveis
 + gcc -- https://gcc.gnu.org/wiki/openmp
 + clang -- https://clang-omp.github.io/
 + Lista completa: \\ http://openmp.org/wp/openmp-compilers/
-#+latex: \vfill
-\pause  Testar com um olá mundo
-  \tiny
-  #+BEGIN_SRC C
+#+latex: \vfill\pause
+Testar com um olá mundo
+#+latex: \tiny
+#+BEGIN_SRC C :tangle ola-mundo-openmp.c
 #include <omp.h>
 #include <stdio.h>
 int main() {
@@ -51,12 +51,111 @@ int main() {
     printf("Hello from thread %d, nthreads %d\n",
             omp_get_thread_num(), omp_get_num_threads());
 }
-  #+END_SRC
-\pause Em um Debian
-  #+BEGIN_SRC C
-  gcc -fopenmp hello.c
-  #+END_SRC
-#+latex: \vfill
+#+END_SRC
+#+latex: \pause
+Em um Debian
+#+begin_src shell :results output
+gcc -fopenmp ola-mundo-openmp.c -o ola-mundo
+./ola-mundo
+#+end_src
+
+#+RESULTS:
+: Hello from thread 0, nthreads 4
+: Hello from thread 3, nthreads 4
+: Hello from thread 1, nthreads 4
+: Hello from thread 2, nthreads 4
+
+* Seções paralelas
+
+Seções de código a serem divididas entre as threads
+#+latex: \tiny
+#+BEGIN_EXAMPLE
+#pragma omp parallel sections
+{
+    A;
+    #pragma omp section { B; }
+    #pragma omp section { C; }
+}
+#+END_EXAMPLE
+
+#+latex: \pause\normalsize
+Um programa OpenMP
+#+latex: \tiny
+
+#+BEGIN_SRC C :tangle sections.c
+#include <stdio.h>
+#include <omp.h>
+
+int main() {
+  #pragma omp parallel sections num_threads(4)
+  {
+    #pragma omp section
+    printf("Hello from thread %d\n", omp_get_thread_num());
+    #pragma omp section
+    printf("Hello from thread %d\n", omp_get_thread_num());
+  }
+}
+#+END_SRC
+
+#+begin_src shell :results output
+gcc sections.c -fopenmp -o sections
+./sections
+#+end_src
+
+#+RESULTS:
+: Hello from thread 0
+: Hello from thread 2
+
+* Seções paralelas (barreira implícita)
+#+latex: \tiny
+#+BEGIN_SRC C :tangle barreira-implicita.c
+#include <stdio.h>
+#include <unistd.h>
+#include <omp.h>
+
+int main() {
+  int a, b, c, d;
+  #pragma omp parallel sections
+  {
+    #pragma omp section 
+    {
+      a = 0;
+      printf("Hello from thread %d\n", omp_get_thread_num());
+    }
+    #pragma omp section 
+    {
+      b = 0;
+      printf("Hello from thread %d\n", omp_get_thread_num());
+    }
+    #pragma omp section 
+    {
+      c = 0;
+      printf("Hello from thread %d\n", omp_get_thread_num());
+    }
+    #pragma omp section 
+    {
+      d = 0;
+      int i;
+      sleep(1);
+      printf("Hello from thread %d\n", omp_get_thread_num());
+    }
+  }
+  printf ("Everything has been terminated now.\n");
+}
+#+END_SRC
+
+#+begin_src shell :results output
+gcc barreira-implicita.c -fopenmp
+./a.out
+#+end_src
+
+#+RESULTS:
+: Hello from thread 0
+: Hello from thread 1
+: Hello from thread 2
+: Hello from thread 3
+: Everything has been terminated now.
+
 * Paralelização em OpenMP
 Identifique os laços *custosos*
   #+BEGIN_SRC C
