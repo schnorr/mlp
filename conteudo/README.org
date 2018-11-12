@@ -104,6 +104,7 @@ PDF.
  | Script       | [[./aulas/script/inovacoes.org][Inovações, Discussão, "Pior é melhor"]]      | #18   |         |        |
  |--------------+--------------------------------------------+-------+---------+--------|
  | Paralelismo  | [[./aulas/paralela/introducao.org][Introdução]]                                 |       | Cap.13  | Cap.12 |
+ | Paralelismo  | [[./aulas/paralela/intro-sebesta.org][Concorrência]]                               |       |         |        |
  | OpenMP       | [[./aulas/paralela/openmp.org][OpenMP]]                                     |       |         |        |
  | OpenMP       | [[./aulas/paralela/lacos.org][Algoritmos de escalonamento]]                |       |         |        |
  | OpenMP       | [[./aulas/paralela/compartilhamento.org][Compartilhamento de Variáveis]]              | [[../catps/][#19]]   |         |        |
