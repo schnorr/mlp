@@ -55,5 +55,3 @@ int main (int argc, char **argv)
 
 Aprenda mais em:
 - https://en.wikipedia.org/wiki/Approximations_of_%CF%80
-
-Quanto tempo levaria para obter uma precisão de 10^14?
