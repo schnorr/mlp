@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+
+| Método                 | Ponto | value | list      |
+|------------------------+-------+-------+-----------|
+| por Valor              | A     |     4 | 9 7 5 3 1 |
+| por Valor              | B     |     4 | 9 7 5 3 1 |
+| por Valor              | C     |     4 | 9 7 5 3 1 |
+|------------------------+-------+-------+-----------|
+| por Referência         | A     |     9 | 4 7 5 3 1 |
+| por Referência         | B     |     9 | 7 4 5 3 1 |
+| por Referência         | C     |       | *Nota #1*   |
+|------------------------+-------+-------+-----------|
+| por Valor-Resultado #1 | A     |     9 | 4 7 5 3 1 |
+| por Valor-Resultado #1 | B     |     9 | 7 4 5 3 1 |
+| por Valor-Resultado #1 | C     |       | *Nota #2*   |
+|------------------------+-------+-------+-----------|
+| por Valor-Resultado #2 | A     |     9 | 4 7 5 3 1 |
+| por Valor-Resultado #2 | B     |     9 | 7 4 5 3 1 |
+| por Valor-Resultado #2 | C     |       | *Nota #3*   |
+
+*Nota #1*: neste ponto, o conteúdo de =value= seria trocado pelo conteúdo
+de =list[value]=. Como =value= contém o valor 9 nesta última chamada à
+=swap=, trocaríamos o valor conhecido 9 (em =value=) pelo valor
+desconhecido alocado em =list[9]= -- sabendo que a lista tem apenas
+cinco elementos.
+
+*Nota #2*: o método "valor-resultado #1" se diferencia do
+"valor-resultado #2" pelo momento aonde acontece a vinculação de
+estocagem de =lista[value]=. Considerando que no método #1 tal
+vinculação aconteça logo no início da chamada, teríamos portanto a
+troca (na última chamada à =swap=) do valor 9 (em =value=) com o valor
+desconhecido em =list[9]= -- sabendo novamente que a lista tem apenas
+cinco elementos.
+
+*Nota #3*: o método "valor-resultado #2" realiza a vinculação de
+estocagem no retorno da função =swap=. Sendo assim, neste ponto haveria
+a troca do valor 9 em =value=, com a posição =list[x]=, sendo que =x= seria
+o valor obtido na posição =list[value]=, que é desconhecido.
