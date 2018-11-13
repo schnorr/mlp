@@ -7,13 +7,11 @@
 
 Paralelize a seguinte versão do cálculo de PI por integração numérica
 utilizando a especificação OpenMP. Na sua solução, forneça um programa
-completo passível de compilação com o seguinte comando:
+completo passível de compilação com o seguinte comando.
 
 #+begin_src shell :results output
 gcc fonte.c -o binario -fopenmp
 #+end_src
-
-#+RESULTS:
 
 #+begin_src C :results output :tangle fonte.c
 #include <stdio.h>
@@ -42,7 +40,7 @@ double gettime (void)
 
 int main (int argc, char **argv)
 {
-  long num_steps = 1000000000;
+  long num_steps = 2000000000;
   double t0 = gettime();
   double pi = calcula_pi(num_steps);
   double t1 = gettime();
@@ -50,8 +48,25 @@ int main (int argc, char **argv)
 }
 #+end_src
 
+A versão sequencial leva
+
+#+begin_src shell :results output
+gcc fonte.c -o binario
+./binario
+#+end_src
+
 #+RESULTS:
-: 3.14159265358997075168 em 11.092743 segundos
+: 3.14159265358983885719 em 12.376639 segundos
+
+A versão paralela (com dois+dois cores) leva
+
+#+begin_src shell :results output
+gcc fonte.c -o binario -fopenmp
+./binario
+#+end_src
+
+#+RESULTS:
+: 3.14159265358980288596 em 3.284864 segundos
 
 Aprenda mais em:
 - https://en.wikipedia.org/wiki/Approximations_of_%CF%80
