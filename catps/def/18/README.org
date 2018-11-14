@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* CATP #18 (Linguagens de Script)
+
+Escolha três linguagens de programação, sendo que duas linguagens
+consideradas como de script (Perl, Python, Ruby, Tcl, ...) com
+implementação majoritária através de interpretação e uma linguagem de
+programação tradicional (C, C++, Java, Objective-C) implementar por
+compilação.
+
+** E1
+
+Implemente, nas *três linguagens escolhidas*, um programa que realiza o
+cálculo do fatorial de um número utilizando recursão.  Para cada
+implementação, realize várias medidas de tempo para descobrir (no seu
+computador) o tempo de execução do cálculo de fatorial. Para estimar
+esse tempo, utilize o estimador da /média/ dos valores observados
+acompanhado de uma métrica de variabilidade que emprega um nível de
+confiança. Pode-se assumir que a distribuição da medidas é
+normal. Determine o tamanho do fatorial a ser calculado de forma que o
+tempo de execução da pior solução seja em torno de 5 segundos.
+
+** E2 (opcional)
+
+Caso for de interesse do aluno, implemente o fatorial recursivo nas
+diferentes linguagens empregando /[[https://en.wikipedia.org/wiki/Tail_call][tail call optimization]]/.
+
+** E3
+
+Escreva um texto com no máximo 400 palavras explicando a metodologia
+empregada nos experimentos, descrevendo os resultados obtidos, e
+fornecendo uma interpretação factível (uma hipótese) do ponto de vista
+técnico que explique as medidas observadas. Conclua o texto elegendo
+a(s) linguagem(ns) mais eficiente(s).
