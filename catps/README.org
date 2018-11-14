@@ -31,7 +31,6 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 | #19   | [[./def/19/README.org][Integração Numérica com Paralelismo]]    | [[https://goo.gl/forms/pPEETL2bPIr80dvf2][Formulário]] | 2018-11-19 |       |
 | #18   | [[./dev/18/README.org][Linguagens de Script]]                   | [[https://goo.gl/forms/3Rjo36FvJYUMCL4E3][Formulário]] | 2018-11-21 | NA    |
 
-
 * Avaliação
 ** Estatísticas
 *** Desempenho por aluno
