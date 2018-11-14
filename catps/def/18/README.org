@@ -27,6 +27,7 @@ tempo de execução da pior solução seja em torno de 5 segundos.
 
 Caso for de interesse do aluno, implemente o fatorial recursivo nas
 diferentes linguagens empregando /[[https://en.wikipedia.org/wiki/Tail_call][tail call optimization]]/.
+- Veja [[https://github.com/schnorr/mlp/issues/31][a issue #31]] com a motivação para este exercício 
 - Marque a opção "*Não*" no formulário caso não a implemente
 
 ** E3
