@@ -38,51 +38,60 @@
 Instrumento preliminar, ainda por ser confirmado:
 - Código|Relatório: nota subjetiva representa opinião geral
 
-| ITEM                 | Peso |
-|----------------------+------|
-| Páginas              |    0 |
-| Capa.Grupo           |  0.5 |
-| Capa.Membros         |  0.5 |
-| Capa.Problema        |  0.5 |
-| Capa.Linguagem       |  0.5 |
-| Introducao           |    1 |
-| Ling.Funcionalidades |    1 |
-| Ling.Dominio         |    1 |
-| Crit.Tabela          |    3 |
-| Crit.Justificativas  |    3 |
-| Crit.Discussao       |    3 |
-| Conc.Geral           |    1 |
-| Conc.Benefícios      |    1 |
-| Conc.Limitações      |    1 |
-| Referências          |    1 |
-| Latex/Bibtex         |    2 |
-| Git                  |  0.5 |
-| Virtual              |  0.5 |
-| Classes              |    2 |
-| Encapsulamento       |    2 |
-| Construtores         |    2 |
-| Destrutores          |    2 |
-| Espaço               |    2 |
-| Herança              |    2 |
-| Inclusão             |    2 |
-| Paramétrico          |    2 |
-| Sobrecarga           |    2 |
-| Delegates            |    1 |
-| Puras                |    2 |
-| Lambda               |    2 |
-| Currying             |    1 |
-| Pattern              |    1 |
-| Maior                |    2 |
-| Primeira             |    2 |
-| Recursão             |    2 |
-| Relatório            |   20 |
-| Pontualidade         |    2 |
-| Problema             |    1 |
-| Linguagem            |    1 |
-| Vantagens            |    2 |
-| Demonstração         |    2 |
-| Perguntas            |    1 |
-| Apresentação         |   10 |
+| ITEM                  | Peso |
+|-----------------------+------|
+| Páginas               |    0 |
+| Capa.Grupo            |  0.5 |
+| Capa.Membros          |  0.5 |
+| Capa.Problema         |  0.5 |
+| Capa.Linguagem        |  0.5 |
+| Introducao            |    1 |
+| Ling.Funcionalidades  |    1 |
+| Ling.Dominio          |    1 |
+|-----------------------+------|
+| Classes               |    1 |
+| Encapsulamento        |    2 |
+| Construtores          |    1 |
+| Destrutores           |    1 |
+| Espaço                |    1 |
+| Herança               |    1 |
+| Inclusão              |    1 |
+| Paramétrico           |    2 |
+| Sobrecarga            |    2 |
+| Delegates             |    1 |
+|-----------------------+------|
+| Imutáveis e Puras     |    2 |
+| Lambda                |    2 |
+| Currying              |    2 |
+| Pattern               |    1 |
+| Maior                 |    2 |
+| Primeira              |    2 |
+| Recursão              |    2 |
+|-----------------------+------|
+| Unidades concorrentes |    2 |
+| Regiões críticas      |    2 |
+|-----------------------+------|
+| Crit.Tabela           |    3 |
+| Crit.Justificativas   |    3 |
+| Crit.Discussao        |    3 |
+| Melhoramentos         |    3 |
+| Conc.Geral            |    1 |
+| Conc.Benefícios       |    1 |
+| Conc.Limitações       |    1 |
+| Referências           |    1 |
+| Latex/Bibtex          |    2 |
+| Git                   |    0 |
+| Virtual               |    0 |
+|-----------------------+------|
+| Relatório             |   20 |
+| Pontualidade          |    2 |
+| Problema              |    1 |
+| Linguagem             |    1 |
+| Vantagens             |    2 |
+| Demonstração          |    2 |
+| Perguntas             |    1 |
+| Apresentação          |   10 |
+
 ** Avaliação por grupo                                            :noexport:
 **** Furogga
 
