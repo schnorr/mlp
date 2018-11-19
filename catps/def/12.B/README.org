@@ -2,7 +2,7 @@
 # -*- mode: org -*-
 #+startup: beamer overview indent
 
-* CATP #12 (Subprogramas)
+* CATP #12.B (Subprogramas)
 
 Considere o seguinte programa escrito na sintaxe da linguagem C:
 #+BEGIN_EXAMPLE
