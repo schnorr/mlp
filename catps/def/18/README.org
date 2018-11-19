@@ -21,7 +21,8 @@ esse tempo, utilize o estimador da /média/ dos valores observados
 acompanhado de uma métrica de variabilidade que emprega um nível de
 confiança. Pode-se assumir que a distribuição da medidas é
 normal. Determine o tamanho do fatorial a ser calculado de forma que o
-tempo de execução da pior solução seja em torno de 5 segundos.
+tempo de execução da pior solução seja algo na ordem de algumas
+dezenas de milisegundos.
 
 ** E2 (opcional)
 
