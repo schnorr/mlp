@@ -13,7 +13,7 @@
 #+TAGS: Lucas(L) noexport(n) deprecated(d)
 #+EXPORT_EXCLUDE_TAGS: noexport
 
-* Final                                                            :noexport:
+* Final
 ** Sumário da entrega
 
 | Grupo                                        | Entrega            |
