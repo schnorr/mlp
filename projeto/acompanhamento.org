@@ -14,49 +14,26 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 
 * Final                                                            :noexport:
-** Ordem
-
-Dia 1 (05/07)
-- Furogga (Julia)
-- Code Runner (Kotlin)
-- teletypewriters (Rust)
-- Monstros da Louca Programação (Scala)
-- get.sh*t.done (Closure)
-- Delta (TypeScript)
-- Scipio Project (Scala)
-
-Dia 2 (10/07)
-- Prog. Anônimos .1 (C#)
-- GSN (TypeScript)
-- My Little Frogger Haters (C#)
-- Cowboy Value (Swift)
-- Here for Beer (R)
-- GirlsRule (Julia)
-- Prog. Anônimos .2 (C#)
-
 ** Sumário da entrega
 
-Apenas 7.5 grupos entregaram no prazo, outros 6.5 grupos entregaram
-com 5 minutos até 12 horas e 5 minutos de atraso. Um grupo não entregou.
+| Grupo                                        | Entrega            |
+|----------------------------------------------+--------------------|
+| É uma cilada Bino                            | 11/14/18, 1:44 AM  |
+| Equipe 7                                     | 11/18/18, 4:45 PM  |
+| Null                                         | 11/18/18, 5:30 PM  |
+| Destemidos                                   | 11/18/18, 7:38 PM  |
+| Sei lá                                       | 11/18/18, 8:35 PM  |
+| Good Bye, Java!                              | 11/18/18, 10:22 PM |
+| Space Force                                  | 11/18/18, 11:13 PM |
+| G&B Produções                                | 11/18/18, 11:30 PM |
+| RISKy business                               | 11/18/18, 11:39 PM |
+| Hoje sim, Hoje sim                           | 11/18/18, 11:48 PM |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | 11/18/18, 11:56 PM |
+| Quarenta e 2                                 | 11/18/18, 11:58 PM |
+| Cerberus                                     | 11/18/18, 11:54 PM |
+| War Pigs                                     |                    |
 
-| Grupo                         | Entrega             |
-|-------------------------------+---------------------|
-| Monstros da Louca Programação | 06/24/2018 10:16 PM |
-| teletypewriters               | 06/26/2018 08:49 PM |
-| Cowboy Value                  | 06/26/2018 11:39 PM |
-| Programadores Anônimos (1)    | 06/26/2018 11:45 PM |
-| Furogga                       | 06/26/2018 11:50 PM |
-| Here for Beer                 | 06/26/2018 11:50 PM |
-| My Little Frogger Haters      | 06/26/2018 11:51 PM |
-| GirlsRule                     | 06/26/2018 11:55 PM |
-| Programadores Anônimos (2)    | 06/27/2018 12:05 PM |
-| Code Runner                   | 06/27/2018 12:06 AM |
-| Scipio Project                | 06/27/2018 12:19 AM |
-| get.sh*t.done                 | 06/27/2018 12:28 AM |
-| GSN                           | 06/27/2018 02:02 AM |
-| Delta                         | 06/27/2018 12:05 PM |
-| Han Solo                      |                     |
-** Instrumento de avaliação
+** Instrumento de avaliação                                       :noexport:
 
 Instrumento preliminar, ainda por ser confirmado:
 - Código|Relatório: nota subjetiva representa opinião geral
@@ -106,7 +83,7 @@ Instrumento preliminar, ainda por ser confirmado:
 | Demonstração         |    2 |
 | Perguntas            |    1 |
 | Apresentação         |   10 |
-** Avaliação por grupo
+** Avaliação por grupo                                            :noexport:
 **** Furogga
 
 #+name: furogga
@@ -832,7 +809,7 @@ Não se fez presente para apresentar.
 | Perguntas            |     0 |
 | Apresentação         |     0 |
 
-** Notas finais do TF
+** Notas finais do TF                                             :noexport:
 
 | Grupo                         | Nota do TF |
 |-------------------------------+------------|
