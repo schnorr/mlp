@@ -44,7 +44,7 @@ static element_t *ResizeArray(element_t *arry, size_t oldLen, size_t newLen);
 // Print the elements in the vector on a line.
 static void PrintIntVector(vector_t v);
 
-#define N 3 // Test vector length.
+#define N 10 // Test vector length.
 int main(int argc, char *argv[]) {
   uint32_t i;
   vector_t v = VectorCreate(4);
