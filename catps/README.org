@@ -77,6 +77,8 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 
 *** Desempenho global por CATP
 
+O prazo do CATP 18 ainda não foi atingido.
+
 | CATP | Entregas | Nota.Média | Nota.Mínima | Nota.Máxima |
 |------+----------+------------+-------------+-------------|
 |    1 |       34 |         10 |          10 |          10 |
@@ -93,6 +95,11 @@ Não se engane, tente resolvê-los antes de olhar as respostas.
 |   12 |       24 |       9.38 |           5 |          10 |
 |   13 |       23 |         10 |          10 |          10 |
 |   14 |       16 |       8.44 |           0 |          10 |
+|   15 |       20 |          6 |         2.5 |          10 |
+|   16 |       19 |       8.68 |           5 |          10 |
+|   17 |       16 |       8.59 |         2.5 |          10 |
+|   18 |        3 |       8.67 |           8 |          10 |
+|   19 |       32 |       9.84 |           5 |          10 |
 
 ** Resultados
 
