@@ -62,6 +62,627 @@ Situação em 23/11
 | ???693 | 9.57 | 9.83 | 8.78 |  100 |
 | ???696 |  6.6 | 7.94 | 7.56 |   84 |
 | ???110 | 9.04 | 4.89 | 7.56 |  100 |
+* TF
+** Sumário
+
+| Grupo                                        | Resultado |
+|----------------------------------------------+-----------|
+| Good Bye, Java!                              |      9.16 |
+| Null                                         |      8.83 |
+| RISKy business                               |      8.76 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia |      7.99 |
+| Destemidos                                   |      7.68 |
+| Space Force                                  |      7.17 |
+| É uma cilada Bino                            |      7.09 |
+| Equipe 7                                     |      7.01 |
+| Cerberus                                     |      6.71 |
+| Sei lá                                       |      6.48 |
+| Hoje sim, Hoje sim                           |      5.98 |
+| G&B Produções                                |      5.97 |
+| Quarenta e 2                                 |      5.51 |
+| War Pigs                                     |         0 |
+** Detalhamento com avaliação
+
+| Grupo                                        | ITEM                  | Valor |
+|----------------------------------------------+-----------------------+-------|
+| É uma cilada Bino                            | Páginas               |    24 |
+| É uma cilada Bino                            | Capa.Grupo            |    10 |
+| É uma cilada Bino                            | Capa.Membros          |    10 |
+| É uma cilada Bino                            | Capa.Problema         |    10 |
+| É uma cilada Bino                            | Capa.Linguagem        |    10 |
+| É uma cilada Bino                            | Introducao            |     7 |
+| É uma cilada Bino                            | Ling.Funcionalidades  |    10 |
+| É uma cilada Bino                            | Ling.Dominio          |     0 |
+| É uma cilada Bino                            | Classes               |     9 |
+| É uma cilada Bino                            | Encapsulamento        |     8 |
+| É uma cilada Bino                            | Construtores          |    10 |
+| É uma cilada Bino                            | Destrutores           |    10 |
+| É uma cilada Bino                            | Espaço                |    10 |
+| É uma cilada Bino                            | Herança               |    10 |
+| É uma cilada Bino                            | Inclusão              |     0 |
+| É uma cilada Bino                            | Paramétrico           |    10 |
+| É uma cilada Bino                            | Sobrecarga            |    10 |
+| É uma cilada Bino                            | Delegates             |    10 |
+| É uma cilada Bino                            | Imutáveis e Puras     |    10 |
+| É uma cilada Bino                            | Lambda                |    10 |
+| É uma cilada Bino                            | Currying              |    10 |
+| É uma cilada Bino                            | Pattern               |    10 |
+| É uma cilada Bino                            | Maior                 |    10 |
+| É uma cilada Bino                            | Primeira              |    10 |
+| É uma cilada Bino                            | Recursão              |    10 |
+| É uma cilada Bino                            | Unidades concorrentes |    10 |
+| É uma cilada Bino                            | Regiões críticas      |     5 |
+| É uma cilada Bino                            | Crit.Tabela           |     2 |
+| É uma cilada Bino                            | Crit.Justificativas   |     2 |
+| É uma cilada Bino                            | Crit.Discussao        |     0 |
+| É uma cilada Bino                            | Melhoramentos         |     0 |
+| É uma cilada Bino                            | Conc.Geral            |     6 |
+| É uma cilada Bino                            | Conc.Benefícios       |     0 |
+| É uma cilada Bino                            | Conc.Limitações       |     0 |
+| É uma cilada Bino                            | Referências           |    10 |
+| É uma cilada Bino                            | Latex/Bibtex          |     9 |
+| É uma cilada Bino                            | Git                   |     0 |
+| É uma cilada Bino                            | Virtual               |     0 |
+| É uma cilada Bino                            | Relatório             |   6.5 |
+| É uma cilada Bino                            | Pontualidade          |     9 |
+| É uma cilada Bino                            | Problema              |    10 |
+| É uma cilada Bino                            | Linguagem             |    10 |
+| É uma cilada Bino                            | Vantagens             |    10 |
+| É uma cilada Bino                            | Demonstração          |    10 |
+| É uma cilada Bino                            | Perguntas             |     6 |
+| É uma cilada Bino                            | Apresentação          |     8 |
+| Equipe 7                                     | Páginas               |    24 |
+| Equipe 7                                     | Capa.Grupo            |    10 |
+| Equipe 7                                     | Capa.Membros          |    10 |
+| Equipe 7                                     | Capa.Problema         |    10 |
+| Equipe 7                                     | Capa.Linguagem        |    10 |
+| Equipe 7                                     | Introducao            |     9 |
+| Equipe 7                                     | Ling.Funcionalidades  |     8 |
+| Equipe 7                                     | Ling.Dominio          |    10 |
+| Equipe 7                                     | Classes               |     8 |
+| Equipe 7                                     | Encapsulamento        |    10 |
+| Equipe 7                                     | Construtores          |    10 |
+| Equipe 7                                     | Destrutores           |    10 |
+| Equipe 7                                     | Espaço                |     8 |
+| Equipe 7                                     | Herança               |     7 |
+| Equipe 7                                     | Inclusão              |     8 |
+| Equipe 7                                     | Paramétrico           |     6 |
+| Equipe 7                                     | Sobrecarga            |     0 |
+| Equipe 7                                     | Delegates             |     0 |
+| Equipe 7                                     | Imutáveis e Puras     |    10 |
+| Equipe 7                                     | Lambda                |    10 |
+| Equipe 7                                     | Currying              |     7 |
+| Equipe 7                                     | Pattern               |     0 |
+| Equipe 7                                     | Maior                 |    10 |
+| Equipe 7                                     | Primeira              |    10 |
+| Equipe 7                                     | Recursão              |    10 |
+| Equipe 7                                     | Unidades concorrentes |     5 |
+| Equipe 7                                     | Regiões críticas      |     0 |
+| Equipe 7                                     | Crit.Tabela           |     5 |
+| Equipe 7                                     | Crit.Justificativas   |     0 |
+| Equipe 7                                     | Crit.Discussao        |     0 |
+| Equipe 7                                     | Melhoramentos         |     0 |
+| Equipe 7                                     | Conc.Geral            |     7 |
+| Equipe 7                                     | Conc.Benefícios       |    10 |
+| Equipe 7                                     | Conc.Limitações       |    10 |
+| Equipe 7                                     | Referências           |    10 |
+| Equipe 7                                     | Latex/Bibtex          |    10 |
+| Equipe 7                                     | Git                   |    10 |
+| Equipe 7                                     | Virtual               |     0 |
+| Equipe 7                                     | Relatório             |     7 |
+| Equipe 7                                     | Pontualidade          |    10 |
+| Equipe 7                                     | Problema              |    10 |
+| Equipe 7                                     | Linguagem             |     9 |
+| Equipe 7                                     | Vantagens             |    10 |
+| Equipe 7                                     | Demonstração          |    10 |
+| Equipe 7                                     | Perguntas             |    10 |
+| Equipe 7                                     | Apresentação          |     9 |
+| Null                                         | Páginas               |    30 |
+| Null                                         | Capa.Grupo            |    10 |
+| Null                                         | Capa.Membros          |    10 |
+| Null                                         | Capa.Problema         |    10 |
+| Null                                         | Capa.Linguagem        |    10 |
+| Null                                         | Introducao            |     8 |
+| Null                                         | Ling.Funcionalidades  |    10 |
+| Null                                         | Ling.Dominio          |    10 |
+| Null                                         | Classes               |    10 |
+| Null                                         | Encapsulamento        |    10 |
+| Null                                         | Construtores          |    10 |
+| Null                                         | Destrutores           |    10 |
+| Null                                         | Espaço                |    10 |
+| Null                                         | Herança               |    10 |
+| Null                                         | Inclusão              |    10 |
+| Null                                         | Paramétrico           |     5 |
+| Null                                         | Sobrecarga            |    10 |
+| Null                                         | Delegates             |     0 |
+| Null                                         | Imutáveis e Puras     |    10 |
+| Null                                         | Lambda                |    10 |
+| Null                                         | Currying              |     9 |
+| Null                                         | Pattern               |    10 |
+| Null                                         | Maior                 |    10 |
+| Null                                         | Primeira              |    10 |
+| Null                                         | Recursão              |    10 |
+| Null                                         | Unidades concorrentes |     5 |
+| Null                                         | Regiões críticas      |     0 |
+| Null                                         | Crit.Tabela           |    10 |
+| Null                                         | Crit.Justificativas   |    10 |
+| Null                                         | Crit.Discussao        |    10 |
+| Null                                         | Melhoramentos         |    10 |
+| Null                                         | Conc.Geral            |    10 |
+| Null                                         | Conc.Benefícios       |    10 |
+| Null                                         | Conc.Limitações       |     0 |
+| Null                                         | Referências           |    10 |
+| Null                                         | Latex/Bibtex          |    10 |
+| Null                                         | Git                   |    10 |
+| Null                                         | Virtual               |    10 |
+| Null                                         | Relatório             |     9 |
+| Null                                         | Pontualidade          |     9 |
+| Null                                         | Problema              |    10 |
+| Null                                         | Linguagem             |    10 |
+| Null                                         | Vantagens             |    10 |
+| Null                                         | Demonstração          |    10 |
+| Null                                         | Perguntas             |     8 |
+| Null                                         | Apresentação          |     8 |
+| Destemidos                                   | Páginas               |    33 |
+| Destemidos                                   | Capa.Grupo            |    10 |
+| Destemidos                                   | Capa.Membros          |    10 |
+| Destemidos                                   | Capa.Problema         |    10 |
+| Destemidos                                   | Capa.Linguagem        |    10 |
+| Destemidos                                   | Introducao            |     7 |
+| Destemidos                                   | Ling.Funcionalidades  |    10 |
+| Destemidos                                   | Ling.Dominio          |     0 |
+| Destemidos                                   | Classes               |    10 |
+| Destemidos                                   | Encapsulamento        |    10 |
+| Destemidos                                   | Construtores          |    10 |
+| Destemidos                                   | Destrutores           |     8 |
+| Destemidos                                   | Espaço                |     0 |
+| Destemidos                                   | Herança               |    10 |
+| Destemidos                                   | Inclusão              |     8 |
+| Destemidos                                   | Paramétrico           |     7 |
+| Destemidos                                   | Sobrecarga            |     8 |
+| Destemidos                                   | Delegates             |     0 |
+| Destemidos                                   | Imutáveis e Puras     |     9 |
+| Destemidos                                   | Lambda                |     0 |
+| Destemidos                                   | Currying              |     0 |
+| Destemidos                                   | Pattern               |     9 |
+| Destemidos                                   | Maior                 |     5 |
+| Destemidos                                   | Primeira              |    10 |
+| Destemidos                                   | Recursão              |    10 |
+| Destemidos                                   | Unidades concorrentes |    10 |
+| Destemidos                                   | Regiões críticas      |     5 |
+| Destemidos                                   | Crit.Tabela           |    10 |
+| Destemidos                                   | Crit.Justificativas   |    10 |
+| Destemidos                                   | Crit.Discussao        |     9 |
+| Destemidos                                   | Melhoramentos         |    10 |
+| Destemidos                                   | Conc.Geral            |    10 |
+| Destemidos                                   | Conc.Benefícios       |    10 |
+| Destemidos                                   | Conc.Limitações       |    10 |
+| Destemidos                                   | Referências           |    10 |
+| Destemidos                                   | Latex/Bibtex          |    10 |
+| Destemidos                                   | Git                   |     0 |
+| Destemidos                                   | Virtual               |     0 |
+| Destemidos                                   | Relatório             |   6.5 |
+| Destemidos                                   | Pontualidade          |    10 |
+| Destemidos                                   | Problema              |     0 |
+| Destemidos                                   | Linguagem             |    10 |
+| Destemidos                                   | Vantagens             |    10 |
+| Destemidos                                   | Demonstração          |     8 |
+| Destemidos                                   | Perguntas             |     9 |
+| Destemidos                                   | Apresentação          |   8.5 |
+| Sei lá                                       | Páginas               |    23 |
+| Sei lá                                       | Capa.Grupo            |    10 |
+| Sei lá                                       | Capa.Membros          |    10 |
+| Sei lá                                       | Capa.Problema         |    10 |
+| Sei lá                                       | Capa.Linguagem        |    10 |
+| Sei lá                                       | Introducao            |     7 |
+| Sei lá                                       | Ling.Funcionalidades  |    10 |
+| Sei lá                                       | Ling.Dominio          |     0 |
+| Sei lá                                       | Classes               |    10 |
+| Sei lá                                       | Encapsulamento        |     9 |
+| Sei lá                                       | Construtores          |    10 |
+| Sei lá                                       | Destrutores           |    10 |
+| Sei lá                                       | Espaço                |    10 |
+| Sei lá                                       | Herança               |    10 |
+| Sei lá                                       | Inclusão              |    10 |
+| Sei lá                                       | Paramétrico           |     0 |
+| Sei lá                                       | Sobrecarga            |     9 |
+| Sei lá                                       | Delegates             |     0 |
+| Sei lá                                       | Imutáveis e Puras     |    10 |
+| Sei lá                                       | Lambda                |     0 |
+| Sei lá                                       | Currying              |     9 |
+| Sei lá                                       | Pattern               |    10 |
+| Sei lá                                       | Maior                 |    10 |
+| Sei lá                                       | Primeira              |     0 |
+| Sei lá                                       | Recursão              |    10 |
+| Sei lá                                       | Unidades concorrentes |     0 |
+| Sei lá                                       | Regiões críticas      |     0 |
+| Sei lá                                       | Crit.Tabela           |     0 |
+| Sei lá                                       | Crit.Justificativas   |    10 |
+| Sei lá                                       | Crit.Discussao        |     0 |
+| Sei lá                                       | Melhoramentos         |    10 |
+| Sei lá                                       | Conc.Geral            |     8 |
+| Sei lá                                       | Conc.Benefícios       |     9 |
+| Sei lá                                       | Conc.Limitações       |     9 |
+| Sei lá                                       | Referências           |     5 |
+| Sei lá                                       | Latex/Bibtex          |    10 |
+| Sei lá                                       | Git                   |     0 |
+| Sei lá                                       | Virtual               |     0 |
+| Sei lá                                       | Relatório             |   6.5 |
+| Sei lá                                       | Pontualidade          |     5 |
+| Sei lá                                       | Problema              |    10 |
+| Sei lá                                       | Linguagem             |     8 |
+| Sei lá                                       | Vantagens             |     9 |
+| Sei lá                                       | Demonstração          |     5 |
+| Sei lá                                       | Perguntas             |     8 |
+| Sei lá                                       | Apresentação          |     7 |
+| Good Bye, Java!                              | Páginas               |    30 |
+| Good Bye, Java!                              | Capa.Grupo            |    10 |
+| Good Bye, Java!                              | Capa.Membros          |    10 |
+| Good Bye, Java!                              | Capa.Problema         |    10 |
+| Good Bye, Java!                              | Capa.Linguagem        |    10 |
+| Good Bye, Java!                              | Introducao            |     7 |
+| Good Bye, Java!                              | Ling.Funcionalidades  |    10 |
+| Good Bye, Java!                              | Ling.Dominio          |    10 |
+| Good Bye, Java!                              | Classes               |    10 |
+| Good Bye, Java!                              | Encapsulamento        |    10 |
+| Good Bye, Java!                              | Construtores          |    10 |
+| Good Bye, Java!                              | Destrutores           |    10 |
+| Good Bye, Java!                              | Espaço                |    10 |
+| Good Bye, Java!                              | Herança               |    10 |
+| Good Bye, Java!                              | Inclusão              |    10 |
+| Good Bye, Java!                              | Paramétrico           |    10 |
+| Good Bye, Java!                              | Sobrecarga            |    10 |
+| Good Bye, Java!                              | Delegates             |    10 |
+| Good Bye, Java!                              | Imutáveis e Puras     |    10 |
+| Good Bye, Java!                              | Lambda                |    10 |
+| Good Bye, Java!                              | Currying              |    10 |
+| Good Bye, Java!                              | Pattern               |    10 |
+| Good Bye, Java!                              | Maior                 |    10 |
+| Good Bye, Java!                              | Primeira              |    10 |
+| Good Bye, Java!                              | Recursão              |    10 |
+| Good Bye, Java!                              | Unidades concorrentes |    10 |
+| Good Bye, Java!                              | Regiões críticas      |    10 |
+| Good Bye, Java!                              | Crit.Tabela           |    10 |
+| Good Bye, Java!                              | Crit.Justificativas   |    10 |
+| Good Bye, Java!                              | Crit.Discussao        |     0 |
+| Good Bye, Java!                              | Melhoramentos         |    10 |
+| Good Bye, Java!                              | Conc.Geral            |    10 |
+| Good Bye, Java!                              | Conc.Benefícios       |    10 |
+| Good Bye, Java!                              | Conc.Limitações       |    10 |
+| Good Bye, Java!                              | Referências           |    10 |
+| Good Bye, Java!                              | Latex/Bibtex          |    10 |
+| Good Bye, Java!                              | Git                   |    10 |
+| Good Bye, Java!                              | Virtual               |     0 |
+| Good Bye, Java!                              | Relatório             |   9.5 |
+| Good Bye, Java!                              | Pontualidade          |     9 |
+| Good Bye, Java!                              | Problema              |    10 |
+| Good Bye, Java!                              | Linguagem             |    10 |
+| Good Bye, Java!                              | Vantagens             |     0 |
+| Good Bye, Java!                              | Demonstração          |    10 |
+| Good Bye, Java!                              | Perguntas             |     8 |
+| Good Bye, Java!                              | Apresentação          |     9 |
+| Space Force                                  | Páginas               |    19 |
+| Space Force                                  | Capa.Grupo            |    10 |
+| Space Force                                  | Capa.Membros          |    10 |
+| Space Force                                  | Capa.Problema         |    10 |
+| Space Force                                  | Capa.Linguagem        |    10 |
+| Space Force                                  | Introducao            |     8 |
+| Space Force                                  | Ling.Funcionalidades  |    10 |
+| Space Force                                  | Ling.Dominio          |    10 |
+| Space Force                                  | Classes               |    10 |
+| Space Force                                  | Encapsulamento        |    10 |
+| Space Force                                  | Construtores          |     8 |
+| Space Force                                  | Destrutores           |    10 |
+| Space Force                                  | Espaço                |     8 |
+| Space Force                                  | Herança               |    10 |
+| Space Force                                  | Inclusão              |    10 |
+| Space Force                                  | Paramétrico           |     0 |
+| Space Force                                  | Sobrecarga            |     5 |
+| Space Force                                  | Delegates             |     0 |
+| Space Force                                  | Imutáveis e Puras     |     5 |
+| Space Force                                  | Lambda                |     5 |
+| Space Force                                  | Currying              |     0 |
+| Space Force                                  | Pattern               |    10 |
+| Space Force                                  | Maior                 |     5 |
+| Space Force                                  | Primeira              |     0 |
+| Space Force                                  | Recursão              |     5 |
+| Space Force                                  | Unidades concorrentes |    10 |
+| Space Force                                  | Regiões críticas      |     0 |
+| Space Force                                  | Crit.Tabela           |    10 |
+| Space Force                                  | Crit.Justificativas   |    10 |
+| Space Force                                  | Crit.Discussao        |     5 |
+| Space Force                                  | Melhoramentos         |     8 |
+| Space Force                                  | Conc.Geral            |     8 |
+| Space Force                                  | Conc.Benefícios       |     7 |
+| Space Force                                  | Conc.Limitações       |     7 |
+| Space Force                                  | Referências           |    10 |
+| Space Force                                  | Latex/Bibtex          |    10 |
+| Space Force                                  | Git                   |    10 |
+| Space Force                                  | Virtual               |     0 |
+| Space Force                                  | Relatório             |     7 |
+| Space Force                                  | Pontualidade          |    10 |
+| Space Force                                  | Problema              |    10 |
+| Space Force                                  | Linguagem             |    10 |
+| Space Force                                  | Vantagens             |    10 |
+| Space Force                                  | Demonstração          |    10 |
+| Space Force                                  | Perguntas             |    10 |
+| Space Force                                  | Apresentação          |   7.5 |
+| G&B Produções                                | Páginas               |    19 |
+| G&B Produções                                | Capa.Grupo            |    10 |
+| G&B Produções                                | Capa.Membros          |    10 |
+| G&B Produções                                | Capa.Problema         |    10 |
+| G&B Produções                                | Capa.Linguagem        |    10 |
+| G&B Produções                                | Introducao            |     9 |
+| G&B Produções                                | Ling.Funcionalidades  |     8 |
+| G&B Produções                                | Ling.Dominio          |     9 |
+| G&B Produções                                | Classes               |     8 |
+| G&B Produções                                | Encapsulamento        |     7 |
+| G&B Produções                                | Construtores          |     5 |
+| G&B Produções                                | Destrutores           |     0 |
+| G&B Produções                                | Espaço                |     0 |
+| G&B Produções                                | Herança               |     5 |
+| G&B Produções                                | Inclusão              |     9 |
+| G&B Produções                                | Paramétrico           |     7 |
+| G&B Produções                                | Sobrecarga            |    10 |
+| G&B Produções                                | Delegates             |    10 |
+| G&B Produções                                | Imutáveis e Puras     |    10 |
+| G&B Produções                                | Lambda                |     0 |
+| G&B Produções                                | Currying              |    10 |
+| G&B Produções                                | Pattern               |    10 |
+| G&B Produções                                | Maior                 |    10 |
+| G&B Produções                                | Primeira              |    10 |
+| G&B Produções                                | Recursão              |    10 |
+| G&B Produções                                | Unidades concorrentes |     0 |
+| G&B Produções                                | Regiões críticas      |     0 |
+| G&B Produções                                | Crit.Tabela           |     0 |
+| G&B Produções                                | Crit.Justificativas   |     0 |
+| G&B Produções                                | Crit.Discussao        |     0 |
+| G&B Produções                                | Melhoramentos         |     0 |
+| G&B Produções                                | Conc.Geral            |     8 |
+| G&B Produções                                | Conc.Benefícios       |     5 |
+| G&B Produções                                | Conc.Limitações       |     5 |
+| G&B Produções                                | Referências           |    10 |
+| G&B Produções                                | Latex/Bibtex          |     5 |
+| G&B Produções                                | Git                   |     0 |
+| G&B Produções                                | Virtual               |     0 |
+| G&B Produções                                | Relatório             |     6 |
+| G&B Produções                                | Pontualidade          |    10 |
+| G&B Produções                                | Problema              |    10 |
+| G&B Produções                                | Linguagem             |    10 |
+| G&B Produções                                | Vantagens             |    10 |
+| G&B Produções                                | Demonstração          |    10 |
+| G&B Produções                                | Perguntas             |    10 |
+| G&B Produções                                | Apresentação          |     6 |
+| RISKy business                               | Páginas               |    36 |
+| RISKy business                               | Capa.Grupo            |    10 |
+| RISKy business                               | Capa.Membros          |    10 |
+| RISKy business                               | Capa.Problema         |    10 |
+| RISKy business                               | Capa.Linguagem        |    10 |
+| RISKy business                               | Introducao            |     8 |
+| RISKy business                               | Ling.Funcionalidades  |    10 |
+| RISKy business                               | Ling.Dominio          |    10 |
+| RISKy business                               | Classes               |    10 |
+| RISKy business                               | Encapsulamento        |    10 |
+| RISKy business                               | Construtores          |    10 |
+| RISKy business                               | Destrutores           |     8 |
+| RISKy business                               | Espaço                |     5 |
+| RISKy business                               | Herança               |    10 |
+| RISKy business                               | Inclusão              |    10 |
+| RISKy business                               | Paramétrico           |     0 |
+| RISKy business                               | Sobrecarga            |     5 |
+| RISKy business                               | Delegates             |    10 |
+| RISKy business                               | Imutáveis e Puras     |    10 |
+| RISKy business                               | Lambda                |    10 |
+| RISKy business                               | Currying              |    10 |
+| RISKy business                               | Pattern               |    10 |
+| RISKy business                               | Maior                 |    10 |
+| RISKy business                               | Primeira              |    10 |
+| RISKy business                               | Recursão              |    10 |
+| RISKy business                               | Unidades concorrentes |    10 |
+| RISKy business                               | Regiões críticas      |     0 |
+| RISKy business                               | Crit.Tabela           |    10 |
+| RISKy business                               | Crit.Justificativas   |    10 |
+| RISKy business                               | Crit.Discussao        |    10 |
+| RISKy business                               | Melhoramentos         |    10 |
+| RISKy business                               | Conc.Geral            |    10 |
+| RISKy business                               | Conc.Benefícios       |    10 |
+| RISKy business                               | Conc.Limitações       |     5 |
+| RISKy business                               | Referências           |    10 |
+| RISKy business                               | Latex/Bibtex          |    10 |
+| RISKy business                               | Git                   |     0 |
+| RISKy business                               | Virtual               |     0 |
+| RISKy business                               | Relatório             |   9.5 |
+| RISKy business                               | Pontualidade          |     0 |
+| RISKy business                               | Problema              |    10 |
+| RISKy business                               | Linguagem             |    10 |
+| RISKy business                               | Vantagens             |    10 |
+| RISKy business                               | Demonstração          |    10 |
+| RISKy business                               | Perguntas             |    10 |
+| RISKy business                               | Apresentação          |     8 |
+| Hoje sim, Hoje sim                           | Páginas               |    22 |
+| Hoje sim, Hoje sim                           | Capa.Grupo            |    10 |
+| Hoje sim, Hoje sim                           | Capa.Membros          |    10 |
+| Hoje sim, Hoje sim                           | Capa.Problema         |    10 |
+| Hoje sim, Hoje sim                           | Capa.Linguagem        |    10 |
+| Hoje sim, Hoje sim                           | Introducao            |     8 |
+| Hoje sim, Hoje sim                           | Ling.Funcionalidades  |    10 |
+| Hoje sim, Hoje sim                           | Ling.Dominio          |    10 |
+| Hoje sim, Hoje sim                           | Classes               |     5 |
+| Hoje sim, Hoje sim                           | Encapsulamento        |     5 |
+| Hoje sim, Hoje sim                           | Construtores          |     8 |
+| Hoje sim, Hoje sim                           | Destrutores           |     8 |
+| Hoje sim, Hoje sim                           | Espaço                |     0 |
+| Hoje sim, Hoje sim                           | Herança               |    10 |
+| Hoje sim, Hoje sim                           | Inclusão              |    10 |
+| Hoje sim, Hoje sim                           | Paramétrico           |     0 |
+| Hoje sim, Hoje sim                           | Sobrecarga            |     5 |
+| Hoje sim, Hoje sim                           | Delegates             |     0 |
+| Hoje sim, Hoje sim                           | Imutáveis e Puras     |     5 |
+| Hoje sim, Hoje sim                           | Lambda                |     0 |
+| Hoje sim, Hoje sim                           | Currying              |     0 |
+| Hoje sim, Hoje sim                           | Pattern               |    10 |
+| Hoje sim, Hoje sim                           | Maior                 |     8 |
+| Hoje sim, Hoje sim                           | Primeira              |     0 |
+| Hoje sim, Hoje sim                           | Recursão              |    10 |
+| Hoje sim, Hoje sim                           | Unidades concorrentes |     5 |
+| Hoje sim, Hoje sim                           | Regiões críticas      |     0 |
+| Hoje sim, Hoje sim                           | Crit.Tabela           |    10 |
+| Hoje sim, Hoje sim                           | Crit.Justificativas   |    10 |
+| Hoje sim, Hoje sim                           | Crit.Discussao        |    10 |
+| Hoje sim, Hoje sim                           | Melhoramentos         |     5 |
+| Hoje sim, Hoje sim                           | Conc.Geral            |    10 |
+| Hoje sim, Hoje sim                           | Conc.Benefícios       |     5 |
+| Hoje sim, Hoje sim                           | Conc.Limitações       |     5 |
+| Hoje sim, Hoje sim                           | Referências           |     5 |
+| Hoje sim, Hoje sim                           | Latex/Bibtex          |    10 |
+| Hoje sim, Hoje sim                           | Git                   |     0 |
+| Hoje sim, Hoje sim                           | Virtual               |     0 |
+| Hoje sim, Hoje sim                           | Relatório             |   5.5 |
+| Hoje sim, Hoje sim                           | Pontualidade          |     0 |
+| Hoje sim, Hoje sim                           | Problema              |     5 |
+| Hoje sim, Hoje sim                           | Linguagem             |    10 |
+| Hoje sim, Hoje sim                           | Vantagens             |    10 |
+| Hoje sim, Hoje sim                           | Demonstração          |     5 |
+| Hoje sim, Hoje sim                           | Perguntas             |    10 |
+| Hoje sim, Hoje sim                           | Apresentação          |     6 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Páginas               |    33 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Capa.Grupo            |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Capa.Membros          |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Capa.Problema         |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Capa.Linguagem        |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Introducao            |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Ling.Funcionalidades  |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Ling.Dominio          |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Classes               |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Encapsulamento        |     5 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Construtores          |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Destrutores           |     8 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Espaço                |     5 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Herança               |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Inclusão              |     0 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Paramétrico           |     0 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Sobrecarga            |     2 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Delegates             |     0 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Imutáveis e Puras     |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Lambda                |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Currying              |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Pattern               |     0 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Maior                 |     5 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Primeira              |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Recursão              |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Unidades concorrentes |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Regiões críticas      |     0 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Crit.Tabela           |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Crit.Justificativas   |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Crit.Discussao        |     8 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Melhoramentos         |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Conc.Geral            |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Conc.Benefícios       |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Conc.Limitações       |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Referências           |     9 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Latex/Bibtex          |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Git                   |     0 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Virtual               |     0 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Relatório             |     8 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Pontualidade          |     8 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Problema              |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Linguagem             |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Vantagens             |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Demonstração          |    10 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Perguntas             |     9 |
+| Kotlin Scalando a Lua pelo Ruby para a Julia | Apresentação          |     8 |
+| Quarenta e 2                                 | Páginas               |    17 |
+| Quarenta e 2                                 | Capa.Grupo            |    10 |
+| Quarenta e 2                                 | Capa.Membros          |    10 |
+| Quarenta e 2                                 | Capa.Problema         |    10 |
+| Quarenta e 2                                 | Capa.Linguagem        |    10 |
+| Quarenta e 2                                 | Introducao            |     0 |
+| Quarenta e 2                                 | Ling.Funcionalidades  |    10 |
+| Quarenta e 2                                 | Ling.Dominio          |     0 |
+| Quarenta e 2                                 | Classes               |    10 |
+| Quarenta e 2                                 | Encapsulamento        |    10 |
+| Quarenta e 2                                 | Construtores          |    10 |
+| Quarenta e 2                                 | Destrutores           |    10 |
+| Quarenta e 2                                 | Espaço                |    10 |
+| Quarenta e 2                                 | Herança               |    10 |
+| Quarenta e 2                                 | Inclusão              |     0 |
+| Quarenta e 2                                 | Paramétrico           |     5 |
+| Quarenta e 2                                 | Sobrecarga            |    10 |
+| Quarenta e 2                                 | Delegates             |     0 |
+| Quarenta e 2                                 | Imutáveis e Puras     |     0 |
+| Quarenta e 2                                 | Lambda                |    10 |
+| Quarenta e 2                                 | Currying              |     0 |
+| Quarenta e 2                                 | Pattern               |    10 |
+| Quarenta e 2                                 | Maior                 |     5 |
+| Quarenta e 2                                 | Primeira              |    10 |
+| Quarenta e 2                                 | Recursão              |     0 |
+| Quarenta e 2                                 | Unidades concorrentes |     0 |
+| Quarenta e 2                                 | Regiões críticas      |     0 |
+| Quarenta e 2                                 | Crit.Tabela           |     0 |
+| Quarenta e 2                                 | Crit.Justificativas   |    10 |
+| Quarenta e 2                                 | Crit.Discussao        |     0 |
+| Quarenta e 2                                 | Melhoramentos         |     5 |
+| Quarenta e 2                                 | Conc.Geral            |    10 |
+| Quarenta e 2                                 | Conc.Benefícios       |     0 |
+| Quarenta e 2                                 | Conc.Limitações       |     0 |
+| Quarenta e 2                                 | Referências           |     0 |
+| Quarenta e 2                                 | Latex/Bibtex          |    10 |
+| Quarenta e 2                                 | Git                   |     0 |
+| Quarenta e 2                                 | Virtual               |     0 |
+| Quarenta e 2                                 | Relatório             |   5.5 |
+| Quarenta e 2                                 | Pontualidade          |    10 |
+| Quarenta e 2                                 | Problema              |    10 |
+| Quarenta e 2                                 | Linguagem             |    10 |
+| Quarenta e 2                                 | Vantagens             |     6 |
+| Quarenta e 2                                 | Demonstração          |     5 |
+| Quarenta e 2                                 | Perguntas             |    10 |
+| Quarenta e 2                                 | Apresentação          |     6 |
+| Cerberus                                     | Páginas               |    19 |
+| Cerberus                                     | Capa.Grupo            |    10 |
+| Cerberus                                     | Capa.Membros          |    10 |
+| Cerberus                                     | Capa.Problema         |    10 |
+| Cerberus                                     | Capa.Linguagem        |    10 |
+| Cerberus                                     | Introducao            |     8 |
+| Cerberus                                     | Ling.Funcionalidades  |    10 |
+| Cerberus                                     | Ling.Dominio          |     0 |
+| Cerberus                                     | Classes               |    10 |
+| Cerberus                                     | Encapsulamento        |    10 |
+| Cerberus                                     | Construtores          |    10 |
+| Cerberus                                     | Destrutores           |    10 |
+| Cerberus                                     | Espaço                |     2 |
+| Cerberus                                     | Herança               |    10 |
+| Cerberus                                     | Inclusão              |    10 |
+| Cerberus                                     | Paramétrico           |     7 |
+| Cerberus                                     | Sobrecarga            |    10 |
+| Cerberus                                     | Delegates             |    10 |
+| Cerberus                                     | Imutáveis e Puras     |     0 |
+| Cerberus                                     | Lambda                |    10 |
+| Cerberus                                     | Currying              |     5 |
+| Cerberus                                     | Pattern               |     0 |
+| Cerberus                                     | Maior                 |    10 |
+| Cerberus                                     | Primeira              |    10 |
+| Cerberus                                     | Recursão              |    10 |
+| Cerberus                                     | Unidades concorrentes |     5 |
+| Cerberus                                     | Regiões críticas      |     5 |
+| Cerberus                                     | Crit.Tabela           |    10 |
+| Cerberus                                     | Crit.Justificativas   |    10 |
+| Cerberus                                     | Crit.Discussao        |     0 |
+| Cerberus                                     | Melhoramentos         |     0 |
+| Cerberus                                     | Conc.Geral            |     8 |
+| Cerberus                                     | Conc.Benefícios       |     0 |
+| Cerberus                                     | Conc.Limitações       |     8 |
+| Cerberus                                     | Referências           |     2 |
+| Cerberus                                     | Latex/Bibtex          |     5 |
+| Cerberus                                     | Git                   |     0 |
+| Cerberus                                     | Virtual               |     0 |
+| Cerberus                                     | Relatório             |     7 |
+| Cerberus                                     | Pontualidade          |     0 |
+| Cerberus                                     | Problema              |    10 |
+| Cerberus                                     | Linguagem             |    10 |
+| Cerberus                                     | Vantagens             |    10 |
+| Cerberus                                     | Demonstração          |     5 |
+| Cerberus                                     | Perguntas             |     5 |
+| Cerberus                                     | Apresentação          |     7 |
 
 * P2
 ** Gabarito
