@@ -67,6 +67,7 @@ Situação em 23/11
 ** Gabarito
 
 P2 espera 41 respostas, com o gabarito abaixo.
+- As questões =07.D= e =20.X= foram anuladas
 
 | Questão | Gabarito                        |
 |---------+---------------------------------|
